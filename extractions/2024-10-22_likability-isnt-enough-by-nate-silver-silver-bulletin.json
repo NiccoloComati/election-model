@@ -1,0 +1,259 @@
+{
+  "article": {
+    "date": "2024-10-22",
+    "title": "Likability isn't enough",
+    "subtitle": "Explaining the gap between Harris’s favorability ratings and the head-to-head polls.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/likability-isnt-enough",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-10-22_likability-isnt-enough-by-nate-silver-silver-bulletin"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.368095,
+    "prompt_tokens": 4,
+    "completion_tokens": 3454,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 37335,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:18:35"
+  },
+  "extraction": {
+    "summary": "Mostly campaign-messaging commentary. Silver argues that Harris's advantage in favorability ratings over Trump (net roughly breakeven vs. Trump's net negative) does not translate into her much narrower head-to-head national poll lead. He attributes the gap to Harris campaigning on personality while Trump campaigns on clear, if crude, policy goals. He sees no particular reason to expect the gap to close, and cites 2016, when Clinton also led more in favorability than in head-to-head polls. Model content is minimal: a rough mapping from national lead to Electoral College security, a 53% Trump win probability from the Silver Bulletin model, and a note that 2016 polling errors were mostly at the state level.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "538 favorability averages",
+      "RealClearPolitics favorability average"
+    ],
+    "findings": [
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "interpretation_guidance",
+        "statement": "In 2024, a Harris national popular-vote lead of 3 to 5 points would very probably translate into an Electoral College win. A lead closer to 2 points makes an Electoral College win tenuous, which implies a Republican-leaning Electoral College bias of roughly that size.",
+        "quantities": [
+          {
+            "name": "national lead implying very probable EC win",
+            "value": "3-to-5",
+            "unit": "percentage points",
+            "context": "Harris national polling lead, Oct 2024"
+          },
+          {
+            "name": "national lead implying tenuous EC position",
+            "value": "~2",
+            "unit": "percentage points",
+            "context": "Harris national polling lead, Oct 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "With a 3-to-5 point national lead, Harris would very probably win the Electoral College. If it's closer to 2 points, it's tenuous.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "parameter_or_number",
+        "statement": "As of Oct 22, 2024, Harris's lead in national polls had fallen to 1.6 points, per the linked polling average (presumably the Silver Bulletin national average).",
+        "quantities": [
+          {
+            "name": "Harris national polling lead",
+            "value": "1.6",
+            "unit": "percentage points",
+            "context": "Oct 22, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris's lead in national polls is down to just 1.6 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin forecast gave Trump about a 53 percent chance of winning as of Oct 22, 2024, which Silver characterizes as a toss-up.",
+        "quantities": [
+          {
+            "name": "Trump win probability",
+            "value": "53",
+            "unit": "percent",
+            "context": "Silver Bulletin forecast, Oct 22, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "It's the Billboard Lawyer message — and there's a 53 percent chance it will work.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver treats a candidate's advantage in favorability ratings as, at most, a minor factor that might suggest room for late growth among undecided voters. He does not expect a gap between favorability and head-to-head polls to close. The 2016 precedent (Clinton led more in favorability than in head-to-head polls and still lost) argues against using the favorability gap as a predictor.",
+        "quantities": [],
+        "rationale": "In 2016 Clinton had a similar favorability-vs-head-to-head gap and lost. Favorability measures likability, while votes depend on perceived policy and who 'fights for you'.",
+        "model_version": "general principle",
+        "evidence_quote": "I don't particularly think there's any reason to expect that gap to close.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "data_source",
+        "statement": "Silver cites 538's favorability averages for Harris (46.5% favorable, 47.2% unfavorable) and Trump (43.3% favorable, 52.4% unfavorable) as of Oct 22, 2024. Harris led by 3.2 points on favorable share and 5.2 points on unfavorable share.",
+        "quantities": [
+          {
+            "name": "Harris favorable",
+            "value": "46.5",
+            "unit": "percent",
+            "context": "538 average, Oct 2024"
+          },
+          {
+            "name": "Harris unfavorable",
+            "value": "47.2",
+            "unit": "percent",
+            "context": "538 average, Oct 2024"
+          },
+          {
+            "name": "Trump favorable",
+            "value": "43.3",
+            "unit": "percent",
+            "context": "538 average, Oct 2024"
+          },
+          {
+            "name": "Trump unfavorable",
+            "value": "52.4",
+            "unit": "percent",
+            "context": "538 average, Oct 2024"
+          },
+          {
+            "name": "favorable gap",
+            "value": "3.2",
+            "unit": "percentage points",
+            "context": "Harris advantage"
+          },
+          {
+            "name": "unfavorable gap",
+            "value": "5.2",
+            "unit": "percentage points",
+            "context": "Harris advantage"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris's favorability rating is 46.5 percent, according to 538. Donald Trump's is 43.3 percent.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "empirical_regularity",
+        "statement": "The RealClearPolitics favorability chart for 2016 shows Clinton's net favorability at about -12.6 and Trump's at about -21.0 near election time. Clinton's net favorability advantage over Trump (roughly 8 points) exceeded her head-to-head polling lead.",
+        "quantities": [
+          {
+            "name": "Clinton net favorability",
+            "value": "-12.6",
+            "unit": "percentage points",
+            "context": "RCP average, late 2016"
+          },
+          {
+            "name": "Trump net favorability",
+            "value": "-21.0",
+            "unit": "percentage points",
+            "context": "RCP average, late 2016"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2016 retrospective",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2016, Clinton underperformed her polls, but the errors were mostly at the state level. National polls were quite accurate.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2016 retrospective",
+        "evidence_quote": "Clinton underperformed her polls in 2016 — but the errors were mostly at the state level. National polls were quite accurate.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "design_principle",
+        "statement": "Silver cautions against overstating the importance of campaign tactics, which are largely constrained by underlying conditions of the race outside the candidates' control. Messaging matters only at the margin.",
+        "quantities": [],
+        "rationale": "Fundamentals constrain campaigns.",
+        "model_version": "general principle",
+        "evidence_quote": "I don't want to overstate the importance of campaign tactics, a lot of which are constrained by the underlying conditions of the race that are outside of the candidates' control.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "favorability vs. vote choice",
+        "insight": "Likability does not equal vote share. Voters may support a disliked candidate they see as fighting for them on clear policy goals ('Billboard Lawyer' effect).",
+        "evidence": "Harris led Trump on favorability by 3.2 to 5.2 points but led national polls by only 1.6 points. Clinton showed a similar pattern in 2016.",
+        "forecasting_implication": "Do not use the favorability gap as a predictor of late movement toward the more-liked candidate."
+      },
+      {
+        "topic": "democracy messaging",
+        "insight": "'Democracy' messaging resonates with Democrats' college-educated base but not particularly with swing voters.",
+        "evidence": "Silver cites polling (linked).",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "abortion",
+        "insight": "Abortion is a good issue for Democrats.",
+        "evidence": "Linked reference.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "incumbency penalty",
+        "insight": "Recent incumbent-party campaigns have mostly failed amid persistent voter dissatisfaction with the country's direction: McCain in 2008, Clinton in 2016, Trump in 2020, and Biden effectively in 2024. Obama in 2012 was the exception.",
+        "evidence": "Election history 2008-2024.",
+        "forecasting_implication": "Supports a headwind for the incumbent party in an environment of anti-incumbent sentiment and unpopular incumbents."
+      },
+      {
+        "topic": "campaign trajectory 2024",
+        "insight": "After Harris replaced Biden, the race was near 50/50 for most of the campaign. Harris succeeded in the set pieces (consolidating Democrats, the convention, the debate), then the race drifted slightly toward Trump. Heavy early voting limits late strategy changes.",
+        "evidence": "",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "VP selection",
+        "insight": "Silver faults Harris for choosing Walz over Josh Shapiro, citing partly Electoral College (Pennsylvania) implications and partly the lost signal of a pivot to the center.",
+        "evidence": "",
+        "forecasting_implication": "Implies a possible home-state VP effect, though this is not quantified."
+      },
+      {
+        "topic": "Israel/Palestine opinion",
+        "insight": "The US public is still generally more sympathetic to Israel than to Palestine.",
+        "evidence": "Linked polling.",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin list of 24 factors that favor Harris, and the companion list for Trump",
+        "url": ""
+      },
+      {
+        "description": "538 favorability averages for Harris and Trump",
+        "url": ""
+      },
+      {
+        "description": "RealClearPolitics 2016 Clinton vs. Trump favorability ratings average",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin presidential forecast (53% Trump) and national polling average",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Which polling average produced the 1.6-point national lead (Silver Bulletin or another)?",
+      "What is the Silver Bulletin model's precise estimate of the Electoral College–popular vote gap in 2024?"
+    ]
+  }
+}

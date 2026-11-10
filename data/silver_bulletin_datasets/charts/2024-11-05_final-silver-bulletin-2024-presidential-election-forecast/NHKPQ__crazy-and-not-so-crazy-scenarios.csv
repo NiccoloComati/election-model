@@ -1,0 +1,14 @@
+scenario_description,probability
+Electoral College deadlock (No candidate gets 270 electoral votes),0.3375
+Recount (1+ decisive states within 0.5 ppt),11.57375
+Harris wins popular vote,76.2225
+Trump wins popular vote,23.7775
+Harris wins popular vote but loses Electoral College,26.7
+Trump wins popular vote but loses Electoral College,0.66125
+Harris majority (at least 50 percent of the vote),63.8
+Trump majority (at least 50 percent of the vote),14.77625
+Harris landslide (double-digit popular vote margin),1.1975
+Trump landslide (double-digit popular vote margin),0.09
+Map exactly the same as in 2020,0.5325
+Harris wins at least one state Trump won in 2020,53.9675
+Trump wins at least one state Biden won in 2020,85.71

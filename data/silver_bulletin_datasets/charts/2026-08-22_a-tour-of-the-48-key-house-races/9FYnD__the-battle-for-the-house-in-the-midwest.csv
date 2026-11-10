@@ -1,0 +1,13 @@
+district	region	race_rating	winner_Dparty	tipping	voteshare_D	voteshare_R	mean_netpartymargin	margin_positive	flip	incumbent	role	urbanindex_state	urban_tercile
+NE-2	Midwest	Solid D	0.959225	0.006225	54.6	41.8	D +12.8@@12.8	1	1	R	Offense	11.946501	Urban
+IA-3	Midwest	Likely D	0.828025	0.01775	53.4	46.6	D +6.7@@6.7	1	1	R	Offense	10.498774	Rural
+IA-1	Midwest	Lean D	0.711275	0.02195	49.9	46.2	D +3.7@@3.7	1	1	R	Offense	9.6126301	Rural
+WI-3	Midwest	Lean D	0.6471	0.0253	49.7	47.4	D +2.3@@2.3	1	1	R	Offense	9.0274686	Rural
+MI-7	Midwest	Lean D	0.6288	0.0231125	51	49	D +2@@2	1	1	R	Offense	10.537329	Rural
+OH-9	Midwest	Lean D	0.624525	0.0228125	49.7	47.7	D +2@@2	1	0	D	Defense	10.659115	Mixed
+MI-10	Midwest	Lean D	0.60455	0.019575	50.9	49.1	D +1.8@@1.8	1	1	R	Offense	12.420863	Urban
+OH-7	Midwest	Toss-up	0.56055	0.02035	49	48	D +1@@1	1	1	R	Offense	11.328213	Mixed
+MI-4	Midwest	Toss-up	0.552	0.021775	50.4	49.6	D +0.8@@0.8	1	1	R	Offense	10.541775	Rural
+IA-2	Midwest	Toss-up	0.479425	0.017175	48	48.4	R +0.4@@-0.4	0	0	R	Offense	9.6421499	Rural
+WI-1	Midwest	Lean R	0.309125	0.0098125	48.5	51.5	R +3.1@@-3.1	0	0	R	Offense	10.967778	Mixed
+MO-5	Midwest	Likely R	0.14055	0.0035125	44.4	52.3	R +7.9@@-7.9	0	1	D	Defense	10.236741	Rural

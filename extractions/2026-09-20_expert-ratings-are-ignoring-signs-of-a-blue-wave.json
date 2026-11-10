@@ -1,0 +1,311 @@
+{
+  "article": {
+    "date": "2026-09-20",
+    "title": "Expert ratings are ignoring signs of a blue wave",
+    "subtitle": "Assuming we’re in a roughly neutral political environment doesn’t make sense given the history of the midterms, $4.50 gas or Trump’s dismal approval…",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/expert-ratings-are-ignoring-signs",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-09-20_expert-ratings-are-ignoring-signs-of-a-blue-wave"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:38:27"
+  },
+  "extraction": {
+    "summary": "Model Talk on why FLIPR de-biases expert ratings. Expert raters (Cook, Inside Elections, Sabato) implied a national environment about 5 to 6 points more Republican than FLIPR's D+8.6 likely-voter generic ballot, which matched FLIPR's historical prior of D+8.7. The article publishes FLIPR's exact dictionary converting rating categories to margins, its Bayesian handling of censored 'Solid' ratings, the trendline adjustment factors (2/3 of generic-ballot change for congressional races, about 47 percent for governors), and a fixed bug in Inside Elections rating ingestion that moved Senate odds from about 61-62 to 65 percent. It also covers an Alaska-specific expert-rating adjustment and argues that forecasts should be judged across the whole cycle, since predictable forecast changes mean information left unused.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "FLIPR 2026 (Lite, Classic, Deluxe)",
+      "Cook Political Report",
+      "Inside Elections",
+      "Sabato's Crystal Ball",
+      "prediction markets",
+      "ELWAY NFL model"
+    ],
+    "findings": [
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "parameter_or_number",
+        "statement": "FLIPR's dictionary for converting expert rating categories into projected margins: Solid D at least D+18.1; Likely D D+12.1; Lean D D+6.7; Tilt D D+4.4; Toss-up 0; Tilt R R+4.4; Lean R R+6.7; Likely R R+12.1; Solid R at least R+18.1. Ratings from the three outlets are averaged; for Texas Senate, two Toss-ups and one Lean R averaged to an implicit R+2.2.",
+        "quantities": [
+          {
+            "name": "Solid",
+            "value": "at least 18.1",
+            "unit": "points margin",
+            "context": "expert dictionary"
+          },
+          {
+            "name": "Likely",
+            "value": "12.1",
+            "unit": "points margin",
+            "context": "expert dictionary"
+          },
+          {
+            "name": "Lean",
+            "value": "6.7",
+            "unit": "points margin",
+            "context": "expert dictionary"
+          },
+          {
+            "name": "Tilt",
+            "value": "4.4",
+            "unit": "points margin",
+            "context": "expert dictionary"
+          },
+          {
+            "name": "Toss-up",
+            "value": "0",
+            "unit": "points margin",
+            "context": "expert dictionary"
+          }
+        ],
+        "rationale": "Derived from how categories translate on average into vote shares.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Here’s the “dictionary” that we use:",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "method",
+        "statement": "'Solid' ratings are a censored category, since a Solid race may be 15 or 60 points. FLIPR uses Classic's forecast to impute an expert margin and applies a Bayesian check: if it is implausible that the race would be rated anything but Solid (e.g. a Massachusetts Senate race), the rating has essentially no effect; if the race is plausibly competitive but rated Solid (e.g. a Minnesota race with lean about D+5), it can have a fairly big impact.",
+        "quantities": [
+          {
+            "name": "Minnesota neutral-environment lean",
+            "value": "about D+5",
+            "unit": "points",
+            "context": "example"
+          }
+        ],
+        "rationale": "Without this, Deluxe projections would become too compressed.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "For Solid races, FLIPR basically relies on Classic (polls + fundamentals) to impute an expert margin.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "empirical_regularity",
+        "statement": "In the 14 Senate races with at least a 3 percent tipping-point chance in September 2026, FLIPR Classic averaged D+1.9 while the raw expert ratings averaged R+3.3, and in 13 of 14 the experts were more Republican. The experts thus implied a national environment 5 to 6 points redder than FLIPR's, around D+2 or D+3 versus D+8.",
+        "quantities": [
+          {
+            "name": "FLIPR Classic average margin",
+            "value": "D+1.9",
+            "unit": "points",
+            "context": "14 key Senate races"
+          },
+          {
+            "name": "raw expert average margin",
+            "value": "R+3.3",
+            "unit": "points",
+            "context": "14 key Senate races"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "the expert ratings assume a political environment that’s 5 to 6 points more Republican than the one FLIPR expects.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "empirical_regularity",
+        "statement": "Citing G. Elliott Morris: in midterms since 2010, at about 45 days out, the president's party won only 33 percent of House races Cook rated 'toss-up'. Expert ratings persistently underweight the midterm penalty, and FLIPR's predecessors have long corrected for this.",
+        "quantities": [
+          {
+            "name": "president's party win rate in Cook toss-ups",
+            "value": "33",
+            "unit": "percent",
+            "context": "House, midterms since 2010, ~45 days out"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR and predecessors",
+        "evidence_quote": "the president’s party has won only 33 percent of House races that Cook Political rated as “toss-up.”",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "method",
+        "statement": "FLIPR de-biases expert ratings by shifting them to match FLIPR Classic's national environment; for example, an all-'toss-up' Michigan became D+5.7 after de-biasing. The adjustment is dynamic and shrinks as experts move their ratings toward the objective environment late in the cycle.",
+        "quantities": [
+          {
+            "name": "Michigan de-biased expert margin",
+            "value": "D+5.7",
+            "unit": "points",
+            "context": "Sept 2026"
+          }
+        ],
+        "rationale": "Experts' value lies in intangibles and private information, not their view of the national environment.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "So FLIPR debiases the expert ratings so that they match FLIPR Classic’s estimate of the national political environment.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "parameter_or_number",
+        "statement": "FLIPR's trendline adjustment shifts older race polls by two-thirds of the subsequent change in the generic ballot for congressional races; a May poll at D+4 with Democrats up 3 since becomes D+6. For gubernatorial races the factor is about 47 percent, made slightly less sensitive in September 2026, with an impact of about a tenth of a point.",
+        "quantities": [
+          {
+            "name": "trendline factor, congressional",
+            "value": "2/3",
+            "unit": "share of generic ballot change",
+            "context": "FLIPR 2026"
+          },
+          {
+            "name": "trendline factor, gubernatorial",
+            "value": "approximately 47",
+            "unit": "percent",
+            "context": "FLIPR 2026"
+          }
+        ],
+        "rationale": "Governor races are less partisan, so the generic ballot is less informative about them.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "In FLIPR, the trendline adjustment shifts “old” polls by 2/3 of the direction of the change in the generic ballot.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "generic_ballot_and_national_environment",
+        "finding_type": "parameter_or_number",
+        "statement": "On Sept. 20, 2026 FLIPR's historical prior (from presidential approval, previous congressional result and polarization, calibrated on all congressional races since World War II) said Democrats should win the House vote by 8.7 points. The LV-adjusted generic ballot was D+8.6. The prior has only a modest effect, being a deliberately conservative nudge, and little when it already agrees with the snapshot.",
+        "quantities": [
+          {
+            "name": "historical prior",
+            "value": "D+8.7",
+            "unit": "points",
+            "context": "Sept 20, 2026"
+          },
+          {
+            "name": "LV-adjusted generic ballot",
+            "value": "D+8.6",
+            "unit": "points",
+            "context": "Sept 20, 2026"
+          },
+          {
+            "name": "Trump net approval",
+            "value": "-20.5",
+            "unit": "points",
+            "context": "Sept 2026"
+          }
+        ],
+        "rationale": "High polarization dampens swings and is accounted for in the prior.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "This calculation, which is calibrated based on all races for Congress since World War II, has only a modest effect on the model",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "design_principle",
+        "statement": "Changes in a forecast should not be predictable: the best prediction of tomorrow's forecast is today's forecast, otherwise predictive information is being left on the table. Forecasts should be evaluated on what they said throughout the cycle, not only on Election Day.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Put another way, the best prediction of what your forecast says tomorrow should be the forecast today.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "A bug caused FLIPR to treat unchanged Inside Elections ratings as missing whenever the outlet updated only some ratings, falling back to a crude partisanship-and-incumbency prior. This shifted average Deluxe margins by about 0.3 points (up to about 1 point), favoring incumbents' parties and so slightly lowballing Democrats in Republican-held seats. Fixing it moved Deluxe Senate odds to 65 percent, about 3 to 4 points above what new polls alone would have given.",
+        "quantities": [
+          {
+            "name": "average margin impact",
+            "value": "~0.3",
+            "unit": "points",
+            "context": "Deluxe"
+          },
+          {
+            "name": "max margin impact",
+            "value": "~1",
+            "unit": "points",
+            "context": "Deluxe"
+          },
+          {
+            "name": "Senate D prob after fix",
+            "value": "65",
+            "unit": "percent",
+            "context": "Sept 20, 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR was treating the other ratings as blank and falling back to a prior based on partisanship and incumbency",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "adjustment_rule",
+        "statement": "In Alaska, FLIPR computes fundamentals for each party's combined vote, allocates it among same-party candidates, and then simulates ranked-choice voting, whereas experts rate the post-RCV outcome. A special adjustment now puts expert ratings and Classic on the same scale at each stage; the fix slightly helped Republicans.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR now makes an adjustment in Alaska so that the expert ratings and FLIPR Classic are more on the same scale at each stage of the process.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "method",
+        "statement": "FLIPR's category labels are a post-processing step applied after the model runs. 'Lean Democrat' is any race where the Democrat has a 60 to 74 percent chance; Toss-up means neither side above 60 percent.",
+        "quantities": [
+          {
+            "name": "Lean range",
+            "value": "60-74",
+            "unit": "percent",
+            "context": "FLIPR labels"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "these ratings are just a post-processing step, a label applied after the model finishes running the numbers.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Polls showing very red states like Kansas or Nebraska as toss-ups warrant caution, because recent polling error has been concentrated in such states. Classic and Deluxe hedge toward fundamentals there, and de-biased expert ratings still hurt Democrats in Kansas, Nebraska and South Carolina.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "History says to be wary of states as red as Kansas polling as toss-ups; they’re where most of the polling error has been concentrated in recent years.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "gas prices",
+        "insight": "Gas prices near $4.50 per gallon, up $1.29 in a year, with diesel up even more, coincided with Democratic polling gains in September 2026.",
+        "evidence": "",
+        "forecasting_implication": "Fuel prices can be a salient economic fundamental."
+      },
+      {
+        "topic": "11-point swing from 2024",
+        "insight": "A D+8 to D+9 environment is about an 11-point swing from 2024, putting Ohio (Trump +11) at toss-up and Florida, Alaska, Iowa (Trump +13) and Texas (+14) near toss-up.",
+        "evidence": "",
+        "forecasting_implication": "Uniform swing from the prior presidential baseline gives a quick map of the competitive field."
+      },
+      {
+        "topic": "2018 benchmark",
+        "insight": "In Trump's previous midterm (2018) Democrats won the House popular vote by 8.6 points.",
+        "evidence": "",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "G. Elliott Morris analysis of expert toss-up ratings bias",
+        "url": ""
+      },
+      {
+        "description": "Nate Cohn on an 11-point swing from 2024",
+        "url": ""
+      }
+    ],
+    "open_questions": []
+  }
+}

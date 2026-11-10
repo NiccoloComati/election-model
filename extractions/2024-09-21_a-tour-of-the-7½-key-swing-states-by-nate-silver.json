@@ -1,0 +1,642 @@
+{
+  "article": {
+    "date": "2024-09-21",
+    "title": "A tour of the 7½ key swing states",
+    "subtitle": "There’s a 92 percent chance that this is where the election is decided.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/a-tour-of-the-7-key-swing-states",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-09-21_a-tour-of-the-7½-key-swing-states-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.625155,
+    "prompt_tokens": 4,
+    "completion_tokens": 9155,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 55215,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:14:23"
+  },
+  "extraction": {
+    "summary": "A state-by-state tour of the 2024 presidential battlegrounds using Silver Bulletin model output from September 21, 2024. For each state it reports Harris win probability and tipping-point probability, along with polling and political context. The article shows several model behaviors. Swing-state outcomes are strongly correlated: Harris swept all seven in 20% of simulations and Trump in 23%. The model ran 40,000 simulations, and in some states (North Carolina, Arizona) it departs from the polling average because of non-polling factors. It also assigns small tipping-point probabilities to unlikely states out of caution and enumerates exotic regional-shift maps. Silver also comments that home-state effects are small, that reverse coattails are generally not real, and that other models give Florida too high a tipping-point probability. The post is marked paid but appears complete.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "other presidential models (unnamed)"
+    ],
+    "findings": [
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin 2024 presidential model ran 40,000 simulations for its September 21, 2024 forecast update.",
+        "quantities": [
+          {
+            "name": "number of simulations",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "model run on the morning of Sept 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it came up 610 times (about 1.5 percent of cases) out of the 40,000 simulations we ran this morning",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "Errors across the seven swing states are highly correlated in the 2024 Silver Bulletin presidential model. A systematic polling error or a late shift in the race can cause one candidate to sweep all seven. Harris swept all seven in 20% of simulations and Trump in 23%, so a sweep by someone occurred in 43% of simulations.",
+        "quantities": [
+          {
+            "name": "Harris sweeps all 7 swing states",
+            "value": "20",
+            "unit": "percent of simulations",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "Trump sweeps all 7 swing states",
+            "value": "23",
+            "unit": "percent of simulations",
+            "context": "Sept 21, 2024"
+          }
+        ],
+        "rationale": "A systematic polling error, or a shift in the race over the final six weeks, moves all the states together.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "A systematic polling error, or a shift in the race in the final six weeks of the campaign, could result in one candidate sweeping all of these states.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "In the 2024 presidential model, uncertainty includes both systematic polling error and real shifts in the race over the remaining campaign. As of September 21, 2024, the final six weeks of the campaign were still treated as a source of possible movement.",
+        "quantities": [
+          {
+            "name": "time remaining",
+            "value": "six",
+            "unit": "weeks",
+            "context": "as of Sept 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "A systematic polling error, or a shift in the race in the final six weeks of the campaign",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model reports a tipping-point probability for each state. This is the share of simulations in which that state provides the decisive electoral vote. Values on Sept 21, 2024 were: Pennsylvania 32%, Wisconsin 16%, Michigan 14%, North Carolina 11%, Georgia 9%, Arizona 6%, Nevada 2%, Florida 2%, Texas 1%, and Minnesota, New Mexico and Virginia 0–1% each.",
+        "quantities": [
+          {
+            "name": "PA tipping-point probability",
+            "value": "32",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "WI tipping-point probability",
+            "value": "16",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "MI tipping-point probability",
+            "value": "14",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "NC tipping-point probability",
+            "value": "11",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "GA tipping-point probability",
+            "value": "9",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "AZ tipping-point probability",
+            "value": "6",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "NV tipping-point probability",
+            "value": "2",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "FL tipping-point probability",
+            "value": "2",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "TX tipping-point probability",
+            "value": "1",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "MN/NM/VA tipping-point probability",
+            "value": "0 to 1",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Pennsylvania: Harris win probability 57%. Tipping-point probability 32%.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The eight key states (seven swing states plus Florida) together held a 92% probability of containing the tipping-point state in the Sept 21, 2024 model run.",
+        "quantities": [
+          {
+            "name": "probability tipping point is one of 8 key states",
+            "value": "92",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Although there's a 92 percent chance that one of these eight states is the tipping point, there are occasional cases where other states matter.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "Harris win probabilities by state in the Sept 21, 2024 Silver Bulletin model run were: Michigan 63%, Pennsylvania 57%, Wisconsin 56%, Nevada 53%, North Carolina 39%, Georgia 36%, Arizona 36% and Florida 17%.",
+        "quantities": [
+          {
+            "name": "MI Harris win prob",
+            "value": "63",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "PA Harris win prob",
+            "value": "57",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "WI Harris win prob",
+            "value": "56",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "NV Harris win prob",
+            "value": "53",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "NC Harris win prob",
+            "value": "39",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "GA Harris win prob",
+            "value": "36",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "AZ Harris win prob",
+            "value": "36",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "FL Harris win prob",
+            "value": "17",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Michigan: Harris win probability 63%. Tipping-point probability 14%.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "The 2024 presidential model's state forecast blends the polling average with other non-polling factors, so it can depart from the polls. In North Carolina the polling average was nearly tied (Trump +0.1), yet the model made Trump a slight favorite (Harris 39%) based on those other factors.",
+        "quantities": [
+          {
+            "name": "NC polling average margin",
+            "value": "0.1",
+            "unit": "percentage points (Trump lead)",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "NC Harris win probability",
+            "value": "39",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Despite the tie in the current polling averages, it has Trump as the slight favorite instead of a true 50/50 race based on the other factors it considers.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "In Arizona, the non-polling factors in the 2024 presidential model pushed the forecast toward Harris relative to her polls. The model 'thinks the polls are perhaps lowballing Harris.' Silver cites as context that Biden won Arizona in 2020 and Democrats hold the governorship and both Senate seats.",
+        "quantities": [],
+        "rationale": "Prior partisan results and state-level political context point more Democratic than the polls do.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "But this is one swing state where the model thinks the polls are perhaps lowballing Harris.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "Silver Bulletin state polling averages account for each poll's quality, sample size and recency. They are also adjusted based on trends in both state and national polls.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 Silver Bulletin polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin 2024 polling tables include polls of likely voters (LV), registered voters (RV), voters (V) and U.S. adults (A), labeled by population, and show each poll's influence on the average. For example, a Patriot Polling RV poll in Nevada appears alongside LV polls. The tables show the head-to-head Harris vs. Trump numbers.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 Silver Bulletin polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin state polling averages tracked Robert F. Kennedy Jr. as a separate line, at roughly 2–8% depending on state. His line ends when he dropped out in late August 2024, and Harris and Trump numbers both rise afterward.",
+        "quantities": [
+          {
+            "name": "Kennedy state polling share range",
+            "value": "~2-8",
+            "unit": "percent",
+            "context": "July-August 2024 state averages"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 Silver Bulletin polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "Pollster quality ratings affect how much credit polls receive in the 2024 presidential model. The 'very highly-rated' Selzer poll showing Harris down only 4 in Iowa got a lot of credit. Silver also flags that Arizona's recent polls were not particularly highly rated.",
+        "quantities": [
+          {
+            "name": "Selzer Iowa poll margin",
+            "value": "4",
+            "unit": "percentage points (Trump lead)",
+            "context": "2024 Iowa"
+          }
+        ],
+        "rationale": "Higher-rated pollsters are more trustworthy.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model gives a lot of credit to the very highly-rated Selzer poll that had Harris behind by only 4 points in Iowa",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "design_principle",
+        "statement": "The model should enumerate even unlikely scenarios, such as weird regional shifts like those in 2022. One example is Harris losing the Blue Wall plus New Hampshire and Minnesota while sweeping Florida, Georgia and North Carolina. The simulation therefore must allow region-specific (non-uniform) error components.",
+        "quantities": [],
+        "rationale": "Elections like 2022 had a lot of weird regional shifts.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "there are sometimes elections like 2022 with a lot of weird regional shifts, and the model's job is to enumerate even the unlikely scenarios.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "assumption",
+        "statement": "Demographic correlation drives joint state outcomes. Florida becomes part of a Harris winning map mainly in scenarios where her vote collapses among the white working class but she overperforms among Hispanics or voters of color. In that case she can lose all three Blue Wall states and win via Florida, Arizona and Nevada.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The particular scenario where Florida creates winning maps for Harris is if her vote collapses among the white working class — but she overperforms among Hispanics or voters of color generally.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Silver thinks the model is probably overly cautious in giving Iowa any tipping-point probability. Iowa is strongly correlated with the Blue Wall, so a Harris win in Iowa almost always comes with Blue Wall wins and a non-close electoral outcome.",
+        "quantities": [],
+        "rationale": "If Harris wins Iowa, she'll almost certainly also win the Blue Wall states.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it's probably being overly cautious in thinking that Iowa could ever be the tipping point.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "design_principle",
+        "statement": "For lightly polled, safe-ish states (Minnesota, New Mexico, Virginia), the model assigns a 0 to 1 percent tipping-point probability out of an abundance of caution. Sparse polling leaves more uncertainty.",
+        "quantities": [
+          {
+            "name": "MN/NM/VA tipping-point probability",
+            "value": "0 to 1",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          }
+        ],
+        "rationale": "There hasn't been a ton of polling in these states.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "where there hasn't been a ton of polling and the model assigns a 0 to 1 percent tipping-point probability out of an abundance of caution.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "method",
+        "statement": "The model simulates Nebraska and Maine congressional-district electoral votes separately (NE-2, ME-2). In 610 of 40,000 simulations (about 1.5%), Harris won exactly the Blue Wall states plus NE-2 and lost the other battlegrounds, giving a 270-268 win. Without NE-2 that map would be a 269-269 tie, probably resolved for Trump in the House.",
+        "quantities": [
+          {
+            "name": "Blue Wall + NE-2 exact scenario",
+            "value": "610",
+            "unit": "simulations",
+            "context": "out of 40,000, Sept 21, 2024"
+          },
+          {
+            "name": "share of simulations",
+            "value": "about 1.5",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Without that extra vote in Omaha, though, it's a 269-269 tie, which would probably be resolved for Trump in the U.S. House.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "assumption",
+        "statement": "A 269-269 Electoral College tie would probably be resolved for Trump in the U.S. House. This is relevant for how a replicator should score tie outcomes.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it's a 269-269 tie, which would probably be resolved for Trump in the U.S. House.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Silver says home-state effects for presidential candidates are pretty small. He notes Pennsylvania was Biden's birth state, whereas Harris is a California native, which may subtly matter.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "home-state effects are pretty small, but Pennsylvania was Biden's birth state, whereas Harris is a California native.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "assumption",
+        "statement": "Silver generally does not believe in 'reverse coattails': the top of the ticket affects down-ballot races, but down-ballot candidates (e.g., NC gubernatorial candidate Mark Robinson) usually do not affect the presidential race.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "I generally don't believe in \"reverse coattails\" — the top-of-the-ticket can effect down-ballot races, but usually not the other way around.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "Individual poll swings (e.g., a NYT/Siena Harris +4 in Pennsylvania) are often just noise, because the margin of error on polls is higher than people intuitively think.",
+        "quantities": [
+          {
+            "name": "NYT/Siena PA margin",
+            "value": "4",
+            "unit": "percentage points (Harris lead)",
+            "context": "Sept 11-16, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Some of this is probably just noise: the margin of error on polls is higher than you might think intuitively",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Other models put Florida's tipping-point probability as high as 10%, versus 2% in the Silver Bulletin model. Silver thinks they are probably wrong, but uses the comparison as a sanity check that his model isn't out on too far a limb.",
+        "quantities": [
+          {
+            "name": "Silver Bulletin FL tipping-point prob",
+            "value": "2",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "other models FL tipping-point prob",
+            "value": "as high as 10",
+            "unit": "percent",
+            "context": "Sept 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Our model gives Florida a 2 percent chance of being the tipping-point state this time around, but other models put it as high as 10 percent.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver wants more polls in sparsely polled states (Arizona, Alaska, Iowa) to help calibrate the forecast. This implies forecast uncertainty and reliance on non-poll factors are greater where polling is thin.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "this is another state where I wouldn't mind seeing another poll just to help calibrate the forecast.",
+        "explicitness": "implied"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "parameter_or_number",
+        "statement": "Silver Bulletin state polling averages as of Sept 21, 2024 (Harris/Trump) were: MI 49.3/46.9, PA 48.9/47.4, WI 49.4/47.6, NV 48.3/47.2, NC 47.9/48.0, GA 47.4/48.3, AZ 47.3/48.1, FL 46.2/50.1.",
+        "quantities": [
+          {
+            "name": "MI average",
+            "value": "49.3/46.9",
+            "unit": "percent Harris/Trump",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "PA average",
+            "value": "48.9/47.4",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "WI average",
+            "value": "49.4/47.6",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "NV average",
+            "value": "48.3/47.2",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "NC average",
+            "value": "47.9/48.0",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "GA average",
+            "value": "47.4/48.3",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "AZ average",
+            "value": "47.3/48.1",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          },
+          {
+            "name": "FL average",
+            "value": "46.2/50.1",
+            "unit": "percent",
+            "context": "Sept 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 Silver Bulletin polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "closeness of 2024",
+        "insight": "Silver calls 2024 the closest election in his 16 years of forecasting, with all seven swing-state polling averages within 2 points.",
+        "evidence": "State polling averages are all within 2 points.",
+        "forecasting_implication": "Small systematic errors determine the outcome, so correlated error modeling matters most."
+      },
+      {
+        "topic": "Blue Wall partisan lean",
+        "insight": "Michigan has been to the left of Pennsylvania and Wisconsin. Since 2000 it voted Democratic by an average of 6.2 points, versus 3.8 for Pennsylvania and 3.5 for Wisconsin.",
+        "evidence": "Average Democratic margins since 2000.",
+        "forecasting_implication": "Use for state partisan-lean priors."
+      },
+      {
+        "topic": "Arab American vote in Michigan",
+        "insight": "Arab Americans are only about 2% of Michigan's electorate, and Gaza is not necessarily a voting issue for swing voters. Harris has partially defused the issue relative to Biden.",
+        "evidence": "About 2 percent of the electorate.",
+        "forecasting_implication": "There is limited case for a special Michigan adjustment."
+      },
+      {
+        "topic": "Pennsylvania lean",
+        "insight": "Pennsylvania is more likely to vote slightly Republican relative to the country, as it did in the prior two elections. It is the most likely tipping point largely because of its 19 electoral votes.",
+        "evidence": "2016 and 2020 results.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "Wisconsin polling error",
+        "insight": "Polls underestimated Trump massively in Wisconsin in 2016 and 2020 but were accurate in 2022. Being whiter and more rural, Wisconsin is the frontline for any Trump overperformance with the white working class.",
+        "evidence": "Past polling errors.",
+        "forecasting_implication": "Wisconsin errors should be correlated with white working-class demographic error."
+      },
+      {
+        "topic": "Nevada polling",
+        "insight": "Nevada is in principle hard to poll because of a transient population that works irregular hours. In practice polls have mostly been accurate, except for underestimating Harry Reid in 2010, with Democrats typically outperforming polls by 1–2 points. Low turnout may make ground game matter. Working-class voters of color, especially in the casino industry, have shifted toward Trump in polls.",
+        "evidence": "Historical poll accuracy.",
+        "forecasting_implication": "Possible slight Democratic poll-miss tendency in Nevada."
+      },
+      {
+        "topic": "North Carolina vs Georgia",
+        "insight": "North Carolina and Georgia are similar but not identical. North Carolina is whiter and was more Democratic-leaning than Georgia before 2020.",
+        "evidence": "",
+        "forecasting_implication": "The two states are highly but imperfectly correlated."
+      },
+      {
+        "topic": "Georgia polling",
+        "insight": "Georgia polls have been highly accurate historically. No 2024 poll as of Sept 21 showed Harris ahead by 3 or more points. Georgia nearly was the tipping point in 2020, and a Georgia Election Board hand-count rule could make for a messy outcome.",
+        "evidence": "",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "Florida",
+        "insight": "Florida is a 'half' swing state. Harris had led no poll there all cycle, but its 30 electoral votes would effectively end Trump's chances if she won it. It is split into almost a dozen media markets, which makes it expensive to contest.",
+        "evidence": "",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "Texas and Hispanic shift",
+        "insight": "Without Texas's 40 electoral votes the GOP's Electoral College advantage collapses. Republicans have held Texas through a shift toward Trump among South Texas Hispanics, even as Dallas, Houston and Austin trend bluer.",
+        "evidence": "",
+        "forecasting_implication": "Texas is a 1% tipping-point state."
+      },
+      {
+        "topic": "New Hampshire",
+        "insight": "New Hampshire is safe-ish for Harris: she has strong polling leads, the state is highly college-educated, and Biden won it easily in 2020. However, losing its 4 electoral votes would break the Blue Wall path.",
+        "evidence": "",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "Nebraska winner-take-all push",
+        "insight": "There was a late Republican push to make Nebraska winner-take-all, which would eliminate NE-2's single electoral vote. Silver judged it unlikely to succeed and probably too late for Maine to reciprocate.",
+        "evidence": "",
+        "forecasting_implication": "Electoral rules can change mid-cycle, so the model should handle district electoral votes flexibly."
+      },
+      {
+        "topic": "VP selection",
+        "insight": "Silver argues Harris should have picked Josh Shapiro because of Pennsylvania's pivotal role, though he notes home-state effects are small.",
+        "evidence": "",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin polling averages (state charts and polls tables, with downloadable data)",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin coverage of a close Alaska poll",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin piece on systematic polling error",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin pollster ratings (Selzer as very highly-rated)",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What are the 'other factors' (non-polling fundamentals/priors) that make the model favor Trump in North Carolina and Harris relative to polls in Arizona, and how are they weighted against the polling average?",
+      "How is the regional/demographic correlation structure of state errors specified, so that it produces 20%/23% sweep rates and regional-shift maps?",
+      "How exactly are polls adjusted 'based on trends in both state and national polls' (trend-line adjustment method)?",
+      "What is the functional form of each poll's 'influence' weight shown in the polls tables (quality, sample size, recency)?",
+      "How are 269-269 ties scored in the simulation?",
+      "How are Kennedy's supporters reallocated after he dropped out?"
+    ]
+  }
+}

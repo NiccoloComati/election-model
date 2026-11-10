@@ -1,0 +1,76 @@
+Contest,Dates,Sample,Pollster,Harris,Trump,Margin,Influence,cat
+Nevada,10/24 - 11/2@@23673,"1,010 LV@@1010",NYT/Siena,48.5,46,D+ 2.5@@-2.5,1.341592,D
+Nevada,10/30 - 11/2@@23679,840 LV@@840,Emerson College,48.9,49,R+ 0.1@@.1,1.041852,R
+Nevada,11/3 - 11/4@@23683,707 LV@@707,AtlasIntel,47.15,50.2,R+ 3@@3,0.9555414,R
+Nevada,11/1 - 11/2@@23681,782 LV@@782,AtlasIntel,45.95,51.45,R+ 5.5@@5.5,0.9107906,R
+Nevada,10/29 - 10/31@@23678,700 LV@@700,Emerson College,48.6,48.3,D+ 0.3@@-.3,0.9096597,D
+Nevada,10/25 - 10/31@@23674,773 LV@@773,YouGov,49,48,D+ 1@@-1,0.8970109,D
+Nevada,10/30 - 10/31@@23679,845 LV@@845,AtlasIntel,46.95,50.55,R+ 3.6@@3.6,0.8703539,R
+Nevada,10/25 - 10/30@@23674,721 LV@@721,Data for Progress,49,47,D+ 2@@-2,0.8453314,D
+Nevada,10/25 - 10/29@@23674,"1,083 LV@@1083",AtlasIntel,47.55,48.45,R+ 0.9@@.9,0.8427612,R
+Nevada,10/28 - 10/31@@23677,593 LV@@593,OH Predictive Insights,49,48,D+ 1@@-1,0.806987,D
+Nevada,10/28 - 10/31@@23677,400 LV@@400,Susquehanna Polling,44.2,50.2,R+ 6@@6,0.8039681,R
+Nevada,11/1 - 11/3@@23681,792 RV@@792,Patriot Polling,49.4,49.5,R+ 0.1@@.1,0.7865115,R
+Nevada,10/25 - 10/28@@23674,"1,082 LV@@1082",Trafalgar Group,47.8,47.6,D+ 0.2@@-.2,0.6643261,D
+Nevada,10/25 - 10/30@@23674,767 LV@@767,Rasmussen Reports,47,49,R+ 2@@2,0.6326735,R
+Nevada,10/19 - 10/20@@23668,800 LV@@800,InsiderAdvantage,47.7,47.9,R+ 0.2@@.2,0.5954146,R
+Nevada,10/21 - 10/26@@23670,683 LV@@683,SSRS,47,48,R+ 1@@1,0.5939801,R
+Nevada,10/12 - 10/17@@23661,"1,171 LV@@1171",AtlasIntel,48.25,48.35,R+ 0.1@@.1,0.5518956,R
+Nevada,10/3 - 11/1@@23652,"1,324 LV@@1324",Focaldata,48,47,D+ 1@@-1,0.5244753,D
+Nevada,10/28 - 10/31@@23677,690 LV@@690,Redfield & Wilton,47,48,R+ 1@@1,0.4575264,R
+Nevada,10/19 - 10/22@@23668,600 LV@@600,OnMessage,47,50,R+ 3@@3,0.4254173,R
+Nevada,10/1 - 10/25@@23650,933 LV@@933,YouGov,51,47,D+ 4@@-4,0.4165831,D
+Nevada,10/16 - 10/20@@23665,420 LV@@420,Morning Consult,48.5,48,D+ 0.5@@-.5,0.3643467,D
+Nevada,10/5 - 10/8@@23654,900 LV@@900,Emerson College,49.2,48.1,D+ 1.1@@-1.1,0.3564776,D
+Nevada,9/30 - 10/15@@23649,652 LV@@652,The Washington Post,48,48,Even@@0,0.3493359,E
+Nevada,10/8 - 10/15@@23657,600 LV@@600,"Fabrizio, Lee/Impact Research",46.5,48,R+ 1.5@@1.5,0.318084,R
+Nevada,10/25 - 10/27@@23674,531 LV@@531,Redfield & Wilton,47,47,Even@@0,0.3110226,E
+Nevada,10/10 - 10/13@@23659,"1,088 LV@@1088",Trafalgar Group,45.6,44.8,D+ 0.8@@-.8,0.2958662,D
+Nevada,10/9 - 10/14@@23658,748 LV@@748,Rasmussen Reports,47,49,R+ 2@@2,0.2669093,R
+Nevada,10/6 - 10/15@@23655,496 LV@@496,Morning Consult,49,45,D+ 4@@-4,0.2549461,D
+Nevada,10/20 - 10/22@@23669,540 LV@@540,Redfield & Wilton,46,47,R+ 1@@1,0.2358311,R
+Nevada,10/6 - 10/9@@23655,800 LV@@800,"Fabrizio, Lee/McLaughlin",47,50,R+ 3@@3,0.207748,R
+Nevada,10/16 - 10/18@@23665,529 LV@@529,Redfield & Wilton,46,47,R+ 1@@1,0.191278,R
+Nevada,10/12 - 10/14@@23661,838 LV@@838,Redfield & Wilton,47,47,Even@@0,0.1872814,E
+Nevada,9/30 - 10/3@@23649,782 LV@@782,RMG Research,49,49,Even@@0,0.1656765,E
+Nevada,9/28 - 10/8@@23647,600 RV@@600,Fabrizio/GBAO,42.5,48,R+ 5.5@@5.5,0.1599588,R
+Nevada,9/29 - 9/30@@23648,800 LV@@800,InsiderAdvantage,48.4,49.3,R+ 0.9@@.9,0.1183478,R
+Nevada,9/27 - 10/2@@23646,514 LV@@514,Redfield & Wilton,48,47,D+ 1@@-1,0.080243,D
+Nevada,9/24 - 10/2@@23643,500 LV@@500,OnMessage,45,47,R+ 2@@2,0.0776417,R
+Nevada,9/23 - 9/29@@23642,407 LV@@407,Global Strategy Group/North Star Opinion Research,47.5,47,D+ 0.5@@-.5,0.0371802,D
+Nevada,9/23 - 9/25@@23642,736 LV@@736,TIPP Insights,49.45,48.2,D+ 1.2@@-1.2,0.0206594,D
+Nevada,8/7 - 8/14@@23595,350 RV@@350,Strategies 360,48,42,D+ 6@@-6,0,D
+Nevada,8/25 - 8/28@@23613,490 LV@@490,Redfield & Wilton,47,47,Even@@0,0,E
+Nevada,8/6 - 8/8@@23594,"1,087 LV@@1087",Trafalgar Group,44.8,48.2,R+ 3.4@@3.4,0,R
+Nevada,8/29 - 8/31@@23617,800 LV@@800,InsiderAdvantage,46.5,47.9,R+ 1.4@@1.4,0,R
+Nevada,9/6 - 9/9@@23625,698 LV@@698,Redfield & Wilton,45,46,R+ 1@@1,0,R
+Nevada,9/19 - 9/25@@23638,409 LV@@409,Benenson Strategy/GS Strategy,48,47,D+ 1@@-1,0,D
+Nevada,9/11 - 9/13@@23630,"1,079 LV@@1079",Trafalgar Group,45.3,43.5,D+ 1.8@@-1.8,0,D
+Nevada,8/12 - 8/15@@23600,677 LV@@677,NYT/Siena,45.5,47,R+ 1.5@@1.5,0,R
+Nevada,9/15 - 9/18@@23634,895 LV@@895,Emerson College,48.8,49,R+ 0.2@@.2,0,R
+Nevada,9/1 - 9/3@@23620,788 RV@@788,Patriot Polling,46.8,47,R+ 0.2@@.2,0,R
+Nevada,7/31 - 8/3@@23588,470 LV@@470,Redfield & Wilton,40,40,Even@@0,0,E
+Nevada,8/30 - 9/8@@23618,516 LV@@516,Morning Consult,47.58,48.45,R+ 0.9@@.9,0,R
+Nevada,9/19 - 9/25@@23638,516 LV@@516,Morning Consult,51,44.5,D+ 6.5@@-6.5,0,D
+Nevada,9/9 - 9/16@@23628,692 LV@@692,OH Predictive Insights,47.5,47,D+ 0.5@@-.5,0,D
+Nevada,9/9 - 9/18@@23628,474 LV@@474,Morning Consult,50.87,46.53,D+ 4.3@@-4.3,0,D
+Nevada,8/12 - 8/15@@23600,536 LV@@536,Redfield & Wilton,42,43,R+ 1@@1,0,R
+Nevada,8/23 - 9/3@@23611,760 LV@@760,YouGov,49,47,D+ 2@@-2,0,D
+Nevada,9/19 - 9/22@@23638,738 LV@@738,Rasmussen Reports,48,49,R+ 1@@1,0,R
+Nevada,8/3 - 8/5@@23591,991 LV@@991,Decipher AI,49.2,43.6,D+ 5.6@@-5.6,0,D
+Nevada,7/22 - 7/24@@23579,435 LV@@435,Redfield & Wilton,43,45,R+ 2@@2,0,R
+Nevada,7/26 - 8/2@@23583,403 LV@@403,Benenson Strategy/GS Strategy,43.5,47.5,R+ 4@@4,0,R
+Nevada,9/3 - 9/16@@23622,"1,038 LV@@1038",Focaldata,50.4,48.25,D+ 2.2@@-2.2,0,D
+Nevada,8/23 - 8/29@@23611,626 LV@@626,SSRS,48,47,D+ 1@@-1,0,D
+Nevada,8/6 - 8/16@@23594,678 LV@@678,Focaldata,50.75,44.35,D+ 6.4@@-6.4,0,D
+Nevada,9/16 - 9/19@@23635,600 LV@@600,Tarrance Group,47,44,D+ 3@@-3,0,D
+Nevada,9/16 - 9/20@@23635,800 LV@@800,Remington Research,48,49,R+ 1@@1,0,R
+Nevada,7/15 - 7/16@@23572,800 LV@@800,InsiderAdvantage,40,50,R+ 10@@10,0,R
+Nevada,7/24 - 7/28@@23581,454 RV@@454,Morning Consult,45,44,D+ 1@@-1,0,D
+Nevada,7/23 - 7/29@@23580,400 LV@@400,Public Opinion Strategies,45,46,R+ 1@@1,0,R
+Nevada,8/25 - 8/28@@23613,"1,168 LV@@1168",Emerson College,49.4,48.8,D+ 0.6@@-.6,0,D
+Nevada,8/23 - 8/26@@23611,"1,026 RV@@1026",Beacon Research/Shaw & Co.,49,47,D+ 2@@-2,0,D
+Nevada,8/13 - 8/19@@23601,980 LV@@980,Rasmussen Reports,45,47,R+ 2@@2,0,R
+Nevada,9/16 - 9/19@@23635,652 LV@@652,Redfield & Wilton,45,45,Even@@0,0,E
+Nevada,9/20 - 9/25@@23639,858 LV@@858,AtlasIntel,50.55,47.7,D+ 2.8@@-2.8,0,D
+Nevada,8/23 - 8/26@@23611,416 LV@@416,Morning Consult,49,46,D+ 3@@-3,0,D

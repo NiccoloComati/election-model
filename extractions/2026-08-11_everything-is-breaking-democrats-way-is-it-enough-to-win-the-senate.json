@@ -1,0 +1,328 @@
+{
+  "article": {
+    "date": "2026-08-11",
+    "title": "Everything is breaking Democrats’ way. Is it enough to win the Senate?",
+    "subtitle": "Our midterms model finds that polls, fundamentals and history all point toward a strong Democratic year. The House is theirs to lose, but winning four…",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/everything-is-breaking-democrats-way",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-08-11_everything-is-breaking-democrats-way-is-it-enough-to-win-the-senate"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:31:23"
+  },
+  "extraction": {
+    "summary": "Launch article for FLIPR (Forecast with Leading Indicators, Polls and (Expert) Ratings), the 2026 Silver Bulletin midterm model in the FiveThirtyEight lineage. At launch, 84 days out, it gave Democrats 87 percent for the House (Deluxe and Classic; Lite 83) and 57 percent for the Senate. The article describes the likely-voter adjustment (D+6.7 raw generic ballot becomes D+8.1), a historical prior from congressional elections since 1946 (D+8.7), and the House and Senate tipping thresholds of about D+3 to 3.5 and D+6. Other points: candidate-quality effects are about half what they were in 2010; Senate race errors are less correlated than presidential ones; and FLIPR explicitly simulates ranked-choice voting and Alaska's top-four primary.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "FLIPR 2026 midterms model (Lite, Classic, Deluxe)",
+      "FiveThirtyEight midterm models (2018, 2022)",
+      "Silver Bulletin generic ballot average"
+    ],
+    "findings": [
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "FLIPR stands for Forecast with Leading Indicators, Polls and (Expert) Ratings. It is the 2026 Silver Bulletin midterm forecast, in the lineage of the FiveThirtyEight election forecasts whose IP Silver retained, with substantial refinement for 2026.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR is in the lineage of the f/k/a FiveThirtyEight election forecasts",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "method",
+        "statement": "FLIPR applies a likely-voter adjustment to generic ballot polls conducted among registered voters. Following longstanding practice, the adjustment is estimated mainly from polls that publish both LV and RV versions of the same survey. In August 2026 the LV versions were better for Democrats, so FLIPR's generic ballot was D+8.1 versus D+6.7 in the raw average.",
+        "quantities": [
+          {
+            "name": "raw generic ballot",
+            "value": "D+6.7",
+            "unit": "points",
+            "context": "Aug 11, 2026"
+          },
+          {
+            "name": "FLIPR LV-adjusted generic ballot",
+            "value": "D+8.1",
+            "unit": "points",
+            "context": "Aug 11, 2026"
+          }
+        ],
+        "rationale": "Registered-voter polls do not account for turnout.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "the adjustment is based mostly on polls that release both likely and registered voter versions of the same survey.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "generic_ballot_and_national_environment",
+        "finding_type": "method",
+        "statement": "FLIPR computes a historical 'prior' for the national House popular vote from all congressional elections since 1946, using the president's approval rating, the previous election's result, and whether the election is a midterm, adjusted for increasing partisan polarization. In August 2026 the prior was D+8.7.",
+        "quantities": [
+          {
+            "name": "historical prior",
+            "value": "D+8.7",
+            "unit": "points",
+            "context": "House popular vote, Aug 2026"
+          },
+          {
+            "name": "data start",
+            "value": "1946",
+            "unit": "year",
+            "context": "congressional elections used for prior"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "We estimate a “prior” based on all congressional elections since 1946, calibrated based on the president’s approval rating, the result of the previous election, and whether the election was a midterm",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "method",
+        "statement": "FLIPR comes in three versions: Lite, an attempt at a polls-only forecast; Classic, which adds fundamentals; and Deluxe, which adds expert ratings. At launch, Democrats' House chances were 83 percent in Lite, 87 in Classic and 87 in Deluxe. Senate chances were 57, 56 and 57 percent.",
+        "quantities": [
+          {
+            "name": "House D win prob, Deluxe",
+            "value": "87",
+            "unit": "percent",
+            "context": "Aug 11, 2026"
+          },
+          {
+            "name": "House D win prob, Classic",
+            "value": "87",
+            "unit": "percent",
+            "context": "Aug 11, 2026"
+          },
+          {
+            "name": "House D win prob, Lite",
+            "value": "83",
+            "unit": "percent",
+            "context": "Aug 11, 2026"
+          },
+          {
+            "name": "Senate D win prob, Deluxe",
+            "value": "57",
+            "unit": "percent",
+            "context": "Aug 11, 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "the Deluxe version of FLIPR, which accounts for polls, “fundamentals”, and expert ratings, has Democrats with a 87 percent chance of winning the House.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The Lite (polls-only) version of FLIPR carries considerably greater uncertainty than Classic and Deluxe. It can be more optimistic about expected seat gains yet give a lower win probability, because its error bars are much wider when only polls are used.",
+        "quantities": [],
+        "rationale": "Adding fundamentals reduces forecast error.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "if you’re only allowed to look at polls, the error bars are much wider.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "parameter_or_number",
+        "statement": "FLIPR finds the House tipping point at a national environment of about D+3 to D+3.5 after mid-decade redistricting, so Republicans are effectively spotted about a field goal. The Senate threshold for a Democratic majority is around D+6 or better.",
+        "quantities": [
+          {
+            "name": "House cut point",
+            "value": "3-3.5",
+            "unit": "points (D national margin)",
+            "context": "2026 maps"
+          },
+          {
+            "name": "Senate cut point",
+            "value": "about 6",
+            "unit": "points (D national margin)",
+            "context": "2026 map"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR, in line with other models, finds that the cut point is somewhere around 3 or 3.5 percentage points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "Extremely partisan maps drawn by both parties have greatly reduced the number of competitive House districts, so even a D+9 House popular vote would struggle to match the 41-seat gain of 2018.",
+        "quantities": [
+          {
+            "name": "2018 Democratic House gain",
+            "value": "41",
+            "unit": "seats",
+            "context": "reference"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "extremely partisan maps drawn by both parties have greatly reduced the number of competitive districts in the House.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "Work on FLIPR found the political climate more stable than ever in forecasting-relevant ways: opinions are baked in, voters tune in early, and recent elections have not had the late shifts in the national environment that used to be common in midterms.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "recent elections haven’t featured the late shifts in the political climate that used to be common in midterms.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "FLIPR's analysis finds candidate-quality factors matter only about half as much as when Silver published his first midterm forecast in 2010.",
+        "quantities": [
+          {
+            "name": "candidate quality effect relative to 2010",
+            "value": "about half",
+            "unit": "ratio",
+            "context": "FLIPR 2026 analysis"
+          }
+        ],
+        "rationale": "Rising partisanship and less ticket-splitting.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "candidate quality factors matter only about half as much as when I published my first midterms forecast in 2010.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "assumption",
+        "statement": "Classic and Deluxe expect candidates who trail in polls during or just after contentious primaries to recover toward the state's partisan baseline. In Michigan, Lite had Republican Rogers as a 60 percent favorite, while Classic and Deluxe projected El-Sayed to win by about 3 points against a D+7 to D+8 baseline.",
+        "quantities": [
+          {
+            "name": "Lite Rogers win prob",
+            "value": "60",
+            "unit": "percent",
+            "context": "Michigan Senate, Aug 2026"
+          },
+          {
+            "name": "Classic/Deluxe projected El-Sayed margin",
+            "value": "about 3",
+            "unit": "points",
+            "context": "Michigan Senate"
+          },
+          {
+            "name": "Michigan baseline",
+            "value": "D+7 to D+8",
+            "unit": "points",
+            "context": "projected November baseline"
+          }
+        ],
+        "rationale": "Candidates often poll poorly amid contentious primaries.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "candidates often struggle in the polls when they’re in the midst of contentious primaries.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "empirical_regularity",
+        "statement": "Gubernatorial races are considerably less partisan than congressional races, so FLIPR is much less confident that a weak gubernatorial candidate will revert to the partisan mean.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "gubernatorial races are still considerably less partisan than races for Congress.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "Polling and forecasting errors are correlated across Senate races, but much less than across states in a presidential race where the same two candidates are on every ballot. Congressional races are also more correlated with one another in presidential years than in midterms, and FLIPR now accounts for this.",
+        "quantities": [],
+        "rationale": "2018 and 2022 midterm maps were patchy and regionalized.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "congressional races are more correlated with one another in presidential years than in midterms, and FLIPR now accounts for this.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "method",
+        "statement": "FLIPR explicitly simulates ranked-choice voting and Alaska's top-four primary system, which may make its Alaska forecast more volatile than other states.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR now explicitly simulates ranked-choice voting and Alaska’s unique top-four primary",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver judges that the 2022 race-level polls were largely accurate and unbiased, contrary to a narrative that polls underestimated Democrats; Democrats lost only 9 House seats and gained a Senate seat.",
+        "quantities": [
+          {
+            "name": "2022 Democratic House losses",
+            "value": "9",
+            "unit": "seats",
+            "context": "2022 midterm"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2022 evaluation",
+        "evidence_quote": "The polls were largely accurate and unbiased.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "design_principle",
+        "statement": "Silver's subjective views about candidates are not factored into the model, and he expects to be occasionally surprised by its outputs.",
+        "quantities": [],
+        "rationale": "If you are never surprised by your model, there is no point in building one.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Though my subjective feelings aren’t factored into the model.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "normal midterm penalty",
+        "insight": "Normal midterms are bad for the president's party, especially with an unpopular president; 2026 had approval near -20 net with only 22 percent strongly approving.",
+        "evidence": "Trump net approval about -20 in August 2026.",
+        "forecasting_implication": "Low strong-approval share signals turnout weakness for the president's party."
+      },
+      {
+        "topic": "off-year elections as indicators",
+        "insight": "Polls underestimated Democrats in the November 2025 elections in Virginia and New Jersey, whose margins were consistent with a blue wave.",
+        "evidence": "",
+        "forecasting_implication": "Off-year and special elections serve as leading indicators."
+      },
+      {
+        "topic": "fundraising",
+        "insight": "Despite DNC fundraising trouble, the top 7 Senate candidates in fundraising in 2026 were all Democrats.",
+        "evidence": "",
+        "forecasting_implication": "Candidate-level fundraising matters more than party committee fundraising."
+      },
+      {
+        "topic": "moderation and electability",
+        "insight": "Silver believes the empirical evidence strongly points toward more moderate candidates being more electable.",
+        "evidence": "",
+        "forecasting_implication": "Candidate ideology can enter as a fundamentals factor."
+      }
+    ],
+    "references": [
+      {
+        "description": "FLIPR model landing page",
+        "url": ""
+      },
+      {
+        "description": "FLIPR methodology story ('How FLIPR forecasts the midterm elections')",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact functional form of the 1946-onward historical prior and its polarization adjustment.",
+      "How the LV adjustment is sized and how it decays as more LV polls arrive."
+    ]
+  }
+}

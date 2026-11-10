@@ -1,0 +1,359 @@
+{
+  "article": {
+    "date": "2025-05-06",
+    "title": "We're tracking more data on Trump's popularity",
+    "subtitle": "An old pattern has re-emerged: his haters are increasingly more passionate than his supporters.",
+    "authors": "Nate Silver; Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/were-tracking-more-data-on-trumps",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2025-05-06_were-tracking-more-data-on-trumps-popularity"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.280067,
+    "prompt_tokens": 4,
+    "completion_tokens": 5309,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 21694,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:26:15"
+  },
+  "extraction": {
+    "summary": "Silver Bulletin announces two additions to its Trump approval dashboard: issue-specific approval averages (economy, immigration, trade/tariffs, inflation) and averages of strong versus weak approval and disapproval. The issue averages and strength averages account for each poll's quality, recency, sample size and partisan lean. As of May 2025, Trump's net approval had fallen from +7.2 to -7.3, and strong disapprovers outnumbered strong approvers by about 3 to 2. The article shows a modest correlation (-0.21) between pollsters' mean-reverted historical bias and their Trump approval numbers, which it reads as evidence that house effects persist from cycle to cycle. It also warns that pollsters becoming self-conscious about their position relative to other pollsters edges toward herding, notes that approval polls lack the empirical accuracy test that elections provide, and observes that midterm polling in 2018 and 2022 was largely unbiased.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin Trump approval rating average",
+      "Silver Bulletin issue approval averages",
+      "Silver Bulletin strong/weak approval averages",
+      "Silver Bulletin pollster ratings"
+    ],
+    "findings": [
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "model_change",
+        "statement": "In May 2025 the Silver Bulletin Trump approval dashboard added issue-specific net approval averages for four issues: the economy, immigration, trade/tariffs, and inflation. Inflation is sometimes labeled 'cost of living' in polls.",
+        "quantities": [
+          {
+            "name": "number of issues tracked",
+            "value": "4",
+            "unit": "issues",
+            "context": "Trump second-term issue approval dashboard, May 2025"
+          }
+        ],
+        "rationale": "These issues have been especially salient early in the presidency, and the data may help explain fluctuations in overall approval.",
+        "model_version": "Silver Bulletin approval dashboard 2025",
+        "evidence_quote": "we're now tracking his approval ratings on a series of issues that have been especially salient early on in his presidency: the economy, immigration, trade/tariffs, and inflation",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin issue approval averages and strong/weak approval averages are updating averages that account for each poll's quality, recency, sample size, and partisan lean.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin approval dashboard 2025",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "model_change",
+        "statement": "The Silver Bulletin dashboard now tracks separate averages for strongly approve, somewhat (weak) approve, somewhat (weak) disapprove, and strongly disapprove of Trump.",
+        "quantities": [],
+        "rationale": "Shows the intensity and entrenchment of views on Trump.",
+        "model_version": "Silver Bulletin approval dashboard 2025",
+        "evidence_quote": "we're now monitoring how many voters strongly approve or disapprove of Trump, as opposed to somewhat approve or disapprove",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The strong/weak approval chart displays shaded bands within which 90% of polls are projected to fall, so the average carries a poll-dispersion interval.",
+        "quantities": [
+          {
+            "name": "poll interval coverage",
+            "value": "90",
+            "unit": "percent",
+            "context": "shaded regions on the strong/weak approval chart"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin approval dashboard 2025",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "parameter_or_number",
+        "statement": "As of May 6, 2025, the issue net approval averages were: inflation -24.7, trade -17.7, economy -13.5, immigration -0.2. Early February values were roughly: immigration +7, economy +6, trade -2, inflation -6.",
+        "quantities": [
+          {
+            "name": "inflation net approval",
+            "value": "-24.7",
+            "unit": "percentage points",
+            "context": "May 6, 2025"
+          },
+          {
+            "name": "trade net approval",
+            "value": "-17.7",
+            "unit": "percentage points",
+            "context": "May 6, 2025"
+          },
+          {
+            "name": "economy net approval",
+            "value": "-13.5",
+            "unit": "percentage points",
+            "context": "May 6, 2025"
+          },
+          {
+            "name": "immigration net approval",
+            "value": "-0.2",
+            "unit": "percentage points",
+            "context": "May 6, 2025"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin approval dashboard 2025",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "parameter_or_number",
+        "statement": "Trump's overall net approval in the Silver Bulletin average was +7.2 after his first week in office and -7.3 by May 6, 2025. That is worse than every other president in Silver Bulletin's historical database at this point except Trump's first term.",
+        "quantities": [
+          {
+            "name": "net approval after week 1",
+            "value": "+7.2",
+            "unit": "percentage points",
+            "context": "late January 2025"
+          },
+          {
+            "name": "net approval",
+            "value": "-7.3",
+            "unit": "percentage points",
+            "context": "May 6, 2025"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin approval average 2025",
+        "evidence_quote": "After Trump's first week in office, his net approval rating was +7.2. Now, it's basically the mirror image of that: -7.3.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "parameter_or_number",
+        "statement": "As of May 6, 2025: strong disapprove 41.9%, strong approve 27.4%, weak approve 16.8%, weak disapprove 9.6%. Net approval among voters with strong views was -14.5. Strong approve and strong disapprove were roughly equal on Feb. 1.",
+        "quantities": [
+          {
+            "name": "strong disapprove",
+            "value": "41.9",
+            "unit": "percent",
+            "context": "May 6, 2025"
+          },
+          {
+            "name": "strong approve",
+            "value": "27.4",
+            "unit": "percent",
+            "context": "May 6, 2025"
+          },
+          {
+            "name": "weak approve",
+            "value": "16.8",
+            "unit": "percent",
+            "context": "May 6, 2025"
+          },
+          {
+            "name": "weak disapprove",
+            "value": "9.6",
+            "unit": "percent",
+            "context": "May 6, 2025"
+          },
+          {
+            "name": "strong-view net approval",
+            "value": "-14.5",
+            "unit": "percentage points",
+            "context": "May 6, 2025"
+          },
+          {
+            "name": "strong disapprove : strong approve ratio",
+            "value": "about 3-to-2",
+            "unit": "ratio",
+            "context": "May 2025"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin approval dashboard 2025",
+        "evidence_quote": "strong disapprovers outnumber strong approvers by about a 3-to-2 ratio",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Across pollsters in the 2024 Silver Bulletin presidential approval database, average Trump approval margin correlates at -0.21 with each pollster's mean-reverted historical bias, where positive bias means pro-Democratic. Pollsters with a historical Republican bias show Trump doing better, which indicates house effects persist from cycle to cycle.",
+        "quantities": [
+          {
+            "name": "correlation",
+            "value": "-0.21",
+            "unit": "",
+            "context": "pollster mean-reverted bias vs. average Trump approval margin"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings / approval database",
+        "evidence_quote": "Pollster house effects have been persistent from cycle to cycle, in other words.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Silver Bulletin pollster ratings use 'mean-reverted bias': a pollster's historical average statistical bias toward Democratic or Republican candidates, shrunk toward zero according to how many of its polls are in the database. Positive values mean pro-Democratic bias.",
+        "quantities": [],
+        "rationale": "Shrinkage guards against noisy bias estimates for pollsters with few polls.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver Bulletin defines statistical bias as the extent to which polls miss in the same direction and consistently underestimate Democrats or Republicans. This is distinct from overall accuracy.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "By bias, we mean statistical bias: the extent to which polls miss in the same direction and consistently underestimate Democrats or Republicans.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "empirical_regularity",
+        "statement": "GOP-leaning pollsters have often been more accurate in the past three presidential elections, so they frequently have higher Silver Bulletin pollster ratings. Because approval averages weight polls by pollster rating, these pollsters receive more weight in the approval calculations.",
+        "quantities": [
+          {
+            "name": "presidential elections considered",
+            "value": "3",
+            "unit": "elections",
+            "context": "2016, 2020, 2024 implied"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin approval average 2025",
+        "evidence_quote": "these pollsters frequently have higher pollster ratings and therefore receive more weight in our approval ratings calculations",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Silver warns that pollsters are increasingly self-conscious about where they stand relative to other polls, which is close to herding. He argues nonpartisan pollsters should aim purely for accuracy rather than identifying as Trump-leaning or anti-Trump.",
+        "quantities": [],
+        "rationale": "Positioning relative to other pollsters risks herding and narrative-shaping.",
+        "model_version": "general principle",
+        "evidence_quote": "it's a fine line between this sort of thing and herding",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Election polls can be checked against actual vote results, but approval and issue polls have no hard benchmark. Their accuracy can only be inferred indirectly, for example from special elections or consumer data.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "With other types of surveys — issue polling or approval rating numbers — there usually isn't any hard data to compare them against.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Midterm polling has not repeated the presidential-year pattern of underestimating Republicans. Polls were largely unbiased and quite accurate in 2018 and 2022.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle / midterms",
+        "evidence_quote": "midterm elections haven't upheld the pattern of polling error from presidential years, with polling being largely unbiased and quite accurate in 2018 and 2022",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Consumer data could serve as a proxy for economic approval, but 'soft' data such as consumer confidence and 'hard' data such as consumer spending have diverged.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "there's been a split between \"soft\" data like consumer confidence numbers and \"hard\" data like consumer spending",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin Trump approval dashboard is updated nearly every day that new polls are released.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin approval dashboard 2025",
+        "evidence_quote": "we'll update our Trump approval dashboard pretty much every day that new numbers are out",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "issue approval reversal",
+        "insight": "Trump's issue pattern has reversed from his first term. The economy was his strongest issue then; in 2025 it is a considerably bigger liability, while immigration is among his least bad issues even though it has declined.",
+        "evidence": "Issue averages as of May 2025: immigration -0.2, economy -13.5, trade -17.7, inflation -24.7.",
+        "forecasting_implication": "The economy and inflation may now drive Republican midterm weakness."
+      },
+      {
+        "topic": "intensity of approval",
+        "insight": "Strong disapproval exceeding strong approval suggests Trump's negatives are more entrenched than his positives, which is bearish for him. The same pattern held in his first term, especially its first two years, and preceded Democrats gaining 41 House seats in 2018.",
+        "evidence": "Strong-view net approval -14.5 vs. overall -7.3; 2018 Democratic gain of 41 House seats.",
+        "forecasting_implication": "Intensity gaps may signal a turnout advantage for the opposition in midterms."
+      },
+      {
+        "topic": "special elections and turnout",
+        "insight": "Democrats have consistently overperformed in special elections in recent years because of lopsided turnout in their favor. This gives an indirect read on the political environment but is skewed by turnout.",
+        "evidence": "",
+        "forecasting_implication": "Discount special-election swings for turnout effects when estimating the national environment."
+      },
+      {
+        "topic": "missing Trump voters in midterms",
+        "insight": "Even if polls miss some Trump voters, it won't help Republicans in 2026 if those voters do not turn out when Trump is not on the ballot.",
+        "evidence": "",
+        "forecasting_implication": "Don't automatically carry the presidential-year Republican polling bias into midterm forecasts."
+      },
+      {
+        "topic": "stock market sensitivity",
+        "insight": "Some voters may be relatively sensitive to stock prices. Trump's slight rebound in approval coincided with a more conciliatory tone on tariffs and a stock-market rise.",
+        "evidence": "Trade approval ticked up and economic approval stabilized in late April and early May 2025.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "candidate recruitment signals",
+        "insight": "Georgia Gov. Brian Kemp declining a Senate bid, and Republican fears of putting safe Trump seats in play, suggest Republicans themselves expect a rough 2026.",
+        "evidence": "",
+        "forecasting_implication": "Candidate recruitment decisions can serve as qualitative signals of the national environment."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin Trump approval ratings dashboard",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin pollster ratings (source of mean-reverted bias)",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin articles on statistical bias of polls, house effects, herding, and midterm polling accuracy in 2018 and 2022",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact functional form of the weights for poll quality, recency, sample size and partisan lean in the issue and strength-of-approval averages.",
+      "How 'partisan lean' (house effect) adjustments are estimated for issue and strong/weak approval questions.",
+      "How the 90% poll intervals on the strong/weak approval chart are computed.",
+      "The mean-reversion formula for pollster bias, including how shrinkage depends on the number of polls.",
+      "How differing question wordings (e.g. 'inflation' vs. 'cost of living') are pooled into a single issue average."
+    ]
+  }
+}

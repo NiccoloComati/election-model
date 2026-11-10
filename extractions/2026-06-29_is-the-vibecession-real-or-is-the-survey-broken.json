@@ -1,0 +1,187 @@
+{
+  "article": {
+    "date": "2026-06-29",
+    "title": "Is the vibecession real — or is the survey broken?",
+    "subtitle": "A shift to online polling and undersampling of Republicans are skewing America’s most-cited measure of consumer sentiment.",
+    "authors": "Joel Wertheimer",
+    "url": "https://www.natesilver.net/p/is-the-vibecession-real-or-is-the",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2026-06-29_is-the-vibecession-real-or-is-the-survey-broken"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": true,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:30:38"
+  },
+  "extraction": {
+    "summary": "Guest post by Joel Wertheimer arguing that the University of Michigan Index of Consumer Sentiment (ICS) has been distorted since mid-2024 by a phone-to-web mode switch, which lowered readings by nearly 9 points, and by a sample that now over-represents Democrats. Reweighting to Pew's National Public Opinion Reference Survey (NPORS) partisanship and correcting for mode puts sentiment near 2013 levels, in line with the Conference Board, Gallup and YouGov. It does not describe Silver Bulletin model mechanics, but documents survey nonresponse and mode effects relevant to any economic-sentiment input and to poll weighting.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "University of Michigan Index of Consumer Sentiment",
+      "Pew NPORS",
+      "Conference Board Consumer Confidence Index"
+    ],
+    "findings": [
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Since its 2024 switch from phone to web, the University of Michigan consumer sentiment index has shown a persistent downward level shift of nearly 9 points, even though phone and web series correlated at 0.97 during the overlap. A high time-series correlation does not rule out a level shift, so ICS data since mid-2024 is not comparable with earlier periods.",
+        "quantities": [
+          {
+            "name": "mode-shift level change",
+            "value": "nearly 9",
+            "unit": "index points",
+            "context": "web vs phone, Tedeschi and Cummings"
+          },
+          {
+            "name": "phone-web correlation",
+            "value": ".97",
+            "unit": "correlation",
+            "context": "Michigan overlap period"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general (economic indicator data quality)",
+        "evidence_quote": "A high time-series correlation only means the phone and web series moved together; it does not rule out a persistent level shift",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "empirical_regularity",
+        "statement": "The partisan gap in consumer sentiment, the president's party's advantage controlling for demographics, has grown from about 15 points under George W. Bush to over 20 under Obama's second term, 38 in Trump's first term, about 34 under Biden, and nearly 53 in Trump's second term.",
+        "quantities": [
+          {
+            "name": "partisan sentiment gap, G.W. Bush",
+            "value": "14.9",
+            "unit": "index points",
+            "context": "from chart"
+          },
+          {
+            "name": "Obama II",
+            "value": "21.5",
+            "unit": "index points",
+            "context": "from chart"
+          },
+          {
+            "name": "Trump I",
+            "value": "37.9",
+            "unit": "index points",
+            "context": "from chart"
+          },
+          {
+            "name": "Biden",
+            "value": "33.6",
+            "unit": "index points",
+            "context": "from chart"
+          },
+          {
+            "name": "Trump II",
+            "value": "52.8",
+            "unit": "index points",
+            "context": "from chart"
+          }
+        ],
+        "rationale": "Partisan expressive responding has intensified.",
+        "model_version": "general",
+        "evidence_quote": "But so far during Trump’s second term, the gap between partisans equates to nearly 53 points of consumer sentiment.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Partisan nonresponse can bias a survey even with demographic weighting: in the Michigan rotating panel, more Democrats were recruited and Democrats returned for reinterviews at much higher rates after the web switch, while strong Republicans returned less, giving a sample with about twice as many Democrats as Republicans (net-Democratic share about +30 percent).",
+        "quantities": [
+          {
+            "name": "net-Democratic share of ICS sample",
+            "value": "+30.1",
+            "unit": "percent",
+            "context": "6-month moving average, 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "Democrats who respond at the reinterview stage return at much higher rates than they did during the phone survey",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "method",
+        "statement": "Weighting a survey by party identification is possible using Pew's National Public Opinion Reference Survey (NPORS), an annual address-based, multi-mode, incentivized survey with a high response rate whose microdata are published and used to benchmark other polls.",
+        "quantities": [],
+        "rationale": "Party ID is an attitude that shifts, so it needs an external high-quality benchmark.",
+        "model_version": "general",
+        "evidence_quote": "Published periodically by Pew, NPORS is an annual address-based survey, with paper, online and phone response options and financial incentives.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "The phone-to-web mode effect differed by party during the April-June 2024 transition: about -3.9 points for Democrats, -7.0 for Republicans and -16.0 for independents, versus -6.5 for all respondents.",
+        "quantities": [
+          {
+            "name": "mode effect, Democrats",
+            "value": "-3.9",
+            "unit": "index points",
+            "context": "web vs phone"
+          },
+          {
+            "name": "mode effect, Republicans",
+            "value": "-7.0",
+            "unit": "index points",
+            "context": "web vs phone"
+          },
+          {
+            "name": "mode effect, independents",
+            "value": "-16.0",
+            "unit": "index points",
+            "context": "web vs phone"
+          },
+          {
+            "name": "mode effect, all",
+            "value": "-6.5",
+            "unit": "index points",
+            "context": "web vs phone"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "independents lean Democratic",
+        "insight": "As Democrats soured on their own leadership, many Democratic-leaning voters began identifying as independents while still voting Democratic; Harris won independents in the 2024 national exit poll while losing the popular vote.",
+        "evidence": "2024 exit poll.",
+        "forecasting_implication": "Party ID composition shifts can masquerade as opinion shifts among independents."
+      },
+      {
+        "topic": "economic perceptions are partisan",
+        "insight": "Economic sentiment is now driven heavily by partisanship, with each side rating the economy far worse under the other party's president.",
+        "evidence": "Michigan ICS by party, 2016-2026.",
+        "forecasting_implication": "Sentiment-based economic indicators carry partisan bias and should be used cautiously as fundamentals."
+      }
+    ],
+    "references": [
+      {
+        "description": "Ernie Tedeschi and Ryan Cummings, Briefing Book analysis of the Michigan mode shift",
+        "url": ""
+      },
+      {
+        "description": "Pew National Public Opinion Reference Survey (NPORS) microdata",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Whether any Silver Bulletin model uses consumer sentiment as an economic input."
+    ]
+  }
+}

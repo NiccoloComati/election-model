@@ -1,0 +1,11 @@
+step_no,step_description,value_inc,value_chal,weight
+1,Polling average,48.13012,48.23828,
+2,Adjust for bounces & recent events,0,0,
+3,Adjusted polling average,48.13012,48.23828,
+4,Reallocate undecideds and third-party votes,1.44466,1.44466,
+5,Reallocated vote share,49.57478,49.68294,
+6,Blend with regression,49.1694,50.08832,0.0053942
+7,Snapshot,49.57259,49.68513,
+8,Blend with economic fundamentals,48.69185,50.56586,0
+9,Projected vote share,49.57259,49.68513,
+10,Chance of winning,48.7175,51.2825,

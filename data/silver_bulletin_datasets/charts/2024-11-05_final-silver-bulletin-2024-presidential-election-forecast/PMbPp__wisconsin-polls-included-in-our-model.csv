@@ -1,0 +1,108 @@
+Contest,Dates,Sample,Pollster,Harris,Trump,Margin,Influence,cat
+Wisconsin,10/25 - 11/2@@23674,"1,305 LV@@1305",NYT/Siena,48.5,46,D+ 2.5@@-2.5,1.474631,D
+Wisconsin,10/27 - 10/30@@23676,"1,330 LV@@1330",Marist College,50,48,D+ 2@@-2,1.323816,D
+Wisconsin,10/30 - 11/2@@23679,800 LV@@800,Emerson College,49.5,49.8,R+ 0.3@@.3,1.102995,R
+Wisconsin,10/28 - 10/30@@23677,831 LV@@831,TIPP Insights,48,47.5,D+ 0.5@@-.5,1.076114,D
+Wisconsin,11/3 - 11/4@@23683,869 LV@@869,AtlasIntel,48.25,49.3,R+ 1@@1,1.030748,R
+Wisconsin,10/25 - 10/29@@23674,"1,470 LV@@1470",AtlasIntel,48.3,48.85,R+ 0.5@@.5,0.9446674,R
+Wisconsin,10/25 - 10/31@@23674,867 LV@@867,YouGov,50,46,D+ 4@@-4,0.9192008,D
+Wisconsin,11/1 - 11/2@@23681,728 LV@@728,AtlasIntel,48.3,49.45,R+ 1.2@@1.2,0.8798544,R
+Wisconsin,10/27 - 10/30@@23676,600 LV@@600,Echelon Insights,48.5,48.5,Even@@0,0.8679935,E
+Wisconsin,11/2 - 11/3@@23682,450 LV@@450,Research Co.,49,46,D+ 3@@-3,0.8282061,D
+Wisconsin,11/1 - 11/3@@23681,"1,086 LV@@1086",Trafalgar Group,48.2,47,D+ 1.2@@-1.2,0.7977871,D
+Wisconsin,10/30 - 10/31@@23679,673 LV@@673,AtlasIntel,48.6,48.65,R+ 0.1@@.1,0.79017,R
+Wisconsin,10/16 - 10/24@@23665,753 LV@@753,Marquette University Law School,48,46.5,D+ 1.5@@-1.5,0.7875691,D
+Wisconsin,11/1 - 11/3@@23681,835 RV@@835,Patriot Polling,49,48.7,D+ 0.3@@-.3,0.7834483,D
+Wisconsin,10/25 - 11/2@@23674,786 LV@@786,Florida Atlantic/Mainstreet,49,48,D+ 1@@-1,0.7800022,D
+Wisconsin,11/1 - 11/2@@23681,800 LV@@800,InsiderAdvantage,47.6,48.9,R+ 1.3@@1.3,0.7684479,R
+Wisconsin,10/21 - 10/22@@23670,800 LV@@800,Emerson College,49.2,49.9,R+ 0.7@@.7,0.7144757,R
+Wisconsin,10/17 - 10/21@@23666,"1,108 LV@@1108",Quinnipiac,48,48,Even@@0,0.7121869,E
+Wisconsin,10/29 - 10/31@@23678,800 LV@@800,OnMessage,47,48,R+ 1@@1,0.6873302,R
+Wisconsin,10/20 - 10/23@@23669,500 LV@@500,Suffolk University,46.6,48,R+ 1.4@@1.4,0.6720095,R
+Wisconsin,10/23 - 10/28@@23672,736 LV@@736,SSRS,51,45,D+ 6@@-6,0.6519297,D
+Wisconsin,10/25 - 10/29@@23674,818 LV@@818,Rasmussen Reports,47,50,R+ 3@@3,0.6042746,R
+Wisconsin,10/26 - 10/27@@23675,800 LV@@800,InsiderAdvantage,48,49,R+ 1@@1,0.5979302,R
+Wisconsin,10/22 - 10/31@@23671,540 LV@@540,Morning Consult,47.6,48.2,R+ 0.6@@.6,0.569032,R
+Wisconsin,10/3 - 11/1@@23652,"1,799 LV@@1799",Focaldata,50,47,D+ 3@@-3,0.5572676,D
+Wisconsin,10/12 - 10/17@@23661,932 LV@@932,AtlasIntel,48.95,48.3,D+ 0.7@@-.7,0.5064491,D
+Wisconsin,10/28 - 10/31@@23677,932 LV@@932,Redfield & Wilton,48,47,D+ 1@@-1,0.4858282,D
+Wisconsin,10/1 - 10/25@@23650,"1,542 LV@@1542",YouGov,50,47,D+ 3@@-3,0.4812598,D
+Wisconsin,10/18 - 10/20@@23667,"1,083 LV@@1083",Trafalgar Group,46.6,46.8,R+ 0.2@@.2,0.4199805,R
+Wisconsin,10/10 - 10/16@@23659,787 LV@@787,RMG Research,49,50,R+ 1@@1,0.3924952,R
+Wisconsin,10/11 - 10/18@@23660,600 LV@@600,Bullfinch,49,46.5,D+ 2.5@@-2.5,0.37227,D
+Wisconsin,10/5 - 10/8@@23654,"1,000 LV@@1000",Emerson College,49.2,49.9,R+ 0.7@@.7,0.3616359,R
+Wisconsin,10/16 - 10/20@@23665,624 LV@@624,Morning Consult,47.5,47.5,Even@@0,0.3575122,E
+Wisconsin,9/30 - 10/15@@23649,695 LV@@695,The Washington Post,50,47,D+ 3@@-3,0.3574437,D
+Wisconsin,10/25 - 10/27@@23674,746 LV@@746,Redfield & Wilton,49,47,D+ 2@@-2,0.3386429,D
+Wisconsin,10/19 - 10/22@@23668,600 LV@@600,OnMessage,47,48,R+ 1@@1,0.3133857,R
+Wisconsin,10/3 - 10/7@@23652,"1,073 LV@@1073",Quinnipiac,46.5,48.5,R+ 2@@2,0.3114079,R
+Wisconsin,10/9 - 10/14@@23658,"1,004 LV@@1004",Rasmussen Reports,47,49,R+ 2@@2,0.2846406,R
+Wisconsin,10/12 - 10/14@@23661,803 RV@@803,Patriot Polling,49,50,R+ 1@@1,0.278563,R
+Wisconsin,10/8 - 10/9@@23657,800 LV@@800,InsiderAdvantage,48,48,Even@@0,0.270295,E
+Wisconsin,10/6 - 10/15@@23655,527 LV@@527,Morning Consult,47,48,R+ 1@@1,0.2323232,R
+Wisconsin,10/20 - 10/22@@23669,557 LV@@557,Redfield & Wilton,49,47,D+ 2@@-2,0.2305361,D
+Wisconsin,10/5 - 10/7@@23654,450 LV@@450,Research Co.,50,48,D+ 2@@-2,0.2105949,D
+Wisconsin,10/6 - 10/9@@23655,800 LV@@800,"Fabrizio, Lee/McLaughlin",48,49,R+ 1@@1,0.207748,R
+Wisconsin,10/16 - 10/18@@23665,622 LV@@622,Redfield & Wilton,47,46,D+ 1@@-1,0.1998627,D
+Wisconsin,10/12 - 10/14@@23661,641 LV@@641,Redfield & Wilton,48,47,D+ 1@@-1,0.1664608,D
+Wisconsin,9/28 - 10/8@@23647,600 RV@@600,Fabrizio/GBAO,47,46.5,D+ 0.5@@-.5,0.1599588,D
+Wisconsin,10/2 - 10/6@@23651,700 LV@@700,Arc Insights,47,48,R+ 1@@1,0.1577898,R
+Wisconsin,9/28 - 9/30@@23647,"1,079 LV@@1079",Trafalgar Group,46,47.1,R+ 1.1@@1.1,0.094016,R
+Wisconsin,9/27 - 10/2@@23646,533 LV@@533,Redfield & Wilton,47,46,D+ 1@@-1,0.0821738,D
+Wisconsin,9/24 - 10/2@@23643,500 LV@@500,OnMessage,46,47,R+ 1@@1,0.0776417,R
+Wisconsin,9/23 - 9/29@@23642,408 LV@@408,Global Strategy Group/North Star Opinion Research,47,45.5,D+ 1.5@@-1.5,0.0372093,D
+Wisconsin,9/21 - 9/26@@23640,680 LV@@680,NYT/Siena,48.5,46.5,D+ 2@@-2,0.0231151,D
+Wisconsin,9/11 - 9/14@@23630,600 LV@@600,"Fabrizio, Lee/Impact Research",48.5,46.5,D+ 2@@-2,0,D
+Wisconsin,8/13 - 8/19@@23601,"1,099 LV@@1099",Rasmussen Reports,47,46.5,D+ 0.5@@-.5,0,D
+Wisconsin,7/31 - 8/5@@23588,800 RV@@800,RMG Research,48,45,D+ 3@@-3,0,D
+Wisconsin,8/28 - 9/5@@23616,738 LV@@738,Marquette University Law School,50,45.5,D+ 4.5@@-4.5,0,D
+Wisconsin,8/12 - 8/14@@23600,976 LV@@976,TIPP Insights,46.7,45.9,D+ 0.8@@-.8,0,D
+Wisconsin,9/12 - 9/18@@23631,800 LV@@800,MassINC Polling,52,45.5,D+ 6.5@@-6.5,0,D
+Wisconsin,7/10 - 7/11@@23567,548 RV@@548,Public Policy Polling,48,49,R+ 1@@1,0,R
+Wisconsin,8/15 - 8/23@@23603, LV@@0,YouGov,50,45.5,D+ 4.5@@-4.5,0,D
+Wisconsin,7/6 - 7/10@@23563,600 LV@@600,North Star Opinion,47,48,R+ 1@@1,0,R
+Wisconsin,8/23 - 8/29@@23611,976 LV@@976,SSRS,50,44,D+ 6@@-6,0,D
+Wisconsin,9/6 - 9/9@@23625,626 LV@@626,Redfield & Wilton,49,46,D+ 3@@-3,0,D
+Wisconsin,9/3 - 9/16@@23622,"1,019 LV@@1019",Focaldata,52.3,46.5,D+ 5.8@@-5.8,0,D
+Wisconsin,8/19 - 8/21@@23607,600 LV@@600,BK Strategies,48,45,D+ 3@@-3,0,D
+Wisconsin,8/28 - 8/30@@23616,"1,083 LV@@1083",Trafalgar Group,46.2,47.3,R+ 1.1@@1.1,0,R
+Wisconsin,9/18 - 9/26@@23637,798 LV@@798,Marquette University Law School,50.5,46,D+ 4.5@@-4.5,0,D
+Wisconsin,8/12 - 8/15@@23600,469 LV@@469,Redfield & Wilton,48,44,D+ 4@@-4,0,D
+Wisconsin,9/16 - 9/20@@23635,800 LV@@800,Remington Research,48,48,Even@@0,0,E
+Wisconsin,8/5 - 8/8@@23593,661 LV@@661,NYT/Siena,49.5,44.5,D+ 5@@-5,0,D
+Wisconsin,9/4 - 9/6@@23623,917 LV@@917,co/efficient,47,47,Even@@0,0,E
+Wisconsin,8/30 - 9/8@@23618,638 LV@@638,Morning Consult,49.48,46.19,D+ 3.3@@-3.3,0,D
+Wisconsin,9/12 - 9/16@@23631,"1,075 LV@@1075",Quinnipiac,48.5,47.5,D+ 1@@-1,0,D
+Wisconsin,8/25 - 8/28@@23613,672 LV@@672,Redfield & Wilton,48,44,D+ 4@@-4,0,D
+Wisconsin,8/6 - 8/7@@23594,800 LV@@800,InsiderAdvantage,48.3,48.6,R+ 0.3@@.3,0,R
+Wisconsin,8/23 - 9/3@@23611,855 LV@@855,YouGov,48,45,D+ 3@@-3,0,D
+Wisconsin,9/15 - 9/18@@23634,"1,000 LV@@1000",Emerson College,48.7,50.3,R+ 1.6@@1.6,0,R
+Wisconsin,9/17 - 9/23@@23636,788 LV@@788,RMG Research,50,49,D+ 1@@-1,0,D
+Wisconsin,9/1 - 9/3@@23620,826 RV@@826,Patriot Polling,47.9,47.7,D+ 0.2@@-.2,0,D
+Wisconsin,8/6 - 8/16@@23594,700 LV@@700,Focaldata,51.05,45.75,D+ 5.3@@-5.3,0,D
+Wisconsin,8/23 - 8/26@@23611,518 LV@@518,Z to A Research,47,47,Even@@0,0,E
+Wisconsin,7/22 - 7/23@@23579,845 RV@@845,Emerson College,48,47.15,D+ 0.8@@-.8,0,D
+Wisconsin,7/31 - 8/8@@23588,600 LV@@600,GSG/GBAO,46.5,46.5,Even@@0,0,E
+Wisconsin,9/3 - 9/6@@23622,946 LV@@946,YouGov,51,49,D+ 2@@-2,0,D
+Wisconsin,8/14 - 8/20@@23602,600 LV@@600,Spry Strategies,47.1,43.8,D+ 3.3@@-3.3,0,D
+Wisconsin,9/19 - 9/25@@23638,411 LV@@411,Benenson Strategy/GS Strategy,48.5,46.5,D+ 2@@-2,0,D
+Wisconsin,7/22 - 7/24@@23579,523 LV@@523,Redfield & Wilton,44,44,Even@@0,0,E
+Wisconsin,7/24 - 8/1@@23581,801 LV@@801,Marquette University Law School,48,47,D+ 1@@-1,0,D
+Wisconsin,8/19 - 8/21@@23607,400 LV@@400,"Fabrizio, Lee & Associates",48,43.5,D+ 4.5@@-4.5,0,D
+Wisconsin,9/11 - 9/12@@23630,800 LV@@800,InsiderAdvantage,49,46.6,D+ 2.4@@-2.4,0,D
+Wisconsin,7/23 - 7/29@@23580,400 LV@@400,Public Opinion Strategies,48,46,D+ 2@@-2,0,D
+Wisconsin,8/25 - 8/28@@23613,850 LV@@850,Emerson College,49.1,49.8,R+ 0.7@@.7,0,R
+Wisconsin,9/20 - 9/25@@23639,"1,077 LV@@1077",AtlasIntel,48.2,49.65,R+ 1.5@@1.5,0,R
+Wisconsin,9/9 - 9/18@@23628,600 LV@@600,Morning Consult,50.22,44.3,D+ 5.9@@-5.9,0,D
+Wisconsin,9/16 - 9/19@@23635,600 LV@@600,Redfield & Wilton,47,47,Even@@0,0,E
+Wisconsin,9/19 - 9/23@@23638,400 LV@@400,RG Strategies,51,45,D+ 6@@-6,0,D
+Wisconsin,9/19 - 9/25@@23638,785 LV@@785,Morning Consult,50.5,47.5,D+ 3@@-3,0,D
+Wisconsin,7/13 - 7/16@@23570,514 RV@@514,Civiqs,48,48,Even@@0,0,E
+Wisconsin,9/19 - 9/22@@23638,"1,071 LV@@1071",Rasmussen Reports,49,49,Even@@0,0,E
+Wisconsin,7/31 - 8/3@@23588,597 LV@@597,Redfield & Wilton,43,43,Even@@0,0,E
+Wisconsin,8/8 - 8/11@@23596,500 RV@@500,Bullfinch,50,41,D+ 9@@-9,0,D
+Wisconsin,7/22 - 7/24@@23579,"1,046 RV@@1046",Beacon Research/Shaw & Co.,47.5,48,R+ 0.5@@.5,0,R
+Wisconsin,8/23 - 8/26@@23611,648 LV@@648,Morning Consult,52.5,44,D+ 8.5@@-8.5,0,D
+Wisconsin,7/26 - 8/2@@23583,404 LV@@404,Benenson Strategy/GS Strategy,48.5,44.5,D+ 4@@-4,0,D
+Wisconsin,9/12 - 9/17@@23631,"1,194 LV@@1194",Marist College,50,49,D+ 1@@-1,0,D
+Wisconsin,7/24 - 7/28@@23581,700 RV@@700,Morning Consult,46.5,46,D+ 0.5@@-.5,0,D

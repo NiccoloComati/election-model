@@ -1,0 +1,351 @@
+{
+  "article": {
+    "date": "2024-10-09",
+    "title": "When you should panic about the polls",
+    "subtitle": "Most of the time, you shouldn't — but here are the exceptions.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/when-you-should-panic-about-the-polls",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-10-09_when-you-should-panic-about-the-polls-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.418563,
+    "prompt_tokens": 8,
+    "completion_tokens": 10383,
+    "cache_read_tokens": 23638,
+    "cache_write_tokens": 25768,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:17:32"
+  },
+  "extraction": {
+    "summary": "Silver argues that Democratic panic about the polls is usually unwarranted because polling averages and the Silver Bulletin forecast move slowly. He uses new Quinnipiac polls as an example: they moved Harris's Wisconsin lead from 1.9 to 1.5 points and her Electoral College odds only modestly, to 54% from a 58% peak. He names three circumstances in which the model moves more aggressively. The first is after landmark events (debates, conventions, VP picks, nomination clinch), where the polling averages become more aggressive. The second is when polls are already trending, because the averages fit multiple trendlines from conservative to aggressive and new polls become high-leverage. The third is the final week to week-and-a-half, when there is no time left for mean reversion and late deciders break.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages"
+    ],
+    "findings": [
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin polling averages treat certain campaign set pieces as 'landmark events': debates, conventions, VP picks and candidates wrapping up their nominations. The averages are designed to become more aggressive (more responsive to new polls) after one of these occurs.",
+        "quantities": [],
+        "rationale": "Polling movement is more likely to be real after campaign set pieces.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model accounts for this latter group of circumstances, which we call \"landmark events\": our polling averages are designed to be more aggressive after one of them occurs.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Unscheduled surprises such as the October 2016 Comey letter make real polling movement more likely, but the landmark-event mechanism in the polling averages explicitly covers only scheduled set pieces, not such surprises.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "polling movement is more likely to be \"real\" after surprises like the James Comey letter",
+        "explicitness": "implied"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin polling averages 'draw curves'. They fit a set of trendlines to recent polling movements, ranging from more conservative to more aggressive. The resulting curves can have inflection points, sometimes sharp ones.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we fit a bunch of trendlines from recent polling movements that range from more conservative to more aggressive. And curves can be — well, curvy. They can have inflection points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "empirical_regularity",
+        "statement": "When a candidate has moved sharply (e.g., gained 2 points nationally in a week), the next several polls are high-leverage. The polling average is effectively testing whether the aggressive trendline is correct, much as with exponential data series such as early COVID case counts.",
+        "quantities": [
+          {
+            "name": "example steep national shift",
+            "value": "2",
+            "unit": "percentage points",
+            "context": "gain over the past week, described as relatively steep given recent stable elections"
+          }
+        ],
+        "rationale": "With multiple trendlines fitted, new data during a trend strongly discriminates between conservative and aggressive fits.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the next several polls that come in are high-leverage as the model essentially tries to determine whether the aggressive curve is correct",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "empirical_regularity",
+        "statement": "When polls have been steady for several weeks, the Silver Bulletin average resists change. It usually takes several polls telling a consistent story to convince the model that something has changed.",
+        "quantities": [],
+        "rationale": "Stable data favors the conservative trendlines.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "It usually takes several polls telling a consistent story to convince the model that something has changed.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin model is designed to be more aggressive toward the very end of the race, specifically in the last week or week-and-a-half. Four weeks out is too soon for this.",
+        "quantities": [
+          {
+            "name": "late-aggressiveness window",
+            "value": "1-1.5",
+            "unit": "weeks",
+            "context": "before Election Day"
+          },
+          {
+            "name": "too early",
+            "value": "4",
+            "unit": "weeks",
+            "context": "not yet in aggressive window"
+          }
+        ],
+        "rationale": "There is no time left for mean reversion, and some voters decide at the very end.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model is designed to be more aggressive toward the very end of the race. But by this I mean specifically the last week or week-and-a-half: four weeks out is a little too soon.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "assumption",
+        "statement": "Earlier in the race, the Silver Bulletin model assumes temporary disruptions to polling tend to mean-revert toward the fundamentals. Late in the race there is no time for this reversion, so shocks are taken more at face value.",
+        "quantities": [],
+        "rationale": "A temporary shock at the top of voters' minds on Election Day can decide the outcome.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "there's no longer time for any mean reversion",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin forecast simulates many permutations of state outcomes and counts who comes up with more winning maps, given correlations between states and the uncertainties in the outlook.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model's job is to sort through these various permutations and see who comes up with more winning maps given the correlations in the data and uncertainties in the outlook.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin state polling averages account for each poll's quality, sample size and recency, and are adjusted based on trends in both state and national polls.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "interpretation_guidance",
+        "statement": "Example of how the model responds to new polls: a batch of Quinnipiac polls (Trump +3 in Michigan, Trump +2 in Wisconsin, Harris +3 in Pennsylvania) moved the forecast only modestly. Harris's Wisconsin average lead fell from 1.9 to 1.5 points and her Wisconsin win probability from 60% to 57%. Her Michigan win probability fell from 64% to 60%.",
+        "quantities": [
+          {
+            "name": "WI Harris lead before",
+            "value": "1.9",
+            "unit": "percentage points",
+            "context": "Oct 2024"
+          },
+          {
+            "name": "WI Harris lead after",
+            "value": "1.5",
+            "unit": "percentage points",
+            "context": "Oct 2024"
+          },
+          {
+            "name": "WI win prob before/after",
+            "value": "60 -> 57",
+            "unit": "percent",
+            "context": "Harris"
+          },
+          {
+            "name": "MI win prob before/after",
+            "value": "64 -> 60",
+            "unit": "percent",
+            "context": "Harris"
+          }
+        ],
+        "rationale": "Dozens of polls are released every week, so one firm's batch moves the average only a little.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the new polling lowered Harris's lead from 1.9 points to 1.5. In turn, that reduced Harris's win probability in the Badger State from 60 to 57.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "In the Wisconsin example, a 0.4-point drop in Harris's lead lowered her state win probability by 3 points. This implies roughly 7-8 points of win probability per point of margin near a toss-up, about four weeks out.",
+        "quantities": [
+          {
+            "name": "implied sensitivity",
+            "value": "~7.5",
+            "unit": "percentage points of win probability per point of margin",
+            "context": "Wisconsin, 4 weeks out"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "implied"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "interpretation_guidance",
+        "statement": "Harris's Electoral College probability had fallen to 54% from a peak of 58% on Sept. 27, 2024. Silver presents this as the model not perceiving a major change in the race.",
+        "quantities": [
+          {
+            "name": "Harris EC probability",
+            "value": "54",
+            "unit": "percent",
+            "context": "Oct 9, 2024"
+          },
+          {
+            "name": "peak",
+            "value": "58",
+            "unit": "percent",
+            "context": "Sept 27, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "now 54 percent, down from a peak of 58 percent on Sept. 27 — it doesn't yet perceive a major change in the race.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Quinnipiac polls tend to be 'bouncy' (high variance) and the firm is not one accused of herding. Its swings should therefore be read in the context of the many other polls rather than as decisive.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Quinnipiac polls tend to be \"bouncy\": they're not one of those firms you can accuse of herding.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "data_source",
+        "statement": "Quinnipiac poll numbers cited in the article are from the versions that include third-party options; head-to-head versions differ slightly. This implies the version choice matters for poll inclusion in the averages.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "These numbers are from the versions where voters are given the option of third-party candidates; the numbers vary slightly in the head-to-head versions.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Even campaign-pertinent news events, like Trump's May 2024 felony conviction, often move the polls only about half a point. Vice-presidential debates usually don't move the needle much.",
+        "quantities": [
+          {
+            "name": "typical news-event effect",
+            "value": "half a point or so",
+            "unit": "percentage points",
+            "context": "e.g., Trump conviction May 2024"
+          }
+        ],
+        "rationale": "Extreme partisanship, very few undecideds, and inattentive voters.",
+        "model_version": "general principle",
+        "evidence_quote": "often only move the numbers by half a point or so given the extreme partisanship in the country and the fact that there are so few remaining undecided voters",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "interpretation_guidance",
+        "statement": "The Wisconsin polling average chart annotates landmark events: Trump assassination attempt, Trump VP pick/RNC, Biden dropping out, model launch, Harris VP pick, DNC, Kennedy dropping out, Harris-Trump debate and Walz-Vance debate. As of Oct 9, 2024 it shows Harris 49.0% and Trump 47.5%. The Kennedy line was tracked at roughly 2-4% until he dropped out in late August.",
+        "quantities": [
+          {
+            "name": "Harris WI",
+            "value": "49.0",
+            "unit": "percent",
+            "context": "Oct 9, 2024"
+          },
+          {
+            "name": "Trump WI",
+            "value": "47.5",
+            "unit": "percent",
+            "context": "Oct 9, 2024"
+          },
+          {
+            "name": "Kennedy WI",
+            "value": "2-4",
+            "unit": "percent",
+            "context": "July-August 2024 before dropout"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "late deciders",
+        "insight": "In 2016, 13% of voters decided in the final week and broke toward Trump (45-42) relative to earlier deciders, who favored Clinton 49-46. This was possibly enough to tip the Electoral College.",
+        "evidence": "2016 exit poll table: last week 13% (Clinton 42, Trump 45, other 13); before that 85% (Clinton 49, Trump 46, other 5).",
+        "forecasting_implication": "Late shifts matter most when undecideds are numerous; justifies extra late-race responsiveness."
+      },
+      {
+        "topic": "undecided voters",
+        "insight": "2016 had an unusually high number of undecided voters, which made Clinton more vulnerable than observers assumed.",
+        "evidence": "",
+        "forecasting_implication": "Uncertainty should scale with the undecided share."
+      },
+      {
+        "topic": "secular decline of late deciders",
+        "insight": "Late deciders are in secular decline because people are constantly attuned to the news and early voting is increasing. Early voters are mostly strong partisans rather than swing voters.",
+        "evidence": "",
+        "forecasting_implication": "The late-race volatility adjustment may matter less in recent cycles."
+      },
+      {
+        "topic": "polarization and stability",
+        "insight": "Extreme partisanship and few undecideds make recent polling mostly stable, and news events rarely move numbers much.",
+        "evidence": "Trump conviction moved polls about 0.5 points.",
+        "forecasting_implication": "Expect small event effects; treat a 2-point weekly move as steep."
+      },
+      {
+        "topic": "media and partisan bias in reading polls",
+        "insight": "Democrats are perpetually anxious and Republicans boastful about polls. Post-2016 media incentives lean toward portraying Republican prospects favorably, e.g., the unjustified 2022 'red wave' predictions, when polls and models showed an above-average Democratic midterm.",
+        "evidence": "2022 midterm example.",
+        "forecasting_implication": "Discount narrative-driven expectations relative to polls and models."
+      },
+      {
+        "topic": "2008 convention bounce",
+        "insight": "McCain polled strongly after the 2008 Republican convention, yet Obama won in a landslide.",
+        "evidence": "",
+        "forecasting_implication": "Convention bounces are temporary and should be discounted."
+      },
+      {
+        "topic": "winning the last news cycle",
+        "insight": "Winning the final news cycle probably helps, and late movement can sometimes be telling.",
+        "evidence": "",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin 2024 presidential forecast and methodology",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin Wisconsin polling average (Get the data)",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on 'centripetal force' in polls",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How much more aggressive the polling averages become after a landmark event, and for how long.",
+      "How the set of conservative-to-aggressive trendlines is specified and weighted (functional forms, combination rule).",
+      "The exact functional form of the extra late-race aggressiveness in the final 1-1.5 weeks.",
+      "How the strength of mean reversion toward fundamentals is set as a function of days until the election.",
+      "Which version (third-party vs head-to-head) of a poll the averages use."
+    ]
+  }
+}

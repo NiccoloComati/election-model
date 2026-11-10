@@ -1,0 +1,567 @@
+{
+  "article": {
+    "date": "2024-10-12",
+    "title": "New York Times polls are betting on a political realignment",
+    "subtitle": "Should you buy it?",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/new-york-times-polls-are-betting",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-10-12_new-york-times-polls-are-betting-on-a-political-realignment"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.425159,
+    "prompt_tokens": 4,
+    "completion_tokens": 7650,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 33978,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:17:36"
+  },
+  "extraction": {
+    "summary": "Silver examines whether NYT/Siena polls, which show Harris gaining in whiter Blue Wall states and Trump gaining in the diverse Sun Belt, are picking up a racial-to-class realignment that other pollsters miss. Silver Bulletin state polling averages instead show electoral depolarization: Harris runs behind Biden 2020 in deep-blue states and somewhat ahead in some red states. A regression of 2024 polls on 2020 results and state white share finds the white-share effect is not significant. He also finds that 2020 polling errors were asymmetric: accurate in deep-blue states but underestimating Trump badly in purple and especially red states, possibly because of COVID-related nonresponse. He discusses the rise of weighting by recalled 2020 vote and its effect of pushing the map toward 2020. He concludes that a polling average hedges by mixing polls that do and don't use that technique. Although the post is marked paid, the text appears to be complete.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "FiveThirtyEight (Silver era, 2008-2022) 2020 presidential model",
+      "NYT/Siena polling methodology"
+    ],
+    "findings": [
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin 2024 presidential model's state forecast blends a polling average with a regression-based estimate. The share of the forecast coming from the polling average varies by state, depending on how much polling there is.",
+        "quantities": [],
+        "rationale": "States with less polling lean more on the regression-based estimates.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "at least 65 percent of our forecast in the state being made up of polling averages rather than our regression-based estimates",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "parameter_or_number",
+        "statement": "For this analysis, Silver treats a state as having 'enough' polling if it has at least 5 polls from at least 3 distinct polling firms, or if the polling average makes up at least 65 percent of the state forecast rather than the regression-based estimate.",
+        "quantities": [
+          {
+            "name": "minimum polls",
+            "value": "5",
+            "unit": "polls",
+            "context": "enough-polling threshold"
+          },
+          {
+            "name": "minimum distinct firms",
+            "value": "3",
+            "unit": "polling firms",
+            "context": "enough-polling threshold"
+          },
+          {
+            "name": "polling-average share threshold",
+            "value": "65",
+            "unit": "percent",
+            "context": "alternative threshold: share of state forecast from the polling average"
+          }
+        ],
+        "rationale": "Limits the comparison to states where the polling data is reasonably robust.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "defined as either 5 polls from 3 distinct polling firms or at least 65 percent of our forecast in the state being made up of polling averages",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The 2020 FiveThirtyEight presidential forecast (Silver era) also blended a polling-average component with other estimates. For the 2020 error check, Silver included states where the polling-average component made up at least 65 percent of the final forecast.",
+        "quantities": [
+          {
+            "name": "polling-average share threshold",
+            "value": "65",
+            "unit": "percent",
+            "context": "2020 final forecast; state inclusion in the 2020 error table"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 2020",
+        "evidence_quote": "I've included all states where the polling average component made up at least 65 percent of our final forecast in 2020.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "empirical_regularity",
+        "statement": "As of Oct 12, 2024, Silver Bulletin state polling averages compared with 2020 results show depolarization. Harris trails Biden's 2020 margin in the bluest states and runs ahead of it in some red states (Alaska, Missouri, Nebraska) but not others (Indiana, Montana).",
+        "quantities": [
+          {
+            "name": "New York swing",
+            "value": "+9",
+            "unit": "points toward R",
+            "context": "D+23.1 in 2020 vs D+13.6 in the 2024 average"
+          },
+          {
+            "name": "California swing",
+            "value": "+5.6",
+            "unit": "points toward R",
+            "context": "D+29.2 vs D+23.6"
+          },
+          {
+            "name": "Massachusetts swing",
+            "value": "+4.5",
+            "unit": "points toward R",
+            "context": "D+33.5 vs D+29"
+          },
+          {
+            "name": "Maryland swing",
+            "value": "+4.0",
+            "unit": "points toward R",
+            "context": "D+33.2 vs D+29.2"
+          },
+          {
+            "name": "Rhode Island swing",
+            "value": "+6.0",
+            "unit": "points toward R",
+            "context": "D+20.8 vs D+14.8"
+          },
+          {
+            "name": "Missouri swing",
+            "value": "-3.6",
+            "unit": "points (toward D)",
+            "context": "R+15.4 vs R+11.8"
+          },
+          {
+            "name": "Alaska",
+            "value": "R+10.1 to R+7.5",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "Nebraska",
+            "value": "R+19.1 to R+17.2",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "Pennsylvania",
+            "value": "D+1.2 to D+0.9",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "Wisconsin",
+            "value": "D+0.6 to D+1.1",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "Michigan",
+            "value": "D+2.8 to D+1.1",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "Arizona",
+            "value": "D+0.3 to R+1.6",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "Georgia",
+            "value": "D+0.2 to R+0.8",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "Nevada",
+            "value": "D+2.4 to D+0.9",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "North Carolina",
+            "value": "R+1.4 to R+0.7",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "Florida",
+            "value": "R+3.4 to R+5.2",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "Texas",
+            "value": "R+5.6 to R+6.3",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          },
+          {
+            "name": "NE-2",
+            "value": "D+6.4 to D+8.7",
+            "unit": "margin",
+            "context": "2020 result vs 2024 average"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "Harris is underperforming Biden's 2020 numbers on the bluest states in the map, like New York and California.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "empirical_regularity",
+        "statement": "Silver regressed 2024 state polling averages on 2020 state results and state white population share across 26 contests. The 2020-result coefficient was about 0.87 (strongly significant), consistent with a compression toward the center. The white-share coefficient was about 0.03 points per percentage point and not significant (p=0.261).",
+        "quantities": [
+          {
+            "name": "actual_2020 coefficient",
+            "value": ".8663098",
+            "unit": "",
+            "context": "SE .0269775, t=32.11"
+          },
+          {
+            "name": "white_share coefficient",
+            "value": ".0306224",
+            "unit": "",
+            "context": "SE .0265559, p=0.261"
+          },
+          {
+            "name": "constant",
+            "value": "-2.705415",
+            "unit": "",
+            "context": "SE 1.778665, p=0.142"
+          },
+          {
+            "name": "residual df",
+            "value": "23",
+            "unit": "",
+            "context": "implies 26 observations"
+          },
+          {
+            "name": "Root MSE",
+            "value": "~1.87",
+            "unit": "points",
+            "context": "read from partially cut-off output"
+          }
+        ],
+        "rationale": "Tests whether 2024 shifts follow a racial pattern; the result suggests 'perhaps something there' but falls short of significance.",
+        "model_version": "2024 analysis",
+        "evidence_quote": "it suggests there's perhaps something there but falls well short of the statistical significance threshold",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2020, the final state polling averages (FiveThirtyEight) were mostly accurate in deep-blue states. They considerably underestimated Trump in purple states and massively underestimated him in red states. Errors exceeded 10 points in some states.",
+        "quantities": [
+          {
+            "name": "Montana error",
+            "value": "12",
+            "unit": "points toward Trump",
+            "context": "2020"
+          },
+          {
+            "name": "Utah error",
+            "value": "10",
+            "unit": "points toward Trump",
+            "context": "2020"
+          },
+          {
+            "name": "Wisconsin error",
+            "value": "7.8",
+            "unit": "points",
+            "context": "D+8.4 polled vs D+0.6 result"
+          },
+          {
+            "name": "Michigan error",
+            "value": "5.1",
+            "unit": "points",
+            "context": "D+7.9 vs D+2.8"
+          },
+          {
+            "name": "ME-2 error",
+            "value": "10.2",
+            "unit": "points",
+            "context": "D+2.8 vs R+7.4"
+          },
+          {
+            "name": "New York error",
+            "value": "6.3",
+            "unit": "points",
+            "context": "D+29.4 vs D+23.1"
+          },
+          {
+            "name": "New Jersey error",
+            "value": "4.5",
+            "unit": "points",
+            "context": "D+20.4 vs D+15.9"
+          },
+          {
+            "name": "Maine error",
+            "value": "3.9",
+            "unit": "points",
+            "context": "D+13 vs D+9.1"
+          },
+          {
+            "name": "New Hampshire error",
+            "value": "3.7",
+            "unit": "points",
+            "context": "D+11.1 vs D+7.4"
+          },
+          {
+            "name": "Pennsylvania",
+            "value": "D+4.7 polled vs D+1.2 result",
+            "unit": "margin",
+            "context": "2020"
+          },
+          {
+            "name": "Maryland",
+            "value": "D+31.4 polled vs D+33.2 result",
+            "unit": "margin",
+            "context": "2020; overestimated Trump"
+          },
+          {
+            "name": "NE-2",
+            "value": "D+3.8 polled vs D+6.5 result",
+            "unit": "margin",
+            "context": "2020"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 2020",
+        "evidence_quote": "Mostly, the polls were pretty accurate in deep blue states. But they considerably underestimated Trump in purple states",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "Silver offers a possible explanation for the 2020 polling error: COVID-related differential nonresponse. Democrats were more likely to socially distance and so had more time to answer surveys. He argues the skew would be larger in red states with voluntary distancing than in locked-down blue states, which fits the asymmetric error pattern.",
+        "quantities": [],
+        "rationale": "In uniformly locked-down states everyone changed behavior, while in red states progressives selectively stayed home.",
+        "model_version": "general / 2020",
+        "evidence_quote": "Voters who were socially distancing had more time on their hands to respond to surveys, and Democrats were more likely to socially distance than Republicans.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Polls early in the 2020 cycle (February–March, before COVID) were more accurate than the final 2020 polls.",
+        "quantities": [],
+        "rationale": "Supports the COVID nonresponse hypothesis.",
+        "model_version": "2020",
+        "evidence_quote": "polls early in 2020 cycle — in February and March before COVID greatly disrupted people's daily lives — were more accurate than the final numbers",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "Silver raises the possibility that 2024 polls understate polarization: underestimating Harris in blue states and Trump in red states. Mechanisms would be undecideds breaking toward each state's dominant party, or depressed minority-party turnout in lopsided states. He notes there are few undecideds.",
+        "quantities": [],
+        "rationale": "For example, there is little reason for a Republican in Massachusetts to vote.",
+        "model_version": "2024 analysis",
+        "evidence_quote": "undecided voters in blue states will mostly wind up voting for Harris and red-state undecideds for Trump (though there aren't many undecideds)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "After the 2016 and 2020 misses, many pollsters in 2024 weight samples by recalled past vote, which had been an uncommon technique. Pollsters traditionally avoided it because respondents misremember or misstate their vote, overclaiming a vote for the previous winner.",
+        "quantities": [],
+        "rationale": "Recall bias toward the winner (Biden) could make samples look artificially shifted toward Trump.",
+        "model_version": "2024 polling landscape",
+        "evidence_quote": "many pollsters are applying what until now had been a relatively uncommon technique: weighting their samples based on how people say they voted in the last election",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Recall-vote bias in 2024 is complicated by two factors: Biden's unpopularity may reduce overclaiming of a Biden vote, and many Republicans wrongly believe Trump won. If respondents falsely recall a Biden vote and now back Trump, weighting by recalled vote can create a phantom pro-Trump shift, so polls would underestimate Harris.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 polling landscape",
+        "evidence_quote": "it will look like there's been a shift toward Trump when there actually hasn't been",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "NYT/Siena polls do not weight by recalled vote. According to Nate Cohn, they would be significantly more Trump-leaning if they did. Polls that do weight by recalled vote produce maps more similar to 2020, because they effectively force the electorate to resemble the last election.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 polling landscape",
+        "evidence_quote": "polls that use recalled vote choice show a map that's more similar to 2020 — in some sense, they're just forcing the electorate to look more like four years ago",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "empirical_regularity",
+        "statement": "State results are highly persistent across recent elections. Adding a uniform 2.4-point swing toward the Democrat to the 2016 state margins (Biden's national popular-vote improvement over Clinton) replicates 2020 state results very accurately. Silver's chart says this uniform swing predicted 2020 better than the polls did.",
+        "quantities": [
+          {
+            "name": "uniform swing",
+            "value": "2.4",
+            "unit": "points toward Democrat",
+            "context": "2016 to 2020"
+          }
+        ],
+        "rationale": "Supports weighting persistence/partisan-lean baselines heavily.",
+        "model_version": "general principle",
+        "evidence_quote": "you can very accurately replicate 2020 results by taking 2016 results and adding 2.4 points to the Democrat's number in each state",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "design_principle",
+        "statement": "A polling average hedges between competing methodological bets, such as pollsters that weight by recalled vote and those that don't, like NYT/Siena. The forecaster therefore need not choose which theory of the electorate is correct.",
+        "quantities": [],
+        "rationale": "Uncertainty about which technique is right is best handled by aggregation.",
+        "model_version": "Silver Bulletin polling averages",
+        "evidence_quote": "the beauty of a polling average is that it hedges its bets with a mix of polls that use both techniques",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "Even top-rated pollsters such as NYT/Siena ('perhaps the best pollster in the country') can show patterns driven by sampling error. Analysts should be wary of backfilling narratives onto noise when other high-quality pollsters disagree.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "our minds can be incredibly clever in backfilling explanations for statistical noise",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Group-level vote estimates (by race) are never hard evidence. They rely on exit polls and ecological inference, both subject to error, and sources differ. For example, Biden's 2020 Latino margin was 28 points per AP VoteCast and 26 points per Catalist. Catalist generally works for Democratic clients.",
+        "quantities": [
+          {
+            "name": "Biden Latino margin 2020 (VoteCast)",
+            "value": "28",
+            "unit": "points",
+            "context": "2020"
+          },
+          {
+            "name": "Biden Latino margin 2020 (Catalist)",
+            "value": "26",
+            "unit": "points",
+            "context": "2020"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "there's never any hard evidence of how any racial group votes — we have to rely on exit polls and ecological inference",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "In October 2024, high-quality pollsters diverged on the state map. NYT/Siena showed Harris +4 in Pennsylvania and Trump +6 in Arizona, while the Wall Street Journal showed Trump +1 in Pennsylvania and Harris +2 in Arizona. The polling averages showed much closer races in both states.",
+        "quantities": [
+          {
+            "name": "NYT/Siena PA",
+            "value": "Harris +4",
+            "unit": "points",
+            "context": "Oct 2024"
+          },
+          {
+            "name": "NYT/Siena AZ",
+            "value": "Trump +6",
+            "unit": "points",
+            "context": "Oct 2024"
+          },
+          {
+            "name": "WSJ PA",
+            "value": "Trump +1",
+            "unit": "points",
+            "context": "Oct 2024"
+          },
+          {
+            "name": "WSJ AZ",
+            "value": "Harris +2",
+            "unit": "points",
+            "context": "Oct 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024",
+        "evidence_quote": "Wall Street Journal polls showed Trump 1 point ahead in Pennsylvania but Harris leading by 2 in Arizona",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "geographic polarization",
+        "insight": "Red states have become redder and blue states bluer, producing many more landslide states.",
+        "evidence": "7 states decided by 20+ points in 1996 vs 19 in 2020.",
+        "forecasting_implication": "Many states are non-competitive, and wasted votes affect the popular-vote/Electoral College relationship."
+      },
+      {
+        "topic": "education realignment",
+        "insight": "Educational polarization among white voters grew from essentially none around 2006 to a large gap by 2020.",
+        "evidence": "Biden won 54% of white college graduates vs 37% of white non-graduates (Catalist).",
+        "forecasting_implication": "Education is a key demographic covariate for state lean and state correlation."
+      },
+      {
+        "topic": "racial vs class realignment",
+        "insight": "Rising educational polarization implies Democratic erosion among working-class Black and Hispanic voters but gains among white voters. Because white voters are overrepresented in Electoral College impact, this trade could help Democrats in the Electoral College.",
+        "evidence": "NYT/Siena showed Trump at 15% of Black voters vs 9% in 2020. NBC/Telemundo showed Harris +14 among Hispanics vs Biden +26-28 in 2020.",
+        "forecasting_implication": "This could make a Harris popular-vote loss with an Electoral College win plausible. Correlated demographic shifts should affect state correlations."
+      },
+      {
+        "topic": "Rust Belt vs Sun Belt divergence",
+        "insight": "If the realignment is real, Harris should gain in whiter Blue Wall states (MI, WI, PA) and Trump in the diverse Sun Belt. If minority shifts toward Trump occur without offsetting white gains, the result is a Trump landslide.",
+        "evidence": "NYT/Siena PA Harris +4 vs AZ Trump +6.",
+        "forecasting_implication": "There is a scenario dimension in which Sun Belt and Rust Belt states decouple."
+      },
+      {
+        "topic": "2024 depolarization",
+        "insight": "2024 polls show Harris underperforming Biden in deep-blue states (including fairly white Massachusetts), so the pattern is not cleanly racial.",
+        "evidence": "Regression white-share coefficient p=0.261.",
+        "forecasting_implication": "Do not over-engineer a racial swing term; the evidence is weak."
+      },
+      {
+        "topic": "electoral persistence",
+        "insight": "Recent elections have been extremely similar from one to the next, so betting on persistence has usually worked.",
+        "evidence": "Uniform 2.4-point swing from 2016 reproduces 2020.",
+        "forecasting_implication": "Strong prior on the previous-election state map plus a uniform national swing."
+      },
+      {
+        "topic": "minority-party turnout in lopsided states",
+        "insight": "Voters of the minority party in lopsided states, such as Massachusetts Republicans, have little reason to turn out. This could make results more polarized than polls show.",
+        "evidence": "",
+        "forecasting_implication": "Possible state-lean-dependent polling bias."
+      }
+    ],
+    "references": [
+      {
+        "description": "Nate Cohn (NYT) explainer on weighting by recalled past vote",
+        "url": ""
+      },
+      {
+        "description": "Catalist estimates of 2020 vote by demographic group",
+        "url": ""
+      },
+      {
+        "description": "AP VoteCast 2020 exit poll",
+        "url": ""
+      },
+      {
+        "description": "FiveThirtyEight 2020 final presidential forecast",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin regression-based state estimates (model methodology)",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin pollster ratings (NYT/Siena as perhaps the best pollster)",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What specification do the regression-based state estimates in the 2024 Silver Bulletin model use, and how is the blend weight between the polling average and the regression determined as a function of poll volume?",
+      "Does the Silver Bulletin model adjust polls for whether a pollster weights by recalled vote, or only through house effects?",
+      "Is the 5-polls/3-firms threshold used anywhere inside the model, or only for this article's display?",
+      "Does the model allow polling error to correlate with state partisan lean (e.g., larger Trump underestimation in red states), as seen in 2020?"
+    ]
+  }
+}

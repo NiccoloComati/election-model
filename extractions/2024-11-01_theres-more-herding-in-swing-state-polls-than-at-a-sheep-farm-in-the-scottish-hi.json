@@ -1,0 +1,492 @@
+{
+  "article": {
+    "date": "2024-11-01",
+    "title": "There’s more herding in swing state polls than at a sheep farm in the Scottish Highlands",
+    "subtitle": "Some pollsters aren’t telling you what their data really says.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/theres-more-herding-in-swing-state",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-11-01_theres-more-herding-in-swing-state-polls-than-at-a-sheep-farm-in-the-scottish-hi"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.389359,
+    "prompt_tokens": 4,
+    "completion_tokens": 7510,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 29853,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:20:47"
+  },
+  "extraction": {
+    "summary": "Silver documents statistically improbable clustering of October 2024 swing-state polls near a tie, which he calls herding. Of 249 qualifying polls in the seven battleground states, 193 (78%) showed margins within 2.5 points. A binomial calculation assuming a tied race and each poll's sample size predicts only 55%, putting the odds at 1 in 9.5 trillion. He breaks this down by state and pollster: Redfield & Wilton is worst, while Emerson and InsiderAdvantage are also suspect. He notes that Silver Bulletin pollster ratings penalize herding and argues that herding makes polling averages less accurate. He also says herding raises the risk of a systematic polling error in either direction or a scrambled map. The article reveals several mechanics: the 40,000-simulation count, how poll versions with and without third parties are averaged, the use of likely-voter versions, the margin-of-error math for the difference between candidates, and the share of simulations in which all seven states land within 2.5 points.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "Silver Bulletin pollster ratings",
+      "RealClearPolitics averages",
+      "FiveThirtyEight polling averages"
+    ],
+    "findings": [
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin 2024 presidential model ran 40,000 simulations in its Friday-afternoon run of Nov 1, 2024.",
+        "quantities": [
+          {
+            "name": "number of simulations",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "Nov 1, 2024 model run"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "In only 1011 out of our 40,000 simulations on Friday afternoon, or about 2.5 percent, did all seven battleground states actually finish within 2.5 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the Nov 1, 2024 Silver Bulletin model run, all seven core battleground states (AZ, GA, MI, NV, NC, PA, WI) finished within 2.5 points in only about 2.5% of simulations. This shows the model's polling-error distribution routinely produces at least one state with a margin wider than 2.5 points, even though every polling average is close.",
+        "quantities": [
+          {
+            "name": "simulations with all 7 swing states within 2.5 pts",
+            "value": "1011",
+            "unit": "simulations",
+            "context": "out of 40,000, Nov 1, 2024"
+          },
+          {
+            "name": "share of simulations with all 7 swing states within 2.5 pts",
+            "value": "about 2.5",
+            "unit": "percent",
+            "context": "Nov 1, 2024"
+          }
+        ],
+        "rationale": "Illustrates that surprises are expected: \"it would be a surprise if there were no surprises\".",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Whatever happens on Tuesday, it would be a surprise if there were no surprises.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "adjustment_rule",
+        "statement": "Silver Bulletin pollster ratings include a herding penalty. A pollster whose polls consistently match other recently published polls to a highly statistically improbable degree has its rating downgraded.",
+        "quantities": [],
+        "rationale": "It partially counters the perverse incentive that published polling averages create, giving pollsters a target to herd toward.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "polls that consistently match numbers from other recently published polls in a way that is highly statistically improbable see their ratings downgraded",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "design_principle",
+        "statement": "Polling averages depend on polls being independent. Herding may make individual polls more accurate, but it makes polling averages less accurate because the average stops aggregating independent opinions (a wisdom-of-crowds precondition).",
+        "quantities": [],
+        "rationale": "Independence is a precondition for the wisdom of crowds (Surowiecki).",
+        "model_version": "general principle",
+        "evidence_quote": "although herding may make individual polls more accurate, they actually make polling averages less accurate. Polling averages are supposed to aggregate independent opinions",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "When a poll releases versions with and without third-party candidates, Silver Bulletin averages the versions together into a single result. This produces fractional margins: for example, Harris +2 in the version with third parties and Harris +1 without them is recorded as Harris +1.5.",
+        "quantities": [
+          {
+            "name": "example averaged margin",
+            "value": "1.5",
+            "unit": "percentage points",
+            "context": "average of +2 (with third parties) and +1 (without)"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential / Silver Bulletin polling averages",
+        "evidence_quote": "some polls release results both with and without third-party candidates, in which case we just average the different versions together",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "method",
+        "statement": "For the herding analysis, Silver Bulletin used likely-voter versions of polls. It used a registered-voter version only when a pollster published no likely-voter version, consistent with a preference hierarchy of LV over RV.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential herding analysis",
+        "evidence_quote": "All the data in this article is based on likely voter polls, unless a pollster only published a registered voter version.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "The Silver Bulletin poll database applies inclusion standards. As of Nov 1, 2024, it contained 249 polls in the seven battleground states that met those standards and had at least some October fieldwork.",
+        "quantities": [
+          {
+            "name": "qualifying October swing-state polls",
+            "value": "249",
+            "unit": "polls",
+            "context": "as of Nov 1, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "there were 249 polls in the seven battleground states that met Silver Bulletin standards and did at least some of their fieldwork in October",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The theoretical sampling margin of error on the two-candidate margin is roughly double the reported single-candidate margin of error, because nearly every vote not cast for one candidate goes to the other. In an 800-person poll of a 49-49 race with 2% third party, each candidate's MoE is about ±3 and the margin's MoE is ±6.",
+        "quantities": [
+          {
+            "name": "single-candidate MoE",
+            "value": "about ±3",
+            "unit": "percentage points",
+            "context": "n=800"
+          },
+          {
+            "name": "MoE on margin",
+            "value": "±6",
+            "unit": "percentage points",
+            "context": "n=800, 49-49 race, 2% third party"
+          },
+          {
+            "name": "third-party share assumed",
+            "value": "2",
+            "unit": "percent",
+            "context": "retained in the calculation"
+          }
+        ],
+        "rationale": "If Trump gets 52 instead of 49, Harris gets 46.",
+        "model_version": "general principle",
+        "evidence_quote": "the margin of error that’s usually reported in polls is only for one candidate’s vote share",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "parameter_or_number",
+        "statement": "The median sample size of October 2024 swing-state polls was 800. The smallest was 400 and the largest 5,686, and most fell between 600 and 1,200. Collectively, October swing-state polls surveyed about 230,000 voters.",
+        "quantities": [
+          {
+            "name": "median sample",
+            "value": "800",
+            "unit": "voters",
+            "context": "Oct 2024 swing-state polls"
+          },
+          {
+            "name": "min sample",
+            "value": "400",
+            "unit": "voters",
+            "context": ""
+          },
+          {
+            "name": "max sample",
+            "value": "5686",
+            "unit": "voters",
+            "context": ""
+          },
+          {
+            "name": "typical range",
+            "value": "600-1200",
+            "unit": "voters",
+            "context": ""
+          },
+          {
+            "name": "total surveyed",
+            "value": "about 230,000",
+            "unit": "voters",
+            "context": "past month, swing states"
+          }
+        ],
+        "rationale": "Averaging many polls greatly increases the effective sample size relative to any individual poll.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Collectively, they’ve surveyed about 230,000 voters.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Silver's herding test works in three steps. First, for each poll, compute from its sample size the probability that it shows a margin within ±2.5 points if the race is truly tied, using the margin-of-error formula for the difference between candidates. Second, sum these probabilities to get the expected number of close polls. Third, use a binomial distribution, assuming independent polls, to get the probability of at least the observed number of close polls.",
+        "quantities": [
+          {
+            "name": "closeness threshold",
+            "value": "2.5",
+            "unit": "percentage points",
+            "context": "non-integer chosen because averaged poll versions produce half-point margins"
+          },
+          {
+            "name": "P(within 2.5) for n=400",
+            "value": "about 40",
+            "unit": "percent",
+            "context": "tied race"
+          },
+          {
+            "name": "P(within 2.5) for n=5686",
+            "value": "almost 95",
+            "unit": "percent",
+            "context": "tied race"
+          }
+        ],
+        "rationale": "Honest polls should produce more apparent outliers than observed.",
+        "model_version": "general principle / pollster ratings",
+        "evidence_quote": "Based on a binomial distribution — which assumes that all polls are independent of one another, which theoretically they should be",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "empirical_regularity",
+        "statement": "Across 249 October 2024 swing-state polls, 193 (78%) were within 2.5 points, against an expected 137 (55%) in a tied race. The odds against this are 1 in 9.5 trillion.",
+        "quantities": [
+          {
+            "name": "actual close polls",
+            "value": "193 (78%)",
+            "unit": "polls",
+            "context": "October 2024, 7 swing states"
+          },
+          {
+            "name": "expected close polls",
+            "value": "137 (55%)",
+            "unit": "polls",
+            "context": "tied race"
+          },
+          {
+            "name": "odds",
+            "value": "1 in 9.5 trillion",
+            "unit": "",
+            "context": "binomial"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the odds are 1 in 9.5 trillion against at least this many polls showing such a close margin",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "empirical_regularity",
+        "statement": "The state-level herding table shows, for each state, polls, expected close polls in a tied race, actual close polls, and odds against: AZ 32 / 17 (54%) / 22 (69%) / 1 in 15; GA 31 / 18 (58%) / 21 (68%) / 1 in 5; MI 44 / 24 (54%) / 29 (66%) / 1 in 8; NV 28 / 14 (50%) / 21 (75%) / 1 in 144; NC 31 / 18 (57%) / 25 (81%) / 1 in 209; PA 47 / 27 (58%) / 42 (89%) / 1 in 300K; WI 36 / 19 (52%) / 33 (92%) / 1 in 2.8 million.",
+        "quantities": [
+          {
+            "name": "WI odds",
+            "value": "1 in 2.8 million",
+            "unit": "",
+            "context": "33 of 36 close"
+          },
+          {
+            "name": "PA odds",
+            "value": "1 in 300K",
+            "unit": "",
+            "context": "42 of 47 close"
+          },
+          {
+            "name": "NV odds",
+            "value": "1 in 144",
+            "unit": "",
+            "context": "21 of 28 close"
+          },
+          {
+            "name": "NC odds",
+            "value": "1 in 209",
+            "unit": "",
+            "context": "25 of 31 close"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "empirical_regularity",
+        "statement": "The pollster-level herding table covers firms with at least 8 October swing-state polls. It lists polls, expected close polls, actual close polls, and odds against: Redfield & Wilton 44 / 25 (56%) / 42 (95%) / 1 in 175 million; Emerson 12 / 7 (56%) / 12 (100%) / 1 in 1148; InsiderAdvantage 10 / 5 (53%) / 10 (100%) / 1 in 576; Morning Consult 14 / 7 (52%) / 12 (86%) / 1 in 105; OnMessage 8 / 4 (45%) / 6 (75%) / 1 in 12; Trafalgar 11 / 7 (61%) / 9 (82%) / 1 in 8; Quinnipiac 8 / 5 (63%) / 5 (63%) / 1 in 3; AtlasIntel 21 / 13 (63%) / 14 (67%) / 1 in 2; Rasmussen 10 / 6 (55%) / 6 (60%) / 1 in 2; Washington Post 8 / 4 (51%) / 4 (50%) / 1 in 2; YouGov 11 / 8 (70%) / 5 (45%) / 9 in 10.",
+        "quantities": [
+          {
+            "name": "Redfield & Wilton odds",
+            "value": "1 in 175 million",
+            "unit": "",
+            "context": "42 of 44 close"
+          },
+          {
+            "name": "minimum polls for table",
+            "value": "8",
+            "unit": "polls",
+            "context": "October swing-state polls"
+          }
+        ],
+        "rationale": "Highly rated firms (Washington Post) show less herding. YouGov had fewer close polls than expected, partly because its results lean toward Harris.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Redfield & Wilton are by far the worst herders: 42 of their 44 polls show the margin within 2.5 points or 95 percent.",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "interpretation_guidance",
+        "statement": "A herding test that assumes a tied race understates herding in states whose consensus is not a tie, such as AZ and GA leaning Trump and MI leaning Harris. It overstates closeness deficits for pollsters with house effects, such as YouGov leaning Harris, because herders aim at the consensus rather than at zero.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "if pollsters are trying to match the consensus, a stray Trump +3 in Arizona or Harris +3 in Michigan won’t stand out so much",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Herding occurs through two mechanisms: file-drawering (not publishing results that don't match the consensus) and adjusting turnout or likely-voter models until results match.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "file-drawering (not publishing) results that don’t match the consensus or torturing their turnout models until they do",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Publishing polling averages (RCP, 538, Silver Bulletin) creates perverse incentives. The averages give pollsters a target to herd toward and make outliers stand out. The incentive is strongest when averages are near zero, because a pollster can herd and avoid taking a stand at the same time.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "which both give pollsters a target to herd toward and make supposed outliers really stand out",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "Herding is less likely in low-attention, non-competitive races, such as New Hampshire, Kansas, and NE-02 in 2024. Polls there can therefore be informative signals about the true environment. New Hampshire polls ranged from Harris +21 to a nominal Trump lead within a week.",
+        "quantities": [
+          {
+            "name": "NH range",
+            "value": "Harris +21 to Trump +0.4",
+            "unit": "percentage points",
+            "context": "recent NH polls, e.g. Dartmouth D+20.8, Praecones R+0.4"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "where herding is less likely because these races aren’t expected to be close and they don’t get much attention",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Herding and hedging raise the risk of a systematic polling error. The error could favor Trump again, could favor Harris (pollsters afraid to show Harris leads after two cycles of underestimating Trump), or could run in both directions across states (a scrambled map).",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "All of this herding — and hedging — increases my concern about another systematic polling error.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "empirical_regularity",
+        "statement": "The Silver Bulletin averages on Nov 1, 2024 showed a larger shift toward Trump over the past month nationally than in most swing states. Margins were National D+1.1 (R+2.5 over the month), PA R+0.6 (R+1.9), NC R+1.2 (R+0.8), MI D+1.2 (R+0.9), GA R+1.7 (R+0.8), WI D+0.8 (R+1.2), AZ R+2.2 (R+0.9), NV R+0.6 (R+2.5), FL R+6.6 (R+3), TX R+7 (R+1.1), NM D+6.6 (R+1.9), NH D+5.2 (R+2.5). The averages table lists only contests surveyed by 3 distinct pollsters or with at least 5 polls. Week change compares to 7 days earlier and month change to 30 days earlier.",
+        "quantities": [
+          {
+            "name": "national margin",
+            "value": "D+1.1",
+            "unit": "percentage points",
+            "context": "Nov 1, 2024"
+          },
+          {
+            "name": "national month change",
+            "value": "R+2.5",
+            "unit": "percentage points",
+            "context": ""
+          },
+          {
+            "name": "display threshold",
+            "value": "3 distinct pollsters or 5 polls",
+            "unit": "",
+            "context": "averages table"
+          }
+        ],
+        "rationale": "Silver suspects herding in national polls via likely voter models.",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "national polls have tightened and moved toward Trump considerably more than state polls have become Trumpier over the past month, except in Nevada and Florida",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "High-quality pollsters such as NYT/Siena and Ann Selzer publish results that diverge from the consensus. Selzer has historically been proven right on apparent outliers. Willingness to publish outliers is a sign of honest work.",
+        "quantities": [
+          {
+            "name": "Selzer Iowa",
+            "value": "Harris -4",
+            "unit": "percentage points",
+            "context": "2024 Iowa poll"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Ann Selzer, who has consistently published seeming “outlier” polls only later to be proven right",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "data_source",
+        "statement": "The Silver Bulletin poll listing displays an 'Influence' column showing how influential each poll is in the model. Population labels are LV, RV, V and A.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "tipping-point state",
+        "insight": "Pennsylvania was the most likely tipping-point state in 2024, so polling there is tantamount to weighing in on the Electoral College.",
+        "evidence": "",
+        "forecasting_implication": "Herding pressure is greatest in the highest-stakes states."
+      },
+      {
+        "topic": "demographic realignment",
+        "insight": "2024 crosstabs showed sharp moves away from Democrats among Black and Hispanic voters and some gains among white voters. If real, they imply a scrambled map with Georgia tougher for Harris, which most toplines did not reflect.",
+        "evidence": "NYT/Siena: Harris strong in PA but weak in AZ/GA.",
+        "forecasting_implication": "Allow for state errors in opposite directions driven by demographic composition."
+      },
+      {
+        "topic": "demographic correlation",
+        "insight": "Strong Harris numbers in Iowa (Selzer), Kansas, and NE-02 would imply comfortable wins in demographically similar states like Michigan and Wisconsin.",
+        "evidence": "",
+        "forecasting_implication": "Use correlated demographic structure to read low-attention state polls as signals for swing states."
+      },
+      {
+        "topic": "Wisconsin polling",
+        "insight": "Wisconsin has had major polling errors in the past, and its pollsters appear especially reluctant to go out on a limb. It showed the most herding (92% of polls within 2.5 points).",
+        "evidence": "33 of 36 polls close",
+        "forecasting_implication": "Be skeptical of tight clustering in Wisconsin polls."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver's 2014 article on herding making polling averages less accurate",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin pollster ratings methodology, including herding penalty",
+        "url": ""
+      },
+      {
+        "description": "James Surowiecki, The Wisdom of Crowds",
+        "url": ""
+      },
+      {
+        "description": "Margin of error formula for the difference between two candidates (linked)",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact functional form and threshold of the herding penalty in Silver Bulletin pollster ratings, and how much a rating is downgraded.",
+      "How the herding test defines 'recently published polls' as the comparison consensus in the ratings, as opposed to the tie assumption used in this article.",
+      "Whether the polling average itself down-weights suspected herders beyond the pollster-rating effect.",
+      "How the 'Influence' metric for individual polls is computed.",
+      "Exact Silver Bulletin standards for poll inclusion."
+    ]
+  }
+}

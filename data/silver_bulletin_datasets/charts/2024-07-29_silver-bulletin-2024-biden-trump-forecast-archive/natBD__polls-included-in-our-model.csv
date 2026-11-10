@@ -1,0 +1,581 @@
+Contest,Dates,Sample,Pollster,Biden,Trump,Kennedy,Margin,Influence,cat
+National,7/16 - 7/18@@23573,"2,241 LV@@2241",YouGov,47,52,,R+ 5@@5,1.460293,R
+National,7/15 - 7/17@@23572,"2,725 LV@@2725",RMG Research,46,51,,R+ 5@@5,0.8889229,R
+National,7/17 - 7/17@@23574,800 LV@@800,SoCal Research,45,51,,R+ 6@@6,0.8852918,R
+National,7/15 - 7/16@@23572,"2,000 RV@@2000",Emerson College,37.8,43.8,6.6,R+ 6@@6,0.6722815,R
+National,7/15 - 7/15@@23572,"2,045 RV@@2045",Morning Consult,45,46,,R+ 1@@1,0.6584611,R
+National,7/15 - 7/17@@23572,"9,414 RV@@9414",Morning Consult,42,46,,R+ 4@@4,0.6584611,R
+National,7/13 - 7/16@@23570,"1,404 RV@@1404",YouGov,41,43,4,R+ 2@@2,0.534388,R
+National,7/15 - 7/16@@23572,992 RV@@992,Ipsos,39,40,11,R+ 1@@1,0.5156867,R
+National,7/12 - 7/15@@23569,"1,098 LV@@1098",SurveyUSA,43,44,,R+ 1@@1,0.4413819,R
+National,7/15 - 7/17@@23572,"2,402 LV@@2402",3W Insights,43,47,,R+ 4@@4,0.3716975,R
+National,7/13 - 7/15@@23570,"1,918 RV@@1918",Harris Insights,39.5,43.5,14.5,R+ 4@@4,0.3654588,R
+National,7/15 - 7/15@@23572,"2,621 LV@@2621",Redfield & Wilton,42,43,6,R+ 1@@1,0.3166022,R
+National,7/9 - 7/10@@23566,"1,174 RV@@1174",Marist College,42,43,8,R+ 1@@1,0.2714987,R
+National,7/12 - 7/14@@23569,"1,499 LV@@1499",Big Village,40.9,40.8,8.5,D+ 0.1@@-.1,0.2655177,D
+National,7/7 - 7/10@@23564,"1,210 RV@@1210",Beacon Research/Shaw & Co.,41,44,10,R+ 3@@3,0.2511123,R
+National,7/8 - 7/11@@23565,"2,295 LV@@2295",OH Predictive Insights,40,43,7,R+ 3@@3,0.2425271,R
+National,7/7 - 7/8@@23564,"1,370 RV@@1370",Emerson College,39.9,43.7,6.1,R+ 3.8@@3.8,0.2050696,R
+National,7/7 - 7/13@@23564,"2,100 LV@@2100",Manhattan Institute,40,44,5,R+ 4@@4,0.2015239,R
+National,7/7 - 7/15@@23564,"1,000 LV@@1000",ActiVote,41.4,43.4,15.1,R+ 2@@2,0.1890149,R
+National,7/7 - 7/9@@23564,800 RV@@800,Hart/Public Opinion Strategies,37,40,10,R+ 3@@3,0.170053,R
+National,7/7 - 7/11@@23564,"1,847 LV@@1847",Rasmussen Reports,40,46,7,R+ 6@@6,0.1602723,R
+National,7/1 - 7/7@@23558,"7,729 RV@@7729",Pew Research Center,40,44,15,R+ 4@@4,0.1560805,R
+National,7/5 - 7/9@@23562,"2,041 RV@@2041",Ipsos,42,43,9,R+ 1@@1,0.1202963,R
+National,7/5 - 7/12@@23562,"2,466 LV@@2466",Rasmussen Reports,39,44,8,R+ 5@@5,0.1202641,R
+National,7/13 - 7/14@@23570,"2,426 LV@@2426",3W Insights,42.8,46.5,,R+ 3.7@@3.7,0.1159522,R
+National,7/7 - 7/9@@23564,"1,443 RV@@1443",YouGov,40,43,4,R+ 3@@3,0.1122334,R
+National,7/14 - 7/16@@23571,"4,000 RV@@4000",Morning Consult,42,45,,R+ 3@@3,0.1043291,R
+National,7/8 - 7/13@@23565,"4,616 LV@@4616",3W Insights,42.7,45.9,,R+ 3.2@@3.2,0.1036878,R
+National,7/8 - 7/8@@23565,"1,101 LV@@1101",Redfield & Wilton,42,43,6,R+ 1@@1,0.1027735,R
+National,7/1 - 7/2@@23558,"1,500 LV@@1500",Cygnal,38.1,43.5,7.1,R+ 5.4@@5.4,0.0903311,R
+National,6/28 - 7/7@@23555,"4,347 RV@@4347",Lord Ashcroft Polls,41,39,9,D+ 2@@-2,0.0853541,D
+National,7/2 - 7/6@@23559,"1,000 LV@@1000",Bendixen & Amandi,42,43,,R+ 1@@1,0.0848881,R
+National,7/1 - 7/3@@23558,"2,067 LV@@2067",Data for Progress,40,41,10,R+ 1@@1,0.0605131,R
+National,7/1 - 7/3@@23558,"1,000 LV@@1000",J.L. Partners,37,43,7,R+ 6@@6,0.0542444,R
+National,7/12 - 7/14@@23569,"11,328 RV@@11328",Morning Consult,42,44,,R+ 2@@2,0.0473061,R
+National,7/13 - 7/15@@23570,"4,000 RV@@4000",Morning Consult,42,45,,R+ 3@@3,0.0405713,R
+National,6/28 - 7/2@@23555,"1,532 LV@@1532",NYT/Siena,37,42,8,R+ 5@@5,0.0399734,R
+National,6/29 - 7/2@@23556,"1,500 RV@@1500",Fabrizio/GBAO,36,42,7,R+ 6@@6,0.037814,R
+National,7/1 - 7/2@@23558,892 RV@@892,Ipsos,40,40,,Even@@0,0.0375617,E
+National,6/28 - 7/4@@23555,"6,199 A@@6199",PureSpectrum,31,34,,R+ 3@@3,0.0374955,R
+National,7/11 - 7/13@@23568,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0.0260254,R
+National,6/30 - 7/2@@23557,"1,392 RV@@1392",YouGov,40,42,5,R+ 2@@2,0.0245733,R
+National,7/10 - 7/12@@23567,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0.0235183,R
+National,7/9 - 7/11@@23566,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0.0211666,R
+National,6/29 - 6/30@@23556,869 LV@@869,Florida Atlantic/Mainstreet,39,42,10,R+ 3@@3,0.0210284,R
+National,7/5 - 7/7@@23562,"11,323 RV@@11323",Morning Consult,42,44,,R+ 2@@2,0.0195332,R
+National,7/8 - 7/10@@23565,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0.0189472,R
+National,7/7 - 7/9@@23564,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0.0168398,R
+National,7/6 - 7/8@@23563,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0.0148272,R
+National,6/28 - 7/1@@23555,"1,176 RV@@1176",YouGov,41.5,44.5,,R+ 3@@3,0.0127098,R
+National,6/28 - 7/2@@23555,"2,815 LV@@2815",YouGov,40,44,11,R+ 4@@4,0.0127098,R
+National,7/4 - 7/6@@23561,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0.011029,R
+National,7/3 - 7/5@@23560,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0.0092244,R
+National,7/2 - 7/4@@23559,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0.007458,R
+National,6/28 - 6/30@@23555,"1,000 RV@@1000",Suffolk University,37.5,41.4,8.2,R+ 3.9@@3.9,0.0068763,R
+National,6/28 - 6/30@@23555,"1,795 RV@@1795",Harris Insights,37.25,43.5,15,R+ 6.3@@6.3,0.0065475,R
+National,7/1 - 7/3@@23558,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0.0057193,R
+National,6/28 - 6/30@@23555,"1,274 RV@@1274",SSRS,35,41,14,R+ 6@@6,0.0052082,R
+National,6/28 - 6/30@@23555,723 LV@@723,Big Village,41.2,41.6,8.7,R+ 0.4@@.4,0.0046642,R
+National,6/30 - 7/2@@23557,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0.0039987,R
+National,6/28 - 6/30@@23555,"10,679 RV@@10679",Morning Consult,43,44,,R+ 1@@1,0.0025049,R
+National,6/28 - 6/28@@23555,"2,086 RV@@2086",Morning Consult,45,44,,D+ 1@@-1,0.0025049,D
+National,6/29 - 7/1@@23556,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0.0022687,R
+National,6/13 - 6/15@@23540,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,4/26 - 4/28@@23492,"10,109 RV@@10109",Morning Consult,43,43,,Even@@0,0,E
+National,3/25 - 3/28@@23460,"1,000 RV@@1000",UpOne Insights/BSG,44,46,,R+ 2@@2,0,R
+National,4/16 - 4/18@@23482,"4,000 RV@@4000",Morning Consult,44,42,,D+ 2@@-2,0,D
+National,11/22 - 11/24@@23336,"4,000 RV@@4000",Morning Consult,44,42,,D+ 2@@-2,0,D
+National,2/25 - 2/27@@23431,"1,498 RV@@1498",YouGov,44,44,,Even@@0,0,E
+National,12/3 - 12/5@@23347,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,6/16 - 6/18@@23543,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,2/29 - 3/2@@23435,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,3/11 - 3/15@@23446,"2,145 LV@@2145",OH Predictive Insights,40,43,7,R+ 3@@3,0,R
+National,6/2 - 6/4@@23529,"1,566 RV@@1566",YouGov,42,42,3,Even@@0,0,E
+National,5/10 - 5/13@@23506,"1,126 RV@@1126",Beacon Research/Shaw & Co.,40,43,11,R+ 3@@3,0,R
+National,2/27 - 2/29@@23433,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,6/28 - 6/28@@23555,"1,011 LV@@1011",Data for Progress,45,48,,R+ 3@@3,0,R
+National,1/4 - 1/6@@23379,"4,000 RV@@4000",Morning Consult,42,42,,Even@@0,0,E
+National,12/19 - 12/21@@23363,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,2/6 - 2/9@@23412,869 RV@@869,YouGov,44,45,,R+ 1@@1,0,R
+National,6/1 - 6/3@@23528,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,11/17 - 11/19@@23331,"5,855 RV@@5855",Morning Consult,41,44,,R+ 3@@3,0,R
+National,12/10 - 12/14@@23354,"1,016 LV@@1016",NYT/Siena,47,45,,D+ 2@@-2,0,D
+National,5/21 - 5/23@@23517,"1,100 RV@@1100",Emerson College,38.7,43.8,5.9,R+ 5.1@@5.1,0,R
+National,2/18 - 2/20@@23424,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,4/15 - 4/17@@23481,"7,990 RV@@7990",Morning Consult,42,42,,Even@@0,0,E
+National,2/28 - 3/1@@23434,"1,436 LV@@1436",YouGov,48,52,,R+ 4@@4,0,R
+National,1/25 - 1/31@@23400,"1,000 LV@@1000",McLaughlin & Associates,43,47,,R+ 4@@4,0,R
+National,12/31 - 1/2@@23375,"4,000 RV@@4000",Morning Consult,42,42,,Even@@0,0,E
+National,3/8 - 3/11@@23443,"1,000 RV@@1000",Suffolk University,37.5,40,8.7,R+ 2.5@@2.5,0,R
+National,1/19 - 1/22@@23394,"1,002 RV@@1002",Bullfinch,42,47,,R+ 5@@5,0,R
+National,4/1 - 4/3@@23467,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,11/20 - 11/27@@23334,"1,000 A@@1000",YouGov,39,37,,D+ 2@@-2,0,D
+National,2/22 - 2/27@@23428,"1,026 LV@@1026",Clarity Campaign Labs,42,45,,R+ 3@@3,0,R
+National,6/10 - 6/12@@23537,"1,184 RV@@1184",Marist College,41,42,11,R+ 1@@1,0,R
+National,3/8 - 3/22@@23443,"1,001 LV@@1001",ActiVote,47.3,52.7,,R+ 5.4@@5.4,0,R
+National,2/21 - 2/28@@23427,"1,745 RV@@1745",Fabrizio/GBAO,45,47,,R+ 2@@2,0,R
+National,4/28 - 4/30@@23494,"1,479 RV@@1479",YouGov,43,44,3,R+ 1@@1,0,R
+National,11/29 - 12/4@@23343,"1,500 RV@@1500",Fabrizio/GBAO,43,47,,R+ 4@@4,0,R
+National,5/8 - 5/10@@23504,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,12/16 - 12/18@@23360,"1,336 RV@@1336",YouGov,43,43,,Even@@0,0,E
+National,5/24 - 5/26@@23520,883 LV@@883,Leger,37,39,9,R+ 2@@2,0,R
+National,1/18 - 1/20@@23393,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,1/23 - 1/25@@23398,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,3/15 - 3/17@@23450,941 LV@@941,Florida Atlantic/Mainstreet,47.1,44.6,,D+ 2.5@@-2.5,0,D
+National,11/25 - 11/27@@23339,"1,323 RV@@1323",YouGov,44,42,,D+ 2@@-2,0,D
+National,12/15 - 12/17@@23359,"1,000 RV@@1000",WPA Intelligence,43,45,,R+ 2@@2,0,R
+National,1/28 - 1/30@@23403,"4,000 RV@@4000",Morning Consult,41,45,,R+ 4@@4,0,R
+National,3/11 - 3/13@@23446,"4,000 RV@@4000",Morning Consult,44,42,,D+ 2@@-2,0,D
+National,12/11 - 12/13@@23355,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,12/5 - 12/11@@23349, RV@@0,Ipsos,35,38,17,R+ 3@@3,0,R
+National,4/20 - 4/22@@23486,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,6/7 - 6/9@@23534,"1,423 LV@@1423",Big Village,42.5,42.2,7.4,D+ 0.3@@-.3,0,D
+National,5/17 - 5/30@@23513,"8,153 RV@@8153",Lord Ashcroft Polls,40,36,9,D+ 4@@-4,0,D
+National,2/19 - 2/22@@23425,"1,724 LV@@1724",McLaughlin & Associates,37.1,40.9,10.4,R+ 3.8@@3.8,0,R
+National,1/22 - 1/24@@23397, RV@@0,Ipsos,38,43,,R+ 5@@5,0,R
+National,5/16 - 5/21@@23512,"1,000 RV@@1000",Bullfinch,38,41.5,11.5,R+ 3.5@@3.5,0,R
+National,11/9 - 11/13@@23323,"1,058 RV@@1058",YouGov,42,44,,R+ 2@@2,0,R
+National,3/30 - 4/1@@23465,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,5/28 - 5/29@@23524,"3,996 RV@@3996",Morning Consult,45,45,,Even@@0,0,E
+National,5/31 - 5/31@@23527,"2,200 RV@@2200",Morning Consult,45,44,,D+ 1@@-1,0,D
+National,2/12 - 2/16@@23418,"3,024 RV@@3024",Harris Insights,36,44,15,R+ 8@@8,0,R
+National,2/20 - 2/23@@23426,"3,010 RV@@3010",Harris Insights,40,42,14,R+ 2@@2,0,R
+National,2/5 - 2/15@@23411,628 LV@@628,Marquette University Law School,40,43,14,R+ 3@@3,0,R
+National,5/16 - 5/18@@23512,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,4/8 - 4/14@@23474,"7,166 RV@@7166",Pew Research Center,48,49,,R+ 1@@1,0,R
+National,2/4 - 2/6@@23410,"6,138 RV@@6138",Morning Consult,40,45,,R+ 5@@5,0,R
+National,6/20 - 6/20@@23547,"1,000 LV@@1000",Rasmussen Reports,36,46,9,R+ 10@@10,0,R
+National,2/18 - 2/20@@23424,"1,360 RV@@1360",YouGov,42,43,,R+ 1@@1,0,R
+National,12/10 - 12/13@@23354,"1,007 RV@@1007",Beacon Research/Shaw & Co.,37,41,14,R+ 4@@4,0,R
+National,11/17 - 11/20@@23331,"1,475 RV@@1475",Emerson College,35.9,42.2,6.7,R+ 6.3@@6.3,0,R
+National,6/7 - 6/17@@23534,"2,000 RV@@2000",Innovative Research Group,41,42,8,R+ 1@@1,0,R
+National,3/9 - 3/12@@23444,"1,324 RV@@1324",Civiqs,45,44,,D+ 1@@-1,0,D
+National,4/8 - 4/10@@23474,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,11/27 - 11/29@@23341,"4,000 RV@@4000",Morning Consult,40,43,,R+ 3@@3,0,R
+National,1/1 - 1/3@@23376,"4,000 RV@@4000",Morning Consult,42,42,,Even@@0,0,E
+National,6/27 - 6/29@@23554,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,4/11 - 4/16@@23477,"1,200 RV@@1200",Garin-Hart-Yang Research,44,46,,R+ 2@@2,0,R
+National,6/3 - 6/5@@23530,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,6/8 - 6/10@@23535,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,1/31 - 2/4@@23406,"1,765 RV@@1765",YouGov,42,44,,R+ 2@@2,0,R
+National,4/20 - 4/22@@23486,"1,109 LV@@1109",SurveyUSA,44,44,,Even@@0,0,E
+National,3/29 - 4/15@@23464,"6,597 A@@6597",Survey Center on American Life,36,36,,Even@@0,0,E
+National,2/4 - 2/6@@23410,"1,399 RV@@1399",YouGov,43,44,,R+ 1@@1,0,R
+National,1/26 - 1/28@@23401,744 LV@@744,Big Village,41.5,38.8,10,D+ 2.7@@-2.7,0,D
+National,12/26 - 12/28@@23370,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,3/7 - 3/13@@23442,"3,356 RV@@3356",Ipsos,43,38,12,D+ 5@@-5,0,D
+National,2/8 - 2/26@@23414,999 LV@@999,ActiVote,46.9,53.1,,R+ 6.2@@6.2,0,R
+National,2/25 - 2/27@@23431,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,1/7 - 1/9@@23382,968 LV@@968,Rasmussen Reports,41,49,,R+ 8@@8,0,R
+National,2/11 - 2/13@@23417,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,1/25 - 1/27@@23400,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,4/2 - 4/4@@23468,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,3/21 - 3/23@@23456,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,3/17 - 3/19@@23452,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,2/12 - 2/14@@23418,"1,015 LV@@1015",Echelon Insights,45,49,,R+ 4@@4,0,R
+National,3/29 - 3/31@@23464,"1,092 LV@@1092",Trafalgar Group,39.8,43.1,11.4,R+ 3.3@@3.3,0,R
+National,11/10 - 11/12@@23324,"6,130 RV@@6130",Morning Consult,42,43,,R+ 1@@1,0,R
+National,1/25 - 1/30@@23400,983 RV@@983,SSRS,45,49,,R+ 4@@4,0,R
+National,1/26 - 1/29@@23401,"1,260 RV@@1260",Emerson College,39.2,41.1,4.9,R+ 1.9@@1.9,0,R
+National,12/8 - 12/10@@23352,"5,840 RV@@5840",Morning Consult,41,43,,R+ 2@@2,0,R
+National,1/30 - 2/4@@23405,"2,001 RV@@2001",Morning Consult,42,44,,R+ 2@@2,0,R
+National,3/5 - 3/7@@23440,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,3/1 - 3/3@@23436,"5,167 RV@@5167",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,1/10 - 1/12@@23385,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,5/19 - 5/21@@23515,"1,560 RV@@1560",YouGov,40,41,5,R+ 1@@1,0,R
+National,6/9 - 6/11@@23536,"1,399 RV@@1399",YouGov,40,42,3,R+ 2@@2,0,R
+National,1/27 - 1/29@@23402,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,6/14 - 6/18@@23541,"2,015 RV@@2015",YouGov,45,45,4,Even@@0,0,E
+National,3/25 - 3/25@@23460,"1,010 RV@@1010",Harris Insights,40,42,14,R+ 2@@2,0,R
+National,6/8 - 6/11@@23535,"1,140 RV@@1140",Civiqs,45,45,,Even@@0,0,E
+National,5/5 - 5/7@@23501,"1,598 RV@@1598",YouGov,43,43,3,Even@@0,0,E
+National,4/10 - 4/12@@23476,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,5/7 - 5/14@@23503,"3,208 RV@@3208",Ipsos,38,38,13,Even@@0,0,E
+National,6/5 - 6/7@@23532,"1,359 LV@@1359",YouGov,49,50,,R+ 1@@1,0,R
+National,2/23 - 2/25@@23429,773 LV@@773,Leger,42,45,,R+ 3@@3,0,R
+National,5/21 - 5/23@@23517,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,2/24 - 2/28@@23430,"3,021 RV@@3021",Harris Insights,38,43,14,R+ 5@@5,0,R
+National,5/30 - 6/1@@23526,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,5/23 - 5/25@@23519,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,6/4 - 6/5@@23531,"1,000 RV@@1000",Emerson College,38.4,44.4,5.9,R+ 6@@6,0,R
+National,5/18 - 5/20@@23514,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,1/24 - 1/26@@23399,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,4/2 - 4/3@@23468,"1,438 RV@@1438",Emerson College,42,43.2,7.8,R+ 1.2@@1.2,0,R
+National,6/18 - 6/24@@23545,"1,000 LV@@1000",McLaughlin & Associates,37,39,10,R+ 2@@2,0,R
+National,4/28 - 4/30@@23494,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,3/18 - 3/21@@23453,"1,006 LV@@1006",Echelon Insights,40,43,10,R+ 3@@3,0,R
+National,1/16 - 1/17@@23391,"1,045 RV@@1045",Harris Insights,40,43,12,R+ 3@@3,0,R
+National,1/6 - 1/8@@23381,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,12/24 - 12/26@@23368,"4,000 RV@@4000",Morning Consult,42,42,,Even@@0,0,E
+National,4/6 - 4/9@@23472,"1,583 RV@@1583",YouGov,42,43,3,R+ 1@@1,0,R
+National,4/25 - 4/30@@23491,"2,260 A@@2260",Ipsos,35,37,10,R+ 2@@2,0,R
+National,2/25 - 2/28@@23431,980 LV@@980,NYT/Siena,44,48,,R+ 4@@4,0,R
+National,2/20 - 2/22@@23426,"4,000 RV@@4000",Morning Consult,42,42,,Even@@0,0,E
+National,6/23 - 6/25@@23550,"1,406 RV@@1406",YouGov,42,42,4,Even@@0,0,E
+National,12/22 - 12/24@@23366,"4,000 RV@@4000",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,1/29 - 1/31@@23404,"4,000 RV@@4000",Morning Consult,41,45,,R+ 4@@4,0,R
+National,3/19 - 3/21@@23454,"4,000 RV@@4000",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,4/12 - 4/16@@23478,"1,000 RV@@1000",Hart/Public Opinion Strategies,39,37,13,D+ 2@@-2,0,D
+National,4/7 - 4/9@@23473,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,12/7 - 12/9@@23351,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,11/24 - 11/26@@23338,"6,527 RV@@6527",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,5/22 - 5/24@@23518,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,1/17 - 1/28@@23392,"8,076 RV@@8076",Lord Ashcroft Polls,40,40,,Even@@0,0,E
+National,1/14 - 1/16@@23389,"1,472 RV@@1472",YouGov,44,43,,D+ 1@@-1,0,D
+National,3/24 - 4/10@@23459,995 LV@@995,ActiVote,40.7,44,15.3,R+ 3.3@@3.3,0,R
+National,6/9 - 6/11@@23536,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,6/16 - 6/18@@23543,"1,396 RV@@1396",YouGov,42,42,4,Even@@0,0,E
+National,3/25 - 3/28@@23460,821 LV@@821,Split Ticket,40,41,16,R+ 1@@1,0,R
+National,4/13 - 4/16@@23479,"1,161 RV@@1161",Civiqs,44,45,,R+ 1@@1,0,R
+National,4/24 - 4/25@@23490,"1,961 RV@@1961",Harris Insights,40,45.5,13,R+ 5.5@@5.5,0,R
+National,4/30 - 5/2@@23496,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,3/23 - 3/25@@23458,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,2/12 - 2/14@@23418,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,1/22 - 1/24@@23397,"4,000 RV@@4000",Morning Consult,42,45,,R+ 3@@3,0,R
+National,1/3 - 1/9@@23378,"3,815 RV@@3815",Ipsos,34,33,17,D+ 1@@-1,0,D
+National,6/24 - 6/26@@23551,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,6/20 - 6/22@@23547,"4,000 RV@@4000",Morning Consult,44,44,,Even@@0,0,E
+National,4/4 - 4/8@@23470,833 RV@@833,Ipsos,41,37,,D+ 4@@-4,0,D
+National,1/17 - 1/21@@23392,"3,034 RV@@3034",Harris Insights,33,42,12,R+ 9@@9,0,R
+National,3/29 - 3/31@@23464,"6,018 RV@@6018",Morning Consult,44,42,,D+ 2@@-2,0,D
+National,6/25 - 6/27@@23552,"4,000 RV@@4000",Morning Consult,44,44,,Even@@0,0,E
+National,11/27 - 12/1@@23341,"2,018 RV@@2018",Harris Insights,47,53,,R+ 6@@6,0,R
+National,2/28 - 3/1@@23434,"1,246 RV@@1246",TIPP Insights,38,38,9,Even@@0,0,E
+National,1/25 - 1/29@@23400,"1,069 RV@@1069",YouGov,42.5,43.5,,R+ 1@@1,0,R
+National,3/18 - 3/28@@23453,674 LV@@674,Marquette University Law School,41,41,13,Even@@0,0,E
+National,11/11 - 11/14@@23325,"1,272 RV@@1272",YouGov,42,43,,R+ 1@@1,0,R
+National,2/2 - 2/3@@23408,917 LV@@917,Florida Atlantic/Mainstreet,40.5,44.5,,R+ 4@@4,0,R
+National,5/28 - 5/30@@23524,"1,080 LV@@1080",Rasmussen Reports,39.5,44.5,8,R+ 5@@5,0,R
+National,11/10 - 11/14@@23324,"1,000 RV@@1000",Hart/Public Opinion Strategies,46,48,,R+ 2@@2,0,R
+National,3/27 - 3/29@@23462,"1,200 LV@@1200",Data for Progress,41,42,8,R+ 1@@1,0,R
+National,4/27 - 4/29@@23493,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,1/19 - 1/21@@23394,"6,417 RV@@6417",Morning Consult,40,45,,R+ 5@@5,0,R
+National,12/5 - 12/7@@23349,"2,000 LV@@2000",Cygnal,41.9,42.7,9.3,R+ 0.8@@.8,0,R
+National,12/23 - 12/25@@23367,"4,000 RV@@4000",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,3/27 - 3/29@@23462,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,12/13 - 12/19@@23357,"1,000 LV@@1000",McLaughlin & Associates,44,47,,R+ 3@@3,0,R
+National,5/27 - 5/29@@23523,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,1/31 - 2/2@@23406,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,1/17 - 1/19@@23392,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,4/19 - 4/21@@23485,"9,791 RV@@9791",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,4/16 - 4/18@@23482,"1,047 RV@@1047",Marist College,43,38,14,D+ 5@@-5,0,D
+National,3/5 - 3/6@@23440,"1,350 RV@@1350",Emerson College,41.5,43.2,6,R+ 1.7@@1.7,0,R
+National,3/30 - 4/2@@23465,"1,604 RV@@1604",YouGov,43,43,2,Even@@0,0,E
+National,3/22 - 3/24@@23457,"5,833 RV@@5833",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,1/11 - 1/12@@23386,"2,000 LV@@2000",Cygnal,41.4,41.5,10.2,R+ 0.1@@.1,0,R
+National,3/11 - 3/17@@23446,704 LV@@704,Selzer & Co.,38,45,,R+ 7@@7,0,R
+National,1/2 - 1/4@@23377,"4,000 RV@@4000",Morning Consult,41,43,,R+ 2@@2,0,R
+National,4/23 - 5/1@@23489,"1,243 RV@@1243",Kaiser Family Foundation,46,45,,D+ 1@@-1,0,D
+National,3/22 - 3/25@@23457,"1,094 RV@@1094",Beacon Research/Shaw & Co.,38,43,12,R+ 5@@5,0,R
+National,6/26 - 6/28@@23553,"1,244 RV@@1244",TIPP Insights,40,39,10,D+ 1@@-1,0,D
+National,3/3 - 3/5@@23438,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,4/24 - 4/26@@23490,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,11/13 - 11/15@@23327,"4,000 RV@@4000",Morning Consult,41,43,,R+ 2@@2,0,R
+National,12/18 - 12/20@@23362,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,1/10 - 1/12@@23385,"1,906 LV@@1906",YouGov,48,50,,R+ 2@@2,0,R
+National,12/17 - 12/19@@23361,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,6/22 - 6/24@@23549,878 LV@@878,Leger,38,38,7,Even@@0,0,E
+National,5/11 - 5/13@@23507,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,4/22 - 4/24@@23488,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,4/8 - 4/11@@23474,"1,000 RV@@1000",Public Opinion Strategies,45,43,,D+ 2@@-2,0,D
+National,11/8 - 11/10@@23322,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,1/25 - 1/29@@23400,"1,650 RV@@1650",Quinnipiac,39,37,14,D+ 2@@-2,0,D
+National,6/6 - 6/8@@23533,"4,000 RV@@4000",Morning Consult,44,44,,Even@@0,0,E
+National,3/21 - 3/25@@23456,"1,407 RV@@1407",Quinnipiac,38,39,13,R+ 1@@1,0,R
+National,5/10 - 5/13@@23506,"1,201 RV@@1201",YouGov,44,44.5,,R+ 0.5@@.5,0,R
+National,5/30 - 5/31@@23526,"1,006 RV@@1006",Harris Insights,41,43,13,R+ 2@@2,0,R
+National,11/8 - 11/20@@23322,"2,694 LV@@2694",AP-NORC,46,36,,D+ 10@@-10,0,D
+National,3/23 - 3/27@@23458,"1,080 RV@@1080",Clarity Campaign Labs,46,50,,R+ 4@@4,0,R
+National,12/15 - 12/17@@23359,"1,000 A@@1000",Leger,40,36,,D+ 4@@-4,0,D
+National,1/5 - 1/7@@23380,"6,367 RV@@6367",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,5/26 - 5/28@@23522,"10,721 RV@@10721",Morning Consult,42,44,,R+ 2@@2,0,R
+National,6/7 - 6/9@@23534,"10,260 RV@@10260",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,2/10 - 2/12@@23416,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,5/23 - 6/4@@23519,"1,775 LV@@1775",ActiVote,41.6,45.4,13.1,R+ 3.8@@3.8,0,R
+National,3/3 - 3/5@@23438,"1,450 RV@@1450",YouGov,42,44,,R+ 2@@2,0,R
+National,3/4 - 3/6@@23439,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,5/24 - 5/27@@23520,"1,000 RV@@1000",Emerson College,41,41,,Even@@0,0,E
+National,4/3 - 4/8@@23469,"1,688 LV@@1688","University of Massachusetts, Lowell",42,42,7,Even@@0,0,E
+National,11/9 - 11/13@@23323,"1,574 RV@@1574",Quinnipiac,36,38,19,R+ 2@@2,0,R
+National,6/22 - 6/24@@23549,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,5/15 - 5/16@@23511,"1,660 RV@@1660",Harris Insights,38,44.5,13,R+ 6.5@@6.5,0,R
+National,4/1 - 4/4@@23467,"1,679 LV@@1679",RMG Research,39,39,13,Even@@0,0,E
+National,3/29 - 4/5@@23464,"4,038 RV@@4038",YouGov,43,42,6,D+ 1@@-1,0,D
+National,4/6 - 4/8@@23472,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,11/9 - 11/11@@23323,"4,000 RV@@4000",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,3/20 - 3/21@@23455,"2,271 RV@@2271",Harris Insights,38.5,43,16,R+ 4.5@@4.5,0,R
+National,3/31 - 4/2@@23466,"1,099 LV@@1099",Rasmussen Reports,38,44.5,9.5,R+ 6.5@@6.5,0,R
+National,2/16 - 2/18@@23422,"4,000 RV@@4000",Morning Consult,42,45,,R+ 3@@3,0,R
+National,4/18 - 4/20@@23484,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,4/3 - 4/5@@23469,"1,265 RV@@1265",TIPP Insights,38,38,11,Even@@0,0,E
+National,3/23 - 3/26@@23458,"1,799 LV@@1799",McLaughlin & Associates,38.9,42.2,8.9,R+ 3.3@@3.3,0,R
+National,12/8 - 12/8@@23352,"1,135 LV@@1135",Redfield & Wilton,38,43,9,R+ 5@@5,0,R
+National,3/5 - 3/7@@23440,912 LV@@912,Rasmussen Reports,41,49,,R+ 8@@8,0,R
+National,2/26 - 2/28@@23432,"1,185 A@@1185",Ipsos,36,36,,Even@@0,0,E
+National,5/3 - 5/5@@23499,"9,918 RV@@9918",Morning Consult,43,44,,R+ 1@@1,0,R
+National,1/27 - 1/30@@23402,"1,217 RV@@1217",Civiqs,44,44,,Even@@0,0,E
+National,12/4 - 12/7@@23348,"1,129 RV@@1129",Marist College,49,48,,D+ 1@@-1,0,D
+National,1/3 - 1/5@@23378,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,5/6 - 5/8@@23502,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,5/31 - 6/2@@23527,"10,404 RV@@10404",Morning Consult,43,44,,R+ 1@@1,0,R
+National,5/30 - 5/31@@23526,"2,135 RV@@2135",Ipsos,39,37,10,D+ 2@@-2,0,D
+National,1/12 - 1/14@@23387,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,4/3 - 4/5@@23469,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,6/7 - 6/10@@23534,"1,031 A@@1031",SSRS,30,33,10,R+ 3@@3,0,R
+National,3/31 - 4/2@@23466,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,6/3 - 6/6@@23530,"3,000 RV@@3000",RMG Research,42,43,,R+ 1@@1,0,R
+National,1/6 - 1/7@@23381,"1,012 LV@@1012",John Zogby Strategies,46.1,46.7,,R+ 0.6@@.6,0,R
+National,2/8 - 2/10@@23414,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,12/13 - 12/14@@23357,"2,034 RV@@2034",Harris Insights,35.5,43.5,18.5,R+ 8@@8,0,R
+National,2/11 - 2/13@@23417,"1,470 RV@@1470",YouGov,44,44,,Even@@0,0,E
+National,6/12 - 6/12@@23539,930 RV@@930,Ipsos,37,38,10,R+ 1@@1,0,R
+National,4/22 - 4/25@@23488,"1,109 RV@@1109",Marist College,42,42,11,Even@@0,0,E
+National,5/13 - 5/15@@23509,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,5/16 - 5/20@@23512,"1,374 RV@@1374",Quinnipiac,41,38,14,D+ 3@@-3,0,D
+National,3/23 - 3/25@@23458,786 LV@@786,Leger,43,47,,R+ 4@@4,0,R
+National,6/10 - 6/12@@23537,"1,013 LV@@1013",Echelon Insights,42,43,7,R+ 1@@1,0,R
+National,5/6 - 5/9@@23502,"2,000 LV@@2000",RMG Research,42,39,11,D+ 3@@-3,0,D
+National,1/18 - 1/18@@23393,"1,205 LV@@1205",Redfield & Wilton,41,42,,R+ 1@@1,0,R
+National,11/6 - 11/8@@23320,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,6/3 - 6/6@@23530,"1,239 RV@@1239",YouGov,44,43.5,,D+ 0.5@@-.5,0,D
+National,6/11 - 6/24@@23538,"2,750 RV@@2750",YouGov,44.3,41.9,4.6,D+ 2.4@@-2.4,0,D
+National,12/8 - 12/12@@23352,"1,002 A@@1002",Hart/Public Opinion Strategies,42,48,,R+ 6@@6,0,R
+National,3/16 - 3/19@@23451,"1,510 RV@@1510",YouGov,44,43,2,D+ 1@@-1,0,D
+National,6/14 - 6/17@@23541,"1,095 RV@@1095",Beacon Research/Shaw & Co.,43,42,10,D+ 1@@-1,0,D
+National,3/14 - 3/16@@23449,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,2/21 - 2/22@@23427,"2,022 RV@@2022",Harris Insights,36.5,44,17.5,R+ 7.5@@7.5,0,R
+National,11/18 - 11/20@@23332,"4,000 RV@@4000",Morning Consult,40,44,,R+ 4@@4,0,R
+National,12/25 - 12/27@@23369,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,4/10 - 4/16@@23476,"1,000 LV@@1000",McLaughlin & Associates,36,38,10,R+ 2@@2,0,R
+National,1/24 - 1/30@@23399,850 RV@@850,YouGov,44,45,,R+ 1@@1,0,R
+National,12/12 - 12/16@@23356,"1,012 LV@@1012",Echelon Insights,48,47,,D+ 1@@-1,0,D
+National,5/1 - 5/1@@23497,"1,133 LV@@1133",Redfield & Wilton,41,43,7,R+ 2@@2,0,R
+National,1/13 - 1/15@@23388,"6,606 RV@@6606",Morning Consult,41,43,,R+ 2@@2,0,R
+National,1/16 - 1/18@@23391,"1,029 LV@@1029",Echelon Insights,46,47,,R+ 1@@1,0,R
+National,11/5 - 11/7@@23319,"4,000 RV@@4000",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,4/9 - 4/11@@23475,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,5/17 - 5/19@@23513,"10,172 RV@@10172",Morning Consult,43,44,,R+ 1@@1,0,R
+National,12/6 - 12/10@@23350,892 LV@@892,Rasmussen Reports,32,40,16,R+ 8@@8,0,R
+National,11/20 - 11/22@@23334,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,2/24 - 2/26@@23430,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,2/14 - 2/16@@23420,"4,000 RV@@4000",Morning Consult,42,45,,R+ 3@@3,0,R
+National,3/18 - 3/20@@23453,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,1/8 - 1/10@@23383,"4,000 RV@@4000",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,11/16 - 11/20@@23330,"1,000 LV@@1000",McLaughlin & Associates,43,49,,R+ 6@@6,0,R
+National,12/14 - 12/18@@23358,"1,027 RV@@1027",YouGov,42.5,42.5,,Even@@0,0,E
+National,5/14 - 5/16@@23510,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,5/28 - 5/30@@23524,"4,000 RV@@4000",Morning Consult,43,45,,R+ 2@@2,0,R
+National,4/21 - 4/23@@23487,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,1/28 - 1/30@@23403,"1,486 RV@@1486",YouGov,43,42,,D+ 1@@-1,0,D
+National,2/13 - 2/15@@23419,868 LV@@868,Rasmussen Reports,37,43,12,R+ 6@@6,0,R
+National,5/1 - 5/1@@23497,"1,755 LV@@1755",co/efficient,39,43,,R+ 4@@4,0,R
+National,6/26 - 6/28@@23553,"1,634 RV@@1634",AtlasIntel,40.3,45.5,10.3,R+ 5.2@@5.2,0,R
+National,11/27 - 12/3@@23341,"2,219 LV@@2219",Big Village,36.3,41.8,11.7,R+ 5.5@@5.5,0,R
+National,1/20 - 1/22@@23395,"4,000 RV@@4000",Morning Consult,40,45,,R+ 5@@5,0,R
+National,12/2 - 12/5@@23346,"1,291 RV@@1291",YouGov,42,41,,D+ 1@@-1,0,D
+National,5/6 - 5/21@@23502,"1,153 LV@@1153",ActiVote,42.1,44.9,13,R+ 2.8@@2.8,0,R
+National,6/16 - 6/17@@23543,"1,148 LV@@1148",Redfield & Wilton,41,41,7,Even@@0,0,E
+National,1/2 - 1/4@@23377,"2,364 LV@@2364",OH Predictive Insights,36,41,10,R+ 5@@5,0,R
+National,1/15 - 1/17@@23390,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,12/28 - 12/30@@23372,"4,000 RV@@4000",Morning Consult,41,43,,R+ 2@@2,0,R
+National,2/13 - 2/14@@23419,"1,225 RV@@1225",Emerson College,37.9,40.2,6.7,R+ 2.3@@2.3,0,R
+National,5/1 - 5/3@@23497,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,5/10 - 5/12@@23506,"10,243 RV@@10243",Morning Consult,43,44,,R+ 1@@1,0,R
+National,11/25 - 11/27@@23339,"4,000 RV@@4000",Morning Consult,41,43,,R+ 2@@2,0,R
+National,11/15 - 11/17@@23329,"4,000 RV@@4000",Morning Consult,42,42,,Even@@0,0,E
+National,2/10 - 2/10@@23416,"1,220 LV@@1220",Redfield & Wilton,41,42,8,R+ 1@@1,0,R
+National,2/6 - 2/8@@23412,"1,501 LV@@1501",Cygnal,39.1,40.8,13,R+ 1.7@@1.7,0,R
+National,1/3 - 1/7@@23378,"2,027 A@@2027",Ipsos,32,34,,R+ 2@@2,0,R
+National,12/20 - 12/22@@23364,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,12/7 - 12/10@@23351,"1,052 LV@@1052",Clarity Campaign Labs,45,45,,Even@@0,0,E
+National,2/5 - 2/7@@23411,"4,000 RV@@4000",Morning Consult,40,46,,R+ 6@@6,0,R
+National,1/11 - 1/13@@23386,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,12/5 - 12/7@@23349,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,1/31 - 2/2@@23406,"1,048 LV@@1048",SurveyUSA,44,49,,R+ 5@@5,0,R
+National,4/29 - 5/1@@23495,"1,205 LV@@1205",Rasmussen Reports,36,47,9,R+ 11@@11,0,R
+National,2/25 - 2/28@@23431,"1,262 RV@@1262",Beacon Research/Shaw & Co.,38,41,13,R+ 3@@3,0,R
+National,12/23 - 12/26@@23367,"1,000 RV@@1000",Suffolk University,33.9,37.2,9.5,R+ 3.3@@3.3,0,R
+National,4/23 - 4/25@@23489,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,12/9 - 12/12@@23353,"1,332 RV@@1332",YouGov,43,43,,Even@@0,0,E
+National,1/29 - 2/1@@23404,"1,441 RV@@1441",Marist College,48,47,,D+ 1@@-1,0,D
+National,5/3 - 5/8@@23499,"2,867 LV@@2867",Big Village,41.9,40.6,8.8,D+ 1.3@@-1.3,0,D
+National,5/25 - 5/28@@23521,"1,547 RV@@1547",YouGov,40,41,4,R+ 1@@1,0,R
+National,1/26 - 1/28@@23401,"1,004 A@@1004",Leger,36,37,,R+ 1@@1,0,R
+National,4/7 - 4/11@@23473,"1,059 LV@@1059",NYT/Siena,44,45,,R+ 1@@1,0,R
+National,4/13 - 4/30@@23479,"1,025 LV@@1025",ActiVote,41.2,44.4,14.4,R+ 3.2@@3.2,0,R
+National,3/15 - 3/15@@23450,"1,124 LV@@1124",Redfield & Wilton,40,44,7,R+ 4@@4,0,R
+National,4/9 - 4/10@@23475,"1,500 LV@@1500",Cygnal,39.4,41.5,8.6,R+ 2.1@@2.1,0,R
+National,2/1 - 2/3@@23407,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,12/4 - 12/6@@23348,"1,000 RV@@1000",Emerson College,36.7,43.4,6.5,R+ 6.7@@6.7,0,R
+National,12/13 - 12/15@@23357,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,5/12 - 5/14@@23508,"1,586 RV@@1586",YouGov,41,42,3,R+ 1@@1,0,R
+National,2/13 - 2/15@@23419,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,6/11 - 6/14@@23538,"1,011 RV@@1011",YouGov,41,39,3,D+ 2@@-2,0,D
+National,12/21 - 12/23@@23365,"4,000 RV@@4000",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,6/19 - 6/21@@23546,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,6/20 - 6/26@@23547,"7,320 A@@7320",PureSpectrum,30,36,,R+ 6@@6,0,R
+National,2/2 - 2/7@@23408,"1,076 A@@1076",Ipsos,35,33,,D+ 2@@-2,0,D
+National,11/21 - 11/23@@23335,"4,000 RV@@4000",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,12/6 - 12/8@@23350,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,5/12 - 5/14@@23508,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,5/2 - 5/4@@23498,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,5/3 - 5/6@@23499,407 RV@@407,Ipsos,46.5,43.5,,D+ 3@@-3,0,D
+National,11/29 - 12/1@@23343,"1,301 RV@@1301",TIPP Insights,33,38,11,R+ 5@@5,0,R
+National,1/7 - 1/9@@23382,"4,000 RV@@4000",Morning Consult,43,42,,D+ 1@@-1,0,D
+National,6/26 - 6/28@@23553,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,3/29 - 3/31@@23464,"1,425 LV@@1425",Big Village,41.9,39.7,7.8,D+ 2.2@@-2.2,0,D
+National,6/27 - 6/28@@23554,841 LV@@841,Leger,38,45,,R+ 7@@7,0,R
+National,3/13 - 3/15@@23448,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,3/10 - 3/12@@23445,"1,367 RV@@1367",YouGov,42,44,,R+ 2@@2,0,R
+National,2/17 - 2/19@@23423,"6,321 RV@@6321",Morning Consult,41,45,,R+ 4@@4,0,R
+National,5/21 - 5/23@@23517,"1,000 LV@@1000",McLaughlin & Associates,38,42,9,R+ 4@@4,0,R
+National,1/7 - 1/9@@23382,"1,417 RV@@1417",YouGov,43,43,,Even@@0,0,E
+National,11/22 - 11/28@@23336,"4,003 RV@@4003",Harris Insights,36,43,17,R+ 7@@7,0,R
+National,4/30 - 5/3@@23496,"1,000 RV@@1000",Suffolk University,36.7,37.1,8,R+ 0.4@@.4,0,R
+National,6/28 - 6/28@@23555,"2,315 LV@@2315",SurveyUSA,43,45,,R+ 2@@2,0,R
+National,6/17 - 6/21@@23544,"1,878 LV@@1878",YouGov,49,50,,R+ 1@@1,0,R
+National,1/26 - 1/28@@23401,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,5/15 - 5/17@@23511,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,3/20 - 3/24@@23455,"1,000 LV@@1000",J.L. Partners,39,43,7,R+ 4@@4,0,R
+National,4/18 - 4/22@@23484,"1,429 RV@@1429",Quinnipiac,37,37,16,Even@@0,0,E
+National,11/11 - 11/13@@23325,"4,000 RV@@4000",Morning Consult,41,43,,R+ 2@@2,0,R
+National,6/2 - 6/4@@23529,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,11/12 - 11/14@@23326,"4,000 RV@@4000",Morning Consult,41,43,,R+ 2@@2,0,R
+National,12/16 - 12/18@@23360,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,2/3 - 2/5@@23409,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,12/27 - 12/29@@23371,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,2/26 - 2/28@@23432,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,6/4 - 6/6@@23531,"1,500 LV@@1500",Cygnal,38.4,41.2,8.4,R+ 2.8@@2.8,0,R
+National,3/13 - 3/14@@23448,"2,000 LV@@2000",RMG Research,42,37,14,D+ 5@@-5,0,D
+National,6/27 - 6/27@@23554,600 RV@@600,SoCal Research,35,41,8,R+ 6@@6,0,R
+National,3/25 - 3/28@@23460,"1,199 RV@@1199",Marist College,43,41,11,D+ 2@@-2,0,D
+National,11/24 - 11/26@@23338,"1,001 A@@1001",Leger,37,35,,D+ 2@@-2,0,D
+National,12/18 - 12/23@@23362,"1,765 RV@@1765",YouGov,41,42,,R+ 1@@1,0,R
+National,3/20 - 3/22@@23455,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,12/15 - 12/20@@23359,984 LV@@984,J.L. Partners,36,40,4,R+ 4@@4,0,R
+National,4/17 - 4/19@@23483,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,4/29 - 5/8@@23495,"1,076 RV@@1076",Clarity Campaign Labs,46,49,,R+ 3@@3,0,R
+National,12/14 - 12/16@@23358,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,3/8 - 3/10@@23443,"6,300 RV@@6300",Morning Consult,43,44,,R+ 1@@1,0,R
+National,1/17 - 1/18@@23392,"2,346 RV@@2346",Harris Insights,34.5,44,19.5,R+ 9.5@@9.5,0,R
+National,5/25 - 5/27@@23521,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,11/19 - 11/21@@23333,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,3/2 - 3/4@@23437,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,1/21 - 1/23@@23396,"1,497 RV@@1497",YouGov,43,44,,R+ 1@@1,0,R
+National,3/16 - 3/18@@23451,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,2/20 - 2/28@@23426,"1,072 RV@@1072",Kaiser Family Foundation,47,44,,D+ 3@@-3,0,D
+National,11/28 - 11/30@@23342,"4,000 RV@@4000",Morning Consult,40,44,,R+ 4@@4,0,R
+National,12/14 - 12/18@@23358,"1,647 RV@@1647",Quinnipiac,37,37,19,Even@@0,0,E
+National,6/20 - 6/24@@23547,"1,744 LV@@1744",McLaughlin & Associates,40.4,42.2,7.7,R+ 1.8@@1.8,0,R
+National,4/11 - 4/15@@23477,"1,171 RV@@1171",YouGov,43,43,,Even@@0,0,E
+National,11/29 - 12/1@@23343,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,2/6 - 2/8@@23412,"1,534 RV@@1534",Change Research,36.5,44,,R+ 7.5@@7.5,0,R
+National,12/30 - 1/1@@23374,"6,816 RV@@6816",Morning Consult,41,42,,R+ 1@@1,0,R
+National,4/12 - 4/14@@23478,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,5/23 - 6/3@@23519,812 LV@@812,GSG/GBAO,45,40,8,D+ 5@@-5,0,D
+National,4/14 - 4/16@@23480,"1,358 RV@@1358",YouGov,44,44,3,Even@@0,0,E
+National,6/15 - 6/17@@23542,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,4/29 - 4/30@@23495,856 RV@@856,Ipsos,39,38,8,D+ 1@@-1,0,D
+National,6/5 - 6/21@@23532,"2,192 LV@@2192",ActiVote,42.1,43.7,14.2,R+ 1.6@@1.6,0,R
+National,6/12 - 6/14@@23539,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,5/10 - 5/14@@23506,"1,721 LV@@1721",McLaughlin & Associates,40.2,41.3,8,R+ 1.1@@1.1,0,R
+National,2/2 - 2/4@@23408,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,5/7 - 5/9@@23503,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,4/21 - 4/23@@23487,"1,470 RV@@1470",YouGov,43,43,3,Even@@0,0,E
+National,11/14 - 11/17@@23328,"1,006 LV@@1006",Echelon Insights,46,47,,R+ 1@@1,0,R
+National,6/14 - 6/16@@23541,"10,132 RV@@10132",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,2/10 - 2/10@@23416,"1,018 RV@@1018",Patriot Polling,45.8,47.5,,R+ 1.7@@1.7,0,R
+National,1/26 - 1/30@@23401,"1,000 RV@@1000",Hart/Public Opinion Strategies,42,47,,R+ 5@@5,0,R
+National,5/13 - 5/16@@23509,"1,023 LV@@1023",Echelon Insights,38,43,9,R+ 5@@5,0,R
+National,11/10 - 11/13@@23324,"1,001 RV@@1001",Beacon Research/Shaw & Co.,35,41,15,R+ 6@@6,0,R
+National,2/6 - 2/8@@23412,"4,000 RV@@4000",Morning Consult,41,45,,R+ 4@@4,0,R
+National,3/12 - 3/14@@23447,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,4/26 - 4/28@@23492,887 LV@@887,Leger,38,41,7,R+ 3@@3,0,R
+National,5/21 - 5/23@@23517,"1,122 RV@@1122",Marist College,40,44,8,R+ 4@@4,0,R
+National,4/5 - 4/7@@23471,"6,120 RV@@6120",Morning Consult,44,43.5,,D+ 0.5@@-.5,0,D
+National,6/23 - 6/25@@23550,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,3/2 - 3/2@@23437,"1,115 LV@@1115",Redfield & Wilton,39,43,9,R+ 4@@4,0,R
+National,4/29 - 5/1@@23495,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,2/22 - 2/24@@23428,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,2/17 - 2/22@@23423,"1,000 RV@@1000",Bullfinch,38,41,,R+ 3@@3,0,R
+National,12/10 - 12/12@@23354,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,3/9 - 3/14@@23444,"1,000 LV@@1000",McLaughlin & Associates,43,49,,R+ 6@@6,0,R
+National,5/30 - 5/31@@23526,"5,893 A@@5893",SurveyMonkey,30,34,,R+ 4@@4,0,R
+National,1/30 - 2/7@@23405,"1,055 RV@@1055",Kaiser Family Foundation,37,41,,R+ 4@@4,0,R
+National,5/29 - 5/31@@23525,"1,675 RV@@1675",TIPP Insights,38,38,10,Even@@0,0,E
+National,6/10 - 6/12@@23537,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,11/15 - 11/19@@23329,"3,017 RV@@3017",Harris Insights,37,43,16,R+ 6@@6,0,R
+National,3/9 - 3/11@@23444,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,2/21 - 2/23@@23427,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,1/14 - 1/16@@23389,"4,000 RV@@4000",Morning Consult,41,43,,R+ 2@@2,0,R
+National,3/24 - 3/26@@23459,"1,415 RV@@1415",YouGov,43,44,3,R+ 1@@1,0,R
+National,4/13 - 4/15@@23479,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,5/19 - 5/21@@23515,"4,000 RV@@4000",Morning Consult,43,45,,R+ 2@@2,0,R
+National,12/2 - 12/4@@23346,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,12/9 - 12/11@@23353,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,5/5 - 5/7@@23501,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,11/16 - 12/7@@23330,"5,627 A@@5627",PRRI,47,48,,R+ 1@@1,0,R
+National,4/8 - 4/20@@23474,745 LV@@745,University of North Florida,45,47,,R+ 2@@2,0,R
+National,5/20 - 5/22@@23516,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,1/3 - 1/5@@23378,"1,247 RV@@1247",TIPP Insights,34,37,8,R+ 3@@3,0,R
+National,5/7 - 5/13@@23503,"1,730 RV@@1730",Ipsos,37,35,5,D+ 2@@-2,0,D
+National,5/24 - 5/26@@23520,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,2/7 - 2/9@@23413,"4,000 RV@@4000",Morning Consult,41,44,,R+ 3@@3,0,R
+National,2/28 - 3/1@@23434,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,12/12 - 12/14@@23356,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,4/11 - 4/13@@23477,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,5/31 - 6/27@@23527,"4,067 RV@@4067",Lord Ashcroft Polls,39,38,9,D+ 1@@-1,0,D
+National,4/25 - 4/27@@23491,"4,000 RV@@4000",Morning Consult,43,43,,Even@@0,0,E
+National,2/2 - 2/7@@23408,"1,637 RV@@1637",AtlasIntel,42.3,43.9,5.2,R+ 1.6@@1.6,0,R
+National,3/15 - 3/19@@23450,"1,001 RV@@1001",Hart/Public Opinion Strategies,45,46,,R+ 1@@1,0,R
+National,3/28 - 3/30@@23463,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,2/15 - 2/19@@23421,"1,421 RV@@1421",Quinnipiac,38,37,15,D+ 1@@-1,0,D
+National,6/4 - 6/6@@23531,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,6/21 - 6/23@@23548,"10,159 RV@@10159",Morning Consult,44,44,,Even@@0,0,E
+National,5/14 - 5/16@@23510,"1,500 LV@@1500",Cygnal,37.7,40.8,8.8,R+ 3.1@@3.1,0,R
+National,4/18 - 4/23@@23484,967 RV@@967,SSRS,33,42,16,R+ 9@@9,0,R
+National,11/13 - 11/14@@23327,"1,006 A@@1006",Ipsos,30,32,20,R+ 2@@2,0,R
+National,5/1 - 5/3@@23497,"1,264 RV@@1264",TIPP Insights,39,38,12,D+ 1@@-1,0,D
+National,11/14 - 11/16@@23328,"4,000 RV@@4000",Morning Consult,42,42,,Even@@0,0,E
+National,12/4 - 12/6@@23348,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,2/15 - 2/17@@23421,"4,000 RV@@4000",Morning Consult,42,45,,R+ 3@@3,0,R
+National,1/19 - 1/23@@23394,"1,092 LV@@1092",Clarity Campaign Labs,43,47,,R+ 4@@4,0,R
+National,2/19 - 2/21@@23425,"4,000 RV@@4000",Morning Consult,41,43,,R+ 2@@2,0,R
+National,12/1 - 12/3@@23345,"5,800 RV@@5800",Morning Consult,43,43,,Even@@0,0,E
+National,3/10 - 3/12@@23445,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,4/6 - 4/7@@23472,"3,203 LV@@3203",Redfield & Wilton,41,41,9,Even@@0,0,E
+National,3/7 - 3/9@@23442,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,4/12 - 4/14@@23478,"1,020 LV@@1020",Echelon Insights,41,40,11,D+ 1@@-1,0,D
+National,6/13 - 6/20@@23540,"1,002 LV@@1002",Clarity Campaign Labs,47,46,,D+ 1@@-1,0,D
+National,3/8 - 3/10@@23443,"2,017 RV@@2017",Harris Insights,38,44,15,R+ 6@@6,0,R
+National,3/12 - 3/13@@23447,837 RV@@837,Public Policy Polling,46,45,,D+ 1@@-1,0,D
+National,11/30 - 12/2@@23344,"4,000 RV@@4000",Morning Consult,42,44,,R+ 2@@2,0,R
+National,5/9 - 5/15@@23505,"1,000 LV@@1000",McLaughlin & Associates,36,38,11,R+ 2@@2,0,R
+National,12/15 - 12/17@@23359,"5,618 RV@@5618",Morning Consult,42,44,,R+ 2@@2,0,R
+National,5/4 - 5/6@@23500,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,3/26 - 3/28@@23461,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,11/15 - 11/16@@23329,"2,851 RV@@2851",Harris Insights,35,43.5,19.5,R+ 8.5@@8.5,0,R
+National,2/9 - 2/12@@23415,"1,237 A@@1237",Ipsos,34,37,,R+ 3@@3,0,R
+National,1/9 - 1/12@@23384,"1,178 A@@1178",Angus Reid Global,37,37,,Even@@0,0,E
+National,11/16 - 11/18@@23330,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,6/11 - 6/13@@23538,"4,000 RV@@4000",Morning Consult,44,43,,D+ 1@@-1,0,D
+National,3/8 - 3/11@@23443,991 RV@@991,YouGov,42.5,44.5,,R+ 2@@2,0,R
+National,1/21 - 1/23@@23396,"4,000 RV@@4000",Morning Consult,40,45,,R+ 5@@5,0,R
+National,1/30 - 2/1@@23405,"4,000 RV@@4000",Morning Consult,41,45,,R+ 4@@4,0,R
+National,5/9 - 5/11@@23505,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,3/15 - 3/17@@23450,"5,777 RV@@5777",Morning Consult,43,43,,Even@@0,0,E
+National,2/23 - 2/25@@23429,"6,224 RV@@6224",Morning Consult,43,44,,R+ 1@@1,0,R
+National,1/25 - 1/30@@23400,"1,064 A@@1064",YouGov,39,43,9,R+ 4@@4,0,R
+National,11/8 - 11/12@@23322,987 LV@@987,Rasmussen Reports,38,39,12,R+ 1@@1,0,R
+National,5/29 - 5/31@@23525,"4,000 RV@@4000",Morning Consult,43,45,,R+ 2@@2,0,R
+National,6/18 - 6/20@@23545,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,3/25 - 3/27@@23460,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,11/26 - 11/28@@23340,"4,000 RV@@4000",Morning Consult,40,43,,R+ 3@@3,0,R
+National,6/5 - 6/7@@23532,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,5/6 - 5/15@@23502,684 LV@@684,Marquette University Law School,41,44,11,R+ 3@@3,0,R
+National,1/9 - 1/11@@23384,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,4/17 - 4/22@@23483,"2,745 LV@@2745",Change Research,38,39,8,R+ 1@@1,0,R
+National,6/20 - 6/24@@23547,"1,405 RV@@1405",Quinnipiac,37,43,11,R+ 6@@6,0,R
+National,3/8 - 3/13@@23443,"1,436 LV@@1436",Big Village,39.5,40.9,8.5,R+ 1.4@@1.4,0,R
+National,6/17 - 6/19@@23544,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,11/23 - 11/25@@23337,"4,000 RV@@4000",Morning Consult,43,41,,D+ 2@@-2,0,D
+National,2/27 - 3/1@@23433,"2,000 LV@@2000",GS Strategy,45.3,45.8,,R+ 0.5@@.5,0,R
+National,5/1 - 5/2@@23497,"1,240 LV@@1240",Data for Progress,40,41,12,R+ 1@@1,0,R
+National,4/16 - 4/17@@23482,"1,308 RV@@1308",Emerson College,39.9,43.5,7.6,R+ 3.6@@3.6,0,R
+National,3/24 - 3/26@@23459,"4,000 RV@@4000",Morning Consult,44,44,,Even@@0,0,E
+National,4/4 - 4/6@@23470,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,6/11 - 6/12@@23538,"1,141 LV@@1141",Redfield & Wilton,41,40,7,D+ 1@@-1,0,D
+National,5/13 - 5/13@@23509,"1,155 LV@@1155",Redfield & Wilton,43,42,5,D+ 1@@-1,0,D
+National,6/20 - 6/25@@23547,"1,226 LV@@1226",NYT/Siena,37,40,7,R+ 3@@3,0,R
+National,2/9 - 2/11@@23415,"6,164 RV@@6164",Morning Consult,42,43,,R+ 1@@1,0,R
+National,4/26 - 4/28@@23492,851 LV@@851,Florida Atlantic/Mainstreet,43.7,39.5,11,D+ 4.2@@-4.2,0,D
+National,3/6 - 3/8@@23441,"4,000 RV@@4000",Morning Consult,43,44,,R+ 1@@1,0,R
+National,1/16 - 1/18@@23391,"4,000 RV@@4000",Morning Consult,42,43,,R+ 1@@1,0,R
+National,12/31 - 1/2@@23375,"1,343 RV@@1343",YouGov,44,44,,Even@@0,0,E
+National,11/7 - 11/9@@23321,"4,000 RV@@4000",Morning Consult,42,42,,Even@@0,0,E
+National,1/31 - 2/2@@23406,"1,266 RV@@1266",TIPP Insights,41,43,,R+ 2@@2,0,R
+National,6/27 - 6/29@@23554,"1,029 RV@@1029",Patriot Polling,40.5,44.3,11.2,R+ 3.8@@3.8,0,R
+National,12/29 - 12/31@@23373,"4,000 RV@@4000",Morning Consult,41,43,,R+ 2@@2,0,R
+National,4/14 - 4/16@@23480,"4,000 RV@@4000",Morning Consult,41,43,,R+ 2@@2,0,R

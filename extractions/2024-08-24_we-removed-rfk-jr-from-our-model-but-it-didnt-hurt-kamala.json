@@ -1,0 +1,487 @@
+{
+  "article": {
+    "date": "2024-08-24",
+    "title": "We removed RFK Jr. from our model. But it didn’t hurt Kamala.",
+    "subtitle": "Harris's convention bounce has offset any impact — so far.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/we-removed-rfk-jr-from-our-model",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-08-24_we-removed-rfk-jr-from-our-model-but-it-didnt-hurt-kamala"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.578523,
+    "prompt_tokens": 8,
+    "completion_tokens": 15245,
+    "cache_read_tokens": 28835,
+    "cache_write_tokens": 33478,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:09:27"
+  },
+  "extraction": {
+    "summary": "Silver explains how the 2024 Silver Bulletin presidential model handled RFK Jr.'s withdrawal and Trump endorsement. Kennedy was removed from 'named third-party candidate' (N3PC) status and lumped in with 'other', which is a one-cell spreadsheet change. The article explains N3PC mechanics: Kennedy's vote share was forecast explicitly, he could win electoral votes, the model preferred multiway poll versions and extrapolated his share where polls omitted him, and his ballot access was simulated probabilistically. Silver lays out the criteria for N3PC status and the alternatives he rejected, and argues that mid-campaign model changes should be minimally invasive. He also explains why the topline barely moved (53.2% Harris): the DNC poll gains offset the convention bounce adjustment, Electoral College deadlock scenarios shrank, and one component of the uncertainty index dropped.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "Silver Bulletin/538 presidential primary model",
+      "prediction markets"
+    ],
+    "findings": [
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model has a special 'named third-party candidate' (N3PC) mode. For a designated N3PC the model explicitly forecasts the candidate's vote share, and the candidate is eligible to win electoral votes in the simulations.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "N3PC's receive special handling in the model: we explicitly forecast their vote share, and they're eligible to receive electoral votes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "empirical_regularity",
+        "statement": "Past examples of candidates treated as N3PCs include Ross Perot in 1992 and 1996 and Gary Johnson in 2016. RFK Jr. was an N3PC in 2024 until his withdrawal.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "538 and Silver Bulletin presidential models",
+        "evidence_quote": "examples from past elections include Ross Perot in 1992 and 1996 or Gary Johnson in 2016",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "Poll version selection: when a designated N3PC is in the race, the Silver Bulletin presidential model defaults toward the multiway-ballot version of a poll rather than the head-to-head version.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "When there's an N3PC in the race, the model defaults toward using the multiway version",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "adjustment_rule",
+        "statement": "Third-party adjustment: in N3PC mode, when a poll does not list the N3PC as an option, the Silver Bulletin presidential model extrapolates (imputes) the N3PC's vote share for that poll, allocating votes to him.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "extrapolates the N3PC's vote share in cases where a poll doesn't list him as an option",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "When there is no designated N3PC, the Silver Bulletin presidential model averages all available versions of a poll (head-to-head and multiway) together instead of preferring one version.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If there isn't a designated N3PC, it averages all available versions of the survey together instead.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "adjustment_rule",
+        "statement": "N3PC designation criterion 1 (described by Silver as admittedly somewhat arbitrary): the candidate is generally polling in the mid-single digits or higher.",
+        "quantities": [
+          {
+            "name": "polling threshold for N3PC",
+            "value": "mid-single digits or higher",
+            "unit": "percent",
+            "context": "general polling level required for N3PC status"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Whether a candidate is generally polling in the mid-single digits or higher",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "adjustment_rule",
+        "statement": "N3PC designation criterion 2: the candidate is expected to qualify for the ballot in enough states that he could theoretically reach 270 electoral votes. Silver applies this by its spirit, so a candidate who exits swing-state ballots and endorses a rival fails it even if he technically meets it.",
+        "quantities": [
+          {
+            "name": "electoral votes needed",
+            "value": "270",
+            "unit": "electoral votes",
+            "context": "ballot access must make this theoretically reachable"
+          }
+        ],
+        "rationale": "You don't endorse another candidate and take yourself off swing-state ballots if you seriously want to contest the Electoral College.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Whether the candidate is expected to qualify for the ballot in most states, enough that he could theoretically reach 270 electoral votes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "model_change",
+        "statement": "On Aug 24, 2024, the Silver Bulletin presidential model dropped RFK Jr. from N3PC status and lumped him in with 'other' candidates. This was implemented by changing a single cell in one spreadsheet, which implies N3PC status is a configuration flag.",
+        "quantities": [],
+        "rationale": "Simple is best under these circumstances. He no longer meets the N3PC criteria, and the change uses existing model logic.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we've changed RFK's status in the model by changing a single cell in one spreadsheet",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "parameter_or_number",
+        "statement": "After Kennedy's removal from N3PC status, the Silver Bulletin presidential model expects all candidates other than Harris and Trump combined, including Kennedy where he remains on the ballot, to get 1 to 2 percent of the vote on Nov. 5, 2024.",
+        "quantities": [
+          {
+            "name": "projected combined 'other' vote",
+            "value": "1 to 2",
+            "unit": "percent",
+            "context": "2024 general election, post-RFK withdrawal"
+          }
+        ],
+        "rationale": "Minor-party support in polls often doesn't translate to ballots.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "to get 1 to 2 percent of the vote combined on Nov. 5",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "empirical_regularity",
+        "statement": "Third-party candidates typically poll higher than their eventual vote share. In polls they might get 2 or 3 percent combined, but that support often doesn't materialize. Undecided voters park there, then stay home or switch to a major-party candidate in the booth. The model therefore projects 'other' below its polled level.",
+        "quantities": [
+          {
+            "name": "typical combined third-party polling",
+            "value": "2 or 3",
+            "unit": "percent",
+            "context": "when included in polls, 2024"
+          }
+        ],
+        "rationale": "Third-party options act as a 'Free Parking space' for actually undecided voters.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "empirically, support for minor parties in polls often doesn't translate to support on the ballot. Instead, they serve as a Free Parking space for voters who are actually undecided.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin presidential model gives minor candidates a lower vote projection in battleground states, reflecting tactical voting.",
+        "quantities": [],
+        "rationale": "Third-party candidates do worse in close elections, especially in swing states, because voters avoid protest votes when their ballot could matter.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model accounts for this: if you look carefully, minor candidates get a lower projection in battleground states.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "primaries_and_nominations",
+        "finding_type": "empirical_regularity",
+        "statement": "Data from Silver's presidential primary model show that candidates who suspend their campaigns after ballot deadlines typically lose half their vote or more. Applied to RFK Jr., this implied he would poll at 1 or 2 percent instead of 3 or 4.",
+        "quantities": [
+          {
+            "name": "vote loss after suspension",
+            "value": "half or more",
+            "unit": "share of prior support",
+            "context": "candidates suspending after ballot deadlines, from primary model data"
+          },
+          {
+            "name": "expected RFK polling after suspension",
+            "value": "1 or 2",
+            "unit": "percent",
+            "context": "if pollsters still include him"
+          },
+          {
+            "name": "RFK prior polling",
+            "value": "3 or 4",
+            "unit": "percent",
+            "context": "before suspension; about 4 in polling average"
+          }
+        ],
+        "rationale": "",
+        "model_version": "primary model data applied to 2024 presidential",
+        "evidence_quote": "Typically they lose half their vote or more.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "Ballot access for an N3PC is simulated probabilistically in the Silver Bulletin presidential model. In states where RFK's ballot status was uncertain, he randomly appeared on the ballot in some simulations but not others. Where he was off the ballot, his votes were reallocated to the major-party candidates.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "he'd randomly make the ballot in some simulations but not others",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "method",
+        "statement": "Rejected alternative 1 for handling RFK's withdrawal: keep Kennedy as an N3PC and remove him only in the states where he withdraws. This would have meant the model first allocated votes to him in polls that didn't list him, then subtracted them back out. It would also have overprojected his vote share, since he no longer met the N3PC standards.",
+        "quantities": [],
+        "rationale": "Continuity benefit, but internally inconsistent.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model would first have been allocating votes to Kennedy in polls where he wasn't listed as part of its third-party adjustment and then subtracting them back out again",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "method",
+        "statement": "Rejected alternative 2, originally planned: run the third-party adjustment in reverse, imputing what polls that included Kennedy would show without him. Silver rejected it for three reasons. It created ambiguity about how other third-party candidates (Stein, Oliver) were treated. It would wrongly zero out RFK when he remains on most ballots. It would have required election-specific new code.",
+        "quantities": [],
+        "rationale": "Avoid ad-hoc fixes when the model's existing logic offers an alternative.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Another approach would be to adjust polls that did include Kennedy to impute what they'd say without him — basically, the reverse of the third-party adjustment.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "other",
+        "finding_type": "design_principle",
+        "statement": "Mid-campaign changes to a model should be minimally invasive. Ad-hoc, election-specific fixes should be avoided when the model's preexisting logic offers a solution. Silver frames this partly as a critique of competitors.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "changes to a model in the midst of a campaign should be minimally invasive.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "parameter_or_number",
+        "statement": "Effect of removing RFK on the Silver Bulletin national polling average (Aug 23 to Aug 24, 2024): Harris rose from 48.0 to 48.8 (+0.8) and Trump from 43.7 to 44.8 (+1.1). The net shift was 0.3 points toward Trump, which means Kennedy drew slightly more from Trump.",
+        "quantities": [
+          {
+            "name": "Harris average change",
+            "value": "48.0 to 48.8 (+0.8)",
+            "unit": "percent",
+            "context": "national average, RFK removal"
+          },
+          {
+            "name": "Trump average change",
+            "value": "43.7 to 44.8 (+1.1)",
+            "unit": "percent",
+            "context": "national average, RFK removal"
+          },
+          {
+            "name": "net shift to Trump",
+            "value": "0.3",
+            "unit": "percentage points",
+            "context": "RFK removal"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 Silver Bulletin polling average",
+        "evidence_quote": "Harris's polling average has improved from 48.0 percent yesterday to 48.8 percent today (+0.8), while Trump's has increased from 43.7 to 44.8 (+1.1).",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin national polling average accounts for each poll's quality, sample size and recency, and is adjusted based on trends in both state and national polls.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 Silver Bulletin polling average",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin presidential model applies a convention bounce adjustment that discounts post-convention poll gains. Harris's post-DNC poll gains were just enough to roughly offset both this adjustment and the RFK change, leaving her win probability flat. Without those gains she would have declined slightly.",
+        "quantities": [
+          {
+            "name": "Harris national lead",
+            "value": "4.0",
+            "unit": "percentage points",
+            "context": "Aug 24, 2024"
+          },
+          {
+            "name": "Harris lead at DNC start",
+            "value": "2.3",
+            "unit": "percentage points",
+            "context": "start of DNC"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "her improvement is just enough to roughly offset both the convention bounce adjustment that the model makes and the RFK Jr. fix",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model designates certain news events as 'landmark events', such as the DNC and RFK's withdrawal. After a landmark event, the model is more aggressive about accounting for polling shifts in the following days.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Since the DNC and RFK's withdrawal are both what the model considers \"landmark events,\" it will be aggressive about accounting for any polling shifts it sees in the coming days.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "parameter_or_number",
+        "statement": "With an N3PC in the race, the Silver Bulletin presidential model in about 2 percent of simulations had RFK winning some electoral votes, which could produce an Electoral College deadlock with no one reaching 270. With no N3PC, the only deadlock is an exact 269-269 tie, at about a 0.3 percent chance. Removing these deadlock scenarios slightly helped Harris.",
+        "quantities": [
+          {
+            "name": "RFK winning EVs probability",
+            "value": "about 2",
+            "unit": "percent",
+            "context": "pre-removal simulations"
+          },
+          {
+            "name": "269-269 tie probability",
+            "value": "0.3",
+            "unit": "percent",
+            "context": "Aug 24, 2024"
+          }
+        ],
+        "rationale": "Plausible exact 269-269 maps are combinatorially rare.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Now the only deadlock scenario is an exact 269-269 tie, which is only a 0.3 percent chance given how the states line up combinatorially.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model's uncertainty index includes a component related to the presence of an N3PC. Removing the N3PC lowers that component and so reduces overall forecast uncertainty, which benefits the leading candidate.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "removing the N3PC reduces the value of one of the components of the model's uncertainty index",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The Silver Bulletin presidential model does not account for endorsements, such as RFK's endorsement of Trump, in any way. Silver says the model may be 'running a little hot' on Harris as a result.",
+        "quantities": [],
+        "rationale": "The endorsement's net effect is uncertain. The direct effect is likely pro-Trump, but the indirect effects are unknown because RFK's favorability is net-negative.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model doesn't account for the endorsement in any way",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "interpretation_guidance",
+        "statement": "When a news event is too recent to be reflected in polling, prediction markets may be worth consulting as an alternative signal. On Aug 24, 2024, markets had Trump slightly higher than the Silver Bulletin model.",
+        "quantities": [],
+        "rationale": "Polls lag events.",
+        "model_version": "general principle",
+        "evidence_quote": "When there's a news event so recently that there hasn't yet been time for it to be accounted for in the polling, it may be worth looking toward alternatives like prediction markets",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "parameter_or_number",
+        "statement": "Silver Bulletin forecast on Aug 24, 2024: Harris had a 53.2 percent chance of winning the Electoral College and Trump 46.6 percent, essentially unchanged after RFK's removal.",
+        "quantities": [
+          {
+            "name": "Harris EC win probability",
+            "value": "53.2",
+            "unit": "percent",
+            "context": "Aug 24, 2024"
+          },
+          {
+            "name": "Trump EC win probability",
+            "value": "46.6",
+            "unit": "percent",
+            "context": "Aug 24, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris's chances of winning the Electoral College are 53.2 percent, and Trump's are 46.6 percent",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin forecast history chart shows Trump at about 62 percent to win before the model's late-July launch. Harris overtook him in early August and held roughly 53-57 percent through Aug 24, 2024.",
+        "quantities": [
+          {
+            "name": "Trump win probability pre-launch",
+            "value": "~62",
+            "unit": "percent",
+            "context": "chart, late July 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin national polling average chart shows Kennedy at about 15 percent in early July, then declining to about 4 percent by late August 2024.",
+        "quantities": [
+          {
+            "name": "RFK early July average",
+            "value": "~15",
+            "unit": "percent",
+            "context": "chart, before ~July 7"
+          },
+          {
+            "name": "RFK late August average",
+            "value": "~4",
+            "unit": "percent",
+            "context": "chart, Aug 23"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 Silver Bulletin polling average",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "tactical voting and third parties",
+        "insight": "Third-party candidates do worse in close elections, especially in swing states. Voters are tactical and less likely to cast protest votes when their ballot matters.",
+        "evidence": "Silver's general empirical claim.",
+        "forecasting_implication": "Reduce minor-party projections in battleground states and in close races."
+      },
+      {
+        "topic": "third-party viability and major-party popularity",
+        "insight": "Third-party prospects depend on major-party unpopularity. With Harris at roughly breakeven favorability and Trump's ratings improving, 2024 was no longer favorable to third parties.",
+        "evidence": "Comparison of Harris's ratings with Biden's.",
+        "forecasting_implication": "Condition third-party vote expectations on major-candidate favorability."
+      },
+      {
+        "topic": "convention bounce",
+        "insight": "Harris's lead grew from 2.3 to 4.0 points during the DNC, and further gains were expected because little polling had been done after her acceptance speech.",
+        "evidence": "National polling average.",
+        "forecasting_implication": "Expect bounces to show up with a lag, and discount them."
+      },
+      {
+        "topic": "endorsements",
+        "insight": "Endorsements by unpopular figures have uncertain net effects. The direct effect is that some followers comply, while the indirect effect may be to repel voters put off by the endorser.",
+        "evidence": "RFK's net-negative favorability.",
+        "forecasting_implication": "No endorsement adjustment is warranted; wait for polls."
+      },
+      {
+        "topic": "ballot withdrawal logistics",
+        "insight": "Late withdrawals cannot always remove a candidate's name: it was likely too late in Wisconsin, and in North Carolina ballots were already printed in about 30 counties.",
+        "evidence": "",
+        "forecasting_implication": "Model state-by-state ballot presence probabilistically."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin methodology on the third-party adjustment and the uncertainty index (linked in text)",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin post on how the model originally planned to handle an RFK withdrawal",
+        "url": ""
+      },
+      {
+        "description": "Post on the 269-269 tie",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How exactly is the N3PC vote share extrapolated for polls that omit the candidate (the functional form of the third-party adjustment)?",
+      "How does the model derive the 'other' vote projection from polls, and what discount is applied to polled third-party support?",
+      "How large is the battleground-state reduction for minor candidates?",
+      "What are the components of the uncertainty index, and how much does the N3PC component contribute?",
+      "What is the size and decay schedule of the convention bounce adjustment?",
+      "How does 'landmark event' status change the polling average's responsiveness (for example, decay or recency weights)?",
+      "How was ballot-access probability assigned per state for RFK in the simulations?"
+    ]
+  }
+}

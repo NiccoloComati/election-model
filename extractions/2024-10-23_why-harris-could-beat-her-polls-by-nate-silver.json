@@ -1,0 +1,372 @@
+{
+  "article": {
+    "date": "2024-10-23",
+    "title": "Why Harris could beat her polls",
+    "subtitle": "Or Trump could beat his again.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/why-harris-could-beat-her-polls",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-10-23_why-harris-could-beat-her-polls-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.298683,
+    "prompt_tokens": 4,
+    "completion_tokens": 6395,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 21306,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:19:23"
+  },
+  "extraction": {
+    "summary": "Silver promotes his NYT guest essay arguing that a normal-sized, correlated polling error of about 3 points could produce a sweep of all 7 battleground states by either candidate. In the Silver Bulletin simulations of October 22, 2024, a Trump sweep happened 24% of the time and a Harris sweep 15%. He says Trump's past overperformance came from nonresponse bias, not 'shy Trump voters'. Because pollsters have changed their methods and polling error is uncorrelated from cycle to cycle, the Silver Bulletin model assumes the direction of error is unpredictable. He also argues that herding and vibes-driven adjustments by pollsters could mean an unadjusted poll consensus would be slightly more pro-Harris, that gut instinct and conventional wisdom should not override models, and that a pro-Trump error is roughly as likely as a pro-Harris one.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model"
+    ],
+    "findings": [
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "Silver states that polls are typically off by around 3 points in one direction or the other. He treats this as a 'normal-sized' polling error.",
+        "quantities": [
+          {
+            "name": "typical polling error",
+            "value": "around 3",
+            "unit": "points",
+            "context": "typical polling miss in presidential elections"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "polls are typically off by around 3 points in one direction or the other",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin 2024 presidential model's simulations account for correlated polling error across states. As a result, a normal-sized error can push all 7 key battleground states toward the same candidate.",
+        "quantities": [
+          {
+            "name": "number of key battleground states",
+            "value": "7",
+            "unit": "states",
+            "context": "AZ, GA, MI, NC, NV, PA, WI"
+          }
+        ],
+        "rationale": "Polling errors are correlated across states, so a sweep is a natural outcome.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "In our simulations yesterday, which account for the possibility of a correlated polling error, the most common outcome was Trump winning all 7 swing states",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "In the Silver Bulletin simulations of October 22, 2024, the most common single outcome was Trump winning all 7 swing states (24%, or 24.4% in the table). The next most common was a Harris sweep of all 7 (15%, or 15.3% in the table).",
+        "quantities": [
+          {
+            "name": "Trump sweep probability",
+            "value": "24.4",
+            "unit": "percent",
+            "context": "simulations, Oct 22, 2024"
+          },
+          {
+            "name": "Harris sweep probability",
+            "value": "15.3",
+            "unit": "percent",
+            "context": "simulations, Oct 22, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the most common outcome was Trump winning all 7 swing states: this happened 24 percent of the time. And the next most common was a Harris sweep, which occurred in 15 percent of simulations",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The 'paths to victory' table is built from 40,000 simulations of the Silver Bulletin 2024 presidential model. It enumerates all 128 (2^7) win/loss permutations of the 7 likeliest tipping-point states, with each permutation's probability and Harris's Electoral College win probability in that scenario.",
+        "quantities": [
+          {
+            "name": "simulations",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "model run underlying the table, Oct 22, 2024"
+          },
+          {
+            "name": "permutations",
+            "value": "128",
+            "unit": "scenarios",
+            "context": "2^7 combinations of 7 tipping-point states"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "In the paths-to-victory table, Harris is given a default number of electoral votes in each scenario. Each state other than the 7 tipping-point states is assigned to whichever candidate currently leads that state's forecast. Harris's win probability within a scenario can still fall between 0 and 100%, which suggests the probabilities are computed from simulations in which non-battleground states also vary.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "Scenario rows from the October 22, 2024 table, listed as AZ, GA, MI, NC, NV, PA, WI: (1) R R R R D R R (only Nevada to Harris) 4.6%, 232 Harris EVs, 0.2% Harris win. (2) R D D D D D D 3.4%, 308 EVs, 100%. (3) R R D R D D D (Harris wins MI, NV, PA, WI) 2.9%, 276 EVs, 98.7%. (4) D R D D D D D 2.8%, 303 EVs, 100%. (5) D R D R D D D 2.6%, 287 EVs, 99.8%. (6) R R R R R R D 2.6%, 236 EVs, 0.0%. (7) R R D R R D D (Harris wins the Blue Wall only) 2.2%, 270 EVs, 85.4%. (8) R R D R R R R 1.9%, 241 EVs, 0.1%. (9) R D D D R D D 1.9%, 302 EVs, 99.6%. (10) R R D R R R D 1.9%, 251 EVs, 0.7%. (11) R R D R D R D 1.6%, 257 EVs, 1.6%. (12) R R D D D D D 1.6%, 292 EVs, 99.8%. (13) R D R R R R R 1.3%, 242 EVs, 0.6%. Harris's base is 226 EVs if she loses all 7 and 319 if she sweeps.",
+        "quantities": [
+          {
+            "name": "Harris EVs with all 7 lost",
+            "value": "226",
+            "unit": "electoral votes",
+            "context": "default allocation"
+          },
+          {
+            "name": "Harris EVs with all 7 won",
+            "value": "319",
+            "unit": "electoral votes",
+            "context": "default allocation"
+          },
+          {
+            "name": "Blue Wall-only scenario probability",
+            "value": "2.2",
+            "unit": "percent",
+            "context": "Harris wins MI, PA, WI only"
+          },
+          {
+            "name": "Harris win probability in Blue Wall-only scenario",
+            "value": "85.4",
+            "unit": "percent",
+            "context": "270 EVs at default allocation"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "interpretation_guidance",
+        "statement": "In the 270-EV Blue Wall-only scenario, Harris wins only 85.4% of the time rather than 100%. This implies the model also varies non-battleground states (e.g., NE-2, or other states) within simulations, and that ties or other-state flips matter.",
+        "quantities": [
+          {
+            "name": "Harris win probability at 270 default EVs",
+            "value": "85.4",
+            "unit": "percent",
+            "context": "scenario R R D R R D D"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "The baseline assumption of the Silver Bulletin model is that the polls will probably be wrong to some degree, but the direction of the error is extremely hard to predict. The model therefore does not build in a directional bias correction for Trump's past overperformance.",
+        "quantities": [],
+        "rationale": "Empirically there is basically no correlation in polling error from one cycle to the next.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the baseline assumption of the Silver Bulletin model is that while the polls could be wrong again — and in fact, they probably will be wrong to some degree — it's extremely hard to predict the direction of the error.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Empirically, there is basically no correlation in the direction of polling error from one election cycle to the next.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Empirically, there's basically no correlation in polling error from one cycle to the next one.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "Forecasters should assume a pro-Trump polling error is roughly as likely as a pro-Harris one, i.e., the error distribution is centered on zero.",
+        "quantities": [],
+        "rationale": "Pollsters changing their methods, possible overcompensation, and possible herding cut in different directions.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "you should probably assume that a pro-Trump polling error is roughly as likely as a pro-Harris one.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "interpretation_guidance",
+        "statement": "A Trump sweep of the 7 swing states is more likely than a Harris sweep in the simulations not because of any directional error assumption. Trump has clearer leads in Georgia and Arizona, which tilt toward him, while the other 5 states are basically toss-ups, so a Trump sweep is a slightly less heavy lift.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "he has clearer \"leads\" in Georgia and Arizona than Harris has in any state — the other 5 states are basically toss-ups",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "Trump's polling overperformance in 2016 and 2020 was likely caused by nonresponse bias rather than 'shy Trump voters' lying to pollsters. Democrats are more likely to respond to political surveys, so pollsters weren't reaching enough Trump voters.",
+        "quantities": [],
+        "rationale": "There is little evidence for the shy-voter theory, there is no persistent worldwide right-wing overperformance, and there is less stigma than ever to supporting Trump.",
+        "model_version": "general principle",
+        "evidence_quote": "It's not that Trump voters are lying to pollsters; it's that in 2016 and 2020, pollsters weren't reaching enough of them.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "Pollsters have changed their methods in response to 2016 and 2020 nonresponse bias. Silver estimates that if they still used their 2016/2020 techniques, polls would probably show a Harris lead in the Electoral College instead of a rough toss-up.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If polling firms were still applying the same techniques they did in 2016 and 2020, we'd probably be seeing a Harris lead in the Electoral College right now.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Pollsters may overcompensate for past misses on Trump, consciously or unconsciously making assumptions that favor him. The 2017 UK election is an example: pollsters adjusted for 'shy Tories' and Labour beat its polls instead.",
+        "quantities": [],
+        "rationale": "Polls are increasingly like mini-models with many subjective decision points.",
+        "model_version": "general principle",
+        "evidence_quote": "If pollsters are terrified of missing low on Mr. Trump again, they may consciously or unconsciously make assumptions that favor him.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "One possible cause of the 2020 polling error was COVID: Democrats were more likely to socially distance and had more time to respond to polls. If that was the main cause, the bias may not recur, and corrections for it could overcompensate.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "if the 2020 polling error was primarily caused by COVID: Democrats being more likely to \"socially distance\" and having more time to respond to polls",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Pollsters may herd toward other polls or decline to publish outliers. In 2024 a conspicuously large number of swing-state polls showed margins within 2 points either way, and almost nobody except maybe NYT/Siena published results like Trump +5 or Harris +6.",
+        "quantities": [
+          {
+            "name": "herding band",
+            "value": "2",
+            "unit": "points",
+            "context": "conspicuously many swing-state polls within ±2"
+          }
+        ],
+        "rationale": "Pollsters are influenced by vibes and the media narrative.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "a conspicuously large number of polls in this race show the swing states within 2 points in either direction",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "Silver speculates that if pollsters had published unadjusted, unherded numbers, the results might be a hair more favorable to Harris than the public record, which has been influenced by recent Trumpy vibes. He explicitly does not try to predict the direction of polling bias.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it would be a hair more favorable to Harris than the numbers we're seeing in the public record",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "design_principle",
+        "statement": "Gut instinct and media 'vibes' should not override models or other relatively objective indicators. Elections are too infrequent to calibrate intuition, and guts tend to extrapolate the last election or echo the media.",
+        "quantities": [],
+        "rationale": "Gut can be calibrated in poker over thousands of hands, but elections occur once every four years.",
+        "model_version": "general principle",
+        "evidence_quote": "Basically, you should stick to the models or other relatively objective indicators.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Conventional wisdom is wrong more often than the polls are. Examples are dismissing Trump's chances in 2016 despite a fairly close race and misjudging 2022. Silver sees a case for mild contrarianism, shading slightly against conventional wisdom.",
+        "quantities": [],
+        "rationale": "Media echo chambers exaggerate small shifts in 'momentum' because saying 'toss-up' repeatedly is boring.",
+        "model_version": "general principle",
+        "evidence_quote": "The conventional wisdom is very often wrong — it's wrong more often than the polls are",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Media coverage of polls, including headlines and which polls get discussed, swings more than the underlying data as accounted for by models. The figure orders sources from least to most vibes-distorted: 'virginal' polls, polls as published and fed into models, polls as discussed by the media, and vibes/conventional wisdom.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Media coverage of polls — how articles are headlined or which polls generate more discussion — often swings around more than the underlying data as accounted for by models like ours.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "nonresponse bias",
+        "insight": "Democrats are more likely to respond to political surveys, which caused Trump to beat his polls in 2016 and by a wider margin in 2020.",
+        "evidence": "Trump beat polls in 2016 and 2020; there is little evidence for the shy-voter theory.",
+        "forecasting_implication": "Watch pollster weighting choices, such as past vote and partisanship, rather than modeling 'shy' voters."
+      },
+      {
+        "topic": "right-wing poll overperformance",
+        "insight": "There is no persistent worldwide tendency for right-wing parties to outperform their polls. Le Pen's National Rally underperformed its polls in the 2024 French legislative elections.",
+        "evidence": "French 2024 legislative elections; UK 2017 Labour overperformance.",
+        "forecasting_implication": "Do not apply a systematic right-wing bias correction."
+      },
+      {
+        "topic": "2024 swing-state structure",
+        "insight": "As of October 2024, Georgia and Arizona tilted toward Trump while MI, NC, NV, PA and WI were basically toss-ups.",
+        "evidence": "Silver Bulletin forecast, October 22, 2024.",
+        "forecasting_implication": "Sweep probabilities are asymmetric when leads are asymmetric, even under unbiased error."
+      },
+      {
+        "topic": "2017 UK election",
+        "insight": "Some UK pollsters made ad hoc adjustments for 'shy Tories', and Labour beat its polls as Conservatives lost their majority.",
+        "evidence": "",
+        "forecasting_implication": "Pollster overcorrection is a real risk after high-profile misses."
+      }
+    ],
+    "references": [
+      {
+        "description": "Nate Silver NYT guest essay: 'Here's What My Gut Says About the Election. But Don't Trust Anyone's Gut, Even Mine.'",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin latest 2024 election forecast",
+        "url": ""
+      },
+      {
+        "description": "Nate Cohn's NYT columns on nonresponse bias and pollsters changing methods",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin article on normal-sized polling error",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on the lack of correlation in polling error from cycle to cycle",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin 'paths to victory' table data (Get the data link)",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "The exact structure and magnitude of the correlated polling error in the simulations (national vs. regional or demographic components).",
+      "How the distribution of polling error is parameterized (around 3 points typical, but SD and tail shape are not given).",
+      "Why Harris wins only 85.4% in the 270-EV Blue Wall scenario: which other states or districts vary, and how ties are handled.",
+      "Whether the model includes any explicit adjustment or detection for pollster herding.",
+      "The empirical basis (data and years) for the claim of no cycle-to-cycle polling error correlation."
+    ]
+  }
+}

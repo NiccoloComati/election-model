@@ -1,0 +1,207 @@
+{
+  "article": {
+    "date": "2026-11-03",
+    "title": "FLIPR 2026 Senate forecast",
+    "subtitle": "Silver Bulletin's prediction for every Senate election in 2026.",
+    "authors": "Nate Silver; Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/nate-silver-2026-midterm-election-senate-model",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-11-03_2026-midterm-election-senate-forecast-silver-bulletin"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": true,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:47:35"
+  },
+  "extraction": {
+    "summary": "Final FLIPR 2026 Senate forecast landing page as of Nov. 3, 2026: 82.4 percent Democratic control (Deluxe), average 53 D-47 R. The text is short; the substance is in embedded tables captured in the PDF. These are polling averages with per-poll influence scores; tipping-point probabilities, the Voter Power Index and elasticity by state; a popular-vote-to-Senate-seats translation table; and a polls versus simple/fancy/blended fundamentals table. The last implies the blend weights simple and fancy fundamentals roughly equally (simple weight about 0.46 to 0.49).",
+    "model_content_level": "high",
+    "models_discussed": [
+      "FLIPR 2026 (Deluxe, Classic, Lite)"
+    ],
+    "findings": [
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "Final FLIPR Deluxe Senate forecast on Nov. 3, 2026: 82.4 percent chance of Democratic control, average 53 D to 47 R, a 6-seat Democratic gain, with a seat distribution from 40,000 simulations and a shaded middle 80 percent. At 50-50 Republicans control via the vice president, and Democratic seats include aligned independents.",
+        "quantities": [
+          {
+            "name": "Senate D control prob",
+            "value": "82.4",
+            "unit": "percent",
+            "context": "Nov 3, 2026 final"
+          },
+          {
+            "name": "average D seats",
+            "value": "53",
+            "unit": "seats",
+            "context": "final"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "For each state, FLIPR reports a tipping-point probability, the chance that state decides Senate control, and a Voter Power Index, the relative likelihood that an individual voter there determines the winner of the chamber, along with elasticity. Final values: Texas tipping point 12 percent (VPI 1.0, elasticity 1.04), Maine 12 (VPI 12.0, 1.07), Ohio 11 (1.8, 1.02), Kansas 10 (6.7, 1.06), Michigan 10 (1.6, 1.00), Iowa 9 (4.6, 1.05), Minnesota 7 (2.1, 0.94), Alaska 7 (VPI 17.1, elasticity 1.27), New Hampshire 4 (4.6, 1.13).",
+        "quantities": [
+          {
+            "name": "Alaska VPI",
+            "value": "17.1",
+            "unit": "relative index",
+            "context": "final"
+          },
+          {
+            "name": "Alaska elasticity",
+            "value": "1.27",
+            "unit": "",
+            "context": "final"
+          },
+          {
+            "name": "Texas tipping point",
+            "value": "12",
+            "unit": "percent",
+            "context": "final"
+          }
+        ],
+        "rationale": "Small states have high voter power per voter.",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "parameter_or_number",
+        "statement": "FLIPR's final Senate translation from national popular vote to control: D+1-2: 7.2 percent Democratic, 48 seats; D+2-3: 16.9 percent, 49; D+3-4: 31.8 percent, 50; D+4-5: 50.1 percent, 50; D+5-6: 69.2 percent, 51; D+6-7: 83.4 percent, 52; D+7-8: 92.8 percent, 53; D+8-9: 97.2 percent, 54; D+10-11: 99.8 percent, 55; D+14-15: 57 seats. The Senate tipping point was about D+4.5.",
+        "quantities": [
+          {
+            "name": "Senate 50/50 point",
+            "value": "D+4 to +5",
+            "unit": "points",
+            "context": "final"
+          },
+          {
+            "name": "D win prob at D+6-7",
+            "value": "83.4",
+            "unit": "percent",
+            "context": "final"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "parameter_or_number",
+        "statement": "The final Senate polls-versus-fundamentals table shows blended fundamentals that are almost exactly a 47/53 to 49/51 weighted average of simple and fancy fundamentals in every state where they differ. Examples: Alaska simple R+1.2, fancy R+5.2, blended R+3.3; Georgia D+6.0, D+17.8, D+12.1; Kansas R+7.8, R+1.3, R+4.4; Maine D+16.4, R+6.9, D+4.3; Massachusetts D+42.1, D+34.1, D+37.9. That implies a simple-fundamentals weight of about 0.46 to 0.49 for Senate races in 2026.",
+        "quantities": [
+          {
+            "name": "implied simple-fundamentals weight",
+            "value": "0.46-0.49",
+            "unit": "share",
+            "context": "Senate 2026, derived from table"
+          }
+        ],
+        "rationale": "Consistent with methodology saying simple fundamentals get almost half the weight.",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "Final Senate polls versus blended fundamentals show how far polls diverged: Kansas polls D+4.1 versus blended R+4.4; Florida polls R+6.1 versus blended R+0.0; Iowa D+1.1 versus R+0.0; Maine D+3.9 versus D+4.3; Michigan D+4.9 versus D+9.9; Louisiana R+4.0 versus R+10.7; Alaska D+3.1 versus R+3.3.",
+        "quantities": [
+          {
+            "name": "Kansas polls vs blended",
+            "value": "D+4.1 vs R+4.4",
+            "unit": "points",
+            "context": "final"
+          },
+          {
+            "name": "Michigan polls vs blended",
+            "value": "D+4.9 vs D+9.9",
+            "unit": "points",
+            "context": "final"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "parameter_or_number",
+        "statement": "Race-level poll influence scores on the final Texas Senate average: NYT/Siena (1,215 LV) 2.51, AtlasIntel (1,678 adults) 2.01, Emerson (500 LV) 1.84, Trafalgar (a Republican-classified partisan pollster, 1,089 LV) 1.79, Research Co. (450 LV) 1.70, Quantus 1.22, YouGov (2,138 LV) 1.07, Beacon/Shaw (Oct 15-19) 1.04. Older and lower-rated polls get progressively less influence.",
+        "quantities": [
+          {
+            "name": "NYT/Siena influence",
+            "value": "2.51",
+            "unit": "influence score",
+            "context": "TX Senate final"
+          },
+          {
+            "name": "YouGov influence",
+            "value": "1.07",
+            "unit": "influence score",
+            "context": "TX Senate final"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "method",
+        "statement": "For ranked-choice contests, the most-competitive-races chart shows the average simulated margin after the final round, while the full-slate table shows first-round vote shares. Margin charts show 10th to 90th percentile intervals, covering 80 percent of outcomes.",
+        "quantities": [
+          {
+            "name": "interval coverage",
+            "value": "80",
+            "unit": "percent",
+            "context": "10th-90th percentile"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "FLIPR draws most election polls from the NYT poll database but collects generic ballot and congressional approval polls itself. It includes polls from a few pollsters the NYT excludes and excludes surveys from banned or non-scientific firms.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "We also include polls from a few pollsters that The New York Times excludes from their database, and exclude surveys from firms we ban or that don’t meet our standards for being scientific surveys.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [],
+    "references": [
+      {
+        "description": "FLIPR Senate forecast data downloads ('Get the data' links)",
+        "url": "https://www.natesilver.net/p/nate-silver-2026-midterm-election-senate-model"
+      }
+    ],
+    "open_questions": [
+      "Exact Voter Power Index formula."
+    ]
+  }
+}

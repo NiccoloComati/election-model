@@ -1,0 +1,440 @@
+{
+  "article": {
+    "date": "2024-06-26",
+    "title": "2024 presidential election model methodology update",
+    "subtitle": "There aren’t many changes from 2020 — but here are the exceptions.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/model-methodology-2024",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-06-26_2024-presidential-election-model-methodology-update"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.464808,
+    "prompt_tokens": 8,
+    "completion_tokens": 11008,
+    "cache_read_tokens": 29803,
+    "cache_write_tokens": 29832,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:03:40"
+  },
+  "extraction": {
+    "summary": "Silver documents what changed in the 2024 Silver Bulletin presidential model relative to the 2020 FiveThirtyEight model, which it otherwise matches. The COVID-specific tweaks are gone, and the Republican-favoring registered-to-likely-voter prior is now a zero prior that is being phased out. The Cost of Voting Index component is removed. Third-party handling for RFK Jr. is more robust, including probabilistic ballot access and an adjustment for polls that omit him. The incumbency regression gains a rematch tier, the incumbent party's previous popular-vote margin and recency weighting, and a ninth uncertainty-index component for repeat candidates is added. Smaller changes cover Maine ranked-choice simulation, finer religious categories in state correlations, less weight on poll sample size, and a reduced convention bounce of about 2.5 points net at peak.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "FiveThirtyEight (Silver era, 2008-2022) 2020 presidential model",
+      "FiveThirtyEight 2016 presidential model",
+      "FiveThirtyEight 2022 midterm model"
+    ],
+    "findings": [
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "The Silver Bulletin 2024 presidential model is the same model Silver developed at FiveThirtyEight (2008-2023). With relatively few exceptions it is identical to the 2020 FiveThirtyEight presidential model, so the 2020 methodology documentation still applies except where noted.",
+        "quantities": [],
+        "rationale": "Silver retained the IP to the models under his agreement with Disney.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "So with relatively few exceptions, the model is identical to the one I ran at FiveThirtyEight in 2020.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "design_principle",
+        "statement": "Silver is conservative about changing election models between cycles. He holds that model-builders err too much toward 'fighting the last war', meaning they tinker with reasonable assumptions that happened not to work out or that made people angry, although leaning too far in either direction is possible.",
+        "quantities": [],
+        "rationale": "The goal is to fix what clearly needs fixing without fixing what isn't broken.",
+        "model_version": "general principle",
+        "evidence_quote": "In general, model-builders err too much toward “fighting the last war” — i.e. tinkering with things that didn’t work out great in the last election or made people mad at them",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "model_change",
+        "statement": "The 2020 model's COVID-specific tweaks are removed in 2024. These included a reduced convention bounce adjustment for the largely virtual conventions.",
+        "quantities": [],
+        "rationale": "COVID was a once-in-a-century 'broken leg problem' that justified one-off tweaks, but the pandemic is over.",
+        "model_version": "2024 presidential vs 2020",
+        "evidence_quote": "such as reducing the convention bounce adjustment for conventions that were largely held virtually",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "model_change",
+        "statement": "The 2020 model added a COVID-related increase in overall uncertainty. It is removed in the 2024 model.",
+        "quantities": [],
+        "rationale": "The pandemic is over.",
+        "model_version": "2024 presidential vs 2020",
+        "evidence_quote": "increasing the overall amount of uncertainty in the model",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "method",
+        "statement": "The model adjusts polls of registered voters and of all adults toward a likely-voter equivalent. In previous versions this adjustment used a prior that Republicans gain from the shift from registered to likely voters, and that challengers rather than incumbents also gain.",
+        "quantities": [],
+        "rationale": "Historically Republicans were more reliable voters, and challengers' supporters tend to be more enthusiastic.",
+        "model_version": "538 2008-2020 presidential",
+        "evidence_quote": "The model had a prior that Republican candidates were likely to benefit from the shift from registered to likely voter polls and that challengers",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "model_change",
+        "statement": "In 2024 the registered-to-likely-voter adjustment uses a 'zero prior': conversion is assumed equally likely to help either party. The prior is updated as polls that directly compare registered and likely voters enter the database.",
+        "quantities": [],
+        "rationale": "There is robust evidence, such as special elections, that Democrats now have the more engaged voters.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "I’ve simply reverted to a “zero prior” instead, meaning that the model assumes that the conversion from registered to likely voter polls is equally likely to help Democrats or Republicans.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "model_change",
+        "statement": "The weight on the likely-voter prior was lowered to make the adjustment more strictly empirical. By late June 2024 the prior was almost entirely phased out, with full phase-out expected soon, so the adjustment becomes driven by data from polls that report both registered- and likely-voter results.",
+        "quantities": [],
+        "rationale": "Make the adjustment more strictly empirical.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "I’ve also lowered the weight on the prior to make the adjustment more strictly empirical.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "interpretation_guidance",
+        "statement": "Weakening the Republican-favoring likely-voter prior helps Biden in 2024, because he fared slightly better in likely-voter polls than in registered-voter polls. The old model would have held more stubbornly to the premise that likely-voter polls usually benefit Republicans.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "weakening this prior helps Joe Biden, who so far this cycle has generally fared slightly better in polls of likely voters rather than registered voters",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "model_change",
+        "statement": "The 2024 model removes a component introduced in 2020 that was based on the Cost of Voting Index. It assumed Democrats benefit from changes that liberalize voting rules and Republicans benefit from changes that tighten them.",
+        "quantities": [],
+        "rationale": "Implied: changed turnout dynamics, with Democrats now the more engaged voters, undercut the assumption.",
+        "model_version": "2024 presidential vs 2020",
+        "evidence_quote": "I’ve also removed a component of the model that we introduced in 2020 based on the Cost of Voting Index",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "method",
+        "statement": "The model distinguishes 'named' third-party candidates, who could plausibly affect the overall dynamics of the race, from 'other' candidates, who are treated as a rounding error. The designation is somewhat subjective. In backtesting since 1968 it applies to Wallace 1968, Anderson 1980, Perot 1992 and 1996, Nader 2000, Johnson 2016, and RFK Jr. in 2024.",
+        "quantities": [
+          {
+            "name": "backtesting start year",
+            "value": "1968",
+            "unit": "year",
+            "context": "elections used for backtesting third-party logic"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential (and 538 2016)",
+        "evidence_quote": "meaning one who could plausibly have an effect on the overall dynamics of the race rather than one who can be treated as a rounding error",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "adjustment_rule",
+        "statement": "In the simulations, 'named' third-party candidates can win states and electoral votes, but candidates designated 'other' cannot. As of June 2024, RFK Jr. won electoral votes in about 5% of simulations.",
+        "quantities": [
+          {
+            "name": "share of simulations where RFK Jr. wins electoral votes",
+            "value": "about 5",
+            "unit": "percent",
+            "context": "as of June 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "“named” third-party candidates are allowed to win states and electoral votes (as Kennedy does in about 5 percent of simulations as of June 2024)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The 2024 RFK Jr. logic partly borrows from the 2016 handling of Gary Johnson. The third-party code was rewritten between 2016 and 2020 but never used in 2020, since there were no named third-party candidates. That lack of real-world testing produced some glitches found while vetting the logic in 2024.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the lack of testing on real-world data led to some amusing glitches when we vetted the logic this year",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "empirical_regularity",
+        "statement": "Third-party vote share has a highly asymmetric, right-skewed distribution. Usually support fades late as voters judge the candidate non-viable and avoid wasting votes. A right tail exists where the candidate takes off, as Perot did in 1992. The model encodes this: RFK Jr.'s modal outcome is about 4% of the vote, yet he occasionally wins electoral votes.",
+        "quantities": [
+          {
+            "name": "RFK Jr. modal vote share",
+            "value": "something like 4",
+            "unit": "percent",
+            "context": "model's modal outcome as of June 2024"
+          },
+          {
+            "name": "RFK Jr. initial poll share",
+            "value": "around 10",
+            "unit": "percent",
+            "context": "earlier in the 2024 cycle"
+          },
+          {
+            "name": "RFK Jr. recent poll share",
+            "value": "mid-to-high single digits",
+            "unit": "percent",
+            "context": "more recent surveys, especially likely voters"
+          }
+        ],
+        "rationale": "Voters abandon non-viable candidates, but breakout cases exist.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "third-party candidates have a highly asymmetric probability distribution for their vote share. Most of the time, their vote fades down the stretch run",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "adjustment_rule",
+        "statement": "The 2024 polling averages include a third-party adjustment, analogous to the likely-voter adjustment, that estimates what polls omitting RFK Jr. would show if they included him. It is estimated specifically from polls that include Biden, Trump and Kennedy but no other minor candidates. Its net effect was neutral, because RFK Jr. drew about equally from Biden and Trump.",
+        "quantities": [],
+        "rationale": "Most polls include RFK Jr., but some do not.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model guesses at what polls would say if they included RFK Jr. when they do not. Overall, the effect of this is neutral: RFK Jr. draws about equally from both Biden and Trump.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "empirical_regularity",
+        "statement": "Biden is probably hurt by the left-of-center third-party candidates Jill Stein and Cornel West, unlike RFK Jr., who draws evenly.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Biden probably is hurt by the left-of-center third-party candidates Jill Stein and Cornel West.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "RFK Jr.'s ballot access is probabilistic in the 2024 model. States the Kennedy campaign says it has qualified for are taken at its word, except New York, where a Democratic lawsuit is reported to be credible. In unqualified states, qualification probability is estimated from the ratio of required signatures to the voting-eligible population. Each simulation draws a random number to decide eligibility in ambiguous states.",
+        "quantities": [],
+        "rationale": "He has a well-funded ballot access campaign, so the model errs toward assuming inclusion.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "based on the ratio of signatures required to the voting-eligible population",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "adjustment_rule",
+        "statement": "In simulations where RFK Jr. is not on a state's ballot, the model backs out the third-party adjustment and reassigns his votes to Biden, Trump and 'other'. These ballot-access guesstimates are phased out as actual qualification becomes known.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model backs out the third-party adjustment as described above and reassigns RFK’s votes to Biden, Trump and “other” candidates",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "method",
+        "statement": "The pre-2024 fundamentals/incumbency formula had two components. One was an economic index of six economic variables. The other was a dummy for whether the incumbent party nominated an elected incumbent president, an unelected incumbent, or a non-incumbent. Each variable was adjusted for political polarization using Voteview data.",
+        "quantities": [
+          {
+            "name": "economic variables in index",
+            "value": "6",
+            "unit": "variables",
+            "context": "economic index"
+          }
+        ],
+        "rationale": "Incumbent parties do better in strong economies. The incumbency advantage is smaller and elections tighter under high polarization.",
+        "model_version": "538 2020 presidential (retained in 2024)",
+        "evidence_quote": "an economic index based on six economic variables — incumbent parties generally do better when the economy is stronger — and a dummy variable",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "model_change",
+        "statement": "The 2024 incumbency formula makes four changes. It adds an incumbency tier for presidential rematches, which assumes results are more persistent when the exact same two candidates run. It adds a variable for the incumbent party's popular-vote margin in the previous election. It adds a constant term. It weights recent elections more heavily in a regression fit on elections since 1880.",
+        "quantities": [
+          {
+            "name": "regression sample start",
+            "value": "1880",
+            "unit": "year",
+            "context": "incumbency regression"
+          }
+        ],
+        "rationale": "More robust going forward.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model now includes a third variable indicating how much the incumbent party won (or lost) the popular vote by in the previous election, and a constant term",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "parameter_or_number",
+        "statement": "Under both the old and new incumbency/economy formulas, the fundamentals gave Biden a 2-3 point popular-vote advantage based on projected economic conditions as of June 2024. The formula change had negligible effect in 2024.",
+        "quantities": [
+          {
+            "name": "Biden fundamentals popular-vote advantage",
+            "value": "2 to 3",
+            "unit": "percentage points",
+            "context": "June 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Biden is assumed to have a 2 to 3 point advantage in the popular vote based on projected economic conditions as of June 2024",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "model_change",
+        "statement": "The 2024 uncertainty index adds a ninth component: whether one or both parties renominated the previous election's candidate. Repeat candidates make elections more stable and less uncertain. Because both 2024 candidates are repeaters, overall uncertainty is slightly reduced.",
+        "quantities": [
+          {
+            "name": "uncertainty index components",
+            "value": "9",
+            "unit": "components",
+            "context": "2024 model, up from 8"
+          }
+        ],
+        "rationale": "Repeat candidates are better known.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model also now includes a ninth component in its uncertainty index, indicating whether one or both parties have nominated the same candidate as in the previous election.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "method",
+        "statement": "The 2024 model simulates Maine's ranked-choice voting in two steps. If no candidate has a majority, 'other' votes are reassigned to Biden, Trump and RFK Jr., with a random Biden/Trump split. If there is still no majority, the third-place candidate's votes are reallocated with an uncertainty term. When RFK Jr. is third, the third-party adjustment's Biden/Trump split serves as the prior.",
+        "quantities": [],
+        "rationale": "Empirically, splits in ranked-choice elections are often not even.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The split of the vote between Biden and Trump is determined randomly — empirically, in ranked choice elections, there is often not an even split.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "assumption",
+        "statement": "As a simplifying assumption, the Maine ranked-choice simulation ignores ballot exhaustion (wastage). Published Maine vote shares are post-reallocation, which is why RFK Jr. and 'other' show low Maine shares despite it being a good third-party state.",
+        "quantities": [],
+        "rationale": "Simplification.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "As a simplifying assumption, the model ignores the fact that there is typically wastage in elections featuring ranked-choice voting",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "method",
+        "statement": "The ranked-choice reallocation is also applied separately within each Maine congressional district lacking a majority. As a result, the statewide tally can differ from the combined district tallies. The national popular-vote forecast uses the statewide result.",
+        "quantities": [],
+        "rationale": "Maine awards electoral votes by congressional district.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model uses the statewide result in its forecast of the national popular vote.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "model_change",
+        "statement": "State-to-state vote correlations are computed from religious affiliation plus other demographic, geographic and political variables. In 2024, finer religious categories were added: African-American evangelicals separately from white evangelicals, plus Jewish and Muslim voters, who had previously been lumped with other groups.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "It now uses more detailed religious categories, with separate breakouts for African-American evangelical voters",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "model_change",
+        "statement": "Poll weighting now puts less emphasis on sample size. This change was first used in the 2022 FiveThirtyEight midterm forecast and is being phased into the presidential model for the first time in 2024.",
+        "quantities": [],
+        "rationale": "Sample size predicts poll accuracy less well than classical sampling theory implies, because modern polling techniques deviate from classical assumptions.",
+        "model_version": "2024 presidential; 538 2022 midterms",
+        "evidence_quote": "sample size is a less reliable predictor of poll accuracy than it “should” be, partly because modern polling techniques often deviate from classical statistical assumptions about sampling error",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "parameter_or_number",
+        "statement": "The 2024 convention bounce adjustment assumes the candidate who just held his convention gains a net of only about 2.5 percentage points even at the peak of the bounce. The model discounts polls accordingly.",
+        "quantities": [
+          {
+            "name": "peak net convention bounce",
+            "value": "about 2-and-a-half",
+            "unit": "percentage points",
+            "context": "2024 model, at peak"
+          }
+        ],
+        "rationale": "Bounces have been modest recently, likely because of higher polarization and 24/7 coverage.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "benefit by a net of only about 2-and-a-half percentage points even at the very peak of his bounce",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "turnout realignment",
+        "insight": "Democrats, not Republicans, now have the more engaged voters and may benefit from lower turnout. This reverses the long-standing pattern of more reliable Republican turnout.",
+        "evidence": "Strong Democratic performance in special elections; Biden doing slightly better in likely-voter than registered-voter polls in 2024.",
+        "forecasting_implication": "Do not assume likely-voter screens help Republicans; estimate the registered-to-likely-voter shift empirically."
+      },
+      {
+        "topic": "third-party fade",
+        "insight": "Third-party support usually fades down the stretch as voters avoid wasting votes, but there is a right tail of breakouts, as with Perot in 1992.",
+        "evidence": "RFK Jr. fell from around 10% to the mid-to-high single digits.",
+        "forecasting_implication": "Model third-party vote with a skewed distribution and a declining mode."
+      },
+      {
+        "topic": "rematches",
+        "insight": "Presidential rematches show high persistence in results.",
+        "evidence": "1952/1956 Eisenhower-Stevenson and 1896/1900 McKinley-Bryan had similar maps; Cleveland won the popular vote narrowly against Harrison in both 1888 and 1892.",
+        "forecasting_implication": "Reduce uncertainty and increase weight on the prior result in rematches."
+      },
+      {
+        "topic": "polarization",
+        "insight": "High polarization shrinks the incumbency advantage, makes elections tighter, and reduces convention bounces.",
+        "evidence": "Voteview data; modest recent bounces.",
+        "forecasting_implication": "Scale fundamentals effects and bounces down when polarization is high."
+      },
+      {
+        "topic": "ranked-choice splits",
+        "insight": "Reallocated votes in ranked-choice elections often do not split evenly between the major candidates.",
+        "evidence": "",
+        "forecasting_implication": "Randomize the reallocation splits."
+      }
+    ],
+    "references": [
+      {
+        "description": "Detailed methodology for the 2020 FiveThirtyEight presidential model",
+        "url": ""
+      },
+      {
+        "description": "Cost of Voting Index",
+        "url": ""
+      },
+      {
+        "description": "Voteview polarization data",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on the 2020 reduced convention bounce adjustment",
+        "url": ""
+      },
+      {
+        "description": "Article on the 'broken leg problem'",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "The six economic variables in the index and how they are combined.",
+      "The functional form and weights of the incumbency regression, including the recency weighting scheme.",
+      "The full list and weights of the other eight uncertainty-index components.",
+      "The exact mapping from the signature-to-voting-eligible-population ratio to ballot-qualification probability.",
+      "The size of the uncertainty term on ranked-choice vote splits.",
+      "The new sample-size weighting formula for polls.",
+      "The time profile of the convention bounce adjustment.",
+      "How the registered-to-likely-voter adjustment is estimated once the prior is phased out.",
+      "How the state-correlation matrix is built from the demographic and religious variables."
+    ]
+  }
+}

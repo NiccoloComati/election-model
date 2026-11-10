@@ -1,0 +1,161 @@
+{
+  "article": {
+    "date": "2026-10-22",
+    "title": "Fake polls are a real problem",
+    "subtitle": "They’re nothing new, but they may be a growing threat. Plus, the story of the 2026 campaign through political ads in Still Counting EP7.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/fake-polls-are-a-real-problem",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2026-10-22_fake-polls-are-a-real-problem-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:42:09"
+  },
+  "extraction": {
+    "summary": "Post on the Wedgewood Polls fabrication scandal of October 2026 and on how Silver Bulletin sources and vets polls. FLIPR's race-level polls come from The New York Times poll database, modeled on the old FiveThirtyEight schema and criteria, plus manual overrides: 11 permanently banned pollsters, excluded 'nonprofessional' DIY firms such as SoCal Strategies and ActiVote, and manually added Rasmussen polls. Silver Bulletin maintains its own databases for approval and generic ballot. A race average turns on with three polls from two firms. New or unknown pollsters start with low ratings, so the fake polls barely moved FLIPR. The post also recounts Silver's detection of the Strategic Vision (2009) and Research 2000 (2010) frauds from trailing-digit anomalies.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "FLIPR 2026",
+      "Silver Bulletin polling averages",
+      "New York Times poll database",
+      "FiveThirtyEight poll database"
+    ],
+    "findings": [
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "FLIPR takes its House, Senate and governor horse-race polls from The New York Times poll database, which is fast, comprehensive, vetted, and explicitly modeled on the old FiveThirtyEight schema and inclusion criteria Silver helped design. Silver Bulletin maintains its own databases for presidential approval, the generic ballot and certain other series. In 2024 it relied on the post-Silver FiveThirtyEight feed instead.",
+        "quantities": [],
+        "rationale": "No point recreating work done the same way.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "The literal answer is that we take our polling data from The New York Times, subject occasionally to some manual additions and overrides.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "Manual overrides on the NYT feed: 11 permanently banned pollsters (known or believed to have fabricated data or committed gross misconduct, e.g. Strategic Vision, Research 2000) are ignored; 'nonprofessional' DIY firms such as SoCal Strategies and ActiVote are excluded; Rasmussen Reports polls, not listed by the NYT, are added manually; and polls are occasionally added before NYT lists them, though Silver Bulletin generally waits a day or two in case a poll failed vetting.",
+        "quantities": [
+          {
+            "name": "permanently banned pollsters",
+            "value": "11",
+            "unit": "firms",
+            "context": "Silver Bulletin list, Oct 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "We have a list of 11 permanently banned pollsters",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "parameter_or_number",
+        "statement": "Silver Bulletin turns on a polling average for a race once there are three distinct polls from at least two distinct polling firms.",
+        "quantities": [
+          {
+            "name": "minimum polls for an average",
+            "value": "3",
+            "unit": "polls",
+            "context": "from at least 2 firms"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling averages",
+        "evidence_quote": "we turn on the average for a race once there are three distinct polls from at least two distinct polling firms.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "New or unknown pollsters start with fairly low pollster ratings by default, and FLIPR has precautions against being overly influenced by any one poll; removing the fabricated Wedgewood polls left FLIPR's averages and forecasts basically unchanged.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "new/unknown pollsters start with fairly low ratings by default.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "design_principle",
+        "statement": "Silver Bulletin prefers to 'just plug it into the average', weighting established pollsters more, rather than subjectively filtering individual polls, which might reflect an aggregator's rooting interests. It avoids dissecting individual polls, with exceptions for top-rated independent firms like NYT/Siena.",
+        "quantities": [],
+        "rationale": "Least-worst alternative; outlier attention is preferable to herding.",
+        "model_version": "Silver Bulletin polling averages",
+        "evidence_quote": "But it’s probably the least-worst alternative versus applying some sort of subjective filter to polls",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "Statistical fraud detection: Strategic Vision's fabricated polls (exposed 2009) and Research 2000's (2010) showed far more of some trailing digits (e.g. 5, 7, 8, 9) than others, a canonical sign of forged results, since humans are bad at generating random numbers.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight history",
+        "evidence_quote": "Strategic Vision “polls” exhibited statistical patterns — namely, being far more likely to contain some trailing digits (such as 5, 7, 8 and 9) than others",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "The fabricated Wedgewood polls had a mild, inconsistent Democratic house effect of about 0.6 points versus Silver Bulletin averages computed as of the day before their final field date. They were often the first polls in sparsely polled races and favored progressive candidates.",
+        "quantities": [
+          {
+            "name": "Wedgewood house effect",
+            "value": "about 0.6",
+            "unit": "points toward D",
+            "context": "vs Silver Bulletin averages"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin 2026 analysis",
+        "evidence_quote": "their “polls” were about 0.6 points more favorable to the Democratic candidate on average.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "Silver Bulletin computes retrospective polling averages for dates before its averages launch (FLIPR launched Aug. 11, 2026), and they closely resemble other aggregators' averages.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin 2026",
+        "evidence_quote": "For dates before then, I’ve used our retrospectively-calculated polling averages instead",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "New fake-poll risks include manipulating high-volume prediction markets through outlier or fake polls in sparsely surveyed races, discrediting the polling industry, and AI-assisted fabrication that may also defeat vetting.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "One of them is publishing fake polls to manipulate prediction markets.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [],
+    "references": [
+      {
+        "description": "FiftyPlusOne investigation of Wedgewood Polls (G. Elliott Morris)",
+        "url": ""
+      },
+      {
+        "description": "New York Times poll database and editor's note on vetting",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Full list of the 11 banned and the nonprofessional pollsters.",
+      "Default starting pollster rating for unknown firms."
+    ]
+  }
+}

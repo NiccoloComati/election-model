@@ -1,0 +1,576 @@
+{
+  "article": {
+    "date": "2024-07-31",
+    "title": "How the election model handles a candidate swap",
+    "subtitle": "What’s different about kamala_mode? Actually, not much.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/how-the-election-model-handles-a",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-07-31_how-the-election-model-handles-a-candidate-swap"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.640906,
+    "prompt_tokens": 8,
+    "completion_tokens": 17272,
+    "cache_read_tokens": 29811,
+    "cache_write_tokens": 36184,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:09:31"
+  },
+  "extraction": {
+    "summary": "Silver explains how the relaunched 2024 Silver Bulletin presidential model handles Kamala Harris replacing Joe Biden as the presumptive Democratic nominee. Most changes happen on their own through new polls and inputs, such as the Democratic home state changing from Delaware to California. The one special-case adjustment ('kamala_mode') is a poll cutoff date of June 28 for Harris-Trump polls, plus a temporary fudge factor to the poll-volume component of the uncertainty index. The article describes the trendline-curve averaging method, landmark events that advance 'political time', all nine factors of the uncertainty index and how each moved, a permanent reduction to the home-state bonus, poll database curation (the 538 database plus a supplement and a strike list, with SoCal Research removed as amateur/DIY), and placeholder future debates that add uncertainty. It also reports Harris's win probability at 43%, up from 38% the day before; Biden was at 27%.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "FiveThirtyEight (2024, Morris era)",
+      "FiveThirtyEight polling database",
+      "prediction markets"
+    ],
+    "findings": [
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "design_principle",
+        "statement": "When Harris replaced Biden, most changes in the Silver Bulletin 2024 presidential model happened organically through new polls and inputs rather than through reprogramming. One example is that the Democratic candidate's home state input changed from Delaware to California.",
+        "quantities": [],
+        "rationale": "The model is built to absorb candidate changes through its normal inputs.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "most of the changes just occur organically as a result of new polls and other new inputs. (For instance, the home state of the Democratic candidate is now California, not Delaware.)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "parameter_or_number",
+        "statement": "By default, the Silver Bulletin presidential model uses polls going back one year before the election. For 2024 that meant polls dating back to November 5, 2023.",
+        "quantities": [
+          {
+            "name": "poll lookback window",
+            "value": "1",
+            "unit": "year",
+            "context": "default cutoff before Election Day"
+          },
+          {
+            "name": "default cutoff date 2024",
+            "value": "November 5, 2023",
+            "unit": "date",
+            "context": "2024 presidential"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Usually, the model uses polling going back a year before the election — meaning, dating back to November 5, 2023 in this case.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model estimates the race by fitting several trendline curves, some more conservative and some more aggressive. The procedure is similar to, but not the same as, loess regression.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The way the model works is basically by plotting a series of several trendline curves — some more conservative, some more aggressive. (The procedure is similar to, but not exactly the same as, loess regression.)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The model's trendline curves can bend sharply, so the model can detect nonlinear inflection points in the race. Examples are the shift toward Trump after the June 27, 2024 debate and an emerging shift toward Harris.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Curves can bend, sometimes sharply, which is why the model can sometimes decide that there's been a nonlinear inflection point in the race",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "assumption",
+        "statement": "Old polls, such as one from the previous December, have essentially no effect on the model's estimate of the current state of the race.",
+        "quantities": [],
+        "rationale": "The trendline curves are driven by recent data.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it's not like a poll from last December will have any impact on the model's impression of the current state of the race",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "Older polling data, back to the one-year cutoff, is kept mainly to calibrate the model's adjustments. These include pollster house effects, for example that Rasmussen Reports nearly always has strong numbers for Trump.",
+        "quantities": [],
+        "rationale": "A longer sample gives better estimates of house effects.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the older data is still useful for calibrating the various adjustments the model makes: for instance, the house effects associated with certain polling firms (Rasmussen Reports nearly always has strong numbers for Trump",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "method",
+        "statement": "Older polling data is also used to calibrate the likely-voter adjustment, meaning which candidate tends to gain or lose ground in polls of likely voters.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "or which candidate tends to gain or lose ground in polls of likely voters",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "For thinly polled states, old state polls are adjusted by the change in the national race since the poll was taken (a trend-line adjustment). Example: a New Jersey poll showing Trump down 13 when national polls were tied would imply Trump down 9 after the national race moved to R+4.",
+        "quantities": [
+          {
+            "name": "example old NJ margin",
+            "value": "Trump -13",
+            "unit": "points",
+            "context": "national tied at time of poll"
+          },
+          {
+            "name": "national shift",
+            "value": "R+0 to R+4",
+            "unit": "points",
+            "context": "before Biden dropped out"
+          },
+          {
+            "name": "imputed NJ margin",
+            "value": "Trump -9",
+            "unit": "points",
+            "context": "after national shift"
+          }
+        ],
+        "rationale": "Old polls remain informative about relative state lean.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "if the national race has shifted from R +0 to R +4 (as it had before Biden dropped out), the model could infer that Trump was now down by 9 points instead of 13 in New Jersey",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "adjustment_rule",
+        "statement": "In 'kamala_mode', a one-off adjustment that is not permanently encoded in the model, only Harris-Trump polls that began interviewing on June 28, 2024 or later are used. That is the day after the Biden-Trump debate.",
+        "quantities": [
+          {
+            "name": "kamala_mode poll cutoff",
+            "value": "June 28, 2024",
+            "unit": "date",
+            "context": "field start date of eligible Harris-Trump polls"
+          }
+        ],
+        "rationale": "Pollsters began polling Harris-Trump heavily after the debate, having correctly deduced Biden might drop out. Silver follows the 'wisdom of the crowds' of pollsters.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "In kamala_mode, only polls that began their interviews on June 28 or later are used.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "assumption",
+        "statement": "Silver judged that alternative cutoffs would make little difference, because there is now enough recent polling. Alternatives were keeping the few pre-debate Harris-Trump polls or cutting off at Biden's July 21 dropout.",
+        "quantities": [
+          {
+            "name": "Biden dropout date",
+            "value": "July 21, 2024",
+            "unit": "date",
+            "context": "alternative cutoff considered"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "But there's now enough very recent polling that I doubt it would make much difference.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The Harris-Trump polling flow, with very little data before June 27 and then a lot, is unusual relative to the model's training data. In the training data the number of polls rises gradually and roughly linearly through the year, so the trendline curves face an out-of-sample situation.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "In the training data, the \"flow\" of polling is much more linear, with the number of polls gradually increasing over the course of the year.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "The model treats landmark political events as discontinuous leaps ahead in 'political time'. These are debates, conventions, VP nominations, candidates clinching nominations, and candidates entering or exiting the race.",
+        "quantities": [],
+        "rationale": "Polls move more around such events.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model treats certain landmark political events — specifically, debates, conventions, vice presidential nominations, candidates clinching their party nominations, or candidates entering or exiting the race",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "parameter_or_number",
+        "statement": "A day with a presidential debate is treated as equivalent to the passage of one week of political time.",
+        "quantities": [
+          {
+            "name": "debate day political-time equivalence",
+            "value": "1 week",
+            "unit": "days of political time per debate day",
+            "context": "debate landmark"
+          }
+        ],
+        "rationale": "Polls typically move about as much after a debate as in a full week of regular campaigning.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "A day with a debate is treated as equivalent to the passage of a week for instance",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "After landmark events, the model is more aggressive about relying only on the most recent data. It treats polling changes as more likely to be signal than noise, which produced a fairly sharp swing toward Harris.",
+        "quantities": [
+          {
+            "name": "recent landmarks",
+            "value": "4",
+            "unit": "events",
+            "context": "Vance VP pick, RNC, Biden dropout, Harris presumptive nominee; fifth expected with Harris VP pick"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Following these landmarks, the model treats polling changes as more likely to be signal rather than noise.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "data_source",
+        "statement": "The model's training data includes Ross Perot entering, exiting and re-entering the 1992 race. These are used as examples of candidate entry and exit landmark events.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "In particular, Ross Perot entering, exiting and reentering the 1992 race, which is included in the training data.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The model's uncertainty index has nine factors. It mainly governs how much the model expects the polls to change before Election Day, and to a lesser extent how accurate it expects the polls to be on Election Day.",
+        "quantities": [
+          {
+            "name": "uncertainty index factors",
+            "value": "9",
+            "unit": "factors",
+            "context": "2024 presidential model"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "one of the nine factors used in the model's uncertainty index — which governs how much the model expects the polls to change before Election Day",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Uncertainty index factor 7 is the volume of polling: more data means less sampling error and less uncertainty. It is computed from recent polling only, not from all polling throughout the year.",
+        "quantities": [],
+        "rationale": "Recent volume is usually highly correlated with overall volume.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "this calculation is based only on how much recent polling there is, not how much polling there has been throughout the year",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "adjustment_rule",
+        "statement": "In kamala_mode, a fudge factor temporarily raises the poll-volume component of the uncertainty index, because the Harris-Trump matchup has little year-long polling. The adjustment phases out gradually by September 12, 2024, three weeks after the DNC.",
+        "quantities": [
+          {
+            "name": "phase-out date",
+            "value": "September 12, 2024",
+            "unit": "date",
+            "context": "end of fudge factor"
+          },
+          {
+            "name": "phase-out lag after DNC",
+            "value": "3",
+            "unit": "weeks",
+            "context": "steady state expected"
+          }
+        ],
+        "rationale": "Recent and overall polling volumes diverge for the new matchup.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "So I've built in a fudge factor, where this component of the uncertainty index is temporarily higher. This adjustment will gradually phase out by September 12",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Uncertainty index factor 1 is the number of undecided voters. It was about unchanged after the candidate swap.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Factor 1 is the number of undecided voters.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Uncertainty index factor 2 is the number of undecided plus third-party voters. It fell slightly, meaning less uncertainty, as RFK Jr. declined after Harris's entry.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Factor 2 is the number of undecided plus third party voters. This is now slightly lower",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Uncertainty index factor 3 is political polarization: more polarization means a more stable race and less uncertainty. It is set at the start of the year from Congressional voting patterns and does not depend on the candidates.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Factor 3 is political polarization — more polarization means a more stable race, and therefore less uncertainty. This factor is set at the start of the year based on Congressional voting patterns",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Uncertainty index factor 4 is the variation in national polling so far. It was very low for the steady Trump-Biden race and is now higher because Harris-Trump polls have bounced around.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Factor 4 is the amount of variation in national polling — that is, how much the polls have swung around so far.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "data_source",
+        "statement": "Uncertainty index factor 5 is economic uncertainty, meaning how much the economy is expected to change before the election. It is based on a Federal Reserve survey of economists and was unchanged by the swap.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Factor 5 is economic uncertainty, which is basically based on how much the model expects the economy to change between now and the election based on a Federal Reserve survey of economists.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "data_source",
+        "statement": "Uncertainty index factor 6 is news-event uncertainty, measured by the number of New York Times full-width banner headlines. It was higher after the recent run of major political news.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Factor 6 is uncertainty based on news events, as determined from the number of New York Times full-width banner headlines.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Uncertainty index factor 8 is the gap between polls and fundamentals. It is now quite low because both project a roughly tied national popular vote; under Biden it was larger because he underperformed the fundamentals.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Factor 8 is the gap between polls and fundamentals. This is now quite low",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "model_change",
+        "statement": "Uncertainty index factor 9, new in 2024, is the number of repeat candidates who ran in the previous election. More repeat candidates means less volatility; with only Trump repeating, uncertainty from this factor is higher than under Biden-Trump.",
+        "quantities": [
+          {
+            "name": "repeat candidates",
+            "value": "1 (was 2)",
+            "unit": "candidates",
+            "context": "Harris-Trump vs Biden-Trump"
+          }
+        ],
+        "rationale": "Repeat candidates are closer to known commodities.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Factor 9 — newly added this year — is the number of repeat candidates. Races with incumbents or challengers who also ran in the previous election tend to be less volatile",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "After the swap, four uncertainty factors pointed toward more uncertainty, two toward less, and three were unchanged, so the forecast's error bars widened somewhat. The index is still somewhat below average by historical standards, and a double-digit win for either candidate is highly unlikely.",
+        "quantities": [
+          {
+            "name": "factors up",
+            "value": "4",
+            "unit": "factors",
+            "context": ""
+          },
+          {
+            "name": "factors down",
+            "value": "2",
+            "unit": "factors",
+            "context": ""
+          },
+          {
+            "name": "factors unchanged",
+            "value": "3",
+            "unit": "factors",
+            "context": ""
+          }
+        ],
+        "rationale": "The environment remains highly polarized, with stable polling.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The uncertainty index is higher than before, but still somewhat below-average by historical standards.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "Separately from the national uncertainty index, the model makes an additional calculation of how accurately it can pinpoint each state's numbers. This state-level uncertainty is higher in states with little Harris-Trump polling.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The uncertainty index governs how much the model expects the national race to swing. But there's an additional calculation in how accurately the model thinks it can pinpoint the state-by-state numbers.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "model_change",
+        "statement": "The Silver Bulletin model permanently reduced the home-state bonus for presidential and vice presidential candidates, independent of kamala_mode. It had not been revisited because no 2020 or 2024 candidates were from swing states, but a swing-state VP pick such as Josh Shapiro made it relevant.",
+        "quantities": [],
+        "rationale": "It should probably have been changed sooner; it now matters for swing states.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we've now reduced the home-state bonus given to presidential and vice presidential candidates. Unlike the other changes, this one is permanent",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "Silver Bulletin uses the 538 polling database, which Silver helped design, as a starting point. It adds a supplementary database of polls 538 lacks or that Silver Bulletin catches faster, and keeps a strike list of polls deleted from 538's data.",
+        "quantities": [],
+        "rationale": "There is no point duplicating the work, but inclusion standards differ.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we maintain a supplementary polling database of polls that we use that they don't, as well as a strike list of polls we delete from their data",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "adjustment_rule",
+        "statement": "Silver Bulletin removed SoCal Research polls, which 538 uses, under a longstanding Silver-era FiveThirtyEight rule against amateur/DIY polling.",
+        "quantities": [],
+        "rationale": "Longstanding rule.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We're now removing one pollster that 538 uses because it violates a longstanding rule from the Nate days of FiveThirtyEight of not using amateur/DIY polling.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "The model includes placeholder dates for future debates, at that point one more presidential and one more VP debate. Scheduled future debates slightly increase model uncertainty because they are landmark events that can swing polls.",
+        "quantities": [
+          {
+            "name": "placeholder debates",
+            "value": "1 presidential, 1 VP",
+            "unit": "debates",
+            "context": "as of July 31, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the presence of future debates slightly increases the amount of uncertainty in the model because debates are landmark events that can cause polling swings",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "method",
+        "statement": "Silver used Polymarket traders' confidence that a Harris-Trump debate would occur as a reason to keep the debate placeholders in the model.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Polymarket traders are confident the debate will eventually occur",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Model output on relaunch: Harris had a 43% chance of winning the Electoral College, up from 38% the day before on strong swing-state polls. Biden had been at 27% in the last pre-swap run, which Silver called probably generous.",
+        "quantities": [
+          {
+            "name": "Harris EC win probability",
+            "value": "43",
+            "unit": "percent",
+            "context": "July 31, 2024"
+          },
+          {
+            "name": "Harris prior day",
+            "value": "38",
+            "unit": "percent",
+            "context": "July 30, 2024 relaunch"
+          },
+          {
+            "name": "Biden last run",
+            "value": "27",
+            "unit": "percent",
+            "context": "before dropout"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "a 43 percent chance of winning the Electoral College — that's already up from 38 percent yesterday",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "candidate swap effect",
+        "insight": "Harris substantially improved Democratic odds relative to Biden, and both the polls and the fundamentals now point to a roughly tied national popular vote.",
+        "evidence": "43% vs 27% win probability; Biden had been underperforming the fundamentals",
+        "forecasting_implication": "A replacement candidate can close a gap between polls and fundamentals."
+      },
+      {
+        "topic": "third parties",
+        "insight": "RFK Jr.'s support declined after Harris entered the race.",
+        "evidence": "Factor 2 of the uncertainty index fell",
+        "forecasting_implication": "The third-party share can shrink when a major party fields a more appealing candidate."
+      },
+      {
+        "topic": "polarization and stability",
+        "insight": "The 2024 environment featured high polarization and stable polling, which made double-digit wins highly unlikely.",
+        "evidence": "The uncertainty index remained below the historical average",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "pollster anticipation",
+        "insight": "Pollsters, like prediction markets, anticipated Biden's withdrawal and began heavy Harris-Trump polling right after the June 27 debate.",
+        "evidence": "",
+        "forecasting_implication": "Hypothetical-matchup polling volume can signal likely candidate changes."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin 2024 presidential forecast relaunch",
+        "url": ""
+      },
+      {
+        "description": "Methodology of model adjustments (house effects, likely voter, etc.)",
+        "url": ""
+      },
+      {
+        "description": "Post on reducing the home-state bonus",
+        "url": ""
+      },
+      {
+        "description": "Silver's critique of 538's new election model",
+        "url": ""
+      },
+      {
+        "description": "538 polling database",
+        "url": ""
+      },
+      {
+        "description": "Federal Reserve survey of economists, used for the economic uncertainty factor",
+        "url": ""
+      },
+      {
+        "description": "Congressional voting patterns data, used for the polarization factor",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact functional form of the trendline curves (the loess-like procedure), their bandwidths, and how the conservative and aggressive curves are combined",
+      "How the political-time multipliers are set for landmark events other than debates (conventions, VP picks, entries and exits)",
+      "How the nine uncertainty index factors are weighted and combined, and how the index maps to forecast variance",
+      "Size of the kamala_mode fudge factor and the shape of its phase-out to September 12",
+      "How the old size of the home-state bonus compares with the new one",
+      "How state-level pinpoint uncertainty is calculated",
+      "The window used to define 'recent' polling for the poll-volume factor",
+      "How the NYT banner headline count is converted into an uncertainty value"
+    ]
+  }
+}

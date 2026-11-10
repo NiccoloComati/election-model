@@ -1,0 +1,749 @@
+{
+  "article": {
+    "date": "2024-08-31",
+    "title": "SBSQ #12: Will the polls lowball Trump again?",
+    "subtitle": "Plus, the mistakes I made in the “data journalism” era.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/sbsq-12-will-the-polls-lowball-trump",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-08-31_sbsq-12-will-the-polls-lowball-trump-again"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.936138,
+    "prompt_tokens": 8,
+    "completion_tokens": 22188,
+    "cache_read_tokens": 52372,
+    "cache_write_tokens": 60234,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:12:26"
+  },
+  "extraction": {
+    "summary": "A subscriber Q&A in which Silver explains how the 2024 Silver Bulletin presidential model handled an unusual election and why it assumes polls will not be predictably biased by Election Day. He walks through how the model works: a fundamentals prior with roughly 20% weight in late August that phases out by Election Day, a convention bounce adjustment, landmark events (conventions, candidate exits) that make older polls look stale, a national popular vote built up from state projections, and state estimates that blend each state's polling average with a regression estimate. He also covers systematic, correlated polling error trained on cycles since 1936 and the lack of autocorrelation in polling bias from one cycle to the next, shown in a 538 table of bias since 1998. The final section reflects on business and editorial mistakes at FiveThirtyEight under Disney, which has little model content.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "FiveThirtyEight 2020 presidential model (Silver era)",
+      "FiveThirtyEight (Silver era, 2008-2022)",
+      "Silver Bulletin polling averages",
+      "prediction markets"
+    ],
+    "findings": [
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "model_change",
+        "statement": "In the 2020 FiveThirtyEight presidential model, Silver reduced the convention bounce adjustment as a special COVID provision, on the expectation that mostly virtual conventions would not produce big bounces.",
+        "quantities": [],
+        "rationale": "Mostly virtual conventions were expected not to 'pop'. In hindsight, 2020 convention bounces were indeed small.",
+        "model_version": "538 2020 presidential",
+        "evidence_quote": "we inserted various special provisions for COVID, such as reducing the convention bounce adjustment (figuring that mostly virtual conventions wouldn’t really “pop”)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "model_change",
+        "statement": "As a COVID provision, the 2020 FiveThirtyEight presidential model widened the forecast's error bars because turnout was expected to be harder to predict in a pandemic. Silver says he feels OK about this, since the 2020 polls were quite far off.",
+        "quantities": [],
+        "rationale": "Turnout would potentially be harder to predict in a pandemic.",
+        "model_version": "538 2020 presidential",
+        "evidence_quote": "widening the error bars in the forecast, given that turnout would potentially be harder to predict in a pandemic",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Special-case adjustments for one-off events such as the COVID pandemic cannot be validated, because there will never be an adequate sample size for them.",
+        "quantities": [],
+        "rationale": "A once-in-a-century event gives no repeated sample.",
+        "model_version": "general principle",
+        "evidence_quote": "we’ll never get an adequate sample size for what was (hopefully) a once-in-a-century pandemic",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "design_principle",
+        "statement": "In 2024, despite Biden's withdrawal and RFK Jr. exiting the day after the DNC, Silver tried to stick to the presidential model's preexisting logic as much as possible rather than adding ad hoc provisions.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "This year, by contrast, we’ve tried to stick to the model’s preexisting logic as much as possible",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "adjustment_rule",
+        "statement": "The 2024 Silver Bulletin model treats certain events as 'landmark events', including a party convention and a candidate exiting the race. Polls conducted before a landmark event are treated as substantially out of date, so post-event polls move the forecast more.",
+        "quantities": [
+          {
+            "name": "number of landmark events affecting Pennsylvania polling in late Aug 2024",
+            "value": "2",
+            "unit": "events",
+            "context": "DNC convention and RFK Jr.'s exit"
+          }
+        ],
+        "rationale": "Older polling no longer reflects the race after a major event. Silver concedes this might overdo things a bit but calls it self-correcting.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "earlier polling occurred before what the model considers to be two “landmark events” — the convention and a candidate exiting the race — so the model looks at older polling as being really out of date",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "Because pre-landmark polls are discounted, the 2024 model moved a lot on new Pennsylvania polling in late August 2024. Silver describes this as naturally self-correcting: better Pennsylvania polls for Harris would raise her numbers.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it’s also naturally self-correcting (e.g. if/when Kamala Harris gets some better Pennsylvania polls, her numbers will improve)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver treats the 2024 model closely tracking prediction markets during the turbulent summer of 2024 as a good sign, i.e. a rough external sanity check.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model has closely followed prediction markets throughout these periods, which seems like a good sign.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The convention bounce adjustment can make the model behave counterintuitively: a candidate can gain in the polling average while losing ground in the forecast, as Harris did after the DNC.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "It can make the model's behavior counterintuitive, e.g., Harris gaining in the polling average while losing ground in the forecast.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "model_change",
+        "statement": "Silver is considering dropping the explicit convention bounce adjustment in future models (e.g. 2028). Since bounces have shrunk, they could be treated as a rounding error and mentioned only in the narrative explanations.",
+        "quantities": [],
+        "rationale": "Convention bounces are smaller than they used to be.",
+        "model_version": "future (2028) presidential, proposed",
+        "evidence_quote": "maybe we could treat them as a rounding error in future years",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "According to Silver Bulletin polling averages, both Trump and Harris got convention bounces in 2024, each with complications. The assassination attempt just before the RNC may have enhanced Trump's bounce, and RFK Jr.'s exit may have mitigated Harris's.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Trump and Harris both did get convention bounces, according to our polling averages, although there were complicating circumstances in each case.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "adjustment_rule",
+        "statement": "The 2024 convention bounce adjustment explicitly assumes that the numbers for the candidate who just held their convention are inflated for a few weeks. In late August 2024 this had a reasonably big impact on Harris's forecast. The adjustment has fully worked its way out by Election Day.",
+        "quantities": [
+          {
+            "name": "duration of convention inflation",
+            "value": "a few weeks",
+            "unit": "weeks",
+            "context": "post-convention period"
+          }
+        ],
+        "rationale": "The post-convention period is expected to be a strong polling period for the candidate who just held their convention.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model’s convention bounce adjustment explicitly assumes that the numbers for the candidate who just held their convention are likely to be inflated for a few weeks",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "The Silver Bulletin presidential model assumes that by Election Day polls will not be predictably biased. Polls are expected to be centered on the truth over the long run but imprecise in any given election: high accuracy, low precision.",
+        "quantities": [],
+        "rationale": "There is no historical autocorrelation in bias, pollsters have incentives to self-correct, n=2 is too small a sample, and conventional wisdom often guesses the direction wrong.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model assumes that, by Election Day, polls won't be predictably biased.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "A polling error of a few points in any direction is normal. Years like 2008, when polls nailed the outcome with great precision, are the unusual ones.",
+        "quantities": [
+          {
+            "name": "typical polling error",
+            "value": "a few",
+            "unit": "points",
+            "context": "any given election"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "A polling error of a few points is normal, in fact — it’s years like 2008 when polls nail the outcome with incredible precision that are unusual.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "data_source",
+        "statement": "The Silver Bulletin model's estimate of Election Day polling error is based on an analysis of all election cycles since 1936. This deliberately includes early, rough-polling eras, such as before landline telephone penetration reached 75% in the mid-1950s, so the model learns from examples of large misses (fat tails).",
+        "quantities": [
+          {
+            "name": "start year of polling error training data",
+            "value": "1936",
+            "unit": "year",
+            "context": "Election Day polling error estimation"
+          },
+          {
+            "name": "landline telephone penetration",
+            "value": "75",
+            "unit": "percent",
+            "context": "reached by the mid-1950s"
+          }
+        ],
+        "rationale": "Including eras when polls were far off the mark captures the chance of misses larger than a few points.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Our estimate of Election Day polling error is based on an analysis of all election cycles since 1936.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "assumption",
+        "statement": "The model assumes polling error is at least partly systematic and correlated across states. For example, if Trump overperforms his forecast in Wisconsin, he likely also overperforms in Michigan, and the same holds symmetrically for Harris.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model assumes that to the extent there’s a polling error, it probably will be systematic, at least in part.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "method",
+        "statement": "Until one day before the election, the Silver Bulletin forecast is not purely polls-based. It combines the polls with a 'fundamentals' prior based on incumbency and the Silver Bulletin economic index.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it combines the polls with a “fundamentals” prior based on incumbency and our economic index",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "parameter_or_number",
+        "statement": "As of Aug. 31, 2024, the fundamentals prior received about 20% of the weight and was gradually being phased out, reaching zero by Election Day. The prior implied a roughly tied national popular vote versus Harris +3 to +4 in national polls, and it shaved a net ~0.4 points off Harris's projected Election Day margin.",
+        "quantities": [
+          {
+            "name": "fundamentals weight",
+            "value": "about 20",
+            "unit": "percent",
+            "context": "late August 2024, ~9-10 weeks before Election Day"
+          },
+          {
+            "name": "fundamentals prior popular vote",
+            "value": "roughly a tie",
+            "unit": "",
+            "context": "late August 2024"
+          },
+          {
+            "name": "recent national polls",
+            "value": "Harris +3 or 4",
+            "unit": "points",
+            "context": "late August 2024"
+          },
+          {
+            "name": "net effect on Harris projection",
+            "value": "about four-tenths of a point",
+            "unit": "percentage points",
+            "context": "late August 2024"
+          },
+          {
+            "name": "fundamentals weight on Election Day",
+            "value": "0",
+            "unit": "percent",
+            "context": "one day before the election onward"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "they still get about 20 percent of the weight for now, which is shaving a net of about four-tenths of a point off of Harris’s projected finish on Election Day",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "interpretation_guidance",
+        "statement": "Because of the fundamentals prior and the convention adjustment, in late August 2024 the model expected Trump to more likely than not outperform his current polling. This is a forward projection of the race, not an assumption that polls are biased today.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "That does not mean it assumes the polls would be predictably biased if you held an election today — but the election isn’t today.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The model 'liberally' interprets its polls-only default. State polls inform the national popular vote estimate, national polls inform the state polling averages, and demographic data and past voting patterns are used to smooth state estimates into plausible maps.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it uses state polls to inform its estimates of the national popular vote and national polls to inform its state-by-state polling averages",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin forecast of the national popular vote is not based directly on national polls. It is the sum of state-level projections weighted by projected turnout in each state. National polls affect it only indirectly through adjustments such as the trendline adjustment.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we project the results in each state, and then sum up these estimates, weighted by the projected turnout in each state, to come up with a national number",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "adjustment_rule",
+        "statement": "The model applies a trendline adjustment that uses national polls to bring older state polling data up to date.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "like its trendline adjustment to bring older polling data up to date",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "State forecasts blend the state polling average with a regression estimate. The regression uses polling from other states and national polls, informed by demographic data and past voting patterns. Example: a lone Hawaii poll at Harris +5 against a regression estimate of about +25 might yield a forecast of Harris +15 to +20.",
+        "quantities": [
+          {
+            "name": "hypothetical Hawaii poll",
+            "value": "Harris +5",
+            "unit": "points",
+            "context": "illustrative"
+          },
+          {
+            "name": "hypothetical regression estimate",
+            "value": "25",
+            "unit": "points",
+            "context": "illustrative"
+          },
+          {
+            "name": "resulting blended forecast",
+            "value": "15 or 20",
+            "unit": "points",
+            "context": "illustrative"
+          }
+        ],
+        "rationale": "In a sparsely polled state the model is skeptical of an outlier poll and effectively treats it as statistically biased, assuming nothing about pollster intent.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model will blend that with an estimate based on a regression analysis using polling from other states and national polls, informed by demographic data and past voting patterns.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "adjustment_rule",
+        "statement": "The regression estimate gets more weight relative to state polls when the state's polling is sparse or out of date, comes from low-rated pollsters, or looks out of line with other states.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "So it will compromise, especially if the lone Hawaii poll is out of date or comes from a pollster with a low rating.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "parameter_or_number",
+        "statement": "In robustly polled states the polling average dominates. By Election Day, the state polling average supplies about 80% of the estimate in fringe swing states like New Hampshire and the high 90s percent in states like Pennsylvania, with the rest from the regression estimate.",
+        "quantities": [
+          {
+            "name": "polling average share, New Hampshire",
+            "value": "80",
+            "unit": "percent",
+            "context": "by Election Day"
+          },
+          {
+            "name": "polling average share, Pennsylvania",
+            "value": "high 90s",
+            "unit": "percent",
+            "context": "by Election Day"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "by Election Day, anywhere from 80 percent of the estimate in fringy swing states like New Hampshire to the high 90s in others like Pennsylvania will come directly from our state polling averages",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "With little high-quality state polling after the DNC and RFK Jr.'s exit, the 2024 model defaulted toward its regression estimates. Those estimates encode the large Electoral College vs. popular vote gap that hurt Democrats in 2016 and 2020, which made the model somewhat bearish on Harris in late August 2024.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it defaults somewhat toward its regression-based estimates, which reflect the relatively large gap between the Electoral College and the popular vote that hurt Democrats in 2016 and 2020",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "other",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin presidential model is several thousand lines of code.",
+        "quantities": [
+          {
+            "name": "code size",
+            "value": "several thousand",
+            "unit": "lines of code",
+            "context": "2024 model"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it’s several thousand lines of code",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "design_principle",
+        "statement": "Silver takes a 'macro' approach to polls: use topline numbers with reasonable adjustments such as house effects, rather than analyzing crosstabs.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "I believe in looking at the topline numbers and making reasonable adjustments for things like house effects, but not driving myself crazy by delving into the crosstabs.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "design_principle",
+        "statement": "Silver would build predictable polling bias into the model if he believed it existed. He does not adjust for Trump's 2016 and 2020 overperformance, so a final Harris +3 should not be shaded to Harris +2.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "if I thought polling was predictably biased, I’d have built that into the model somehow",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Historically there has been no relationship in polling bias from one election to the next. For example, polls were biased against Democrats in 2012 and toward them in 2014 and 2016.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "there’s historically been no relationship in polling error from one election to the next",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "538's table of weighted-average statistical bias of polls in the final 21 days before elections since 1998 shows Presidential bias of R+2.4 (2000), D+1.2 (2004), D+0.9 (2008), R+2.5 (2012), D+3.3 (2016) and D+4.1 (2020), averaging D+1.2. Combined bias across races includes D+4.x in 2019-20 and near zero in 2017-18 and 2021-22. (D+ means polls overstated Democrats.)",
+        "quantities": [
+          {
+            "name": "presidential bias 2019-20",
+            "value": "D+4.1",
+            "unit": "points",
+            "context": "final 21 days"
+          },
+          {
+            "name": "presidential bias 2015-16",
+            "value": "D+3.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "presidential bias 2011-12",
+            "value": "R+2.5",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "presidential bias 2007-08",
+            "value": "D+0.9",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "presidential bias 2003-04",
+            "value": "D+1.2",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "presidential bias 1999-2000",
+            "value": "R+2.4",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "presidential bias all years",
+            "value": "D+1.2",
+            "unit": "points",
+            "context": "1998-2022"
+          },
+          {
+            "name": "Senate bias all years",
+            "value": "D+0.6",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "House bias all years",
+            "value": "D+1.2",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Governor bias all years",
+            "value": "D+0.9",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Senate bias 2019-20",
+            "value": "D+4.9",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "House bias 2019-20",
+            "value": "D+6.1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Governor bias 2019-20",
+            "value": "D+5.6",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Senate/House/Gov bias 2021-22",
+            "value": "R+0.3 / D+0.2 / D+1.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Senate/House/Gov bias 2017-18",
+            "value": "EVEN / R+0.5 / R+1.0",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Senate/House/Gov bias 2011-12",
+            "value": "R+3.2 / R+3.3 / R+1.6",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "Shows bias direction is unpredictable from cycle to cycle.",
+        "model_version": "538 pollster ratings data, 1998-2022",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "In 538's polling bias calculation, bias is computed only for races whose top two finishers were a Republican and a Democrat, so presidential primaries are excluded. Polls are weighted by one over the square root of the number of polls their pollster conducted for that type of election in that cycle. Special elections and runoffs are included, polls from pollsters banned by 538 are excluded, and the 21-day window is based on median field date.",
+        "quantities": [
+          {
+            "name": "window",
+            "value": "21",
+            "unit": "days",
+            "context": "final days before election, by median field date"
+          },
+          {
+            "name": "poll weight",
+            "value": "1/sqrt(n polls by pollster for that election type and cycle)",
+            "unit": "",
+            "context": "bias table weighting"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 pollster ratings / bias table",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "Pollsters have strong incentives to self-correct after misses like 2016 and 2020. Silver likens this to the efficient markets hypothesis: the bias is hard to outguess.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "pollsters have strong incentives to self-correct and get the answer right",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "Trump's overperformance of polls in 2016 and 2020 is a sample of n=2. Polls were biased toward Republicans in 2012 and basically unbiased in the 2018 and 2022 midterms.",
+        "quantities": [
+          {
+            "name": "sample size",
+            "value": "2",
+            "unit": "elections",
+            "context": "Trump overperformance"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "people are probably making too much out of a sample size of n=2",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Conventional wisdom often guesses the direction of polling bias wrong. In 2022 the expected 'red wave' was not justified by the polls; 2022 was among the most accurate polling years on record, though Democrats slightly overperformed polling averages in key Senate races.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "conventional wisdom often guesses wrong about the direction the bias will run",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "Non-response is correlated with vote intention. College-educated voters and high-social-trust voters respond more to polls and lean Democratic, and demographic weighting only partially fixes this.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "You can partially solve issues like these with demographic weighting",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Pollster weighting on party ID, party registration or recalled past vote is probably effective against partisan non-response bias. However, it risks missing real movement because party ID is fluid.",
+        "quantities": [],
+        "rationale": "A voter disillusioned with Trump may start identifying as an independent before changing his registration.",
+        "model_version": "general principle",
+        "evidence_quote": "These techniques are probably pretty effective at avoiding partisan non-response bias, though they may run the risk of missing real movement in the polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "interpretation_guidance",
+        "statement": "A large split in results between pollster methodologies (e.g. phone vs. online) would be a warning sign of polling error. Its absence in 2024 is mildly reassuring.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "if phone pollsters said one thing, and online pollsters said another, that might be more of a cause for concern",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver's own judgment is that polls are about equally likely to miss in either direction, with only the slightest lean toward Trump overachieving. The lean is not enough to bet at -110 odds.",
+        "quantities": [
+          {
+            "name": "bet odds",
+            "value": "-110",
+            "unit": "American odds",
+            "context": "would not bet either way"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "I have just the slightest lean in that direction. But if DraftKings offered such a bet at -110",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Silver says FiveThirtyEight's 2014 midterm model launched too late, in mid-September, and that he was far too dismissive of Trump's chances in the 2015/16 GOP primary.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "538 2014-2016",
+        "evidence_quote": "we should have launched the midterm model sooner instead of waiting until mid-September (?!?)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "parameter_or_number",
+        "statement": "Silver Bulletin planned to publish model updates 6 to 7 times per week through Election Day 2024.",
+        "quantities": [
+          {
+            "name": "update frequency",
+            "value": "6 to 7",
+            "unit": "times per week",
+            "context": "Sept-Nov 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "model updates 6 to 7 times per week",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "ticket-splitting in polls",
+        "insight": "In 2024 polls, Democrats ran much better in Senate races than in the presidential race in the same polls under Biden, and to some degree under Harris. This suggests the polls were finding Democrats, just not Biden voters.",
+        "evidence": "Comparison of Senate and presidential results within the same polls.",
+        "forecasting_implication": "Democratic Senate candidates may underperform if their numbers converge toward the presidential race. Alternatively, Harris may have room to grow."
+      },
+      {
+        "topic": "shy Trump voter",
+        "insight": "Silver rejects the 'shy Trump voter' theory. The 2016 and 2020 poll misses came from Trump voters not being captured by polls at all, not from respondents concealing support. Declaring Trump support has also become more socially acceptable in some subgroups (Silicon Valley, crypto, younger voters of color).",
+        "evidence": "",
+        "forecasting_implication": "Treat the error source as non-response bias rather than social desirability bias."
+      },
+      {
+        "topic": "poll non-response and partisanship",
+        "insight": "College-educated and high-social-trust voters respond to polls more and lean Democratic. COVID-era social distancing in 2020 may have made Democrats more reachable than Republicans.",
+        "evidence": "Pollster post-mortems on 2016 and 2020.",
+        "forecasting_implication": "Expect correlated non-response errors tied to education and social trust."
+      },
+      {
+        "topic": "Electoral College gap",
+        "insight": "Democrats were hurt by a relatively large gap between the Electoral College and the popular vote in 2016 and 2020.",
+        "evidence": "",
+        "forecasting_implication": "Regression or demographic priors carry this gap into state estimates when state polling is sparse."
+      },
+      {
+        "topic": "convention bounces",
+        "insight": "Convention bounces are smaller than they used to be. In 2024, Trump's bounce may have been enhanced by the assassination attempt and Harris's muted by RFK Jr.'s exit.",
+        "evidence": "Silver Bulletin polling averages.",
+        "forecasting_implication": "Shrink or drop convention bounce adjustments."
+      }
+    ],
+    "references": [
+      {
+        "description": "Earlier article on special COVID provisions in the 2020 538 model",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin article on sticking to the model's preexisting logic after Biden's dropout",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin methodology on the model's various adjustments (trendline, etc.)",
+        "url": ""
+      },
+      {
+        "description": "Article noting convention bounces are smaller than they used to be",
+        "url": ""
+      },
+      {
+        "description": "538 analysis of polling bias by cycle since 1998 (pollster ratings data)",
+        "url": ""
+      },
+      {
+        "description": "Analysis of polling error for all election cycles since 1936",
+        "url": ""
+      },
+      {
+        "description": "Articles on 2022 polling accuracy and the 'myth' of a systematic 2022 polling error",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin pollster ratings (low-rated pollsters get less weight)",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact schedule by which fundamentals weight decays from ~20% in late August to 0% on Election Day.",
+      "Construction of the economic index and how incumbency enters the fundamentals prior.",
+      "Functional form, magnitude and decay duration of the convention bounce adjustment.",
+      "How 'landmark events' are quantified to discount pre-event polls (decay rate or weight multiplier).",
+      "Specification of the state regression (covariates, weighting) and the rule that sets polling-average vs. regression weights by state (80% NH vs. high 90s PA).",
+      "Distribution of Election Day polling error (fat-tail form) derived from 1936+ data, and the structure of cross-state error correlation.",
+      "How projected state turnout is estimated for aggregating the national popular vote.",
+      "Number of simulations used."
+    ]
+  }
+}

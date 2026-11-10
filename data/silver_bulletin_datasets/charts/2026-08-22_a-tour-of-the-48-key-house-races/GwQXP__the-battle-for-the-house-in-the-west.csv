@@ -1,0 +1,16 @@
+district	region	race_rating	winner_Dparty	tipping	voteshare_D	voteshare_R	mean_netpartymargin	margin_positive	flip	incumbent	role	urbanindex_state	urban_tercile
+CA-41	West	Solid D	0.9997	0.00005	63.9	36.1	D +27.8@@27.8	1	1	R	Offense	13.266151	Urban
+UT-1	West	Solid D	0.999525	0.0001	60.7	33.5	D +27.2@@27.2	1	1	R	Offense	12.450571	Urban
+CA-3	West	Solid D	0.992525	0.0012375	59.4	40.6	D +18.8@@18.8	1	1	I	Offense	11.524825	Urban
+CA-1	West	Solid D	0.9891	0.0015375	59.6	40.4	D +19.2@@19.2	1	1	R	Offense	10.022155	Rural
+CA-22	West	Likely D	0.901925	0.0122125	54.7	45.3	D +9.4@@9.4	1	1	R	Offense	11.097056	Mixed
+CA-48	West	Likely D	0.85845	0.016475	53.7	46.3	D +7.5@@7.5	1	1	R	Offense	11.666442	Urban
+CO-8	West	Likely D	0.786375	0.01865	52.9	47.1	D +5.7@@5.7	1	1	R	Offense	11.743257	Urban
+WA-3	West	Lean D	0.734025	0.0203875	52.1	47.9	D +4.3@@4.3	1	0	D	Defense	10.837642	Mixed
+TX-28	West/South	Lean D	0.7307	0.0167625	50.6	45.7	D +4.9@@4.9	1	0	D	Defense	10.845755	Mixed
+AZ-6	West	Lean D	0.716675	0.02595	50.1	46.6	D +3.5@@3.5	1	1	R	Offense	10.649947	Mixed
+AZ-1	West	Lean D	0.6614	0.0206125	49.9	47	D +2.9@@2.9	1	1	R	Offense	12.056242	Urban
+TX-23	West	Toss-up	0.4163	0.013675	47.4	48.8	R +1.5@@-1.5	0	0	R	Offense	10.160962	Rural
+TX-35	West/South	Lean R	0.360425	0.011675	48.7	51.3	R +2.7@@-2.7	0	1	D	Defense	11.253857	Mixed
+TX-15	West/South	Lean R	0.3333	0.0112125	48.6	51.4	R +2.8@@-2.8	0	0	R	Offense	10.562084	Mixed
+CO-5	West	Lean R	0.2725	0.007875	46	49.9	R +3.9@@-3.9	0	0	R	Offense	11.656701	Urban

@@ -1,0 +1,463 @@
+{
+  "article": {
+    "date": "2024-10-30",
+    "title": "The early vote doesn't reliably predict results",
+    "subtitle": "4 reasons why you’re better off ignoring it.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/the-early-vote-doesnt-reliably-predict",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-10-30_the-early-vote-doesnt-reliably-predict-results"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.358171,
+    "prompt_tokens": 4,
+    "completion_tokens": 5973,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 29797,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:20:19"
+  },
+  "extraction": {
+    "summary": "Silver explains why the Silver Bulletin 2024 presidential model does not incorporate early-vote data, apart from one minor exception: turnout projections are raised if votes already counted exceed the model's prediction. He gives four reasons. Early voters are a non-representative sample with no stable baseline, especially after COVID. Polls already account for early voting because they ask respondents whether they have voted. Party registration does not reveal actual vote choice. Early-vote-based predictions have a terrible track record. Using 2016 data from 13 states, he shows that the D-R early-vote margin mispredicted the final margin by 14 points on average. He frames early-vote analysis as a gateway to poll unskewing, with too many free parameters for cherry-picking.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "CNN likely voter model",
+      "early vote analysis (generic)",
+      "Literary Digest 1936 poll"
+    ],
+    "findings": [
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "design_principle",
+        "statement": "The Silver Bulletin 2024 presidential model does not use early-vote data (party breakdowns of early ballots) as an input to its vote-share forecast. Silver doubts that early voting could add much value even with a lot of effort.",
+        "quantities": [],
+        "rationale": "There are no good baselines, polls already capture early voting, vote choice is unknown, and early-vote-based predictions have a poor track record.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "when people ask me how early voting is incorporated into the model, the answer is that (with one extremely minor exception) it isn't",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "adjustment_rule",
+        "statement": "The only use of early-vote data in the Silver Bulletin 2024 model is this: if the total number of votes already counted in a state exceeds the model's turnout prediction, the model raises its turnout projection for that state.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we'll up our turnout projections in a state if the total number of votes already counted exceeds our model's prediction.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2016, across 13 states with partisan early-vote breakdowns compiled by Michael McDonald, the D-minus-R early-vote margin missed the final Clinton-minus-Trump margin by an average of 14 points.",
+        "quantities": [
+          {
+            "name": "average early vote misprediction",
+            "value": "14",
+            "unit": "percentage points",
+            "context": "2016, 13 states"
+          },
+          {
+            "name": "states with data",
+            "value": "13",
+            "unit": "states",
+            "context": "2016"
+          }
+        ],
+        "rationale": "Early voters are not a representative sample of the electorate.",
+        "model_version": "general principle",
+        "evidence_quote": "On average, the D less R margin in the early vote mispredicted the final Clinton/Trump margin by 14 points!",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "empirical_regularity",
+        "statement": "The 2016 table (University of Florida Election Lab) shows the gap between the D-R early-vote margin and the final margin in each state. It is smallest in Oregon (1.1), Florida (2.6), Arizona (2.9) and Nevada (3.5). It is largest in West Virginia (53.5), Louisiana (25.5) and Nebraska (22.3). In West Virginia, Democrats led the early vote by 12 points while Trump won by 41.7.",
+        "quantities": [
+          {
+            "name": "Arizona error",
+            "value": "2.9",
+            "unit": "percentage points",
+            "context": "early vote -6.4, final -3.5"
+          },
+          {
+            "name": "Colorado early vote margin",
+            "value": "-0.8",
+            "unit": "percentage points",
+            "context": "final +4.9"
+          },
+          {
+            "name": "Florida error",
+            "value": "2.6",
+            "unit": "percentage points",
+            "context": "early +1.4, final -1.2"
+          },
+          {
+            "name": "Iowa error",
+            "value": "16.1",
+            "unit": "percentage points",
+            "context": "early +6.7"
+          },
+          {
+            "name": "Louisiana error",
+            "value": "25.5",
+            "unit": "percentage points",
+            "context": "early +5.9"
+          },
+          {
+            "name": "Maryland error",
+            "value": "15.2",
+            "unit": "percentage points",
+            "context": "early +41.6, final +26.4"
+          },
+          {
+            "name": "Nebraska error",
+            "value": "22.3",
+            "unit": "percentage points",
+            "context": "early -2.8, final -25.1"
+          },
+          {
+            "name": "Nevada error",
+            "value": "3.5",
+            "unit": "percentage points",
+            "context": "early +5.9, final +2.4"
+          },
+          {
+            "name": "North Carolina error",
+            "value": "13.5",
+            "unit": "percentage points",
+            "context": "final -3.7"
+          },
+          {
+            "name": "California error",
+            "value": "15.4",
+            "unit": "percentage points",
+            "context": "final +30.0"
+          },
+          {
+            "name": "Oregon error",
+            "value": "1.1",
+            "unit": "percentage points",
+            "context": "2016"
+          },
+          {
+            "name": "West Virginia error",
+            "value": "53.5",
+            "unit": "percentage points",
+            "context": "final -41.7"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "As a benchmark for polling error, pollsters are criticized when off by 3 points, and larger misses are considered disasters. A 14-point miss, like the average early-vote misprediction, would be unacceptable for a poll.",
+        "quantities": [
+          {
+            "name": "criticized poll error threshold",
+            "value": "3",
+            "unit": "points",
+            "context": "pollster accuracy norms"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Pollsters get yelled at when their polls are off by even 3 points, and anything more than that is considered an absolute disaster.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "design_principle",
+        "statement": "Sample size does not fix a biased sample. The 1936 Literary Digest poll of almost 2.3 million voters showed Landon beating Roosevelt 57-43, but Roosevelt won by 24, a 38-point error. Its sample was drawn from lists of telephone and automobile owners, who skewed rich and Republican.",
+        "quantities": [
+          {
+            "name": "Literary Digest sample",
+            "value": "almost 2.3 million",
+            "unit": "voters",
+            "context": "1936"
+          },
+          {
+            "name": "polling error",
+            "value": "38",
+            "unit": "points",
+            "context": "1936 Literary Digest"
+          },
+          {
+            "name": "Roosevelt margin",
+            "value": "24",
+            "unit": "points",
+            "context": "1936"
+          }
+        ],
+        "rationale": "If you're aiming at the wrong target, more respondents don't improve accuracy.",
+        "model_version": "general principle",
+        "evidence_quote": "If you're aiming at the wrong target, it doesn't matter how many people you poll — it won't get any more accurate.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Early-vote baselines are unstable for several reasons: early-voting rules change, states made one-off COVID provisions in 2020, voters take time to adopt new methods, and parties change their emphasis. Trump discouraged early voting in 2020 but encouraged it in 2024, and Democrats shifted heavily to mail in 2020.",
+        "quantities": [],
+        "rationale": "You are aiming at a moving target, so comparisons across cycles are unreliable.",
+        "model_version": "general principle",
+        "evidence_quote": "But you're aiming at a moving target.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "method",
+        "statement": "Silver's preferred likely-voter approach for a pollster is probabilistic: each respondent gets a probability of voting, and respondents who have already voted get 100 percent.",
+        "quantities": [
+          {
+            "name": "likely voter score for already-voted respondents",
+            "value": "100",
+            "unit": "percent",
+            "context": "Silver's preferred LV method"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "if I were running a poll, I'd treat likely voters probabilistically, and anyone who had already voted would get a score of 100 percent.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "assumption",
+        "statement": "Early-vote information is already captured by polls, because pollsters ask respondents whether they have already voted and combine early voters with likely voters who have yet to vote. A poll-based model therefore implicitly includes it. CNN's 2024 polls illustrate this. In Nevada, Trump led early voters by 6 but the topline was Trump +1. In Arizona, Harris led early voters by 9 but the topline was Harris +1.",
+        "quantities": [
+          {
+            "name": "CNN Nevada topline",
+            "value": "Trump +1",
+            "unit": "points",
+            "context": "Oct 2024"
+          },
+          {
+            "name": "CNN Nevada early voters",
+            "value": "Trump +6",
+            "unit": "points",
+            "context": "Oct 2024"
+          },
+          {
+            "name": "CNN Arizona early voters",
+            "value": "Harris +9",
+            "unit": "points",
+            "context": "Oct 2024"
+          },
+          {
+            "name": "CNN Arizona topline",
+            "value": "Harris +1",
+            "unit": "points",
+            "context": "Oct 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "pollsters, who are fully aware of what the early voting data says in Nevada and ask respondents if they already voted, continue to show the race tied.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "empirical_regularity",
+        "statement": "Vote method shifts without vote choice shifting. Early voting mostly cannibalizes enthusiastic voters who would have voted on Election Day anyway. In Maryland, the in-person early vote was purple in 2020 and blue in 2022, and the Election Day vote was red in 2020 and blue in 2022, yet Biden in 2020 and Moore in 2022 both won 67-33. Split Ticket's chart puts mail at 53% of ballots in 2020 versus 29% in 2022, and Election Day at 14% versus 52%.",
+        "quantities": [
+          {
+            "name": "MD 2020 mail share",
+            "value": "53",
+            "unit": "percent of ballots",
+            "context": "83% D"
+          },
+          {
+            "name": "MD 2020 in-person early share",
+            "value": "32",
+            "unit": "percent of ballots",
+            "context": "53% D"
+          },
+          {
+            "name": "MD 2020 Election Day share",
+            "value": "14",
+            "unit": "percent of ballots",
+            "context": "41% D"
+          },
+          {
+            "name": "MD 2022 mail share",
+            "value": "29",
+            "unit": "percent of ballots",
+            "context": "83% D"
+          },
+          {
+            "name": "MD 2022 early share",
+            "value": "19",
+            "unit": "percent of ballots",
+            "context": "67% D"
+          },
+          {
+            "name": "MD 2022 Election Day share",
+            "value": "52",
+            "unit": "percent of ballots",
+            "context": "57% D"
+          },
+          {
+            "name": "final margin",
+            "value": "67-33",
+            "unit": "percent",
+            "context": "both elections"
+          }
+        ],
+        "rationale": "It's much easier to change how someone votes than who they vote for.",
+        "model_version": "general principle",
+        "evidence_quote": "it's much easier to get someone to change how they vote than who they vote for.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "method",
+        "statement": "Party-registration early-vote counts do not reveal vote shares, which depend on crossover rates and independents. Silver's worked example: Harris wins 6% of Republicans, Trump wins 3.5% of Democrats, and Harris wins independents by 4. Under those rates, a 38-40-22 D-R-I early-vote breakdown, which looks like R+2, is actually Harris +1.",
+        "quantities": [
+          {
+            "name": "Harris share of Republicans",
+            "value": "6",
+            "unit": "percent",
+            "context": "October 2024 national polls"
+          },
+          {
+            "name": "Trump share of Democrats",
+            "value": "3.5",
+            "unit": "percent",
+            "context": "October 2024 national polls"
+          },
+          {
+            "name": "independent margin",
+            "value": "4",
+            "unit": "points",
+            "context": "hypothetical Harris"
+          },
+          {
+            "name": "D-R-I breakdown",
+            "value": "38-40-22",
+            "unit": "percent",
+            "context": "hypothetical early vote"
+          },
+          {
+            "name": "implied result",
+            "value": "Harris +1",
+            "unit": "points",
+            "context": "hypothetical"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "a 38-40-22 D-R-I breakdown in the early vote, which looks like a 2-point Republican lead, would actually be Harris +1.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "empirical_regularity",
+        "statement": "Independents typically make up a smaller share of early voters than of the overall electorate. They are generally less enthusiastic and more likely to decide late.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Independent voters are generally less enthusiastic and more likely to make a decision late in the race.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Early-vote analysis has too many free parameters to be reliable: trend since 2020 versus since 2016, absolute numbers, demographic subgroups, and voter propensity breakdowns. This invites cherry-picking. It also has a bad track record; in 2016 it helped convince the media and Democrats that Clinton was certain to win. Silver calls it a gateway to poll unskewing that adds more noise than signal.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "there are too many floating parameters — too many ways to cherry-pick to tell yourself the narrative you like.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "interpretation_guidance",
+        "statement": "Nevada is a partial exception where early vote matters more, because the state traditionally has little Election Day vote, and Jon Ralston's analysis is worth reading. Ambiguities remain even there: Democrats do well in mail early voting, Republicans win in-person early voting, and mail ballots are reported with a lag of several days.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "the early vote in Nevada matters more than elsewhere because it traditionally has little election-day vote.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "empirical_regularity",
+        "statement": "Early-vote partisan patterns vary idiosyncratically across similar states. In 2016, North Carolina's early vote was blue while Florida's was purple, because Republicans in Florida traditionally emphasize early voting to older voters. More Republicans than Democrats voted early in Colorado, yet Clinton won the state.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Similar states can produce surprisingly different patterns.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "party ID vs registration",
+        "insight": "Democrats have lost their longstanding edge in party identification, so turning out their base is no longer enough. Harris probably needs to win independents or crossover voters.",
+        "evidence": "In Nevada, the Democratic active-registration advantage fell from 87,000 in November 2020 to about 20,000.",
+        "forecasting_implication": "Do not infer vote share from party-registration turnout. Shifts in registration are already priced into polls."
+      },
+      {
+        "topic": "Electoral College bias",
+        "insight": "Harris likely needs to win the popular vote by some margin to win the Electoral College.",
+        "evidence": "",
+        "forecasting_implication": "The model should allow for a popular vote/Electoral College gap that favors Republicans."
+      },
+      {
+        "topic": "registration shift",
+        "insight": "The shift in registration toward Republicans has been underway for several years, yet Democrats had a relatively strong 2022 midterm in the swing states. Possible causes: young first-time registrants turned off by older Democratic candidates, and no competitive Democratic primary in 2024.",
+        "evidence": "2022 midterm results",
+        "forecasting_implication": "Registration trends are weak predictors of results."
+      },
+      {
+        "topic": "ancestral partisanship",
+        "insight": "West Virginia has many registered Democrats who vote Republican, and Colorado is ancestrally Republican but votes Democratic. Registration lags behind actual partisanship.",
+        "evidence": "West Virginia: D+12 in the early vote vs. Trump +41.7 in 2016",
+        "forecasting_implication": "Adjust registration-based data for ancestral party registration."
+      },
+      {
+        "topic": "polarization",
+        "insight": "There are few crossover voters in partisan times. The overwhelming majority of registered Democrats and Republicans vote for their party's nominee.",
+        "evidence": "In October 2024 polls, Harris wins 6% of Republicans and Trump wins 3.5% of Democrats.",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Sean Trende, RealClearPolitics article on early voting",
+        "url": ""
+      },
+      {
+        "description": "Michael McDonald's 2016 partisan early vote data (University of Florida Election Lab)",
+        "url": ""
+      },
+      {
+        "description": "Split Ticket (Lakshya Jain, Max McCall) comparison of Maryland early vote 2020 vs 2022",
+        "url": ""
+      },
+      {
+        "description": "Adam Carlson's spreadsheet of national poll crosstabs (Oct 1-15, Oct 16-31 tabs)",
+        "url": ""
+      },
+      {
+        "description": "Jon Ralston's Nevada Independent blog",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How does the Silver Bulletin model project state turnout, and by how much is the projection raised when counted votes exceed it?",
+      "Does the turnout projection affect vote-share forecasts or only the popular-vote totals?"
+    ]
+  }
+}

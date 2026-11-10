@@ -1,0 +1,365 @@
+{
+  "article": {
+    "date": "2025-03-22",
+    "title": "How low is Trump's popularity floor?",
+    "subtitle": "So far, the decline in his approval ratings is typical for new presidents. But second-term presidents can have more downside.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/how-low-is-trumps-popularity-floor",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2025-03-22_how-low-is-trumps-popularity-floor-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.329911,
+    "prompt_tokens": 4,
+    "completion_tokens": 5390,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 27722,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:25:30"
+  },
+  "extraction": {
+    "summary": "Silver argues that Trump's early second-term approval decline (net +11.6 on Jan. 21 to -2.2 on March 21, 2025, in the Silver Bulletin approval tracker) is typical for new presidents. He says it should not be linearly extrapolated. He then argues that Trump has a historically high and narrow approval floor based on his first term. However, second-term (lame duck) presidents historically had lower averages and floors than in their first terms. He speculates about which groups might abandon Trump, from 'Last In, First Out' recent converts (young voters, Hispanic/Asian Americans, Black men, 'Riverian' elites) to the white working class. Model content is limited to a description of the approval tracker (weighting by poll quality, recency, sample size and partisan lean; 90% bands), methodological choices for historical comparison, and empirical regularities about approval dynamics.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "Silver Bulletin presidential approval rating tracker",
+      "Silver Bulletin historical approval database"
+    ],
+    "findings": [
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin Trump second-term approval tracker is an updating average of approval polls. It weights or adjusts each poll according to its quality, its recency, its sample size and its partisan lean (house effect).",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin approval tracker, 2025",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin approval tracker chart displays shaded uncertainty bands within which 90% of individual polls are projected to fall. The bands are a poll-dispersion interval, not just uncertainty about the average.",
+        "quantities": [
+          {
+            "name": "poll coverage of shaded band",
+            "value": "90",
+            "unit": "percent",
+            "context": "share of polls projected to fall within the shaded region of the approval tracker chart"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin approval tracker, 2025",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "parameter_or_number",
+        "statement": "In the Silver Bulletin approval tracker, Trump's net approval went from +11.6 on Jan. 21, 2025 to -2.2 on March 21, 2025. That is a 13.8-point decline, or about 7 points per month. As of the March 21, 2025 update, approval was 47.5% and disapproval was 49.7%.",
+        "quantities": [
+          {
+            "name": "opening net approval",
+            "value": "+11.6",
+            "unit": "percentage points",
+            "context": "Trump, Jan. 21, 2025"
+          },
+          {
+            "name": "net approval",
+            "value": "-2.2",
+            "unit": "percentage points",
+            "context": "Trump, March 21, 2025"
+          },
+          {
+            "name": "decline",
+            "value": "13.8",
+            "unit": "percentage points",
+            "context": "Jan. 21 to March 21, 2025"
+          },
+          {
+            "name": "rate of decline",
+            "value": "around 7",
+            "unit": "points per month",
+            "context": "first two months of the second term"
+          },
+          {
+            "name": "approve",
+            "value": "47.5",
+            "unit": "percent",
+            "context": "March 21, 2025"
+          },
+          {
+            "name": "disapprove",
+            "value": "49.7",
+            "unit": "percent",
+            "context": "March 21, 2025"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin approval tracker, 2025",
+        "evidence_quote": "Trump started out at a +11.6 net approval rating, a much better opening number than in his first term. But now, he's in the red at -2.2.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "design_principle",
+        "statement": "Silver warns against crude linear extrapolation of early approval trends. Extrapolating Trump's roughly 7-points-per-month decline would give -27.6 by July 21 and -51.2 by Nov. 21, 2025, which he calls almost certainly bad predictions. Early declines are typical for new presidents and tend not to continue at the same rate.",
+        "quantities": [
+          {
+            "name": "extrapolated net approval",
+            "value": "-27.6",
+            "unit": "percentage points",
+            "context": "July 21, 2025 under linear extrapolation"
+          },
+          {
+            "name": "extrapolated net approval",
+            "value": "-51.2",
+            "unit": "percentage points",
+            "context": "Nov. 21, 2025 under linear extrapolation"
+          }
+        ],
+        "rationale": "The early decline is typical for new presidents, so it is not evidence of a continuing trend.",
+        "model_version": "general principle",
+        "evidence_quote": "such crude linear extrapolation will almost certainly lead to bad predictions",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "For comparisons of early-term approval, Silver starts the clock on Feb. 1 rather than inauguration day because approval polling is often sparse very early in a term. George W. Bush is started on Feb. 4 because the Silver Bulletin database contains only one Bush poll before Feb. 1.",
+        "quantities": [
+          {
+            "name": "comparison start date",
+            "value": "Feb. 1",
+            "unit": "date",
+            "context": "first-year approval comparisons"
+          },
+          {
+            "name": "Bush start date",
+            "value": "Feb. 4",
+            "unit": "date",
+            "context": "exception due to sparse data"
+          },
+          {
+            "name": "Bush polls before Feb. 1 in database",
+            "value": "one",
+            "unit": "polls",
+            "context": "George W. Bush 2001"
+          }
+        ],
+        "rationale": "Sparse early polling makes averages unreliable at the start of a term.",
+        "model_version": "Silver Bulletin historical approval database",
+        "evidence_quote": "Let's start the clock on Feb. 1 rather than Jan. 21, though, since approval rating polling is often sparse very early in a president's term.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "empirical_regularity",
+        "statement": "Approval changes from Feb. 1 to March 21 of the first year, per the Silver Bulletin table:\n- Trump 2025: approve 49.8 to 47.5 (-2.3); disapprove 43.9 to 49.7 (+5.8).\n- Biden: approve 54.1 to 55.5 (+1.4); disapprove 35.4 to 39.2 (+3.8).\n- Trump 2017: approve 45.5 to 43.4 (-2.1); disapprove 45.6 to 50.9 (+5.3).\n- Obama: approve 61.4 to 58.6 (-2.8); disapprove 22.0 to 32.2 (shown as +1 in the cropped table; the endpoints imply about +10.2).\n- G.W. Bush: approve 51.5 to 55.8 (+4.3); disapprove 19.5 to 24.8 (+5.4).\n- Clinton: approve 53.9 to 55.2 (+1.3); disapprove 21.4 to 29.9 (+8.5).\n\nThe average excluding Trump 2025 is approve 52.7 to 52.7 (-0.0) and disapprove 31.3 to 37.8 (+6.5).",
+        "quantities": [
+          {
+            "name": "average approve change",
+            "value": "-0.0",
+            "unit": "percentage points",
+            "context": "Feb 1 to Mar 21, first year, average of Biden, Trump 2017, Obama, Bush, Clinton"
+          },
+          {
+            "name": "average disapprove change",
+            "value": "+6.5",
+            "unit": "percentage points",
+            "context": "same window"
+          },
+          {
+            "name": "Trump 2025 approve change",
+            "value": "-2.3",
+            "unit": "percentage points",
+            "context": "Feb 1 to Mar 21, 2025"
+          },
+          {
+            "name": "Trump 2025 disapprove change",
+            "value": "+5.8",
+            "unit": "percentage points",
+            "context": "Feb 1 to Mar 21, 2025"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin historical approval database",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "empirical_regularity",
+        "statement": "A new president's disapproval rating typically rises early in the term. Part of the reason is that voters who were initially undecided, perhaps out of hopefulness, start telling pollsters they disapprove. Approval may stay relatively flat while disapproval rises. This happened for all recent presidents, including Trump in 2025.",
+        "quantities": [],
+        "rationale": "Undecided respondents give a new president the benefit of the doubt, then break toward disapproval.",
+        "model_version": "general principle",
+        "evidence_quote": "some voters who were initially on the fence and say they were undecided, perhaps out of a sense of hopefulness for a new president, instead begin to tell pollsters they disapprove",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "method",
+        "statement": "Silver summarizes a presidential term's approval as follows:\n- The average approval uses the final tracker value at the end of each day of the term.\n- The range is the 95th percentile range of those daily numbers, used to define the 'floor' and 'ceiling'. This throws out extremely short-lived fluctuations.",
+        "quantities": [
+          {
+            "name": "percentile range",
+            "value": "95",
+            "unit": "percent",
+            "context": "range of daily approval values used to define floor/ceiling"
+          }
+        ],
+        "rationale": "Excludes extremely short-lived fluctuations.",
+        "model_version": "Silver Bulletin historical approval database",
+        "evidence_quote": "So basically throwing out any extremely short-lived fluctuations, in other words.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "empirical_regularity",
+        "statement": "Trump's first term had among the lowest average approval ratings, at 41.7 percent. It also had the narrowest spread of any presidential term since approval polling began: a 95th percentile range from a floor of 37.8 to a ceiling of 45.0.",
+        "quantities": [
+          {
+            "name": "average approval",
+            "value": "41.7",
+            "unit": "percent",
+            "context": "Trump first term, end-of-day values"
+          },
+          {
+            "name": "floor",
+            "value": "37.8",
+            "unit": "percent",
+            "context": "Trump first term, 95th percentile range"
+          },
+          {
+            "name": "ceiling",
+            "value": "45.0",
+            "unit": "percent",
+            "context": "Trump first term, 95th percentile range"
+          }
+        ],
+        "rationale": "A highly divided country and passionate supporters; Trump is a known commodity.",
+        "model_version": "Silver Bulletin historical approval database",
+        "evidence_quote": "Trump's approval numbers had a floor of 37.8 but a ceiling of 45.0 during his first term.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "empirical_regularity",
+        "statement": "The chart titled 'Presidential approval ranges are narrowing' shows each term's average and 95th percentile range from Truman through Biden. Approval ranges have narrowed over time in recent, more polarized terms.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin historical approval database",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "empirical_regularity",
+        "statement": "Among presidents since Truman who served a second term, the first terms averaged 58.0 approval with a floor of 47.1. Their second terms averaged 48.0 with a floor of 37.7. The sample is conditioned on presidents re-elected to a second term. Johnson, Nixon and G.W. Bush cratered in their second terms.",
+        "quantities": [
+          {
+            "name": "first-term average approval",
+            "value": "58.0",
+            "unit": "percent",
+            "context": "re-elected presidents since Truman"
+          },
+          {
+            "name": "first-term floor",
+            "value": "47.1",
+            "unit": "percent",
+            "context": "same"
+          },
+          {
+            "name": "second-term average approval",
+            "value": "48.0",
+            "unit": "percent",
+            "context": "same"
+          },
+          {
+            "name": "second-term floor",
+            "value": "37.7",
+            "unit": "percent",
+            "context": "same"
+          }
+        ],
+        "rationale": "Lame-duck presidents may be abandoned even by partisans who see advantage in distancing themselves.",
+        "model_version": "Silver Bulletin historical approval database",
+        "evidence_quote": "the average was 48.0 and the floor was 37.7",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "second-term approval decline",
+        "insight": "Lame-duck presidents have lower average approval and lower floors than in their first terms. Partisans may throw a second-term president under the bus, though partisanship can inhibit this.",
+        "evidence": "Average for re-elected presidents: 58.0 to 48.0; floor 47.1 to 37.7. Johnson, Nixon and Bush cratered.",
+        "forecasting_implication": "Midterm environment priors for 2026 should allow more downside in a second-term president's approval than his first term suggests."
+      },
+      {
+        "topic": "Trump approval floor",
+        "insight": "Trump has a relatively high and stable approval floor because of polarization and a passionate base. The base case is a high floor.",
+        "evidence": "First-term range 37.8 to 45.0, the narrowest ever.",
+        "forecasting_implication": "Use narrower variance for Trump approval, but widen it for the second-term effect."
+      },
+      {
+        "topic": "anti-incumbent mood",
+        "insight": "Voters are grumpy toward all politicians. Democrats' numbers have also cratered, so Trump's decline does not automatically translate into Democratic gains in a hypothetical rematch.",
+        "evidence": "Trump won the tipping-point state, Pennsylvania, by 1.7 points.",
+        "forecasting_implication": "Do not map presidential disapproval one-to-one onto opposition-party support."
+      },
+      {
+        "topic": "LIFO coalition defection",
+        "insight": "Recent converts to Trump may defect first: young voters, Hispanic and Asian Americans, Black men, and 'Riverian' elites. Young voters are less partisan and more fickle.",
+        "evidence": "Trump won or nearly won young voters in 2024, and minorities shifted heavily toward him.",
+        "forecasting_implication": "Watch subgroup approval among recent converts as a leading indicator."
+      },
+      {
+        "topic": "racial depolarization",
+        "insight": "Silver assumes racial depolarization may be robust: Democrats are holding white voters while losing minorities, especially younger ones. Lost loyalty is hard to regain.",
+        "evidence": "The shift is concentrated among younger Black, Hispanic and Asian voters.",
+        "forecasting_implication": "Do not assume reversion of the minority shift in 2026/2028 baselines."
+      },
+      {
+        "topic": "white working class and tariffs",
+        "insight": "Trump could lose his white working-class base. Tariffs may hit manufacturing-dependent states especially hard. Voters may not forgive a tariff-induced recession the way they forgave the COVID recession. Trump's economic approval is worse than at any point in his first term.",
+        "evidence": "",
+        "forecasting_implication": "Allow for regionally correlated swings in manufacturing states."
+      },
+      {
+        "topic": "demographic estimates uncertainty",
+        "insight": "All methods for breaking down election results by demographic group rely on statistical extrapolation or polling. There is no hard-and-fast way to know group vote shares.",
+        "evidence": "Data sources disagree on whether Trump or Harris won young voters.",
+        "forecasting_implication": "Treat subgroup vote estimates as uncertain inputs."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin Trump approval rating tracker",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin historical presidential approval numbers",
+        "url": ""
+      },
+      {
+        "description": "Silver's post-inauguration predictions column",
+        "url": ""
+      },
+      {
+        "description": "Earlier article arguing George W. Bush is an ominous precedent for Trump",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact weighting formulas in the approval tracker for poll quality, recency, sample size and partisan lean.",
+      "How the 90% poll bands in the approval tracker are computed.",
+      "How the historical approval series (back to Truman) was constructed, given that it was sparse in early eras.",
+      "The Obama disapproval change value is truncated in the table (shown as '+1'; the endpoints imply +10.2)."
+    ]
+  }
+}

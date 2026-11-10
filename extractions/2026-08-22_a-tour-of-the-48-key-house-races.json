@@ -1,0 +1,264 @@
+{
+  "article": {
+    "date": "2026-08-22",
+    "title": "A tour of the 48 key House races",
+    "subtitle": "In the Northeast, Midwest and West, it’s almost all upside for Democrats. But redistricting will hand Republicans some seats in the South.",
+    "authors": "Eli McKown-Dawson; Nate Silver",
+    "url": "https://www.natesilver.net/p/a-tour-of-the-48-key-house-races",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-08-22_a-tour-of-the-48-key-house-races"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:35:39"
+  },
+  "extraction": {
+    "summary": "Model Talk touring the 48 House races FLIPR Deluxe gives the opposition at least a 25 percent chance of flipping, region by region. FLIPR had Democrats at 84 percent for the House, with a mean of 232 Democratic seats and a tipping point near D+3 after mid-decade redistricting. The piece defines rating bands, reports the seat-rating distribution (198 Solid D, 156 Solid R, only 7 toss-ups), and notes asymmetric Likely R seats that create 'dummymander' upside. It explains how FLIPR handles incumbency after redistricting by measuring district overlap, uses its own regional definitions, and cannot account for events like a candidate's hospitalization until expert ratings reflect them.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "FLIPR 2026 (Deluxe)"
+    ],
+    "findings": [
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "parameter_or_number",
+        "statement": "After 2025-26 mid-decade redistricting, FLIPR Deluxe found the House map shifted from roughly no bias to a Republican lean of a few points: Democrats are favored to win the House if they win the national popular vote by 3 points or more, and are underdogs below that. At D+7 they are essentially guaranteed a majority, and the 84 percent probability reflects scenarios of polling error or a changing environment.",
+        "quantities": [
+          {
+            "name": "House tipping point",
+            "value": "D+3",
+            "unit": "points",
+            "context": "Aug 22, 2026"
+          },
+          {
+            "name": "House D win prob",
+            "value": "84",
+            "unit": "percent",
+            "context": "Deluxe, Aug 22, 2026"
+          },
+          {
+            "name": "mean Democratic seats",
+            "value": "232",
+            "unit": "seats",
+            "context": "average forecast outcome"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR Deluxe thinks Democrats will be favored to win the House if they win the national popular vote by 3 points or more",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "method",
+        "statement": "FLIPR rating bands by win probability: Solid means at least 95 percent; Likely is 75 to 95 percent; Lean is 60 to 75 percent; Toss-up is below 60 percent for either side.",
+        "quantities": [
+          {
+            "name": "Solid threshold",
+            "value": "95",
+            "unit": "percent",
+            "context": "win probability"
+          },
+          {
+            "name": "Lean range",
+            "value": "60-75",
+            "unit": "percent",
+            "context": "win probability"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "A lean rating means that one candidate has between a 60 percent and 75 percent chance of winning the seat.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "parameter_or_number",
+        "statement": "On August 22, 2026 FLIPR Deluxe rated 198 seats Solid D, 156 Solid R, 13 Likely D, 37 Likely R, 16 Lean D, 8 Lean R and 7 Toss-up. The asymmetry in Likely R seats means a D+11 environment could turn engineered Republican seats competitive, so gerrymanders could become 'dummymanders'.",
+        "quantities": [
+          {
+            "name": "Solid D",
+            "value": "198",
+            "unit": "seats",
+            "context": "Aug 22, 2026"
+          },
+          {
+            "name": "Solid R",
+            "value": "156",
+            "unit": "seats",
+            "context": "Aug 22, 2026"
+          },
+          {
+            "name": "Likely R",
+            "value": "37",
+            "unit": "seats",
+            "context": "Aug 22, 2026"
+          },
+          {
+            "name": "Likely D",
+            "value": "13",
+            "unit": "seats",
+            "context": "Aug 22, 2026"
+          },
+          {
+            "name": "Toss-up",
+            "value": "7",
+            "unit": "seats",
+            "context": "Aug 22, 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "We’d note the asymmetry in the number of “Likely R” seats (37) versus “Likely D” ones (just 13).",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "No single House district has a tipping-point probability near double digits because there are 435 districts. The 48 seats covered have a combined 71 percent chance of deciding control. In a presidential race the comparable fraction would be higher, because outcomes are more correlated and the tipping point is less likely to be a surprise.",
+        "quantities": [
+          {
+            "name": "combined tipping-point probability",
+            "value": "71",
+            "unit": "percent",
+            "context": "48 House seats, Aug 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Because presidential outcomes are more correlated than congressional races, it’s less likely that the tipping-point state will be a surprise.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "redistricting_and_boundaries",
+        "finding_type": "method",
+        "statement": "For redistricted seats, FLIPR measures how much the new and old districts overlap to calibrate the remaining incumbency advantage, and it still treats incumbency as meaningful in such cases, more so than some other models. Example: about 60 percent of FL-9's residents carried over, so Democrat Darren Soto keeps some incumbency credit in an R+18 redrawn seat, at 38 percent to win.",
+        "quantities": [
+          {
+            "name": "FL-9 population overlap",
+            "value": "about 60",
+            "unit": "percent",
+            "context": "old vs new district"
+          },
+          {
+            "name": "Soto win prob",
+            "value": "38",
+            "unit": "percent",
+            "context": "Aug 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "It evaluates exactly how much of the new and old districts overlap to calibrate its estimate of the remaining incumbency advantage",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "redistricting_and_boundaries",
+        "finding_type": "parameter_or_number",
+        "statement": "Democratic incumbents in seats redrawn to roughly R+10 to R+12 (TX-34, NC-1, FL-22) retained 63 to 68 percent win probabilities in FLIPR, largely due to incumbency plus the D+7 environment. Marcy Kaptur in a redrawn R+11 OH-9 was at about 63 percent.",
+        "quantities": [
+          {
+            "name": "redrawn seat lean",
+            "value": "R+10 to R+12",
+            "unit": "points",
+            "context": "TX-34, NC-1, FL-22"
+          },
+          {
+            "name": "D hold probability",
+            "value": "63-68",
+            "unit": "percent",
+            "context": "Aug 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "They would all have been roughly R +10 to R +12 in 2024 under their states’ new maps",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "FLIPR uses its own long-standing regional definitions (Northeast, South, Midwest, West) rather than Census regions. Some states are split between regions; for example some southeastern Florida districts count as 'Northeastern' because the Miami area resembles a Northeastern metro, and parts of Texas count as West.",
+        "quantities": [],
+        "rationale": "Regions feed correlated error and similarity.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "we’ve traditionally considered a few districts in southeastern Florida to be “Northeastern” rather than “Southern”",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "FLIPR cannot account for an event like incumbent Marcy Kaptur's hospitalization affecting her campaign until it is reflected in expert ratings, which feed the Deluxe version.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Our model can’t account for any effect that has on her ability to campaign, at least until it’s reflected in expert ratings.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Candidate overperformance is tracked with Split Ticket WAR scores in the analysis: serial overperformer Brian Fitzpatrick (PA-1) has WAR of R+7 to R+15, while Mariannette Miller-Meeks (IA-1) ranges from R+0.6 in 2014 to D+11.3 in 2024, winning by 0.2 where Trump won by 8.4.",
+        "quantities": [
+          {
+            "name": "Fitzpatrick WAR range",
+            "value": "R+7 to R+15",
+            "unit": "points",
+            "context": "Split Ticket"
+          },
+          {
+            "name": "Miller-Meeks 2024 WAR",
+            "value": "D+11.3",
+            "unit": "points",
+            "context": "Split Ticket"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 analysis",
+        "evidence_quote": "Her Split Ticket WAR scores range from a neutral R +0.6 in 2014 to an abysmal D +11.3 in 2024.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "Extensive gerrymandering has left the fewest realistically competitive House races ever, with most seats rated Solid for one party.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "the number of realistically competitive House races is smaller than ever.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "redistricting war 2025-26",
+        "insight": "Republicans pursued an unusual nationwide mid-decade redistricting push expecting to lose the House; Democratic states like California counteracted part of it.",
+        "evidence": "",
+        "forecasting_implication": "District partisan leans must be recomputed on new boundaries each cycle."
+      },
+      {
+        "topic": "regional pattern 2026",
+        "insight": "In 2026 Democratic upside was concentrated in the Northeast, Midwest and West, while redistricting handed Republicans seats in the South.",
+        "evidence": "",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Split Ticket WAR candidate scores",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "The functional form linking district overlap to the retained incumbency advantage."
+    ]
+  }
+}

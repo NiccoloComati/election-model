@@ -1,0 +1,592 @@
+{
+  "article": {
+    "date": "2024-10-16",
+    "title": "Are Republican pollsters “flooding the zone?”",
+    "subtitle": "And what would our forecast look like with only high-quality surveys?",
+    "authors": "Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/are-republican-pollsters-flooding",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-10-16_are-republican-pollsters-flooding-the-zone"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.374715,
+    "prompt_tokens": 4,
+    "completion_tokens": 8269,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 26125,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:18:27"
+  },
+  "extraction": {
+    "summary": "Eli McKown-Dawson tests the claim, associated with Simon Rosenberg, that Republican-aligned pollsters are 'flooding the zone' to push polling averages toward Trump. In a simple flat average of October national polls, Republican-leaning firms are about 1.4 points more favorable to Trump than other firms. The Silver Bulletin average weights polls by pollster quality and adjusts for house effects, and the article argues this neutralizes most of that gap. Rerunning the 2024 presidential model with only VoteHub-style high-quality nonpartisan polls barely changes the forecast and in fact moves it slightly toward Trump (Trump 52.5%), partly because the model leans more on its regression-based state estimates when there is less polling. Following Rosenberg's exclusion list exactly would move about 0.4 points toward Harris, a 54/46 race. The article also compares the Silver Bulletin average with 538, Split Ticket, NYT and VoteHub, which differ by at most 0.5 points, and notes differences in their poll-inclusion rules.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "Silver Bulletin pollster ratings",
+      "FiveThirtyEight (2024, Morris era)",
+      "Split Ticket polling average",
+      "New York Times polling average",
+      "VoteHub polling average",
+      "Race to the White House pollster ratings"
+    ],
+    "findings": [
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin polling averages weight each poll by pollster quality, drawing on the Silver Bulletin pollster ratings.",
+        "quantities": [],
+        "rationale": "This prevents low-quality or partisan firms from moving the average simply by releasing many polls.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Here at Silver Bulletin, for example, we weight polls based on pollster quality and adjust them based on pollsters' house effects.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin polling averages adjust each poll for its pollster's house effect, so a firm that consistently leans toward one party has that lean corrected before it enters the average.",
+        "quantities": [],
+        "rationale": "This counteracts systematic lean from partisan-aligned firms, which blunts any 'flooding the zone' strategy.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "adjust them based on pollsters' house effects",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin includes Rasmussen Reports and Trafalgar polls rather than excluding them, but automatically designates them as Republican partisan polls, which subjects them to partisan-poll treatment.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Split Ticket excludes Rasmussen Reports and Trafalgar; we include them, but automatically designate them as Republican partisan polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "The Silver Bulletin average does not use polls from Big Data Poll, Quantus, SoCal Data or ActiVote, whereas 538's 2024 average does use them.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "538 uses polls from Big Data Poll, Quantus and SoCal Data and ActiVote but we don't.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Inclusion philosophies differ across 2024 averages: Split Ticket excludes Rasmussen and Trafalgar, VoteHub uses only high-quality nonpartisan polls, and 538 includes some firms the Silver Bulletin excludes. Because all of them weight and adjust reasonably, they converge to about the same result.",
+        "quantities": [],
+        "rationale": "Reasonable weighting and adjustment matter more than which polls are included or excluded.",
+        "model_version": "general principle",
+        "evidence_quote": "because we're all weighting and adjusting the polls in reasonable ways, we all end up in about the same place.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "empirical_regularity",
+        "statement": "As of October 15, 2024, the largest difference in Harris-Trump margin between the Silver Bulletin average and the 538, Split Ticket, NYT and VoteHub averages, nationally and in battleground states, was 0.5 points.",
+        "quantities": [
+          {
+            "name": "max difference between averages",
+            "value": "0.5",
+            "unit": "percentage points",
+            "context": "national and battleground state margins, Oct 15 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the biggest difference in Harris-Trump margin between the Silver Bulletin average and averages from 538, Split Ticket, The New York Times, and VoteHub is 0.5 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "parameter_or_number",
+        "statement": "Polling-average margins on Oct 15, 2024, by source:\n- National: Silver Bulletin D+2.8, 538 D+2.4, Split Ticket D+2.7, NYT D+3, VoteHub D+2.9.\n- Arizona: SB R+1.6, 538 R+1.6, Split Ticket R+1.4, NYT R+2, VoteHub R+1.2.\n- Georgia: SB R+0.9, 538 R+1.1, Split Ticket R+1.0, NYT R<1, VoteHub R+0.9.\n- Michigan: SB D+1.0, 538 D+0.7, Split Ticket D+1.1, NYT D<1, VoteHub D+0.7.\n- Nevada: SB D+0.8, 538 D+0.7, Split Ticket D+1.0, NYT D<1, VoteHub D+0.3.\n- North Carolina: SB R+0.8, 538 R+0.9, Split Ticket R+0.5, NYT R<1, VoteHub R+0.7.\n- Pennsylvania: SB D+0.6, 538 D+0.7, Split Ticket D+1.0, NYT D<1, VoteHub D+0.7.\n- Wisconsin: SB D+0.8, 538 D+0.5, Split Ticket D+1.2, NYT D<1, VoteHub D+1.2.",
+        "quantities": [
+          {
+            "name": "SB national",
+            "value": "D+2.8",
+            "unit": "margin points",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "538 national",
+            "value": "D+2.4",
+            "unit": "margin points",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "Split Ticket national",
+            "value": "D+2.7",
+            "unit": "margin points",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "NYT national",
+            "value": "D+3",
+            "unit": "margin points",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "VoteHub national",
+            "value": "D+2.9",
+            "unit": "margin points",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "SB Pennsylvania",
+            "value": "D+0.6",
+            "unit": "margin points",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "SB Arizona",
+            "value": "R+1.6",
+            "unit": "margin points",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "SB Wisconsin",
+            "value": "D+0.8",
+            "unit": "margin points",
+            "context": "Oct 15 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "empirical_regularity",
+        "statement": "In a simple flat average of October 2024 national presidential polls, all polls showed Harris +3.0. Polls from Rosenberg-listed Republican-leaning firms showed Harris +2.0, and the remaining polls showed Harris +3.4. Republican-leaning firms were therefore 1.4 points more Trump-favorable than other firms, and 1.0 point more than the all-poll average.",
+        "quantities": [
+          {
+            "name": "all polls margin",
+            "value": "D+3.0",
+            "unit": "percentage points",
+            "context": "October 2024 national, flat average"
+          },
+          {
+            "name": "Republican-leaning margin",
+            "value": "D+2.0",
+            "unit": "percentage points",
+            "context": "October 2024 national"
+          },
+          {
+            "name": "non-Republican-leaning margin",
+            "value": "D+3.4",
+            "unit": "percentage points",
+            "context": "October 2024 national"
+          },
+          {
+            "name": "R-leaning vs non-R-leaning gap",
+            "value": "R+1.4",
+            "unit": "percentage points",
+            "context": "October 2024 national"
+          },
+          {
+            "name": "all vs R-leaning gap",
+            "value": "R+1.0",
+            "unit": "percentage points",
+            "context": "October 2024 national"
+          }
+        ],
+        "rationale": "Without quality weighting and house effect adjustment, these firms could push averages rightward.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris is ahead by 3.0 points nationally in this simple average. But when you look at only Republican-aligned firms, she's up by only 2.0 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "interpretation_guidance",
+        "statement": "A raw difference between partisan-aligned and nonpartisan polls does not show that those polls move a quality-weighted, house-effect-adjusted average. Moving such an average would require the polls to be added without adjustment.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "polling averages and forecasts would have to just toss these polls in the average without any adjustment. But that isn't happening.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "empirical_regularity",
+        "statement": "Restricting the Silver Bulletin national polling average to pollsters rated at least B- by Race to the White House (VoteHub's rule) and dropping all partisan polls changed the Harris lead little:\n- National: from 2.8 to 2.6 points.\n- Pennsylvania: Harris lead fell by 0.1 point.\n- Wisconsin: Trump gained 0.2 points.",
+        "quantities": [
+          {
+            "name": "full national lead",
+            "value": "2.8",
+            "unit": "percentage points",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "high-quality-only national lead",
+            "value": "2.6",
+            "unit": "percentage points",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "PA change",
+            "value": "-0.1",
+            "unit": "percentage points",
+            "context": "Harris lead"
+          },
+          {
+            "name": "WI Trump gain",
+            "value": "0.2",
+            "unit": "percentage points",
+            "context": "high-quality only"
+          },
+          {
+            "name": "rating threshold",
+            "value": "B-",
+            "unit": "rating",
+            "context": "Race to the White House pollster rating"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If we only include pollsters rated at least B- by VoteHub (they use pollster ratings from Race to the White House) and remove all partisan polls, her lead drops to 2.6 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "Running the 2024 Silver Bulletin model with only high-quality nonpartisan polls shifted win probabilities slightly toward Trump in most states. Harris win probabilities, full model vs high-quality-only model:\n- Electoral College: 50.2% vs 47.3% (Trump 49.5% vs 52.5%).\n- Arizona: 33.7% vs 28.0%.\n- Georgia: 39.2% vs 38.6%.\n- Michigan: 57.4% vs 49.6%.\n- Nevada: 56.8% vs 51.8%.\n- North Carolina: 37.2% vs 37.1%.\n- Pennsylvania: 53.2% vs 53.7%.\n- Wisconsin: 53.3% vs 51.2%.",
+        "quantities": [
+          {
+            "name": "Harris EC full",
+            "value": "50.2",
+            "unit": "percent",
+            "context": "Oct 15 2024 rerun"
+          },
+          {
+            "name": "Trump EC full",
+            "value": "49.5",
+            "unit": "percent",
+            "context": "Oct 15 2024 rerun"
+          },
+          {
+            "name": "Harris EC high quality",
+            "value": "47.3",
+            "unit": "percent",
+            "context": "high-quality only"
+          },
+          {
+            "name": "Trump EC high quality",
+            "value": "52.5",
+            "unit": "percent",
+            "context": "high-quality only"
+          },
+          {
+            "name": "Michigan Harris full/HQ",
+            "value": "57.4/49.6",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Arizona Harris full/HQ",
+            "value": "33.7/28.0",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Nevada Harris full/HQ",
+            "value": "56.8/51.8",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Pennsylvania Harris full/HQ",
+            "value": "53.2/53.7",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Wisconsin Harris full/HQ",
+            "value": "53.3/51.2",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Georgia Harris full/HQ",
+            "value": "39.2/38.6",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "North Carolina Harris full/HQ",
+            "value": "37.2/37.1",
+            "unit": "percent",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The Electoral College win probabilities in the full Silver Bulletin model run (Harris 50.2%, Trump 49.5%) do not sum to 100%. The remaining roughly 0.3% is presumably no Electoral College majority, i.e., a 269-269 tie.",
+        "quantities": [
+          {
+            "name": "residual",
+            "value": "0.3",
+            "unit": "percent",
+            "context": "full model, Oct 15 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "implied"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "Alongside the state polling average, the 2024 Silver Bulletin model has an alternative method of forecasting states based on regression analysis. When there is less polling, the model relies more heavily on this regression estimate.",
+        "quantities": [],
+        "rationale": "When polling is sparse, the model needs a substitute estimate for each state.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Since there's less polling overall, the model also defaults more to its alternative method of forecasting the states, which is based on regression analysis rather than a straight polling average.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "A 0.4-point uniform swing toward Harris in the Oct 15, 2024 Silver Bulletin model would have Harris winning about 54% of Electoral College simulations, up from roughly 50%. This sensitivity estimate shows how much the near-tied Electoral College forecast moves per point of uniform swing.",
+        "quantities": [
+          {
+            "name": "uniform swing",
+            "value": "0.4",
+            "unit": "percentage points",
+            "context": "effect of excluding Rosenberg-listed polls"
+          },
+          {
+            "name": "resulting Harris EC win share",
+            "value": "about 54",
+            "unit": "percent of simulations",
+            "context": "Oct 15 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "A 0.4 point uniform swing toward Harris would result in her winning about 54 percent of Electoral College simulations.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "design_principle",
+        "statement": "Silver Bulletin considers it indefensible to exclude polls because they show results favorable to one candidate. Trump-leaning results can reflect legitimate methodological differences, so the right response is adjustment rather than cherry-picked exclusion.",
+        "quantities": [],
+        "rationale": "Polling is hard, and there is room for legitimate differences in methodology.",
+        "model_version": "general principle",
+        "evidence_quote": "If you just lop off every poll that shows nice numbers for Trump, then of course the forecast would shift toward Harris, but that isn't a defensible practice.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver Bulletin criticizes Simon Rosenberg's list of 27 'Republican-aligned' pollsters as cherry-picking. Some firms on it, such as Echelon Insights, are high quality and rate well in the Silver Bulletin and 538 ratings, and some have no official or unofficial tie to the GOP.",
+        "quantities": [
+          {
+            "name": "Rosenberg-listed pollsters",
+            "value": "27",
+            "unit": "pollsters",
+            "context": "2024 cycle"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We suspect Rosenberg doesn't like them simply because they tend to show Trump-leaning results",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "Partisan alignment and quality are distinct. Rasmussen Reports is credibly alleged to share results with the Trump campaign, which no nonpartisan pollster should do, while Echelon Insights is Republican-associated but high quality in the Silver Bulletin ratings.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "other alleged zone-flooders, like Echelon Insights, are high-quality polling firms that get good marks in both the Silver Bulletin and 538 pollster ratings.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Campaign internal polls, such as Trump's internals showing a surge, are treated as not particularly informative.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "as his — not particularly informative — internal polls suggest",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Week-to-week movement in the polling average can be random variation around a stable true margin. With Harris truly up about 3 nationally and about 1 in the Blue Wall states, better and worse weeks are expected. Shifts of about 0.3 nationally and about 1 point in the states should not automatically be read as a trend.",
+        "quantities": [
+          {
+            "name": "national weekly change",
+            "value": "R+0.3",
+            "unit": "percentage points",
+            "context": "week to Oct 15 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "if Harris really is ahead nationally by 3 points and in the Blue Wall states by about 1 point we'd expect her to have better and worse weeks that vary around that average.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "Silver Bulletin polling-average tables follow these conventions:\n- Change from last week compares with the average 7 days before the latest update.\n- Change from last month compares with the average 30 days before.\n- Only contests surveyed by at least 3 distinct pollsters, or with at least 5 polls, are shown.",
+        "quantities": [
+          {
+            "name": "weekly change lookback",
+            "value": "7",
+            "unit": "days",
+            "context": ""
+          },
+          {
+            "name": "monthly change lookback",
+            "value": "30",
+            "unit": "days",
+            "context": ""
+          },
+          {
+            "name": "min distinct pollsters to display",
+            "value": "3",
+            "unit": "pollsters",
+            "context": ""
+          },
+          {
+            "name": "min polls to display",
+            "value": "5",
+            "unit": "polls",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "parameter_or_number",
+        "statement": "Silver Bulletin averages on Oct 15, 2024 (Harris-Trump vote shares, margin, change vs one week earlier):\n- National: 49.3-46.5, D+2.8, week change R+0.3.\n- Pennsylvania: 48.4-47.8, D+0.6, week change R+0.7.\n- Michigan: 48.4-47.4, D+1, week change R+0.9.\n- Wisconsin: 48.7-47.9, D+0.8, week change R+1.1.\n- North Carolina: R+0.8.\n- Georgia: R+0.9.\n- Arizona: R+1.6.\n- Nevada: D+0.8.\n- Florida: R+5.2.\n- Texas: R+6.2.\n- Minnesota: D+6.\n- New Mexico: D+7.9.",
+        "quantities": [
+          {
+            "name": "national Harris",
+            "value": "49.3",
+            "unit": "percent",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "national Trump",
+            "value": "46.5",
+            "unit": "percent",
+            "context": "Oct 15 2024"
+          },
+          {
+            "name": "PA margin",
+            "value": "D+0.6",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "MI margin",
+            "value": "D+1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "WI margin",
+            "value": "D+0.8",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "FL margin",
+            "value": "R+5.2",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "TX margin",
+            "value": "R+6.2",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "In mid-October 2024, the Silver Bulletin model identified Pennsylvania as the likeliest tipping-point state.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "In Pennsylvania — the likeliest tipping point state — our average is Harris +0.6.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "partisan pollster lean",
+        "insight": "In October 2024, Republican-aligned pollsters were modestly more favorable to Trump than other firms, about 1.4 points on the margin, rather than dramatically so.",
+        "evidence": "Flat averages of October national polls: D+2.0 for Republican-aligned firms vs D+3.4 for non-Republican-aligned firms.",
+        "forecasting_implication": "House effect adjustment and quality weighting are sufficient to neutralize partisan firms. Excluding them yields small shifts of about 0.4 points."
+      },
+      {
+        "topic": "post-debate bounce fading",
+        "insight": "Mid-October tightening toward Trump may reflect the tail end of Harris's post-debate bounce, random noise, or the start of a Trump surge.",
+        "evidence": "Trump gained 0.3 points nationally in a week, and about 0.7-1.1 points in PA, MI and WI.",
+        "forecasting_implication": "Avoid overreacting to small weekly moves."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin pollster ratings",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin methodology on house effects and the regression-based alternative state forecasting method",
+        "url": ""
+      },
+      {
+        "description": "Race to the White House pollster ratings (used by VoteHub)",
+        "url": ""
+      },
+      {
+        "description": "Simon Rosenberg's list of Republican-aligned pollsters and 'flooding the zone' posts",
+        "url": ""
+      },
+      {
+        "description": "Split Ticket, 538, NYT and VoteHub polling averages",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "The exact functional form of the pollster-quality weights in the Silver Bulletin average.",
+      "How house effects are estimated and how strongly they are shrunk toward zero.",
+      "What treatment the 'Republican partisan poll' designation triggers (e.g., an extra adjustment or a weight penalty).",
+      "How the regression-based state estimate is blended with the polling average as a function of poll volume.",
+      "Why Big Data Poll, Quantus, SoCal Data and ActiVote are excluded from the Silver Bulletin average.",
+      "The number of simulations used in the 2024 model."
+    ]
+  }
+}

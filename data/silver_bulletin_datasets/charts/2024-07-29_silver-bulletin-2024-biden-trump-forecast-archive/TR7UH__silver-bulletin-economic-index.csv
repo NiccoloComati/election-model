@@ -1,0 +1,8 @@
+indicator,current_zscore,projected_zscore,current_cat,proj_cat
+Real disposable personal income,-0.6186279,-0.6510327,N,N
+Consumer price index,0.126435,0.451368,P,P
+Nonfarm payrolls,0.2687739,0.2183681,P,P
+Industrial production,-0.1279012,0.0181047,N,P
+Personal consumption expenditures,-0.1665608,-0.2254949,N,N
+S&P 500,1.058744,0.6354098,P,P
+Average of all six indicators,0.0901438,0.0744538,P,P

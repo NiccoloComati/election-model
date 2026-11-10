@@ -1,0 +1,419 @@
+{
+  "article": {
+    "date": "2024-11-04",
+    "title": "The polls are close, but that doesn’t mean the results will be",
+    "subtitle": "A normal polling error in either direction could give either candidate a decisive victory.",
+    "authors": "Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/the-polls-are-close-but-that-doesnt",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-11-03_the-polls-are-close-but-that-doesnt-mean-the-results-will-be"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.302683,
+    "prompt_tokens": 4,
+    "completion_tokens": 5379,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 24346,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:21:08"
+  },
+  "extraction": {
+    "summary": "Written two days before the 2024 election, the article argues that a race that is close in the polls can still end in a lopsided result, because a normal polling error in either direction would sweep the battleground states. The Silver Bulletin presidential model's national popular vote forecast (Harris +2.1) is built from state-by-state estimates rather than national polls, and its standard deviation of 3.1 points is mostly based on national polling accuracy since 1936. Applying a uniform 3.1-point error to the swing states, or repeating the state-level errors of 2012, 2016 and 2020, produces decisive wins for one side or the other. A footnote describes the simulation's three error components: a national uniform swing, state-specific idiosyncratic error, and demographic/geographic error terms. A regional scenario table that zeroes out the national swing shows how Harris's win probability responds to 3.1-point regional errors. The post is marked paid, but the text appears complete.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages"
+    ],
+    "findings": [
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin 2024 presidential model's projection of the national popular vote is formulated mostly from its state-by-state estimates rather than from national polls. As a result it can diverge from the national polling average.",
+        "quantities": [
+          {
+            "name": "Projected national popular vote margin",
+            "value": "Harris +2.1",
+            "unit": "percentage points",
+            "context": "Nov 3, 2024 model projection"
+          },
+          {
+            "name": "National polling average margin",
+            "value": "Harris +0.9",
+            "unit": "percentage points",
+            "context": "Nov 3, 2024; described as 'about 1 point' in the main text"
+          }
+        ],
+        "rationale": "Strong state polls in usually non-competitive states (e.g., Iowa) pull the state-built national estimate toward Harris.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Rather, it's formulated from our state-by-state estimates.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "parameter_or_number",
+        "statement": "As of Nov 3, 2024, 43 states had at least one poll meeting Silver Bulletin standards for inclusion in the presidential model.",
+        "quantities": [
+          {
+            "name": "States with at least one qualifying poll",
+            "value": "43",
+            "unit": "states",
+            "context": "Nov 3, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We're up to 43 states with at least one poll that meets our standards.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "The 2024 Silver Bulletin forecast of the national popular vote margin had a standard deviation of 3.1 points on the eve of the election. This value is mostly based on the historical accuracy of national polls in elections since 1936.",
+        "quantities": [
+          {
+            "name": "Standard deviation of popular vote margin forecast",
+            "value": "3.1",
+            "unit": "percentage points",
+            "context": "Nov 3, 2024"
+          },
+          {
+            "name": "Start year of historical polling accuracy data",
+            "value": "1936",
+            "unit": "year",
+            "context": "basis for the SD"
+          }
+        ],
+        "rationale": "The uncertainty is calibrated to the empirical history of national polling error.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it has a standard deviation of 3.1 points. That number is mostly based on how accurate — or inaccurate — national polls have been in elections since 1936.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "A 'normal' polling error is defined as one within one standard deviation (3.1 points) of the forecast, which should happen about two-thirds of the time. On Nov 3, 2024 that meant a range of about Harris +5 to Trump +1 in the popular vote.",
+        "quantities": [
+          {
+            "name": "Probability of result within 1 SD",
+            "value": "about two-thirds",
+            "unit": "",
+            "context": "normal-distribution interpretation"
+          },
+          {
+            "name": "1-SD range",
+            "value": "Harris +5 to Trump +1",
+            "unit": "percentage points",
+            "context": "popular vote, Nov 3, 2024"
+          }
+        ],
+        "rationale": "Such errors are in the thick part of the distribution rather than in the tails.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The actual result should fall within one standard deviation of our forecast about two-thirds of the time",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model's simulations include essentially three types of error. The first is a national error applied as a uniform swing. The second is state-specific error from states behaving idiosyncratically. The third is a series of demographic and geographic error terms, for example Trump overperforming in states with more Hispanics, or Harris overperforming in dense urban areas.",
+        "quantities": [
+          {
+            "name": "Number of error types",
+            "value": "3",
+            "unit": "",
+            "context": "simulation error structure"
+          }
+        ],
+        "rationale": "Polling error does not move the same way in every state; correlated demographic and regional errors matter.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we calculate essentially three types of error: national error following a uniform swing, state-specific error based on individual states behaving idiosyncratically, and a series of demographic and geographic error terms",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "The model's simulations allow correlated regional polling errors, so that in some simulations Harris outperforms her polls in the Midwest while in others Trump overachieves in the Northeast.",
+        "quantities": [],
+        "rationale": "Errors are often regional, as in 2016.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We account for these possibilities in our forecast. In some simulations, Harris outperforms her polls in the Midwest, while in others Trump overachieves in the Northeast.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "For the regional scenario analysis, the analysts used four regions (Northeast, West, South, Midwest) defined at the county level, so some states are split across regions. Each region was assigned a 3.1-point error toward D, a 3.1-point error toward R, or no error (N), giving 81 combinations, and the national uniform swing was zeroed out.",
+        "quantities": [
+          {
+            "name": "Regional error size",
+            "value": "3.1",
+            "unit": "percentage points",
+            "context": "applied per region"
+          },
+          {
+            "name": "Number of regions",
+            "value": "4",
+            "unit": "",
+            "context": "Northeast, West, South, Midwest"
+          },
+          {
+            "name": "Number of combinations",
+            "value": "81",
+            "unit": "scenarios",
+            "context": "3^4; the table spans 4 pages"
+          }
+        ],
+        "rationale": "Zeroing the swing isolates the effect of regional swings when there is no uniform polling error.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "For purposes of this exercise, we zeroed out the national swing, since our goal is to see the effect of regional swings if there isn't a uniform polling error.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "parameter_or_number",
+        "statement": "In the regional scenario table, Harris's Electoral College win probability was 96.1% (311 average EVs) with D errors in all four regions. With D errors in the Northeast, West and South and no error in the Midwest it was 88.5% (300 EVs). With a Midwest R error and the other three regions D it was 72.5% (284 EVs). With no errors anywhere (D, N, N, N) it was 61.9% (273 EVs).",
+        "quantities": [
+          {
+            "name": "DDDD (NE, W, S, MW)",
+            "value": "96.1% / 311",
+            "unit": "win prob / EVs",
+            "context": "Nov 3, 2024"
+          },
+          {
+            "name": "DDDN",
+            "value": "88.5% / 300",
+            "unit": "win prob / EVs",
+            "context": ""
+          },
+          {
+            "name": "DDDR",
+            "value": "72.5% / 284",
+            "unit": "win prob / EVs",
+            "context": ""
+          },
+          {
+            "name": "DNNN",
+            "value": "61.9% / 273",
+            "unit": "win prob / EVs",
+            "context": "Northeast D only"
+          },
+          {
+            "name": "DNRN",
+            "value": "49.0% / 264",
+            "unit": "win prob / EVs",
+            "context": ""
+          },
+          {
+            "name": "DNRR",
+            "value": "13.4% / 248",
+            "unit": "win prob / EVs",
+            "context": ""
+          },
+          {
+            "name": "DDNR",
+            "value": "39.0% / 266",
+            "unit": "win prob / EVs",
+            "context": ""
+          },
+          {
+            "name": "DDRR",
+            "value": "21.7% / 256",
+            "unit": "win prob / EVs",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "parameter_or_number",
+        "statement": "With the national swing zeroed out, a 3.1-point Harris overperformance in the Midwest alone gives her a 69% chance of winning. A Midwest overperformance combined with Trump overperforming in the South and West gives her 36%.",
+        "quantities": [
+          {
+            "name": "Harris win prob, Midwest D only",
+            "value": "69",
+            "unit": "percent",
+            "context": "regional scenario"
+          },
+          {
+            "name": "Harris win prob, Midwest D with South and West R",
+            "value": "36",
+            "unit": "percent",
+            "context": "regional scenario"
+          }
+        ],
+        "rationale": "The Midwest D scenario gives Harris a good chance of carrying all three Blue Wall states.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If Harris overperforms in the Midwest but the polls are accurate elsewhere, she has a 69 percent chance of winning the race.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Because the race was so close, applying a uniform 3.1-point polling error flips every swing state to one side. A Trump-favoring error puts him ahead in all 7 by at least 2 points and wins him 312 EVs. A Harris-favoring error wins her all 7, with a smallest margin of 0.7 points in Arizona, and 319 EVs.",
+        "quantities": [
+          {
+            "name": "Trump EVs with 3.1-pt R error",
+            "value": "312",
+            "unit": "electoral votes",
+            "context": ""
+          },
+          {
+            "name": "Harris EVs with 3.1-pt D error",
+            "value": "319",
+            "unit": "electoral votes",
+            "context": ""
+          },
+          {
+            "name": "Harris smallest swing-state margin",
+            "value": "0.7",
+            "unit": "percentage points",
+            "context": "Arizona"
+          },
+          {
+            "name": "PA polling average",
+            "value": "Trump +0.3",
+            "unit": "percentage points",
+            "context": "Nov 3, 2024"
+          },
+          {
+            "name": "MI polling average",
+            "value": "D +1.1",
+            "unit": "percentage points",
+            "context": ""
+          },
+          {
+            "name": "WI polling average",
+            "value": "D +0.9",
+            "unit": "percentage points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "A normal polling error of 3.1 points in his favor would put him ahead in all 7 by at least two points. He'd win 312 electoral votes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "design_principle",
+        "statement": "The direction of polling error is treated as essentially unpredictable in advance. Past errors (2016 and 2020 underestimating Trump) are not used to predict the direction of error in 2024.",
+        "quantities": [],
+        "rationale": "Two elections is a small sample, polls underestimated Obama in 2012, and pollsters have worked to correct their methods.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "past error really won't tell you much about how things will go this year. Two is a small sample size",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Applying past state-level polling errors (data from the New York Times) to the 2024 swing-state averages gives three different maps. Under 2020 errors, Trump leads by AZ +4.4, GA +2.3, MI +4.0, NV +3.4, NC +4.1, PA +4.4, WI +8.1. Under 2016 errors, the margins are AZ +3.4, GA +3.3, MI +2.0, NV -0.1, NC +7.1, PA +5.4, WI +4.1. Under 2012 errors, they are AZ +2.9, GA -0.7, MI -6.0, NV -3.6, NC +0.1, PA -0.6, WI -3.9. Positive values indicate a Republican advantage.",
+        "quantities": [
+          {
+            "name": "WI under 2020 error",
+            "value": "+8.1",
+            "unit": "points R",
+            "context": ""
+          },
+          {
+            "name": "NV under 2016 error",
+            "value": "-0.1",
+            "unit": "points (D lead)",
+            "context": ""
+          },
+          {
+            "name": "MI under 2012 error",
+            "value": "-6.0",
+            "unit": "points (D lead)",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Herding (pollsters publishing only results that match the consensus) may raise the risk of a systematic polling error.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "a systematic polling error is always possible, perhaps especially if you think pollsters are herding",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "A tossup forecast does not imply a close result. Readers are advised to embrace uncertainty and not to be surprised if state winners don't follow the current polling averages.",
+        "quantities": [
+          {
+            "name": "Forecast win probability",
+            "value": "around 50/50",
+            "unit": "",
+            "context": "since mid-September 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Either candidate could win and with a normal polling error, either candidate could win by a lot.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "regional polling error",
+        "insight": "Polling errors are often regional. In 2016 the polls were fairly accurate in the West, while the big misses came east of the Mississippi, especially in the Upper Midwest.",
+        "evidence": "A 2016 shift map from Obama 2012 to Clinton",
+        "forecasting_implication": "Model correlated regional and demographic error terms, not only a uniform national swing."
+      },
+      {
+        "topic": "mixed-direction errors",
+        "insight": "In the 2022 midterms, polls were biased toward Republicans in competitive races in Arizona and Pennsylvania but were slightly too favorable to Democrats overall.",
+        "evidence": "",
+        "forecasting_implication": "State-level error can diverge in sign from the national error."
+      },
+      {
+        "topic": "polarization and landslides",
+        "insight": "In today's polarized environment, about 319 electoral votes from a sweep of the swing states is what passes for a landslide.",
+        "evidence": "",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "direction of polling error",
+        "insight": "The direction of polling misses has alternated: polls underestimated Obama in 2012 and Trump in 2016 and 2020.",
+        "evidence": "",
+        "forecasting_implication": "Do not build in a directional bias based on recent cycles."
+      }
+    ],
+    "references": [
+      {
+        "description": "New York Times data on historical state polling errors",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin piece on pollsters herding",
+        "url": ""
+      },
+      {
+        "description": "Uniform swing explainer (linked)",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact variances of, and correlation structure among, the national, state and demographic/geographic error components",
+      "Full list of the demographic and geographic error terms used in the simulations",
+      "How the 3.1-point SD translates into the state-level SD, and whether fat-tailed distributions are used",
+      "How state estimates are aggregated into the national popular vote projection (turnout weighting)",
+      "Exact county-level definitions of the four regions"
+    ]
+  }
+}

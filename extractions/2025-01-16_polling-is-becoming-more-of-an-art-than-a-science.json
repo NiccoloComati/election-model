@@ -1,0 +1,365 @@
+{
+  "article": {
+    "date": "2025-01-16",
+    "title": "Polling is becoming more of an art than a science",
+    "subtitle": "We asked pollsters what went wrong — and right — in 2024, and what’s in store for 2026.",
+    "authors": "Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/polling-is-becoming-more-of-an-art",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2025-01-16_polling-is-becoming-more-of-an-art-than-a-science"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.472959,
+    "prompt_tokens": 4,
+    "completion_tokens": 6172,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 43648,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:24:35"
+  },
+  "extraction": {
+    "summary": "Eli McKown-Dawson interviews pollsters (Nate Cohn, Natalie Jackson, Patrick Ruffini, Andrei Roman, Mark Blumenthal) about 2024 polling performance and likely changes before 2026. Polls missed by about 2.5 points nationally and 2 points in the average swing state. That is slightly below average error, but it underestimated Trump for the third straight presidential cycle. The midterm polls of 2018 and 2022 showed little bias. Pollsters disagree on whether the Republican underestimation is specific to Trump or reflects broader partisan nonresponse. Big methodological changes are not expected, though more pollsters will likely control for partisanship through recalled-vote or party weighting. For forecasters, the article explains why heavy weighting reduces poll-to-poll variance, which makes herding harder to detect, and notes that Silver Bulletin pollster ratings will be updated.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "Silver Bulletin pollster ratings"
+    ],
+    "findings": [
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "In the 2024 presidential election, polls missed by about 2.5 points nationally and about 2 points in the average swing state. Silver Bulletin characterizes this as slightly below-average polling error.",
+        "quantities": [
+          {
+            "name": "2024 national polling error",
+            "value": "about 2.5",
+            "unit": "percentage points",
+            "context": "2024 presidential, national popular vote"
+          },
+          {
+            "name": "2024 average swing-state polling error",
+            "value": "2",
+            "unit": "percentage points",
+            "context": "2024 presidential, average swing state"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the polls missed by about 2.5 points nationally and 2 points in the average swing state.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Polls underestimated Trump in three consecutive presidential cycles (2016, 2020, 2024), so systematic polling bias has run in the same direction repeatedly. The 2024 error was smaller than in 2016 and 2020.",
+        "quantities": [
+          {
+            "name": "consecutive cycles underestimating Trump",
+            "value": "3",
+            "unit": "cycles",
+            "context": "2016, 2020, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "They underestimated Trump for the third time in a row after pollsters spent the cycle trying to avoid that exact result.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Midterm polls in 2018 and 2022 showed little overall partisan bias. The Republican-underestimation pattern has appeared mainly in elections with Trump on the ballot, so it is unclear whether it will carry over to the 2026 midterms.",
+        "quantities": [],
+        "rationale": "Jackson's hypothesis is that Trump draws out low-propensity voters who don't vote in midterms.",
+        "model_version": "general principle; relevant to FLIPR 2026",
+        "evidence_quote": "The 2018 and 2022 polls performed well on this front, with little overall bias.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "A 1-point lead in a poll should not be reported as a candidate 'leading', because that grossly overstates poll precision. Error much lower than 2024's level should not be expected. Blumenthal says being within about 1.5 points of the target is good performance given non-random samples.",
+        "quantities": [
+          {
+            "name": "error Blumenthal considers good",
+            "value": "a point-and-a-half",
+            "unit": "percentage points",
+            "context": "error relative to the true value, given non-random samples"
+          }
+        ],
+        "rationale": "Polls no longer acquire effectively random samples.",
+        "model_version": "general principle",
+        "evidence_quote": "Although headlines might tout a mere 1-point advantage in a poll as a candidate “leading,” that grossly overstates the precision of polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "AtlasIntel's CEO argues the smaller pro-Democratic bias in 2024 may reflect luck from a tighter race rather than methodological improvement. A forecaster should therefore not assume the systematic bias has been fixed.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "maybe that was actually more luck than a methodological improvement.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Silver Bulletin will give its official assessment of 2024 poll accuracy through an update of its pollster ratings.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings (post-2024 update)",
+        "evidence_quote": "For the Official Silver Bulletin Take, you’ll have to wait until we update our pollster ratings.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "empirical_regularity",
+        "statement": "AtlasIntel is one of the highest-rated pollsters in the Silver Bulletin pollster ratings and pretty much nailed the 2024 results.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "AtlasIntel — one of our highest-rated pollsters — pretty much nailed the results this year.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "interpretation_guidance",
+        "statement": "Judging polls by whether they 'call' the correct winner is misleading in close races. Polls should be judged by the size of their error.",
+        "quantities": [],
+        "rationale": "In close races, small errors flip the apparent winner.",
+        "model_version": "general principle",
+        "evidence_quote": "often, polls are evaluated by whether they “call” the correct winner, and with such a close presidential race in many states",
+        "explicitness": "implied"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2016 most polls included too many college graduates, who respond to surveys more and lean Democratic. Afterward, the share of polls weighting by education rose sharply.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle (2016 lesson)",
+        "evidence_quote": "In 2016, most polls included too many college graduates, who are more likely to respond to surveys and also more likely to vote for Democrats.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "A Schaffner/Soler chart of national polls (July 24 to Sept 25, 2024) shows the share of polls weighting on each factor, 2016 vs 2024 (approximate):\n- Age: ~87% to ~98%\n- Race: ~94% to ~95%\n- Gender: ~87% to ~95%\n- Education: ~57% to ~83%\n- Region: ~55% to ~68%\n- Party: ~21% to ~43%\n- Past vote: ~6% to ~33%\n- Urban/suburban/rural: ~0% to ~18%\n- Income: ~23% to ~18%\n- Home ownership: ~6% to ~10%\n- Marital status: ~11% to ~8%",
+        "quantities": [
+          {
+            "name": "polls weighting on education",
+            "value": "~57 (2016) to ~83 (2024)",
+            "unit": "percent of polls",
+            "context": "national pre-election polls"
+          },
+          {
+            "name": "polls weighting on party",
+            "value": "~21 (2016) to ~43 (2024)",
+            "unit": "percent of polls",
+            "context": "national pre-election polls"
+          },
+          {
+            "name": "polls weighting on past vote",
+            "value": "~6 (2016) to ~33 (2024)",
+            "unit": "percent of polls",
+            "context": "national pre-election polls"
+          },
+          {
+            "name": "polls weighting on urbanicity",
+            "value": "~0 (2016) to ~18 (2024)",
+            "unit": "percent of polls",
+            "context": "national pre-election polls"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "empirical_regularity",
+        "statement": "A Pew chart shows national public pollsters rose from about 29 in 2000 (nearly all live phone) to more than double by 2022, with methods diversifying. The 2022 counts by method:\n- Online opt-in only: 28\n- ABS with multiple modes: 7\n- Probability panel only: 7\n- Other: 7\n- Online opt-in plus live phone: 4\n- IVR alone or with other methods: 4\n- Live phone RDD only: 4\n- Online opt-in, probability panel and live phone: 3\n- Probability panel plus live phone: 3\n- Live phone RBS only: 2",
+        "quantities": [
+          {
+            "name": "national public pollsters in 2000",
+            "value": "About 29",
+            "unit": "pollsters",
+            "context": "Pew analysis"
+          },
+          {
+            "name": "online opt-in only pollsters 2022",
+            "value": "28",
+            "unit": "pollsters",
+            "context": "Pew analysis"
+          },
+          {
+            "name": "live phone RDD only 2022",
+            "value": "4",
+            "unit": "pollsters",
+            "context": "Pew analysis"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "empirical_regularity",
+        "statement": "Pollsters use heterogeneous sampling frames:\n- NYT/Siena samples from voter registration files.\n- YouGov uses nonprobability sampling from an online panel.\n- CNN uses a probability-recruited panel sampled nonprobabilistically for later surveys.\nBecause raw data are nonrepresentative, poll quality is now largely determined by the rigor of weighting.",
+        "quantities": [],
+        "rationale": "The RDD gold standard of high-response random samples no longer exists.",
+        "model_version": "general principle",
+        "evidence_quote": "The distinction, in my mind, between high-quality and low-quality [polls] is the rigor of the weighting methods.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "Cohn found that weighting to recalled vote would have made polls less accurate in every presidential election since 2004. In 2024 it appears to have helped in most states but struggled with changes in electorate composition, so toplines may have been better while crosstabs were worse. NYT/Siena does not weight on recalled vote.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "weighting to recall would have made polls less accurate in every presidential election since 2004.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "By Cohn's count, most pollsters were already weighting on recalled vote in 2024. That leaves limited room for further adoption, a ceiling on how much this technique can further improve polls.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "most pollsters already were weighting on recalled vote by my count.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "assumption",
+        "statement": "Silver Bulletin expects even fewer 2026 polls to lack a partisanship control (recalled vote, party registration, or similar). Ann Selzer's Iowa miss is cited as evidence that minimal-weighting approaches no longer work.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2026 midterms outlook",
+        "evidence_quote": "Ann Selzer’s miss in Iowa gave pollsters even more evidence that the old-school, minimal-weighting approach just doesn’t work anymore.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "method",
+        "statement": "Pollsters have proposed variant partisan controls:\n- Cohn suggests weighting on past vote using a pollster's prior three polls rather than the last election's result.\n- Jackson suggests weighting only the skewed subgroups (e.g., white voters) on recall, since subgroups are rarely equally off.",
+        "quantities": [
+          {
+            "name": "prior polls used for recall weighting",
+            "value": "three",
+            "unit": "polls",
+            "context": "Cohn's proposed approach"
+          }
+        ],
+        "rationale": "These approaches avoid committing to the last election's outcome as the target and prevent extreme outliers.",
+        "model_version": "general principle",
+        "evidence_quote": "pollsters might choose to weight on past vote across their prior three polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "method",
+        "statement": "AtlasIntel attributes its 2024 accuracy partly to turnout modeling that anticipated a differential turnout advantage for Trump. Roman argues that recalled-vote weighting makes sense only if partisan turnout is expected to be similar, and helps less when one side is more engaged.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "It makes sense to weight on vote recall if you think turnout will be more or less the same… between Democrats and Republicans.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "method",
+        "statement": "Public media polls typically fix a weighting scheme in advance for transparency, while private pollsters adjust dynamically. AtlasIntel dynamically adjusts sampling and weights based on changing response rates late in the cycle, such as one side's supporters becoming more likely to answer polls.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "So it’s quite important to understand response rates, and based on that analysis, incorporate changes in how you figure out your weights.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Herding means pollsters withholding results that differ from consensus, or tweaking likely-voter models until they match. Weighting on variables correlated with vote choice, such as past vote and party, reduces poll-to-poll variance by design. That makes low variance an unreliable signal of herding, and Blumenthal sees it as the main reason aggregates show less variation.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "When pollsters weight on things that are correlated with future vote choice — like past vote choice — you’d expect less variance than you would with a truly random unweighted sample.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Pollsters face competing incentives:\n- Reputational risk encourages herding, especially in tight races, toward the average and toward 'no clear winner'.\n- Trump's lawsuit against Selzer will likely make pollsters more nervous about releasing outliers.\n- Some pollsters, e.g. those not weighting on education, may publish high-variance outliers because they attract headlines.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "It’s easier to be wrong with everyone else and to say “let’s analyze what the industry did wrong” than to be wrong on your own",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "Trump-specific polling bias",
+        "insight": "Pollsters disagree on whether Republican underestimation is Trump-specific or reflects broader partisan nonresponse among less-educated, low-propensity voters. Jackson leans Trump-specific, contingent on whether the 2028 nominee (e.g., Vance vs Haley) inherits his low-propensity coalition. Cohn and Ruffini see it as broader.",
+        "evidence": "Underestimation in 2016/2020/2024 but not in 2018/2022. Ruffini cites growing evidence of Senate polls underestimating Republicans. Cohn cites 2000s surveys with too many college grads in unweighted data.",
+        "forecasting_implication": "Uncertainty about the direction of systematic polling bias may need to differ when Trump is versus isn't on the ballot. 2026 Senate results will be a test."
+      },
+      {
+        "topic": "coalition shifts",
+        "insight": "Polls correctly detected movement toward the GOP among nonwhite and younger voters across recent cycles.",
+        "evidence": "Ruffini's 2023 book and campaign experience.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "incumbent-administration dissatisfaction",
+        "insight": "Questions on the economy, immigration, and Biden's approval, plus Harris's inability to separate from the administration, were leading indicators of Trump's 2024 win.",
+        "evidence": "Jackson's reading of 2024 polling data.",
+        "forecasting_implication": "Supports using incumbent approval and economic sentiment as fundamentals for the incumbent party's successor candidate."
+      },
+      {
+        "topic": "2026 midterm environment",
+        "insight": "2026 is a midterm in which Democrats are expected to fare well.",
+        "evidence": "",
+        "forecasting_implication": "Consistent with a midterm penalty for the president's party."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin pollster ratings (to be updated post-2024)",
+        "url": ""
+      },
+      {
+        "description": "Pew Research Center, 'How Public Polling Has Changed in the 21st Century'",
+        "url": ""
+      },
+      {
+        "description": "Brian Schaffner and Caroline Soler analysis of survey weights in 2024 national polls",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin article on herding before the 2024 election",
+        "url": ""
+      },
+      {
+        "description": "Cohn analysis showing recalled-vote weighting would have reduced accuracy since 2004",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What the updated Silver Bulletin pollster ratings conclude about 2024 accuracy and bias.",
+      "Whether Silver Bulletin models treat systematic polling bias differently in midterms vs Trump-on-ballot elections.",
+      "How (or whether) Silver Bulletin detects herding given that partisan weighting legitimately reduces variance."
+    ]
+  }
+}

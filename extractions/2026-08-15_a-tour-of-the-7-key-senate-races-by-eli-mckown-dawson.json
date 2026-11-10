@@ -1,0 +1,367 @@
+{
+  "article": {
+    "date": "2026-08-15",
+    "title": "A tour of the 7 key Senate races",
+    "subtitle": "There’s a 71 percent chance this is where control of the chamber is decided.",
+    "authors": "Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/a-tour-of-the-7-key-senate-races",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-08-15_a-tour-of-the-7-key-senate-races-by-eli-mckown-dawson"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:34:20"
+  },
+  "extraction": {
+    "summary": "Model Talk by Eli McKown-Dawson touring the seven Senate races most likely to be the tipping point in FLIPR in August 2026: Texas, Ohio, Iowa, Maine, Michigan, Alaska and North Carolina. Together they have a 71 percent chance of deciding control. For each state the piece shows how simple fundamentals (generic ballot plus partisan lean), fancy fundamentals (candidate factors) and polls combine. It reveals several implementation details: scandals collapse to the most recent one; experience and incumbency count only for elected officeholders; party-loyalty scores apply only to incumbents, so non-incumbents' ideology is not modeled; and late-replacement candidates get proxy fundraising. It also defines rating categories by win probability.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "FLIPR 2026 midterms model (Lite, Classic, Deluxe)"
+    ],
+    "findings": [
+      {
+        "component": "generic_ballot_and_national_environment",
+        "finding_type": "parameter_or_number",
+        "statement": "As of August 15, 2026, FLIPR's forecast for the national House popular vote was D+7.2. If the national popular vote is under about D+6, Republicans are clear favorites to retain the Senate.",
+        "quantities": [
+          {
+            "name": "forecast national popular vote",
+            "value": "D+7.2",
+            "unit": "points",
+            "context": "Aug 15, 2026"
+          },
+          {
+            "name": "Senate threshold",
+            "value": "D+6",
+            "unit": "points",
+            "context": "2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "As of today, our forecast for the popular vote is D +7.2.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "method",
+        "statement": "FLIPR collapses all of a candidate's scandals into a single line, essentially keeping only the most recent one, which is lenient to candidates like Ken Paxton who have several.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "it collapses all scandals, however many there are, into a single line, essentially keeping only the most recent one.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "parameter_or_number",
+        "statement": "Worked example from Texas: simple fundamentals (generic ballot plus Texas partisan lean) gave R+3.4, versus R+14 in 2024. Fancy fundamentals, driven by Paxton's scandals and Talarico's fundraising edge ($65M vs $9M by mid-July), gave D+9.2. The blended fundamentals were D+3.1, with the polling average at Talarico +1.9.",
+        "quantities": [
+          {
+            "name": "Texas simple fundamentals",
+            "value": "R+3.4",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Texas fancy fundamentals",
+            "value": "D+9.2",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Texas blended fundamentals",
+            "value": "D+3.1",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Talarico fundraising",
+            "value": "65",
+            "unit": "million USD",
+            "context": "mid-July"
+          },
+          {
+            "name": "Paxton fundraising",
+            "value": "9",
+            "unit": "million USD",
+            "context": "mid-July"
+          }
+        ],
+        "rationale": "The more partisan the climate, the more FLIPR leans on simple fundamentals.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "The more partisan the background climate, the more FLIPR takes advantage of the simple fundamentals hedge.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "method",
+        "statement": "FLIPR gives incumbency and the full experience bonus only to elected officeholders. An appointed senator such as Jon Husted in Ohio gets no credit for being a senator, and races with appointed incumbents are treated as open seats.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "the model only gives incumbency and the full candidate experience bonus to elected incumbents",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "Ohio example: simple fundamentals R+3, fancy fundamentals D+1.6 (Sherrod Brown as a strong former senator who ran 8 points ahead of Harris in 2024, against an appointed incumbent), final fundamentals R+0.6, polling average Brown +3.2, Democratic win probability 62 percent.",
+        "quantities": [
+          {
+            "name": "Ohio fancy fundamentals",
+            "value": "D+1.6",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Ohio final fundamentals",
+            "value": "R+0.6",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Ohio D win prob",
+            "value": "62",
+            "unit": "percent",
+            "context": "Aug 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Our final fundamentals estimate thus shows an essentially neutral environment in Ohio: R +0.6.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "method",
+        "statement": "FLIPR uses a candidate's past election margin only for incumbents, not challengers.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR uses the past election margin only for incumbents and not challengers.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "Maine example: simple fundamentals D+15; candidate-specific fancy fundamentals R+11, reflecting Collins's cash advantage, history of overperformance and incumbency; final fundamentals D+1.8; polls Jackson +3; Democratic win probability 70 percent.",
+        "quantities": [
+          {
+            "name": "Maine simple fundamentals",
+            "value": "D+15",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Maine fancy fundamentals",
+            "value": "R+11",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Maine final fundamentals",
+            "value": "D+1.8",
+            "unit": "points",
+            "context": "Aug 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "adding in candidate-specific information takes Maine all the way to R +11, and the model’s final fundamentals estimate is a tight D +1.8.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "method",
+        "statement": "Candidates who enter on an emergency basis, such as Troy Jackson in Maine or Darline Graham in South Carolina, get a partial mulligan: they are treated as having below-average but nonzero fundraising until they file reports.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "the model essentially gives a partial mulligan to candidates who enter the race on an emergency basis",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "FLIPR uses party-loyalty scores (a bonus for breaking with one's party, usually moderates) only for congressional incumbents, and does not estimate subjective ideology scores for the hundreds of non-incumbents. Candidate ideology, such as Abdul El-Sayed's progressivism, is therefore a known gap that shows up only implicitly through polls and expert ratings.",
+        "quantities": [],
+        "rationale": "Subjective ideology scoring for hundreds of challengers is impractical.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "So this is a known limitation of the system",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "parameter_or_number",
+        "statement": "Michigan example: baseline D+8 from Trump's 1.4-point 2024 win plus the national environment; fancy fundamentals D+11, since El-Sayed's individual fundraising offsets his lack of elected experience; polling average R+1, with a Democratic super PAC poll among inputs; Democratic win probability 68 percent, betting that Haley Stevens supporters return.",
+        "quantities": [
+          {
+            "name": "Michigan simple fundamentals",
+            "value": "D+8",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Michigan fancy fundamentals",
+            "value": "D+11",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Michigan polling average",
+            "value": "R+1",
+            "unit": "points",
+            "context": "Aug 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "our model’s fancy fundamentals actually give Democratic candidate Abdul El-Sayed the edge and push the environment to D +11.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "method",
+        "statement": "FLIPR's elected-experience variable counts only elected positions; appointed posts such as El-Sayed's Wayne County Health Director role do not count.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "El-Sayed’s previous positions like Wayne County Health Director were appointed, not elected ones",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "interpretation_guidance",
+        "statement": "FLIPR is described as consensus-driven: in Florida, simple fundamentals were competitive (R+2.5) but polls (Moody +6) and expert ratings both favored the Republican, so two of three layers outweighed the equivocal fundamentals, giving Democrats 22 percent.",
+        "quantities": [
+          {
+            "name": "Florida simple fundamentals",
+            "value": "R+2.5",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Florida D win prob",
+            "value": "22",
+            "unit": "percent",
+            "context": "Deluxe, Aug 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR is a consensus-driven model, and with two of the three layers (polls and experts) clearly favoring Moody, that outweighs the more equivocal fundamentals.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "method",
+        "statement": "FLIPR race ratings are based on win probability; a party with more than 75 percent but less than 95 percent is rated 'likely'.",
+        "quantities": [
+          {
+            "name": "'likely' rating range",
+            "value": "75-95",
+            "unit": "percent win probability",
+            "context": "FLIPR ratings"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "When one party has more than a 75 percent chance of winning a race but less than 95 percent, we rate it as “likely”.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "FLIPR computes a tipping-point probability for each Senate race: the chance it decides chamber control. In August 2026 the top seven had a combined 71 percent; Texas 13, Ohio 12, Iowa 11, Maine 11, Michigan 11, Alaska 9 and North Carolina 4 percent. Because Senate races are less correlated than a presidential ticket, the tipping point is spread over more states.",
+        "quantities": [
+          {
+            "name": "combined tipping-point probability, top 7",
+            "value": "71",
+            "unit": "percent",
+            "context": "Aug 15, 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Precisely because Senate races are less correlated with one another than the presidential ticket, these states aren’t quite comprehensive in covering possible tipping point states.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "method",
+        "statement": "FLIPR treats Dan Osborn in Nebraska, technically an independent but the only major candidate against Republican Pete Ricketts, as a de facto Democrat.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR treats him as a de facto Democrat",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Contradictory polls across Senate races, such as Brown +8 in Ohio and El-Sayed -4 in bluer Michigan, are plausible because congressional outcomes are correlated much less than presidential ones. The advanced FLIPR versions still expect such divergences to narrow toward fundamentals over the coming months.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Outcomes in congressional races are correlated with one another, although considerably less so than in presidential races.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "In Alaska, FLIPR was a bit more bearish on Democrat Mary Peltola than prediction markets, possibly because it does not credit her history of overperformance (Split Ticket WAR scores of D+9 and D+22) or her moderate record, since she is not an incumbent. Such subjective misses are expected to cancel out across many races.",
+        "quantities": [
+          {
+            "name": "Alaska baseline",
+            "value": "R+7",
+            "unit": "points",
+            "context": "Aug 2026"
+          },
+          {
+            "name": "Alaska D win prob",
+            "value": "42",
+            "unit": "percent",
+            "context": "Aug 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR accounts for a lot of things, but not everything.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "Collins overperformance",
+        "insight": "Susan Collins won Maine by 8.6 points in 2020 while Biden won it by 9.1, an extreme split-ticket overperformance.",
+        "evidence": "2020 results.",
+        "forecasting_implication": "Some incumbents carry personal vote effects far beyond typical incumbency."
+      },
+      {
+        "topic": "North Carolina",
+        "insight": "North Carolina has voted Democratic for president only once since 1976 (2008) and is often close-but-not-quite for Democrats, though it sits near the national median.",
+        "evidence": "",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Split Ticket WAR (wins above replacement) candidate scores",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact weights for blending simple and fancy fundamentals at a given polarization level.",
+      "How tipping-point probabilities are computed from simulations."
+    ]
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "article": {
+    "date": "2024-08-08",
+    "title": "Welcome to the bizarre world of conditional probability",
+    "subtitle": "We have a good idea what would happen if Harris wins Pennsylvania. But we're less sure about what things would look like if Trump wins California.",
+    "authors": "Eli McKown-Dawson; Nate Silver",
+    "url": "https://www.natesilver.net/p/welcome-to-the-bizarre-world-of-conditional",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-08-08_welcome-to-the-bizarre-world-of-conditional-probability"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.325459,
+    "prompt_tokens": 4,
+    "completion_tokens": 5599,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 26643,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:08:05"
+  },
+  "extraction": {
+    "summary": "A Model Talk column explaining how the Silver Bulletin 2024 presidential model computes conditional probabilities: the share of the 40,000 simulations in which a candidate wins the Electoral College among the simulations where they win a given state. Pennsylvania is the likeliest tipping-point state (34%), and winning it strongly predicts outcomes in other swing states because errors are correlated across states, especially similar ones. The authors warn that conditional probabilities for freak outcomes, such as Trump winning California, rest on small samples and on Bayesian reasoning about national landslides versus state-specific shocks. They admit the model probably overstates such tail outcomes because state-specific error uses a fat-tailed t-distribution and lightly polled states are very uncertain. They announce a change for the next run that reduces the fat-tailedness of state-specific error.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "FiveThirtyEight (Silver era, 2020 presidential model)"
+    ],
+    "findings": [
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "In its final step, after adjustments that turn polling averages into Election Day predictions, the Silver Bulletin 2024 presidential model simulates 40,000 election outcomes. These simulations produce the national and state topline predictions.",
+        "quantities": [
+          {
+            "name": "number of simulations",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "each model run, 2024 presidential"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we simulate 40,000 election outcomes. These simulations give us our topline predictions nationally and in each state",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "Conditional probabilities in the Silver Bulletin 2024 presidential model are computed empirically from the simulations. Among all simulations where a candidate wins a given state, the model counts the share in which that candidate also wins the Electoral College. For example, Harris won Pennsylvania in 22,448 of 40,000 simulations and the Electoral College in 20,539 of those, giving 91.5%.",
+        "quantities": [
+          {
+            "name": "Harris PA wins",
+            "value": "22,448",
+            "unit": "simulations",
+            "context": "Aug 8, 2024 run; about 56%"
+          },
+          {
+            "name": "Harris EC wins given PA win",
+            "value": "20,539",
+            "unit": "simulations",
+            "context": "Aug 8, 2024 run"
+          },
+          {
+            "name": "Harris P(win EC | win PA)",
+            "value": "91.5",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          },
+          {
+            "name": "Trump PA wins",
+            "value": "17,552",
+            "unit": "simulations",
+            "context": "Aug 8, 2024 run"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We just look at all of the simulations where a candidate wins a certain state, and check how often that candidate won the Electoral College in that set of simulations.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The same counting approach extends to conditioning on several states at once. In the Aug 8, 2024 run, Harris wins the election 95% of the time when she wins both Pennsylvania and Wisconsin, and loses only 2% of the time when she wins all three Blue Wall states (PA, WI, MI).",
+        "quantities": [
+          {
+            "name": "P(Harris wins | PA and WI)",
+            "value": "95",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          },
+          {
+            "name": "P(Harris loses | wins PA, WI, MI)",
+            "value": "2",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We can even extend this logic to get conditional predictions for multiple states.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin defines a contest's tipping-point chance as the probability that it gives the Electoral College winner their 270th electoral vote. Its Voter Power Index (VPI) is the relative likelihood that an individual voter in a state determines the Electoral College winner. A missing conditional probability means the candidate won that state in 0 of 40,000 simulations.",
+        "quantities": [
+          {
+            "name": "electoral vote threshold",
+            "value": "270",
+            "unit": "electoral votes",
+            "context": "tipping-point definition"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "parameter_or_number",
+        "statement": "Aug 8, 2024 tipping-point chances, with VPI in parentheses: PA 34% (8.1), WI 14% (6.7), MI 12% (3.5), GA 10% (3.1), AZ 8% (3.4), NC 6% (1.8), NV 3% (3.2), TX 2% (0.3), FL 2% (0.2), VA 2% (0.6), NM 1% (2.0), NE-2 1% (4.3), NH 1% (1.6), CO 1% (0.3). The model treats Maine and Nebraska's congressional districts (e.g., NE-2) as separate contests.",
+        "quantities": [
+          {
+            "name": "PA tipping chance",
+            "value": "34",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          },
+          {
+            "name": "PA VPI",
+            "value": "8.1",
+            "unit": "index",
+            "context": "Aug 8, 2024"
+          },
+          {
+            "name": "NE-2 VPI",
+            "value": "4.3",
+            "unit": "index",
+            "context": "Aug 8, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the Aug 8, 2024 run, Trump's 46% overall chance of winning the Electoral College rose to 95.5% (reported as 96%) when he wins Pennsylvania. Harris has less than a 10% chance of winning if she loses any Blue Wall state. If Harris wins Michigan, Trump still has 17%, reflecting his additional Sunbelt paths.",
+        "quantities": [
+          {
+            "name": "Trump EC chance",
+            "value": "46",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          },
+          {
+            "name": "Trump P(win | PA)",
+            "value": "96",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          },
+          {
+            "name": "Trump P(win | Harris wins MI)",
+            "value": "17",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris has a less than 10 percent chance of winning the election if she loses any of them.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "assumption",
+        "statement": "State outcomes in the Silver Bulletin model are correlated rather than independent, with stronger correlation between geographically and demographically similar states.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Candidates' performances across states aren't independent, so if someone wins Pennsylvania, they're much more likely to win other battleground states — especially geographically and demographically similar states.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "Swing-state win probabilities conditional on Pennsylvania (Aug 8, 2024), shown as unconditional / if Harris wins PA / if Trump wins PA:\n- Wisconsin: 57% Harris / 90% Harris / 85% Trump\n- Michigan: 63% Harris / 94% Harris / 77% Trump\n- Georgia: 57% Trump / 70% Harris / 91% Trump\n- Arizona: 55% Trump / 74% Harris / 93% Trump\n- North Carolina: 63% Trump / 63% Harris / 97% Trump\n- Nevada: 51% Harris / 79% Harris / 86% Trump",
+        "quantities": [
+          {
+            "name": "WI Harris | Harris wins PA",
+            "value": "90",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          },
+          {
+            "name": "NC Harris | Harris wins PA",
+            "value": "63",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          },
+          {
+            "name": "NC Trump | Trump wins PA",
+            "value": "97",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          }
+        ],
+        "rationale": "Shows the implied strength of correlation between Pennsylvania and other swing states.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "Correlated polling error in the simulations, as described for the 2020 FiveThirtyEight model and cited as still applying, comes from random permutations along demographic and geographic characteristics. For example, in one simulation Trump overperforms with Hispanic voters and so does better in heavily Hispanic states; in another, Biden overperforms in states with many Catholics.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "538 2020, carried into 2024 Silver Bulletin",
+        "evidence_quote": "to calculate correlated polling error, the model creates random permutations based on different demographic and geographic characteristics.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "Conditional probabilities for very unlikely state outcomes (e.g., Trump wins California in 143 of 40,000 simulations, about 0.4%, and wins the EC in 123 of those, 86.0%) should be read cautiously. They rest on small simulation samples. More importantly, by Bayesian reasoning they mix two routes: a national landslide and a state-specific freak shock. The model treats the freak-shock route as only about 6 times less likely than the landslide route.",
+        "quantities": [
+          {
+            "name": "Trump CA wins",
+            "value": "143",
+            "unit": "simulations",
+            "context": "out of 40,000, Aug 8, 2024"
+          },
+          {
+            "name": "Trump P(EC | CA)",
+            "value": "86.0",
+            "unit": "percent",
+            "context": "Aug 8, 2024"
+          },
+          {
+            "name": "freak vs landslide odds ratio",
+            "value": "6:1",
+            "unit": "ratio",
+            "context": "freak accident less likely than landslide"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The freak accident scenario is more unlikely, but by \"only\" by about a 6:1 ratio, the model thinks.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The authors say the model probably overstates outlier outcomes. One reason is that fat-tailed state-specific errors can produce six-sigma results. Another is that noncompetitive states are rarely polled, and the model is very uncertain about states with little or no polling.",
+        "quantities": [
+          {
+            "name": "tail outcome size",
+            "value": "six sigma",
+            "unit": "standard deviations",
+            "context": "state-specific error"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "our model is probably too generous about accounting for these outlier occurrences, i.e. it overstates their likelihood.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Simulated errors in the Silver Bulletin model, including state-specific error, are drawn from a t-distribution, which is fat-tailed.",
+        "quantities": [],
+        "rationale": "There are few elections with reliable polling (national polls since about 1936, material swing-state polling since about 1976), so the long-run error distribution is uncertain and catastrophic polling errors are possible.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the reason we use fat-tailed distributions at all — specifically, a t-distribution — is because we don't actually have have all that many elections with reliable polling data",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "Starting with the Aug 9, 2024 run, the Silver Bulletin model reduces the fat-tailedness of state-specific error (state relative to national) to cut freak outcomes somewhat. It keeps fat tails motivated by limited data on the overall polling error.",
+        "quantities": [
+          {
+            "name": "data points per year on state-vs-national alignment",
+            "value": "51",
+            "unit": "data points",
+            "context": "50 states plus DC"
+          },
+          {
+            "name": "national polls start",
+            "value": "1936",
+            "unit": "year",
+            "context": "approximate"
+          },
+          {
+            "name": "swing state polls start",
+            "value": "1976",
+            "unit": "year",
+            "context": "approximate"
+          }
+        ],
+        "rationale": "There is far more data (51 points per election) on how states line up relative to the national result than on national polling error, so state-specific error needs less fat-tailing.",
+        "model_version": "2024 presidential (change effective Aug 9, 2024)",
+        "evidence_quote": "we'll be reducing the degree to which the simulations assume that state-specific error is fat-tailed.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Extreme tail probabilities (e.g., whether Trump's chance of winning California is 0.4% or 0.04%) cannot be validated empirically, because doing so would require hundreds of elections.",
+        "quantities": [
+          {
+            "name": "model CA probability",
+            "value": "0.4",
+            "unit": "percent",
+            "context": "Trump wins CA"
+          },
+          {
+            "name": "alternative",
+            "value": "0.04",
+            "unit": "percent",
+            "context": "hypothetical"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "we'd need a sample of hundreds of elections to test that, and we'll never get that in our lifetimes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "The model projects polling averages forward to Election Day (November 5) through a series of adjustments before running the simulations.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "after making a bunch of fancy adjustments to go from our polling averages to predictions for November 5th",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "Blue Wall importance",
+        "insight": "Pennsylvania and the Blue Wall states were nearly must-wins for Harris in August 2024. Trump had more paths through the Sunbelt.",
+        "evidence": "Harris had a 4% chance of winning if she lost PA and under 10% if she lost any Blue Wall state; Trump kept 17% even if Harris won MI.",
+        "forecasting_implication": "Asymmetric path structure means conditional values differ by candidate."
+      },
+      {
+        "topic": "VP home-state effect",
+        "insight": "Silver argued Josh Shapiro would have been a better running mate for Harris than Walz because of his potential to help her win Pennsylvania.",
+        "evidence": "Pennsylvania had a 34% chance of tipping the election.",
+        "forecasting_implication": "A running mate's home-state boost matters most in a high tipping-point state."
+      },
+      {
+        "topic": "Sunbelt vs Rust Belt",
+        "insight": "As of Aug 8, 2024, Trump led in most Sunbelt swing states, though Harris was closing quickly; she reached 51% in Nevada.",
+        "evidence": "",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin chart of conditional probabilities, tipping-point chances and Voter Power Index by state",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin 2024 model methodology (the 'fancy adjustments' that go from polling averages to Election Day predictions)",
+        "url": ""
+      },
+      {
+        "description": "Nate Silver's 2020 FiveThirtyEight methodology explanation of correlated polling error",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin article on Shapiro's potential to help Harris win Pennsylvania",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What are the degrees of freedom of the t-distribution, before and after the Aug 9, 2024 change?",
+      "What exactly is the reduced fat-tailedness parameter for state-specific error?",
+      "Which demographic and geographic dimensions are used for correlated error permutations, and with what variances?",
+      "How is the Voter Power Index computed (e.g., normalization by turnout)?",
+      "How is uncertainty inflated for states with little or no polling?"
+    ]
+  }
+}

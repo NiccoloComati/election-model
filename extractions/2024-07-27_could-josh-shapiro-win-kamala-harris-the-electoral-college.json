@@ -1,0 +1,365 @@
+{
+  "article": {
+    "date": "2024-07-27",
+    "title": "Could Josh Shapiro win Kamala Harris the Electoral College?",
+    "subtitle": "Do home-state effects matter?",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/could-josh-shapiro-win-kamala-harris",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-07-27_could-josh-shapiro-win-kamala-harris-the-electoral-college"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.431275,
+    "prompt_tokens": 8,
+    "completion_tokens": 11213,
+    "cache_read_tokens": 22436,
+    "cache_write_tokens": 25312,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:07:08"
+  },
+  "extraction": {
+    "summary": "Silver uses the Silver Bulletin presidential model's home-state-effect estimates to ask whether a VP pick such as Josh Shapiro (PA) or Mark Kelly (AZ) could swing the 2024 Electoral College. The model estimates home-state effects from before-and-after data: how a ticket did in a state relative to four years earlier and four years later, adjusted for national trends. VP home-state effects are about one-quarter the size of presidential-nominee effects, are roughly inversely proportional to a state's electoral votes, and have probably shrunk as partisanship has risen. Re-using the 40,000 simulations from July 10 (Biden-Trump), he finds a Pennsylvania VP worth about +1 percentage point in Electoral College win probability and an Arizona VP about +0.2 points. He also announces that the Harris version of the model will start adjusting home-state effects for rising partisanship.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin/Silver congressional model",
+      "prediction markets (Polymarket)"
+    ],
+    "findings": [
+      {
+        "component": "candidate_effects",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model estimates home-state ('favorite son/daughter') effects for both the presidential nominee and the VP pick. It does so from before-and-after data: how the ticket performed in the home state relative to four years earlier and four years later, adjusting for overall national trends.",
+        "quantities": [
+          {
+            "name": "comparison window",
+            "value": "4",
+            "unit": "years",
+            "context": "before and after the candidate's election cycle"
+          }
+        ],
+        "rationale": "National swings (e.g., Obama's narrower 2012 margin vs 2008) must be netted out so that home-state gains are not overstated.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "how did the presidential ticket perform relative to four years earlier and four years later, adjusting for overall national trends?",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "In the Silver Bulletin model, the home-state effect for a VP pick is about one-quarter the size of the home-state effect for the presidential nominee.",
+        "quantities": [
+          {
+            "name": "VP home-state effect relative to presidential nominee",
+            "value": "about one-quarter",
+            "unit": "ratio",
+            "context": "model estimate"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Home-state effects are only about one-quarter as large for the VP pick than for the presidential nominee.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "In the Silver Bulletin model, home-state effects are roughly inversely proportional to the number of electoral votes in the state, so they are larger in small states (e.g., Palin in Alaska, Biden in Delaware).",
+        "quantities": [],
+        "rationale": "In a smaller state a politician is more likely to feel like they are from voters' proverbial backyard.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Home-state effects are roughly inversely proportional to the number of electoral votes in a state.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin model estimates that a VP from Pennsylvania (19 electoral votes) would improve the ticket's Pennsylvania margin by slightly more than 0.4 percentage points.",
+        "quantities": [
+          {
+            "name": "PA VP home-state effect",
+            "value": "slightly more than 0.4",
+            "unit": "percentage points of margin",
+            "context": "2024; the article does not say whether this figure includes the partisanship adjustment announced for the Harris version"
+          },
+          {
+            "name": "PA electoral votes",
+            "value": "19",
+            "unit": "electoral votes",
+            "context": "2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "having a VP from Pennsylvania would improve a ticket's margin in the Keystone State by slightly more than 0.4 percentage points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin model estimates that a VP from Arizona would improve the ticket's Arizona margin by a hair over 0.7 percentage points. The effect is larger than Pennsylvania's because Arizona has fewer electoral votes.",
+        "quantities": [
+          {
+            "name": "AZ VP home-state effect",
+            "value": "a hair over 0.7",
+            "unit": "percentage points of margin",
+            "context": "2024"
+          }
+        ],
+        "rationale": "Follows from the inverse-proportionality to electoral votes.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "In Arizona, the effect would be slightly larger according to the model's logic — a hair over 0.7 percentage points — since it has fewer electoral votes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Silver says the home-state effect estimates rest on relatively small sample sizes and carry a lot of intrinsic uncertainty.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "these estimates are based on relatively small sample sizes and include a lot of intrinsic uncertainty",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "Starting with the Harris version of the 2024 Silver Bulletin model, home-state effects are adjusted for rising partisanship, which shrinks them. Previously this adjustment had not been applied to home-state effects.",
+        "quantities": [],
+        "rationale": "Rising partisanship makes margins closer and reduces candidate-specific effects. This had been ignored earlier because Biden-Trump was a 2020 rematch, so their home-state effects were already priced into partisan lean, and most of Trump's VP options were not from swing states.",
+        "model_version": "2024 presidential (Harris version)",
+        "evidence_quote": "But we'll be adjusting home-state effects for partisanship going forward.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "Most parameters in the Silver Bulletin presidential model are adjusted for rising partisanship. This adjustment tends to make electoral margins closer and to diminish the importance of 'candidate quality'.",
+        "quantities": [],
+        "rationale": "Partisanship increasingly dominates other considerations.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Most parameters in the model are adjusted for rising partisanship, which tends to make electoral margins closer and diminish the importance of \"candidate quality\".",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "assumption",
+        "statement": "When a presidential matchup is a rematch, as Biden-Trump was of 2020, the candidates' home-state effects are already priced into the partisan lean of their home states. No separate adjustment is needed in that case.",
+        "quantities": [],
+        "rationale": "Partisan lean is computed from prior results that already included the same candidates.",
+        "model_version": "2024 presidential (Biden version)",
+        "evidence_quote": "so whatever effects Trump and Biden had were already priced into the partisan lean of their respective home states",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Biden improved Democratic margins in Delaware in 2020 relative to Clinton-Kaine in 2016, but by less than the unadjusted model expected. This is evidence that home-state effects have diminished with partisanship.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it was by less than the (rather large amount since Delaware is a small state) improvement the model expected",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin presidential model runs 40,000 simulations per forecast run (for example, the July 10, 2024 Biden-Trump run).",
+        "quantities": [
+          {
+            "name": "simulations",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "July 10, 2024 run"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "I pulled up the 40,000 simulations we ran on July 10",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The value of a VP home-state bonus can be estimated from saved model simulations. Count the simulations where (a) the candidate lost the state by no more than the bonus and (b) the state's electoral votes would be pivotal. For Pennsylvania this means Biden had 251-269 electoral votes, so adding PA's 19 gets him to 270+. Both conditions are required.",
+        "quantities": [
+          {
+            "name": "pivotal EV range",
+            "value": "251-269",
+            "unit": "electoral votes",
+            "context": "Biden EV without PA"
+          },
+          {
+            "name": "winning threshold",
+            "value": "270",
+            "unit": "electoral votes",
+            "context": "Electoral College"
+          }
+        ],
+        "rationale": "Being decisive in the state is not enough; the state must also be decisive in the Electoral College.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we're looking for simulations where Biden lost Pennsylvania by 0.4 points or less and Biden had between 251 and 269 electoral votes",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "In the July 10, 2024 Biden-Trump run, Biden lost Pennsylvania by 0.4 points or less in 1,915 of 40,000 simulations (about 5%). He also had 251-269 electoral votes in 427 of those simulations (about 1%). A PA VP's home-state bonus therefore adds roughly 1 percentage point to Electoral College win probability.",
+        "quantities": [
+          {
+            "name": "sims losing PA by ≤0.4",
+            "value": "1915",
+            "unit": "simulations",
+            "context": "of 40,000; about 5 percent"
+          },
+          {
+            "name": "sims where PA bonus is decisive",
+            "value": "427",
+            "unit": "simulations",
+            "context": "of 40,000; about 1 percent"
+          },
+          {
+            "name": "EC win probability gain from PA VP",
+            "value": "about 1",
+            "unit": "percentage point",
+            "context": "Biden-Trump model"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential (Biden version)",
+        "evidence_quote": "These conditions were satisfied in 427 of the 40K simulations, or about 1 percent of the time.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "In the Biden-Trump model, an Arizona VP would have raised Biden's Electoral College win probability by only 0.2 percentage points, about 1 lost simulation converted to a win in 500.",
+        "quantities": [
+          {
+            "name": "EC win probability gain from AZ VP",
+            "value": "0.2",
+            "unit": "percentage points",
+            "context": "Biden-Trump model"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential (Biden version)",
+        "evidence_quote": "a VP from Arizona would have improved Biden's chances of winning the Electoral College by only 0.2 percentage points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "parameter_or_number",
+        "statement": "In the Biden-Trump version of the Silver Bulletin model, Pennsylvania had a 40% chance of being the tipping-point state.",
+        "quantities": [
+          {
+            "name": "PA tipping-point probability",
+            "value": "40",
+            "unit": "percent",
+            "context": "Biden-Trump model, July 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential (Biden version)",
+        "evidence_quote": "Pennsylvania was disproportionately important, with a 40 percent chance of being the tipping-point state",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Silver expects higher overall forecast uncertainty in the Harris-Trump model. He says this arises organically from factors the model already considers, such as there being far fewer Harris-Trump polls than Biden-Trump polls, not from any ad hoc added uncertainty.",
+        "quantities": [],
+        "rationale": "A smaller poll sample means more uncertainty, which makes the tipping-point state harder to pinpoint.",
+        "model_version": "2024 presidential (Harris version)",
+        "evidence_quote": "It emerges organically from the factors that the model already considers, like that we have far fewer Harris-Trump polls so far than Biden-Trump polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "interpretation_guidance",
+        "statement": "Higher forecast uncertainty spreads tipping-point probability across more states, lowering any single state's tipping-point chance.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "meaning that it will be harder to pinpoint the tipping-point state with as much precision",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Silver's congressional model found that incumbency effects are more powerful in smaller states (e.g., Joe Manchin in West Virginia, Susan Collins in Maine).",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver congressional model",
+        "evidence_quote": "My Congressional model has also found that incumbency effects are more powerful in smaller states",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "model_change",
+        "statement": "The Silver Bulletin presidential model was paused after Biden's withdrawal. It was set to restart the following week with Harris replacing Biden.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "which we'll turn back on in the forthcoming week with Harris replacing Joe Biden",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The model's home-state effect may understate a candidate like Shapiro: unlike a House member such as Paul Ryan, he is a popular sitting governor. The article does not say the model distinguishes officeholder type or popularity.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "maybe you could argue that this is on the low side. Unlike, say, Ryan, who only represented a single congressional district",
+        "explicitness": "implied"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "VP home-state effects",
+        "insight": "VP home-state bonuses are small and hard to detect in raw results. Examples: Kaine's Virginia in 2016 (Clinton +5.3, below Biden's +10.1 in 2020) and Ryan's Wisconsin in 2012 (lost by 6.3).",
+        "evidence": "Before-and-after comparisons of Virginia and Wisconsin results.",
+        "forecasting_implication": "Treat a VP pick as a small state-specific shift, larger in small states."
+      },
+      {
+        "topic": "rising partisanship",
+        "insight": "Candidate-specific effects, including home-state effects and candidate quality, have diminished as partisanship dominates.",
+        "evidence": "Biden's 2020 Delaware gain was below the model's expectation.",
+        "forecasting_implication": "Shrink candidate effects over time."
+      },
+      {
+        "topic": "Harris electoral map",
+        "insight": "Harris appeared likely to open more Democratic paths, e.g. through Georgia, rather than depending on the PA+MI+WI 'Blue Wall'.",
+        "evidence": "",
+        "forecasting_implication": "Expect a more dispersed tipping-point distribution."
+      },
+      {
+        "topic": "VP choice priorities",
+        "insight": "A VP's home state is a tiebreaker at most. Other electoral, succession and party-future considerations are an order of magnitude more important.",
+        "evidence": "About 1 point in EC win probability for PA, 0.2 for AZ.",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin election model page",
+        "url": ""
+      },
+      {
+        "description": "Polymarket VP pick market",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact functional form and base magnitude of home-state effects (presidential nominee vs. VP) as a function of electoral votes.",
+      "How the partisanship adjustment to home-state effects is parameterized, and the post-adjustment PA and AZ values.",
+      "Whether the home-state effect differs by office held (governor vs. House member) or by popularity.",
+      "Which years and sample were used to estimate home-state effects."
+    ]
+  }
+}

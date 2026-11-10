@@ -1,0 +1,169 @@
+{
+  "article": {
+    "date": "2026-04-11",
+    "title": "“AI polls” are fake polls",
+    "subtitle": "But they might be useful as something else: models.",
+    "authors": "Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/ai-polls-are-fake-polls",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2026-04-11_ai-polls-are-fake-polls-by-eli-mckown-dawson"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:29:00"
+  },
+  "extraction": {
+    "summary": "Eli McKown-Dawson argues that 'synthetic sampling' with LLM agents (Aaru, Electric Twin and others) produces models of what a poll would say, not polls, because no new data is collected. He reviews the evidence on accuracy, including academic findings of too few 'don't know' answers and too little subgroup variation, and Aaru's 2024 forecast. Silver adds that cheaper inference raises the value of original data, and that the Silver Bulletin forecast already infers hard-to-reach voters from past patterns and other polls. The article restates that Silver Bulletin excludes MRP outputs, AI-boosted samples and amateur firms from its averages.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "Silver Bulletin polling averages",
+      "Silver Bulletin forecasts",
+      "Aaru synthetic sampling model",
+      "Electric Twin",
+      "MRP"
+    ],
+    "findings": [
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "Silver Bulletin excludes all Public Sentiment Institute polls from its averages because it classifies the firm as an amateur polling firm; a poll that 'boosted' 373 real respondents with 114 AI agents would not meet aggregation standards anyway.",
+        "quantities": [
+          {
+            "name": "real respondents",
+            "value": "373",
+            "unit": "respondents",
+            "context": "Public Sentiment Institute poll"
+          },
+          {
+            "name": "AI agents added",
+            "value": "114",
+            "unit": "agents",
+            "context": "Public Sentiment Institute poll"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling averages (2026)",
+        "evidence_quote": "we exclude all Public Sentiment Institute polls from our averages because we classify them as an amateur polling firm.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "Silver Bulletin does not include MRP-produced 'polls' in its forecasts or averages, and considers it misleading when MRP outputs are presented as if original data had been collected in many states or congressional districts.",
+        "quantities": [],
+        "rationale": "MRP is a model, not original data collection.",
+        "model_version": "Silver Bulletin forecasts and averages (2026)",
+        "evidence_quote": "Silver Bulletin does not include “polls” produced by MRP in our forecasts or averages",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "design_principle",
+        "statement": "Synthetic samples from LLM agents are treated as models rather than polls: polling is data collection, while silicon sampling only predicts what a poll would say from training data and prompts, so it cannot enter a poll average as a poll.",
+        "quantities": [],
+        "rationale": "Weighting real survey data differs fundamentally from predicting survey results with a model.",
+        "model_version": "Silver Bulletin (2026)",
+        "evidence_quote": "Silicon sampling, on the other hand, produces no new data.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "Silver describes the Silver Bulletin forecast as already doing a form of statistical inference for sparsely polled groups: it smooths noisy survey data using past voting patterns, national polls, and polls of other states.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin forecast",
+        "evidence_quote": "They essentially smooth out the kinks in noisy survey data by making inferences based on past voting patterns or national polls or surveys of other states.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Inference cannot detect genuine opinion shifts within a subgroup that is not directly sampled; only original data collection can. Silver argues that cheaper statistical inference raises the comparative value of collecting original data.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "But you don’t actually know what these voters think unless you’re reaching them directly.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "empirical_regularity",
+        "statement": "Academic research finds LLM-simulated survey respondents give too few 'don't know' responses, can seriously overstate the favorability of politicians like Trump and Harris, and show too little variation between subgroups such as Democrats and Republicans.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general (literature)",
+        "evidence_quote": "LLMs suffer from various quirks like producing too few “don’t know” responses",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "parameter_or_number",
+        "statement": "On November 2, 2024 the Silver Bulletin presidential model gave Harris a 48.2 percent chance of winning, versus 50.5 percent in Aaru's synthetic-sampling model.",
+        "quantities": [
+          {
+            "name": "Silver Bulletin Harris win probability",
+            "value": "48.2",
+            "unit": "percent",
+            "context": "November 2, 2024"
+          },
+          {
+            "name": "Aaru Harris win probability",
+            "value": "50.5",
+            "unit": "percent",
+            "context": "November 2, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "For comparison, our odds for Harris on the same day were 48.2 percent.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "AI agents infiltrating online survey panels are a threat to real polls; evidence on how well online panels' checks filter them, and how prevalent they are, is conflicting.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "one danger to actual polls is that AI agents can be used to infiltrate online surveys.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "hard-to-reach voters",
+        "insight": "Some voter types, for example young Black men who voted for Trump, are hard to reach in surveys, so their views are usually inferred rather than measured.",
+        "evidence": "",
+        "forecasting_implication": "Subgroup shifts among hard-to-reach voters may be invisible to polls and models until results come in."
+      },
+      {
+        "topic": "ticket-splitting on ballot measures",
+        "insight": "In 2024 some Arizona and Nevada voters backed Trump and also voted to expand abortion rights on state ballot initiatives, a nuance pollsters doubt LLM agents can reproduce.",
+        "evidence": "Comment from Natalie Jackson, GQR.",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Academic papers on LLM synthetic sampling accuracy",
+        "url": ""
+      },
+      {
+        "description": "Aaru/EY report on synthetic estimates",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Full list of firms Silver Bulletin classifies as amateur and excludes."
+    ]
+  }
+}

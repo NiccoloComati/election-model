@@ -1,0 +1,601 @@
+{
+  "article": {
+    "date": "2024-09-18",
+    "title": "Mad about the Electoral College? Blame California.",
+    "subtitle": "What an eccentricity in the model reveals about the Electoral College. And why Angelinos should move to Alaska.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/mad-about-the-electoral-college-blame",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-09-18_mad-about-the-electoral-college-blame-california"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.581147,
+    "prompt_tokens": 8,
+    "completion_tokens": 15110,
+    "cache_read_tokens": 29615,
+    "cache_write_tokens": 34124,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:14:28"
+  },
+  "extraction": {
+    "summary": "Silver explains an apparent anomaly in the 2024 Silver Bulletin presidential model: on Aug. 30 Harris led in mean projected electoral votes (270 to 268) while Trump was slightly favored to win the Electoral College (52% to 47%). The cause is a skewed electoral vote distribution. Harris has more blowout outcomes, including longshot Florida and Texas wins that add expected EVs, while Trump wins more of the close calls. The article puts the chance that Harris wins the popular vote but loses the Electoral College at almost 25 percent. It then defines a 'Net eXcess Votes' (NXV) metric for wasted votes. Applied to 2020, NXV shows the Democratic surplus in California and New York almost exactly accounts for the 3.5-3.8 point gap between the national popular vote and the tipping-point state. The text and PDF appear to be the full article despite the paywall flag.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model"
+    ],
+    "findings": [
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The 2024 Silver Bulletin presidential model runs 40,000 simulations. In each one it forecasts which states each candidate wins and tallies electoral votes, producing a distribution of electoral vote outcomes for each candidate.",
+        "quantities": [
+          {
+            "name": "number of simulations",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "electoral vote distribution chart, Sept. 17, 2024 run"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "The mean projected electoral vote count from the 2024 Silver Bulletin model can favor one candidate while the Electoral College win probability (the share of simulations reaching 270 or more) favors the other. Silver says this is not a programming error. It reflects a skewed electoral vote distribution.",
+        "quantities": [
+          {
+            "name": "Harris mean projected EVs, Aug. 30",
+            "value": "270",
+            "unit": "electoral votes",
+            "context": "Aug. 30, 2024 model run"
+          },
+          {
+            "name": "Trump mean projected EVs, Aug. 30",
+            "value": "268",
+            "unit": "electoral votes",
+            "context": "Aug. 30, 2024 model run"
+          },
+          {
+            "name": "Trump EC win probability, Aug. 30",
+            "value": "52",
+            "unit": "percent",
+            "context": "Aug. 30, 2024 model run"
+          },
+          {
+            "name": "Harris EC win probability, Aug. 30",
+            "value": "47",
+            "unit": "percent",
+            "context": "Aug. 30, 2024 model run"
+          }
+        ],
+        "rationale": "Harris has both a higher floor and a higher ceiling, but Trump wins more of the close calls where Harris falls a state or two short.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the mean Electoral College projection (how many votes the candidates win in an average simulation) differs meaningfully from the median (how often they hit exactly 270 or more).",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the 2024 Silver Bulletin model, Harris has an almost 25 percent chance of winning the popular vote but losing the Electoral College. The reverse outcome, Trump winning the popular vote but losing the Electoral College, has little probability.",
+        "quantities": [
+          {
+            "name": "P(Harris wins popular vote, loses EC)",
+            "value": "almost 25",
+            "unit": "percent",
+            "context": "mid-September 2024 model"
+          }
+        ],
+        "rationale": "Democrats waste many votes in the large, lopsided states of California and New York.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "there’s almost a 25 percent chance that Harris wins the popular vote but loses the Electoral College — but little of the other way around.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the 2024 Silver Bulletin model's simulations, Harris has many more blowout outcomes, near 400 electoral votes, than Trump does. These blowouts reflect either the election getting away from Trump or a big polling error in Harris's favor. Trump's distribution is more concentrated just above 270.",
+        "quantities": [
+          {
+            "name": "Harris blowout EV level",
+            "value": "close to 400",
+            "unit": "electoral votes",
+            "context": "right tail of Harris EV distribution"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris has far more outcomes where she wins in a blowout — close to 400 electoral votes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "The Sept. 17, 2024 Silver Bulletin electoral vote histograms show Harris's most frequent single outcome at roughly 226 EVs, with smaller spikes near 319 and 400. Trump's most frequent outcome is roughly 312 EVs, and his distribution has a thinner right tail ending near 360.",
+        "quantities": [
+          {
+            "name": "Harris modal EV outcome",
+            "value": "~226",
+            "unit": "electoral votes",
+            "context": "read off chart, Sept. 17 2024"
+          },
+          {
+            "name": "Trump modal EV outcome",
+            "value": "~312",
+            "unit": "electoral votes",
+            "context": "read off chart, Sept. 17 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "parameter_or_number",
+        "statement": "In the Sept. 17, 2024 Silver Bulletin model run, Harris had a 14 percent chance of winning Florida and a 7 percent chance of winning Texas. These outcomes happen in the model mainly in Obama-esque landslide scenarios where the states come into play.",
+        "quantities": [
+          {
+            "name": "Harris win probability, Florida",
+            "value": "14",
+            "unit": "percent",
+            "context": "Sept. 17, 2024 model run"
+          },
+          {
+            "name": "Harris win probability, Texas",
+            "value": "7",
+            "unit": "percent",
+            "context": "Sept. 17, 2024 model run"
+          }
+        ],
+        "rationale": "The states are highly unlikely to matter in a close election but could be competitive in a blowout.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris is unlikely to win Florida (a 14 percent chance as of Tuesday’s model run) or Texas (7 percent)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "In expected value terms, Harris gains about 4 electoral votes from Florida and about 3 from Texas in the 2024 Silver Bulletin model. These longshot states raise her mean EV count without much effect on her Electoral College win probability, which explains part of the gap between the mean and the win probability.",
+        "quantities": [
+          {
+            "name": "Harris expected EVs from Florida",
+            "value": "about 4",
+            "unit": "electoral votes",
+            "context": "Sept. 2024 model"
+          },
+          {
+            "name": "Harris expected EVs from Texas",
+            "value": "3",
+            "unit": "electoral votes",
+            "context": "Sept. 2024 model"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "In expected value terms, Harris gains about 4 electoral votes from FL and 3 from TX.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "Even in Trump landslide scenarios, the 2024 Silver Bulletin model gives Trump only small chances in deep-blue states: 0.2 percent in California, 0.6 percent in New York and 0.3 percent in Massachusetts.",
+        "quantities": [
+          {
+            "name": "Trump win probability, California",
+            "value": "0.2",
+            "unit": "percent",
+            "context": "Sept. 17, 2024 model"
+          },
+          {
+            "name": "Trump win probability, New York",
+            "value": "0.6",
+            "unit": "percent",
+            "context": "Sept. 17, 2024 model"
+          },
+          {
+            "name": "Trump win probability, Massachusetts",
+            "value": "0.3",
+            "unit": "percent",
+            "context": "Sept. 17, 2024 model"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "states like California (an 0.2 percent chance of a Trump win), New York (0.6) and Massachusetts (0.3) should be Safe Democrat.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "design_principle",
+        "statement": "Silver says the 2024 Silver Bulletin model is 'pretty tolerant of outlier outcomes,' meaning it uses fat-tailed uncertainty. As a result, the small probabilities it assigns to upsets in safe states may be generous.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "those percentages might be generous given how the model is pretty tolerant of outlier outcomes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "Per the Sept. 17, 2024 expected value table, Harris's expected EVs in key states were: Virginia 12.2 of 13, Minnesota 8.4 of 10, Pennsylvania 8.1 of 19 and Michigan 7.7 of 15. Trump's expected EVs were about 10 in Pennsylvania and about 7 in Michigan. Safe states such as California (53.9 of 54) and New York (27.8 of 28) were near their full totals.",
+        "quantities": [
+          {
+            "name": "Harris EV expectation, California",
+            "value": "53.9",
+            "unit": "electoral votes",
+            "context": "of 54"
+          },
+          {
+            "name": "Harris EV expectation, New York",
+            "value": "27.8",
+            "unit": "electoral votes",
+            "context": "of 28"
+          },
+          {
+            "name": "Harris EV expectation, New Jersey",
+            "value": "13.7",
+            "unit": "electoral votes",
+            "context": "of 14"
+          },
+          {
+            "name": "Harris EV expectation, Virginia",
+            "value": "12.2",
+            "unit": "electoral votes",
+            "context": "of 13"
+          },
+          {
+            "name": "Harris EV expectation, Washington",
+            "value": "11.9",
+            "unit": "electoral votes",
+            "context": "of 12"
+          },
+          {
+            "name": "Harris EV expectation, Colorado",
+            "value": "9.7",
+            "unit": "electoral votes",
+            "context": "of 10"
+          },
+          {
+            "name": "Harris EV expectation, Minnesota",
+            "value": "8.4",
+            "unit": "electoral votes",
+            "context": "of 10"
+          },
+          {
+            "name": "Harris EV expectation, Pennsylvania",
+            "value": "8.1",
+            "unit": "electoral votes",
+            "context": "of 19"
+          },
+          {
+            "name": "Harris EV expectation, Michigan",
+            "value": "7.7",
+            "unit": "electoral votes",
+            "context": "of 15"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "The article's header image shows a correlation matrix with rows labeled 'tvaryCO', 'tvaryCT', 'tvaryDC', 'tvaryFL' and so on. The image suggests the model uses state-level time-varying error terms with pairwise correlations, including negative values such as about -0.69 between some states. The labels on the columns are not fully legible.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "parameter_or_number",
+        "statement": "The 2024 Silver Bulletin model projected Harris to win California by 25 points (vs. Biden's 29), New York by 17 (vs. Biden's 23), and Trump to win Iowa by 7. These shrinking blue-state margins slightly reduce the Electoral College / popular vote bias.",
+        "quantities": [
+          {
+            "name": "Harris projected margin, California",
+            "value": "25",
+            "unit": "percentage points",
+            "context": "Sept. 2024; Biden 2020 margin was 29"
+          },
+          {
+            "name": "Harris projected margin, New York",
+            "value": "17",
+            "unit": "percentage points",
+            "context": "Sept. 2024; Biden 2020 margin was 23"
+          },
+          {
+            "name": "Trump projected margin, Iowa",
+            "value": "7",
+            "unit": "percentage points",
+            "context": "Sept. 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model projects Harris to win New York by “only” 17 points — down from Biden’s 23, and California by “just” 25, down from Biden’s 29.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "method",
+        "statement": "Silver defines Net eXcess Votes (NXV) as the votes a party wins in a state beyond what was needed to win it by X points, where X = 3 percentage points plus 0.1 point per electoral vote. For example, Tennessee's 11 EVs give a threshold of 4.1 points. Nebraska and Maine congressional district electoral votes are ignored.",
+        "quantities": [
+          {
+            "name": "NXV base threshold",
+            "value": "3",
+            "unit": "percentage points",
+            "context": "base competitive margin"
+          },
+          {
+            "name": "NXV per-EV increment",
+            "value": "0.1",
+            "unit": "percentage points per electoral vote",
+            "context": "sliding scale"
+          },
+          {
+            "name": "Tennessee NXV threshold",
+            "value": "4.1",
+            "unit": "percentage points",
+            "context": "2020"
+          }
+        ],
+        "rationale": "Empirically, parties pour resources into states within 3 to 5 points of the tipping-point state, and bigger states justify a play at wider margins because of their larger reward.",
+        "model_version": "general principle (analytical metric, not model input)",
+        "evidence_quote": "I’ll define the threshold as winning a state by 3 percentage points, plus one-tenth of a percentage point for every electoral vote.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2020, Biden accumulated 11.1 million NXVs and Trump 5.5 million. The 5.6 million difference is 3.5 percent of the 159 million votes cast. That almost exactly matches the gap between Biden's national popular vote margin (4.5 points) and his margin in the tipping-point state, Wisconsin (0.7 points). Silver says this is not a coincidence, because NXVs are by definition votes that help in the popular vote but add no marginal Electoral College advantage.",
+        "quantities": [
+          {
+            "name": "Biden NXVs 2020",
+            "value": "11,050,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Trump NXVs 2020",
+            "value": "5,450,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "NXV difference",
+            "value": "5.6 million",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "NXV difference share of electorate",
+            "value": "3.5",
+            "unit": "percent",
+            "context": "2020"
+          },
+          {
+            "name": "total votes cast 2020",
+            "value": "159 million",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Biden national margin",
+            "value": "4.5",
+            "unit": "percentage points",
+            "context": "2020"
+          },
+          {
+            "name": "Biden Wisconsin margin",
+            "value": "0.7",
+            "unit": "percentage points",
+            "context": "2020 tipping-point state"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "NXVs are defined as votes that help you in the popular vote, but don’t net you any marginal advantage in the Electoral College.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "2020 NXV leaders by state were: Biden, California 3.62M, New York 1.48M, Massachusetts 1.07M, Maryland 0.89M, Illinois 0.72M, Washington 0.61M, New Jersey 0.52M, Colorado 0.31M, Connecticut 0.30M, Oregon 0.29M and DC 0.29M; Trump, Tennessee 0.58M, Alabama 0.50M, Kentucky 0.47M, Oklahoma 0.46M, Indiana 0.36M, Missouri 0.34M, Louisiana 0.32M and Arkansas 0.29M. The data come from the U.S. Election Atlas.",
+        "quantities": [
+          {
+            "name": "California Biden NXV",
+            "value": "3,620,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "New York Biden NXV",
+            "value": "1,480,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Massachusetts Biden NXV",
+            "value": "1,070,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Maryland Biden NXV",
+            "value": "890,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Illinois Biden NXV",
+            "value": "720,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Washington Biden NXV",
+            "value": "610,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "New Jersey Biden NXV",
+            "value": "520,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Colorado Biden NXV",
+            "value": "310,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Connecticut Biden NXV",
+            "value": "300,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Oregon Biden NXV",
+            "value": "290,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "DC Biden NXV",
+            "value": "290,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Tennessee Trump NXV",
+            "value": "580,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Alabama Trump NXV",
+            "value": "500,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Kentucky Trump NXV",
+            "value": "470,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Oklahoma Trump NXV",
+            "value": "460,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Indiana Trump NXV",
+            "value": "360,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Missouri Trump NXV",
+            "value": "340,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Louisiana Trump NXV",
+            "value": "320,000",
+            "unit": "votes",
+            "context": "2020"
+          },
+          {
+            "name": "Arkansas Trump NXV",
+            "value": "290,000",
+            "unit": "votes",
+            "context": "2020"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "Electoral College bias source",
+        "insight": "The Democratic Electoral College disadvantage comes mainly from surplus votes in large, lopsided states (California, New York), not from the small-state bonus of two Senate-based electors per state.",
+        "evidence": "House-based electors outnumber Senate-based electors more than 4:1 and are apportioned by population. California alone produced 3.6M excess Biden votes.",
+        "forecasting_implication": "Model the popular vote–EC gap through state-level margin distributions. The gap moves with shifts in California and New York margins."
+      },
+      {
+        "topic": "Republican efficient vote distribution",
+        "insight": "Texas and Florida, at mid-single-digit Trump margins, are close to an optimal vote distribution for Republicans: they are safely won without generating many wasted votes. If Florida became either more competitive or less competitive, Harris would be better off.",
+        "evidence": "Projected Trump margins in FL and TX are in the mid-single digits.",
+        "forecasting_implication": "Large red states at moderate margins produce right-tail Democratic upside in blowout scenarios but rarely matter in close races."
+      },
+      {
+        "topic": "Campaign resource allocation",
+        "insight": "Parties pour resources into states within about 3 to 5 points of the tipping-point state. Bigger states attract investment at wider margins because of their larger reward.",
+        "evidence": "Silver's empirical observation, also the basis of the NXV threshold.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "Blue-state rightward shift",
+        "insight": "California and New York are shifting toward Republicans. Democrats are losing ground with working-class Black, Hispanic and Asian American voters, and Silicon Valley and Wall Street communities have shifted right. The shift slightly reduces the EC/popular vote bias.",
+        "evidence": "Projected margins: New York D+17 vs. Biden's 23, California D+25 vs. 29. Republicans had a strong 2022 midterm in New York.",
+        "forecasting_implication": "Expect a somewhat smaller EC–popular vote gap than in 2020."
+      },
+      {
+        "topic": "Raw Trump vote by state",
+        "insight": "In 2020 Trump won more raw votes in California (6.0M) than in Texas (5.9M) or Florida (5.7M). New York was his fifth-highest state by raw votes.",
+        "evidence": "2020 results",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "2020 tipping point",
+        "insight": "Wisconsin was the 2020 tipping-point state, with Biden winning it by 0.7 points against 4.5 points nationally.",
+        "evidence": "",
+        "forecasting_implication": "The roughly 3.8-point EC bias in 2020 is a benchmark for the popular vote–EC gap."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin 2024 presidential model landing page (electoral vote distribution charts)",
+        "url": ""
+      },
+      {
+        "description": "U.S. Election Atlas (data source for 2020 NXV calculations)",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin piece on the model being tolerant of outlier outcomes / fat tails (linked)",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin piece on big polling errors in Harris's favor (linked)",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What is the functional form of the state error correlation structure (the 'tvary' correlation matrix shown in the header image), and how are the correlations estimated?",
+      "How exactly does the model generate its fat-tailed outlier outcomes (distribution type, degrees of freedom)?",
+      "How are the Maine and Nebraska congressional district electoral votes simulated in the model?",
+      "Is the 'median' Silver mentions literally the median EV outcome, or the probability of reaching 270 EVs, which is what the win probability measures?"
+    ]
+  }
+}

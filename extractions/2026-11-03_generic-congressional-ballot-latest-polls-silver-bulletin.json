@@ -1,0 +1,174 @@
+{
+  "article": {
+    "date": "2026-11-03",
+    "title": "Who’s ahead on the generic congressional ballot?",
+    "subtitle": "Our constantly-updating tracker of polls for the most important indicator in the race for Congress.",
+    "authors": "Nate Silver; Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-11-03_generic-congressional-ballot-latest-polls-silver-bulletin"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": true,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:45:20"
+  },
+  "extraction": {
+    "summary": "Landing page for the Silver Bulletin 2026 generic congressional ballot average, frozen on Nov. 3, 2026 at D+8.8 (Democrats 51.8, Republicans 43.0). It describes the default average's poll-version preference, influence scores, house-effect adjusted results, and the paywalled extras: state benchmarks from partisan lean and elasticity under four scenarios, and retrospective generic ballot averages back to 1994 with a downloadable file. The PDF shows the final top-weighted polls with influence scores.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin generic ballot average",
+      "FLIPR 2026"
+    ],
+    "findings": [
+      {
+        "component": "generic_ballot_and_national_environment",
+        "finding_type": "parameter_or_number",
+        "statement": "The final 2026 Silver Bulletin generic ballot average, frozen Nov. 3, 2026, was Democrats 51.8 percent and Republicans 43.0 percent, a D+8.8 margin.",
+        "quantities": [
+          {
+            "name": "final D share",
+            "value": "51.8",
+            "unit": "percent",
+            "context": "Nov 3, 2026"
+          },
+          {
+            "name": "final R share",
+            "value": "43.0",
+            "unit": "percent",
+            "context": "Nov 3, 2026"
+          },
+          {
+            "name": "final margin",
+            "value": "D+8.8",
+            "unit": "points",
+            "context": "Nov 3, 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin generic ballot average 2026",
+        "evidence_quote": "Democrats ended with 51.8 percent support on the generic congressional ballot to Republicans’ 43.0 percent.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "method",
+        "statement": "The default generic ballot average combines polls of adults, registered voters and likely voters. When a pollster releases multiple versions, it prefers likely voters, then registered voters, then adults, because the target is people who plan to vote.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin generic ballot average 2026",
+        "evidence_quote": "If a pollster releases multiple versions of the same survey, we use the likely voter version before the registered voter version.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "Each generic ballot poll gets an 'influence' score from its pollster rating, sample size, recency and how often the pollster publishes; recent or large polls from mediocre pollsters can outweigh better-rated ones. Weight is divided among a pollster's multiple recent surveys, and daily tracking polls are adjusted so interviews are not double-counted.",
+        "quantities": [],
+        "rationale": "No single pollster should dominate.",
+        "model_version": "Silver Bulletin generic ballot average 2026",
+        "evidence_quote": "Each poll gets an “influence” score based on its pollster rating, its sample size, its recency, and how often a pollster is publishing numbers.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "parameter_or_number",
+        "statement": "Final 2026 generic ballot influence scores for the top polls included AtlasIntel (3,566 adults, influence 1.47, D 56-41), TIPP (1,158 LV, 1.37), NYT/Siena (3,494 LV, 1.32), Echelon Insights (3,644 LV, 1.18), Cygnal (1,500 LV, 1.15), Emerson (1,000 LV, 1.09), Zogby, Marist and NBC/Hart (1,000 RV, 0.95).",
+        "quantities": [
+          {
+            "name": "AtlasIntel influence",
+            "value": "1.47",
+            "unit": "influence score",
+            "context": "final week 2026"
+          },
+          {
+            "name": "NYT/Siena influence",
+            "value": "1.32",
+            "unit": "influence score",
+            "context": "final weeks 2026"
+          },
+          {
+            "name": "NBC/Hart RV influence",
+            "value": "0.95",
+            "unit": "influence score",
+            "context": "final week 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin generic ballot average 2026",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "State-level generic ballot benchmarks combine the generic ballot average with each state's partisan lean and elasticity, shown under four scenarios: the current generic ballot, a neutral environment (0), Democrats gaining 5 points, and Republicans gaining 5 points.",
+        "quantities": [
+          {
+            "name": "scenario shift",
+            "value": "5",
+            "unit": "points",
+            "context": "benchmark scenarios"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin generic ballot average 2026",
+        "evidence_quote": "We show four versions of these benchmarks: one based on the current generic ballot, one assuming a neutral political environment (generic ballot = 0)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "Silver Bulletin provides retrospective generic ballot averages for every cycle from 1994 to 2024, calculated by applying the current methodology and pollster ratings to past polls, as a downloadable XLSX ('Generic Topline All Cycles'), along with a download of every 2026 generic ballot poll in its database.",
+        "quantities": [
+          {
+            "name": "historical coverage start",
+            "value": "1994",
+            "unit": "year",
+            "context": "retrospective generic ballot averages"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin generic ballot average",
+        "evidence_quote": "Note that these are calculated retrospectively for previous cycles based on our current methodology and pollster ratings.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The generic ballot chart's shaded bands show where 90 percent of polls are projected to fall.",
+        "quantities": [
+          {
+            "name": "band coverage",
+            "value": "90",
+            "unit": "percent of polls",
+            "context": "chart"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin generic ballot average",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      }
+    ],
+    "political_insights": [],
+    "references": [
+      {
+        "description": "Generic Topline All Cycles (XLSX): retrospective generic ballot averages 1994-2024",
+        "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+      },
+      {
+        "description": "Downloadable list of every 2026 generic ballot poll in the database",
+        "url": ""
+      }
+    ],
+    "open_questions": []
+  }
+}

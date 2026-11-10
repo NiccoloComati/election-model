@@ -1,0 +1,98 @@
+Contest,Dates,Sample,Pollster,Harris,Trump,Kennedy,Margin,Influence,cat
+National,8/11 - 8/13@@23599,"1,407 RV@@1407",YouGov,46,44,3,D+ 2@@-2,1.181284,D
+National,8/2 - 8/5@@23590,"1,510 LV@@1510",SurveyUSA,48,45,,D+ 3@@-3,0.9265653,D
+National,8/9 - 8/11@@23597,"11,778 RV@@11778",Morning Consult,47,44,,D+ 3@@-3,0.923265,D
+National,8/9 - 8/11@@23597,757 LV@@757,Big Village,46.5,43.7,5,D+ 2.8@@-2.8,0.9173847,D
+National,8/7 - 8/11@@23595,"1,001 LV@@1001",J.L. Partners,41,43,5,R+ 2@@2,0.8729609,R
+National,8/7 - 8/7@@23595,"2,584 LV@@2584",Redfield & Wilton,47,44,4,D+ 3@@-3,0.8421721,D
+National,8/7 - 8/14@@23595,"1,000 LV@@1000",ActiVote,52.4,47.6,,D+ 4.8@@-4.8,0.8056157,D
+National,8/1 - 8/4@@23589,"1,513 RV@@1513",Marist College,48,45,5,D+ 3@@-3,0.7862521,D
+National,8/1 - 8/7@@23589,"1,794 LV@@1794",Rasmussen Reports,44,49,3,R+ 5@@5,0.7381631,R
+National,8/5 - 8/7@@23593,"2,000 RV@@2000",RMG Research,47,46,2,D+ 1@@-1,0.6915938,D
+National,8/2 - 8/7@@23590,"1,342 RV@@1342",Ipsos,42,37,4,D+ 5@@-5,0.6145737,D
+National,7/31 - 8/2@@23588,"1,326 RV@@1326",TIPP Insights,44,42,7,D+ 2@@-2,0.6009952,D
+National,7/31 - 8/4@@23588,"1,001 RV@@1001",Hart/Public Opinion Strategies,46,48,,R+ 2@@2,0.5414906,R
+National,8/4 - 8/6@@23592,"1,413 RV@@1413",YouGov,45,43,2,D+ 2@@-2,0.4666815,D
+National,7/30 - 8/2@@23587,"3,092 LV@@3092",YouGov,49,47,2,D+ 2@@-2,0.4559257,D
+National,7/24 - 8/1@@23581,683 LV@@683,Marquette University Law School,50,42,6,D+ 8@@-8,0.3443978,D
+National,7/29 - 8/1@@23586,"1,000 RV@@1000",UMass Amherst/YouGov,46,43,6,D+ 3@@-3,0.344114,D
+National,7/23 - 7/25@@23580,"1,980 RV@@1980",AtlasIntel,46.1,47.7,4.5,R+ 1.6@@1.6,0.3406454,R
+National,7/29 - 7/31@@23586,"3,000 RV@@3000",RMG Research,47,42,6,D+ 5@@-5,0.3390406,D
+National,7/30 - 8/6@@23587,"1,000 LV@@1000",ActiVote,45,44.4,10.5,D+ 0.6@@-.6,0.3120371,D
+National,7/23 - 7/25@@23580,"1,743 RV@@1743",Angus Reid Global,44,42,,D+ 2@@-2,0.2673191,D
+National,7/27 - 7/30@@23584,"1,123 RV@@1123",Civiqs,49,45,,D+ 4@@-4,0.2658474,D
+National,7/29 - 7/29@@23586,"1,750 LV@@1750",Redfield & Wilton,45,43,5,D+ 2@@-2,0.2609566,D
+National,7/26 - 7/28@@23583,"2,196 RV@@2196",Harris Insights,43.5,47,9,R+ 3.5@@3.5,0.258527,R
+National,7/26 - 7/30@@23583,"2,000 A@@2000",YouGov/SNF Agora,43,42,5,D+ 1@@-1,0.252928,D
+National,7/26 - 7/29@@23583,"1,035 LV@@1035",American Pulse,46.2,46.7,3.1,R+ 0.5@@.5,0.2487269,R
+National,7/26 - 7/28@@23583,786 LV@@786,Leger,48,41,5,D+ 7@@-7,0.2349067,D
+National,7/26 - 7/27@@23583,952 LV@@952,Florida Atlantic/Mainstreet,44,43,8,D+ 1@@-1,0.2291887,D
+National,7/27 - 7/30@@23584,"1,434 RV@@1434",YouGov,46,44,3,D+ 2@@-2,0.2280222,D
+National,7/24 - 7/25@@23581,"2,163 LV@@2163",Rasmussen Reports,45,46,5,R+ 1@@1,0.2140653,R
+National,7/22 - 7/24@@23579,"1,142 LV@@1142",NYT/Siena,44,43,5,D+ 1@@-1,0.1934797,D
+National,8/8 - 8/10@@23596,"4,000 RV@@4000",Morning Consult,48,44,,D+ 4@@-4,0.1839165,D
+National,7/23 - 7/25@@23580,"1,000 RV@@1000",Fabrizio/GBAO,45,44,4,D+ 1@@-1,0.1756023,D
+National,8/7 - 8/9@@23595,"4,000 RV@@4000",Morning Consult,48,44,,D+ 4@@-4,0.1698299,D
+National,7/23 - 7/29@@23580,"1,000 LV@@1000",McLaughlin & Associates,41,42,8,R+ 1@@1,0.1635929,R
+National,7/22 - 7/25@@23579,"2,472 LV@@2472",Harris Insights,45,46.5,8,R+ 1.5@@1.5,0.1504041,R
+National,7/22 - 7/26@@23579,995 LV@@995,Clarity Campaign Labs,48,47,,D+ 1@@-1,0.1465946,D
+National,7/24 - 7/29@@23581,"1,000 LV@@1000",ActiVote,44.3,45.5,10.3,R+ 1.2@@1.2,0.1341063,R
+National,8/6 - 8/8@@23594,"4,000 RV@@4000",Morning Consult,48,44,,D+ 4@@-4,0.1324356,D
+National,7/26 - 7/28@@23583,876 RV@@876,Ipsos,43,42,,D+ 1@@-1,0.1319433,D
+National,7/22 - 7/24@@23579,"1,492 LV@@1492",Big Village,42.7,44.3,5.6,R+ 1.6@@1.6,0.1313468,R
+National,7/22 - 7/24@@23579,"2,137 RV@@2137",Change Research,44,43,,D+ 1@@-1,0.1311094,D
+National,8/5 - 8/7@@23593,"4,000 RV@@4000",Morning Consult,48,44,,D+ 4@@-4,0.1215653,D
+National,7/22 - 7/24@@23579,"5,265 A@@5265",SurveyMonkey,38,39,6,R+ 1@@1,0.1180489,R
+National,7/22 - 7/23@@23579,"1,631 RV@@1631",SSRS,46,49,,R+ 3@@3,0.1147302,R
+National,8/2 - 8/4@@23590,"11,265 RV@@11265",Morning Consult,48,44,,D+ 4@@-4,0.1143855,D
+National,7/22 - 7/23@@23579,"2,000 RV@@2000",RMG Research,46,48,2,R+ 2@@2,0.1131738,R
+National,7/24 - 7/25@@23581,"1,238 A@@1238",Ipsos,38,38,4,Even@@0,0.1130218,E
+National,7/22 - 7/24@@23579,"1,074 LV@@1074",Rasmussen Reports,42,49,4,R+ 7@@7,0.1011943,R
+National,8/4 - 8/6@@23592,"4,000 RV@@4000",Morning Consult,48,44,,D+ 4@@-4,0.0920749,D
+National,7/22 - 7/23@@23579,"1,155 LV@@1155",YouGov,44,46,4,R+ 2@@2,0.0893464,R
+National,8/3 - 8/5@@23591,"4,000 RV@@4000",Morning Consult,47,44,,D+ 3@@-3,0.0834232,D
+National,7/22 - 7/23@@23579,"1,018 RV@@1018",Ipsos,42,38,8,D+ 4@@-4,0.0807595,D
+National,8/1 - 8/3@@23589,"4,000 RV@@4000",Morning Consult,47,44,,D+ 3@@-3,0.0688549,D
+National,7/31 - 8/2@@23588,"4,000 RV@@4000",Morning Consult,47,45,,D+ 2@@-2,0.0626237,D
+National,7/30 - 8/1@@23587,"4,000 RV@@4000",Morning Consult,46,45,,D+ 1@@-1,0.0567131,D
+National,7/26 - 7/28@@23583,"11,538 RV@@11538",Morning Consult,47,46,,D+ 1@@-1,0.0514307,D
+National,7/29 - 7/31@@23586,"4,000 RV@@4000",Morning Consult,46,44,,D+ 2@@-2,0.050938,D
+National,7/22 - 7/22@@23579,"1,117 RV@@1117",Marist College,42,42,7,Even@@0,0.0505966,E
+National,7/28 - 7/30@@23585,"4,000 RV@@4000",Morning Consult,46,45,,D+ 1@@-1,0.0450937,D
+National,7/27 - 7/29@@23584,"4,000 RV@@4000",Morning Consult,46,45,,D+ 1@@-1,0.0387405,D
+National,7/22 - 7/24@@23579,"11,297 RV@@11297",Morning Consult,46,45,,D+ 1@@-1,0.0381191,D
+National,7/25 - 7/27@@23582,"4,000 RV@@4000",Morning Consult,47,45,,D+ 2@@-2,0.0326185,D
+National,7/21 - 7/23@@23578,"1,435 RV@@1435",YouGov,41,44,5,R+ 3@@3,0.0323898,R
+National,7/24 - 7/26@@23581,"4,000 RV@@4000",Morning Consult,46,45,,D+ 1@@-1,0.0316829,D
+National,7/23 - 7/25@@23580,"4,000 RV@@4000",Morning Consult,46,45,,D+ 1@@-1,0.0308555,D
+National,7/21 - 7/23@@23578,"1,000 LV@@1000",ActiVote,49.5,50.5,,R+ 1@@1,0.0290728,R
+National,7/15 - 7/15@@23572,"2,045 RV@@2045",Morning Consult,45,46,,R+ 1@@1,0,R
+National,6/28 - 6/28@@23555,"1,011 LV@@1011",Data for Progress,45,48,,R+ 3@@3,0,R
+National,7/13 - 7/16@@23570,"1,404 RV@@1404",YouGov,39,44,5,R+ 5@@5,0,R
+National,6/28 - 6/30@@23555,"1,274 RV@@1274",SSRS,45,47,,R+ 2@@2,0,R
+National,7/19 - 7/22@@23576,"1,178 RV@@1178",YouGov,41,43,5,R+ 2@@2,0,R
+National,7/19 - 7/21@@23576,982 LV@@982,Echelon Insights,47,49,,R+ 2@@2,0,R
+National,7/1 - 7/3@@23558,"1,000 LV@@1000",J.L. Partners,38,49,,R+ 11@@11,0,R
+National,7/1 - 7/2@@23558,892 RV@@892,Ipsos,42,43,,R+ 1@@1,0,R
+National,7/19 - 7/21@@23576,711 LV@@711,Florida Atlantic/Mainstreet,39.3,45.3,8.8,R+ 6@@6,0,R
+National,7/1 - 7/3@@23558,"2,067 LV@@2067",Data for Progress,46,46,,Even@@0,0,E
+National,7/19 - 7/21@@23576,"1,257 RV@@1257",Quinnipiac,41,45,6,R+ 4@@4,0,R
+National,7/5 - 7/9@@23562,"2,041 RV@@2041",Ipsos,49,47,,D+ 2@@-2,0,D
+National,7/7 - 7/13@@23564,"2,100 LV@@2100",Manhattan Institute,36,44,6,R+ 8@@8,0,R
+National,7/2 - 7/6@@23559,"1,000 LV@@1000",Bendixen & Amandi,42,41,,D+ 1@@-1,0,D
+National,7/7 - 7/10@@23564,"1,210 RV@@1210",Beacon Research/Shaw & Co.,48,49,,R+ 1@@1,0,R
+National,7/13 - 7/15@@23570,"1,918 RV@@1918",Harris Insights,48,52,,R+ 4@@4,0,R
+National,7/12 - 7/15@@23569,"1,098 LV@@1098",SurveyUSA,42,45,,R+ 3@@3,0,R
+National,7/12 - 7/14@@23569,"1,499 LV@@1499",Big Village,37.3,41.6,9.2,R+ 4.3@@4.3,0,R
+National,7/8 - 7/8@@23565,"1,101 LV@@1101",Redfield & Wilton,37,44,8,R+ 7@@7,0,R
+National,7/7 - 7/9@@23564,800 RV@@800,Hart/Public Opinion Strategies,45,47,,R+ 2@@2,0,R
+National,6/28 - 6/30@@23555,"1,500 RV@@1500",Harris Insights,39,43,16.5,R+ 4@@4,0,R
+National,7/9 - 7/10@@23566,"1,174 RV@@1174",Marist College,50,49,,D+ 1@@-1,0,D
+National,7/7 - 7/9@@23564,"1,443 RV@@1443",YouGov,38,42,5,R+ 4@@4,0,R
+National,6/28 - 7/1@@23555,"1,176 RV@@1176",YouGov,45,47,,R+ 2@@2,0,R
+National,7/16 - 7/18@@23573,"2,240 LV@@2240",YouGov,48,51,,R+ 3@@3,0,R
+National,7/15 - 7/16@@23572,992 RV@@992,Ipsos,44,44,,Even@@0,0,E
+National,7/21 - 7/22@@23578,"4,001 RV@@4001",Morning Consult,45,47,,R+ 2@@2,0,R
+National,7/7 - 7/8@@23564,"1,370 RV@@1370",Emerson College,42.8,49,,R+ 6.2@@6.2,0,R
+National,7/19 - 7/21@@23576,"2,169 LV@@2169",Harris Insights,46,54,,R+ 8@@8,0,R
+National,7/8 - 7/11@@23565,"2,295 LV@@2295",OH Predictive Insights,44,48,,R+ 4@@4,0,R

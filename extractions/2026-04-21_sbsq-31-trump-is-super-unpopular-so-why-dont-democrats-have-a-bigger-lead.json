@@ -1,0 +1,208 @@
+{
+  "article": {
+    "date": "2026-04-21",
+    "title": "SBSQ #31: Trump is super unpopular. So why don’t Democrats have a bigger lead?",
+    "subtitle": "A deeper look at the generic ballot. Plus, the game theory of the automated strike zone. And more models coming soon!",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/sbsq-31-trump-is-super-unpopular",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-04-21_sbsq-31-trump-is-super-unpopular-so-why-dont-democrats-have-a-bigger-lead"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:29:33"
+  },
+  "extraction": {
+    "summary": "Subscriber Q&A. The main item explains why Democrats led the generic ballot by only 5.7 points in April 2026 despite Trump's 39.3 percent approval. Silver's answer: the number fits the historical trendline; registered-voter polls miss midterm enthusiasm gaps; the generic ballot is noisy and needs conservative smoothing; the opposition party tends to gain a point or two from April to November; and FLIPR uses presidential approval as a prior. It also announces the PELE soccer model and a June-July 2026 launch for the midterm model, and closes with baseball challenge game theory.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin generic ballot average",
+      "Silver Bulletin presidential approval average",
+      "FLIPR 2026 midterms model",
+      "PELE soccer model"
+    ],
+    "findings": [
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "empirical_regularity",
+        "statement": "Generic ballot polls are 'bouncier' than other polling series, with little herding, possibly because the question is abstract and wording-sensitive and pollsters do not expect to be judged on it. Silver Bulletin therefore uses a more conservative smoothing setting for the generic ballot average, while its presidential approval average is tuned to react quickly.",
+        "quantities": [],
+        "rationale": "Curb noise in a bouncy series.",
+        "model_version": "Silver Bulletin polling averages (2026)",
+        "evidence_quote": "we’ve found that you need to use a more conservative setting for the generic ballot than for other sorts of polling averages to curb this bouncy tendency.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "method",
+        "statement": "The midterm model uses presidential approval as a 'prior' for the national environment alongside the generic ballot, because approval contains information the generic ballot misses, even if it is not more predictive on its own.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026 midterms model",
+        "evidence_quote": "And indeed, our model uses presidential approval as a “prior”.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "generic_ballot_and_national_environment",
+        "finding_type": "empirical_regularity",
+        "statement": "The opposition party tends to gain a point or two on the generic ballot between April and November of a midterm year, measured against the eventual House popular vote. Silver calls the series noisy.",
+        "quantities": [
+          {
+            "name": "typical opposition gain April to November",
+            "value": "1-2",
+            "unit": "points",
+            "context": "generic ballot vs. eventual House popular vote"
+          }
+        ],
+        "rationale": "",
+        "model_version": "empirical regularity",
+        "evidence_quote": "the opposition party tends to gain a point or two on the generic ballot between April and November",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "generic_ballot_and_national_environment",
+        "finding_type": "empirical_regularity",
+        "statement": "Historically the generic ballot has asymmetrically overrated Democrats at this stage of the cycle, possibly because Republicans used to have the more turnout-prone coalition. That may no longer hold: in 2022 the generic ballot was about spot-on at the equivalent point.",
+        "quantities": [],
+        "rationale": "Coalition turnout propensity has flipped.",
+        "model_version": "empirical regularity",
+        "evidence_quote": "there’s been an asymmetric historical tendency for the generic ballot to overrate Democrats at this stage.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "Early-cycle generic ballot polls mostly sample registered voters or all adults, so they miss midterm enthusiasm gaps that likely-voter screens capture. Silver expects the switch to likely-voter screens to favor Democrats in 2026, because the opposition party is usually more enthusiastic and the Democrats' college-educated coalition turns out heavily in non-presidential elections.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver analysis, 2026",
+        "evidence_quote": "generic ballot polls at this point in the cycle are usually based on polls of registered voters or all adults — not likely voters",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "generic_ballot_and_national_environment",
+        "finding_type": "empirical_regularity",
+        "statement": "Plotted against presidential approval, the April 2026 generic ballot (D+5.7 with Trump approval at 39.3 percent) sits right on the recent trendline. Comparable points: D+7.6 in April 2018 and D+11.4 on April 21, 2006 under George W. Bush, the only president among the past nine midterms who was less popular.",
+        "quantities": [
+          {
+            "name": "Trump approval",
+            "value": "39.3",
+            "unit": "percent",
+            "context": "April 21, 2026"
+          },
+          {
+            "name": "generic ballot",
+            "value": "D+5.7",
+            "unit": "points",
+            "context": "April 21, 2026"
+          },
+          {
+            "name": "generic ballot",
+            "value": "D+7.6",
+            "unit": "points",
+            "context": "April 2018"
+          },
+          {
+            "name": "generic ballot",
+            "value": "D+11.4",
+            "unit": "points",
+            "context": "April 21, 2006"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin averages",
+        "evidence_quote": "This year’s generic ballot is right where you’d expect it to be based on the recent trendline.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "generic_ballot_and_national_environment",
+        "finding_type": "empirical_regularity",
+        "statement": "The generic ballot sometimes takes a while to lock in: the poor Democratic midterms of 1994, 2010 and 2014 were not clearly visible in generic ballot polling by late April.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "empirical regularity",
+        "evidence_quote": "Democrats had very poor midterms in 1994, 2010 and 2014, but there wasn’t really much evidence of that at this point in generic ballot polling.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "assumption",
+        "statement": "Silver did not plan to launch the 2026 midterm model before early June, because candidates in key races and even district lines were not yet set; the work is mostly data gathering since the model was built for 2018 and 2022.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026 midterms model",
+        "evidence_quote": "The work is mostly about data gathering, since I put a lot of effort into our midterm model ahead of 2018 and 2022",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "assumption",
+        "statement": "Silver expects party-brand weakness to matter less once named candidates replace generic labels, and argues the model will reflect individual race-level data, with Democrats tending to nominate fairly strong congressional candidates.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "We’ll see what the model says based on individual-level race data",
+        "explicitness": "implied"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "design_principle",
+        "statement": "Silver scores his own published predictions, such as the 113 predictions for Trump's second term, for calibration and considers forecast calibration valuable in its own right; he found those predictions generally well-calibrated.",
+        "quantities": [
+          {
+            "name": "predictions scored",
+            "value": "113",
+            "unit": "predictions",
+            "context": "Trump second term"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "Generally, I found the predictions were pretty well-calibrated.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "midterm referendum",
+        "insight": "Midterms are mostly about the president and the president's party, especially when it controls all levers of government; incumbency never helped the president's party in midterms and may be becoming a disadvantage even in presidential years.",
+        "evidence": "",
+        "forecasting_implication": "Weight presidential approval heavily in the midterm national environment."
+      },
+      {
+        "topic": "angry partisans vote",
+        "insight": "Democratic voters' poor rating of their own party reflects anger at leadership, not despondency, and angry voters turn out; they will not defect to MAGA Republicans.",
+        "evidence": "",
+        "forecasting_implication": "Low party favorability need not imply low turnout or vote share for the out-party."
+      },
+      {
+        "topic": "2018 Senate map",
+        "insight": "In 2018 Democrats gained 40 House seats but lost one Senate seat, largely because of a bad map.",
+        "evidence": "",
+        "forecasting_implication": "Chamber outcomes depend on map composition, not just national environment."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin Trump approval dashboard (RV vs LV)",
+        "url": ""
+      },
+      {
+        "description": "113 predictions for Trump's second term",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How the presidential approval prior is combined with the generic ballot in FLIPR, and with what weights.",
+      "The exact smoothing settings for the generic ballot versus approval averages."
+    ]
+  }
+}

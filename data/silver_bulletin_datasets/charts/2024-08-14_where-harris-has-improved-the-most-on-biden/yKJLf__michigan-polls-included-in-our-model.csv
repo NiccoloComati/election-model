@@ -1,0 +1,15 @@
+Contest,Dates,Sample,Pollster,Harris,Trump,Kennedy,Margin,Influence,cat
+Michigan,8/5 - 8/8@@23593,619 LV@@619,NYT/Siena,48,43,4,D+ 5@@-5,1.056929,D
+Michigan,8/6 - 8/8@@23594,800 LV@@800,InsiderAdvantage,49,47,,D+ 2@@-2,0.8007915,D
+Michigan,8/8 - 8/11@@23596,500 RV@@500,Bullfinch,46,40,7,D+ 6@@-6,0.7591876,D
+Michigan,7/31 - 8/3@@23588,771 LV@@771,Redfield & Wilton,41,42,5,R+ 1@@1,0.4294764,R
+Michigan,7/26 - 8/2@@23583,406 LV@@406,Benenson Strategy/GS Strategy,46,44,6,D+ 2@@-2,0.2736158,D
+Michigan,7/23 - 7/29@@23580,400 LV@@400,Public Opinion Strategies,45,45,,Even@@0,0.190014,E
+Michigan,7/24 - 7/28@@23581,706 RV@@706,Morning Consult,51,39,5,D+ 12@@-12,0.1857273,D
+Michigan,7/22 - 7/24@@23579,"1,012 RV@@1012",Beacon Research/Shaw & Co.,43,45,7,R+ 2@@2,0.0790103,R
+Michigan,7/22 - 7/23@@23579,800 RV@@800,Emerson College,43.8,44.1,4.7,R+ 0.3@@.3,0.0703022,R
+Michigan,7/22 - 7/24@@23579,600 LV@@600,Glengariff Group,41.6,41.3,9.7,D+ 0.3@@-.3,0.0545605,D
+Michigan,7/22 - 7/24@@23579,512 LV@@512,Redfield & Wilton,41,44,7,R+ 3@@3,0.0404384,R
+Michigan,7/13 - 7/16@@23570,532 RV@@532,Civiqs,46,46,5,Even@@0,0,E
+Michigan,7/17 - 7/18@@23574,650 RV@@650,Public Policy Polling,41,46,6,R+ 5@@5,0,R
+Michigan,7/11 - 7/12@@23568,568 RV@@568,Public Policy Polling,46,48,,R+ 2@@2,0,R

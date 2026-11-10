@@ -1,0 +1,657 @@
+{
+  "article": {
+    "date": "2026-01-14",
+    "title": "Actually, sometimes polls underestimate Democrats",
+    "subtitle": "The polling industry doesn't get as much criticism in years like 2025 when surveys overestimate Republicans — but this can be a problem, too.",
+    "authors": "Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/actually-sometimes-polls-underestimate",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2026-01-14_actually-sometimes-polls-underestimate-democrats"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.697014,
+    "prompt_tokens": 8,
+    "completion_tokens": 18913,
+    "cache_read_tokens": 33090,
+    "cache_write_tokens": 39013,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:29:10"
+  },
+  "extraction": {
+    "summary": "Silver Bulletin's mini report card on 2025 off-year election polls, released alongside its updated pollster ratings, which feed the polling averages and forecasts for the 2026 midterms. About 40 qualifying polls of the New Jersey and Virginia gubernatorial races and two special House elections had an average error of 7.1 points, against 5.9 points historically since 1998. They also had an average bias of R+6.1, meaning they overestimated Republicans, against a historical D+1.1. The article sets out the pollster-ratings database rules: a 21-day window by median field date, mayoral polls excluded, banned polls excluded, bias computed only for D-vs-R races, and averages weighted by the square root of a pollster's poll count. It argues that pro-Democratic polling bias has mostly been a presidential-year phenomenon, possibly driven by partisan nonresponse among low-propensity Trump voters. It warns that pollsters overcorrecting, for example by weighting on recalled vote, could carry a Republican bias into 2026.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin pollster ratings",
+      "Silver Bulletin polling averages",
+      "Silver Bulletin generic ballot polling average",
+      "Silver Bulletin 2026 midterm forecast",
+      "Silver Bulletin Trump approval tracking"
+    ],
+    "findings": [
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Silver Bulletin pollster ratings are updated after each election year, including off-year elections such as 2025, using results from qualifying races. The ratings feed into the Silver Bulletin polling averages and the 2026 midterm forecasts.",
+        "quantities": [],
+        "rationale": "The ratings are an important input to the polling averages and forecasts and are also a public resource.",
+        "model_version": "Silver Bulletin pollster ratings (2026 update)",
+        "evidence_quote": "they're also an important part of the polling averages and forecasts we'll be using to cover the midterms",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "The Silver Bulletin pollster ratings database includes polls from the final three weeks (21 days) before general elections for president, governor and Congress, going back to 1998. It also includes presidential primary polls, which inflate the database's historical average error.",
+        "quantities": [
+          {
+            "name": "poll window",
+            "value": "21",
+            "unit": "days",
+            "context": "final three weeks before the election"
+          },
+          {
+            "name": "database start year",
+            "value": "1998",
+            "unit": "year",
+            "context": "pollster ratings database"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "Our database includes polls in the final three weeks before general elections for president, governor, and Congress and goes back to 1998.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "adjustment_rule",
+        "statement": "The 21-day cutoff for including a poll in the pollster ratings and accuracy analysis is determined by the poll's median field date.",
+        "quantities": [
+          {
+            "name": "cutoff",
+            "value": "21",
+            "unit": "days",
+            "context": "based on median field date"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "adjustment_rule",
+        "statement": "Mayoral race polls, such as the 2025 New York City mayoral race, do not count toward Silver Bulletin pollster ratings. Silver Bulletin keeps this rule even though it lets some pollsters who did poorly in that race off the hook.",
+        "quantities": [],
+        "rationale": "Giving a mulligan to a few pollsters is not a good enough reason to change the methodology.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "But mayoral polls don't factor into our pollster ratings. Admittedly, that gives a mulligan to a few pollsters who had a tough race",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "adjustment_rule",
+        "statement": "Polls from pollsters banned by Silver Bulletin are excluded from the pollster accuracy analysis.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "method",
+        "statement": "Polling error is defined as the difference between a poll's margin and the actual election margin between the top two candidates.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "meaning the difference between a poll's margin and the actual margin of the election between the top two candidates",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "method",
+        "statement": "Statistical bias, the extent to which polls consistently underestimate Democrats or Republicans, is calculated only for elections where the top two finishers were a Republican and a Democrat. It is therefore not calculated for presidential primaries.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "In the report-card error and bias averages, each poll is weighted by the square root of the number of polls that its pollster conducted for that type of election in that cycle, according to the chart notes.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings / polling report card",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Advanced Plus-Minus measures how a pollster's average error compares to other pollsters' errors in the same election, accounting for which races are harder to poll. Negative scores are better.",
+        "quantities": [],
+        "rationale": "It controls for race difficulty when comparing pollsters.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "how the pollster's average error compares to other pollsters' in the same election, accounting for which races are harder to poll. Negative plus-minus scores indicate that a pollster did better",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "design_principle",
+        "statement": "A pollster's performance in a single cycle should not be given much weight, especially in an off-year cycle where most firms released only one or two qualifying polls.",
+        "quantities": [
+          {
+            "name": "typical polls per firm",
+            "value": "one or two",
+            "unit": "polls",
+            "context": "2025 off-year cycle"
+          }
+        ],
+        "rationale": "Small samples make single-cycle results noisy.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "You shouldn't pay too much attention to how any pollster does in a single cycle, especially an off-year cycle where most firms released one or two qualifying polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "For report cards, off-year election polls are normally grouped with the following midterm or presidential year; for example, 2025 polls would be grouped with the 2026 midterms.",
+        "quantities": [],
+        "rationale": "Off-year elections are low-key and have few polls.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "which is why we typically group them together with midterm or presidential election years for these report cards",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "interpretation_guidance",
+        "statement": "The share of polls that 'called' the race correctly, meaning the poll's leader won, is a poor accuracy measure, especially in uncompetitive races. All 2025 qualifying polls called their race correctly, but none of the races were close.",
+        "quantities": [
+          {
+            "name": "2025 call accuracy",
+            "value": "100",
+            "unit": "percent",
+            "context": "2025 qualifying polls"
+          }
+        ],
+        "rationale": "Picking the right winner in uncompetitive races isn't impressive.",
+        "model_version": "general principle",
+        "evidence_quote": "Correct calls aren't a great measure of accuracy",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Historically, polls showing a 6-10 point margin pick the winner 86% of the time. The rate is 94% for a 10-15 point margin and 97% for a 15-20 point margin.",
+        "quantities": [
+          {
+            "name": "call accuracy, 6-10 pt margin",
+            "value": "86",
+            "unit": "percent",
+            "context": "historical"
+          },
+          {
+            "name": "call accuracy, 10-15 pt margin",
+            "value": "94",
+            "unit": "percent",
+            "context": "historical"
+          },
+          {
+            "name": "call accuracy, 15-20 pt margin",
+            "value": "97",
+            "unit": "percent",
+            "context": "historical"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings database",
+        "evidence_quote": "Polls that show a race with a 6-10 point margin have 86 percent call accuracy, historically.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "Average polling error across all polls in the Silver Bulletin database since 1998 is 5.9 points. This figure is inflated by error-prone presidential primary polls. The 2025 cycle average error was 7.1 points across 40 polls.",
+        "quantities": [
+          {
+            "name": "historical average error",
+            "value": "5.9",
+            "unit": "percentage points",
+            "context": "all polls since 1998"
+          },
+          {
+            "name": "2025 average error",
+            "value": "7.1",
+            "unit": "percentage points",
+            "context": "40 qualifying polls"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "the average error across all polls in our database since 1998 is only 5.9 points — and that figure is inflated by surveys of presidential primaries",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "In 2025, the 38 gubernatorial polls had an average error of 7.0 points and an average bias of R+6.9. The historical gubernatorial averages are 5.4 points of error and D+0.9 bias.",
+        "quantities": [
+          {
+            "name": "2025 gubernatorial polls",
+            "value": "38",
+            "unit": "polls",
+            "context": "2025"
+          },
+          {
+            "name": "2025 gubernatorial error",
+            "value": "7.0",
+            "unit": "percentage points",
+            "context": "2025"
+          },
+          {
+            "name": "historical gubernatorial error",
+            "value": "5.4",
+            "unit": "percentage points",
+            "context": "since 1998"
+          },
+          {
+            "name": "2025 gubernatorial bias",
+            "value": "R+6.9",
+            "unit": "percentage points",
+            "context": "2025"
+          },
+          {
+            "name": "historical gubernatorial bias",
+            "value": "D+0.9",
+            "unit": "percentage points",
+            "context": "since 1998"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "In the 2025 New Jersey governor's race, 22 polls had an average error of 9.0 points and a bias of R+9.0. The state's historical averages are 3.7 points of error and D+0.7 bias, making 2025 the worst year for New Jersey gubernatorial polls since 2000.",
+        "quantities": [
+          {
+            "name": "NJ polls",
+            "value": "22",
+            "unit": "polls",
+            "context": "2025"
+          },
+          {
+            "name": "NJ 2025 error",
+            "value": "9.0",
+            "unit": "percentage points",
+            "context": "2025"
+          },
+          {
+            "name": "NJ historical error",
+            "value": "3.7",
+            "unit": "percentage points",
+            "context": "historical"
+          },
+          {
+            "name": "NJ 2025 bias",
+            "value": "R+9.0",
+            "unit": "percentage points",
+            "context": "2025"
+          },
+          {
+            "name": "NJ historical bias",
+            "value": "D+0.7",
+            "unit": "percentage points",
+            "context": "historical"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "an average 9-point error compared to only 3.7 points historically, making 2025 the worst year for New Jersey gubernatorial polls since the turn of the century",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "In the 2025 Virginia governor's race, 16 polls had an average error of 5.9 points and a bias of R+5.8. Since 2001, Virginia gubernatorial polls have averaged 4.4 points of error and D+0.8 bias.",
+        "quantities": [
+          {
+            "name": "VA polls",
+            "value": "16",
+            "unit": "polls",
+            "context": "2025"
+          },
+          {
+            "name": "VA 2025 error",
+            "value": "5.9",
+            "unit": "percentage points",
+            "context": "2025"
+          },
+          {
+            "name": "VA historical error",
+            "value": "4.4",
+            "unit": "percentage points",
+            "context": "since 2001"
+          },
+          {
+            "name": "VA 2025 bias",
+            "value": "R+5.8",
+            "unit": "percentage points",
+            "context": "2025"
+          },
+          {
+            "name": "VA historical bias",
+            "value": "D+0.8",
+            "unit": "percentage points",
+            "context": "historical"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "Since 2001, the average polling error in Virginia gubernatorial elections was 4.4 points, compared to 5.9 points in 2025.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "The two qualifying 2025 special House election polls had an average error of 8.4 points and a bias of D+8.4. Historically, House polls average 6.0 points of error and D+1.3 bias. The text says these polls overestimated Democrats, which it attributes mostly to Democrats overperforming expectations in FL-06 and TN-07.",
+        "quantities": [
+          {
+            "name": "House polls",
+            "value": "2",
+            "unit": "polls",
+            "context": "2025"
+          },
+          {
+            "name": "House 2025 error",
+            "value": "8.4",
+            "unit": "percentage points",
+            "context": "2025"
+          },
+          {
+            "name": "House historical error",
+            "value": "6.0",
+            "unit": "percentage points",
+            "context": "historical"
+          },
+          {
+            "name": "House 2025 bias",
+            "value": "D+8.4",
+            "unit": "percentage points",
+            "context": "2025"
+          },
+          {
+            "name": "House historical bias",
+            "value": "D+1.3",
+            "unit": "percentage points",
+            "context": "historical"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "the two 2025 House polls we added to our database did overestimate Democrats by 8.4 points on average, but that mostly comes down to the blue team overperforming expectations in FL-06 and TN-07",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "The direction of polling bias has historically been unpredictable from cycle to cycle. The average bias since 1998 is only D+1.1, but 2025 polls had an average R+6.1 bias, meaning they overestimated Republicans.",
+        "quantities": [
+          {
+            "name": "historical average bias",
+            "value": "D+1.1",
+            "unit": "percentage points",
+            "context": "since 1998"
+          },
+          {
+            "name": "2025 average bias",
+            "value": "R+6.1",
+            "unit": "percentage points",
+            "context": "2025 cycle"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Directionally, bias has historically been unpredictable cycle-to-cycle: the average bias since 1998 is just D +1.1.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Average polling bias by cycle: 2016 D+3.0, 2018 R+0.5, 2020 D+4.7, 2022 D+0.8, 2024 D+2.9, 2025 R+6.1. D+ means the polls overestimated Democrats. Pro-Democratic bias has been concentrated in presidential cycles, while midterms have been near-unbiased.",
+        "quantities": [
+          {
+            "name": "2016 bias",
+            "value": "D+3.0",
+            "unit": "percentage points",
+            "context": "presidential cycle"
+          },
+          {
+            "name": "2018 bias",
+            "value": "R+0.5",
+            "unit": "percentage points",
+            "context": "midterm"
+          },
+          {
+            "name": "2020 bias",
+            "value": "D+4.7",
+            "unit": "percentage points",
+            "context": "presidential cycle"
+          },
+          {
+            "name": "2022 bias",
+            "value": "D+0.8",
+            "unit": "percentage points",
+            "context": "midterm"
+          },
+          {
+            "name": "2024 bias",
+            "value": "D+2.9",
+            "unit": "percentage points",
+            "context": "presidential cycle"
+          }
+        ],
+        "rationale": "Possibly partisan nonresponse among low-propensity voters, who turn out in presidential years.",
+        "model_version": "general principle",
+        "evidence_quote": "recently, Democratic polling bias has been mostly confined to presidential cycles",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver Bulletin considers average bias near zero (such as D+0.8 in 2022 and R+0.5 in 2018) to be about as good as polls can realistically achieve.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "those results are about as good as you realistically can get",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "Average polling error in 2024 was lower than in any cycle since 1998, yet polls underestimated Trump and Republicans for the third straight presidential election.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "average polling error in 2024 was lower than in any cycle since 1998",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Herding appeared less prevalent among 2025 polls than in 2024.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "herding looked to be less prevalent last year than it was in 2024",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "parameter_or_number",
+        "statement": "2025 rating changes: Trafalgar, which overestimated Republicans by 12.6 points on average in Virginia and New Jersey, fell from B+ to B. AtlasIntel, off by 9.9 points on average, was bumped down to A. Beacon Research/Shaw & Co., which missed New Jersey by 7.4 points, was bumped down to A-.",
+        "quantities": [
+          {
+            "name": "Trafalgar bias",
+            "value": "12.6",
+            "unit": "percentage points toward R",
+            "context": "VA and NJ 2025"
+          },
+          {
+            "name": "AtlasIntel error",
+            "value": "9.9",
+            "unit": "percentage points",
+            "context": "2025"
+          },
+          {
+            "name": "Beacon/Shaw NJ error",
+            "value": "7.4",
+            "unit": "percentage points",
+            "context": "NJ 2025"
+          }
+        ],
+        "rationale": "Poor 2025 accuracy moved the ratings even with small samples.",
+        "model_version": "Silver Bulletin pollster ratings (2026 update)",
+        "evidence_quote": "bringing their pollster rating from a B+ down to a B",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "parameter_or_number",
+        "statement": "Best 2025 pollsters by simple average error, with Advanced Plus-Minus in parentheses: State Navigate 2.4 (−4.4, 2 VA polls), YouGov 2.4 (−4.6, 2 polls NJ/VA), Zogby 2.4 (−4.9, 1 NJ), GQR 2.4 (−6.5, 1 NJ), Echelon 3.4 (−2.7, VA), Washington Post/George Mason 3.4 (−2.9, VA). Further down: InsiderAdvantage 5.2 (+0.3), Gravis/Kaplan 5.4 (−1.8), Roanoke 5.4 (−0.2), Clarity 5.4 (−1.0), Concord 5.4 (−4.1, NJ), SoCal Research 6.4 (−0.4), Quinnipiac 6.4 (−1.4, NJ), Research Co. 7.0 (bias R+5.4, −0.3), Beacon/Shaw 7.4 (−0.7). All showed Republican bias. The same miss scores a better Plus-Minus in New Jersey, the harder-to-poll race, than in Virginia.",
+        "quantities": [
+          {
+            "name": "State Navigate APM",
+            "value": "-4.4",
+            "unit": "",
+            "context": "2025"
+          },
+          {
+            "name": "GQR APM",
+            "value": "-6.5",
+            "unit": "",
+            "context": "2025 NJ"
+          },
+          {
+            "name": "InsiderAdvantage APM",
+            "value": "0.3",
+            "unit": "",
+            "context": "2025 VA"
+          },
+          {
+            "name": "Concord APM",
+            "value": "-4.1",
+            "unit": "",
+            "context": "2025 NJ, 5.4 error"
+          },
+          {
+            "name": "Gravis APM",
+            "value": "-1.8",
+            "unit": "",
+            "context": "2025 VA, 5.4 error"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings (2026 update)",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2025 Virginia, according to State Navigate, pollsters who weighted on recalled vote to the 2021 or 2024 electorate (redder years) were less accurate than those who weighted to a modeled, bluer 2025 electorate. Not weighting on recalled vote at all was less accurate than either option.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "pollsters who weighted to a 2021 or 2024 electorate, which were redder years, were less accurate than pollsters who weighted their data to a modeled (bluer) 2025 electorate",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "There is a risk that pollsters overcompensate after underestimating Trump three times, so the substantial Republican bias seen in 2025 could continue into the 2026 midterms.",
+        "quantities": [],
+        "rationale": "Weighting choices have become a guessing game.",
+        "model_version": "FLIPR 2026 / general",
+        "evidence_quote": "If pollsters who are worried about underestimating Trump three times end up overcompensating, the substantial Republican bias from 2025 could continue into 2026.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "Silver Bulletin planned to launch a generic ballot polling average in early 2026 and a 2026 midterm forecast around midyear.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "we're busy preparing our generic ballot polling average (keep an eye out in the near future!) and getting ready to fire up the election forecast (landing date closer to midyear)",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "partisan nonresponse and low-propensity voters",
+        "insight": "Polls struggle to reach low-propensity voters, those who vote in presidential races but skip midterms. Trump, and to a lesser extent Republicans generally, increasingly win this group, so presidential-year polls have underestimated Republicans while midterm polls, with high-propensity electorates, have been less biased.",
+        "evidence": "Bias of D+3.0 in 2016, D+4.7 in 2020 and D+2.9 in 2024, versus D+0.8 in 2022 and R+0.5 in 2018.",
+        "forecasting_implication": "Do not assume the presidential-year pro-Democratic poll bias carries over to midterms; consider bias priors specific to cycle type."
+      },
+      {
+        "topic": "Trump-specific polling miss",
+        "insight": "Pollsters disagree about whether the underestimation of Republicans is Trump-specific. Natalie Jackson's hypothesis is that Trump draws out voters who wouldn't turn out in a midterm, and possibly not for a different presidential candidate.",
+        "evidence": "Quote from Natalie Jackson (GQR).",
+        "forecasting_implication": "The direction of polling error may depend on whether Trump is on the ballot."
+      },
+      {
+        "topic": "2025 off-year Democratic overperformance",
+        "insight": "Democrats outperformed polls substantially in the 2025 New Jersey and Virginia governor's races, by about 9 and 6 points respectively. Mikie Sherrill in New Jersey was considerably underestimated.",
+        "evidence": "Bias of R+9.0 in New Jersey and R+5.8 in Virginia.",
+        "forecasting_implication": "This is a possible signal of Democratic strength under a Trump midterm environment, and of pollster overcorrection."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin pollster ratings (updated with 2025 results)",
+        "url": ""
+      },
+      {
+        "description": "Earlier article interviewing pollsters about what went wrong and right in 2024",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin 2024 polling report card (average error lowest since 1998; third straight underestimate of Trump)",
+        "url": ""
+      },
+      {
+        "description": "State Navigate analysis of recalled-vote weighting in the 2025 Virginia race",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin Trump approval tracker",
+        "url": ""
+      },
+      {
+        "description": "Historical call accuracy by poll margin",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact direction of the report-card weighting: the chart notes say averages are weighted by the square root of the number of polls a pollster conducted, but it is unclear whether this means each poll gets weight 1/sqrt(n) so prolific pollsters' total weight scales with sqrt(n).",
+      "How Advanced Plus-Minus adjusts for race difficulty (functional form, controls).",
+      "How Plus-Minus and bias translate into letter grades, and how much one off-year cycle moves a grade.",
+      "Criteria for banning pollsters.",
+      "Whether and how the 2026 forecast or polling averages will account for a possible Republican-leaning bias in 2026 polls.",
+      "Apparent inconsistency in footnote 3: the House polls showed D+8.4 bias yet Democrats overperformed in FL-06 and TN-07.",
+      "Per-chamber bias values for 2015-2025 in the bias-by-race-type chart are not legible in the rendering."
+    ]
+  }
+}

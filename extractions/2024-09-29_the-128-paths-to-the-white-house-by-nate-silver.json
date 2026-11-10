@@ -1,0 +1,513 @@
+{
+  "article": {
+    "date": "2024-09-29",
+    "title": "The 128 paths to the White House",
+    "subtitle": "From the Sun Belt to the Rust Belt, which maps are most likely?",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/the-128-paths-to-the-white-house",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-09-29_the-128-paths-to-the-white-house-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.411891,
+    "prompt_tokens": 4,
+    "completion_tokens": 7133,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 33612,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:16:04"
+  },
+  "extraction": {
+    "summary": "Silver lays out five polling-error scenarios for the 2024 race (Harris 56%, Trump 44% in the Electoral College on Sept. 29) and uses a 70,000-simulation run of the Silver Bulletin presidential model to tabulate how often each of the 128 combinations of the seven swing states comes up. The two sweeps (all D: 15,273; all R: 13,912) together make up about 40% of simulations. That reflects correlated, mostly uniform polling error, and a normal 3-4 point miss would decide every swing state. The model treats state errors as correlated both across the board and within regional and demographic clusters (MI/WI, GA/NC, AZ/NV), so maps where Harris wins Arizona but loses Nevada are the rarest (1.3%). Knowing the seven swing-state outcomes predicts the EC winner 99% of the time, but the model still lets non-swing states like NH, NM, MN and NE-2 flip in demographically consistent ways.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages"
+    ],
+    "findings": [
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin 2024 presidential model typically runs 40,000 simulations per model run. For the Sept. 29, 2024 run it was raised to 70,000 to get a larger sample for this analysis.",
+        "quantities": [
+          {
+            "name": "typical simulations",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "standard model run, 2024"
+          },
+          {
+            "name": "special run simulations",
+            "value": "70,000",
+            "unit": "simulations",
+            "context": "Sept. 29, 2024 run for this column"
+          }
+        ],
+        "rationale": "A larger sample size gives better counts of rare swing-state combinations.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Typically, we run 40,000 simulations, but I upped it to 70K today to get a larger sample size for this column.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The model's simulation outputs can be tabulated by the 128 (2^7) win/loss combinations of the seven swing states (MI, PA, WI, GA, NC, AZ, NV). Florida is excluded from the swing-state set for this purpose.",
+        "quantities": [
+          {
+            "name": "swing-state combinations",
+            "value": "128",
+            "unit": "combinations",
+            "context": "2^7 permutations of seven swing states"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The seven major swing states — for purposes of this column, I won’t get cute and count Florida as one — produce a total of 128 possible combinations (2 to the 7th power).",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the Sept. 29 run, the most common swing-state outcome was a Harris sweep of all seven (15,273 of 70,000) and the second most common was a Trump sweep (13,912 of 70,000). Together they make up about 40% of simulations, which reflects strongly correlated state polling errors.",
+        "quantities": [
+          {
+            "name": "Harris sweep count",
+            "value": "15,273",
+            "unit": "of 70,000 simulations",
+            "context": "Sept. 29, 2024; default Harris EV 317"
+          },
+          {
+            "name": "Trump sweep count",
+            "value": "13,912",
+            "unit": "of 70,000 simulations",
+            "context": "Sept. 29, 2024; default Harris EV 226"
+          },
+          {
+            "name": "combined sweep probability",
+            "value": "about 40",
+            "unit": "percent",
+            "context": "either full sweep"
+          }
+        ],
+        "rationale": "Even a normal-sized across-the-board polling error decides every swing state in the same direction.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "These are far more likely than any other combos; in fact, combined, there’s about a 40 percent chance that one of them will come up.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "Silver describes a 'normal-sized' polling error as 3 to 4 points across the board. An error that size in either direction would decide all seven swing states when all are polling within 2 points.",
+        "quantities": [
+          {
+            "name": "normal-sized polling error",
+            "value": "3 or 4",
+            "unit": "percentage points",
+            "context": "uniform error across swing states"
+          },
+          {
+            "name": "swing state polling range",
+            "value": "within 2",
+            "unit": "percentage points",
+            "context": "all seven battlegrounds, Sept. 29, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "even a normal-sized polling error of 3 or 4 points across the board would make the Electoral College uninteresting.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "assumption",
+        "statement": "The model expects polling errors to be correlated across states. An across-the-board miss is possible, but errors are more likely to come in regional clusters: Michigan and Wisconsin tend to move together, as do Georgia and North Carolina.",
+        "quantities": [],
+        "rationale": "Regional and demographic similarity.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it further expects those errors to be correlated to some degree — perhaps an across-the-board miss, but more likely in some regional clusters: Michigan and Wisconsin will tend to move together, as will Georgia and North Carolina.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "assumption",
+        "statement": "The model treats Arizona and Nevada as highly correlated because of their similar demographic makeup. With Harris polling +1.8 in NV and -1.3 in AZ, maps where Harris wins AZ but loses NV are the least likely. That combination occurred in 894 of 70,000 simulations (1.3%), and some specific maps of this kind appeared only 2 times.",
+        "quantities": [
+          {
+            "name": "NV polling margin",
+            "value": "+1.8",
+            "unit": "percentage points (Harris)",
+            "context": "Sept. 29, 2024"
+          },
+          {
+            "name": "AZ polling margin",
+            "value": "-1.3",
+            "unit": "percentage points (Harris)",
+            "context": "Sept. 29, 2024"
+          },
+          {
+            "name": "Harris wins AZ but loses NV",
+            "value": "894",
+            "unit": "of 70,000 simulations",
+            "context": "any combination of the other five battlegrounds"
+          },
+          {
+            "name": "Harris wins AZ but loses NV",
+            "value": "1.3",
+            "unit": "percent",
+            "context": "same"
+          },
+          {
+            "name": "least likely combination count",
+            "value": "2",
+            "unit": "of 70,000 simulations",
+            "context": "least likely maps"
+          }
+        ],
+        "rationale": "Flipping relative positions would require a large state-specific error that the polls missed.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model expects Arizona and Nevada to be highly correlated — they have a similar demographic makeup.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "The model's correlation structure works through demographics. In simulations where Harris loses both Arizona and Nevada, implying Hispanic underperformance, New Mexico also becomes more likely to flip. Where she underperforms with white voters, New Hampshire becomes a risk.",
+        "quantities": [],
+        "rationale": "Shared demographic groups transmit polling error across states.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "It notices, for instance, that on this map, Harris has lost Arizona and Nevada, which implies significant underperformance with Hispanic voters — and if Harris is really losing ground with Hispanics, New Mexico could be a problem too.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "For the 270-268 Rust Belt-only Harris map (PA/MI/WI D, other swing states R), the default Harris EV is 270, but she wins only 86% of these simulations. In about 14% she loses somewhere outside the seven states (NE-2, NH, NM). The model sees NH and NM as more likely spoilers than NE-2 because Harris leads NE-2 polls by a wide margin.",
+        "quantities": [
+          {
+            "name": "default Harris EV",
+            "value": "270",
+            "unit": "electoral votes",
+            "context": "Rust Belt map without NV"
+          },
+          {
+            "name": "Harris EC win share",
+            "value": "86",
+            "unit": "percent",
+            "context": "conditional on that map (table)"
+          },
+          {
+            "name": "tripped-up share",
+            "value": "about 14",
+            "unit": "percent",
+            "context": "same"
+          },
+          {
+            "name": "map frequency",
+            "value": "1,504",
+            "unit": "of 70,000",
+            "context": "9th-most likely map"
+          }
+        ],
+        "rationale": "Winning with exactly 270 leaves no margin for error.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the Rust Belt map without Nevada “should” be a win for Harris, but about 14 percent of the time, she gets tripped up somewhere",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "adjustment_rule",
+        "statement": "In the swing-state path table, 269-269 Electoral College ties are counted as Trump wins. Silver's rationale is that a tie would likely be decided for Trump in the U.S. House.",
+        "quantities": [
+          {
+            "name": "tie",
+            "value": "269-269",
+            "unit": "electoral votes",
+            "context": "counted as Trump win"
+          }
+        ],
+        "rationale": "A tie goes to the House, where Trump is likely to win.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "For purposes of the table, ties are counted as Trump wins.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the model's simulations, knowing the outcome of the seven core battleground states predicts the Electoral College winner 99% of the time. Other states such as Alaska matter only in edge cases.",
+        "quantities": [
+          {
+            "name": "EC winner predictability",
+            "value": "99",
+            "unit": "percent",
+            "context": "given seven swing state outcomes"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "if you know the outcome in the seven core battleground states, you can predict the Electoral College winner 99 percent of the time.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The path table reports two figures per swing-state combination. 'Default Harris EV' assumes every non-swing state goes as expected. A simulated Harris EC win probability is drawn from the simulations matching that combination.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "how many electoral votes she’d win if every state apart from the seven swing states goes as expected — and a probabilistic projection of her chances as drawn from our simulations.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "The most likely map in which Harris loses at least two Rust Belt states but still wins (Harris wins MI, GA, NC; loses PA, WI, AZ, NV; default 273 EV) occurred in 167 of 70,000 simulations. Harris won the EC in only 58% of those simulations because of risks such as NH (which would produce a 269-269 tie) and MN.",
+        "quantities": [
+          {
+            "name": "map frequency",
+            "value": "167",
+            "unit": "of 70,000 simulations",
+            "context": "Scenario 5 map"
+          },
+          {
+            "name": "default Harris EV",
+            "value": "273",
+            "unit": "electoral votes",
+            "context": "map shown"
+          },
+          {
+            "name": "Harris EC win rate",
+            "value": "58",
+            "unit": "percent",
+            "context": "conditional on that map"
+          }
+        ],
+        "rationale": "This map is consistent with polls underestimating Harris among Black voters but overestimating her with white and Hispanic voters, which correlates with NH and MN.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "this is only a winning map for Harris 58 percent of the time, because other states potentially get in the way.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "Other top maps from the Sept. 29 run, as listed in the table:\n- 3rd: Harris wins all but AZ (3,146; 306 EV; 100%).\n- 4th: Rust Belt + NV (2,769; 276 EV; 99%).\n- 5th: Trump wins all but NV (2,765; 232 EV; 0%).\n- 6th: Harris wins all but GA (2,701; 302 EV).\n- 7th: Harris wins Rust Belt + AZ + NV (2,103; 287 EV).\n- 8th: Harris wins Rust Belt + NC + NV (1,641; 291 EV).\n- 10th: Harris wins Rust Belt + GA + NC (1,287; 300 EV).\n- 11th: Harris wins only WI (1,276; 236 EV).\n- 12th: Harris wins only MI (1,228; 241 EV).",
+        "quantities": [
+          {
+            "name": "all but AZ",
+            "value": "3,146",
+            "unit": "of 70,000",
+            "context": "3rd most likely"
+          },
+          {
+            "name": "Rust Belt + NV",
+            "value": "2,769",
+            "unit": "of 70,000",
+            "context": "4th most likely, 276 EV, 99% Harris"
+          },
+          {
+            "name": "Trump all but NV",
+            "value": "2,765",
+            "unit": "of 70,000",
+            "context": "5th"
+          },
+          {
+            "name": "all but GA",
+            "value": "2,701",
+            "unit": "of 70,000",
+            "context": "6th"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "data_source",
+        "statement": "Silver Bulletin polling averages on Sept. 29, 2024:\n- National: D+3.3 (Harris 49.3, Trump 46.0)\n- PA: D+1.3\n- MI: D+1.9\n- WI: D+1.9\n- NC: R+0.2\n- GA: R+0.7\n- AZ: R+1.3\n- FL: R+3.3\n- NV: D+1.8\n- MN: D+5.9\n- TX: R+5.5\n- NM: D+8.4\nThe table shows only contests surveyed by three distinct pollsters or with at least five polls. Weekly change is measured against the average 7 days earlier and monthly change against 30 days earlier.",
+        "quantities": [
+          {
+            "name": "minimum distinct pollsters for display",
+            "value": "3",
+            "unit": "pollsters",
+            "context": "polling average table"
+          },
+          {
+            "name": "minimum polls for display",
+            "value": "5",
+            "unit": "polls",
+            "context": "alternative threshold"
+          },
+          {
+            "name": "national margin",
+            "value": "D+3.3",
+            "unit": "percentage points",
+            "context": "Sept 29 2024"
+          },
+          {
+            "name": "MN monthly change",
+            "value": "R+3.2",
+            "unit": "percentage points",
+            "context": "change from last month"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "A 56/44 Electoral College probability means Harris wins 56% of the time, not that she wins by 12 points. The race is basically a toss-up, though 56% is still meaningfully different from 50%.",
+        "quantities": [
+          {
+            "name": "Harris EC probability",
+            "value": "56",
+            "unit": "percent",
+            "context": "Sept 29 2024"
+          },
+          {
+            "name": "Trump EC probability",
+            "value": "44",
+            "unit": "percent",
+            "context": "Sept 29 2024"
+          }
+        ],
+        "rationale": "Analogies offered: a risk-averse poker player would usually take a 56% all-in spot, and a baseball team winning 56% of games goes 91-71.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the forecast is that Harris will win the Electoral College 56 percent of the time — not that she’ll beat Trump by 12 points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "design_principle",
+        "statement": "Silver publicly flags when material factors are not captured by the model, citing Biden's deteriorating public performances before he quit. Absent such factors, he treats the model probabilities as his best forecast.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Sometimes, there are material factors (like Joe Biden’s deteriorating public performances before he quit the race) that I don’t think the model is doing a good job of accounting for. When that’s the case, I’ll say as much.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "assumption",
+        "statement": "With 38 days left and no debates scheduled, most remaining forecast uncertainty comes from close polls and ordinary polling error rather than from the potential for October surprises.",
+        "quantities": [
+          {
+            "name": "days remaining",
+            "value": "38",
+            "unit": "days",
+            "context": "as of Sept 29 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "most of it is just because the polls are really close, will probably remain close, and are frequently in error to some degree even when they aren’t that close.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "A narrow Trump win, for example holding the states he leads and winning PA by a point, would be consistent with the polls and would not require systematic polling error.",
+        "quantities": [
+          {
+            "name": "Harris EV in states she leads",
+            "value": "276",
+            "unit": "electoral votes",
+            "context": "counting NC for Trump"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "would be perfectly consistent with the recent polls and wouldn’t require any sort of systematic polling error.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver argues that anyone projecting the 2024 race with high confidence is overconfident.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Anybody who’s projecting this race with a great deal of confidence is just selling you hopium or snake oil.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "method",
+        "statement": "During the final weeks of the campaign the model is updated roughly daily.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We’ll be updating the model basically every day during these final 38 days",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "racial depolarization",
+        "insight": "Harris polls slightly better with white voters than Biden's 2020 result but worse with Black, Hispanic and Asian American voters. This produces Rust Belt strength and Sun Belt weakness.",
+        "evidence": "Polls show Trump narrowly ahead in GA while Harris expands margins in WI and NE-2.",
+        "forecasting_implication": "State error correlations should be structured by demographic composition."
+      },
+      {
+        "topic": "regional polling errors",
+        "insight": "Some years, such as 2022, show little overall polling bias but large regional fluctuations that can partially offset each other.",
+        "evidence": "2022 example; AtlasIntel polls showing NC and NV as Harris's best states.",
+        "forecasting_implication": "Model regional error components in addition to the national one."
+      },
+      {
+        "topic": "Electoral College bias",
+        "insight": "2020 had an EC/popular vote gap of nearly 4 points, so Biden needed close to his 4.5-point popular vote win. In 2024, a wide Rust Belt/Sun Belt gap could let Harris win with a popular vote lead as small as 0.5 points.",
+        "evidence": "In 2020, five swing states were decided by under 1.5 points.",
+        "forecasting_implication": "The EC-popular vote gap is variable and depends on the regional error pattern."
+      },
+      {
+        "topic": "Nevada vs. Sun Belt",
+        "insight": "Nevada is distinctly bluer than the other Sun Belt states both historically and in recent polling. Michigan has the highest Black voter share of the Blue Wall states.",
+        "evidence": "",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "poll stability post-debate",
+        "insight": "Polls held steady in the three weeks after the debate, unlike the slow deterioration for Harris that followed the DNC.",
+        "evidence": "",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin 2024 presidential model page",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin polling averages",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on Florida not being a swing state",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on GA and NC moving together",
+        "url": ""
+      },
+      {
+        "description": "Article noting the model 'has a mind of its own'",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What is the exact state correlation matrix, and how is it constructed from demographics and region? The header image shows a correlation table.",
+      "How large are the national, regional and state-specific error components?",
+      "What polling error distribution is used, and does it have fat tails?",
+      "How are NE-2 and ME-2 simulated?"
+    ]
+  }
+}

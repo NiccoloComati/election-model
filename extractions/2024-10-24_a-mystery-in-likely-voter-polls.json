@@ -1,0 +1,448 @@
+{
+  "article": {
+    "date": "2024-10-24",
+    "title": "A mystery in likely voter polls",
+    "subtitle": "National and state polls don’t tell the same story.",
+    "authors": "Eli McKown-Dawson; Nate Silver",
+    "url": "https://www.natesilver.net/p/a-mystery-in-likely-voter-polls",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-10-24_a-mystery-in-likely-voter-polls"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.306051,
+    "prompt_tokens": 4,
+    "completion_tokens": 6171,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 22787,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:19:34"
+  },
+  "extraction": {
+    "summary": "McKown-Dawson and Silver examine the gap between likely voter (LV) and registered voter (RV) versions of the same 2024 polls. They find that LV screens help Harris in national polls (by about 0.5 points) but help Trump in state-level battleground polls (by about 0.5 points on average, growing from 0.1 in July to 0.7 in October). The article explains how the Silver Bulletin model handles LV/RV: it prefers the LV version, weights LV polls more heavily, and adjusts RV-only polls to an LV basis using paired polls. The authors note that the model would show a narrower Electoral College/popular vote gap if calibrated on RV polls, that firms disagree on the LV/RV gap regardless of pollster rating, and that LV screens are a subjective 'art' that makes a polling error in either direction plausible. The post is marked paid, but the full text appears to be present.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "Silver Bulletin pollster ratings"
+    ],
+    "findings": [
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "method",
+        "statement": "In the Silver Bulletin polling average and presidential model, when a firm releases both a likely voter (LV) and a registered voter (RV) version of the same poll, the LV version is used instead of the RV version.",
+        "quantities": [],
+        "rationale": "LV polls are theoretically more accurate than RV polls.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "When a firm releases two versions of a poll, we use the LV version instead of the RV version.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin polling average and forecast give LV polls a higher weight than RV polls.",
+        "quantities": [],
+        "rationale": "LV polls are theoretically more accurate.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we weight polls of likely voters higher than polls of registered voters in our polling average and forecast.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "adjustment_rule",
+        "statement": "When a poll publishes only RV numbers, the Silver Bulletin model adjusts it to an LV basis. The size of the adjustment is estimated from polls that release both LV and RV versions of the same survey.",
+        "quantities": [],
+        "rationale": "Puts RV-only polls on the same footing as the more accurate LV polls.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "when a poll only publishes RV numbers, we adjust it to essentially transform it to an LV basis. The adjustment is based on polls that release both likely-voter and registered-voter versions of the same survey",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "interpretation_guidance",
+        "statement": "The authors call the LV/RV difference something they 'carefully track' as one factor the model accounts for. This implies the RV-to-LV adjustment is estimated from current-cycle data rather than fixed.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We carefully track the differences between likely voter (LV) and registered voter (RV) polls because this is one factor our model accounts for.",
+        "explicitness": "implied"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "Historically, LV screens helped Republicans. Pollsters traditionally switched from RV to LV polls after Labor Day, which often boosted GOP candidates, for example Bush in 2004. Part of Bush's September 2004 surge was also due to the timing of the Republican convention.",
+        "quantities": [
+          {
+            "name": "Example year",
+            "value": "2004",
+            "unit": "",
+            "context": "Bush-Kerry polling, RV-to-LV switch after Labor Day"
+          }
+        ],
+        "rationale": "Republicans were historically the more regular, reliable voters.",
+        "model_version": "general principle",
+        "evidence_quote": "Traditionally, pollsters began switching from registered voter polls to likely voter polls after Labor Day, which often boosted Republican candidates.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "Before his debate and exit from the race, Biden did better in LV polls than in RV polls in 2024, a reversal of the historical pattern of LV screens helping Republicans.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Joe Biden was doing better in LV polls than in RV polls — a reversal of the historical trend.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2024 national polls that released both versions, Harris averaged D+2.3 among RVs versus D+2.8 among LVs, so LV screens helped her by 0.5 points nationally.",
+        "quantities": [
+          {
+            "name": "National RV margin",
+            "value": "D +2.3",
+            "unit": "percentage points",
+            "context": "Paired LV/RV national polls since Harris entered the race"
+          },
+          {
+            "name": "National LV margin",
+            "value": "D +2.8",
+            "unit": "percentage points",
+            "context": "Paired LV/RV national polls since Harris entered the race"
+          },
+          {
+            "name": "National LV-RV difference",
+            "value": "0.5",
+            "unit": "percentage points",
+            "context": "In Harris's favor"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The average margin in these polls is D +2.3 among RVs as compared to a D +2.8 margin in LV polls — a 0.5-point difference in Harris' favor.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "In state-level battleground polls, LV versions were on average 0.5 points more favorable to Trump than RV versions (state average D+0.6 RV vs D+0.1 LV). By state (RV margin, LV margin, LV shift): Arizona R+0.7 to R+1.0 (R+0.3); Georgia R+0.2 to R+1.4 (R+1.2); Michigan D+2.0 to D+3.2 (D+1.2); Nevada D+3.3 to D+2.0 (R+1.3); North Carolina EVEN to R+0.9 (R+0.9); Pennsylvania D+2.6 to D+1.7 (R+0.9); Wisconsin D+3.8 to D+3.4 (R+0.4).",
+        "quantities": [
+          {
+            "name": "State average RV margin",
+            "value": "D +0.6",
+            "unit": "percentage points",
+            "context": "Paired polls, battleground states"
+          },
+          {
+            "name": "State average LV margin",
+            "value": "D +0.1",
+            "unit": "percentage points",
+            "context": "Paired polls, battleground states"
+          },
+          {
+            "name": "State average LV shift",
+            "value": "R +0.5",
+            "unit": "percentage points",
+            "context": "LV relative to RV"
+          },
+          {
+            "name": "Arizona LV shift",
+            "value": "R +0.3",
+            "unit": "percentage points",
+            "context": "RV R+0.7, LV R+1.0"
+          },
+          {
+            "name": "Georgia LV shift",
+            "value": "R +1.2",
+            "unit": "percentage points",
+            "context": "RV R+0.2, LV R+1.4"
+          },
+          {
+            "name": "Michigan LV shift",
+            "value": "D +1.2",
+            "unit": "percentage points",
+            "context": "RV D+2.0, LV D+3.2"
+          },
+          {
+            "name": "Nevada LV shift",
+            "value": "R +1.3",
+            "unit": "percentage points",
+            "context": "RV D+3.3, LV D+2.0"
+          },
+          {
+            "name": "North Carolina LV shift",
+            "value": "R +0.9",
+            "unit": "percentage points",
+            "context": "RV EVEN, LV R+0.9"
+          },
+          {
+            "name": "Pennsylvania LV shift",
+            "value": "R +0.9",
+            "unit": "percentage points",
+            "context": "RV D+2.6, LV D+1.7"
+          },
+          {
+            "name": "Wisconsin LV shift",
+            "value": "R +0.4",
+            "unit": "percentage points",
+            "context": "RV D+3.8, LV D+3.4"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If you average across all states, you end up with LV polls being 0.5 points more favorable to Trump.",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "State-level LV/RV comparisons rest on small samples. For example, the Silver Bulletin database had only 10 Michigan polls that published both LV and RV numbers, so state-specific gaps should not be over-interpreted.",
+        "quantities": [
+          {
+            "name": "Michigan paired LV/RV polls",
+            "value": "10",
+            "unit": "polls",
+            "context": "Silver Bulletin database as of Oct 24, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "in Michigan, there are 10 polls in our database that published both LV and RV numbers. That isn't nothing, but it isn't a huge sample either.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "The state-level LV shift toward Trump grew steadily through the 2024 campaign: 0.1 points in July, about 0.3 in August, about 0.65 in September and about 0.7 in October. The national LV shift toward Harris was about 0.45 in July, about 0.7 in August, about 0.35 in September and about 0.2 in October.",
+        "quantities": [
+          {
+            "name": "State LV shift, July",
+            "value": "0.1",
+            "unit": "percentage points (R)",
+            "context": "State polls, LV vs RV"
+          },
+          {
+            "name": "State LV shift, October",
+            "value": "0.7",
+            "unit": "percentage points (R)",
+            "context": "State polls, LV vs RV"
+          },
+          {
+            "name": "State LV shift, Aug/Sep",
+            "value": "~0.33 / ~0.65",
+            "unit": "percentage points (R)",
+            "context": "Read from chart"
+          },
+          {
+            "name": "National LV shift, Jul/Aug/Sep/Oct",
+            "value": "~-0.44 / ~-0.68 / ~-0.36 / ~-0.22",
+            "unit": "percentage points (negative = D)",
+            "context": "Read from chart"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "In July, LV polls at the state level were only 0.1 points more favorable to Trump than RV polls. Three months later? Trump does 0.7 points better in state-level LV polls.",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "interpretation_guidance",
+        "statement": "Calibrating the Silver Bulletin model on RV rather than LV polls would narrow its Electoral College/popular vote gap and slightly raise Harris's win probability, resembling the universe of NYT/Siena polls. The model's LV preference therefore contributes to its estimated Electoral College bias.",
+        "quantities": [],
+        "rationale": "State LV polls favor Trump while national LV polls favor Harris.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If we calibrated our model based on RV rather than LV polls, it would show a narrower Electoral College / popular vote gap, with Harris's overall win probability slightly improving.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Pollsters differ in the direction of their LV/RV gap. Nationally, Harris does better in the LV version for nearly all firms: NYT/Siena +0.8, YouGov +0.3, Marist +0.5. Harris Insights is the only exception.",
+        "quantities": [
+          {
+            "name": "NYT/Siena national LV gain for Harris",
+            "value": "0.8",
+            "unit": "percentage points",
+            "context": "2024"
+          },
+          {
+            "name": "YouGov national LV gain for Harris",
+            "value": "0.3",
+            "unit": "percentage points",
+            "context": "2024"
+          },
+          {
+            "name": "Marist national LV gain for Harris",
+            "value": "0.5",
+            "unit": "percentage points",
+            "context": "2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris does 0.8 points better in the LV versions of national New York Times/Siena polls, 0.3 points better in LV YouGov polls, and 0.5 points better in LV Marist polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "State-level LV-minus-RV margin shifts by pollster (positive = Republican), among firms with at least two state polls: NYT/Siena -0.5, Marquette -0.5, Washington Post -0.4, Morning Consult -0.2, YouGov +0.4, Florida Atlantic +0.4, Marist +0.6, Beacon/Shaw (Fox) +1.6, TIPP +2.0, Focaldata +2.5, Noble Predictive +3.0.",
+        "quantities": [
+          {
+            "name": "NYT/Siena",
+            "value": "-0.5",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          },
+          {
+            "name": "Marquette",
+            "value": "-0.5",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          },
+          {
+            "name": "Washington Post",
+            "value": "-0.4",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          },
+          {
+            "name": "Morning Consult",
+            "value": "-0.2",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          },
+          {
+            "name": "YouGov",
+            "value": "+0.4",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          },
+          {
+            "name": "Florida Atlantic",
+            "value": "+0.4",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          },
+          {
+            "name": "Marist",
+            "value": "+0.6",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          },
+          {
+            "name": "Beacon/Shaw (Fox)",
+            "value": "+1.6",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          },
+          {
+            "name": "TIPP",
+            "value": "+2.0",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          },
+          {
+            "name": "Focaldata",
+            "value": "+2.5",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          },
+          {
+            "name": "Noble Predictive",
+            "value": "+3.0",
+            "unit": "percentage points",
+            "context": "State LV-RV shift"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "empirical_regularity",
+        "statement": "The direction of a pollster's LV/RV gap does not track pollster quality. A+ pollsters NYT/Siena and Washington Post show Harris better among LVs, while A-rated Marist and Fox News show the opposite.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings 2024",
+        "evidence_quote": "It isn't a quality issue. Some of our highest-rated pollsters like NYT and The Washington Post (both A+) show Harris doing better among LVs.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "LV screens involve subjective pollster decisions. They are one source of uncertainty that makes a polling error in either direction highly plausible, possibly including aggressive swing-state screens or herding toward a toss-up.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "They're one of the factors that makes the polling situation uncertain and a polling error in either direction highly plausible.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "In the Washington Post North Carolina example, Trump led by 4 among RVs and by 3 among LVs. Both candidates gained from third-party and undecided voters in the LV version.",
+        "quantities": [
+          {
+            "name": "Trump RV lead",
+            "value": "4",
+            "unit": "percentage points",
+            "context": "WaPo NC poll"
+          },
+          {
+            "name": "Trump LV lead",
+            "value": "3",
+            "unit": "percentage points",
+            "context": "WaPo NC poll"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "And both Trump and Harris gain ground from third-party candidates and the undecided column.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "turnout composition realignment",
+        "insight": "Republicans were once the higher-propensity party and did better in low-turnout elections. Democrats now dominate among educated suburban voters and excel in low-turnout environments like special elections, while Trump relies on irregular voters who turn out mainly in presidential years.",
+        "evidence": "Historical LV boosts for the GOP, e.g. 2004; recent special election performance.",
+        "forecasting_implication": "Do not assume LV screens or low turnout favor Republicans. The direction of the LV adjustment should be estimated empirically each cycle."
+      },
+      {
+        "topic": "swing state vs national divergence",
+        "insight": "LV screens helping Trump in swing states but Harris nationally is puzzling, since swing states like NC and PA demographically resemble the nation. Possible explanations include campaign intensity, ads, Trump's closing message or ground game in swing states, or pollster methodology.",
+        "evidence": "State LV shift of R+0.5 vs national LV shift of D+0.5.",
+        "forecasting_implication": "The Electoral College gap estimate may be sensitive to LV methodology. If Trump outperforms the polls, national polls may have missed an enthusiasm advantage."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin model methodology (link: 'one factor our model accounts for')",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin pollster ratings",
+        "url": ""
+      },
+      {
+        "description": "Get the data link for LV/RV comparison charts",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact functional form and size of the RV-to-LV adjustment, and whether it differs between national and state polls or varies by pollster.",
+      "How much more weight LV polls receive than RV polls (multiplier).",
+      "How adult-population polls are treated relative to RV and LV polls.",
+      "Whether the RV-to-LV adjustment is re-estimated dynamically during the cycle and with what prior."
+    ]
+  }
+}

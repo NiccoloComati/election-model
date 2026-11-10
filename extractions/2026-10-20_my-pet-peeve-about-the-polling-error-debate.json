@@ -1,0 +1,163 @@
+{
+  "article": {
+    "date": "2026-10-20",
+    "title": "My pet peeve about the polling error debate",
+    "subtitle": "Polling error is hard to predict when pollsters are constantly tinkering with the recipe.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/my-pet-peeve-about-the-polling-error",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-10-20_my-pet-peeve-about-the-polling-error-debate"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:41:39"
+  },
+  "extraction": {
+    "summary": "Model Talk arguing that the direction of polling error is effectively random between cycles, because pollsters constantly recalibrate in response to past misses, like a restaurant adjusting a recipe rather than a miscalibrated fuel gauge. Silver Bulletin's database since 1998 shows almost zero cycle-to-cycle correlation in polling error, with a cycle-level standard deviation of about 2.8 points. The 2025 Virginia and New Jersey races underestimated Democrats by 6 and 9 points. On correlation: a naive independent coin-flip Monte Carlo would give Democrats 91 percent for the Senate, a perfectly correlated model gives 72 percent (the tipping-point state, Texas), and FLIPR Deluxe's 76 percent sits much closer to perfect correlation.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "FLIPR 2026 (Deluxe)",
+      "FiveThirtyEight 2016 model",
+      "independent coin-flip models"
+    ],
+    "findings": [
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "parameter_or_number",
+        "statement": "Benchmarking FLIPR's correlation structure: a Monte Carlo treating each Senate race as independent using Deluxe race probabilities gives Democrats 91 percent to win the Senate. Assuming perfect correlation gives the tipping-point state's probability, 72 percent in Texas. FLIPR Deluxe's 76 percent is much closer to perfect correlation than to independence.",
+        "quantities": [
+          {
+            "name": "independent-races Senate D prob",
+            "value": "91",
+            "unit": "percent",
+            "context": "Oct 20, 2026"
+          },
+          {
+            "name": "perfectly correlated Senate D prob",
+            "value": "72",
+            "unit": "percent",
+            "context": "= Texas tipping point"
+          },
+          {
+            "name": "FLIPR Deluxe Senate D prob",
+            "value": "76",
+            "unit": "percent",
+            "context": "Oct 20, 2026"
+          }
+        ],
+        "rationale": "Accounts for both national and regional correlated errors.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "So FLIPR Deluxe’s current 76 percent odds for Democrats are closer to the perfectly correlated scenario (72 percent) than the perfectly independent one (91 percent).",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "In the Silver Bulletin pollster database (polls in the final three weeks of congressional, gubernatorial and presidential elections since 1998), there is almost zero correlation in the direction of polling error between cycles. Pollsters are about as likely to undercompensate as overcompensate for past errors, so there is no zig-zag pattern either.",
+        "quantities": [],
+        "rationale": "Pollsters have strong incentives to calibrate toward unbiased results but polls are too imprecise to do so reliably.",
+        "model_version": "Silver Bulletin polling database",
+        "evidence_quote": "Instead, there’s almost literally zero correlation in polling error between cycles.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "Silver's simulation of random cycle-level polling error used a standard deviation of 2.8 points, matching the variance in the actual historical data. Random draws easily produce streaks such as seven straight cycles underestimating Republicans, which shows how narratives overfit to noise.",
+        "quantities": [
+          {
+            "name": "cycle-level polling error SD",
+            "value": "2.8",
+            "unit": "points",
+            "context": "historical, used in simulation"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin analysis",
+        "evidence_quote": "A standard deviation of 2.8 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "design_principle",
+        "statement": "FiveThirtyEight/Silver Bulletin forecasts treat the direction of systematic polling error as unpredictable because pollsters self-correct: the model need not 'fix' bias as long as pollsters are expected to recalibrate. Polls today are 'mini-models' as much as pure measurements. FLIPR does not play the guessing game on direction.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026 and predecessors",
+        "evidence_quote": "A lot of the reason FLIPR and most of the other models regard polling bias as being unpredictable is because pollsters themselves have a lot of incentive to account and adjust for it.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "In the 2025 interim elections polls badly underestimated Democrats: Abigail Spanberger beat her Virginia polling average by 6 points and Mikie Sherrill beat hers in New Jersey by 9, one of the worst misses in a well-polled race, comparable to Collins in 2020.",
+        "quantities": [
+          {
+            "name": "Spanberger beat polls by",
+            "value": "6",
+            "unit": "points",
+            "context": "VA gov 2025"
+          },
+          {
+            "name": "Sherrill beat polls by",
+            "value": "9",
+            "unit": "points",
+            "context": "NJ gov 2025"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling database",
+        "evidence_quote": "And in New Jersey, Mikie Sherrill beat her polls by 9 points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "The pollster database groups elections into two-year cycles; in this analysis non-November elections (off-year, specials, runoffs) were split into an 'interim' bucket, with a December runoff after a presidential election counting toward the next interim period. Table values are simple averages of all polls, so well-polled races weigh more.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling database",
+        "evidence_quote": "The data in this table is just a simple average of all polls in our pollster ratings database, so more well-polled races have more influence on it.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "Pollsters combat partisan nonresponse by matching to Census demographics, anchoring to past reported vote, tweaking likely-voter models, and sometimes herding or withholding outliers. Non-college and low-social-trust voters, who lean Republican, respond less. Enthusiasm cuts both ways, since enthusiastic respondents both answer polls and vote: it may explain El-Sayed's primary overestimate, while in 2014 the enthusiasm gap exceeded pollsters' expectations.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "They can match to Census Bureau demographics, or they can anchor to the past reported vote.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Models that treated races as independent coin flips, giving Trump about 1 percent in 2016 versus FiveThirtyEight's roughly 30 percent, have died out. Most 2026 competitor models look reasonable to Silver, and the remaining differences are in how errors are modeled, how polls and fundamentals are blended, and how aggressively averages update.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 / FLIPR 2026",
+        "evidence_quote": "The models that wrongly treated races as a series of independent coin flips have died out, and deservedly so.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "polling error narratives",
+        "insight": "Explanations like 'polls underestimate Republicans in presidential years but not midterms' have some theoretical support (low-propensity Trump voters) but may be overfitting to noise.",
+        "evidence": "Trump-year misses 2016, 2020, 2024; unbiased 2018, 2022; pro-R bias 2025.",
+        "forecasting_implication": "Do not encode directional bias assumptions; model symmetric uncertainty."
+      }
+    ],
+    "references": [],
+    "open_questions": []
+  }
+}

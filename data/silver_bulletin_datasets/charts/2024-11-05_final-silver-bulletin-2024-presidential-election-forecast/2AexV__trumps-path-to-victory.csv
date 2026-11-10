@@ -1,0 +1,57 @@
+state,evs,cum_ev,e_margin,margin_cat
+NE-3,1,1,R+ 48.5@@-48.5,R
+Wyoming,3,4,R+ 41.9@@-41.9,R
+West Virginia,4,8,R+ 36.6@@-36.6,R
+Idaho,4,12,R+ 32.7@@-32.7,R
+Oklahoma,7,19,R+ 32@@-32,R
+Kentucky,8,27,R+ 27.8@@-27.8,R
+North Dakota,3,30,R+ 26.9@@-26.9,R
+South Dakota,3,33,R+ 26.5@@-26.5,R
+Alabama,9,42,R+ 26.4@@-26.4,R
+Utah,6,48,R+ 24.6@@-24.6,R
+Arkansas,6,54,R+ 23.6@@-23.6,R
+Tennessee,11,65,R+ 23.5@@-23.5,R
+Louisiana,8,73,R+ 19.8@@-19.8,LR
+Montana,4,77,R+ 18.9@@-18.9,LR
+Mississippi,6,83,R+ 17.3@@-17.3,LR
+Nebraska,2,85,R+ 17.2@@-17.2,LR
+Indiana,11,96,R+ 17.2@@-17.2,LR
+NE-1,1,97,R+ 15.2@@-15.2,LR
+Missouri,10,107,R+ 15.1@@-15.1,LR
+Kansas,6,113,R+ 14.7@@-14.7,LR
+South Carolina,9,122,R+ 12.1@@-12.1,LR
+Alaska,3,125,R+ 9.7@@-9.7,LR
+Texas,40,165,R+ 8.2@@-8.2,LR
+Ohio,17,182,R+ 8@@-8,LR
+ME-2,1,183,R+ 6.3@@-6.3,LR
+Florida,30,213,R+ 6.3@@-6.3,LR
+Iowa,6,219,R+ 5.6@@-5.6,LR
+Arizona,11,230,R+ 2.4@@-2.4,LR
+North Carolina,16,246,R+ 1.1@@-1.1,LR
+Georgia,16,262,R+ 1@@-1,LR
+Nevada,6,268,R+ 0.5@@-.5,LR
+Pennsylvania,19,287,R+ 0.1@@-.1,LR
+Wisconsin,10,297,D+ 1@@1,LD
+Michigan,15,312,D+ 1.2@@1.2,LD
+Minnesota,10,322,D+ 5.2@@5.2,LD
+Virginia,13,335,D+ 6.2@@6.2,LD
+New Mexico,5,340,D+ 6.5@@6.5,LD
+NE-2,1,341,D+ 7.3@@7.3,LD
+New Hampshire,4,345,D+ 7.6@@7.6,LD
+Maine,2,347,D+ 8.5@@8.5,LD
+Oregon,8,355,D+ 10.2@@10.2,LD
+Colorado,10,365,D+ 11.5@@11.5,LD
+Delaware,3,368,D+ 13.7@@13.7,LD
+New Jersey,14,382,D+ 14.6@@14.6,LD
+Rhode Island,4,386,D+ 15@@15,LD
+Illinois,19,405,D+ 15.2@@15.2,LD
+Connecticut,7,412,D+ 15.3@@15.3,LD
+Washington,12,424,D+ 16.7@@16.7,LD
+New York,28,452,D+ 17.4@@17.4,LD
+ME-1,1,453,D+ 21.1@@21.1,D
+California,54,507,D+ 26.4@@26.4,D
+Massachusetts,11,518,D+ 27.4@@27.4,D
+Hawaii,4,522,D+ 28@@28,D
+Maryland,10,532,D+ 28@@28,D
+Vermont,3,535,D+ 33.5@@33.5,D
+District of Columbia,3,538,D+ 86.5@@86.5,D

@@ -1,0 +1,8 @@
+district	region	race_rating	winner_Dparty	tipping	voteshare_D	voteshare_R	mean_netpartymargin	margin_positive	flip	incumbent	role	urbanindex_state	urban_tercile
+NJ-7	Northeast	Likely D	0.76295	0.0230125	52.3	47.7	D +4.6@@4.6	1	1	R	Offense	11.278216	Mixed
+PA-10	Northeast	Likely D	0.75475	0.0262375	51	46.9	D +4.1@@4.1	1	1	R	Offense	11.262476	Mixed
+NY-17	Northeast	Lean D	0.70255	0.02395	51.7	48.3	D +3.4@@3.4	1	1	R	Offense	11.474194	Urban
+PA-7	Northeast	Lean D	0.657125	0.0237875	49.9	47.4	D +2.5@@2.5	1	1	R	Offense	11.438154	Urban
+PA-8	Northeast	Lean D	0.65025	0.024325	51.2	48.8	D +2.4@@2.4	1	1	R	Offense	10.531455	Rural
+PA-1	Northeast	Toss-up	0.55085	0.02025	49.2	48.4	D +0.8@@0.8	1	1	R	Offense	11.721754	Urban
+ME-2	Northeast	Lean R	0.34305	0.0107875	48.7	51.3	R +2.6@@-2.6	0	1	D	Defense	8.4313573	Rural

@@ -1,0 +1,248 @@
+<title>Replicating Silver's Presidential Model</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; a five-step pipeline strip, an "anatomy of an error" row, and one interactive chart */
+:root {
+  --bg: #fbfbf9; --fg: #1c2230; --muted: #5d6474; --rule: #dfe1e6; --panel: #f0f2f6;
+  --accent: #1f3a68; --silver: #c46a2b; --t1: #2f5d9e; --t2: #6a8f3c; --t3: #8a5aa8; --t4: #9a7b2f;
+  --display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12161f; --fg: #e4e7ee; --muted: #9aa2b3; --rule: #2b3242; --panel: #1a2030;
+  --accent: #9db4d3; --silver: #e3a06d; --t1: #8fb3e8; --t2: #a9c97f; --t3: #c5a0dd; --t4: #d8bd75; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12161f; --fg: #e4e7ee; --muted: #9aa2b3; --rule: #2b3242; --panel: #1a2030;
+  --accent: #9db4d3; --silver: #e3a06d; --t1: #8fb3e8; --t2: #a9c97f; --t3: #c5a0dd; --t4: #d8bd75; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+main { max-width: 760px; margin: 0 auto; padding-block: 48px 64px; display: flex; flex-direction: column; gap: 44px; }
+header { display: flex; flex-direction: column; gap: 10px; }
+.kicker { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(30px, 5.5vw, 42px); line-height: 1.1; margin: 0; text-wrap: balance; }
+.lede { font-size: 18px; color: var(--muted); margin: 0; max-width: 60ch; }
+section { display: flex; flex-direction: column; gap: 14px; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 23px; margin: 0; }
+p { margin: 0; max-width: 65ch; }
+.muted { color: var(--muted); }
+
+/* pipeline strip */
+.pipeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; counter-reset: step; }
+.step { position: relative; background: var(--panel); border-radius: 6px; padding: 14px 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.step::before { counter-increment: step; content: counter(step); font-family: var(--display); font-weight: 700; font-size: 22px; color: var(--accent); line-height: 1; }
+.step h3 { margin: 0; font-size: 14.5px; font-weight: 600; line-height: 1.3; }
+.step p { font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+@media (max-width: 680px) { .pipeline { grid-template-columns: 1fr; } }
+
+/* anatomy of a simulated error */
+.anatomy { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; font-family: var(--mono); }
+.term { flex: 1 1 140px; min-width: 0; border-top: 4px solid; padding: 10px 10px 4px; display: flex; flex-direction: column; gap: 6px; }
+.term b { font-weight: 500; font-size: 14px; }
+.term span { font-family: var(--body); font-size: 13px; color: var(--muted); line-height: 1.4; }
+.op { align-self: center; font-size: 20px; color: var(--muted); }
+.t1 { border-color: var(--t1); } .t1 b { color: var(--t1); }
+.t2 { border-color: var(--t2); } .t2 b { color: var(--t2); }
+.t3 { border-color: var(--t3); } .t3 b { color: var(--t3); }
+.t4 { border-color: var(--t4); } .t4 b { color: var(--t4); }
+@media (max-width: 680px) { .op { display: none; } .term { flex-basis: 45%; } }
+
+/* sources */
+.sources { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px; }
+.sources div { border-left: 2px solid var(--rule); padding-left: 12px; font-size: 14.5px; }
+.sources strong { display: block; font-weight: 600; }
+@media (max-width: 560px) { .sources { grid-template-columns: 1fr; } }
+
+/* chart */
+.controls { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seg button { font: inherit; font-size: 14px; background: transparent; color: var(--muted); border: 0; padding: 6px 12px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--bg); }
+.seg button:focus-visible { outline: 2px solid var(--silver); outline-offset: -2px; }
+.legend { display: flex; gap: 16px; font-size: 14px; color: var(--muted); }
+.legend i { display: inline-block; width: 18px; height: 3px; vertical-align: middle; margin-right: 6px; border-radius: 2px; }
+.chart-box { position: relative; }
+svg.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.axis text { fill: var(--muted); font-size: 11px; font-family: var(--body); }
+.axis line, .grid line { stroke: var(--rule); }
+.ref { stroke: var(--muted); stroke-dasharray: 3 3; opacity: .6; }
+.l-rep { fill: none; stroke: var(--accent); stroke-width: 2.6; }
+.l-sil { fill: none; stroke: var(--silver); stroke-width: 2; }
+.hover-line { stroke: var(--muted); stroke-width: 1; }
+.dot-rep { fill: var(--accent); } .dot-sil { fill: var(--silver); }
+.tip { position: absolute; pointer-events: none; background: var(--bg); border: 1px solid var(--rule); border-radius: 6px;
+  padding: 8px 10px; font-size: 13px; line-height: 1.5; font-variant-numeric: tabular-nums; white-space: nowrap; box-shadow: 0 2px 8px rgb(0 0 0 / .08); }
+.tip b { font-weight: 600; }
+
+/* results */
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; font-size: 15px; }
+th, td { text-align: right; padding: 8px 10px; border-bottom: 1px solid var(--rule); }
+th:first-child, td:first-child { text-align: left; }
+thead th { font-weight: 600; color: var(--muted); font-size: 13px; }
+.c-sil { color: var(--silver); }
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+
+<main>
+  <header>
+    <span class="kicker">Methods note</span>
+    <h1>Replicating Nate Silver's presidential forecast</h1>
+    <p class="lede">Rebuilt from his articles and published outputs, then checked against his day-by-day forecasts for 2020 and 2024.</p>
+  </header>
+
+  <section>
+    <h2>How it works</h2>
+    <p class="muted">Polls, a statistical estimate of each state, and an economic prior feed 40,000 simulated elections in 50 states, DC, and the Maine and Nebraska districts.</p>
+    <div class="pipeline">
+      <div class="step"><h3>Weight polls</h3><p>By sample size, pollster track record and recency.</p></div>
+      <div class="step"><h3>Adjust polls</h3><p>For each pollster's lean, likely voters and convention bounces.</p></div>
+      <div class="step"><h3>Estimate states</h3><p>Blend each state's average with a regression on demographics and region.</p></div>
+      <div class="step"><h3>Add fundamentals</h3><p>Economy and incumbency, fading to zero by Election Day.</p></div>
+      <div class="step"><h3>Simulate</h3><p>Correlated, fat-tailed errors; count electoral votes.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Anatomy of a simulated error</h2>
+    <p class="muted">Each simulation shifts every state's margin by four pieces, all drawn from t-distributions with 10 degrees of freedom.</p>
+    <div class="anatomy">
+      <div class="term t1"><b>national</b><span>Drift until Election Day plus a polling miss shared by all states</span></div>
+      <div class="op">+</div>
+      <div class="term t2"><b>demographic</b><span>Swings by group (race, education, religion); similar states move together</span></div>
+      <div class="op">+</div>
+      <div class="term t3"><b>regional</b><span>Swings shared within a region</span></div>
+      <div class="op">+</div>
+      <div class="term t4"><b>state</b><span>What's left; larger where polling is thin</span></div>
+    </div>
+    <p class="muted">Drift scales with the cube root of days left and with an uncertainty index built from undecided voters, poll volatility and polarization.</p>
+  </section>
+
+  <section>
+    <h2>Where the parameters come from</h2>
+    <div class="sources">
+      <div><strong>Silver's writing</strong>About 100 articles give the structure and stated values.</div>
+      <div><strong>His published outputs</strong>Unknowns are fitted to reproduce his poll weights, house effects and forecast spread.</div>
+      <div><strong>History</strong>Elections since 1880 for fundamentals, since 1968 for poll movement and error.</div>
+      <div><strong>Real-time data</strong>Economic series as first published on each date, not as later revised.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Replication vs Silver, through each campaign</h2>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Election">
+        <button type="button" id="y2024" aria-pressed="true">2024</button>
+        <button type="button" id="y2020" aria-pressed="false">2020</button>
+      </div>
+      <div class="seg" role="group" aria-label="Measure">
+        <button type="button" id="mWin" aria-pressed="true">Democratic win chance</button>
+        <button type="button" id="mPop" aria-pressed="false">Popular vote margin</button>
+      </div>
+      <div class="legend"><span><i style="background:var(--accent)"></i>Replication</span><span><i style="background:var(--silver)"></i>Silver</span></div>
+    </div>
+    <div class="chart-box" id="box">
+      <svg class="chart" id="chart" viewBox="0 0 760 330" role="img" aria-label="Forecast over time, replication and Silver"></svg>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+    <p class="muted" id="caption"></p>
+  </section>
+
+  <section>
+    <h2>Election Day</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>2024 replication</th><th class="c-sil">2024 Silver</th><th>2020 replication</th><th class="c-sil">2020 Silver</th></tr></thead>
+        <tbody>
+          <tr><td>Democrat wins</td><td>50.4%</td><td class="c-sil">50.0%</td><td>84.3%</td><td class="c-sil">89.2%</td></tr>
+          <tr><td>Democratic electoral votes</td><td>271</td><td class="c-sil">271</td><td>337</td><td class="c-sil">348</td></tr>
+          <tr><td>Popular vote margin</td><td>D+2.6</td><td class="c-sil">D+2.2</td><td>D+7.4</td><td class="c-sil">D+8.0</td></tr>
+          <tr><td>Actual result</td><td colspan="2">226 EV, R+1.5</td><td colspan="2">306 EV, D+4.4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">Both models missed toward the Democrats because the polls did. On state-by-state accuracy (Brier score) they are essentially tied in both years.</p>
+  </section>
+
+  <footer>Data: Silver Bulletin and FiveThirtyEight poll lists and model outputs, MIT Election Lab, FRED/ALFRED, Voteview, Cooperative Election Study.</footer>
+</main>
+
+<script>
+const DATA = {"2024":{"rep":[["2024-07-30",42.9,1.79],["2024-08-02",51.4,2.67],["2024-08-05",53.3,2.93],["2024-08-08",58.9,3.41],["2024-08-11",60.4,3.6],["2024-08-14",64.5,4.11],["2024-08-17",61.8,3.61],["2024-08-20",60.4,3.58],["2024-08-23",61.1,3.78],["2024-08-26",62.0,3.86],["2024-08-29",62.9,3.9],["2024-09-01",54.3,3.2],["2024-09-04",51.0,2.73],["2024-09-07",44.6,2.23],["2024-09-10",40.9,1.84],["2024-09-13",41.9,1.97],["2024-09-16",43.9,2.33],["2024-09-19",52.1,3.0],["2024-09-22",54.4,2.97],["2024-09-25",54.4,2.83],["2024-09-28",57.0,3.08],["2024-10-01",55.8,2.97],["2024-10-04",56.3,3.14],["2024-10-07",55.7,3.09],["2024-10-10",54.4,2.96],["2024-10-13",52.9,2.76],["2024-10-16",52.4,2.76],["2024-10-19",49.1,2.6],["2024-10-22",45.8,2.2],["2024-10-25",47.4,2.42],["2024-10-28",47.8,2.38],["2024-10-31",47.3,2.55],["2024-11-03",45.5,2.26],["2024-11-05",50.2,2.56]],"sil":[["2024-07-29",37.2,0.67],["2024-07-30",38.1,0.53],["2024-07-31",42.5,1.06],["2024-08-01",44.6,1.3],["2024-08-02",46.6,1.83],["2024-08-03",48.0,2.17],["2024-08-04",50.5,2.45],["2024-08-05",53.0,2.79],["2024-08-06",52.4,2.36],["2024-08-07",52.8,2.35],["2024-08-08",53.2,2.37],["2024-08-09",53.8,2.46],["2024-08-10",53.6,2.49],["2024-08-11",53.4,2.45],["2024-08-12",54.8,2.61],["2024-08-13",56.0,2.75],["2024-08-14",56.7,2.47],["2024-08-15",55.7,2.27],["2024-08-16",54.2,2.09],["2024-08-17",53.8,2.05],["2024-08-18",53.5,2.06],["2024-08-19",53.6,2.16],["2024-08-20",53.7,2.22],["2024-08-21",52.7,2.07],["2024-08-22",52.8,2.25],["2024-08-23",53.5,2.42],["2024-08-24",53.2,2.4],["2024-08-25",52.4,2.34],["2024-08-26",52.5,2.36],["2024-08-27",51.5,2.08],["2024-08-28",50.5,1.93],["2024-08-29",47.3,1.79],["2024-08-30",46.6,1.56],["2024-08-31",44.6,1.48],["2024-09-01",44.0,1.39],["2024-09-02",43.4,1.29],["2024-09-03",43.0,1.18],["2024-09-04",41.6,1.05],["2024-09-05",39.7,0.98],["2024-09-06",38.3,0.92],["2024-09-07",37.1,0.83],["2024-09-08",36.0,0.66],["2024-09-09",35.3,0.6],["2024-09-10",38.4,0.87],["2024-09-11",38.1,0.88],["2024-09-12",39.2,1.03],["2024-09-13",38.7,1.12],["2024-09-14",39.7,1.27],["2024-09-15",40.1,1.32],["2024-09-16",40.0,1.33],["2024-09-17",43.5,1.79],["2024-09-18",47.6,2.12],["2024-09-19",48.8,2.05],["2024-09-20",51.1,2.33],["2024-09-21",52.6,2.37],["2024-09-22",53.7,2.51],["2024-09-23",53.2,2.39],["2024-09-24",54.1,2.5],["2024-09-25",55.2,2.5],["2024-09-26",55.1,2.61],["2024-09-27",58.1,2.74],["2024-09-28",57.3,2.76],["2024-09-29",56.3,2.77],["2024-09-30",55.1,2.63],["2024-10-01",55.5,2.7],["2024-10-02",56.5,2.79],["2024-10-03",56.7,2.81],["2024-10-04",56.2,2.75],["2024-10-05",56.1,2.76],["2024-10-06",56.3,2.75],["2024-10-07",54.7,2.69],["2024-10-08",54.9,2.59],["2024-10-09",53.5,2.56],["2024-10-10",52.6,2.45],["2024-10-11",52.0,2.43],["2024-10-12",52.2,2.42],["2024-10-13",51.8,2.36],["2024-10-14",51.0,2.32],["2024-10-15",50.1,2.31],["2024-10-16",50.3,2.42],["2024-10-17",49.5,2.29],["2024-10-18",48.1,2.26],["2024-10-19",48.8,2.32],["2024-10-20",46.6,2.08],["2024-10-21",47.0,2.03],["2024-10-22",46.6,2.07],["2024-10-23",46.9,2.06],["2024-10-24",46.0,1.99],["2024-10-25",46.3,1.99],["2024-10-26",46.4,1.91],["2024-10-27",46.8,1.89],["2024-10-28",44.6,1.78],["2024-10-29",44.9,1.77],["2024-10-30",45.8,2.01],["2024-10-31",44.2,1.99],["2024-11-01",45.8,2.03],["2024-11-02",48.2,2.12],["2024-11-03",47.0,2.0],["2024-11-04",49.2,2.27],["2024-11-05",50.0,2.18]]},"2020":{"rep":[["2020-07-07",68.0,8.27],["2020-07-10",67.8,8.21],["2020-07-13",67.7,8.23],["2020-07-16",68.4,8.24],["2020-07-19",68.1,8.3],["2020-07-22",68.1,8.17],["2020-07-25",68.3,8.08],["2020-07-28",67.6,8.05],["2020-07-31",70.3,7.36],["2020-08-03",70.5,7.42],["2020-08-06",70.2,7.49],["2020-08-09",71.5,7.65],["2020-08-12",70.6,7.66],["2020-08-15",71.7,7.4],["2020-08-18",72.6,7.38],["2020-08-21",70.9,7.22],["2020-08-24",70.8,7.24],["2020-08-27",68.0,6.83],["2020-08-30",69.8,7.09],["2020-09-02",63.4,5.74],["2020-09-05",67.0,6.14],["2020-09-08",67.1,5.9],["2020-09-11",70.6,6.36],["2020-09-14",69.5,6.15],["2020-09-17",72.2,6.49],["2020-09-20",73.0,6.64],["2020-09-23",73.0,6.65],["2020-09-26",71.6,6.57],["2020-09-29",71.9,6.44],["2020-10-02",78.5,7.09],["2020-10-05",78.9,7.16],["2020-10-08",84.2,8.29],["2020-10-11",84.3,8.15],["2020-10-14",84.8,8.33],["2020-10-17",84.2,8.25],["2020-10-20",84.7,8.45],["2020-10-23",80.2,7.35],["2020-10-26",88.8,9.32],["2020-10-29",86.1,8.31],["2020-11-01",84.3,7.63],["2020-11-03",84.6,7.35]],"sil":[["2020-07-05",75.9,7.38],["2020-07-06",71.6,6.66],["2020-07-07",72.8,6.96],["2020-07-08",72.7,6.96],["2020-07-09",72.5,6.87],["2020-07-10",72.2,6.87],["2020-07-11",71.7,6.81],["2020-07-12",72.7,6.96],["2020-07-13",73.9,7.11],["2020-07-14",73.9,7.07],["2020-07-15",75.8,7.26],["2020-07-16",73.8,7.01],["2020-07-17",73.5,6.89],["2020-07-18",73.6,6.91],["2020-07-19",74.1,6.9],["2020-07-20",74.8,6.99],["2020-07-21",73.9,6.75],["2020-07-22",74.5,6.88],["2020-07-23",73.3,6.77],["2020-07-24",72.7,6.67],["2020-07-25",73.5,6.68],["2020-07-26",72.9,6.71],["2020-07-27",73.0,6.83],["2020-07-28",73.6,6.95],["2020-07-29",73.0,6.83],["2020-07-30",73.6,6.81],["2020-07-31",71.0,6.39],["2020-08-01",71.1,6.44],["2020-08-02",71.2,6.4],["2020-08-03",71.3,6.41],["2020-08-04",71.7,6.47],["2020-08-05",69.9,6.05],["2020-08-06",70.3,6.1],["2020-08-07",69.9,6.09],["2020-08-08",70.5,6.16],["2020-08-09",70.9,6.18],["2020-08-10",71.3,6.3],["2020-08-11",71.0,6.29],["2020-08-12",70.9,6.35],["2020-08-13",72.2,6.48],["2020-08-14",72.9,6.72],["2020-08-15",71.9,6.59],["2020-08-16",71.5,6.38],["2020-08-17",72.4,6.5],["2020-08-18",72.9,6.54],["2020-08-19",71.7,6.46],["2020-08-20",72.3,6.56],["2020-08-21",72.9,6.72],["2020-08-22",72.5,6.68],["2020-08-23",73.0,6.77],["2020-08-24",72.7,6.65],["2020-08-25",72.6,6.65],["2020-08-26",69.6,6.07],["2020-08-27",69.6,6.11],["2020-08-28",69.3,6.15],["2020-08-29",68.8,6.14],["2020-08-30",68.7,6.04],["2020-08-31",67.4,5.76],["2020-09-01",68.8,5.89],["2020-09-02",70.3,6.25],["2020-09-03",70.1,6.26],["2020-09-04",70.8,6.37],["2020-09-05",70.3,6.3],["2020-09-06",70.9,6.42],["2020-09-07",71.0,6.26],["2020-09-08",71.2,6.31],["2020-09-09",74.2,6.69],["2020-09-10",74.6,6.71],["2020-09-11",75.5,6.9],["2020-09-12",75.0,6.79],["2020-09-13",75.4,6.83],["2020-09-14",75.6,6.79],["2020-09-15",75.8,6.81],["2020-09-16",76.1,6.68],["2020-09-17",75.8,6.67],["2020-09-18",76.8,6.87],["2020-09-19",77.1,6.89],["2020-09-20",76.8,6.85],["2020-09-21",76.9,6.95],["2020-09-22",76.9,6.92],["2020-09-23",77.3,6.97],["2020-09-24",76.6,6.78],["2020-09-25",76.7,6.99],["2020-09-26",77.0,7.0],["2020-09-27",77.6,7.08],["2020-09-28",77.6,6.73],["2020-09-29",77.9,6.79],["2020-09-30",78.2,6.78],["2020-10-01",79.9,7.11],["2020-10-02",79.3,6.95],["2020-10-03",80.1,7.0],["2020-10-04",80.9,7.19],["2020-10-05",81.4,7.28],["2020-10-06",82.3,7.58],["2020-10-07",84.0,7.86],["2020-10-08",84.4,7.95],["2020-10-09",84.8,8.01],["2020-10-10",85.1,8.07],["2020-10-11",85.8,8.18],["2020-10-12",86.2,8.18],["2020-10-13",86.7,8.27],["2020-10-14",86.6,8.2],["2020-10-15",86.7,8.29],["2020-10-16",86.8,8.3],["2020-10-17",87.4,8.39],["2020-10-18",87.4,8.4],["2020-10-19",87.5,8.4],["2020-10-20",87.1,8.21],["2020-10-21",86.7,8.14],["2020-10-22",87.2,8.16],["2020-10-23",86.9,8.1],["2020-10-24",86.5,7.91],["2020-10-25",87.1,7.94],["2020-10-26",87.1,7.91],["2020-10-27",87.6,7.89],["2020-10-28",88.3,7.82],["2020-10-29",88.7,7.93],["2020-10-30",89.6,7.83],["2020-10-31",88.8,7.8],["2020-11-01",89.3,7.78],["2020-11-02",89.3,8.0],["2020-11-03",89.2,8.0]]}};
+const CAPTIONS = {
+  "2024win": "The replication tracks Silver closely from late September. Its main gap is August, just after Harris replaced Biden.",
+  "2020win": "Close throughout; on Election Day the replication was slightly less confident than Silver (84% vs 89%).",
+  "2024pop": "Forecast national margin on Election Day, Democrat minus Republican. The actual result was R+1.5.",
+  "2020pop": "Forecast national margin on Election Day, Democrat minus Republican. The actual result was D+4.4."
+};
+let year = "2024", metric = "win";
+const svg = document.getElementById("chart"), tip = document.getElementById("tip"), box = document.getElementById("box");
+const W = 760, H = 330, M = {l: 44, r: 14, t: 12, b: 30};
+const NS = "http://www.w3.org/2000/svg";
+const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); (parent || svg).appendChild(e); return e; };
+const fmtDate = d => d.toLocaleDateString("en-US", {month: "short", day: "numeric", timeZone: "UTC"});
+const fmtVal = v => metric === "win" ? v.toFixed(0) + "%" : (v >= 0 ? "D+" : "R+") + Math.abs(v).toFixed(1);
+
+function draw() {
+  svg.replaceChildren();
+  const k = metric === "win" ? 1 : 2;
+  const rep = DATA[year].rep.map(r => [new Date(r[0]), r[k]]);
+  const sil = DATA[year].sil.map(r => [new Date(r[0]), r[k]]);
+  const all = rep.concat(sil);
+  const x0 = Math.min(...all.map(p => +p[0])), x1 = Math.max(...all.map(p => +p[0]));
+  let y0, y1;
+  if (metric === "win") { y0 = 0; y1 = 100; }
+  else { y0 = Math.floor(Math.min(0, ...all.map(p => p[1])) - 1); y1 = Math.ceil(Math.max(...all.map(p => p[1])) + 1); }
+  const X = t => M.l + (t - x0) / (x1 - x0) * (W - M.l - M.r);
+  const Y = v => H - M.b - (v - y0) / (y1 - y0) * (H - M.t - M.b);
+  const ax = el("g", {class: "axis"});
+  const step = metric === "win" ? 25 : (y1 - y0 > 8 ? 2 : 1);
+  for (let v = Math.ceil(y0 / step) * step; v <= y1; v += step) {
+    el("line", {x1: M.l, x2: W - M.r, y1: Y(v), y2: Y(v), class: "grid-line", stroke: "var(--rule)"}, ax);
+    const t = el("text", {x: M.l - 8, y: Y(v) + 4, "text-anchor": "end"}, ax);
+    t.textContent = metric === "win" ? v + "%" : (v === 0 ? "0" : (v > 0 ? "D+" : "R+") + Math.abs(v));
+  }
+  const d0 = new Date(x0);
+  for (let m = new Date(Date.UTC(d0.getUTCFullYear(), d0.getUTCMonth() + 1, 1)); +m <= x1; m = new Date(Date.UTC(m.getUTCFullYear(), m.getUTCMonth() + 1, 1))) {
+    const t = el("text", {x: X(+m), y: H - 8, "text-anchor": "middle"}, ax);
+    t.textContent = m.toLocaleDateString("en-US", {month: "short", timeZone: "UTC"});
+  }
+  el("line", {x1: M.l, x2: W - M.r, y1: Y(metric === "win" ? 50 : 0), y2: Y(metric === "win" ? 50 : 0), class: "ref"});
+  const path = pts => pts.map((p, i) => (i ? "L" : "M") + X(+p[0]).toFixed(1) + "," + Y(p[1]).toFixed(1)).join("");
+  el("path", {d: path(sil), class: "l-sil"});
+  el("path", {d: path(rep), class: "l-rep"});
+  const hl = el("line", {class: "hover-line", y1: M.t, y2: H - M.b, visibility: "hidden"});
+  const dr = el("circle", {r: 4.5, class: "dot-rep", visibility: "hidden"});
+  const ds = el("circle", {r: 4, class: "dot-sil", visibility: "hidden"});
+  const hit = el("rect", {x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b, fill: "transparent"});
+  const nearest = (pts, t) => pts.reduce((a, b) => Math.abs(b[0] - t) < Math.abs(a[0] - t) ? b : a);
+  function move(ev) {
+    const r = svg.getBoundingClientRect();
+    const sx = (ev.clientX - r.left) * W / r.width;
+    const t = x0 + (sx - M.l) / (W - M.l - M.r) * (x1 - x0);
+    const a = nearest(rep, t), b = nearest(sil, +a[0]);
+    hl.setAttribute("x1", X(+a[0])); hl.setAttribute("x2", X(+a[0]));
+    dr.setAttribute("cx", X(+a[0])); dr.setAttribute("cy", Y(a[1]));
+    ds.setAttribute("cx", X(+b[0])); ds.setAttribute("cy", Y(b[1]));
+    [hl, dr, ds].forEach(e => e.setAttribute("visibility", "visible"));
+    tip.innerHTML = `<b>${fmtDate(a[0])}</b><br><span style="color:var(--accent)">Replication</span> ${fmtVal(a[1])}<br><span style="color:var(--silver)">Silver</span> ${fmtVal(b[1])}`;
+    tip.hidden = false;
+    const px = X(+a[0]) * r.width / W, bw = box.clientWidth;
+    tip.style.left = Math.min(Math.max(px + 12, 0), bw - tip.offsetWidth - 4) + "px";
+    tip.style.top = "8px";
+  }
+  hit.addEventListener("pointermove", move);
+  hit.addEventListener("pointerdown", move);
+  hit.addEventListener("pointerleave", () => { [hl, dr, ds].forEach(e => e.setAttribute("visibility", "hidden")); tip.hidden = true; });
+  document.getElementById("caption").textContent = CAPTIONS[year + metric];
+}
+function press(id, on) { document.getElementById(id).setAttribute("aria-pressed", on); }
+document.getElementById("y2024").onclick = () => { year = "2024"; press("y2024", true); press("y2020", false); draw(); };
+document.getElementById("y2020").onclick = () => { year = "2020"; press("y2020", true); press("y2024", false); draw(); };
+document.getElementById("mWin").onclick = () => { metric = "win"; press("mWin", true); press("mPop", false); draw(); };
+document.getElementById("mPop").onclick = () => { metric = "pop"; press("mPop", true); press("mWin", false); draw(); };
+draw();
+</script>

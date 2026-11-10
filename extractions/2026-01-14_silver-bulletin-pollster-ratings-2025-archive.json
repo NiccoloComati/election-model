@@ -1,0 +1,300 @@
+{
+  "article": {
+    "date": "2026-01-14",
+    "title": "Silver Bulletin pollster ratings 2025 archive",
+    "subtitle": "The February 2025 version of the Silver Bulletin pollster ratings created after the 2024 presidential election.",
+    "authors": "Nate Silver; Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/pollster-ratings-archive-2025",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2026-01-14_silver-bulletin-pollster-ratings-2025-archive"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": true,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:27:56"
+  },
+  "extraction": {
+    "summary": "Archived February 2025 version of the Silver Bulletin pollster ratings, updated with about 460 polls from the 2024 presidential, congressional and gubernatorial elections. It defines every column of the ratings tables: letter grade, Predictive Plus-Minus, mean-reverted bias, Simple Average Error, Simple/Advanced/Mean-Reverted Advanced Plus-Minus, correct calls, house effect, ADPA and the herding penalty. The methodology is unchanged from the Nate-era FiveThirtyEight ratings. The PDF tables give values for top-rated firms, and the page links downloadable full stats and raw poll data.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "Silver Bulletin pollster ratings",
+      "FiveThirtyEight pollster ratings (Silver era, 2008-2023)"
+    ],
+    "findings": [
+      {
+        "component": "pollster_ratings",
+        "finding_type": "model_change",
+        "statement": "The Silver Bulletin pollster ratings use the same methodology as the Nate Silver-era FiveThirtyEight pollster ratings. The February 2025 update made no methodological changes and only added data: about 460 new polls from the 2024 presidential, congressional and gubernatorial elections, plus a handful of missing older polls.",
+        "quantities": [
+          {
+            "name": "polls added",
+            "value": "about 460",
+            "unit": "polls",
+            "context": "February 2025 update after the 2024 elections"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings, February 2025",
+        "evidence_quote": "These ratings apply the same methodology as the previous, Nate-era FiveThirtyEight pollster ratings.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "A pollster's letter grade is based on its Predictive Plus-Minus. Pollsters with sparse data get rounded grades (e.g. 'A/B' instead of 'A-'), and banned pollsters automatically receive an F.",
+        "quantities": [],
+        "rationale": "Sparse data does not support fine distinctions.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "Grades for pollsters with sparse data are rounded (e.g., to “A/B” rather than A-) and banned pollsters automatically receive a grade of F.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Predictive Plus-Minus is the projected future accuracy of a pollster relative to the average pollster. It combines historical accuracy with transparency: a pollster gets a bonus if it belongs to the AAPOR Transparency Initiative or shares its data with the Roper Center archive. Negative scores are good, meaning less error than average is expected.",
+        "quantities": [],
+        "rationale": "Transparency predicts future accuracy beyond the track record.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "pollsters get a bonus if they’re either a member of the AAPOR Transparency Initiative or share their data with the Roper Center archive.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Mean-reverted bias is a pollster's historical average statistical bias toward Democratic or Republican candidates, shrunk toward zero according to the number of polls in the database. It is calculated only for races in which exactly one Republican and one Democrat are the two leading candidates, so it excludes presidential primaries.",
+        "quantities": [],
+        "rationale": "Bias is only meaningful in a clean D-vs-R race; small samples are shrunk.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "reverted to a mean of zero based on the number of polls in the database. This is calculated only for races in which exactly one Republican and one Democrat are the two leading candidates",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "data_source",
+        "statement": "The pollster ratings database goes back to 1998, weights polls from more recent years more heavily, and covers all polls taken in the 21 days before presidential, congressional and gubernatorial general elections and presidential primaries. The raw file contains toplines for more than 12,300 polls.",
+        "quantities": [
+          {
+            "name": "database start",
+            "value": "1998",
+            "unit": "year",
+            "context": "pollster ratings database"
+          },
+          {
+            "name": "window before election",
+            "value": "21",
+            "unit": "days",
+            "context": "polls included in ratings"
+          },
+          {
+            "name": "polls in raw data",
+            "value": "more than 12,300",
+            "unit": "polls",
+            "context": "Rawpolls 021325 file"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings, February 2025",
+        "evidence_quote": "The database goes back to 1998, though polls from more recent years are weighted more heavily.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Simple Average Error is a firm's average absolute error on the margin between the top two finishers, polled result versus actual result.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "calculated as the difference between the polled result and the actual result for the margin separating the top two finishers in the race.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Simple Plus-Minus is Simple Average Error minus the expected error for the race surveyed. The expected error accounts for the type of election, the number of days until the election, and the poll's sample size.",
+        "quantities": [],
+        "rationale": "Some races are intrinsically harder to poll.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "which accounts for the type of election polled, the number of days until the election, and the poll's sample size.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Advanced Plus-Minus additionally accounts for how other polling firms performed in the same races and weights recent results more heavily.",
+        "quantities": [],
+        "rationale": "Controls for race-level difficulty using other firms as a benchmark.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "also accounts for the performance of other polling firms surveying the same races, and which weights recent results more heavily.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Mean-Reverted Advanced Plus-Minus shrinks Advanced Plus-Minus toward zero, with the amount of shrinkage based on how many polls the firm has conducted, discounting polls from previous years.",
+        "quantities": [],
+        "rationale": "Firms with few polls have noisy scores.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "The amount of mean reversion is based on how many polls the firm has conducted, but with polls in previous years discounted.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Average Distance from Polling Average (ADPA) measures how far a firm's average poll differed from the average of other polls in the field when it was released. A herding penalty is triggered when a firm's ADPA is lower than the theoretical minimum implied by its sampling error. The penalty equals one-half of the gap between the actual ADPA and the theoretical minimum ADPA, and it is added to Advanced Plus-Minus before Predictive Plus-Minus is calculated.",
+        "quantities": [
+          {
+            "name": "herding penalty",
+            "value": "0.5 x (theoretical minimum ADPA - actual ADPA)",
+            "unit": "points",
+            "context": "from the table note in the PDF"
+          }
+        ],
+        "rationale": "Polls that are closer to the consensus than sampling error allows are probably herding.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "A herding penalty is triggered when a firm's ADPA is lower than the theoretical minimum based on the sampling error in its polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "interpretation_guidance",
+        "statement": "House effect and statistical bias are distinct. A house effect compares a firm's results with other polls of the same race; bias compares them with the actual result. A firm showing R+3 where other polls show a tie has an R house effect, but if the Republican wins by 5 it still has a 2-point Democratic bias.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "Note that house effects are distinct from statistical bias.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "The supplementary accuracy tables only list firms with at least 20 polls, because most of those measures are not mean-reverted and have large sampling errors. Ratings for firms that poll irregularly should be interpreted with extreme caution.",
+        "quantities": [
+          {
+            "name": "minimum polls for table listing",
+            "value": "20",
+            "unit": "polls",
+            "context": "accuracy and herding tables"
+          }
+        ],
+        "rationale": "Unshrunk measures are noisy for small samples.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "we’re only listing survey firms with at least 20 polls in our database, since most of these measures aren’t mean-reverted and are subject to large sampling errors.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "The percentage of races in which a pollster called the winner correctly is computed but is described as generally a poor measure of pollster accuracy compared with polling error.",
+        "quantities": [],
+        "rationale": "Calls depend on how close races were, not only on poll quality.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "It’s important to note that this is generally a poor measure of pollster accuracy compared to polling error.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "Some polls, such as those from ActiVote, never enter the database. They are not banned, but they fail the standard for scientific surveys, either because amateurs run them on cheap online platforms or because they use non-random convenience samples without adequate bias correction. They receive no rating.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "These polls aren’t “banned” per se — they just don’t make it into our database in the first place because they don’t meet our standards",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "data_source",
+        "statement": "Washington Post polls are treated as the successor to the discontinued ABC News/Washington Post partnership, and their ratings include prior ABC/Post data.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "We consider Washington Post polls to be the successor to this partnership and their ratings include prior ABC/Post data.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "parameter_or_number",
+        "statement": "In the February 2025 ratings table, the top Predictive Plus-Minus scores were AtlasIntel (A+, -0.96, bias D+0.16, 91 polls), Marquette University Law School (A/B, -0.92), The Washington Post (A+, -0.90, D+0.90, 98 polls), Research & Polling Inc. (A, -0.87), New York Times/Siena College (A, -0.76, D+1.41, 116 polls), Cygnal (A, -0.75) and SurveyUSA (A, -0.73, 871 polls).",
+        "quantities": [
+          {
+            "name": "AtlasIntel Predictive Plus-Minus",
+            "value": "-0.96",
+            "unit": "points",
+            "context": "Feb 2025"
+          },
+          {
+            "name": "NYT/Siena Predictive Plus-Minus",
+            "value": "-0.76",
+            "unit": "points",
+            "context": "Feb 2025"
+          },
+          {
+            "name": "SurveyUSA polls in database",
+            "value": "871",
+            "unit": "polls",
+            "context": "Feb 2025"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings, February 2025",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "parameter_or_number",
+        "statement": "The ratings tables show that firms with very low ADPA receive the largest herding penalties: for example TIPP Insights (ADPA 2.7, penalty +0.5), Cygnal (ADPA 3.5, +0.5) and OnMessage (ADPA 3.3, +0.5), versus +0.1 for firms like AtlasIntel (ADPA 3.7) and SurveyUSA (ADPA 4.9). Simple average errors for top firms range from about 2.1 (TIPP) to 5.7 (Monmouth) points.",
+        "quantities": [
+          {
+            "name": "largest herding penalty shown",
+            "value": "+0.5",
+            "unit": "points",
+            "context": "TIPP, Cygnal, OnMessage"
+          },
+          {
+            "name": "TIPP simple average error",
+            "value": "2.1",
+            "unit": "points",
+            "context": "Feb 2025"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings, February 2025",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      }
+    ],
+    "political_insights": [],
+    "references": [
+      {
+        "description": "Pollster Stats Full 2025 (XLSX): all table data, alternative plus-minus versions and transparency details",
+        "url": "https://www.natesilver.net/p/pollster-ratings-archive-2025"
+      },
+      {
+        "description": "Rawpolls 021325 (XLSX): toplines for more than 12,300 polls used in the ratings, free to use with attribution",
+        "url": "https://www.natesilver.net/p/pollster-ratings-archive-2025"
+      },
+      {
+        "description": "June 2024 pollster ratings used in the 2024 presidential forecast",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin report card on how pollsters performed in 2024",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact formula for the transparency bonus in Predictive Plus-Minus.",
+      "How expected error is modeled from election type, days to election and sample size.",
+      "Recency weighting scheme used in Advanced Plus-Minus and in mean reversion.",
+      "How the theoretical minimum ADPA is computed from sampling error."
+    ]
+  }
+}

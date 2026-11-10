@@ -1,0 +1,236 @@
+{
+  "article": {
+    "date": "2024-04-17",
+    "title": "Announcing 2024 election model plans",
+    "subtitle": "The presidential model will be available to Silver Bulletin subscribers beginning in June.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/announcing-2024-election-model-plans",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-04-17_announcing-2024-election-model-plans-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.251288,
+    "prompt_tokens": 4,
+    "completion_tokens": 3338,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 23064,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:01:52"
+  },
+  "extraction": {
+    "summary": "Silver announces that he will run a 2024 presidential forecast at Silver Bulletin, described as basically the same model he has run since 2008 at FiveThirtyEight, with little re-engineering planned. Polling averages will be free; state and Electoral College probabilities will be strictly paywalled. Updates will be on a 'slow food' schedule: weekly until Labor Day, about twice a week until mid-October, then about three times a week. The article reveals little about mechanics. The main points are that the state polling averages use a Bayesian-type process that borrows information from national polls and other states' polls, and that the model's history is claimed to be well-calibrated, including a ~30% chance for Trump in 2016. No Congressional or gubernatorial forecasts are planned for 2024.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "FiveThirtyEight (Silver era, 2008-2022)"
+    ],
+    "findings": [
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "The 2024 Silver Bulletin presidential model is basically the same model Silver has run in every presidential cycle since 2008 at FiveThirtyEight. Little under-the-hood re-engineering is planned for 2024.",
+        "quantities": [
+          {
+            "name": "first year of model",
+            "value": "2008",
+            "unit": "year",
+            "context": "start of Silver's presidential model lineage"
+          }
+        ],
+        "rationale": "Limited re-engineering makes launch feasible with a smaller team.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "basically the same model that I've run every year since 2008 (formerly under the auspices of FiveThirtyEight)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The model receives minor changes and bug fixes every year, so over time much of the code may be rewritten, even though it is described as the same model.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2008-2024 presidential lineage",
+        "evidence_quote": "There are always some minor changes and bug fixes from year to year, so you quickly get into a ship of Theseus paradox.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin national and state presidential polling averages are not simple averages. They use a Bayesian-type process that draws inferences from national polls and from polls in other states. If a state such as Arizona has not been polled recently but a candidate has improved in other polls, the state's average is adjusted to reflect that shift.",
+        "quantities": [],
+        "rationale": "Lets sparsely polled states reflect trends seen elsewhere.",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "These aren't simple polling averages but instead use a Bayesian-type process to make inferences based on national polls and polls from other states.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The 2024 model produces probabilistic forecasts for every state and for the Electoral College.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "probabilistic forecasts of every state and the Electoral College",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "The 2024 model update cadence is about once a week from launch through Labor Day, about twice a week from Labor Day through mid-October, and about three times a week or 'as needed' from mid-October through Nov. 5. Bonus updates may follow major news or significant polling shifts.",
+        "quantities": [
+          {
+            "name": "updates launch-Labor Day",
+            "value": "~1",
+            "unit": "per week",
+            "context": "2024"
+          },
+          {
+            "name": "updates Labor Day-mid-October",
+            "value": "~2",
+            "unit": "per week",
+            "context": "2024"
+          },
+          {
+            "name": "updates mid-October-Nov. 5",
+            "value": "~3",
+            "unit": "per week",
+            "context": "2024, or as needed"
+          }
+        ],
+        "rationale": "A 'slow food' approach gives time for context. Changing priors after every poll has little value unless you are betting.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Unless you're literally betting on the outcome, there's not a lot of value in changing your priors after every new poll that comes out.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "assumption",
+        "statement": "For the 2024 Biden-Trump rematch, Silver expects the fundamentals to be fairly 'locked in', so many polling shifts will be noise.",
+        "quantities": [],
+        "rationale": "A rematch between two well-known candidates.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the fundamentals of a Biden-Trump rematch are likely to be fairly \"locked in\" and polling shifts will often be noise.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "parameter_or_number",
+        "statement": "Launch timing history: the FiveThirtyEight presidential model launched in late June 2016. In 2020, polling averages launched in late June but the full model did not start until early August because of the pandemic. The 2024 Silver Bulletin model was targeted for June, possibly late May.",
+        "quantities": [
+          {
+            "name": "2016 launch",
+            "value": "late June",
+            "unit": "",
+            "context": "FiveThirtyEight presidential model"
+          },
+          {
+            "name": "2020 full model launch",
+            "value": "early August",
+            "unit": "",
+            "context": "FiveThirtyEight; polling averages in late June"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 2016-2020; 2024 presidential",
+        "evidence_quote": "in 2016, we launched the FiveThirtyEight presidential model in late June. And in 2020, we launched our presidential polling averages in late June",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "empirical_regularity",
+        "statement": "Silver claims the model's historical forecasts have been extremely well-calibrated: events forecast at e.g. 70% have happened about 70% of the time over a large sample. He calls it the only model in the business with a long-term track record.",
+        "quantities": [
+          {
+            "name": "example probability",
+            "value": "70",
+            "unit": "percent",
+            "context": "calibration illustration"
+          }
+        ],
+        "rationale": "'Truth in advertising'.",
+        "model_version": "538 2008-2022 lineage",
+        "evidence_quote": "events that are forecasted to have e.g. a 70 percent chance of occurring have in fact happened about 70 percent of the time over a large sample of data.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2016 the model gave Trump about a 30% chance. Silver says this was considerably higher than other models, betting markets, or conventional wisdom gave him.",
+        "quantities": [
+          {
+            "name": "Trump win probability 2016",
+            "value": "~30",
+            "unit": "percent",
+            "context": "FiveThirtyEight 2016 final forecast"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 2016",
+        "evidence_quote": "the model gave him a ~30 percent chance, considerably higher than other models, betting markets or the conventional wisdom held.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "design_principle",
+        "statement": "Silver paywalls the 2024 probabilities strictly to reserve them for a self-selected audience, because of past misinterpretation of probabilistic forecasts. The polling averages are free.",
+        "quantities": [],
+        "rationale": "Misinterpretation of probabilities by mass audiences.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "I've had enough issues with people (mis)interpreting probabilistic forecasts that I deliberately want to reserve the probabilities for a more self-selected audience.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "design_principle",
+        "statement": "Silver aims to keep the forecast decoupled from his personal political preferences and to stick to his process.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "stick to my process, keeping my forecast and my personal political preferences decoupled from one another.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "No Congressional or gubernatorial forecasts were planned for 2024 because of time constraints. Silver left some chance of reversing this depending on hiring.",
+        "quantities": [],
+        "rationale": "In a presidential year, Congressional forecasts are the lower priority.",
+        "model_version": "2024",
+        "evidence_quote": "I'm not counting on running Congressional and gubernatorial forecasts this year.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "2024 race expectation",
+        "insight": "Silver expected the 2024 Biden-Trump rematch to be close and competitive, with fundamentals fairly locked in.",
+        "evidence": "",
+        "forecasting_implication": "Treat early polling movement as largely noise in rematch elections."
+      }
+    ],
+    "references": [
+      {
+        "description": "Earlier Silver Bulletin piece describing the Bayesian-type polling average process (linked, URL not given)",
+        "url": ""
+      },
+      {
+        "description": "Earlier FiveThirtyEight calibration analysis ('extremely well-calibrated' link)",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin NCAA tournament model updates, used as a template for update format",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact form of the Bayesian-type process that infers state averages from national polls and other states' polls (priors, weights, and the correlation structure between states).",
+      "What minor changes and bug fixes were made to the 2024 model relative to the 2020 FiveThirtyEight version.",
+      "How fundamentals are weighted against polls in 2024, given the claim that fundamentals are 'locked in'."
+    ]
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "article": {
+    "date": "2025-09-09",
+    "title": "Is Susan Collins toast?",
+    "subtitle": "Models and Mainers disagree. She has a track record of massive overperformance, but is facing her toughest environment yet.",
+    "authors": "Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/is-susan-collins-toast",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2025-09-09_is-susan-collins-toast-by-eli-mckown-dawson"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.690185,
+    "prompt_tokens": 8,
+    "completion_tokens": 12646,
+    "cache_read_tokens": 50128,
+    "cache_write_tokens": 53401,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:28:25"
+  },
+  "extraction": {
+    "summary": "Eli McKown-Dawson assesses Susan Collins's 2026 Maine Senate race, the second entry in a Silver Bulletin series on interesting 2026 races. He contrasts the national, data-driven view that she is unusually vulnerable with the local view that she is much stronger than the data suggest. Her vulnerability rests on record-low Morning Consult approval (-16), Maine trending left (8.4 points left of the nation in 2024), declining ticket splitting, and a D+3 generic ballot. Her strength rests on her history of overperforming, with Split Ticket estimating +14 in 2020. Model-relevant content includes a partisan-lean formula (2/3 weight on the most recent presidential election, 1/3 on the prior one, relative to the national vote), the statement that the Silver Bulletin model gives a larger incumbency advantage in smaller, idiosyncratic states, the note that Nate's 2020 538 model gave Collins over 40% because of moderation and track record, and the finding that such candidate factors are becoming less predictive.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "FiveThirtyEight (Silver era, 2008-2022)",
+      "Silver Bulletin 2026 midterm forecast (FLIPR)",
+      "Silver Bulletin Urbanization Index",
+      "prediction markets (Kalshi)",
+      "Split Ticket estimates",
+      "Morning Consult approval tracker"
+    ],
+    "findings": [
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "In the article's Collins overperformance table, a state's partisan lean is the Democratic-minus-Republican presidential margin in the state relative to the national popular vote, averaged over the prior two presidential elections. The more recent election gets two-thirds of the weight and the earlier one gets one-third.",
+        "quantities": [
+          {
+            "name": "weight on most recent presidential election",
+            "value": "2/3",
+            "unit": "",
+            "context": "partisan lean calculation"
+          },
+          {
+            "name": "weight on earlier presidential election",
+            "value": "1/3",
+            "unit": "",
+            "context": "partisan lean calculation"
+          },
+          {
+            "name": "number of prior elections used",
+            "value": "2",
+            "unit": "presidential elections",
+            "context": "partisan lean calculation"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin analysis, 2025",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "The article computes a race's expected lean as the state's partisan lean plus the national popular vote margin. In presidential years the national figure is the presidential popular vote; in off years it is the national House vote as estimated by Split Ticket.",
+        "quantities": [
+          {
+            "name": "2020 expected lean",
+            "value": "D+8.8",
+            "unit": "percentage points",
+            "context": "national D+4.5 plus Maine lean D+4.4"
+          },
+          {
+            "name": "2014 expected lean",
+            "value": "D+5.3",
+            "unit": "percentage points",
+            "context": "national R+5.7 plus Maine lean D+11.0"
+          },
+          {
+            "name": "2008 expected lean",
+            "value": "D+16.4",
+            "unit": "percentage points",
+            "context": "national D+7.3 plus Maine lean D+9.2"
+          },
+          {
+            "name": "2002 expected lean",
+            "value": "D+2.4",
+            "unit": "percentage points",
+            "context": "national R+4.8 plus Maine lean D+7.2"
+          },
+          {
+            "name": "1996 expected lean",
+            "value": "D+0.7",
+            "unit": "percentage points",
+            "context": "national D+0.1 plus Maine lean D+0.6"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin analysis, 2025",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Susan Collins has beaten Maine's expected lean in every one of her Senate races. Her actual margins against expectations were: 2020 R+8.6 vs D+8.8 expected; 2014 R+37.0 vs D+5.3; 2008 R+22.8 vs D+16.4; 2002 R+16.9 vs D+2.4; 1996 R+5.3 vs D+0.7.",
+        "quantities": [
+          {
+            "name": "Collins 2020 result",
+            "value": "R+8.6",
+            "unit": "percentage points",
+            "context": "Maine Senate"
+          },
+          {
+            "name": "Collins 2014 result",
+            "value": "R+37.0",
+            "unit": "percentage points",
+            "context": "Maine Senate"
+          },
+          {
+            "name": "Collins 2008 result",
+            "value": "R+22.8",
+            "unit": "percentage points",
+            "context": "Maine Senate"
+          },
+          {
+            "name": "Collins 2002 result",
+            "value": "R+16.9",
+            "unit": "percentage points",
+            "context": "Maine Senate"
+          },
+          {
+            "name": "Collins 1996 result",
+            "value": "R+5.3",
+            "unit": "percentage points",
+            "context": "Maine Senate"
+          }
+        ],
+        "rationale": "Collins is far from a generic Republican.",
+        "model_version": "general",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "assumption",
+        "statement": "The Silver Bulletin model builds in a larger incumbency advantage in smaller and more idiosyncratic states.",
+        "quantities": [],
+        "rationale": "In small states such as Maine (about 1.3 million residents), voters have personal contact with incumbents and their staff.",
+        "model_version": "Silver Bulletin model (presumably the 2026 midterm/FLIPR model)",
+        "evidence_quote": "This factor is even baked into our model; we've found that the incumbency advantage is larger in smaller and more idiosyncratic states.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "method",
+        "statement": "Nate Silver's 2020 FiveThirtyEight Senate forecast gave Collins better than a 40% chance of winning despite her polling deficit. Factors such as her moderation and her strong electoral track record pulled her odds up.",
+        "quantities": [
+          {
+            "name": "Collins 2020 win probability in 538",
+            "value": ">40",
+            "unit": "percent",
+            "context": "2020 FiveThirtyEight Senate forecast"
+          }
+        ],
+        "rationale": "Candidate-specific factors (ideology, past overperformance) entered the model alongside the polls.",
+        "model_version": "538 2020",
+        "evidence_quote": "Nate's forecast for FiveThirtyEight had Collins with better than a 40 percent chance of winning despite her deficit in the polls because of factors like her moderation and her strong track record.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Silver Bulletin has found that candidate-specific factors such as moderation and past track record are becoming less predictive. Increasingly, only party label matters, which implies smaller weights on candidate-quality and incumbency-overperformance terms in recent cycles.",
+        "quantities": [],
+        "rationale": "Ticket splitting has declined rapidly over the past decade.",
+        "model_version": "general / 2026 midterms",
+        "evidence_quote": "those factors are becoming less predictive and increasingly often, the only thing that matters is whether you have a \"D\" or an \"R\" by your name.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "generic_ballot_and_national_environment",
+        "finding_type": "method",
+        "statement": "The article sketches a back-of-envelope state projection: national environment plus state partisan lean, plus a candidate overperformance term. With Maine about 8 points left of the nation and a D+7 national environment (a 2018-like year), Collins would lose even with her 2020 overperformance of 14 points. At the current D+3 generic ballot, Maine projects as D+11 using its 2024 lean.",
+        "quantities": [
+          {
+            "name": "Maine lean vs nation (approx.)",
+            "value": "~8",
+            "unit": "percentage points D",
+            "context": "2026 projection"
+          },
+          {
+            "name": "2018-like national environment",
+            "value": "D+7",
+            "unit": "percentage points",
+            "context": "scenario"
+          },
+          {
+            "name": "generic ballot average",
+            "value": "D+3",
+            "unit": "percentage points",
+            "context": "Silver Bulletin generic ballot average, Sept 2025"
+          },
+          {
+            "name": "implied Maine environment",
+            "value": "D+11",
+            "unit": "percentage points",
+            "context": "at D+3 generic ballot"
+          },
+          {
+            "name": "Collins 2020 overperformance",
+            "value": "14",
+            "unit": "percentage points",
+            "context": "Split Ticket estimate"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2026 midterms analysis",
+        "evidence_quote": "Even if the national environment only ends up at the current generic ballot average of D +3, Maine would still be a D +11 state based on how it voted in 2024",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Morning Consult's state-level approval polls tend to show very rosy numbers for nearly every senator and governor. A forecaster should treat them as having a positive bias and interpret them relative to that baseline.",
+        "quantities": [
+          {
+            "name": "Collins net approval Q2 2025",
+            "value": "-16",
+            "unit": "net points",
+            "context": "Morning Consult, lowest since tracker began in 2017"
+          },
+          {
+            "name": "Collins net approval at 2020 election",
+            "value": "-6",
+            "unit": "net points",
+            "context": "Morning Consult"
+          },
+          {
+            "name": "Mills net approval Q2 2025",
+            "value": "+3",
+            "unit": "net points",
+            "context": "Morning Consult"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "Morning Consult's state-level approval polls tend to paint a very rosy picture for nearly every senator and governor, so a result this bad is sort of surprising.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "interpretation_guidance",
+        "statement": "Collins won reelection in 2020 with a net approval of -6 and a polling deficit. A poor approval rating alone has not been a reliable predictor of defeat for her.",
+        "quantities": [
+          {
+            "name": "Collins 2020 net approval",
+            "value": "-6",
+            "unit": "net points",
+            "context": "Morning Consult"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "Collins had a net approval rating of -6 when she won reelection in 2020.",
+        "explicitness": "implied"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2020, polling suggested Sara Gideon would beat Collins, but Collins won by 8.6 points. The article attributes this to \"Shy Susan voters\", a large race-specific polling miss in Collins's favor.",
+        "quantities": [
+          {
+            "name": "Collins 2020 margin",
+            "value": "8.6",
+            "unit": "percentage points",
+            "context": "Maine Senate 2020"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "much of the polling suggested that their nominee Sara Gideon... was poised to do it. But there turned out to be a lot of Shy Susan voters.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "data_source",
+        "statement": "As of September 2025, the prediction market Kalshi gave Democrats a 54% chance and Republicans a 46% chance of winning Maine's 2026 Senate seat. The article cites this as an external benchmark.",
+        "quantities": [
+          {
+            "name": "Kalshi D probability",
+            "value": "54",
+            "unit": "percent",
+            "context": "Maine Senate 2026, Sept 2025"
+          },
+          {
+            "name": "Kalshi R probability",
+            "value": "46",
+            "unit": "percent",
+            "context": "Maine Senate 2026, Sept 2025"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2026 midterms",
+        "evidence_quote": "The prediction market Kalshi gives Republicans a 46 percent chance of winning Maine's Senate seat compared to Democrats' 54 percent chance.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver Bulletin's race series aims to combine data-driven analysis with conversations with local experts to test the conventional wisdom. In Maine, local observers see Collins as much stronger than national data-driven observers do. The author concludes she is probably less vulnerable than a naive read of the data suggests.",
+        "quantities": [],
+        "rationale": "Collins's history of overperformance.",
+        "model_version": "2026 midterms series",
+        "evidence_quote": "she's probably less vulnerable than a naive read of the data would suggest.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin midterm forecast for 2026 is scheduled to officially launch in summer 2026.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "remind you to check in next summer once we officially launch our midterm forecast.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "data_source",
+        "statement": "The Silver Bulletin Urbanization Index measures how many people live within a 5-mile radius of the average resident. Its scatterplot against 2024 Harris vote share shows a positive relationship, with index values plotted on roughly an 8.5–13.5 scale (likely log-scaled). Maine ranks 6th-most rural and sits well above the trend line, as does Vermont.",
+        "quantities": [
+          {
+            "name": "radius",
+            "value": "5",
+            "unit": "miles",
+            "context": "Urbanization Index definition"
+          },
+          {
+            "name": "Maine rurality rank",
+            "value": "6th-most rural",
+            "unit": "",
+            "context": "Silver Bulletin Urbanization Index"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin Urbanization Index",
+        "evidence_quote": "the Silver Bulletin Urbanization Index, which measures how many people live within a 5-mile radius of the average resident.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "primaries_and_nominations",
+        "finding_type": "empirical_regularity",
+        "statement": "Successful primary challenges to incumbents are rare. The author would not bet on Collins losing her primary, though the risk is higher than in 2020.",
+        "quantities": [],
+        "rationale": "Trump said he wants a \"better option\" than Collins.",
+        "model_version": "general",
+        "evidence_quote": "Successful challenges are rare and we wouldn't bet on it.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "interpretation_guidance",
+        "statement": "Lesser-known challengers are higher-variance choices. A high-risk, high-reward nominee arguably makes more sense the stronger the incumbent is expected to be.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "The case for a high-risk, high-reward choice arguably becomes better the tougher you think Collins might be to defeat",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "Maine trending left",
+        "insight": "Maine has moved left relative to the nation since 2016.",
+        "evidence": "Maine was 0.9 points left of the nation in 2016, 4.6 in 2020 and 8.4 in 2024. It has voted left of the nation in every presidential election since 1988.",
+        "forecasting_implication": "Recent-weighted partisan lean puts Maine at roughly D+8 relative to the nation."
+      },
+      {
+        "topic": "2024 realignment geography",
+        "insight": "Democratic erosion in 2024 was concentrated in urban areas and among nonwhite voters. Rural white states like Maine and Vermont resisted the rightward trend, and that trend may have peaked.",
+        "evidence": "Maine is the whitest state and the 6th-most rural.",
+        "forecasting_implication": "Demographic composition should be used to model state-level swings."
+      },
+      {
+        "topic": "declining ticket splitting",
+        "insight": "Ticket splitting has declined rapidly over the past decade, making it harder for crossover candidates like Collins and Tester to buck national trends.",
+        "evidence": "Tester lost in 2024; candidate factors are becoming less predictive.",
+        "forecasting_implication": "Shrink candidate-specific overperformance terms over time."
+      },
+      {
+        "topic": "Collins crossover appeal",
+        "insight": "In 2020 Collins won substantial crossover votes.",
+        "evidence": "Exit polls show she won 38% of voters who thought abortion should be legal in all or most cases and 16% of those with an unfavorable view of Trump. She won 51% while Biden won 53% in Maine.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "Senate map 2026",
+        "insight": "Democrats need Maine plus one of Iowa, Texas, Florida, Alaska or Nebraska to retake the Senate. Without Maine they need two of those states.",
+        "evidence": "Those states' 2024 margins ranged from R+13.2 to R+20.8. The seat-count table assumes Democrats win every state to the left of Minnesota.",
+        "forecasting_implication": "State outcome correlation drives majority probability."
+      },
+      {
+        "topic": "Maine electorate",
+        "insight": "Maine's registered voters are 33% Democrats, 29% Republicans and 38% independents. The state has a tradition of ticket splitting and ranked-choice voting, and RCV is triggered only if no candidate wins a majority.",
+        "evidence": "",
+        "forecasting_implication": "Ranked-choice voting tabulation may need to be modeled."
+      },
+      {
+        "topic": "midterm environment",
+        "insight": "In 2018, Democrats won the national House popular vote by about 7 points. The generic ballot average stood at D+3 in September 2025.",
+        "evidence": "",
+        "forecasting_implication": "These figures give national-environment scenario values."
+      }
+    ],
+    "references": [
+      {
+        "description": "First entry in the series: Georgia Senate race",
+        "url": ""
+      },
+      {
+        "description": "Split Ticket estimate of Collins's 2020 overperformance of 14 points",
+        "url": ""
+      },
+      {
+        "description": "Morning Consult senator and governor approval tracker",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin generic ballot average",
+        "url": ""
+      },
+      {
+        "description": "Dave Leip's Atlas of U.S. Presidential Elections",
+        "url": ""
+      },
+      {
+        "description": "Nate Silver's 2020 FiveThirtyEight Senate forecast",
+        "url": ""
+      },
+      {
+        "description": "Early statistical models showing the Maine race as a toss-up or leaning Democratic",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What functional form and size does the incumbency advantage take as a function of state size or idiosyncrasy in the Silver Bulletin model?",
+      "How exactly do moderation and track record enter the 538 2020 Senate model, and how have their weights been reduced?",
+      "How does the 2026 model combine the generic ballot with state partisan lean, and is the lean formula the same 2/3–1/3 presidential weighting?",
+      "Does the model adjust Morning Consult state approval for its positive bias?",
+      "Is the Urbanization Index used as a model input, and is it log-scaled?"
+    ]
+  }
+}

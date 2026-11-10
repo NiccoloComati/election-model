@@ -1,0 +1,430 @@
+{
+  "article": {
+    "date": "2024-10-10",
+    "title": "Why you should mostly ignore \"internal polls\"",
+    "subtitle": "Unless you’re very careful, they add more noise than signal.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/why-you-should-mostly-ignore-internal",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-10-10_why-you-should-mostly-ignore-internal-polls"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.374051,
+    "prompt_tokens": 4,
+    "completion_tokens": 6343,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 30857,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:17:19"
+  },
+  "extraction": {
+    "summary": "Silver argues that internal campaign polls, and especially reports and rumors about them, add more noise than signal for forecasting. He describes three levels: genuine internals, internals selectively released to the media, and conventional wisdom built on supposed knowledge of internals. Campaign incentives, principal-agent problems and partisan motivated reasoning bias genuine internals. Released internals are further biased by selective release, by about 3 points toward their candidate in presidential races and more downballot. The Silver Bulletin polling averages include released internals when basic poll details are disclosed and debias them through the house effects adjustment; a table shows the Oct. 10 Trump internals moving to near the public averages. Silver also shows that uniform swing keeps the tipping-point state ranking stable across very different national environments, and he warns that insider conventional wisdom can become detached from the data.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin polling averages",
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin Biden-Trump 2024 forecast"
+    ],
+    "findings": [
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "Internal polls that campaigns release publicly are included in the Silver Bulletin polling database and averages, provided the campaign discloses the basic descriptive information aggregators require, such as field dates and sample sizes.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling averages 2024",
+        "evidence_quote": "When campaigns disclose the basic descriptive information that polling aggregators require — field dates, sample sizes, and so on — these surveys are included in polling databases, including Silver Bulletin's.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "adjustment_rule",
+        "statement": "Publicly released internal polls must be debiased. The Silver Bulletin polling averages do this through their house effects adjustment, together with the trendline adjustment.",
+        "quantities": [],
+        "rationale": "Released internals have a predictable, empirically trackable bias toward their sponsor.",
+        "model_version": "Silver Bulletin polling averages 2024",
+        "evidence_quote": "Our polling averages account for this tendency through our house effects adjustment.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Historically, publicly released presidential internal polls have been biased by an average of about 3 points toward the sponsoring campaign's candidate. The bias is somewhat larger for Congressional and downballot races.",
+        "quantities": [
+          {
+            "name": "average bias of presidential internal polls",
+            "value": "about 3",
+            "unit": "percentage points (margin)",
+            "context": "toward the sponsoring candidate, public-record internals"
+          },
+          {
+            "name": "downballot internal bias",
+            "value": "a bit larger than 3",
+            "unit": "percentage points",
+            "context": "Congressional and downballot races"
+          }
+        ],
+        "rationale": "Because released internals enter the public record, their bias can be tracked against results over time.",
+        "model_version": "general principle / Silver Bulletin data",
+        "evidence_quote": "presidential internal polls are biased by an average of about 3 points toward their candidates and a bit larger than that for Congressional and downballot races",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "For internal polls, the size of the house effect adjustment varies by state depending on how much the internal poll differs from public polls in that state. After adjustment, the polls almost exactly match the public polling averages.",
+        "quantities": [],
+        "rationale": "Silver says the state-to-state variation is not particularly important. What matters is that the bias of released internals is highly predictable.",
+        "model_version": "Silver Bulletin polling averages 2024",
+        "evidence_quote": "The magnitude of the adjustment differs slightly from state to state based on how much the Trump poll differed from public polls there",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "The Trump campaign internals released Oct. 10, 2024 were adjusted by the Silver Bulletin house effects and trendline adjustments as follows. Arizona: Trump +3.0 to Trump +0.5. Georgia: Trump +5.0 to Trump +1.7. Michigan: Trump +1.0 to Harris +1.8. Nevada: Trump +3.0 to Harris +0.3. North Carolina: Trump +1.0 to Harris +1.4. Pennsylvania: Trump +1.0 to Harris +1.8. Wisconsin: Trump +1.0 to Harris +1.9. The implied adjustments run from roughly 2.4 to 3.3 points toward Harris.",
+        "quantities": [
+          {
+            "name": "AZ raw/adjusted",
+            "value": "Trump +3.0 / Trump +0.5",
+            "unit": "margin",
+            "context": "Oct 10 2024 Trump internal"
+          },
+          {
+            "name": "GA raw/adjusted",
+            "value": "Trump +5.0 / Trump +1.7",
+            "unit": "margin",
+            "context": "Oct 10 2024"
+          },
+          {
+            "name": "MI raw/adjusted",
+            "value": "Trump +1.0 / Harris +1.8",
+            "unit": "margin",
+            "context": "Oct 10 2024"
+          },
+          {
+            "name": "NV raw/adjusted",
+            "value": "Trump +3.0 / Harris +0.3",
+            "unit": "margin",
+            "context": "Oct 10 2024"
+          },
+          {
+            "name": "NC raw/adjusted",
+            "value": "Trump +1.0 / Harris +1.4",
+            "unit": "margin",
+            "context": "Oct 10 2024"
+          },
+          {
+            "name": "PA raw/adjusted",
+            "value": "Trump +1.0 / Harris +1.8",
+            "unit": "margin",
+            "context": "Oct 10 2024"
+          },
+          {
+            "name": "WI raw/adjusted",
+            "value": "Trump +1.0 / Harris +1.9",
+            "unit": "margin",
+            "context": "Oct 10 2024"
+          },
+          {
+            "name": "implied adjustment range",
+            "value": "2.4-3.3",
+            "unit": "percentage points",
+            "context": "computed from table differences"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling averages 2024",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Released internal polls are biased partly because of selective release, not only because of methodology. Campaigns poll every week and publicize the batches that look favorable because of sampling noise, or the version run under favorable likely-voter assumptions.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "If one batch happens to be particularly favorable one week, you share it with Politico — otherwise, you don't.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Campaigns usually keep released internals within the range of credibility; extreme misses like Cantor's are the exception. Released internals are rarely fabricated outright but are nearly always shaded toward the client.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Usually, campaigns won't go Full McLaughlin; they'll want to publish something within the range of credibility.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "In the 2014 VA-7 Republican primary, a publicly released internal poll by John McLaughlin showed Eric Cantor ahead by 34 points. Cantor lost to David Brat by 11 points, an error of about 45 points.",
+        "quantities": [
+          {
+            "name": "Cantor internal lead",
+            "value": "34",
+            "unit": "points",
+            "context": "2014 VA-7 GOP primary"
+          },
+          {
+            "name": "actual result",
+            "value": "Brat +11",
+            "unit": "points",
+            "context": "2014 VA-7"
+          }
+        ],
+        "rationale": "",
+        "model_version": "historical example",
+        "evidence_quote": "Eric Cantor lost to David Brat by 11 (!) points after a publicly released internal poll had shown Cantor ahead by 34 (!!)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "empirical_regularity",
+        "statement": "John McLaughlin, the pollster behind the infamous Cantor internal, was one of the Trump campaign's chief pollsters in 2024.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024",
+        "evidence_quote": "Cantor's pollster? None other than John McLaughlin, who is now one of the Trump campaign's chief pollsters.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Romney's 2012 campaign internals, obtained after the election, were biased toward Romney by an average of 4.7 points across seven states: an average of Obama +1.0 versus an actual Obama +5.7. Footnote 2 says public polls were also biased toward Romney in 2012, but less so. The state-level biases toward Romney were: CO 7.9, IA 5.8, MN 3.7, NH 9.1, OH 1.0, PA 2.4, WI 2.8.",
+        "quantities": [
+          {
+            "name": "average bias",
+            "value": "4.7",
+            "unit": "points toward Romney",
+            "context": "2012 internals, 7 states"
+          },
+          {
+            "name": "CO bias",
+            "value": "7.9",
+            "unit": "points",
+            "context": "Romney +2.5 internal vs Obama +5.4 actual"
+          },
+          {
+            "name": "IA bias",
+            "value": "5.8",
+            "unit": "points",
+            "context": "tie vs Obama +5.8"
+          },
+          {
+            "name": "MN bias",
+            "value": "3.7",
+            "unit": "points",
+            "context": "Obama +4.0 vs Obama +7.7"
+          },
+          {
+            "name": "NH bias",
+            "value": "9.1",
+            "unit": "points",
+            "context": "Romney +3.5 vs Obama +5.6"
+          },
+          {
+            "name": "OH bias",
+            "value": "1.0",
+            "unit": "points",
+            "context": "Obama +2.0 vs Obama +3.0"
+          },
+          {
+            "name": "PA bias",
+            "value": "2.4",
+            "unit": "points",
+            "context": "Obama +3.0 vs Obama +5.4"
+          },
+          {
+            "name": "WI bias",
+            "value": "2.8",
+            "unit": "points",
+            "context": "Obama +4.0 vs Obama +6.8"
+          }
+        ],
+        "rationale": "Shows that even private, unreleased internals can be heavily biased.",
+        "model_version": "historical example 2012",
+        "evidence_quote": "The polls were biased toward Romney by an average of almost 5 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "assumption",
+        "statement": "Genuine, unreleased campaign internals may be biased toward their candidate even before any selective release. Silver gives three reasons: campaigns poll for resource allocation and message testing rather than prediction; principal-agent problems and optimism bias discourage delivering bad news to the boss; and staff are partisan true believers prone to motivated reasoning.",
+        "quantities": [],
+        "rationale": "Campaigns are not harmed by a consistent bias because their decisions do not depend on accurate prediction.",
+        "model_version": "general principle",
+        "evidence_quote": "So you're selecting for people who are high on partisan motivated reasoning, who have organizational incentives to sugarcoat the data",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "assumption",
+        "statement": "Genuine internal polls may hold some real informational advantages over public polls, such as proprietary data mining of campaign contacts and possibly better pollster talent, since the money in polling is on the campaign side.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Campaigns have access to proprietary information that public pollsters lack, like data mining they've done based on campaign contacts.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "Electoral shifts tend to follow a uniform swing. As a result, the ranking of tipping-point states is stable across very different national environments. In the Silver Bulletin forecasts, the tipping-point order was almost the same when Trump led by 4 nationally (Biden-Trump forecast at shutoff) as when Harris led by 3 (Oct. 2024): Pennsylvania #1; then Michigan, Wisconsin, Georgia and North Carolina in some combination; then Arizona and Nevada a little behind.",
+        "quantities": [
+          {
+            "name": "Trump national lead at Biden forecast shutoff",
+            "value": "4",
+            "unit": "points",
+            "context": "July 2024"
+          },
+          {
+            "name": "Harris national lead",
+            "value": "3",
+            "unit": "points",
+            "context": "Oct 10 2024"
+          }
+        ],
+        "rationale": "Because of uniform swing, a consistently biased poll still yields correct relative state ordering; precision matters more than accuracy for resource allocation.",
+        "model_version": "Silver Bulletin 2024 presidential model",
+        "evidence_quote": "Because electoral shifts tend to follow a uniform swing, your polls can be biased so long as they're biased in a consistent way.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "Even a small systematic polling error in Trump's favor, like in 2016, could produce a Trump sweep of every swing state. Silver says this illustrates the strong correlation between swing states.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "With even a small systematic polling error in his favor, like in 2016, Trump could sweep every swing state",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin state polling averages weight each poll by quality, sample size and recency, and are adjusted based on trends in both state and national polls. The trendline adjustment is applied to individual polls.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling averages 2024",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "parameter_or_number",
+        "statement": "On Oct. 10, 2024, the Silver Bulletin Pennsylvania average was Harris 48.6%, Trump 47.6%. The chart also showed Kennedy's line ending when he dropped out in late August, a Harris rise after the Sept. 10 debate followed by a plateau, and the model launch around late July.",
+        "quantities": [
+          {
+            "name": "Harris PA",
+            "value": "48.6",
+            "unit": "%",
+            "context": "Oct 10 2024"
+          },
+          {
+            "name": "Trump PA",
+            "value": "47.6",
+            "unit": "%",
+            "context": "Oct 10 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling averages 2024",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "design_principle",
+        "statement": "Forecasters should prefer the unbiased outside view that public polls and models provide over insider reports, rumors and conventional wisdom about internal polls. Information fidelity degrades along a telephone chain: journalists, then well-connected elites, then randos on Twitter.",
+        "quantities": [],
+        "rationale": "Insider conventional wisdom can become detached from reality through feedback loops, as with the 2022 red wave and the 2016 belief that Clinton couldn't lose.",
+        "model_version": "general principle",
+        "evidence_quote": "So long the data, and short the vibes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "interpretation_guidance",
+        "statement": "Journalists' reports on campaign mood (Level 3.1) can occasionally carry useful information. The reader needs to know how gullible or spin-prone the journalist is and decode the report. Often such reports simply restate what the public averages already show.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "In some instances, Level 3.1 can provide useful information. You need to know the journalists",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "uniform swing",
+        "insight": "State-level shifts tend to move together uniformly, so the relative ordering of swing states stays stable even as the national margin swings by 7 points.",
+        "evidence": "Tipping-point ordering was nearly unchanged between Trump +4 and Harris +3 nationally in 2024.",
+        "forecasting_implication": "Model state outcomes as national swing plus a stable relative lean, with strong inter-state correlation."
+      },
+      {
+        "topic": "2024 tipping-point states",
+        "insight": "Pennsylvania was the clear #1 tipping-point state in 2024. Michigan, Wisconsin, Georgia and North Carolina came next in some order, with Arizona and Nevada slightly behind.",
+        "evidence": "Silver Bulletin tipping-point rankings.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "partisan culture and campaign mood",
+        "insight": "Democrats tend to feel angsty and tolerate more public internal dissent than Trumpworld. Reports of Democratic panic therefore carry little signal.",
+        "evidence": "",
+        "forecasting_implication": "Discount campaign-mood narratives."
+      },
+      {
+        "topic": "insider conventional wisdom failures",
+        "insight": "Insider conventional wisdom has detached from reality before: the 2022 red wave narrative, and the 2016 belief that Clinton couldn't lose.",
+        "evidence": "",
+        "forecasting_implication": "Do not adjust models toward insider narratives."
+      },
+      {
+        "topic": "2024 race dynamics",
+        "insight": "Harris gained for roughly 10 days after the Sept. 10 debate, then plateaued at a position not quite enough to lead in the Electoral College.",
+        "evidence": "PA average Harris 48.6 vs Trump 47.6 on Oct 10.",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin house effects adjustment methodology",
+        "url": ""
+      },
+      {
+        "description": "Publicly available Silver Bulletin polling data, usable to track internal poll bias",
+        "url": ""
+      },
+      {
+        "description": "New Republic 2012 report on Romney campaign internal polls",
+        "url": ""
+      },
+      {
+        "description": "Axios 'Behind the Curtain' column on Democratic concern, Oct 10 2024",
+        "url": ""
+      },
+      {
+        "description": "Silver's book (On the Edge) on collegiality in campaigns",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin tipping-point state rankings and Biden-Trump forecast",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Whether internal polls get a separate partisan/sponsor bias prior (e.g., a fixed ~3 point adjustment) or whether bias is estimated purely from the poll's house effect relative to other polls.",
+      "How internal/partisan polls are weighted relative to nonpartisan polls in the averages.",
+      "The exact functional form of the house effects and trendline adjustments that yield the state-specific adjustments shown.",
+      "The exact size of the larger downballot internal-poll bias."
+    ]
+  }
+}

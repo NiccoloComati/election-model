@@ -1,0 +1,436 @@
+district,code,winner_Dparty,winner_Rparty,name_D1,name_D2,name_D3,name_D4,name_R1,name_R2,name_R3,name_R4,winner_D1,winner_D2,winner_D3,winner_D4,winner_R1,winner_R2,winner_R3,winner_R4,rating
+Alabama 1,0101,0.21667,99.78333,Clyde Jones,,,,Jerry Carl,,,,0.216667,,,,99.783331,,,,3
+Alabama 2,0102,41.22167,58.77833,Shomari Figures,,,,Rhett Marques,,,,41.221666,,,,58.778334,,,,0
+Alabama 3,0103,0.00333,99.99667,Lee McInnis,,,,Mike Rogers,,,,0.003333,,,,99.996668,,,,3
+Alabama 4,0104,0,100,Amanda Pusczek,,,,Robert Aderholt,,,,0,,,,100,,,,3
+Alabama 5,0105,0.20167,99.79833,Andrew Sneed,,,,Dale Strong,,,,0.201667,,,,99.798334,,,,3
+Alabama 6,0106,0.04833,99.95167,Maurice Mercer,,,,Gary Palmer,,,,0.048333,,,,99.951667,,,,3
+Alabama 7,0107,99.96,0.04,Terri Sewell,,,,Ammie Akin,,,,99.959999,,,,0.04,,,,-3
+Alaska 1,0200,38.99167,61.00833,Eric Hafner,,,,Nicholas Begich,,,,0,,,,61.008334,,,,1
+Arizona 1,0401,73.25,26.75,Amish Shah,,,,Jay Feely,,,,73.250002,,,,26.750001,,,,-1
+Arizona 2,0402,43.99,56.01,Jonathan Nez,,,,Eli Crane,,,,43.990001,,,,56.010002,,,,0
+Arizona 3,0403,100,0,Yassamin Ansari,,,,,,,,100,,,,,,,,-3
+Arizona 4,0404,99.30667,0.69333,Greg Stanton,,,,Zuhdi Jasser,,,,99.306667,,,,0.693333,,,,-3
+Arizona 5,0405,11.70333,88.29666,Elizabeth Lee,,,,Mark Lamb,,,,11.703333,,,,88.296664,,,,2
+Arizona 6,0406,54.71333,45.28667,JoAnna Mendoza,,,,Juan Ciscomani,,,,54.713333,,,,45.286667,,,,0
+Arizona 7,0407,99.98,0.02,Adelita Grijalva,,,,Daniel Butierez,,,,99.979997,,,,0.02,,,,-3
+Arizona 8,0408,6.21667,93.78333,Bernadette Greene-Placentia,,,,Abraham Hamadeh,,,,6.216666,,,,93.783331,,,,2
+Arizona 9,0409,0.2,99.8,Danielle Sterbinsky,,,,Paul Gosar,,,,0.2,,,,99.799997,,,,3
+Arkansas 1,0501,0.00667,99.99334,Terri Yarbrough Green,,,,Rick Crawford,,,,0.006667,,,,99.993336,,,,3
+Arkansas 2,0502,32.95667,67.04333,Chris Jones,,,,French Hill,,,,32.956666,,,,67.043334,,,,1
+Arkansas 3,0503,0.86833,99.13167,Robb Ryerse,,,,Steve Womack,,,,0.868333,,,,99.131668,,,,3
+Arkansas 4,0504,0.01833,99.98167,James Russell,,,,Bruce Westerman,,,,0.018333,,,,99.981666,,,,3
+California 1,0601,96.33667,3.66333,Mike McGuire,,,,James Gallagher,,,,96.336669,,,,3.663334,,,,-3
+California 2,0602,99.995,0.005,Jared Huffman,,,,Robin Littau,,,,99.994999,,,,0.005,,,,-3
+California 3,0603,99.72667,0.27333,Ami Bera,,,,Robb Tucker,,,,99.726665,,,,0.273333,,,,-3
+California 4,0604,100,0,Mike Thompson,Eric Jones,,,,,,,25.72,74.28,,,,,,,-3
+California 5,0605,6.49333,93.50666,Michael Masuda,,,,Tom McClintock,,,,6.493333,,,,93.506664,,,,2
+California 6,0606,87.59167,12.40833,Richard Pan,,,,,,,,87.591666,,,,,,,,-2
+California 7,0607,100,0,Doris Matsui,Mai Vang,,,,,,,67.980003,32.02,,,,,,,-3
+California 8,0608,99.99833,0.00167,John Garamendi,,,,Rudy Recile,,,,99.998331,,,,0.001667,,,,-3
+California 9,0609,99.885,0.115,Josh Harder,,,,John McBride,,,,99.884999,,,,0.115,,,,-3
+California 10,0610,99.99833,0.00167,Mark DeSaulnier,,,,Jeffrey Frese,,,,99.998331,,,,0.001667,,,,-3
+California 11,0611,100,0,Scott Wiener,Connie Chan,,,,,,,70.860004,29.140002,,,,,,,-3
+California 12,0612,100,0,Lateefah Simon,Jamie Joyce,,,,,,,100,0,,,,,,,-3
+California 13,0613,99.21,0.79,Adam Gray,,,,Kevin Lincoln,,,,99.21,,,,0.79,,,,-3
+California 14,0614,100,0,Aisha Wahab,Melissa Hernandez,,,,,,,98.708338,1.291667,,,,,,,-3
+California 15,0615,100,0,Kevin Mullin,,,,Charles Hoelter,,,,100,,,,0,,,,-3
+California 16,0616,100,0,Sam Liccardo,,,,Peter Soule,,,,100,,,,0,,,,-3
+California 17,0617,100,0,Ro Khanna,,,,Ritesh Tandon,,,,100,,,,0,,,,-3
+California 18,0618,99.99833,0.00167,Zoe Lofgren,,,,Shane Lewis,,,,99.998331,,,,0.001667,,,,-3
+California 19,0619,100,0,Jimmy Panetta,,,,Peter Verbica,,,,100,,,,0,,,,-3
+California 20,0620,0.5,99.5,Sandra Van Scotter,,,,Vince Fong,,,,0.5,,,,99.5,,,,3
+California 21,0621,99.75666,0.24333,Jim Costa,,,,Kyle Kirkland,,,,99.756664,,,,0.243333,,,,-3
+California 22,0622,76.92,23.08,Randy Villegas,,,,David G. Valadao,,,,76.920003,,,,23.08,,,,-2
+California 23,0623,8.33,91.67,Tessa Lynn Hodge,,,,Jay Obernolte,,,,8.33,,,,91.670001,,,,2
+California 24,0624,99.99667,0.00333,Salud Carbajal,,,,Bob Smith,,,,99.996668,,,,0.003333,,,,-3
+California 25,0625,99.65333,0.34667,Raul Ruiz,,,,Joe Males,,,,99.653333,,,,0.346667,,,,-3
+California 26,0626,99.485,0.515,Jacqui Irwin,,,,Samuel Gallucci,,,,99.484998,,,,0.515,,,,-3
+California 27,0627,99.86166,0.13833,George Whitesides,,,,Jason Gibbs,,,,99.861664,,,,0.138333,,,,-3
+California 28,0628,99.99167,0.00833,Judy Chu,,,,April Verlato,,,,99.991667,,,,0.008333,,,,-3
+California 29,0629,100,0,Luz Maria Rivas,Angélica María Dueñas,,,,,,,99.564999,0.435,,,,,,,-3
+California 30,0630,100,0,Laura Friedman,,,,Scott Meyers,,,,100,,,,0,,,,-3
+California 31,0631,99.905,0.095,Gil Cisneros,,,,Eric Ching,,,,99.904996,,,,0.095,,,,-3
+California 32,0632,99.995,0.005,Brad Sherman,,,,Larry Thompson,,,,99.994999,,,,0.005,,,,-3
+California 33,0633,99.88,0.12,Pete Aguilar,,,,Stephanie Vargas,,,,99.879998,,,,0.12,,,,-3
+California 34,0634,100,0,Jimmy Gomez,Angela Gonzales-Torres,,,,,,,29.609999,70.389998,,,,,,,-3
+California 35,0635,99.895,0.105,Norma Torres,,,,Mike Cargile,,,,99.895,,,,0.105,,,,-3
+California 36,0636,100,0,Ted Lieu,,,,Houston Brignano,,,,100,,,,0,,,,-3
+California 37,0637,100,0,Sydney Kamlager-Dove,Samantha Mota,,,,,,,100,0,,,,,,,-3
+California 38,0638,99.40333,0.59667,Hilda Solis,,,,Pedro Casas,,,,99.403334,,,,0.596667,,,,-3
+California 39,0639,99.875,0.125,Mark Takano,,,,Steve Manos,,,,99.874997,,,,0.125,,,,-3
+California 40,0640,0,100,,,,,Ken Calvert,Young Kim,,,,,,,41.551667,58.448333,,,3
+California 41,0641,99.96167,0.03833,Linda T. Sánchez,,,,Mitch Clemmons,,,,99.961668,,,,0.038333,,,,-3
+California 42,0642,99.92,0.08,Robert Garcia,,,,Brian Burley,,,,99.919999,,,,0.08,,,,-3
+California 43,0643,100,0,Maxine Waters,,,,Cristian Morales,,,,100,,,,0,,,,-3
+California 44,0644,100,0,Nanette Barragán,,,,Genevieve Angel,,,,100,,,,0,,,,-3
+California 45,0645,99.24167,0.75833,Derek Tran,,,,Chuong Vo,,,,99.241668,,,,0.758333,,,,-3
+California 46,0646,99.96167,0.03833,Lou Correa,,,,David Pan,,,,99.961668,,,,0.038333,,,,-3
+California 47,0647,99.80667,0.19333,Dave Min,,,,Jenny Rae Le Roux,,,,99.806666,,,,0.193333,,,,-3
+California 48,0648,88.40167,11.59833,Marni von Wilpert,,,,Jim Desmond,,,,88.401669,,,,11.598333,,,,-2
+California 49,0649,99.85833,0.14167,Mike Levin,,,,Armen Kurdian,,,,99.858332,,,,0.141667,,,,-3
+California 50,0650,99.97,0.03,Scott Peters,,,,Steve Cohen,,,,99.970001,,,,0.03,,,,-3
+California 51,0651,99.97333,0.02667,Sara Jacobs,,,,Ricardo Cabrera,,,,99.973333,,,,0.026667,,,,-3
+California 52,0652,99.97333,0.02667,Juan C. Vargas,,,,Jeff Belle,,,,99.973333,,,,0.026667,,,,-3
+Colorado 1,0801,100,0,Melat Kiros,,,,Christy Peterson,,,,100,,,,0,,,,-3
+Colorado 2,0802,100,0,Joe Neguse,,,,Kelley Dennison,,,,100,,,,0,,,,-3
+Colorado 3,0803,29.84833,70.15167,Dwayne Romero,,,,Jeff Hurd,,,,29.848334,,,,70.151669,,,,1
+Colorado 4,0804,15.52,84.48,Eileen Laubacher,,,,Lauren Boebert,,,,15.518333,,,,84.48,,,,2
+Colorado 5,0805,38.89,61.11,Jessica Killin,,,,Jeff Crank,,,,38.890001,,,,61.110002,,,,1
+Colorado 6,0806,99.97,0.03,Jason Crow,,,,Jason Ray Clark,,,,99.970001,,,,0.03,,,,-3
+Colorado 7,0807,99.88,0.12,Brittany Pettersen,,,,Timothy Bennett,,,,99.879998,,,,0.12,,,,-3
+Colorado 8,0808,55.20167,44.79833,Manny Rutinel,,,,Gabe Evans,,,,55.201668,,,,44.798332,,,,0
+Connecticut 1,0901,99.96667,0.03333,Luke Bronin,,,,Amy Chai,,,,99.966669,,,,0.033333,,,,-3
+Connecticut 2,0902,99.43,0.57,Joe Courtney,,,,George Austin,,,,99.430001,,,,0.57,,,,-3
+Connecticut 3,0903,99.79333,0.20667,Rosa L. DeLauro,,,,Christopher Lancia,,,,99.793333,,,,0.206667,,,,-3
+Connecticut 4,0904,99.98834,0.01167,Jim Himes,,,,Michael Goldstein,,,,99.988335,,,,0.011667,,,,-3
+Connecticut 5,0905,93.73,6.27,Jahana Hayes,,,,Chris Shea,,,,93.730003,,,,6.27,,,,-2
+Delaware 1,1000,99.885,0.115,Sarah McBride,,,,Joseph Arminio,,,,99.884999,,,,0.115,,,,-3
+Florida 1,1201,0.05333,99.94667,Gay Valimont,,,,Jimmy Patronis,,,,0.053333,,,,99.946666,,,,3
+Florida 2,1202,19.105,80.895,Amanda Green,,,,Austin Rogers,,,,19.104999,,,,80.895001,,,,2
+Florida 3,1203,2.88167,97.11834,Seth Harp,,,,Kat Cammack,,,,2.881667,,,,97.118336,,,,3
+Florida 4,1204,14.66333,85.33667,LaShonda L.J. Holloway,,,,Aaron Bean,,,,14.663333,,,,85.336667,,,,2
+Florida 5,1205,2.36833,97.63167,Rachel Grage,,,,John Rutherford,,,,2.368333,,,,97.631669,,,,3
+Florida 6,1206,0.28667,99.71333,Eric Yonce,,,,Randy Fine,,,,0.286667,,,,99.713331,,,,3
+Florida 7,1207,22.13833,77.86167,Bale Dalton,,,,Ryan Elijah,,,,22.138333,,,,77.861667,,,,2
+Florida 8,1208,8.95,91.05,Jennifer Jenkins,,,,Mike Haridopolos,,,,8.95,,,,91.049999,,,,2
+Florida 9,1209,40.11167,59.88833,Darren Soto,,,,Dan Green,,,,40.111667,,,,59.888333,,,,0
+Florida 10,1210,100,0,Maxwell Alejandro Frost,,,,,,,,100,,,,,,,,-3
+Florida 11,1211,26.16667,73.83333,James Pericola,,,,Joe Strada,,,,26.166666,,,,73.833334,,,,1
+Florida 12,1212,10.04,89.96,Kimberly Overman,,,,Gus M. Bilirakis,,,,10.04,,,,89.960003,,,,2
+Florida 13,1213,36.55833,63.44166,Leela Gray,,,,Anna Paulina Luna,,,,36.558333,,,,63.441664,,,,1
+Florida 14,1214,80.34334,19.65667,Kathy Castor,,,,Mike Beltran,,,,80.343336,,,,19.656667,,,,-2
+Florida 15,1215,3.865,96.135,Robert People,,,,Laurel Lee,,,,3.865,,,,96.135002,,,,3
+Florida 16,1216,23.05167,76.94833,Kelly Kirschner,,,,Sydney Gruters,,,,23.051667,,,,76.948333,,,,2
+Florida 17,1217,2.64333,97.35667,Matthew Montavon,,,,Greg Steube,,,,2.643333,,,,97.356665,,,,3
+Florida 18,1218,6.23167,93.76833,Curtis Gibson,,,,Scott Franklin,,,,6.231667,,,,93.768334,,,,2
+Florida 19,1219,1.31333,98.68667,Victor Arias,,,,Jim Schwartzel,,,,1.313333,,,,98.686665,,,,3
+Florida 20,1220,100,0,Debbie Wasserman Schultz,,,,Brent Andersen,,,,100,,,,0,,,,-3
+Florida 21,1221,5.74167,94.25833,James Martin,,,,Brian Mast,,,,5.741667,,,,94.258332,,,,2
+Florida 22,1222,47.47833,52.52166,Pia Dandiya,,,,Casey Askar,,,,47.478333,,,,52.521664,,,,0
+Florida 23,1223,99.90333,0.09667,Lois Frankel,,,,Deborah Adeimy,,,,99.903333,,,,0.096667,,,,-3
+Florida 24,1224,100,0,Oliver Gilbert,,,,Te Brown,,,,100,,,,0,,,,-3
+Florida 25,1225,54.77667,45.22333,Jared Evan Moskowitz,,,,Scott Singer,,,,54.776669,,,,45.223334,,,,0
+Florida 26,1226,8.50167,91.49833,Nicole Locklin,,,,Mario Diaz-Balart,,,,8.501667,,,,91.496664,,,,2
+Florida 27,1227,23.375,76.625,Eliott Rodriguez,,,,Maria Elvira Salazar,,,,23.375,,,,76.625001,,,,2
+Florida 28,1228,2.66667,97.33334,Phil Ehr,,,,Carlos Giménez,,,,2.666667,,,,97.333336,,,,3
+Georgia 1,1301,14.855,85.145,Amanda Hollowell,,,,James Kingston,,,,14.855,,,,85.145003,,,,2
+Georgia 2,1302,99.445,0.555,Sanford Bishop,,,,Matt Day,,,,99.444997,,,,0.555,,,,-3
+Georgia 3,1303,3.17833,96.82167,Maura Keller,,,,Brian Jack,,,,3.178333,,,,96.821666,,,,3
+Georgia 4,1304,100,0,Hank Johnson,,,,James Duffie,,,,100,,,,0,,,,-3
+Georgia 5,1305,100,0,Nikema Williams,,,,John Salvesen,,,,100,,,,0,,,,-3
+Georgia 6,1306,100,0,Lucy McBath,,,,Kevin Martin,,,,100,,,,0,,,,-3
+Georgia 7,1307,15.03833,84.96166,Tony Kozycki,,,,Rich McCormick,,,,15.038334,,,,84.961665,,,,2
+Georgia 8,1308,0.12333,99.87667,Kelly Esti,,,,Austin Scott,,,,0.123333,,,,99.876666,,,,3
+Georgia 9,1309,0.06,99.94,Caitlyn Gegen,,,,Andrew Clyde,,,,0.06,,,,99.940002,,,,3
+Georgia 10,1310,5.83667,94.16333,Pamela DeLancy,,,,Houston Gaines,,,,5.836667,,,,94.163334,,,,2
+Georgia 11,1311,12.84167,87.15833,Chris Harden,,,,John Cowan,,,,12.841667,,,,87.158334,,,,2
+Georgia 12,1312,8.67333,91.32667,Ceretta Smith,,,,Rick Allen,,,,8.673333,,,,91.326666,,,,2
+Georgia 13,1313,99.99667,0.00333,Jasmine Clark,,,,Jonathan Chavez,,,,99.996668,,,,0.003333,,,,-3
+Georgia 14,1314,0.00833,99.99167,Shawn Harris,,,,Clayton Fuller,,,,0.008333,,,,99.991667,,,,3
+Hawaii 1,1501,99.995,0.005,Ed Case,,,,Adriel Lam,,,,99.994999,,,,0.005,,,,-3
+Hawaii 2,1502,99.98667,0.01333,Jill Tokuda,,,,Brenton Awa,,,,99.986666,,,,0.013333,,,,-3
+Idaho 1,1601,0.105,99.895,Kaylee Peterson,,,,Russ Fulcher,,,,0.105,,,,99.895,,,,3
+Idaho 2,1602,1.375,98.625,Elinor Gilbreath,,,,Michael K. Simpson,,,,1.375,,,,98.624998,,,,3
+Illinois 1,1701,99.99833,0.00167,Jonathan Jackson,,,,Christian Maxwell,,,,99.998331,,,,0.001667,,,,-3
+Illinois 2,1702,99.99167,0.00833,Donna Miller,,,,Mike Noack,,,,99.991667,,,,0.008333,,,,-3
+Illinois 3,1703,99.99667,0.00333,Delia Ramirez,,,,Angel Oakley,,,,99.996668,,,,0.003333,,,,-3
+Illinois 4,1704,99.525,0.475,Patty Garcia,,,,Lupe Castillo,,,,99.524999,,,,0.475,,,,-3
+Illinois 5,1705,99.99833,0.00167,Mike Quigley,,,,Tom Hanson,,,,99.998331,,,,0.001667,,,,-3
+Illinois 6,1706,99.4,0.6,Sean Casten,,,,Niki Conforti,,,,99.400002,,,,0.6,,,,-3
+Illinois 7,1707,100,0,La Shawn Ford,,,,Chad Koppie,,,,100,,,,0,,,,-3
+Illinois 8,1708,95.81,4.19,Melissa Bean,,,,Jennifer Davis,,,,95.810002,,,,4.19,,,,-3
+Illinois 9,1709,99.99334,0.00667,Daniel K. Biss,,,,John Elleson,,,,99.993336,,,,0.006667,,,,-3
+Illinois 10,1710,99.97833,0.02167,Brad Schneider,,,,Carl Lambrecht,,,,99.978334,,,,0.021667,,,,-3
+Illinois 11,1711,99.78167,0.21833,Bill Foster,,,,Jeffrey Walter,,,,99.781668,,,,0.218333,,,,-3
+Illinois 12,1712,0.01333,99.98667,Julie Fortier,,,,Mike Bost,,,,0.013333,,,,99.986666,,,,3
+Illinois 13,1713,99.76333,0.23667,Nikki Budzinski,,,,Jeff Wilson,,,,99.763334,,,,0.236667,,,,-3
+Illinois 14,1714,99.435,0.565,Lauren Underwood,,,,James Marter,,,,99.435002,,,,0.565,,,,-3
+Illinois 15,1715,0.01833,99.98167,Jennifer Todd,,,,Mary Miller,,,,0.018333,,,,99.981666,,,,3
+Illinois 16,1716,1.79667,98.20333,Paul Nolley,,,,Darin LaHood,,,,1.796667,,,,98.203331,,,,3
+Illinois 17,1717,99.25166,0.74833,Eric Sorensen,,,,Dillan Vancil,,,,99.251664,,,,0.748333,,,,-3
+Indiana 1,1801,98.23667,1.76333,Frank Mrvan,,,,Barb Regnitz,,,,98.236668,,,,1.763333,,,,-3
+Indiana 2,1802,0.80667,99.19333,Jamee Decio,,,,Rudy Yakym,,,,0.806667,,,,99.193335,,,,3
+Indiana 3,1803,0.145,99.855,Kelly Thompson,,,,Marlin A. Stutzman,,,,0.145,,,,99.855,,,,3
+Indiana 4,1804,0.285,99.715,Drew Cox,,,,Jim Baird,,,,0.285,,,,99.715,,,,3
+Indiana 5,1805,31.28,68.72,J.D. Ford,,,,Victoria Spartz,,,,31.279999,,,,68.720001,,,,1
+Indiana 6,1806,0.11167,99.88833,Cynthia Wirth,,,,Jefferson Shreve,,,,0.111667,,,,99.888331,,,,3
+Indiana 7,1807,99.99833,0.00167,André Carson,,,,Patrick McAuley,,,,99.998331,,,,0.001667,,,,-3
+Indiana 8,1808,0.07667,99.92333,Mary Allen,,,,Mark Messmer,,,,0.076667,,,,99.923331,,,,3
+Indiana 9,1809,0.27333,99.72667,Brad Meyer,,,,Erin Houchin,,,,0.273333,,,,99.726665,,,,3
+Iowa 1,1901,52.71333,47.28667,Christina Bohannan,,,,Mariannette Miller-Meeks,,,,52.713335,,,,47.284999,,,,0
+Iowa 2,1902,58.635,41.365,Lindsay James,,,,Joe Mitchell,,,,58.635002,,,,41.365001,,,,0
+Iowa 3,1903,46.19667,53.80333,Sarah Trone Garriott,,,,Zach Nunn,,,,46.196666,,,,53.803331,,,,0
+Iowa 4,1904,1.95833,98.04167,Dave Dawson,,,,Chris McGowan,,,,1.958333,,,,98.041666,,,,3
+Kansas 1,2001,0.31333,99.68666,Lauren Reinhold,,,,Tracey Mann,,,,0.313333,,,,99.686664,,,,3
+Kansas 2,2002,13.02667,86.97333,Don Coover,,,,Derek Schmidt,,,,13.026667,,,,86.973333,,,,2
+Kansas 3,2003,99.24667,0.75333,Sharice Davids,,,,Eric Jenkins,,,,99.246669,,,,0.753333,,,,-3
+Kansas 4,2004,2.165,97.835,Katy Tyndell,,,,Ron Estes,,,,2.163333,,,,97.834998,,,,3
+Kentucky 1,2101,0.01,99.99,Drew Williams,,,,James Comer,,,,0.01,,,,99.989998,,,,3
+Kentucky 2,2102,0.01333,99.98667,Megan Wingfield,,,,Brett Guthrie,,,,0.013333,,,,99.986666,,,,3
+Kentucky 3,2103,99.98333,0.01667,Morgan McGarvey,,,,Maria Teresa Rodriguez,,,,99.983335,,,,0.016667,,,,-3
+Kentucky 4,2104,0.39167,99.60833,Melissa Strange,,,,Ed Gallrein,,,,0.391667,,,,99.608332,,,,3
+Kentucky 5,2105,0,100,Ned Pillersdorf,,,,Hal Rogers,,,,0,,,,100,,,,3
+Kentucky 6,2106,67.28666,32.71333,Zach Dembo,,,,Ralph Alvarado,,,,67.286664,,,,32.713333,,,,-1
+Louisiana 1,2201,0.02333,99.97666,Lauren Jewett,,,,Steve Scalise,Randall Arrington,,,0.023333,,,,99.976665,0,,,3
+Louisiana 2,2202,100,0,Troy Carter,Renada Collins,,,Peter Williams,,,,100,0,,,0,,,,-3
+Louisiana 3,2203,0.02167,99.97833,John Day,Caleb Walker,Priscilla Gonzalez,,Clay Higgins,Kate Cotten,,,0.021667,0,0,,99.978334,0,,,3
+Louisiana 4,2204,0.09833,99.90166,Matthew Gromlich,Conrad Cable,,,Mike Johnson,Gordon Heslop,Mike Nichols,,0,0.098333,,,99.901664,0,0,,3
+Louisiana 5,2205,4.62333,95.37666,Patricia Moore,Dan McKay,Antonio Wilson,,Michael Echols,Misti Cordell,Stewart Cathey,Gabe Firment,2.26,2.291667,0.071667,,57.598335,2.896667,5.903333,28.973332,3
+Louisiana 6,2206,2.60167,97.39833,Chauna Banks,Lindsay Garcia,Patrick Forbes,,Blake Miguez,Rick Edmonds,Larry Davis,Monique Appeaning,0.81,0.535,1.248333,,94.646668,2.745,0,0.001667,3
+Maine 1,2301,99.99,0.01,Chellie Pingree,,,,Ronald Russell,,,,99.989998,,,,0.01,,,,-3
+Maine 2,2302,31.66333,68.33667,Matthew Dunlap,,,,Paul LePage,,,,31.663334,,,,68.336666,,,,1
+Maryland 1,2401,4.94833,95.05166,Dan Schwartz,,,,Andrew Harris,,,,4.948333,,,,95.051664,,,,3
+Maryland 2,2402,99.925,0.075,John Olszewski,,,,Dave Wallace,,,,99.924999,,,,0.075,,,,-3
+Maryland 3,2403,99.97166,0.02833,Sarah Elfreth,,,,Bernard Flowers,,,,99.971664,,,,0.028333,,,,-3
+Maryland 4,2404,100,0,Glenn Ivey,,,,George McDermott,,,,100,,,,0,,,,-3
+Maryland 5,2405,99.975,0.025,Adrian Boafo,,,,Chris Chaffee,,,,99.975002,,,,0.025,,,,-3
+Maryland 6,2406,99.21167,0.78833,April McClain Delaney,,,,Robin Ficker,,,,99.211669,,,,0.788333,,,,-3
+Maryland 7,2407,100,0,Kweisi Mfume,,,,Scott Collier,,,,100,,,,0,,,,-3
+Maryland 8,2408,100,0,Jamie Raskin,,,,Cheryl Riley,,,,100,,,,0,,,,-3
+Massachusetts 1,2501,100,0,Richard Neal,,,,,,,,100,,,,,,,,-3
+Massachusetts 2,2502,100,0,Jim McGovern,,,,,,,,100,,,,,,,,-3
+Massachusetts 3,2503,99.98667,0.01333,Lori Trahan,,,,Gary Grossi,,,,99.986666,,,,0.013333,,,,-3
+Massachusetts 4,2504,99.98834,0.01167,Jake Auchincloss,,,,Thomas Stalcup,,,,99.988335,,,,0.011667,,,,-3
+Massachusetts 5,2505,99.99833,0.00167,Katherine Clark,,,,,,,,99.996668,,,,,,,,-3
+Massachusetts 6,2506,99.89166,0.10833,Dan Koh,,,,Micah Jones,,,,99.891663,,,,0.108333,,,,-3
+Massachusetts 7,2507,100,0,Ayanna Pressley,,,,,,,,100,,,,,,,,-3
+Massachusetts 8,2508,99.99667,0.00333,Stephen Lynch,,,,Robert G. Burke,,,,99.996668,,,,0.003333,,,,-3
+Massachusetts 9,2509,99.92333,0.07667,Bill Keating,,,,Robert MacAllister,,,,99.923331,,,,0.076667,,,,-3
+Michigan 1,2601,2.25833,97.74167,Callie Barr,,,,Jack Bergman,,,,2.258333,,,,97.741669,,,,3
+Michigan 2,2602,0.29833,99.70167,Ben Ambrose,,,,John Moolenaar,,,,0.298333,,,,99.701667,,,,3
+Michigan 3,2603,99.61333,0.38667,Hillary Scholten,,,,Terri DeBoer,,,,99.613333,,,,0.386667,,,,-3
+Michigan 4,2604,42.07,57.93,Sean McCann,,,,Bill Huizenga,,,,42.070001,,,,57.928336,,,,0
+Michigan 5,2605,0.72667,99.27334,Christian Vukasovich,,,,Tim Walberg,,,,0.726667,,,,99.273336,,,,3
+Michigan 6,2606,99.99167,0.00833,Debbie Dingell,,,,Heather Smiley,,,,99.991667,,,,0.008333,,,,-3
+Michigan 7,2607,73.36833,26.63167,William Lawrence,,,,Tom Barrett,,,,73.368335,,,,26.631665,,,,-1
+Michigan 8,2608,96.83167,3.16833,Kristen McDonald Rivet,,,,Thomas J. Smith,,,,96.831667,,,,3.168333,,,,-3
+Michigan 9,2609,0.135,99.865,Ray Pooley,,,,Lisa McClain,,,,0.135,,,,99.864995,,,,3
+Michigan 10,2610,44.51833,55.48167,Christina Hines,,,,Mike Bouchard,,,,44.518334,,,,55.481666,,,,0
+Michigan 11,2611,99.39666,0.60333,Jeremy Moss,,,,Ethan Baker,,,,99.396664,,,,0.603333,,,,-3
+Michigan 12,2612,100,0,Rashida Tlaib,,,,James Hooper,,,,100,,,,0,,,,-3
+Michigan 13,2613,99.99833,0.00167,Donavan McKinney,,,,Taras Nykoriak,,,,99.998331,,,,0.001667,,,,-3
+Minnesota 1,2701,48.17833,51.82167,Jake Johnson,,,,Brad Finstad,,,,48.178333,,,,51.821667,,,,0
+Minnesota 2,2702,89.21167,10.78833,Matt Little,,,,Eric Pratt,,,,89.211667,,,,10.788333,,,,-2
+Minnesota 3,2703,99.97833,0.02167,Kelly Morrison,,,,Tyler Bass,,,,99.978334,,,,0.021667,,,,-3
+Minnesota 4,2704,99.99833,0.00167,Betty McCollum,,,,Paul Wikstrom,,,,99.998331,,,,0.001667,,,,-3
+Minnesota 5,2705,100,0,Ilhan Omar,,,,John Nagel,,,,100,,,,0,,,,-3
+Minnesota 6,2706,3.52667,96.47333,Doug Chapin,,,,Tom Emmer,,,,3.526667,,,,96.47333,,,,3
+Minnesota 7,2707,0.09667,99.90333,Erik Osberg,,,,Michelle Fischbach,,,,0.096667,,,,99.903333,,,,3
+Minnesota 8,2708,9.815,90.185,Trina Swanson,,,,Pete Stauber,,,,9.815,,,,90.184999,,,,2
+Mississippi 1,2801,0.02,99.98,Cliff Johnson,,,,Trent Kelly,,,,0.02,,,,99.978334,,,,3
+Mississippi 2,2802,99.98167,0.01833,Bennie G. Thompson,,,,Ron Eller,,,,99.979997,,,,0.018333,,,,-3
+Mississippi 3,2803,0.19167,99.80834,Michael Chiaradio,,,,Michael Guest,,,,0.191667,,,,99.808335,,,,3
+Mississippi 4,2804,0.005,99.995,Jeffrey Hulum,,,,Mike Ezell,,,,0.005,,,,99.994999,,,,3
+Missouri 1,2901,99.99334,0.00667,Wesley Bell,,,,Paul Berry,,,,99.993336,,,,0.005,,,,-3
+Missouri 2,2902,50.37333,49.62667,Frederick Wellman,,,,Ann Wagner,,,,50.371665,,,,49.626666,,,,0
+Missouri 3,2903,6.75833,93.24167,Bethany Mann,,,,Bob Onder,,,,6.758333,,,,93.241668,,,,2
+Missouri 4,2904,1.125,98.875,Jordan Herrera,,,,Mark Alford,,,,1.125,,,,98.874998,,,,3
+Missouri 5,2905,99.85,0.15,Emanuel Cleaver,,,,Rick Brattin,,,,99.849999,,,,0.15,,,,-3
+Missouri 6,2906,6.675,93.325,Josh Smead,,,,Chris Stigall,,,,6.675,,,,93.325001,,,,2
+Missouri 7,2907,0.00667,99.99334,Missi Hesketh,,,,Eric Burlison,,,,0.006667,,,,99.991667,,,,3
+Missouri 8,2908,0,100,Christopher Reichard,,,,Jason Smith,,,,0,,,,100,,,,3
+Montana 1,3001,65.895,34.105,Samuel Forstag,,,,Aaron Flint,,,,65.893334,,,,34.105,,,,-1
+Montana 2,3002,1.89167,98.10833,Brian Miller,,,,Troy Downing,,,,1.885,,,,98.103333,,,,3
+Nebraska 1,3101,29.40333,70.59667,Christopher Backemeyer,,,,Mike Flood,,,,29.403335,,,,70.596665,,,,1
+Nebraska 2,3102,91.55333,8.44667,Denise Powell,,,,Brinker Harding,,,,91.55333,,,,8.446667,,,,-2
+Nebraska 3,3103,0.00333,99.99667,Becky Lynn Stille,,,,Adrian Smith,,,,0.003333,,,,99.996668,,,,3
+Nevada 1,3201,98.62334,1.37667,Dina Titus,,,,Carrie Buck,,,,98.623335,,,,1.376667,,,,-3
+Nevada 2,3202,25.38833,74.61166,Teresa Benitez-Thompson,,,,David Flippo,,,,25.388333,,,,74.611664,,,,1
+Nevada 3,3203,97.76,2.24,Susie Lee,,,,Marty O'Donnell,,,,97.759998,,,,2.24,,,,-3
+Nevada 4,3204,98.57,1.43,Steven Horsford,,,,Cody Whipple,,,,98.570001,,,,1.43,,,,-3
+New Hampshire 1,3301,89.945,10.055,Stefany Shaheen,,,,Anthony DiLorenzo,,,,89.945,,,,10.055,,,,-2
+New Hampshire 2,3302,98.93333,1.06667,Maggie Goodlander,,,,Lily Williams,,,,98.933333,,,,1.066667,,,,-3
+New Jersey 1,3401,99.97,0.03,Donald Norcross,,,,Damon Galdo,,,,99.970001,,,,0.03,,,,-3
+New Jersey 2,3402,6.36833,93.63167,Zack Mullock,,,,Jeff Van Drew,,,,6.368333,,,,93.631667,,,,2
+New Jersey 3,3403,99.63334,0.36667,Herbert C. Conaway,,,,Michael McGuire,,,,99.633336,,,,0.366667,,,,-3
+New Jersey 4,3404,0.34667,99.65333,Rachel Peace,,,,Chris Smith,,,,0.346667,,,,99.653333,,,,3
+New Jersey 5,3405,98.33167,1.66833,Josh Gottheimer,,,,Sean Kirrane,,,,98.331666,,,,1.668333,,,,-3
+New Jersey 6,3406,99.57666,0.42333,Frank Pallone,,,,Hillary Herzig,,,,99.576664,,,,0.423333,,,,-3
+New Jersey 7,3407,60.46,39.54,Rebecca Bennett,,,,Thomas Kean,,,,60.460001,,,,39.539999,,,,-1
+New Jersey 8,3408,100,0,Robert Menendez,,,,,,,,100,,,,,,,,-3
+New Jersey 9,3409,98.61166,1.38833,Nellie Pou,,,,Rosemary Pino,,,,98.611665,,,,1.388333,,,,-3
+New Jersey 10,3410,100,0,LaMonica McIver,,,,Carmen Bucco,,,,100,,,,0,,,,-3
+New Jersey 11,3411,99.72,0.28,Analilia Mejia,,,,Joe Hathaway,,,,99.720001,,,,0.28,,,,-3
+New Jersey 12,3412,99.92667,0.07333,Adam Hamawy,,,,Gregg Mele,,,,99.926668,,,,0.073333,,,,-3
+New Mexico 1,3501,99.435,0.565,Melanie Ann Stansbury,,,,Ndidiamaka Okpareke,,,,99.435002,,,,0.565,,,,-3
+New Mexico 2,3502,73.68833,26.31167,Gabriel Vasquez,,,,Greg Cunningham,,,,73.688334,,,,26.311666,,,,-1
+New Mexico 3,3503,97.87334,2.12667,Teresa Leger Fernandez,,,,Martin Ruben Zamora,,,,97.873336,,,,2.126667,,,,-3
+New York 1,3601,25.13833,74.86166,Christopher Gallant,,,,Nicholas J. LaLota,,,,25.138333,,,,74.861664,,,,1
+New York 2,3602,14.05833,85.94167,Patrick Halpin,,,,Andrew Garbarino,,,,14.058334,,,,85.941666,,,,2
+New York 3,3603,95.45166,4.54833,Tom Suozzi,,,,Michael LiPetri,,,,95.451665,,,,4.548333,,,,-3
+New York 4,3604,98.56,1.44,Laura Gillen,,,,Jeanine Driscoll,,,,98.559999,,,,1.44,,,,-3
+New York 5,3605,100,0,Gregory W. Meeks,,,,George Marsh,,,,100,,,,0,,,,-3
+New York 6,3606,99.64833,0.35167,Grace Meng,,,,Joseph Chou,,,,99.648333,,,,0.351667,,,,-3
+New York 7,3607,100,0,Claire Valdez,,,,Melvin Rivera,,,,100,,,,0,,,,-3
+New York 8,3608,100,0,Hakeem Jeffries,,,,Lewis Mizrahi,,,,100,,,,0,,,,-3
+New York 9,3609,100,0,Yvette D. Clarke,,,,Joel Anabilah-Azumah,,,,100,,,,0,,,,-3
+New York 10,3610,100,0,Brad Lander,,,,Jennifer Moore,,,,100,,,,0,,,,-3
+New York 11,3611,2.75833,97.24166,Michael DeCillis,,,,Nicole Malliotakis,,,,2.758333,,,,97.241664,,,,3
+New York 12,3612,100,0,Micah Lasher,,,,Caroline Shinkle,,,,100,,,,0,,,,-3
+New York 13,3613,100,0,Darializa Avila Chevalier,,,,Manual Williams,,,,100,,,,0,,,,-3
+New York 14,3614,100,0,Alexandria Ocasio-Cortez,,,,Diamant Hysenaj,,,,100,,,,0,,,,-3
+New York 15,3615,100,0,Ritchie Torres,,,,Stylo A. Sapaskis,,,,100,,,,0,,,,-3
+New York 16,3616,99.99833,0.00167,George Latimer,,,,Joseph Cinquemani,,,,99.998331,,,,0.001667,,,,-3
+New York 17,3617,57.235,42.765,Cait Conley,,,,Mike Lawler,,,,57.235003,,,,42.765,,,,0
+New York 18,3618,96.34666,3.65333,Pat Ryan,,,,Jacqueline Auringer,,,,96.346664,,,,3.653333,,,,-3
+New York 19,3619,98.35333,1.64667,Josh Riley,,,,Peter Oberacker,,,,98.353332,,,,1.646667,,,,-3
+New York 20,3620,99.905,0.095,Paul Tonko,,,,Ralph Ambrosio,,,,99.904996,,,,0.095,,,,-3
+New York 21,3621,37.48167,62.51833,Blake Gendebien,,,,Anthony Constantino,,,,37.481666,,,,62.518334,,,,1
+New York 22,3622,99.49334,0.50667,John Mannion,,,,Kailee Buller,,,,99.493337,,,,0.506667,,,,-3
+New York 23,3623,1.52667,98.47333,Aaron Gies,,,,Nick Langworthy,,,,1.526667,,,,98.473334,,,,3
+New York 24,3624,1.735,98.265,Alissa Ellman,,,,Claudia Tenney,,,,1.735,,,,98.264998,,,,3
+New York 25,3625,99.965,0.035,Joseph Morelle,,,,Virginia McIntyre,,,,99.965,,,,0.035,,,,-3
+New York 26,3626,99.96333,0.03667,Timothy M. Kennedy,,,,Dennis Hannon,,,,99.963331,,,,0.036667,,,,-3
+North Carolina 1,3701,84.47833,15.52167,Don Davis,,,,Laurie Buckhout,,,,84.478331,,,,15.521666,,,,-2
+North Carolina 2,3702,99.99833,0.00167,Deborah Ross,,,,Eugene Douglass,,,,99.998331,,,,0.001667,,,,-3
+North Carolina 3,3703,19.12833,80.87167,Raymond Smith,,,,Greg Murphy,,,,19.128333,,,,80.871665,,,,2
+North Carolina 4,3704,100,0,Valerie Foushee,,,,Mahesh Ganorkar,,,,100,,,,0,,,,-3
+North Carolina 5,3705,6.40167,93.59834,Chuck Hubbard,,,,Virginia Foxx,,,,6.401666,,,,93.598336,,,,2
+North Carolina 6,3706,6.565,93.435,Cyril Jefferson,,,,Addison McDowell,,,,6.565,,,,93.435001,,,,2
+North Carolina 7,3707,14.26333,85.73667,Kimberly Hardy,,,,David Rouzer,,,,14.263333,,,,85.736668,,,,2
+North Carolina 8,3708,4.46833,95.53167,Colby Watson,,,,Mark Harris,,,,4.468333,,,,95.531666,,,,3
+North Carolina 9,3709,12.38333,87.61666,Richard Ojeda,,,,Richard Hudson,,,,12.383334,,,,87.616664,,,,2
+North Carolina 10,3710,9.21167,90.78833,Ashley Bell,,,,Pat Harrigan,,,,9.211667,,,,90.788335,,,,2
+North Carolina 11,3711,85.13333,14.86667,Jamie Ager,,,,Jennifer Balkcom,,,,85.131669,,,,14.866666,,,,-2
+North Carolina 12,3712,100,0,Alma Adams,,,,Jack Codiga,,,,100,,,,0,,,,-3
+North Carolina 13,3713,6.64167,93.35833,Paul Barringer,,,,Brad Knott,,,,6.641667,,,,93.358332,,,,2
+North Carolina 14,3714,20.80167,79.19833,Lakesha Womack,,,,Tim Moore,,,,20.801666,,,,79.198331,,,,2
+North Dakota 1,3800,0.07,99.93,Trygve Hammer,,,,Julie Fedorchak,,,,0.07,,,,99.93,,,,3
+Ohio 1,3901,77.175,22.825,Greg Landsman,,,,Eric Conroy,,,,77.174997,,,,22.825,,,,-2
+Ohio 2,3902,0.02,99.98,Jen Mazzuckelli,,,,David Taylor,,,,0.02,,,,99.979997,,,,3
+Ohio 3,3903,100,0,Joyce Beatty,,,,Cleophus Dulaney,,,,100,,,,0,,,,-3
+Ohio 4,3904,0.01167,99.98834,Joshua Kolasinski,,,,Jim Jordan,,,,0.011667,,,,99.988335,,,,3
+Ohio 5,3905,1.66667,98.33333,Brian Shaver,,,,Bob Latta,,,,1.666667,,,,98.333335,,,,3
+Ohio 6,3906,0.12167,99.87833,Elizabeth Kirtley,,,,Michael Rulli,,,,0.121667,,,,99.878335,,,,3
+Ohio 7,3907,70.10167,29.89833,Brian Poindexter,,,,Max Miller,,,,70.101666,,,,29.898334,,,,-1
+Ohio 8,3908,7.48,92.52,Vanessa Enoch,,,,Warren Davidson,,,,7.48,,,,92.519999,,,,2
+Ohio 9,3909,51.9,48.1,Marcy Kaptur,,,,Derek Merrin,,,,51.899999,,,,48.100001,,,,0
+Ohio 10,3910,27.575,72.425,Kristina Knickerbocker,,,,Mike Turner,,,,27.575001,,,,72.425002,,,,1
+Ohio 11,3911,100,0,Shontel Brown,,,,Mike Kirchner,,,,100,,,,0,,,,-3
+Ohio 12,3912,0.355,99.645,Jerrad Christian,,,,Troy Balderson,,,,0.355,,,,99.645001,,,,3
+Ohio 13,3913,98.93667,1.06333,Emilia Sykes,,,,Carey Coleman,,,,98.935002,,,,1.063333,,,,-3
+Ohio 14,3914,3.32833,96.67166,Maria Jukic,,,,David Joyce,,,,3.328333,,,,96.671665,,,,3
+Ohio 15,3915,35.65,64.35,Don Leonard,,,,Mike Carey,,,,35.65,,,,64.349997,,,,1
+Oklahoma 1,4001,5.01167,94.98833,John Croisant,,,,Mark Tedford,,,,5.011667,,,,94.988334,,,,2
+Oklahoma 2,4002,0,100,Brandon Wade,,,,Josh Brecheen,,,,0,,,,100,,,,3
+Oklahoma 3,4003,0.00667,99.99334,Suzie Byrd,,,,Frank Lucas,,,,0.006667,,,,99.993336,,,,3
+Oklahoma 4,4004,0.11333,99.88667,Mitchell Jacob,,,,Tom Cole,,,,0.113333,,,,99.886668,,,,3
+Oklahoma 5,4005,8.03833,91.96166,Jena Nelson,,,,Stephanie Bice,,,,8.038333,,,,91.961664,,,,2
+Oregon 1,4101,100,0,Suzanne Bonamici,,,,Barbara Kahl,,,,100,,,,0,,,,-3
+Oregon 2,4102,0.77667,99.22333,Chris Beck,,,,Cliff Bentz,,,,0.776667,,,,99.223334,,,,3
+Oregon 3,4103,100,0,Maxine Dexter,,,,Loran Ayles,,,,100,,,,0,,,,-3
+Oregon 4,4104,99.86,0.14,Val Hoyle,,,,Monique DeSpain,,,,99.860001,,,,0.14,,,,-3
+Oregon 5,4105,99.58333,0.41667,Janelle Bynum,,,,Patti Adair,,,,99.583334,,,,0.416667,,,,-3
+Oregon 6,4106,99.79166,0.20833,Andrea Salinas,,,,David Russ,,,,99.791664,,,,0.208333,,,,-3
+Pennsylvania 1,4201,49.62833,50.37166,Bob Harvie,,,,Brian Fitzpatrick,,,,49.628332,,,,50.371665,,,,0
+Pennsylvania 2,4202,99.99833,0.00167,Brendan Boyle,,,,Jessica Arriaga,,,,99.998331,,,,0.001667,,,,-3
+Pennsylvania 3,4203,100,0,Christopher Rabb,,,,,,,,100,,,,,,,,-3
+Pennsylvania 4,4204,99.925,0.075,Madeleine Dean,,,,Aurora Stuski,,,,99.924999,,,,0.075,,,,-3
+Pennsylvania 5,4205,99.995,0.005,Mary Gay Scanlon,,,,Nick Manganaro,,,,99.994999,,,,0.005,,,,-3
+Pennsylvania 6,4206,99.77833,0.22167,Chrissy Houlahan,,,,Marty Young,,,,99.77833,,,,0.221667,,,,-3
+Pennsylvania 7,4207,80.66167,19.33833,Bob Brooks,,,,Ryan Mackenzie,,,,80.661666,,,,19.338334,,,,-2
+Pennsylvania 8,4208,73.375,26.625,Paige Cognetti,,,,Rob Bresnahan,,,,73.374999,,,,26.625001,,,,-1
+Pennsylvania 9,4209,0.03167,99.96833,Rachel Wallace,,,,Dan Meuser,,,,0.031667,,,,99.968332,,,,3
+Pennsylvania 10,4210,57.75833,42.24167,Janelle Stelson,,,,Scott Perry,,,,57.758331,,,,42.241666,,,,0
+Pennsylvania 11,4211,1.515,98.485,Nancy Mannion,,,,Lloyd Smucker,,,,1.515,,,,98.484999,,,,3
+Pennsylvania 12,4212,99.97333,0.02667,Summer Lee,,,,James Hayes,,,,99.973333,,,,0.026667,,,,-3
+Pennsylvania 13,4213,0.00667,99.99334,Beth Farnham,,,,John Joyce,,,,0.006667,,,,99.993336,,,,3
+Pennsylvania 14,4214,0.15833,99.84167,Alan Bradstock,,,,Guy Reschenthaler,,,,0.158333,,,,99.841666,,,,3
+Pennsylvania 15,4215,0.03333,99.96667,Ray Bilger,,,,Glenn Thompson,,,,0.033333,,,,99.966669,,,,3
+Pennsylvania 16,4216,1.74333,98.25667,Justin Wagner,,,,Mike Kelly,,,,1.743333,,,,98.256665,,,,3
+Pennsylvania 17,4217,99.28833,0.71167,Chris Deluzio,,,,Tony Guy,,,,99.288332,,,,0.711667,,,,-3
+Rhode Island 1,4401,99.96167,0.03833,Gabe Amo,,,,Kellie Keenan,,,,99.961668,,,,0.038333,,,,-3
+Rhode Island 2,4402,98.635,1.365,Seth Magaziner,,,,Victor Mellor,,,,98.635,,,,1.365,,,,-3
+South Carolina 1,4501,38.64333,61.35667,Nancy Lacore,,,,Jenny Costa Honeycutt,,,,38.643333,,,,61.35667,,,,1
+South Carolina 2,4502,6.03667,93.96333,Zyon Khalifa,,,,Joe Wilson,,,,6.036667,,,,93.963331,,,,2
+South Carolina 3,4503,0.00333,99.99667,Eunice Lehmacher,,,,Sheri Biggs,,,,0.003333,,,,99.996668,,,,3
+South Carolina 4,4504,0.65667,99.34334,Courtney McClain,,,,William Timmons,,,,0.656667,,,,99.343336,,,,3
+South Carolina 5,4505,3.13833,96.86167,Mallory Dittmer,,,,Wes Climer,,,,3.138333,,,,96.861666,,,,3
+South Carolina 6,4506,99.97666,0.02333,James Clyburn,,,,John Peterson,,,,99.976665,,,,0.023333,,,,-3
+South Carolina 7,4507,5.855,94.145,John Vincent,,,,Russell Fry,,,,5.855,,,,94.145,,,,2
+South Dakota 1,4600,0.21333,99.78667,Nicole Gronli,,,,Marty J. Jackley,,,,0.213333,,,,99.786669,,,,3
+Tennessee 1,4701,0,100,Kristi Burke,,,,Diana Harshbarger,,,,0,,,,100,,,,3
+Tennessee 2,4702,0.10333,99.89666,Michaela Barnett,,,,Tim Burchett,,,,0.103333,,,,99.896663,,,,3
+Tennessee 3,4703,0.06833,99.93166,Anna Golladay,,,,Charles J. Fleischmann,,,,0.068333,,,,99.931663,,,,3
+Tennessee 4,4704,1.59,98.41,Victoria Broderick,,,,Scott DesJarlais,,,,1.59,,,,98.409998,,,,3
+Tennessee 5,4705,10.12,89.88,Chaz Molder,,,,Charlie Hatcher,,,,10.12,,,,89.880002,,,,2
+Tennessee 6,4706,3.14333,96.85667,Mike Croley,,,,Johnny Garrett,,,,3.143333,,,,96.856666,,,,3
+Tennessee 7,4707,1.71667,98.28333,Darden Copeland,,,,Matt Van Epps,,,,1.716667,,,,98.283333,,,,3
+Tennessee 8,4708,3.22833,96.77167,Heidi Kuhn,,,,David Kustoff,,,,3.228333,,,,96.771669,,,,3
+Tennessee 9,4709,13.29167,86.70833,Justin Pearson,,,,Brent Taylor,,,,13.291667,,,,86.708331,,,,2
+Texas 1,4801,0.005,99.995,Yolanda Prince,,,,Nathaniel Moran,,,,0.005,,,,99.994999,,,,3
+Texas 2,4802,5.33167,94.66833,Shaun Finnie,,,,Steve Toth,,,,5.331667,,,,94.668335,,,,2
+Texas 3,4803,2.23333,97.76667,Evan Hunt,,,,Keith Self,,,,2.233333,,,,97.766668,,,,3
+Texas 4,4804,1.94,98.06,Jason Pearce,,,,Pat Fallon,,,,1.94,,,,98.06,,,,3
+Texas 5,4805,3.455,96.545,Chelsey Hockett,,,,Lance Gooden,,,,3.455,,,,96.544999,,,,3
+Texas 6,4806,2.045,97.955,Danny Minton,,,,Jake Ellzey,,,,2.045,,,,97.955,,,,3
+Texas 7,4807,99.99167,0.00833,Lizzie Pannill Fletcher,,,,Alexander Hale,,,,99.991667,,,,0.008333,,,,-3
+Texas 8,4808,4.09167,95.90833,Laura Jones,,,,Jessica Steinmann,,,,4.091667,,,,95.908332,,,,3
+Texas 9,4809,22.60333,77.39667,Leticia Gutierrez,,,,Alex Mealer,,,,22.603333,,,,77.396667,,,,2
+Texas 10,4810,11.735,88.265,Caitlin Rourk,,,,Chris Gober,,,,11.735,,,,88.265002,,,,2
+Texas 11,4811,0.13667,99.86333,Claire Reynolds,,,,August Pfluger,,,,0.136667,,,,99.863333,,,,3
+Texas 12,4812,1.95167,98.04834,Heli Rodriguez Prilliman,,,,Craig Goldman,,,,1.951667,,,,98.048335,,,,3
+Texas 13,4813,0.01,99.99,Mark Nair,,,,Ronny L. Jackson,,,,0.01,,,,99.989998,,,,3
+Texas 14,4814,1.37667,98.62334,Thurman Bill Bartie,,,,Randy Weber,,,,1.376667,,,,98.623335,,,,3
+Texas 15,4815,69.19166,30.80833,Bobby Pulido,,,,Monica De La Cruz,,,,69.191664,,,,30.808333,,,,-1
+Texas 16,4816,99.97833,0.02167,Veronica Escobar,,,,Adam Bauman,,,,99.978334,,,,0.021667,,,,-3
+Texas 17,4817,3.58833,96.41167,Casey Shepard,,,,Pete Sessions,,,,3.588333,,,,96.411669,,,,3
+Texas 18,4818,100,0,Christian Menefee,,,,Ronald Whitfield,,,,100,,,,0,,,,-3
+Texas 19,4819,0.01667,99.98333,Kyle Rable,,,,Tom Sell,,,,0.016667,,,,99.983335,,,,3
+Texas 20,4820,99.99833,0.00167,Joaquin Castro,,,,Edgardo Baez,,,,99.998331,,,,0.001667,,,,-3
+Texas 21,4821,11.37833,88.62166,Kristin Hook,,,,Mark Teixeira,,,,11.378333,,,,88.621664,,,,2
+Texas 22,4822,9.31167,90.68834,Marquette Greene-Scott,,,,Trever Nehls,,,,9.311667,,,,90.688336,,,,2
+Texas 23,4823,30.96667,69.03333,Katy Padilla Stout,,,,Brandon Herrera,,,,30.965,,,,69.033331,,,,1
+Texas 24,4824,9.34167,90.65833,Kevin Burge,,,,Beth Van Duyne,,,,9.341667,,,,90.658331,,,,2
+Texas 25,4825,2.15167,97.84833,Dione Sims,,,,Roger Williams,,,,2.151667,,,,97.848332,,,,3
+Texas 26,4826,1.93,98.07,Steven Shook,,,,Brandon Gill,,,,1.93,,,,98.070002,,,,3
+Texas 27,4827,3.70667,96.29334,Tanya Lloyd,,,,Michael Cloud,,,,3.706667,,,,96.293336,,,,3
+Texas 28,4828,94.40666,5.59333,Henry Cuellar,,,,Tano Tijerina,,,,94.406664,,,,5.593333,,,,-2
+Texas 29,4829,99.99833,0.00167,Sylvia Garcia,,,,Martha Fierro,,,,99.998331,,,,0.001667,,,,-3
+Texas 30,4830,99.99833,0.00167,Frederick Haynes,,,,Everett Jackson,,,,99.998331,,,,0.001667,,,,-3
+Texas 31,4831,3.21167,96.78833,Justin Early,,,,John Carter,,,,3.211667,,,,96.788335,,,,3
+Texas 32,4832,24.98833,75.01166,Dan Barrios,,,,Jace Yarbrough,,,,24.988334,,,,75.011665,,,,2
+Texas 33,4833,99.99667,0.00333,Colin Allred,,,,Patrick Gillespie,,,,99.996668,,,,0.003333,,,,-3
+Texas 34,4834,81.70667,18.29333,Vicente Gonzalez,,,,Eric Flores,,,,81.706667,,,,18.293333,,,,-2
+Texas 35,4835,48.87167,51.12833,Johnny Garcia,,,,Carlos De La Cruz,,,,48.871666,,,,51.128334,,,,0
+Texas 36,4836,1.49167,98.50833,Rhonda Hart,,,,Brian Babin,,,,1.491667,,,,98.508334,,,,3
+Texas 37,4837,100,0,Greg Casar,,,,Lauren Peña,,,,100,,,,0,,,,-3
+Texas 38,4838,10.34,89.66,Melissa McDonough,,,,Jon Bonck,,,,10.34,,,,89.660001,,,,2
+Utah 1,4901,99.73834,0.26167,Ben McAdams,,,,Riley Owen,,,,99.738336,,,,0.261667,,,,-3
+Utah 2,4902,9.14,90.86,Peter Crosby,,,,Blake Moore,,,,9.14,,,,90.859997,,,,2
+Utah 3,4903,0.81167,99.18833,Kent Udell,,,,Celeste Maloy,,,,0.811667,,,,99.188334,,,,3
+Utah 4,4904,4.86,95.14,Jonny Larsen,,,,Mike Kennedy,,,,4.86,,,,95.139998,,,,3
+Vermont 1,5000,99.95,0.05,Becca Balint,,,,Gerald Malloy,,,,99.949998,,,,0.05,,,,-3
+Virginia 1,5101,45.92,54.08,Shannon Taylor,,,,Robert J. Wittman,,,,45.919999,,,,54.079998,,,,0
+Virginia 2,5102,59.99,40.01,Elaine Luria,,,,Jen A. Kiggans,,,,59.990001,,,,40.009999,,,,0
+Virginia 3,5103,100,0,Robert C. Scott,,,,Edwin Rivera,,,,100,,,,0,,,,-3
+Virginia 4,5104,99.99833,0.00167,Jennifer McClellan,,,,Robert Murray,,,,99.998331,,,,0.001667,,,,-3
+Virginia 5,5105,19.27667,80.72333,Tom Perriello,,,,John McGuire,,,,19.276667,,,,80.723333,,,,2
+Virginia 6,5106,0.22167,99.77833,Beth Macy,,,,Benjamin Lee Cline,,,,0.221667,,,,99.77833,,,,3
+Virginia 7,5107,98.92667,1.07333,Eugene Vindman,,,,Douglas Ollivant,,,,98.926669,,,,1.073333,,,,-3
+Virginia 8,5108,100,0,Don Beyer,,,,Tony Sabio,,,,100,,,,0,,,,-3
+Virginia 9,5109,0.01167,99.98834,Joy Powers,,,,H. Morgan Griffith,,,,0.011667,,,,99.988335,,,,3
+Virginia 10,5110,99.67833,0.32167,Suhas Subramanyam,,,,Dave T. Beckwith,,,,99.678332,,,,0.321667,,,,-3
+Virginia 11,5111,100,0,James Walkinshaw,,,,Arthur Purves,,,,100,,,,0,,,,-3
+Washington 1,5301,99.99667,0.00333,Suzan DelBene,,,,Mary Silva,,,,99.996668,,,,0.003333,,,,-3
+Washington 2,5302,99.98834,0.01167,Rick Larsen,,,,Edwin H. Feller,,,,99.988335,,,,0.011667,,,,-3
+Washington 3,5303,56.30167,43.69833,Marie Gluesenkamp Pérez,,,,John Braun,,,,56.301665,,,,43.698335,,,,0
+Washington 4,5304,14.555,85.445,John Duresky,,,,Amanda McKinney,,,,14.555,,,,85.444999,,,,2
+Washington 5,5305,23.01333,76.98666,Carmela Conroy,,,,Michael Baumgartner,,,,23.013334,,,,76.986665,,,,2
+Washington 6,5306,99.93333,0.06667,Emily Randall,,,,Teresa Fox,,,,99.933332,,,,0.066667,,,,-3
+Washington 7,5307,100,0,Pramila Jayapal,,,,Nirav Sheth,,,,100,,,,0,,,,-3
+Washington 8,5308,99.15166,0.84833,Kim Schrier,,,,Spencer Meline,,,,99.151665,,,,0.848333,,,,-3
+Washington 9,5309,100,0,D. Adam Smith,,,,Doug Basler,,,,100,,,,0,,,,-3
+Washington 10,5310,99.94,0.06,Marilyn Strickland,,,,Chris Chung,,,,99.940002,,,,0.06,,,,-3
+West Virginia 1,5401,0.01667,99.98333,Vince George,,,,Carol Miller,,,,0.016667,,,,99.983335,,,,3
+West Virginia 2,5402,0.06,99.94,Ace Parsi,,,,Riley Moore,,,,0.06,,,,99.940002,,,,3
+Wisconsin 1,5501,32.03333,67.96666,Mitchell Berman,,,,Bryan Steil,,,,32.033333,,,,67.966664,,,,1
+Wisconsin 2,5502,100,0,Mark Pocan,,,,,,,,100,,,,,,,,-3
+Wisconsin 3,5503,43.48667,56.51333,Rebecca Cooke,,,,Derrick Van Orden,,,,43.486667,,,,56.513333,,,,0
+Wisconsin 4,5504,100,0,Gwen Moore,,,,Tim Rogers,,,,100,,,,0,,,,-3
+Wisconsin 5,5505,1.43833,98.56167,Andrew Beck,,,,Scott Fitzgerald,,,,1.438333,,,,98.561668,,,,3
+Wisconsin 6,5506,4.76167,95.23833,Brad Smith,,,,Glenn Grothman,,,,4.761667,,,,95.238334,,,,3
+Wisconsin 7,5507,6.85667,93.14333,Fred Clark,,,,Michael Alfonso,,,,6.856667,,,,93.143332,,,,2
+Wisconsin 8,5508,6.96167,93.03833,Rick Crosson,,,,Tony Wied,,,,6.961667,,,,93.038332,,,,2
+Wyoming 1,5600,0.00833,99.99167,Lisa Kinney,,,,Chuck Gray,,,,0.008333,,,,99.991667,,,,3

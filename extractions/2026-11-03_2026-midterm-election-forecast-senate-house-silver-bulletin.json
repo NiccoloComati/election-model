@@ -1,0 +1,125 @@
+{
+  "article": {
+    "date": "2026-11-03",
+    "title": "FINAL FLIPR 2026 midterm election forecast",
+    "subtitle": "Silver Bulletin's prediction for every Senate, House, and gubernatorial election in 2026.",
+    "authors": "Nate Silver; Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/nate-silver-2026-midterm-election-polls-model",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-11-03_2026-midterm-election-forecast-senate-house-silver-bulletin"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": true,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:47:35"
+  },
+  "extraction": {
+    "summary": "Final FLIPR 2026 topline landing page as of Nov. 3, 2026: Democrats 82.4 percent for the Senate and 96.4 percent for the House. Joint control outcomes were a Democratic sweep 82.2 percent, Democratic House with Republican Senate 14.2, Republican sweep 3.4, and Republican House with Democratic Senate 0.2. It summarizes FLIPR's design: polling averages with RV/LV and house-effect adjustments and a timeline adjustment; an LV-adjusted generic ballot; 40,000 simulations with small sampling error; and joint modeling of House, Senate and governor races.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "FLIPR 2026 (Deluxe, Classic, Lite)"
+    ],
+    "findings": [
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "FLIPR models House, Senate and gubernatorial elections jointly in each simulation, enabling joint outcome probabilities. Final 2026 values: Democratic sweep 82.2 percent, Democratic House with Republican Senate 14.2 percent, Republican sweep 3.4 percent, Republican House with Democratic Senate 0.2 percent.",
+        "quantities": [
+          {
+            "name": "D sweep",
+            "value": "82.2",
+            "unit": "percent",
+            "context": "final"
+          },
+          {
+            "name": "D House / R Senate",
+            "value": "14.2",
+            "unit": "percent",
+            "context": "final"
+          },
+          {
+            "name": "R sweep",
+            "value": "3.4",
+            "unit": "percent",
+            "context": "final"
+          },
+          {
+            "name": "R House / D Senate",
+            "value": "0.2",
+            "unit": "percent",
+            "context": "final"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "FLIPR models House, Senate and gubernatorial elections jointly, meaning that we can calculate the probability of things like Republicans holding the Senate but losing the House.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "Topline numbers are typically based on 40,000 simulations and include a small amount of sampling error.",
+        "quantities": [
+          {
+            "name": "simulations",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "FLIPR topline"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "They are typically based on 40,000 simulations and include a small amount of sampling error.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "Summary of FLIPR's polling averages: they account for registered versus likely voters and house effects, weight more reliable polls more heavily, and apply a 'timeline adjustment' revising outdated polls toward generic-ballot trends. FLIPR uses an LV-adjusted generic ballot.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "They also include a “timeline adjustment”, where outdated polls are revised to reflect trends in the generic ballot.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "Final 2026 Senate polling averages in battlegrounds: Texas D+3.3, Ohio D+3, Michigan D+4.9, Maine D+3.9, Iowa D+1.1, Kansas Democrat up about 4. At launch in August the Senate was near a toss-up; by the final update Democrats' Senate odds were just a few points below their House odds at launch.",
+        "quantities": [
+          {
+            "name": "Texas polling average",
+            "value": "D+3.3",
+            "unit": "points",
+            "context": "final"
+          },
+          {
+            "name": "Michigan polling average",
+            "value": "D+4.9",
+            "unit": "points",
+            "context": "final"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "Democratic candidates lead in our polling averages of every major battleground state, including Texas (D +3.3), Ohio (D +3), Michigan (D +4.9), Maine (D +3.9), and Iowa (D +1.1).",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [],
+    "references": [
+      {
+        "description": "FLIPR methodology article",
+        "url": "https://www.natesilver.net/p/flipr-midterms-model-methodology"
+      }
+    ],
+    "open_questions": []
+  }
+}

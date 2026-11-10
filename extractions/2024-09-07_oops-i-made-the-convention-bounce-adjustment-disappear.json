@@ -1,0 +1,518 @@
+{
+  "article": {
+    "date": "2024-09-07",
+    "title": "Oops! I made the convention bounce adjustment disappear.",
+    "subtitle": "One neat trick — for today's newsletter only.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/oops-i-made-the-convention-bounce",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-09-07_oops-i-made-the-convention-bounce-adjustment-disappear"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.384107,
+    "prompt_tokens": 4,
+    "completion_tokens": 7767,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 28554,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:13:01"
+  },
+  "extraction": {
+    "summary": "Silver toggles off the 2024 Silver Bulletin presidential model's convention bounce adjustment, which had been shaving a point or two off Harris's polling averages, and shows that her Electoral College win probability would rise from 38.3% to 49.8%, roughly a 10-point gain in every state and in the topline. Even without the adjustment, she would not be favored. Her Blue Wall leads are narrow, the median outcome is an Electoral College tie, and about 18% of the forecast still rests on fundamentals that show Harris losing the popular vote by 0.3 points. The state forecasts also hedge toward inferences from national polls and other states, which widens the projected Electoral College/popular vote gap. Silver defends the symmetric bounce adjustment against 538's asymmetric approach and cites history: candidates with bounces of 1 point or less never won. He concedes that Harris's late entry is unprecedented, and that half an adjustment or an earlier phase-out could have been defensible.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "FiveThirtyEight (2024, Morris era)",
+      "Polymarket (prediction markets)",
+      "FiveThirtyEight (Silver era, 2008-2022)"
+    ],
+    "findings": [
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin 2024 presidential model includes a convention bounce adjustment, controlled by a setting called 'convention_bounce_mode', that discounts a candidate's polling averages after their convention. In early September 2024 it was shaving about 1-2 points off Harris's polling averages.",
+        "quantities": [
+          {
+            "name": "convention bounce adjustment size",
+            "value": "a point or two",
+            "unit": "percentage points",
+            "context": "reduction to Harris's polling averages as of ~Sept 6, 2024"
+          }
+        ],
+        "rationale": "Convention bounces are historically temporary.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "turning the forecast's convention bounce adjustment off. This was shaving a point or two off of Kamala Harris's polling averages",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "The convention bounce adjustment in the 2024 Silver Bulletin model varies slightly from state to state because it depends on the exact timing of the polls in each state.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Technically, the convention bounce adjustment differs slightly from state to state based on the exact timing of polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "The effect of the convention bounce adjustment on win probabilities was roughly linear and uniform. It cut Harris's win probability by about 10 points in each swing state, in the Electoral College, and in the popular vote. In the Sept. 6 run versus no adjustment: Electoral College 38.3% vs 49.8%; popular vote 58.1% vs 69.0%; PA 38.3% vs 49.4%; MI 47.6% vs 59.1%; GA 33.2% vs 42.8%; NC 25.7% vs 35.3%; WI 48.3% vs 58.9%; AZ 24.8% vs 34.3%; NV 41.0% vs 51.3%.",
+        "quantities": [
+          {
+            "name": "EC win prob with adjustment",
+            "value": "38.3",
+            "unit": "percent",
+            "context": "Harris, Sept. 6 2024 run"
+          },
+          {
+            "name": "EC win prob without adjustment",
+            "value": "49.8",
+            "unit": "percent",
+            "context": "Harris"
+          },
+          {
+            "name": "popular vote win prob with adjustment",
+            "value": "58.1",
+            "unit": "percent",
+            "context": "Harris"
+          },
+          {
+            "name": "popular vote win prob without adjustment",
+            "value": "69.0",
+            "unit": "percent",
+            "context": "Harris"
+          },
+          {
+            "name": "PA",
+            "value": "38.3 / 49.4",
+            "unit": "percent",
+            "context": "with / without adjustment"
+          },
+          {
+            "name": "MI",
+            "value": "47.6 / 59.1",
+            "unit": "percent",
+            "context": "with / without adjustment"
+          },
+          {
+            "name": "GA",
+            "value": "33.2 / 42.8",
+            "unit": "percent",
+            "context": "with / without adjustment"
+          },
+          {
+            "name": "NC",
+            "value": "25.7 / 35.3",
+            "unit": "percent",
+            "context": "with / without adjustment"
+          },
+          {
+            "name": "WI",
+            "value": "48.3 / 58.9",
+            "unit": "percent",
+            "context": "with / without adjustment"
+          },
+          {
+            "name": "AZ",
+            "value": "24.8 / 34.3",
+            "unit": "percent",
+            "context": "with / without adjustment"
+          },
+          {
+            "name": "NV",
+            "value": "41.0 / 51.3",
+            "unit": "percent",
+            "context": "with / without adjustment"
+          },
+          {
+            "name": "approximate reduction",
+            "value": "around 10",
+            "unit": "percentage points of win probability",
+            "context": "each state and topline"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Basically, the adjustment winds up reducing Harris's win probability by around 10 percent in each state and in the topline numbers.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "Without the bounce adjustment, the 2024 model projected Harris at an average of 277 electoral votes to Trump's 261. Because she loses many simulated outcomes narrowly, however, the median outcome was roughly an Electoral College tie. This shows that the mean and median of the simulated EV distribution can diverge.",
+        "quantities": [
+          {
+            "name": "Harris mean EV (no adjustment)",
+            "value": "277",
+            "unit": "electoral votes",
+            "context": "Sept 2024"
+          },
+          {
+            "name": "Trump mean EV (no adjustment)",
+            "value": "261",
+            "unit": "electoral votes",
+            "context": "Sept 2024"
+          }
+        ],
+        "rationale": "Harris has narrow leads in the Blue Wall states and lose-by-a-little combinatorics.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it also has her losing a lot of elections in agonizingly close fashion — so the median rather than the average outcome is basically an Electoral College tie.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "empirical_regularity",
+        "statement": "Without the bounce adjustment, Harris led the Silver Bulletin polling averages in states totaling 292 electoral votes, yet her EC win probability was only ~50%. Leading the averages in states summing to more than 270 does not imply being favored.",
+        "quantities": [
+          {
+            "name": "EVs in states Harris leads",
+            "value": "292",
+            "unit": "electoral votes",
+            "context": "Sept 2024 polling averages"
+          }
+        ],
+        "rationale": "Leads are narrow, fundamentals and cross-state hedging pull against her, and outcomes are correlated.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris is still ahead in our polling averages, albeit extremely narrowly in some cases, in states totaling 292 electoral votes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "parameter_or_number",
+        "statement": "As of early September 2024, about 18% of the Silver Bulletin presidential forecast was still based on the fundamentals calculation, which combines incumbency and an economic index. The polls carried the remaining weight.",
+        "quantities": [
+          {
+            "name": "fundamentals weight",
+            "value": "About 18",
+            "unit": "percent",
+            "context": "forecast as of Sept 6-7, 2024, about two months before election"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "About 18 percent of the forecast is still based on our \"fundamentals\" calculation — basically, the combination of incumbency",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "adjustment_rule",
+        "statement": "In the 2024 model's fundamentals, Harris receives only partial incumbency credit because she is the incumbent party's nominee as sitting vice president, not an incumbent president.",
+        "quantities": [],
+        "rationale": "She isn't actually an incumbent.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "incumbency (which Harris doesn't get full credit for since she isn't actually an incumbent)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "method",
+        "statement": "The 2024 model's economic index updates as economic data arrive, including revisions. Downward revisions to jobs numbers lowered the index slightly in early September 2024, which hurt Harris.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "our economic index is slightly down in recent days, in part because of downward revisions to jobs numbers",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "parameter_or_number",
+        "statement": "In early September 2024, the fundamentals formula had Harris losing the national popular vote by 0.3 percentage points. Silver says this very likely translates into a Democratic loss in the Electoral College, given the Democrats' Electoral College disadvantage.",
+        "quantities": [
+          {
+            "name": "fundamentals popular vote margin",
+            "value": "-0.3",
+            "unit": "percentage points",
+            "context": "Harris margin, Sept 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it has Harris losing the popular vote by 0.3 percentage points — which very likely translates into a loss for Democrats in the Electoral College",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "The 2024 model's state forecasts are not based strictly on each state's own polling average. They hedge slightly toward inferences drawn from national polls and polls of other states.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model's state-by-state forecasts are not strictly based on the polling averages in each state; instead, it hedges slightly against these with inferences it makes from national polls and polls of other states",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "In September 2024, the cross-state hedging in the 2024 model implied an Electoral College/popular vote gap slightly wider than the polls showed. It was skeptical of Harris's Wisconsin polling, which hurt her at the margin.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "This calculation implies that the Electoral College/popular vote gap will be slightly wider than what polls currently show — it's skeptical of Harris's polling in Wisconsin",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "assumption",
+        "statement": "Arizona and Nevada, bordering states, have highly correlated outcomes in the model's simulations. Winning both together is therefore a plausible joint outcome.",
+        "quantities": [
+          {
+            "name": "AZ+NV combined EVs",
+            "value": "17",
+            "unit": "electoral votes",
+            "context": "2024"
+          }
+        ],
+        "rationale": "Geographic and demographic similarity.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "a plausible outcome since these bordering states have highly correlated outcomes",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver criticizes the 2024 538 model for apparently using an asymmetric convention bounce rule: it discounts a candidate who gets a bounce but does not penalize one who gets none. He calls this 'heads you win, tails you get a do-over'.",
+        "quantities": [],
+        "rationale": "Asymmetric treatment is biased in favor of candidates around conventions.",
+        "model_version": "538 2024 (Morris era)",
+        "evidence_quote": "Personally, I don't like this because it's asymmetric — basically, heads you win, tails you get a do-over.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "design_principle",
+        "statement": "Forecasts should behave like a random walk, with no predictable direction of future movement. An asymmetric convention bounce rule like 538's means candidates on average look better after their conventions than before, which introduces autocorrelation.",
+        "quantities": [],
+        "rationale": "Predictable drift violates the martingale property of good forecasts.",
+        "model_version": "general principle",
+        "evidence_quote": "candidates will be in a better position in their forecast after their conventions than before, which introduces autocorrelation and violates the notion that forecasts should be a random walk",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Excluding 2020's virtual COVID conventions, the candidates with convention bounces of 1 point or less were Romney 2012, Kerry 2004 and McGovern 1972. Humphrey 1968 (2 points, small for the era) arguably also qualifies. None won the presidency. Silver uses this to justify penalizing a small or absent bounce rather than ignoring it.",
+        "quantities": [
+          {
+            "name": "bounce threshold",
+            "value": "1 point or less",
+            "unit": "percentage points",
+            "context": "historical small-bounce candidates"
+          },
+          {
+            "name": "Humphrey 1968 bounce",
+            "value": "2",
+            "unit": "percentage points",
+            "context": ""
+          }
+        ],
+        "rationale": "A small bounce historically signals weakness; the sample is small, but presidential samples are inherently small.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "As you probably know, none of those men became president. And yes, it's a small sample size, but we're inherently dealing with small sample sizes in presidential elections.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "data_source",
+        "statement": "The Silver Bulletin table of historical convention bounces from 1964 to 2020, using American Presidency Project data, defines a bounce as the change in a candidate's polling average from one week before their party's convention to one week after. The average bounce is +5 points. Examples: Clinton 1992 +16; Carter 1980 +10; Mondale 1984 +9; Carter 1976 +9; Gore 2000 +8; Bush 2000 +8; Reagan 1980 +8; Dukakis 1988 +7; Nixon 1972 +7; McCain 2008 +6; Bush 1988 +6; Obama 2008 +4; Trump 2016 +3; Clinton 2016 +2; Obama 2012 +2; Bush 2004 +2; Trump 2020 +1; Biden 2020 0; McGovern 1972 0; Romney 2012 -1; Kerry 2004 -1.",
+        "quantities": [
+          {
+            "name": "average convention bounce",
+            "value": "+5",
+            "unit": "percentage points",
+            "context": "1964-2020"
+          },
+          {
+            "name": "measurement window",
+            "value": "one week before to one week after",
+            "unit": "",
+            "context": "bounce definition"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general / 2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Read off the historical table, convention bounces appear smaller in recent cycles (2004-2020 mostly -1 to +4, apart from McCain's +6) than in 1976-2000 (often +5 to +16). Silver attributes 2020's small bounces possibly to the virtual COVID conventions.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Silver concedes that Harris's late replacement of Biden complicates the bounce adjustment. Her post-entry surge may have been a honeymoon rather than a convention bounce, so the model perhaps should have begun phasing out her bounce sooner or applied half an adjustment. That would have produced a flatter trajectory, with an EC win probability of perhaps ~45% throughout.",
+        "quantities": [
+          {
+            "name": "alternative adjustment",
+            "value": "half",
+            "unit": "",
+            "context": "possible partial convention bounce adjustment"
+          },
+          {
+            "name": "alternative EC win probability",
+            "value": "about 45",
+            "unit": "percent",
+            "context": "Harris, hypothetical"
+          }
+        ],
+        "rationale": "This is an unprecedented circumstance.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "maybe we should have begun phasing out Harris's bounce sooner — or applied, say, half a convention bounce adjustment rather than a full one. That would have produced a flatter trajectory",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "During the period right after Harris entered the race, the 2024 model was adjusting Trump's numbers downward for his post-Republican-convention bounce.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "this came during the period when we were adjusting Trump's numbers downward after the Republican convention",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver says his personal view of Harris's chances (~45%) was closer to Polymarket's ~45% than to his own model's 38%. He nonetheless keeps the model's output unchanged.",
+        "quantities": [
+          {
+            "name": "Polymarket Harris probability",
+            "value": "45-ish",
+            "unit": "percent",
+            "context": "Sept 7, 2024"
+          },
+          {
+            "name": "model Harris EC probability",
+            "value": "38",
+            "unit": "percent",
+            "context": "Sept 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Personally, I'm probably closer to the 45-ish percent probability that Polymarket shows for Harris rather than our model's 38 percent.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "The convention bounce adjustment has been part of Silver's presidential model since its inception in 2008.",
+        "quantities": [
+          {
+            "name": "year introduced",
+            "value": "2008",
+            "unit": "",
+            "context": "FiveThirtyEight original model"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 2008 onward / Silver Bulletin 2024",
+        "evidence_quote": "the convention bounce adjustment has been part of our model since its inception in 2008",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "other",
+        "finding_type": "design_principle",
+        "statement": "A model's rules should be set ahead of time to avoid ad hoc adjustments that might reflect the modeler's political leanings or what readers want. Silver keeps the full bounce adjustment despite doubts for this reason.",
+        "quantities": [],
+        "rationale": "Precommitment guards against bias; Silver notes he plans to vote for Harris and his readers lean ~3:1 Harris.",
+        "model_version": "general principle",
+        "evidence_quote": "The whole point of building a model is that you set up rules ahead of time so you aren't tempted to make ad hoc adjustments, which might reflect your political leanings or what your readers want.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "interpretation_guidance",
+        "statement": "When the raw polls show a toss-up, any convention bounce adjustment tilts the race slightly toward the opponent of the candidate whose bounce is being discounted. In September 2024 that opponent was Trump.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the more recent polling data instead implies a toss-up race, so any convention bounce adjustment tilts the race ever-so-slightly toward Trump",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "Electoral College combinatorics 2024",
+        "insight": "Without Pennsylvania (19 EVs), Harris could not reach 270 with Michigan and Wisconsin plus only Georgia (16), only North Carolina (16), or only Arizona+Nevada (17), which leaves her at 268-270. If she wins PA but loses MI (15), AZ+NV or GA alone works, but AZ alone does not.",
+        "evidence": "EV arithmetic with 270toWin maps (267-271, 266-272).",
+        "forecasting_implication": "Pennsylvania was the tipping-point state; narrow-path maps produce a median EV outcome near a tie even when the mean favors a candidate."
+      },
+      {
+        "topic": "Blue Wall dependence",
+        "insight": "Biden's pre-debate path to exactly 270 via the Blue Wall states was fragile: losing any of PA, MI or WI, or even NH, would have cost him the election.",
+        "evidence": "",
+        "forecasting_implication": "Maps that only just clear 270 are vulnerable to any single correlated miss."
+      },
+      {
+        "topic": "convention bounces as signal",
+        "insight": "Candidates with negligible convention bounces (Romney 2012, Kerry 2004, McGovern 1972, arguably Humphrey 1968) all lost.",
+        "evidence": "Historical bounce table, 1964-2020.",
+        "forecasting_implication": "Supports a symmetric bounce adjustment that penalizes the absence of a bounce."
+      },
+      {
+        "topic": "virtual conventions",
+        "insight": "The 2020 bounces (Biden 0, Trump +1) may have been limited by the mostly virtual COVID conventions.",
+        "evidence": "",
+        "forecasting_implication": "Consider excluding 2020 when estimating typical bounce size."
+      }
+    ],
+    "references": [
+      {
+        "description": "Eli McKown-Dawson's chart/article on historical convention bounces (American Presidency Project data)",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin polling averages",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin article on the Electoral College/popular vote gap and how fundamentals translate to the EC",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin methodology on state forecasts not strictly based on state polling averages",
+        "url": ""
+      },
+      {
+        "description": "538 model documentation on its convention bounce handling",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin article on AZ/NV correlated outcomes",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin article on Biden's Blue Wall path earlier in 2024",
+        "url": ""
+      },
+      {
+        "description": "American Presidency Project convention bounce data",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact functional form of the convention bounce adjustment: expected bounce size, how it decays over time, and how it is applied per poll by field date.",
+      "How the expected bounce size is set for each candidate (historical average of +5? scaled for polarization?).",
+      "How the fundamentals weight (18% in early Sept) declines toward election day.",
+      "How much partial incumbency credit a sitting VP nominee receives.",
+      "Components and weights of the economic index.",
+      "Exact weighting between a state's own polling average and inferences from national and other-state polls.",
+      "Correlation structure used between states such as AZ and NV.",
+      "How 538 implements its asymmetric bounce rule."
+    ]
+  }
+}

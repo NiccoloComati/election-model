@@ -1,0 +1,413 @@
+{
+  "article": {
+    "date": "2024-09-23",
+    "title": "Trust a pollster more when it publishes “outliers”",
+    "subtitle": "Just toss it in the average — because sometimes those outliers turn out to be right.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/trust-a-pollster-more-when-it-publishes",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-09-23_trust-a-pollster-more-when-it-publishes-outliers"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.273795,
+    "prompt_tokens": 4,
+    "completion_tokens": 5957,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 19290,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:14:58"
+  },
+  "extraction": {
+    "summary": "Silver argues that pollsters who publish apparent outliers (e.g., NYT/Siena, Selzer) should be trusted more, and that the right response to surprising polls is to include them in a polling average rather than unskew them or pick through crosstabs. He uses the September 23, 2024 Times/Siena Sunbelt polls and a MassINC Wisconsin poll to show how the Silver Bulletin presidential model absorbs conflicting polls. The model blends the polls with other surveys and with demographic priors, so state win probabilities moved only incrementally. In 40,000 simulations, the specific AZ/WI combination the two polls implied was rare. He also discusses herding, notes that the pollster ratings penalize it, explains margins of error on the margin versus on vote share, and urges anyone building their own average to publish the rules ahead of time.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "Silver Bulletin pollster ratings",
+      "538 polling averages",
+      "RealClearPolitics averages"
+    ],
+    "findings": [
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin 2024 presidential model ran 40,000 simulations in its run on the morning of September 23, 2024.",
+        "quantities": [
+          {
+            "name": "number of simulations",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "model run on Monday morning, Sep 23, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Out of the 40,000 simulations we ran on Monday morning",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "Because the Silver Bulletin 2024 model correlates states, it rarely produces outcomes where Arizona and Wisconsin diverge sharply. Only 147 of 40,000 simulations (about 0.37%) had Harris losing Arizona by at least 5 points while winning Wisconsin by at least 6.",
+        "quantities": [
+          {
+            "name": "simulations with Harris losing AZ by ≥5 and winning WI by ≥6",
+            "value": "147",
+            "unit": "simulations",
+            "context": "out of 40,000, Sep 23, 2024 run"
+          },
+          {
+            "name": "AZ loss threshold",
+            "value": "5",
+            "unit": "percentage points",
+            "context": "matches Times/Siena Arizona result"
+          },
+          {
+            "name": "WI win threshold",
+            "value": "6",
+            "unit": "percentage points",
+            "context": "matches MassINC Wisconsin result"
+          }
+        ],
+        "rationale": "You would bet heavily against Democratic overperformance in Wisconsin combined with underperformance in Arizona, so at least one of the two polls is almost certainly wrong.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "there were only 147 cases where Harris both lost Arizona by at least 5 points, matching the Times result, and won Wisconsin by at least 6",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model does not take individual state polls at face value. It averages each new poll with other surveys of that state and with a demographics-based prior for the state.",
+        "quantities": [],
+        "rationale": "Shrinks the influence of any single possibly-outlying poll.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model isn't taking any of these numbers quite at face value, instead averaging them with other surveys of these states as well as its priors based on their demographics",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "State-level priors in the Silver Bulletin presidential model are based on state demographics and are blended with state polling.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "its priors based on their demographics",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "Several strong Times/Siena Sunbelt polls (Trump +2 to +5) and a MassINC Wisconsin poll (Harris +6 to 7) produced only incremental moves in state win probabilities. Harris moved from 40% to 37% in NC, 37% to 34% in GA, 37% to 32% in AZ, and 57% to 60% in WI.",
+        "quantities": [
+          {
+            "name": "NC Harris win prob before/after",
+            "value": "40 -> 37",
+            "unit": "percent",
+            "context": "after Times/Siena poll, Sep 23, 2024"
+          },
+          {
+            "name": "GA Harris win prob before/after",
+            "value": "37 -> 34",
+            "unit": "percent",
+            "context": "after Times/Siena poll"
+          },
+          {
+            "name": "AZ Harris win prob before/after",
+            "value": "37 -> 32",
+            "unit": "percent",
+            "context": "after Times/Siena poll"
+          },
+          {
+            "name": "WI Harris win prob before/after",
+            "value": "57 -> 60",
+            "unit": "percent",
+            "context": "after MassINC poll"
+          }
+        ],
+        "rationale": "Polls are averaged with other polls and with priors.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris's win probability in North Carolina fell from 40 percent to 37 percent, in Georgia from 37 percent to 34 percent and in Arizona from 37 percent to 32 percent",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "Changes in the Silver Bulletin model are usually incremental. The exceptions are inflection points after major events such as debates.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Outside of inflection points following major events like debates, changes in the model tend to be incremental.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "interpretation_guidance",
+        "statement": "New polls showing a candidate behind in states where the model already had that candidate narrowly behind, and which are not on the candidate's minimum path to 270, move the overall forecast less than expected. Conflicting high-quality polls in other states (e.g., Sunbelt vs. Wisconsin) also partly offset each other.",
+        "quantities": [],
+        "rationale": "Harris's minimum viable path ran through PA, MI, WI and NE-2.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The polls had less of an effect on our model than I'd expected.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "assumption",
+        "statement": "Pennsylvania, Michigan, Wisconsin and Nebraska's 2nd Congressional District together give Harris exactly 270 electoral votes. Nebraska's split allocation of electoral votes was assumed to remain after a Republican push to revert to winner-take-all appeared to fail.",
+        "quantities": [
+          {
+            "name": "electoral votes needed",
+            "value": "270",
+            "unit": "electoral votes",
+            "context": "PA+MI+WI+NE-2 path"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Those states, plus the 2nd Congressional District of Nebraska ... would suffice to give Harris 270 electoral votes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Silver Bulletin pollster ratings penalize polling firms that show clear signs of herding, meaning hedging published results toward the polling averages.",
+        "quantities": [],
+        "rationale": "Polling averages like Silver Bulletin's potentially contribute to herding, so the ratings counteract it.",
+        "model_version": "Silver Bulletin pollster ratings (2024)",
+        "evidence_quote": "our pollster ratings actually punish polling firms that show clear signs of doing this",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "empirical_regularity",
+        "statement": "In the 2024 Silver Bulletin pollster ratings, Selzer & Co. is the highest-rated pollster and NYT/Siena is second. MassINC is described as highly rated.",
+        "quantities": [
+          {
+            "name": "Selzer rank",
+            "value": "1",
+            "unit": "rank",
+            "context": "Silver Bulletin pollster ratings, Sep 2024"
+          },
+          {
+            "name": "NYT/Siena rank",
+            "value": "2",
+            "unit": "rank",
+            "context": "Silver Bulletin pollster ratings, Sep 2024"
+          }
+        ],
+        "rationale": "Pollsters that stand behind seeming outliers are usually more accurate over the long run.",
+        "model_version": "Silver Bulletin pollster ratings (2024)",
+        "evidence_quote": "That's why Selzer is our highest-rated pollster — the only one to rank higher than the Times.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "design_principle",
+        "statement": "Surprising or outlier polls should be included in the polling average as-is, not excluded, unskewed, or second-guessed through crosstabs. The average itself handles the discounting.",
+        "quantities": [],
+        "rationale": "Outliers sometimes turn out right, and excluding them lets conventional wisdom contaminate the average.",
+        "model_version": "general principle",
+        "evidence_quote": "Just toss it in the averages.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "design_principle",
+        "statement": "Anyone building a polling average must publicly specify the inclusion and weighting rules ahead of time, so that choices are consistent rather than driven by ad hoc vibes or partisan preference.",
+        "quantities": [],
+        "rationale": "Consistency prevents cherry-picking.",
+        "model_version": "general principle",
+        "evidence_quote": "you have to publicly specify the rules ahead of time",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "When a pollster publishes results that defy conventional wisdom, treat it as a sign that the pollster is doing good and honest work.",
+        "quantities": [],
+        "rationale": "Many pollsters file-drawer outliers or massage data toward socially acceptable numbers.",
+        "model_version": "general principle",
+        "evidence_quote": "when pollsters publish results like these, you should take that as a sign that they're doing good and honest work",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Herding (file-drawering outliers, weighting toward priors, peeking at other polls) can make the average individual poll more accurate while making the polling average worse. In particular, averages may then miss genuine large demographic shifts. Silver describes this as a tragedy-of-the-commons problem.",
+        "quantities": [],
+        "rationale": "Herded polls do not add independent information.",
+        "model_version": "general principle",
+        "evidence_quote": "herding can make the average poll more accurate even as it makes the polling average worse",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "The margin of error on the gap between two candidates is roughly double the margin of error on one candidate's vote share. The Times polls of GA, AZ and NC had a combined MoE of 2.5 points on vote share, about 5 points on the margin. A Trump +3 average is therefore consistent with anything from Harris +2 to Trump +8.",
+        "quantities": [
+          {
+            "name": "combined MoE on vote share",
+            "value": "2.5",
+            "unit": "percentage points",
+            "context": "Times/Siena GA, AZ, NC polls combined"
+          },
+          {
+            "name": "MoE on margin",
+            "value": "~5",
+            "unit": "percentage points",
+            "context": "same polls"
+          },
+          {
+            "name": "plausible range around Trump +3",
+            "value": "Harris +2 to Trump +8",
+            "unit": "margin",
+            "context": "Sunbelt"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "the margin of error is closer to 5 points on the difference separating the candidates",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "One in 20 polls will fall outside its margin of error, which corresponds to a 95% confidence interval.",
+        "quantities": [
+          {
+            "name": "share of polls outside MoE",
+            "value": "1 in 20",
+            "unit": "",
+            "context": "sampling error"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "one in 20 polls will fall outside the margin of error",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "Subgroup crosstabs carry huge sampling error. The Times Arizona poll's 149 Hispanic respondents imply about a 16-point margin of error on the Trump-Harris gap. Using crosstabs to debunk polls is therefore misguided, since every honest poll will show some odd subgroup results.",
+        "quantities": [
+          {
+            "name": "Hispanic subsample",
+            "value": "149",
+            "unit": "respondents",
+            "context": "Times/Siena Arizona poll"
+          },
+          {
+            "name": "subgroup MoE on margin",
+            "value": "16",
+            "unit": "percentage points",
+            "context": "same subsample"
+          }
+        ],
+        "rationale": "Only polls that over-massage their data avoid odd subgroup results.",
+        "model_version": "general principle",
+        "evidence_quote": "the Times poll of Arizona surveyed 149 Hispanic voters. That translates to a margin of error of 16 points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Some pollsters import so many priors through weighting and massaging that their surveys are de facto closer to models than to polls.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Some surveys are de facto closer to models than polls",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Conventional wisdom almost always assumes that what happened last time will happen again. It was wrong about Trump campaigning in WI and MI in 2016 and about the 2022 red wave. Signs of realignment should be sought in polls, not in narrative.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "the place to look for hints of it will be in the polls — not the conventional wisdom about the race",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "empirical_regularity",
+        "statement": "Validation example: NYT/Siena October 2022 polls of four battleground House districts showed Democrats doing surprisingly well, and Democrats won all four. In KS-3 the poll had Davids +13 and she won by 12.1.",
+        "quantities": [
+          {
+            "name": "KS-3 poll margin",
+            "value": "13",
+            "unit": "percentage points",
+            "context": "NYT/Siena, Oct 2022"
+          },
+          {
+            "name": "KS-3 actual margin",
+            "value": "12.1",
+            "unit": "percentage points",
+            "context": "2022 result"
+          },
+          {
+            "name": "districts polled/won by Dems",
+            "value": "4/4",
+            "unit": "",
+            "context": "NYT/Siena Oct 2022"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Democrats won all four districts, including Davids by a 12.1-point margin.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "racial depolarization",
+        "insight": "2024 polls showed signs of racial depolarization: white voters trending more Democratic and racial and ethnic minorities trending more Republican. This could produce more realignment than usual, with states like NH and FL moving off the map and Alaska coming into play.",
+        "evidence": "Many polls this cycle; Selzer Iowa poll showing Harris down only 4 is consistent with this.",
+        "forecasting_implication": "Historical state correlations may understate divergence between heavily Hispanic Sunbelt states and white Rust Belt states, so priors should let polls reveal the shift."
+      },
+      {
+        "topic": "educated white suburbs",
+        "insight": "Urban, white, well-educated districts such as NE-2 and KS-3 have been strong for Democrats.",
+        "evidence": "KS-3 2022 result; NE-2 included in Harris's minimum path.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "2022 red wave",
+        "insight": "The 2022 red-wave expectation was driven by vibes rather than data, and high-quality polls contradicted it.",
+        "evidence": "NYT/Siena House district polls.",
+        "forecasting_implication": "Weight objective polling data over narrative."
+      },
+      {
+        "topic": "Nebraska electoral vote allocation",
+        "insight": "A late 2024 Republican effort to make Nebraska winner-take-all appeared to have failed, so NE-2's electoral vote remained separately winnable.",
+        "evidence": "",
+        "forecasting_implication": "Model NE-2 as a separate contest."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin pollster ratings (Selzer #1, NYT/Siena #2; methodology for herding penalty)",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver/538 analysis of statistical evidence of herding in poll publication (PPP vs. Selzer), quoted block",
+        "url": ""
+      },
+      {
+        "description": "NYT/Siena Oct 2022 House district polls",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How exactly do the pollster ratings detect and penalize herding (metric, size of penalty)?",
+      "What is the functional form and weight of the demographic prior relative to state polls?",
+      "What is the correlation structure between states that generates the 147/40,000 joint outcome?",
+      "How large is the debate-related inflection adjustment, and how does the model handle it?"
+    ]
+  }
+}

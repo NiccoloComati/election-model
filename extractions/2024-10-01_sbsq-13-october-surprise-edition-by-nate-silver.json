@@ -1,0 +1,272 @@
+{
+  "article": {
+    "date": "2024-10-01",
+    "title": "SBSQ #13: October Surprise edition",
+    "subtitle": "Is Shohei Ohtani the GOAT? What effect could a hurricane have on the election? And what do I think of the new 538 model?",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/sbsq-13-october-surprise-edition",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-10-01_sbsq-13-october-surprise-edition-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.358043,
+    "prompt_tokens": 4,
+    "completion_tokens": 4459,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 33566,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:16:22"
+  },
+  "extraction": {
+    "summary": "A mixed-topic subscriber Q&A. Most of it is not about modeling: Republican distrust of the media, Shohei Ohtani, and whether Pittsburgh is in the Midwest. The model-relevant parts are a short discussion of Hurricane Helene's possible electoral effects, including skepticism about polls taken in disaster-affected areas, and a critique of 538's 2024 model under G. Elliot Morris. Silver says the original 538 model was broken: it barely reacted to polls and leaned almost entirely on fundamentals, keeping Biden at 50/50 after the debate. Its replacement weights polls heavily with little fundamentals input and passes a smell test, but Silver faults Morris for a lack of transparency and contrasts this with Silver Bulletin's practice of explaining model moves.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "FiveThirtyEight (2024, Morris era)",
+      "Earlier forecasters' 2016 models giving Clinton 99+ percent"
+    ],
+    "findings": [
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver says the original 2024 FiveThirtyEight model (Morris era) was broken. It basically did not react to new polling data and was almost entirely based on fundamentals, which was not how its designers intended it to behave.",
+        "quantities": [],
+        "rationale": "538 itself admitted the model did not react as expected when the polls diverged from the fundamentals in July 2024.",
+        "model_version": "538 2024 (original, pre-Harris)",
+        "evidence_quote": "It basically didn't react to new polling data at all, instead being almost entirely based on \"the fundamentals\". But this wasn't how they intended it to behave",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "According to 538's own admission, the old 538 2024 model could deviate from the polls because it did not explicitly dictate how much weight to put on polls versus fundamentals. The lesson for replication is that a model should specify the polls-vs-fundamentals weighting explicitly.",
+        "quantities": [],
+        "rationale": "Without an explicit weighting, the model's estimates drifted away from the polls once the polls moved away from the fundamentals.",
+        "model_version": "538 2024 (original)",
+        "evidence_quote": "This divergence was possible because the old model did not explicitly dictate how much weight to put on polls versus fundamentals.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "empirical_regularity",
+        "statement": "The original 538 2024 forecast showed Biden with roughly 50/50 chances even after the June 2024 debate, long after Biden's chances had cratered in the Silver Bulletin forecast and other models.",
+        "quantities": [
+          {
+            "name": "Biden win probability in 538 after debate",
+            "value": "50/50",
+            "unit": "percent",
+            "context": "538 2024 original model, post-debate, summer 2024"
+          }
+        ],
+        "rationale": "Silver attributes this to the model being broken.",
+        "model_version": "538 2024 (original)",
+        "evidence_quote": "538's forecast had shown Biden with 50/50 chances even after the debate, long after Biden's numbers had cratered in our forecast and other models.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "The 538 model was offline for several weeks after Harris replaced Biden. The relaunched model is completely different: it weights polls heavily and puts little emphasis on fundamentals.",
+        "quantities": [],
+        "rationale": "The relaunch was a fix for the old model's failure to respond to polls.",
+        "model_version": "538 2024 (revised, post-Harris)",
+        "evidence_quote": "the new model is completely different, weighting polls heavily with little emphasis on the fundamentals.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "empirical_regularity",
+        "statement": "As of October 1, 2024, the various forecast models had converged to show Kamala Harris as roughly a 55/45 favorite.",
+        "quantities": [
+          {
+            "name": "Harris win probability consensus",
+            "value": "roughly 55/45",
+            "unit": "percent",
+            "context": "Forecast models, October 1, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "all of the various forecast models have pretty much converged to show Kamala Harris as roughly a 55/45 favorite.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "The peaks of the two 2024 models ran in opposite directions. Harris peaked at 64 percent in the revised 538 forecast, while Trump peaked at 64 percent in the Silver Bulletin forecast. A reader noted that Harris was as low as 40% in Silver Bulletin when 538 had her at 60%.",
+        "quantities": [
+          {
+            "name": "Harris peak in 538",
+            "value": "64",
+            "unit": "percent",
+            "context": "538 2024 revised model"
+          },
+          {
+            "name": "Trump peak in Silver Bulletin",
+            "value": "64",
+            "unit": "percent",
+            "context": "Silver Bulletin 2024 model, around the post-convention period"
+          },
+          {
+            "name": "Harris low in Silver Bulletin (reader claim)",
+            "value": "40",
+            "unit": "percent",
+            "context": "Same period, when 538 had Harris at 60%"
+          },
+          {
+            "name": "Harris in 538 at same time (reader claim)",
+            "value": "60",
+            "unit": "percent",
+            "context": "Same period"
+          }
+        ],
+        "rationale": "Silver says the Silver Bulletin forecast converged with 538's as much as 538's converged with his. The questioner speculated that the Silver Bulletin convention bounce adjustment was heavily weighted.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris peaked at 64 percent in their forecast while Trump peaked at 64 percent in ours.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin 2024 presidential model has a convention bounce adjustment. When readers question such adjustments, Silver Bulletin will rerun the model without the adjustment to show how much difference it makes.",
+        "quantities": [],
+        "rationale": "This is done for transparency.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If there's something like the convention bounce adjustment that people have questions about, we'll even run the numbers without it to show you how much difference it makes.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "design_principle",
+        "statement": "Silver Bulletin practice is to explain in detail any move in the model of more than a couple of points in either direction, and to run several Model Talk columns per month.",
+        "quantities": [
+          {
+            "name": "move threshold triggering explanation",
+            "value": "more than a couple of points",
+            "unit": "percentage points",
+            "context": "Silver Bulletin model communication"
+          }
+        ],
+        "rationale": "A model's value lies not just in what it says but in how it comes to its conclusions; black boxes undermine that.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If the Silver Bulletin model moves by more than a couple of points in any direction, we go to great lengths to explain exactly why.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver criticizes G. Elliot Morris (538) for providing little clarity into the model's inner workings. Because of this, Silver can only assume, rather than know, that the new 538 model's choices are reasonable.",
+        "quantities": [],
+        "rationale": "Models can be black boxes, and their value depends on how they reach their conclusions.",
+        "model_version": "538 2024 (revised)",
+        "evidence_quote": "These models can be \"black boxes\", and their value is not just in what they say but in how they come to their conclusions.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver says the revised 538 2024 model's output of Florida as a more likely tipping-point state than Wisconsin looks a little weird. He concedes that the Silver Bulletin model has quirks too and that modelers mostly make reasonable choices.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "538 2024 (revised)",
+        "evidence_quote": "some things in the 538 model look a little weird, like Florida being a more likely tipping-point state than Wisconsin",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "design_principle",
+        "statement": "State polling errors are correlated. Some forecasters in 2016 published a 99+ percent chance of Hillary Clinton winning because they failed to account for this correlation.",
+        "quantities": [
+          {
+            "name": "Clinton win probability in some 2016 forecasts",
+            "value": "99+",
+            "unit": "percent",
+            "context": "2016 forecasters that ignored correlated state errors"
+          }
+        ],
+        "rationale": "Ignoring correlated state errors produces drastic overconfidence.",
+        "model_version": "general principle",
+        "evidence_quote": "some forecasters published a 99+ percent chance of Hillary Clinton winning because they didn't understand that state polling errors are correlated.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Silver is skeptical of polls from North Carolina and Georgia conducted in the days right after Hurricane Helene, when power and basic services were knocked out in many places. This implies polls fielded during disaster disruption may be unreliable.",
+        "quantities": [],
+        "rationale": "Disrupted infrastructure likely compromises sampling.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "I'm not sure I'd really trust polls from these states conducted over the past several days with power and other basic services knocked out in so many places.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "natural disasters and elections",
+        "insight": "The empirical literature on natural disasters and elections is mixed. One paper finds earthquakes help incumbents in affected cities. Another, on Hurricane Sandy in 2012, finds increased polarization: blue counties got bluer and red counties got redder.",
+        "evidence": "Cited papers, not named in the text.",
+        "forecasting_implication": "There is no clear directional adjustment for disasters; treat them as added uncertainty."
+      },
+      {
+        "topic": "natural disasters and partisan preference",
+        "insight": "Silver speculates that effective disaster recovery reminds voters of government's positive role, which should help the left. Hurricanes also raise the salience of climate change, a good issue for Democrats, and can let incumbents look presidential, though that is muddied with Biden not running.",
+        "evidence": "Reasoning only.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "disaster turnout effects",
+        "insight": "Hurricane Helene damage could lower turnout in predominantly red areas of North Carolina and Georgia. However, officials are making special efforts to protect voting, and voters sometimes defiantly overcome barriers; turnout was very high during COVID in 2020.",
+        "evidence": "COVID 2020 turnout; North Carolina early voting accommodations.",
+        "forecasting_implication": "Do not assume a large turnout penalty from disaster disruption."
+      },
+      {
+        "topic": "October surprises",
+        "insight": "Silver judged escalating Middle East warfare and the port strike, which could significantly disrupt the economy, more likely than Helene to affect the 2024 campaign.",
+        "evidence": "",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "media trust and education polarization",
+        "insight": "Republican trust in mass media fell to 11% by 2023, versus 58% for Democrats and 29% for Independents, per Gallup. The decline is plausibly a linear trend driven by education polarization, with discontinuities around Fox News's rise in 2000 and the early Bush years and around Trump's emergence in 2016.",
+        "evidence": "Gallup chart, 1972-2023. Republican trust was 68% in 1972, roughly 52% in 1998, and dropped to the teens after 2016.",
+        "forecasting_implication": "This supports the view that the education realignment is shaping partisan coalitions."
+      }
+    ],
+    "references": [
+      {
+        "description": "538's own article admitting the old 2024 model failed to react to polls and describing the new, completely different model",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin article arguing the 538 model was broken",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin Model Talk columns and the convention bounce adjustment explanation",
+        "url": ""
+      },
+      {
+        "description": "Paper finding earthquakes help incumbents in affected cities",
+        "url": ""
+      },
+      {
+        "description": "Paper on Hurricane Sandy (2012) increasing polarization",
+        "url": ""
+      },
+      {
+        "description": "Gallup data on partisans' trust in mass media, 1972-2023",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What is the functional form and size of the Silver Bulletin convention bounce adjustment, and how much did it account for Trump's 64% peak?",
+      "How exactly does the revised 538 2024 model weight polls versus fundamentals?",
+      "Does the Silver Bulletin model downweight or flag polls fielded during natural-disaster disruptions?"
+    ]
+  }
+}

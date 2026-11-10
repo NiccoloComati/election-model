@@ -1,0 +1,186 @@
+{
+  "article": {
+    "date": "2026-06-01",
+    "title": "Should Democrats panic about Platner?",
+    "subtitle": "Maine polls have a recent history of underrating Susan Collins and other Republicans.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/should-democrats-panic-about-platner",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2026-06-01_should-democrats-panic-about-platner-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:30:04"
+  },
+  "extraction": {
+    "summary": "Silver assesses the Maine Senate race after reports about Democratic candidate Graham Platner's sexts. The modeling content: Maine polls have underrated Republicans by about 4 points since 2014; Silver Bulletin's Maine benchmark is D+14.6; the 2020 FiveThirtyEight model rated Maine a toss-up because sparse polling made it lean on fundamentals; and the model has since been made less sensitive to candidate-quality factors. He also says scandals and lack of electoral experience still cost candidates in the model, and that Maine is weakly correlated with other states, so outcomes there are more uncertain.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "FLIPR 2026 midterms model",
+      "FiveThirtyEight 2020 Senate model",
+      "Silver Bulletin state benchmarks"
+    ],
+    "findings": [
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "parameter_or_number",
+        "statement": "Silver Bulletin's statewide benchmark for Maine was D+14.6 as of June 1, 2026, combining Democrats' generic ballot lead with Maine's increasingly blue lean; it represents the expected margin for a generic Democrat versus a generic Republican.",
+        "quantities": [
+          {
+            "name": "Maine benchmark",
+            "value": "D+14.6",
+            "unit": "points",
+            "context": "June 1, 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 / Silver Bulletin benchmarks",
+        "evidence_quote": "our current benchmark for the state is D +14.6.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Since 2014, in Maine races with two or more polls in the final three weeks, Republicans have beaten their polls by about 4 points on average. There was no consistent bias before 2014, though Collins outperformed her polls substantially in 2008 and underperformed them in 2002.",
+        "quantities": [
+          {
+            "name": "average Republican overperformance of polls in Maine",
+            "value": "about 4",
+            "unit": "points",
+            "context": "races since 2014 with 2+ polls in final three weeks"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling database",
+        "evidence_quote": "Since 2014, in Maine races with two or more polls in the final three weeks, Republicans have beaten their polls by about 4 points on average.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Collins beat Sara Gideon by 8.6 points in 2020 despite trailing in almost every poll, one of the largest polling errors in the Silver Bulletin/FiveThirtyEight database.",
+        "quantities": [
+          {
+            "name": "Collins 2020 margin",
+            "value": "8.6",
+            "unit": "points",
+            "context": "Maine Senate 2020"
+          }
+        ],
+        "rationale": "",
+        "model_version": "polling database",
+        "evidence_quote": "wound up beating Gideon by 8.6 points, making for one of the largest polling errors in our extensive polling database.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "method",
+        "statement": "When polling in a state is sparse, the model defaults more toward fundamentals. In 2020 it therefore rated Maine a toss-up instead of following Gideon's polling lead, partly because of Collins's history of landslide wins and her bipartisan voting record.",
+        "quantities": [],
+        "rationale": "Sparse polls carry little weight, so priors dominate.",
+        "model_version": "FiveThirtyEight 2020 Senate model",
+        "evidence_quote": "the model defaulted more toward “fundamentals” because polling in the state was sparse.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "Candidates who defy their party more often in congressional votes tend to overperform electorally, and the model has used voting-record independence as a fundamentals factor.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight/FLIPR Senate model",
+        "evidence_quote": "candidates who more often defy their party in Congress tend to overperform electorally",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "model_change",
+        "statement": "After 2020, the model was tweaked to be less sensitive to candidate-quality factors of any kind and more keyed to raw partisanship, as expressed in the statewide benchmark. Fundamentals still matter some.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026 vs FiveThirtyEight 2020",
+        "evidence_quote": "We’ve since tweaked our model to be less sensitive to “candidate quality” factors of any kind and more keyed to raw partisanship",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "The model penalizes a candidate's lack of electoral experience, and Silver Bulletin has found that prominent scandals can subtract several points from a candidate's vote share even with less ticket-splitting than in the past.",
+        "quantities": [
+          {
+            "name": "scandal penalty",
+            "value": "several",
+            "unit": "points",
+            "context": "prominent scandals"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "we’ve found that prominent scandals can subtract several points from a candidate’s vote share",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "Maine is demographically and politically among the biggest outliers and least correlated with other states. In the model's logic, low correlation with other states makes a state's outcome more uncertain, because less can be inferred from the national picture than in a state like Pennsylvania.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Demographically and politically, Maine is among the biggest outliers and the least correlated with other states",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Silver attributes the 2020 Maine miss partly to a general 2020 polling error that badly overestimated Democrats, possibly due to COVID-related behavior, and partly to late news (Collins voting against Amy Coney Barrett) that most polling predated.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2020 analysis",
+        "evidence_quote": "polls badly overestimated Democrats that year",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "Maine trending blue",
+        "insight": "Maine has become bluer as recent transplants come overwhelmingly from Democratic-leaning groups: Clinton won by 3 points in 2016, Harris by 7 in 2024.",
+        "evidence": "Presidential margins 2016 and 2024.",
+        "forecasting_implication": "Partisan lean should weight recent elections more heavily."
+      },
+      {
+        "topic": "check-and-balance ticket splitting",
+        "insight": "In 2020 Maine ticket-splitters may have backed Collins as a check on an expected Democratic president; with Trump in office in 2026 that motive is absent.",
+        "evidence": "",
+        "forecasting_implication": "Incumbent overperformance can depend on which party holds the White House."
+      },
+      {
+        "topic": "variance of candidates",
+        "insight": "A conventional candidate like Mills is a lower-variance bet, which is what a party wants in a blue state in a blue year.",
+        "evidence": "",
+        "forecasting_implication": "Candidate uncertainty should widen outcome distributions."
+      }
+    ],
+    "references": [
+      {
+        "description": "Wall Street Journal report on Platner's texts",
+        "url": ""
+      },
+      {
+        "description": "Matt Yglesias on the Maine Senate race",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact size of the scandal and inexperience penalties in FLIPR.",
+      "How state correlation is estimated and how it feeds state-level uncertainty."
+    ]
+  }
+}

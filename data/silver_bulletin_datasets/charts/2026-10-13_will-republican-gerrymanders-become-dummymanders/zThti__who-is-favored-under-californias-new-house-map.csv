@@ -1,0 +1,53 @@
+code,district,label,dem_win,rep_win,other_win,dem,rep,rating,margin
+0601,CA-1,1,99.4,0.6,0.0,Mike McGuire,James Gallagher,Solid D,20.4
+0602,CA-2,2,100.0,0.0,0,Jared Huffman,Robin Littau,Solid D,36.7
+0603,CA-3,3,99.5,0.5,0.0,Ami Bera,Robb Tucker,Solid D,19.6
+0604,CA-4,4,100.0,0.0,0,Mike Thompson,No Republican,Solid D,100.0
+0605,CA-5,5,1.6,98.4,0,Michael Masuda,Tom McClintock,Solid R,-15.5
+0606,CA-6,6,98.6,1.4,0.0,Richard Pan,No Republican,Solid D,17.6
+0607,CA-7,7,100.0,0.0,0,Doris Matsui,No Republican,Solid D,100.0
+0608,CA-8,8,100.0,0.0,0,John Garamendi,Rudy Recile,Solid D,46.6
+0609,CA-9,9,100.0,0.0,0,Josh Harder,John McBride,Solid D,27.3
+0610,CA-10,10,100.0,0.0,0,Mark DeSaulnier,Jeffrey Frese,Solid D,42.0
+0611,CA-11,11,100.0,0.0,0,Scott Wiener,No Republican,Solid D,100.0
+0612,CA-12,12,100.0,0.0,0,Lateefah Simon,No Republican,Solid D,100.0
+0613,CA-13,13,97.8,2.2,0.0,Adam Gray,Kevin Lincoln,Solid D,15.5
+0614,CA-14,14,100.0,0.0,0,Aisha Wahab,No Republican,Solid D,100.0
+0615,CA-15,15,100.0,0.0,0,Kevin Mullin,Charles Hoelter,Solid D,59.2
+0616,CA-16,16,100.0,0.0,0,Sam Liccardo,Peter Soule,Solid D,58.4
+0617,CA-17,17,100.0,0.0,0.0,Ro Khanna,Ritesh Tandon,Solid D,50.7
+0618,CA-18,18,100.0,0.0,0,Zoe Lofgren,Shane Lewis,Solid D,41.0
+0619,CA-19,19,100.0,0.0,0,Jimmy Panetta,Peter Verbica,Solid D,45.4
+0620,CA-20,20,0.0,100.0,0,Sandra Van Scotter,Vince Fong,Solid R,-30.7
+0621,CA-21,21,99.3,0.7,0.0,Jim Costa,Kyle Kirkland,Solid D,18.7
+0622,CA-22,22,93.9,6.1,0.0,Randy Villegas,David G. Valadao,Likely D,10.9
+0623,CA-23,23,2.0,98.0,0.0,Tessa Lynn Hodge,Jay Obernolte,Solid R,-15.3
+0624,CA-24,24,100.0,0.0,0.0,Salud Carbajal,Bob Smith,Solid D,33.0
+0625,CA-25,25,99.7,0.3,0.0,Raul Ruiz,Joe Males,Solid D,21.6
+0626,CA-26,26,99.9,0.1,0,Jacqui Irwin,Samuel Gallucci,Solid D,25.7
+0627,CA-27,27,99.9,0.1,0.0,George Whitesides,Jason Gibbs,Solid D,22.9
+0628,CA-28,28,100.0,0.0,0,Judy Chu,April Verlato,Solid D,37.7
+0629,CA-29,29,100.0,0.0,0,Luz Maria Rivas,No Republican,Solid D,100.0
+0630,CA-30,30,100.0,0.0,0,Laura Friedman,Scott Meyers,Solid D,52.7
+0631,CA-31,31,99.9,0.1,0.0,Gil Cisneros,Eric Ching,Solid D,25.2
+0632,CA-32,32,100.0,0.0,0.0,Brad Sherman,Larry Thompson,Solid D,37.6
+0633,CA-33,33,100.0,0.0,0,Pete Aguilar,Stephanie Vargas,Solid D,27.0
+0634,CA-34,34,100.0,0.0,0,Jimmy Gomez,No Republican,Solid D,100.0
+0635,CA-35,35,99.9,0.1,0.0,Norma Torres,Mike Cargile,Solid D,23.8
+0636,CA-36,36,100.0,0.0,0,Ted Lieu,Houston Brignano,Solid D,47.5
+0637,CA-37,37,100.0,0.0,0,Sydney Kamlager-Dove,No Republican,Solid D,100.0
+0638,CA-38,38,100.0,0.0,0.0,Hilda Solis,Pedro Casas,Solid D,29.4
+0639,CA-39,39,99.9,0.1,0,Mark Takano,Steve Manos,Solid D,26.3
+0640,CA-40,40,0.0,100.0,0,No Democrat,Ken Calvert,Solid R,-100.0
+0641,CA-41,41,100.0,0.0,0.0,Linda T. Sánchez,Mitch Clemmons,Solid D,29.9
+0642,CA-42,42,99.9,0.1,0.0,Robert Garcia,Brian Burley,Solid D,23.0
+0643,CA-43,43,100.0,0.0,0,Maxine Waters,Cristian Morales,Solid D,63.3
+0644,CA-44,44,100.0,0.0,0,Nanette Barragán,Genevieve Angel,Solid D,50.9
+0645,CA-45,45,95.1,4.9,0.0,Derek Tran,Chuong Vo,Solid D,12.4
+0646,CA-46,46,100.0,0.0,0.0,Lou Correa,David Pan,Solid D,32.7
+0647,CA-47,47,99.6,0.4,0,Dave Min,Jenny Rae Le Roux,Solid D,19.8
+0648,CA-48,48,90.0,10.0,0,Marni von Wilpert,Jim Desmond,Likely D,8.3
+0649,CA-49,49,99.8,0.2,0,Mike Levin,Armen Kurdian,Solid D,21.7
+0650,CA-50,50,100.0,0.0,0,Scott Peters,Steve Cohen,Solid D,26.7
+0651,CA-51,51,100.0,0.0,0,Sara Jacobs,Ricardo Cabrera,Solid D,28.9
+0652,CA-52,52,100.0,0.0,0,Juan C. Vargas,Jeff Belle,Solid D,34.0

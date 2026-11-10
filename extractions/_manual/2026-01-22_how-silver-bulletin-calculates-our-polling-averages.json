@@ -1,0 +1,340 @@
+{
+ "summary": "Methodology page for Silver Bulletin's continuously updated polling averages (presidential approval, generic congressional ballot, Elon Musk favorability), which descend from Silver's FiveThirtyEight methods. It covers poll inclusion rules, a three-factor poll weighting scheme with a cap on prolific pollsters, local polynomial regression smoothing tuned to predict upcoming polls, an iterative house-effects adjustment with partisan priors, 90 percent error bands, and state generic-ballot benchmarks built from partisan lean and elasticity. It notes that the full election forecasts add further steps beyond these simple averages.",
+ "model_content_level": "high",
+ "models_discussed": [
+  "Silver Bulletin polling averages",
+  "Silver Bulletin presidential approval average",
+  "Silver Bulletin generic ballot average",
+  "FLIPR 2026 midterms model",
+  "FiveThirtyEight (Silver era, 2008-2022)"
+ ],
+ "findings": [
+  {
+   "component": "data_sources_and_poll_inclusion",
+   "finding_type": "design_principle",
+   "statement": "Silver Bulletin polling averages aim to include all professionally conducted surveys, listing them under the polling firm rather than the media sponsor.",
+   "quantities": [
+    {
+     "name": "update frequency",
+     "value": "~6",
+     "unit": "updates per week",
+     "context": "polling averages"
+    }
+   ],
+   "rationale": "Inclusivity is the general aim; reliability is handled through weighting rather than exclusion.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "Our general aim is for inclusivity. We seek to include all professionally-conducted surveys.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "data_sources_and_poll_inclusion",
+   "finding_type": "method",
+   "statement": "Silver Bulletin excludes four kinds of polls: those from pollsters banned for known or suspected faked data, DIY polls by non-professional hobbyists on platforms like Google Surveys, 'polls' that blend or smooth data with methods such as MRP, and polls that ask vote choice only after revealing leading information about candidates.",
+   "quantities": [],
+   "rationale": "These are not genuine, independent, neutrally worded measurements of opinion.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "We don't use \"polls\" that blend or smooth their data using methods such as MRP.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "data_sources_and_poll_inclusion",
+   "finding_type": "method",
+   "statement": "Internal and campaign polls are included if they meet the other standards. For approval averages they are treated like any other poll; for the generic ballot they get a different house-effect prior. Nominally nonpartisan pollsters with undisclosed histories of partisan work, currently Trafalgar Group and Rasmussen Reports, are automatically classified as partisan.",
+   "quantities": [],
+   "rationale": "Undisclosed campaign relationships make a firm's polls behave like partisan polls.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "Internal or campaign polls are included, provided they meet these other standards.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "likely_voter_and_population_adjustments",
+   "finding_type": "method",
+   "statement": "When a pollster publishes several versions of one survey, the generic ballot average prefers likely voters over registered voters over all adults, while approval averages prefer the reverse order (with a separate likely-voter-only approval average). All averages prefer versions that include leaners. When a survey has several turnout models or methods, all applicable versions are averaged.",
+   "quantities": [],
+   "rationale": "Election-oriented measures should reflect the electorate; approval measures the whole public.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "we prioritize polls of likely voters > registered voters > all adults. For approval ratings, the opposite is true",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "data_sources_and_poll_inclusion",
+   "finding_type": "method",
+   "statement": "The generic ballot average pools two question wordings: which party's candidate the voter will support for Congress, and which party they would prefer to control Congress.",
+   "quantities": [],
+   "rationale": "",
+   "model_version": "Silver Bulletin generic ballot average (2026)",
+   "evidence_quote": "two slightly distinct questions are included in the average",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "poll_weighting",
+   "finding_type": "method",
+   "statement": "Each poll gets an influence score from three factors: the Silver Bulletin pollster rating (historical accuracy plus membership in transparency initiatives), sample size with strong diminishing returns, and recency. The sample-size and recency settings are set empirically.",
+   "quantities": [],
+   "rationale": "Sample size matters less in practice than in theory, possibly because pollsters' complex weighting reduces the effective sample size.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "sample size makes less difference than it does in theory, and there are considerable diminishing returns from adding additional voters to the sample.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "poll_weighting",
+   "finding_type": "adjustment_rule",
+   "statement": "Recency weights are tuned to best predict new polls over the following two weeks. They are more aggressive for presidential approval than for the generic ballot or Musk favorability, and the generic ballot's recency weighting becomes more aggressive as Election Day approaches.",
+   "quantities": [
+    {
+     "name": "validation horizon for recency settings",
+     "value": "2",
+     "unit": "weeks",
+     "context": "settings chosen to predict polls in the subsequent two weeks"
+    }
+   ],
+   "rationale": "Approval ratings stabilize more quickly, so shifts are more likely to be signal than noise.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "based on which settings best predict new polls over the subsequent two weeks.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "poll_weighting",
+   "finding_type": "adjustment_rule",
+   "statement": "To stop one firm 'flooding the zone', weights are based on the total number of voters a pollster contacted in a time window. A firm that polls daily or weekly maxes out its total weight, which is divided among its surveys in that window. Tracking polls with overlapping sample dates get an additional adjustment.",
+   "quantities": [],
+   "rationale": "Prevents prolific pollsters from dominating the average through volume alone.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "it essentially \"maxes out\" the total weight assigned to the firm, and this weight is divided among all instances of the survey in a given window.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "polling_average_and_trend_estimation",
+   "finding_type": "method",
+   "statement": "The polling average on each date is a local polynomial regression using a blend of more aggressive and more conservative smoothing settings. The settings are chosen empirically so the average is stable, free of autoregression, and minimizes error in predicting the next new survey.",
+   "quantities": [],
+   "rationale": "The current average should be the best predictor of forthcoming polls.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "the current polling average should be the best predictor of forthcoming surveys.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "polling_average_and_trend_estimation",
+   "finding_type": "empirical_regularity",
+   "statement": "Too little smoothing overfits and makes the curve jumpy, while too much smoothing lags new trends. Empirically the generic ballot tends to be under-smoothed and too bouncy, which is less true for approval ratings, so approval settings are more aggressive.",
+   "quantities": [],
+   "rationale": "Bias-variance trade-off in smoothing.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "we've found that generic ballot can suffer from under-smoothing, making the average too \"bouncy,\"",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "house_effects",
+   "finding_type": "method",
+   "statement": "A house effect is a firm's persistent difference from other polls of the same race at the same time. Only a proportion of it is removed, and that proportion grows with the firm's total sample size on that question, from a small fraction for a firm with one or two polls to nearly 100 percent for very frequent pollsters.",
+   "quantities": [
+    {
+     "name": "share of house effect removed",
+     "value": "close to 100",
+     "unit": "percent",
+     "context": "firms that poll a question extremely often"
+    }
+   ],
+   "rationale": "Shrinkage: confidence in a firm's house effect grows with how much it has polled.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "The proportion subject to the house effects adjustment is based on the aggregate sample size of polling conducted by the firm.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "house_effects",
+   "finding_type": "model_change",
+   "statement": "The generic ballot uses a newer house-effect formula that starts with a smaller adjustment but ramps up faster as sample size grows. Silver Bulletin considers it slightly more accurate and expects to move approval averages to it, though it only changes results in the decimal places.",
+   "quantities": [],
+   "rationale": "Slightly more accurate.",
+   "model_version": "Silver Bulletin generic ballot average (2026)",
+   "evidence_quote": "starts out with a lower adjustment but ramps it up more quickly as the aggregate sample size increases.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "house_effects",
+   "finding_type": "method",
+   "statement": "House effects are estimated separately for each side, approve and disapprove or Democrat and Republican, rather than only on the margin. The model also adjusts for firms that persistently report more or fewer undecided voters than the average.",
+   "quantities": [],
+   "rationale": "Firms differ systematically in how many undecideds they report.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "Certain firms persistently include more or fewer undecided voters than the polling average, and so we adjust for this, too.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "house_effects",
+   "finding_type": "method",
+   "statement": "The 'true north' that polls are adjusted toward is weighted toward higher-rated pollsters. For the generic ballot, partisan-sponsored polls are excluded from the true-north calculation.",
+   "quantities": [],
+   "rationale": "The reference point for bias should come from the most reliable, non-partisan sources.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "Firms with higher pollster ratings have more influence on what our model considers to be \"true north\"",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "house_effects",
+   "finding_type": "method",
+   "statement": "House effects are found iteratively. First compute an average without adjustments, then estimate each firm's house effect against the polynomial curve, recompute the average with adjusted polls, re-estimate house effects, and repeat several times until there is no further improvement.",
+   "quantities": [],
+   "rationale": "House effects and the average depend on each other, so they are solved jointly.",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "The model loops through the process several times until there are no further gains to be had.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "house_effects",
+   "finding_type": "parameter_or_number",
+   "statement": "For the generic ballot and the horse-race averages used in forecasts, explicitly partisan polls start with a prior that they are biased toward the sponsor by a net of about 1.7 points. Nonpartisan polls start with a zero prior. Both priors are eventually overridden by the firm's actual track record against other polls. The prior is not used for presidential approval.",
+   "quantities": [
+    {
+     "name": "partisan poll prior bias",
+     "value": "~1.7",
+     "unit": "points (net margin)",
+     "context": "toward the sponsoring party, generic ballot and forecast horse-race averages"
+    }
+   ],
+   "rationale": "Default to assuming nonpartisan polls are unbiased and partisan polls lean toward their sponsor until data says otherwise.",
+   "model_version": "Silver Bulletin generic ballot and forecast averages (2026)",
+   "evidence_quote": "we assume they're slightly biased toward the sponsoring candidate or party. (More specifically, by a net of about 1.7 points.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "uncertainty_and_polling_error",
+   "finding_type": "method",
+   "statement": "The approval and generic ballot averages display shaded bands showing where 90 percent of new polls are projected to fall, based on historical analysis of such averages over several decades. The bands widen when there are fewer polls and when polls disagree more.",
+   "quantities": [
+    {
+     "name": "band coverage",
+     "value": "90",
+     "unit": "percent of new polls",
+     "context": "shaded error region on charts"
+    }
+   ],
+   "rationale": "",
+   "model_version": "Silver Bulletin polling averages (2026)",
+   "evidence_quote": "The shaded areas indicate where we project 90 percent of new polls to fall",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "fundamentals_partisan_lean_and_demographics",
+   "finding_type": "method",
+   "statement": "For each state, the generic ballot benchmark equals the state's partisan lean plus the national generic ballot multiplied by the state's elasticity.",
+   "quantities": [],
+   "rationale": "",
+   "model_version": "Silver Bulletin generic ballot average (2026)",
+   "evidence_quote": "Benchmark = partisan lean score + generic ballot * elasticity",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "fundamentals_partisan_lean_and_demographics",
+   "finding_type": "parameter_or_number",
+   "statement": "A state's partisan lean weights its vote relative to the nation 50 percent on the 2024 presidential election, 25 percent on 2020, and 25 percent on a rolling average of the last five state legislative elections. The legislative figure estimates the lower-chamber popular vote as if all seats were contested, using regression to handle uncontested seats.",
+   "quantities": [
+    {
+     "name": "weight on 2024 presidential",
+     "value": "50",
+     "unit": "percent",
+     "context": "partisan lean"
+    },
+    {
+     "name": "weight on 2020 presidential",
+     "value": "25",
+     "unit": "percent",
+     "context": "partisan lean"
+    },
+    {
+     "name": "weight on state legislative average",
+     "value": "25",
+     "unit": "percent",
+     "context": "rolling average of past five state legislative elections"
+    }
+   ],
+   "rationale": "Blends recent presidential results with down-ballot partisanship.",
+   "model_version": "Silver Bulletin generic ballot average (2026)",
+   "evidence_quote": "the formula gives 50 percent of the weight to the 2024 presidential election, 25 percent to the 2020 presidential election, and 25 percent to a rolling average",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "fundamentals_partisan_lean_and_demographics",
+   "finding_type": "parameter_or_number",
+   "statement": "Elasticity measures how strongly a state swings with the national environment. It is estimated from 2022 and 2024 Cooperative Election Study microdata by giving each voter a probability of voting D or R and treating voters near 50/50 as more swingable. Current values run from 0.90 in Mississippi to 1.23 in Alaska and 1.25 in Hawaii.",
+   "quantities": [
+    {
+     "name": "CES sample size",
+     "value": "60,000",
+     "unit": "voters per survey",
+     "context": "2022 and 2024 Cooperative Election Studies"
+    },
+    {
+     "name": "minimum elasticity",
+     "value": "0.90",
+     "unit": "",
+     "context": "Mississippi"
+    },
+    {
+     "name": "elasticity",
+     "value": "1.23",
+     "unit": "",
+     "context": "Alaska"
+    },
+    {
+     "name": "maximum elasticity",
+     "value": "1.25",
+     "unit": "",
+     "context": "Hawaii"
+    }
+   ],
+   "rationale": "Polarized electorates move little with the national tide, while states with more cross-pressured swing voters move more.",
+   "model_version": "Silver Bulletin / FiveThirtyEight elasticity concept, 2026 values",
+   "evidence_quote": "range from 0.90 in Mississippi to 1.23 in Alaska and 1.25 in Hawaii.",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "fundamentals_partisan_lean_and_demographics",
+   "finding_type": "method",
+   "statement": "Each voter's vote probability for the elasticity calculation is an average of two models. One uses political variables, namely party identification strength and liberal-conservative self-placement. The other uses demographics only. Cross-pressured voters therefore start closer to 50/50.",
+   "quantities": [],
+   "rationale": "Combining attitudinal and demographic predictors identifies cross-pressured voters.",
+   "model_version": "Silver Bulletin elasticity (2026)",
+   "evidence_quote": "these probabilities are based on an average of two formulas",
+   "explicitness": "explicit"
+  },
+  {
+   "component": "model_history_and_versions",
+   "finding_type": "model_change",
+   "statement": "The simple polling averages differ from the full election forecasts, which add extra steps and use more data, such as inferring information jointly from state and national polls. Silver retains the IP of the original FiveThirtyEight methods these averages descend from.",
+   "quantities": [],
+   "rationale": "",
+   "model_version": "Silver Bulletin polling averages vs. FLIPR forecasts",
+   "evidence_quote": "leverage the larger volume of polling data available (such as the ability to infer information from both state and national polls).",
+   "explicitness": "explicit"
+  }
+ ],
+ "political_insights": [
+  {
+   "topic": "swing voters and state elasticity",
+   "insight": "States like New Hampshire, with many independents and upper-middle-class suburban swing voters, respond more to national swings than polarized states like Mississippi, where voters are mostly firmly Democratic (largely Black voters) or firmly Republican (largely white evangelicals).",
+   "evidence": "Elasticity estimates from CES microdata, 0.90 in Mississippi to 1.25 in Hawaii.",
+   "forecasting_implication": "National swings should not be applied uniformly. Scale them by regional elasticity."
+  }
+ ],
+ "references": [
+  {
+   "description": "Past FiveThirtyEight methodology pages for polling averages",
+   "url": ""
+  },
+  {
+   "description": "Cooperative Election Study 2022 and 2024 microdata, used for elasticity",
+   "url": ""
+  },
+  {
+   "description": "Silver Bulletin pollster ratings, used in poll weighting and true north",
+   "url": ""
+  }
+ ],
+ "open_questions": [
+  "The exact functional forms for the sample-size and recency weights are not given.",
+  "The local polynomial regression bandwidths and the blend between aggressive and conservative settings are not specified.",
+  "The formula linking a firm's total sample size to the share of its house effect that is removed is not given.",
+  "How the forecast horse-race averages differ from these simple averages beyond combining state and national polls."
+ ]
+}

@@ -1,0 +1,358 @@
+{
+  "article": {
+    "date": "2024-09-19",
+    "title": "Don't let randomness make a fool of you",
+    "subtitle": "If you care about what happens in this election, don’t sweat the polls — go vote.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/dont-let-randomness-make-a-fool-of",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-09-19_dont-let-randomness-make-a-fool-of-you-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.408113,
+    "prompt_tokens": 8,
+    "completion_tokens": 9348,
+    "cache_read_tokens": 25287,
+    "cache_write_tokens": 27008,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:14:06"
+  },
+  "extraction": {
+    "summary": "A mostly personal/communication essay in which Silver reflects on the emotional and reputational costs of running the public Silver Bulletin presidential model (formerly the FiveThirtyEight model) in 2024 and urges readers not to overreact to individual polls. It contains a short worked explanation of sampling error: an 800-person poll has a ±3.5 point margin of error on one candidate's share and about ±7 on the margin, and averaging four such polls still leaves 3-4 points of error on the margin. Silver says the model's main value is accounting for systematic polling error, which is why its probabilities come from empirical polling accuracy rather than theoretical margins of error. He also notes the model estimates almost a 10% chance of a 2000-style recount in a decisive state, and warns against reading near-50/50 probabilities as deterministic calls.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "FiveThirtyEight (Silver era, 2008-2022)"
+    ],
+    "findings": [
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "The Silver Bulletin 2024 presidential model is the continuation of the former FiveThirtyEight model that Silver built. Silver describes it as the only model with any long-term track record, built on 16 years of running election forecasts.",
+        "quantities": [
+          {
+            "name": "years running election forecasts",
+            "value": "16",
+            "unit": "years",
+            "context": "Silver's forecasting experience as of 2024"
+          }
+        ],
+        "rationale": "The marginal cost of restarting the existing model was low.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the Silver Bulletin model — what was formerly the FiveThirtyEight model — is the best way I know for how to analyze what the polls are telling us",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin 2024 presidential model is run every day during the election season.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the physical process of running the model every day isn't so much work",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "In 2024 the probabilistic components of the Silver Bulletin presidential model, such as win probabilities, were placed behind a paywall for paid subscribers. These paywalled numbers frequently leaked to social media, so the plan to confine them to a self-selected audience failed.",
+        "quantities": [],
+        "rationale": "The aim was to keep the probabilities within a self-selected, sympathetic audience; Silver says this failed.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "putting the probabilistic component of the model behind a paywall",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "A typical state poll has about 800 respondents. Its theoretical margin of error is about ±3.5 points on one candidate's vote share.",
+        "quantities": [
+          {
+            "name": "typical poll sample size",
+            "value": "about 800",
+            "unit": "respondents",
+            "context": "typical poll, e.g. Wisconsin 2024"
+          },
+          {
+            "name": "margin of error, single candidate share",
+            "value": "±3.5",
+            "unit": "percentage points",
+            "context": "800-person poll, 95% confidence"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "A typical poll has about 800 respondents. Well, the margin of error in an 800-person poll is plus or minus 3.5 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "In a two-way race with negligible third-party vote, the margin of error on the gap between the candidates is roughly twice the margin of error on one candidate's share. For an 800-person poll this is about ±7 points.",
+        "quantities": [
+          {
+            "name": "margin of error on the margin",
+            "value": "about 7",
+            "unit": "percentage points",
+            "context": "800-person poll, two-candidate race"
+          },
+          {
+            "name": "multiplier",
+            "value": "roughly 2",
+            "unit": "x",
+            "context": "margin-of-error on the gap vs. on one candidate's share"
+          }
+        ],
+        "rationale": "Nearly every vote that is not a Harris vote is a Trump vote, so errors in the two shares are perfectly negatively correlated.",
+        "model_version": "general principle",
+        "evidence_quote": "So the margin of error on the difference separating the candidates is roughly twice that: about 7 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "With a true margin of Harris +1, sampling error alone will produce some polls ranging from Trump +5 to Harris +7. About 1 poll in 20 will be an outlier beyond the 95% interval, such as Harris +10 or Trump +8.",
+        "quantities": [
+          {
+            "name": "margin-of-error coverage",
+            "value": "95",
+            "unit": "percent",
+            "context": "share of polls expected inside the stated margin of error"
+          },
+          {
+            "name": "outlier frequency",
+            "value": "1 in 20",
+            "unit": "polls",
+            "context": "polls outside the margin of error if pollsters are honest"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "about 1 time in 20, you'll get a true outlier — a Harris +10 or a Trump +8 — provided that pollsters are being honest",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "In practice, pollsters herd toward the consensus and suppress outlier results. As a result, the published spread of polls is narrower than pure sampling error would produce.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "In practice, pollsters tend to herd toward the consensus and suppress outlier results.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "empirical_regularity",
+        "statement": "Averaging polls reduces sampling error only partially. Four 800-person polls are equivalent to a 3,200-voter sample, which still has a margin of error on the margin of 3 or 4 points. A true Harris +1 race could therefore show an average anywhere from Trump +2 to Harris +4.",
+        "quantities": [
+          {
+            "name": "number of polls averaged",
+            "value": "4",
+            "unit": "polls",
+            "context": "Wisconsin example"
+          },
+          {
+            "name": "pooled sample size",
+            "value": "3200",
+            "unit": "voters",
+            "context": "four 800-person polls combined"
+          },
+          {
+            "name": "margin of error on the margin",
+            "value": "3 or 4",
+            "unit": "percentage points",
+            "context": "pooled sample of 3,200"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "The margin of error on the difference separating the candidates is still 3 or 4 points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin model makes inferences about a state's polling from polls of other states, borrowing strength across states.",
+        "quantities": [],
+        "rationale": "This is described as part of the model's value beyond simple averaging.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "making inferences about what the polls in one state say based on polls of other states",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "design_principle",
+        "statement": "The Silver Bulletin model's more important function is to account for systematic polling error that affects polls collectively. An example is the error that substantially underestimated Trump in both 2016 and 2020.",
+        "quantities": [],
+        "rationale": "Sampling error understates real-world uncertainty.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "their more important function is by accounting for another possibility: the chance of a systematic polling error",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin model calibrates its win probabilities to the historical empirical accuracy of polls, not to theoretical sampling margins of error. Empirical error is considerably wider than theoretical error.",
+        "quantities": [],
+        "rationale": "Real-world margins of error are considerably wider than theoretical ones.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "they're derived from how accurate the polls really have been, in practice — and in practice, the margins of error are considerably wider than they are in theory",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "vote_counting_and_election_night",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin 2024 presidential model estimates the probability of a 2000-style recount in a decisive state, which implies it simulates close-margin outcomes in tipping-point states. As of September 19, 2024, it put this at almost 10%.",
+        "quantities": [
+          {
+            "name": "probability of 2000-style recount in decisive state",
+            "value": "almost 10",
+            "unit": "percent",
+            "context": "model estimate as of Sept 19, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "There's even almost a 10 percent chance of a 2000-style recount in a decisive state, the model figures.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Moves in state win probability near 50%, such as Trump going from 48% to 52% in Wisconsin, do not mean a candidate is being 'called'. Such shifts reflect high uncertainty and essentially no real change in the model.",
+        "quantities": [
+          {
+            "name": "example Wisconsin Trump probability shift",
+            "value": "48 to 52",
+            "unit": "percent",
+            "context": "illustrative"
+          }
+        ],
+        "rationale": "People treat probabilistic predictions as deterministic ones.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "People treat probabilistic predictions as deterministic ones",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "A 55/45 forecast for either candidate means the race is roughly a coin flip, whichever side is favored. By contrast, differences such as 75% vs. 85%, or Harris +4 vs. +8, matter less psychologically when one candidate leads clearly.",
+        "quantities": [
+          {
+            "name": "near-even forecast example",
+            "value": "55/45",
+            "unit": "percent",
+            "context": "either candidate favored"
+          },
+          {
+            "name": "comfortable lead example",
+            "value": "75 vs 85",
+            "unit": "percent",
+            "context": "win probability comparison"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "even though they're basically saying the same thing: the election is more or less a coin flip",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "interpretation_guidance",
+        "statement": "A well-calibrated forecast's 20% outcomes should occur about 20% of the time. An 80/20 forecast in which the underdog wins is therefore not evidence that the model failed.",
+        "quantities": [
+          {
+            "name": "example forecast",
+            "value": "80/20",
+            "unit": "percent",
+            "context": "Election Day forecast"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "as 20 percent probabilities have an uncanny knack for doing 20 percent of the time",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver dismisses 'unskewing the polls', meaning adjusting polls by hand to fit one's priors, as usually self-deception.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "You can unskew the polls, but usually, you're only fooling yourself.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "2024 candidate replacement",
+        "insight": "Silver suggests the Biden-Trump race might not have been close. Replacing Biden with Harris made the race likely to be close.",
+        "evidence": "Opinion; links to earlier analysis.",
+        "forecasting_implication": "Candidate replacement can materially change competitiveness."
+      },
+      {
+        "topic": "third parties in 2024",
+        "insight": "Third-party candidates played little role in the 2024 Harris-Trump race, making it effectively two-way.",
+        "evidence": "",
+        "forecasting_implication": "Error on the margin is about double the error on one candidate's share."
+      },
+      {
+        "topic": "systematic polling error direction",
+        "insight": "Polls substantially underestimated Trump in both 2016 and 2020.",
+        "evidence": "",
+        "forecasting_implication": "Allow for correlated systematic error across states."
+      },
+      {
+        "topic": "vote counting duration",
+        "insight": "Recent US presidential elections can take several days to resolve after Election Day.",
+        "evidence": "Recent elections",
+        "forecasting_implication": "Communicate election-night uncertainty."
+      },
+      {
+        "topic": "midterm salience",
+        "insight": "Public emotional intensity about forecasts is much lower for midterms than for presidential elections.",
+        "evidence": "",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Earlier Silver Bulletin post 'The election model is a little too popular' (about a year before this article)",
+        "url": ""
+      },
+      {
+        "description": "Link describing the Silver Bulletin model as formerly the FiveThirtyEight model (methodology)",
+        "url": ""
+      },
+      {
+        "description": "Link on the model's long-term track record (calibration)",
+        "url": ""
+      },
+      {
+        "description": "Link on the model's estimate of a 2000-style recount probability",
+        "url": ""
+      },
+      {
+        "description": "Link on systematic polling error",
+        "url": ""
+      },
+      {
+        "description": "Link on pollster herding",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How the model infers one state's polling from other states' polls (the correlation structure or regression method).",
+      "The size and distribution of the empirical polling error used, and how much wider it is than theoretical margins of error.",
+      "How the model defines and computes the probability of a 2000-style recount in a decisive state (the margin threshold used).",
+      "How systematic polling error is modeled across states (shared national error component, fat tails)."
+    ]
+  }
+}

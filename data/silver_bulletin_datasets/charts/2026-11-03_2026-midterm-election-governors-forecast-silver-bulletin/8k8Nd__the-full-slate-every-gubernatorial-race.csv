@@ -1,0 +1,86 @@
+cycle,branch,forecastdate,expression,state_district,candidate_last_name,candidate_party,win_probability,forecasted_vote_share,even_odd,race_rating,timestamp
+2026,Governor,11/3/26,lite,AK,Kreiss-Tomkins,D,0.96536666,50.695465,1,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,AK,Wilson,R,0.03456667,28.88834,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,AK,Bronson,R,0.00006667,11.814803,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,AK,Taylor,R,0,8.6013918,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,AL,Tuberville,R,0.90866667,53.98069,0,Likely R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,AL,Jones,D,0.09133333,46.01931,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,AR,Huckabee Sanders,R,0.98671669,57.730334,1,Solid R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,AR,Love,D,0.01326667,38.658349,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,AR,Shelby,I,0.00001667,3.6113169,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,AZ,Hobbs,D,0.94326669,53.392177,0,Likely D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,AZ,Biggs,R,0.05673333,44.434997,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,CA,Becerra,D,0.99981666,61.275012,1,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,CA,Hilton,R,0.00018333,38.724988,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,CO,Weiser,D,0.98646665,56.536422,0,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,CO,Marx,R,0.01353333,39.713928,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,CT,Lamont,D,0.99725002,58.445166,1,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,CT,Fazio,R,0.00275,41.554834,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,FL,Donalds,R,0.83156669,50.208914,0,Likely R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,FL,Jolly,D,0.16843334,46.09505,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,GA,Bottoms,D,0.56196666,50.372942,1,Toss-up,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,GA,Jackson,R,0.43803334,49.627058,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,HI,Green,D,0.99711668,69.50471,0,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,HI,Cordery,R,0.00288333,30.49529,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,IA,Sand,D,0.93656665,53.914917,1,Likely D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,IA,Lahn,R,0.06343333,46.085083,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,ID,Little,R,0.99346668,57.151058,0,Solid R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,ID,Pickens,D,0.00653333,35.888686,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,IL,Pritzker,D,0.99668336,59.467935,1,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,IL,Bailey,R,0.00331667,38.531654,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,IL,Corbett,I,0,2.0004106,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,KS,Masterson,R,0.50241667,50.010046,0,Toss-up,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,KS,Holscher,D,0.49758333,49.989954,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,MA,Healey,D,0.99975002,60.341958,1,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,MA,Minogue,R,0.00025,37.101333,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,MA,James,I,0,2.5567081,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,MD,Moore,D,0.99803334,59.601829,0,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,MD,Cox,R,0.00196667,34.834863,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,ME,Pingree,D,0.98133332,54.386927,1,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,ME,Charles,R,0.01866667,44.093136,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,ME,Bennett,I,0,1.5199369,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,MI,Benson,D,0.97095001,53.331762,0,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,MI,James,R,0.02905,44.778355,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,MN,Klobuchar,D,0.98726666,55.304901,1,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,MN,Demuth,R,0.01273333,43.408496,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,MN,Young,I,0,1.2866026,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NE,Pillen,R,0.85136664,51.11906,0,Likely R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NE,Walz,D,0.14863333,45.610721,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NH,Ayotte,R,0.89256668,52.489137,1,Likely R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NH,Warmington,D,0.10743333,45.895156,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NH,Villee,I,0,1.6157076,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NM,Haaland,D,0.87868333,53.763657,0,Likely D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NM,Hull,R,0.12131666,46.236343,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NV,Ford,D,0.51051664,49.199689,1,Toss-up,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NV,Lombardo,R,0.48948333,48.996958,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NV,Ford,I,0,1.8033528,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NY,Hochul,D,0.98680001,55.878577,0,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,NY,Blakeman,R,0.0132,44.121423,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,OH,Acton,D,0.84640002,51.642801,1,Likely D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,OH,Ramaswamy,R,0.15360001,47.211129,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,OH,Kissick,I,0,1.1460698,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,OK,Mazzei,R,0.8962,54.174199,0,Likely R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,OK,Munson,D,0.1038,43.334829,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,OR,Kotek,D,0.58486664,48.606855,1,Toss-up,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,OR,Drazan,R,0.41513333,47.004118,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,PA,Shapiro,D,0.99946666,60.802064,0,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,PA,Garrity,R,0.00053333,37.600701,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,PA,Krawchuk,I,0,1.5972356,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,RI,Foulkes,D,0.99983335,63.544819,1,Solid D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,RI,Guckian,R,0.00016667,26.385804,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,SC,Wilson,R,0.95186669,53.413483,0,Solid R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,SC,Johnson,D,0.04813333,44.668439,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,SD,Rhoden,R,0.99448335,58.236619,1,Solid R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,SD,Ahlers,D,0.00551667,41.763381,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,TN,Blackburn,R,0.96076667,51.481061,0,Solid R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,TN,Green,D,0.03923333,38.510626,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,TX,Abbott,R,0.63725001,50.060768,1,Lean R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,TX,Hinojosa,D,0.36274999,48.484886,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,TX,Dixon,I,0,1.4543456,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,VT,Janoo,D,0.55971664,48.32654,0,Toss-up,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,VT,Scott,R,0.44028333,47.239399,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,WI,Crowley,D,0.82498336,52.756929,1,Likely D,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,WI,Tiffany,R,0.17501667,47.243071,1,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,WY,Barlow,R,0.99403334,64.088393,0,Solid R,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,WY,Casner,D,0.00596667,32.58904,0,,23:25:47  2 Nov 2026
+2026,Governor,11/3/26,lite,WY,Bextel,I,0,3.322567,0,,23:25:47  2 Nov 2026

@@ -1,0 +1,222 @@
+{
+  "article": {
+    "date": "2024-07-05",
+    "title": "The broken leg problem",
+    "subtitle": "Our model is pessimistic for Biden. But the reality is probably worse.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/the-broken-leg-problem",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-07-05_the-broken-leg-problem-by-nate-silver-silver-bulletin"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.343072,
+    "prompt_tokens": 8,
+    "completion_tokens": 7492,
+    "cache_read_tokens": 22880,
+    "cache_write_tokens": 23578,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:04:48"
+  },
+  "extraction": {
+    "summary": "First 'Model Talk' column for the Silver Bulletin 2024 presidential model, published after the Biden-Trump debate. Silver invokes Paul Meehl's 'broken leg' problem to argue that the model's 28% Biden win probability is probably too optimistic. The model, built on elections since 1968, implicitly assumes Biden will campaign like a league-average Democrat, which his condition makes unlikely. He also describes a technical issue: plentiful national polls but sparse swing-state polls led the model to update state forecasts only conservatively, partly because it entertained the possibility that Biden's losses were concentrated in noncompetitive states. He says that if Biden drops out, the forecast would be suspended for about two weeks until enough polling of the replacement exists.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "prediction markets"
+    ],
+    "findings": [
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "model_change",
+        "statement": "The Silver Bulletin 2024 presidential forecast was originally planned to update weekly for paid subscribers through Labor Day and more often afterward. Instead it moved to more frequent updates on a dedicated landing page.",
+        "quantities": [],
+        "rationale": "They wanted to update much more often than weekly, and burying the numbers in newsletter posts would be awkward.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we were going to want to update the forecast a lot more often than once a week",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "adjustment_rule",
+        "statement": "If Biden drops out, the Silver Bulletin 2024 presidential model would be paused for roughly two weeks until enough polling exists to benchmark the replacement candidate, and then turned back on. No forecast of an alternative candidate would be published before then.",
+        "quantities": [
+          {
+            "name": "wait before restarting forecast after candidate replacement",
+            "value": "about two weeks",
+            "unit": "weeks",
+            "context": "Silver's guess at the time needed for enough polling of a replacement Democratic nominee"
+          }
+        ],
+        "rationale": "Publishing earlier would be irresponsible. Without real polling, a model would just be speculative assumptions in an unprecedented situation.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we'll wait what I'm guessing will be about two weeks until there's enough polling to benchmark how his replacement is faring, and then turn it back on.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "empirical_regularity",
+        "statement": "Polling often changes drastically once a candidate goes from hypothetical to actual (a point credited to Nate Cohn). Hypothetical matchup polls are therefore a poor basis for forecasting a replacement candidate.",
+        "quantities": [],
+        "rationale": "There is no relevant empirical data for an unprecedented replacement scenario.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the polling often changes drastically once a candidate goes from a hypothetical candidate to an actual one.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "data_source",
+        "statement": "The Silver Bulletin 2024 presidential model's win probabilities are calibrated on historical presidential elections since 1968.",
+        "quantities": [
+          {
+            "name": "start year of training data",
+            "value": "1968",
+            "unit": "year",
+            "context": "historical elections used to formulate forecast probabilities"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "That 28 percent chance is formulated from past data on elections since 1968.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "assumption",
+        "statement": "The Silver Bulletin 2024 presidential model implicitly assumes each candidate will run a league-average campaign for their party between now and election day. It has no adjustment for a candidate who is incapable of campaigning normally. Silver offers 2004 John Kerry as an example of a league-average Democrat.",
+        "quantities": [],
+        "rationale": "The model is trained on historical candidates, so it reflects average campaign performance.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Roughly speaking, the model assumes that Joe Biden will be a league-average Democratic candidate between now and November.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "parameter_or_number",
+        "statement": "After the June 2024 debate, Biden's win probability in the Silver Bulletin 2024 presidential model fell to 28 percent from 35 percent before the debate.",
+        "quantities": [
+          {
+            "name": "Biden win probability pre-debate",
+            "value": "35",
+            "unit": "percent",
+            "context": "Silver Bulletin forecast before the June 2024 debate"
+          },
+          {
+            "name": "Biden win probability post-debate",
+            "value": "28",
+            "unit": "percent",
+            "context": "Silver Bulletin forecast as of July 5, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "to 28 percent now from 35 percent before the debate",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "design_principle",
+        "statement": "Silver endorses Meehl's 'broken leg' heuristic: override or discount a model's output when there is a material factor outside its training data. The heuristic should be used sparingly, only when the extenuating circumstance is obvious enough that any reasonable nonpartisan observer would agree. Forecasters usually err in the opposite direction, through too much special pleading.",
+        "quantities": [],
+        "rationale": "Real life is messy, but subjective overrides usually do more harm than good.",
+        "model_version": "general principle",
+        "evidence_quote": "You should reserve it for cases where it's bloody obvious there's some extenuating circumstance that any reasonable nonpartisan observer could agree upon.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver judges the model's 28% Biden probability to be too optimistic, because the model is not designed to account for Biden's condition. He does not change the model; he instead tells readers about the circumstance qualitatively, as he promised at launch to do.",
+        "quantities": [],
+        "rationale": "Biden cannot wage a league-average campaign.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "I promised that I'd tell you if we reached a point where there were material circumstances that weren't being handled well by the model. We're in such a circumstance.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "Polling error preserves some chance for a trailing candidate even in a 'deterministic-seeming' situation. Unlike a game's final score, the polls can be wrong.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "unlike in football, the \"final score\" in elections isn't always accurate — sometimes the polls are wrong.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "When swing-state polls are out of date, the Silver Bulletin 2024 presidential model revises its state-by-state forecasts using national polling data, transmitting national shifts to the states.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model is supposed to revise its state-by-state forecasts using national data if the swing state polls are out-of-date",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "After the debate, the Silver Bulletin 2024 presidential model was too conservative in reflecting the post-debate poll shift: national polls were plentiful but swing-state polls were sparse. Conflicting heuristics let the model 'hold out hope' that Biden's national decline was concentrated in rarely polled, noncompetitive states such as Alabama and Massachusetts. Silver considers that unrealistic and expects it to correct as state polls arrive.",
+        "quantities": [],
+        "rationale": "With little state polling, the model allows national shifts to be unevenly distributed across states.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it's holding out hope that maybe Biden's problems are contained to noncompetitive states — that he's losing ground in states like Alabama and Massachusetts that aren't polled much.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver cites prediction markets as indicating Biden was more likely than not to drop out by election day, and calls that conclusion basically sensible. He uses markets as an external benchmark for events the model does not handle.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "more likely than not to drop out by election Day, at least according to prediction markets, a conclusion I find basically sensible.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "fundamentals and candidate performance",
+        "insight": "In 2004 John Kerry lost to George W. Bush by only about 2 points, even though fundamentals (incumbency and a decent economy) favored Bush. Silver presents this as a league-average Democratic performance.",
+        "evidence": "Bush was an incumbent, and the economy was doing decently; Bush won by a mere 2 points.",
+        "forecasting_implication": "A baseline for what average candidate quality looks like relative to fundamentals."
+      },
+      {
+        "topic": "candidate fitness and age",
+        "insight": "A candidate visibly unable to campaign (Biden at 81 after the debate) likely underperforms what historically trained models assume, and voters recognize it.",
+        "evidence": "Debate performance, reliance on teleprompters, verbal stumbles, and loss of party confidence.",
+        "forecasting_implication": "Candidate-specific capability shocks may warrant downward qualitative adjustments beyond what the model captures."
+      },
+      {
+        "topic": "unusual elections",
+        "insight": "Recent elections have been highly unusual, with COVID in 2020 and a possible candidate withdrawal in 2024. This limits how directly historical data apply.",
+        "evidence": "",
+        "forecasting_implication": "Expect circumstances outside the training data."
+      }
+    ],
+    "references": [
+      {
+        "description": "Paul E. Meehl (1957), 'When shall we use our heads instead of the formula?'",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin 2024 presidential forecast landing page and launch/methodology post (launched the week before)",
+        "url": ""
+      },
+      {
+        "description": "Nate Cohn on polling changing once a hypothetical candidate becomes an actual one",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How exactly does the model blend national polls into state forecasts when state polls are stale, and what weights or decay does it use?",
+      "What are the 'conflicting heuristics' that let the model attribute national shifts to noncompetitive states?",
+      "What criteria determine 'enough polling' to restart the forecast after a candidate replacement?",
+      "Which features of the 1968-onward training data set the uncertainty that yields 28%?"
+    ]
+  }
+}

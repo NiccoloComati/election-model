@@ -1,0 +1,437 @@
+{
+  "article": {
+    "date": "2024-08-26",
+    "title": "How big will the bounce be?",
+    "subtitle": "The bull and the bear case for Harris’s post-convention numbers.",
+    "authors": "Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/how-big-will-the-bounce-be",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-08-26_how-big-will-the-bounce-be-by-eli-mckown-dawson"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.521858,
+    "prompt_tokens": 8,
+    "completion_tokens": 12839,
+    "cache_read_tokens": 28711,
+    "cache_write_tokens": 32413,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:09:47"
+  },
+  "extraction": {
+    "summary": "Eli McKown-Dawson examines how big Kamala Harris's post-DNC convention bounce might be and how the Silver Bulletin 2024 presidential model will treat it. Historical bounces averaged 5 points from 1964-2020, just over 6 points from 1964-2000, and only 1.8 points after 2000. The model expects a modest net bounce of 2 to 2.5 points and applies a convention bounce adjustment that shaves support off post-DNC polls, so a bounce of the expected size leaves the forecast unchanged. The article sets out three scenarios: expected, small, or larger-than-expected bounce. It notes that RFK Jr.'s simultaneous exit and the confounded RNC bounce (assassination attempt, VP pick, Biden's withdrawal) make the bounce hard to read. The PDF is a full rendering despite the paywall flag.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages"
+    ],
+    "findings": [
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin 2024 presidential model applies a convention bounce adjustment that shaves some support off a candidate's post-convention polls. The adjustment is applied regardless of what the polls actually show.",
+        "quantities": [],
+        "rationale": "Convention bounces are typically short-term and are expected to fade.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "no matter what the polls look like, our model will apply a convention bounce adjustment that shaves some support off of Harris’ post-DNC polls",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "parameter_or_number",
+        "statement": "In 2024 the Silver Bulletin model expects a net convention bounce of only 2 to 2.5 points in margin immediately after the convention. In the worked example, the adjustment shaves off about 2 points.",
+        "quantities": [
+          {
+            "name": "expected net convention bounce",
+            "value": "2 or 2.5",
+            "unit": "percentage points (net margin)",
+            "context": "immediately after the convention, 2024 model"
+          },
+          {
+            "name": "bounce adjustment in example",
+            "value": "2",
+            "unit": "percentage points",
+            "context": "amount shaved off Harris's post-DNC polls in scenario 3"
+          }
+        ],
+        "rationale": "Conventions matter less in a polarized environment with a 24/7 news cycle.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "our model still expects a pretty modest bounce – a net gain of only 2 or 2.5 points immediately after the convention",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "For 2024 the Silver Bulletin model rolled back COVID-era (2020) adjustments to the convention bounce, because bounces were expected to be larger than during the height of COVID-19 in 2020.",
+        "quantities": [],
+        "rationale": "The expectation was that 2024 convention bounces would exceed the muted 2020 bounces.",
+        "model_version": "2024 presidential vs 2020",
+        "evidence_quote": "Our expectation was that convention bounces this year would be larger than they were during the height of COVID-19 in 2020 — and we rolled back COVID-era adjustments to the model accordingly.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "interpretation_guidance",
+        "statement": "Under the convention bounce adjustment, a bounce of the expected size leaves the forecast roughly unchanged. In the 2024 example, an expected bounce meant Harris ending up 4 or 5 points ahead of Trump after the DNC.",
+        "quantities": [
+          {
+            "name": "post-DNC margin consistent with expected bounce",
+            "value": "4 or 5",
+            "unit": "percentage points",
+            "context": "Harris lead over Trump"
+          }
+        ],
+        "rationale": "Gains are offset by the adjustment.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "her gains will be offset by our convention bounce adjustment and she’ll stay right around where she is in the forecast",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "interpretation_guidance",
+        "statement": "If a candidate gets little or no bounce, or declines in the polls, during the post-convention window, the Silver Bulletin model lowers that candidate's win probability. The model expects a bounce, so missing it is treated as a bad sign; for example, Harris still being up only 2 points at a likely polling high point.",
+        "quantities": [
+          {
+            "name": "example weak post-DNC lead",
+            "value": "2",
+            "unit": "percentage points",
+            "context": "Harris margin that would cause decline in forecast"
+          }
+        ],
+        "rationale": "The model expects a bounce, so not getting one is read as underlying weakness.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Basically, the model expects a bounce, so not getting one is seen as a bad thing.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "The convention bounce adjustment is temporary. If a candidate keeps leading for a few weeks after the convention, the model becomes more convinced that the numbers are durable and the candidate rises in the forecast again. This implies the adjustment decays over time after the convention.",
+        "quantities": [],
+        "rationale": "Sustained post-convention polling indicates real rather than illusory gains.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "if Harris continued to lead Trump a few weeks from now, the model would become more convinced that her numbers were durable and she’d begin to rise in our forecast again",
+        "explicitness": "implied"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "interpretation_guidance",
+        "statement": "If a candidate's post-convention bounce exceeds the expected size, the candidate gains in the forecast even after the adjustment. Example: Harris up 6 points post-DNC, minus the 2-point adjustment, still puts her ahead of her pre-convention position.",
+        "quantities": [
+          {
+            "name": "example large post-DNC lead",
+            "value": "6",
+            "unit": "percentage points",
+            "context": "Harris national margin"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "if she’s up 6 points in the average post-DNC, shaving off 2 points from her polls still puts her ahead of where she was going in",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Convention bounces tend to peak a few days after the convention ends.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Bounces tend to peak about a few days after the convention ends",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "From 1964 to 2020, a candidate's polling standing rose by an average of 5 percentage points after their party's convention. Bounce is measured as the change in the candidate's polling average from one week before to one week after the convention, using American Presidency Project data.",
+        "quantities": [
+          {
+            "name": "average convention bounce 1964-2020",
+            "value": "5",
+            "unit": "percentage points",
+            "context": "candidate's own vote share"
+          },
+          {
+            "name": "measurement window",
+            "value": "one week before to one week after",
+            "unit": "",
+            "context": "definition of bounce"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "On average, candidates’ standing in the polls increased by 5 percentage points after their party’s convention.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Most convention bounce gains come from undecided voters or voters who planned to vote third-party. The opponent's standing typically declines only slightly, so the net margin bounce is smaller than the gain in own vote share.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Most of these gains came from the undecided column or from voters who’d said they planned to vote for third parties: the opponent’s standing typically declines too, but only slightly.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Convention bounces have shrunk over time. They averaged just over 6 points from 1964 to 2000 and only 1.8 points after 2000. The largest post-2000 bounce was Trump's 3 points after the 2016 RNC.",
+        "quantities": [
+          {
+            "name": "average bounce 1964-2000",
+            "value": "just over 6",
+            "unit": "percentage points",
+            "context": ""
+          },
+          {
+            "name": "average bounce post-2000",
+            "value": "1.8",
+            "unit": "percentage points",
+            "context": ""
+          },
+          {
+            "name": "largest post-2000 bounce",
+            "value": "3",
+            "unit": "percentage points",
+            "context": "Trump 2016 RNC"
+          }
+        ],
+        "rationale": "High polarization and a 24/7 news cycle make conventions matter less.",
+        "model_version": "general principle",
+        "evidence_quote": "The average post-2000 convention bounce was only 1.8 points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "data_source",
+        "statement": "The historical convention bounce table (1964-2020) lists bounces by nominee: 2020 Biden ±0, Trump +1; 2016 Clinton +2, Trump +3; 2012 Obama +2, Romney −1; 2008 Obama +4, McCain +6; 2004 Kerry −1, Bush +2; 2000 Gore +8, Bush +8; 1996 Clinton +5, Dole +3; 1992 Clinton +16, Bush +5; 1988 Dukakis +7, Bush +6; 1984 Mondale +9, Reagan +4; 1980 Carter +10, Reagan +8; 1976 Carter +9, Ford +5; 1972 McGovern ±0, Nixon +7; 1968 Humphrey +2, Nixon +5; 1964 Johnson +3, Goldwater +5.",
+        "quantities": [
+          {
+            "name": "largest bounce in table",
+            "value": "+16",
+            "unit": "percent",
+            "context": "Bill Clinton 1992"
+          },
+          {
+            "name": "table average",
+            "value": "+5",
+            "unit": "percent",
+            "context": "1964-2020"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "assumption",
+        "statement": "Greater recent volatility in the polls makes a meaningful convention bounce more likely. In a stable race like the pre-debate Biden-Trump contest, a large or sustained bounce would be unlikely. A caveat: a candidate's bounce may already have occurred during an earlier surge, as with Harris's post-launch surge.",
+        "quantities": [],
+        "rationale": "When support is less set in stone, events move polls more.",
+        "model_version": "general principle",
+        "evidence_quote": "In a vacuum, I’d expect more variation in the polls to make a meaningful bounce more likely.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Trump's apparent 2024 RNC bounce cannot be cleanly attributed to the convention. In the Biden-Trump average, Trump went from 42.6% to 45.2% (+2.6) and Biden from 39.9% to 41.2% (+1.3), so the margin moved from R+2.7 to R+4.0 between July 8 and July 21. That window overlapped the June 27 debate aftermath, the July 13 assassination attempt, the July 15 VP pick and Biden's July 21 withdrawal. The 'after' value is 6 days post-convention because Biden dropped out on day 6.",
+        "quantities": [
+          {
+            "name": "Trump before RNC",
+            "value": "42.6",
+            "unit": "%",
+            "context": "July 8, 2024"
+          },
+          {
+            "name": "Trump after RNC",
+            "value": "45.2",
+            "unit": "%",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "Biden before RNC",
+            "value": "39.9",
+            "unit": "%",
+            "context": "July 8"
+          },
+          {
+            "name": "Biden after RNC",
+            "value": "41.2",
+            "unit": "%",
+            "context": "July 21"
+          },
+          {
+            "name": "margin change",
+            "value": "R+1.3",
+            "unit": "percentage points",
+            "context": "R+2.7 to R+4.0"
+          }
+        ],
+        "rationale": "Simultaneous confounding events make causal attribution impossible.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "These events make it impossible to tell how much of Trump’s 2.6-point gain between July 8th and July 21st was caused by the RNC.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "interpretation_guidance",
+        "statement": "The opposing candidate's convention bounce, or lack of one, is normally a useful signal for how big the other party's bounce will be.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "I’d usually look toward the other presidential candidate’s convention bounce (or lack thereof) as a signal",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "interpretation_guidance",
+        "statement": "RFK Jr.'s exit, which coincided with the DNC, is expected to help Trump slightly. Because both events hit the polls simultaneously, Harris's convention bounce could look smaller than it otherwise would.",
+        "quantities": [],
+        "rationale": "Overlapping events confound the measured bounce.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "His exit will probably help Trump, but not by much.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Polls asking how respondents would react to hypothetical events are unreliable. Hypothetical polls suggested Trump would lose about 5 points if convicted, but he dropped only a little more than half a point in the Silver Bulletin national average.",
+        "quantities": [
+          {
+            "name": "hypothetical conviction effect",
+            "value": "about 5",
+            "unit": "points",
+            "context": "hypothetical polls"
+          },
+          {
+            "name": "actual conviction effect",
+            "value": "a little more than half a point",
+            "unit": "points",
+            "context": "Silver Bulletin national average"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "you should be skeptical about polls that ask people how they would react to hypothetical events",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin national polling average accounts for each poll's quality, sample size and recency. In 2024 a Biden-Trump average was used through July 21 and a separate Harris-Trump average afterward.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 polling averages",
+        "evidence_quote": "Values up to July 21st (the date Biden dropped out) come from our Biden-Trump polling average. Values after that date come from our Harris-Trump polling average.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the 2024 Silver Bulletin national average, polls were extremely stable before the June 27 debate. Trump went from up 1 the day before the debate to up 4 when Biden withdrew. Harris went from down 1.2 on the day of the withdrawal to up 4.1 on Aug 26. Harris rose from 47% at the start of the DNC to about 49%. The chart shows Kennedy falling from about 10% in March to about 4-5% by August.",
+        "quantities": [
+          {
+            "name": "Trump lead day before debate",
+            "value": "1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Trump lead at Biden withdrawal",
+            "value": "4",
+            "unit": "points",
+            "context": "July 21"
+          },
+          {
+            "name": "Harris margin at Biden withdrawal",
+            "value": "-1.2",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Harris margin Aug 26",
+            "value": "+4.1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Harris share",
+            "value": "47 to about 49",
+            "unit": "%",
+            "context": "DNC start to latest update"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 polling averages",
+        "evidence_quote": "Before the debate, the polls were extremely stable.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "interpretation_guidance",
+        "statement": "As of Aug 26, 2024, Harris was about 4 points up nationally and her forecast odds were essentially unchanged from before the DNC, consistent with an expected-size bounce being offset by the adjustment. The forecast had her as an ever-so-slight favorite in a near-tossup.",
+        "quantities": [
+          {
+            "name": "Harris national lead",
+            "value": "about 4",
+            "unit": "points",
+            "context": "post-DNC, Aug 26 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris is up by about 4 points nationally and her odds of winning in our forecast are basically unchanged from before the convention",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "polarization and conventions",
+        "insight": "Conventions matter less in a highly polarized era with a 24/7 news cycle; bounces have shrunk from about 6 points to under 2.",
+        "evidence": "Average bounce of just over 6 points from 1964 to 2000 versus 1.8 points after 2000.",
+        "forecasting_implication": "Calibrate the expected bounce size to recent cycles, not the full historical record."
+      },
+      {
+        "topic": "stability of 2024 race",
+        "insight": "Even major events like Trump's criminal conviction barely moved the 2024 polls. The debate and Biden's replacement were the only real movers.",
+        "evidence": "The conviction moved Trump down only a little more than half a point.",
+        "forecasting_implication": "Expect small event effects in polarized races unless the candidate changes."
+      },
+      {
+        "topic": "third-party exit",
+        "insight": "RFK Jr. dropping out was expected to help Trump modestly.",
+        "evidence": "",
+        "forecasting_implication": "Allocate a departing third-party candidate's support slightly toward Trump."
+      }
+    ],
+    "references": [
+      {
+        "description": "The American Presidency Project convention bounce data",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin 2024 presidential forecast and national polling averages (Biden-Trump and Harris-Trump)",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin piece on the model's expected 2-2.5 point convention bounce",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact functional form of the convention bounce adjustment: is it a fixed number of points or proportional to the observed bounce?",
+      "How the bounce adjustment decays over time after the convention, and over how many days or weeks.",
+      "Whether the adjustment is applied to vote share or margin, and how it is split between the candidate and the opponent.",
+      "What the COVID-era 2020 adjustments to the bounce were and how exactly they were rolled back.",
+      "Whether the expected bounce differs by candidate or by circumstances, such as a late-entering nominee."
+    ]
+  }
+}

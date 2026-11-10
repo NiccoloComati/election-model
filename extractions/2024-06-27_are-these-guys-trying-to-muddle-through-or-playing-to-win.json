@@ -1,0 +1,304 @@
+{
+  "article": {
+    "date": "2024-06-27",
+    "title": "Are these guys trying to muddle through? Or playing to win?",
+    "subtitle": "A debate preview — plus a quick model update.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/are-these-guys-trying-to-muddle-through",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-06-27_are-these-guys-trying-to-muddle-through-or-playing-to-win"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.417618,
+    "prompt_tokens": 8,
+    "completion_tokens": 9421,
+    "cache_read_tokens": 26389,
+    "cache_write_tokens": 27986,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:03:43"
+  },
+  "extraction": {
+    "summary": "A debate-eve newsletter (June 27, 2024) that opens with a short update on the newly launched Silver Bulletin 2024 presidential model and then previews the first Biden-Trump debate. The model section explains several mechanics. The forecast is driven mostly by state polls, and national polls act mainly indirectly. Likely-voter versus registered-voter gaps in polls feed an adjustment applied to all registered-voter polls. A large undecided share raises the model's uncertainty parameter. Partisan polls are adjusted. The piece also covers update cadence (a few times a week, triggered by material new polls or economic data) and the national polling average at the time (Trump 42.1, Biden 40.6, RFK Jr. 7.6). The debate portion is mostly commentary on media groupthink, whether media framing moves voters, and risk-seeking versus risk-averse strategy for a trailing candidate.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages"
+    ],
+    "findings": [
+      {
+        "component": "other",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin 2024 presidential model was originally planned to update once a week until Labor Day. Instead it is updated most of the time when interesting polling or other data, such as a new economic report, materially affects the model. In practice this means a few updates a week.",
+        "quantities": [
+          {
+            "name": "original update frequency",
+            "value": "once a week",
+            "unit": "",
+            "context": "original plan until Labor Day 2024"
+          },
+          {
+            "name": "practical update frequency",
+            "value": "a few",
+            "unit": "updates per week",
+            "context": "summer 2024"
+          }
+        ],
+        "rationale": "The team found it could do better than weekly updates.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we'll try to get you an update most of the time once there's interesting polling or some other data (such as a new economic report) that materially affects the model",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "data_source",
+        "statement": "New economic reports are an input that can materially change the Silver Bulletin 2024 presidential forecast. This implies that economic data enter the model, for example through a fundamentals component.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "some other data (such as a new economic report) that materially affects the model",
+        "explicitness": "implied"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Individual new polls rarely have a large impact on the topline forecast. Silver advises readers not to react to every new poll. The national Quinnipiac and NYT/Siena polls of late June 2024, which showed Biden several points behind, did not move the forecast much.",
+        "quantities": [],
+        "rationale": "Single polls are absorbed into averages and into the state-driven model.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we don't think it's a good use of your time to react to every new poll that comes out anyway, which rarely have all that large an impact on the topline takeaway",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin forecast is mostly determined by state polls rather than national polls. National polls mainly influence the model indirectly, through how they affect the calculations the model makes about state polls, for example trend adjustments applied to state polls.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "our forecasts are mostly determined by state polls rather than national polls, and national polls mostly influence the model only indirectly through how they affect the calculations it makes about state polls",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the Silver Bulletin model, national polls can have a big effect on states that have not been polled much recently. In other cases the model largely ignores national polls ('shrugs its shoulders at them').",
+        "quantities": [],
+        "rationale": "Sparsely polled states lean more on the trend information inferred from national polls.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Sometimes national polls can have a big effect, especially in states that haven't been polled much recently — but sometimes the model just shrugs its shoulders at them.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "Silver Bulletin polling averages, both state and national, are adjusted based on trends in both state and national polls. Each poll is weighted by its quality, sample size and recency.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin polling average weights polls according to each poll's quality (pollster rating), sample size and recency.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin model applies a likely-voter adjustment to all registered-voter polls. The size of that adjustment is estimated from polls that report both likely-voter and registered-voter results. For example, the June 2024 NYT/Siena poll showed Biden meaningfully better among likely voters than registered voters, and this shifted the adjustment applied to every registered-voter poll.",
+        "quantities": [],
+        "rationale": "Polls that publish both versions reveal the current gap between registered and likely voters.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it did show him doing meaningfully better among likely voters than among registered voters — and that affects the adjustment the model applies to all registered voter polls",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "adjustment_rule",
+        "statement": "In the Silver Bulletin model, a larger undecided vote in polls increases the model's uncertainty parameter. This helps whichever candidate is currently behind.",
+        "quantities": [],
+        "rationale": "More undecided voters means more room for the race to move, which widens the outcome distribution and benefits the trailing candidate.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "These polls also showed a large undecided vote, which increases the model's uncertainty parameter (helpful for whichever candidate is currently behind).",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin model adjusts for partisan polls. One example is state polls from a Republican-aligned group that showed bad numbers for Biden.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "there were a bad set of numbers for Biden from a Republican group, but the model adjusts for the fact that they're partisan polls",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin national polling average tracks Robert F. Kennedy Jr. as a separate candidate alongside Trump and Biden. It had him at 7.6% on June 27, 2024, down from about 10-11% in early March 2024.",
+        "quantities": [
+          {
+            "name": "RFK Jr. national average",
+            "value": "7.6",
+            "unit": "percent",
+            "context": "June 27, 2024"
+          },
+          {
+            "name": "RFK Jr. national average early March",
+            "value": "~10-11",
+            "unit": "percent",
+            "context": "early March 2024, read from chart"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "parameter_or_number",
+        "statement": "Heading into the June 27, 2024 debate, the Silver Bulletin national polling average had Trump at 42.1% and Biden at 40.6%, so Biden trailed by 1.5 points. Through March-June 2024 the average was quite stable, with Trump consistently slightly ahead.",
+        "quantities": [
+          {
+            "name": "Trump national average",
+            "value": "42.1",
+            "unit": "percent",
+            "context": "June 27, 2024"
+          },
+          {
+            "name": "Biden national average",
+            "value": "40.6",
+            "unit": "percent",
+            "context": "June 27, 2024"
+          },
+          {
+            "name": "Trump margin",
+            "value": "1.5",
+            "unit": "percentage points",
+            "context": "national average June 27, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "he now trails Donald Trump by 1.5 points in our national average headed into the debate",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "In June 2024, Silver Bulletin published polling averages for the national race and 12 states: AZ, FL, GA, MI, MN, NV, NH, NC, PA, TX, VA and WI.",
+        "quantities": [
+          {
+            "name": "states with published averages",
+            "value": "12",
+            "unit": "states",
+            "context": "June 2024 interactive (AZ, FL, GA, MI, MN, NV, NH, NC, PA, TX, VA, WI)"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Biden's 2024 State of the Union got good media coverage, but its polling impact was ambiguous: probably slightly helpful for Biden, and nothing that reset the race. Its effect is hard to isolate because it coincided with both candidates wrapping up their nominations, which often does affect the polls.",
+        "quantities": [],
+        "rationale": "Effects from clinching a nomination confound event effects.",
+        "model_version": "general principle",
+        "evidence_quote": "the timing coincided with both candidates wrapping up their nominations, which often does have an effect on the polls",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "interpretation_guidance",
+        "statement": "Until polling shows how candidates did in a debate, media coverage of the debate is subjective theater criticism shaped by partisan ref-working and groupthink. Debate effects should be judged from polls, not punditry.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Until you see polling showing how the candidates did, media coverage — including mine — is unavoidably subjective theater criticism.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "assumption",
+        "statement": "Debates held after Labor Day likely have a larger effect on November results than a June debate. Moving the first 2024 debate to June was therefore a risk-averse move by the Biden campaign.",
+        "quantities": [],
+        "rationale": "Events closer to election day have more lasting impact.",
+        "model_version": "general principle",
+        "evidence_quote": "there's now just one debate after Labor Day when it would likely have a larger effect on the Nov. 5 results",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver Bulletin polling averages are available for free, while forecast probabilities and forecast components require a paid subscription.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "polling averages are available for free, while the probabilities and forecast components require a paid subscription",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "media influence on voters",
+        "insight": "Silver has become less sure that media framing drives voter reactions to events. Media distrust is so high that framing may have limited effect and can even backfire against outlets seen as spinning.",
+        "evidence": "The State of the Union got good coverage but had an ambiguous polling effect.",
+        "forecasting_implication": "Do not assume that media narratives after events translate into poll movement; wait for polling."
+      },
+      {
+        "topic": "trailing candidate strategy",
+        "insight": "A candidate who is behind should pursue higher-variance strategies. The Biden campaign was acting risk-averse, possibly because it did not believe the polls (poll unskewing).",
+        "evidence": "Moving the debate to June and having no live audience were cited as risk-averse choices.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "debate performance history",
+        "insight": "Trump has lost every general election debate he has had, according to post-debate snap polls.",
+        "evidence": "Post-debate snap polls.",
+        "forecasting_implication": "Snap-poll debate losses have not necessarily translated into lost elections, so they are a weak signal."
+      },
+      {
+        "topic": "candidate age",
+        "insight": "Both nominees were elderly (Trump had just turned 78) and had not debated since 2020. Biden's age and perceived capacity were salient debate risks.",
+        "evidence": "",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin 2024 presidential forecast model launch post / methodology (debut post June 26, 2024)",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin 2024 presidential forecast landing page",
+        "url": ""
+      },
+      {
+        "description": "Risky Business podcast episode discussing the election model (Jun 27, 2024)",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact mechanism by which national polls affect state estimates (trend line adjustment, regression to the national environment, weight given to sparsely polled states).",
+      "Functional form of the likely-voter adjustment for registered-voter polls and how it is estimated from polls reporting both versions.",
+      "How the undecided share maps to the uncertainty parameter, and the size of that effect.",
+      "Size and method of the partisan-poll adjustment (fixed penalty versus estimated house effect).",
+      "How economic reports enter the model and with what weight."
+    ]
+  }
+}

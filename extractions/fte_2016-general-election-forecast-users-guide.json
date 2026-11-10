@@ -1,0 +1,430 @@
+{
+  "article": {
+    "date": "2016-06-29",
+    "title": "A User’s Guide To FiveThirtyEight’s 2016 General Election Forecast",
+    "subtitle": "",
+    "authors": "Nate Silver",
+    "url": "https://fivethirtyeight.com/features/a-users-guide-to-fivethirtyeights-2016-general-election-forecast/",
+    "paywalled": "False",
+    "relevance": "fte_methodology",
+    "stem": "fte_2016-general-election-forecast-users-guide"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:53:07"
+  },
+  "extraction": {
+    "summary": "Bullet-point user's guide to FiveThirtyEight's 2016 presidential model, largely the same model as 2008 and 2012, in three versions: polls-plus, polls-only and now-cast. It specifies poll version preferences and weighting; five poll adjustments (likely voter, convention bounce, omitted third party, trend line via loess on same-pollster comparisons, and house effects shrunk by poll count); third-party and undecided handling, with undecideds split evenly; a national popular vote held constant through demographic regressions; three regression strategies with blend weights; an economic index and fundamentals blend constrained by Lauderdale and Linzer; CCES-based elasticity; simulation with national, demographic/regional and state-specific errors drawn from a t-distribution with 10 degrees of freedom over a 100,000-voter file; and definitions of tipping-point chance and Voter Power Index.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "FiveThirtyEight 2016 presidential model (polls-plus, polls-only, now-cast)",
+      "FiveThirtyEight 2008/2012 presidential models"
+    ],
+    "findings": [
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "The 2016 FiveThirtyEight presidential model was mostly the same as the 2008 and 2012 models, with no candidate-specific variables for Trump or Clinton, new procedures for third-party candidates such as Gary Johnson, and three published versions: polls-plus (polls plus economic index), polls-only, and a now-cast, which is polls-only told the election is today.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "There’s no special variable for Republican Donald Trump or Democrat Hillary Clinton.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "data_source",
+        "statement": "The 2016 model's probabilities are based on the historical accuracy of election polls since 1972, effectively 11 elections from 1972 to 2012.",
+        "quantities": [
+          {
+            "name": "elections in calibration",
+            "value": "11",
+            "unit": "elections",
+            "context": "1972-2012"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Our probabilities are based on the historical accuracy of election polls since 1972.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "design_principle",
+        "statement": "All versions of the model gain more information from state polls than from national polls. National polls mainly help calibrate the trend-line and house-effects adjustments and contribute, with state polls, to the national popular vote estimate.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "All versions of our models gain more information from state polls than from national polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "2016 poll inclusion excluded polls conducted directly for a presidential campaign or affiliated PAC or super PAC, as well as banned pollsters. Polls are listed by polling company, not media sponsor. Version priority was likely voters, then registered voters, then adults; the version including Johnson was preferred; other ambiguous cases, such as multiple LV models, are averaged.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "We prioritize polls as follows: likely voters > registered voters > all adults.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "State weighted averages in 2016 used pollster rating, sample size with diminishing returns, and recency, which matters less early and more later. Repeat polls by the same firm give the latest the most weight without discarding older ones.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Recency, which is less important early in the campaign and becomes more important later on.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "parameter_or_number",
+        "statement": "Historically Republicans gain a net 1 to 2 points in likely-voter polls versus RV or adult polls. Polls-plus started with this default; polls-only and now-cast used zero. Both update from paired polls, and LV polls show fewer undecideds.",
+        "quantities": [
+          {
+            "name": "historical R gain in LV polls",
+            "value": "1 to 2",
+            "unit": "percentage points net",
+            "context": "pre-2016"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Historically, Republicans gain slightly in likely voter polls — a net of 1 to 2 percentage points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "parameter_or_number",
+        "statement": "In 2016 polls-plus assumed a modern convention bounce of 3 to 4 points and subtracted it from a candidate's polls right after the convention. Polls-plus and polls-only also down-weighted polls taken immediately after conventions, while the now-cast weighted them fully.",
+        "quantities": [
+          {
+            "name": "modern convention bounce",
+            "value": "3 to 4",
+            "unit": "percentage points",
+            "context": "2016 polls-plus"
+          }
+        ],
+        "rationale": "Bounces are large but fleeting.",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Polls-plus assumes that a modern-day convention bounce is worth 3 to 4 percentage points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "adjustment_rule",
+        "statement": "The omitted third-party ('missing Johnson') adjustment estimates how much support the third-party candidate draws from the major candidates rather than undecideds: relatively little from undecideds. It assumes he draws equally from both, and it varies by state, taking more where he is stronger.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "The adjustment assumes Johnson takes his support from Clinton and Trump equally.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The 2016 trend-line adjustment detects movement by comparing successive editions of the same poll (same pollster and geography), separately for each candidate, then fits a loess regression trend line and adjusts older polls by the subsequent trend, scaled by state elasticity. Empirically, more smoothing early and less smoothing late works best.",
+        "quantities": [],
+        "rationale": "Same-poll comparisons remove a lot of noise.",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Empirically, using more smoothing early in the race and less smoothing late in the race works best.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "House effects are found by comparing a firm's polls with others of the same state. A proportion is subtracted that depends on how many polls the firm has; for example, a 3-point lean might yield a 1-point adjustment with few polls and 2.8 with dozens. They are computed separately per candidate, so a firm with few undecideds can lean toward both. The reference 'average poll' is weighted by pollster rating.",
+        "quantities": [
+          {
+            "name": "example adjustment, few polls",
+            "value": "1",
+            "unit": "point of 3",
+            "context": "illustration"
+          },
+          {
+            "name": "example adjustment, dozens of polls",
+            "value": "2.8",
+            "unit": "points of 3",
+            "context": "illustration"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "The model might subtract only 1 point from Clinton if the firm has conducted only a few polls. But it might subtract 2.8 points if the firm has conducted dozens of polls",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "empirical_regularity",
+        "statement": "Third-party candidates tend to underperform their early polls, though not necessarily their late ones, because some early third-party supporters are undecideds using them as placeholders. Polls-plus reallocated some early third-party support to undecided; polls-only and now-cast did not.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Historically, third-party candidates tend to underperform their early polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "method",
+        "statement": "Undecided voters are split evenly between the major-party candidates, which empirically works better in presidential races than a proportional split. Late in the race the third-party candidate also gets a share, and a small 'other' share is reserved in states expected to have four or more candidates on the ballot.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Undecided voters are split evenly between the major-party candidates. Empirically, an even split works better for presidential races than a proportional split.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The national popular vote is projected from a blend of top-down (national polls) and bottom-up (state polls controlled for PVI) estimates, with considerably more weight on bottom-up, which has been more accurate. It is held constant when demographic regressions are applied, which are recalibrated so they only redistribute the vote across states.",
+        "quantities": [],
+        "rationale": "Regressions should create a realistic distribution, not shift the national total.",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "The model uses a blend of both approaches but puts considerably more weight on the state polls strategy, which has been more accurate historically.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "parameter_or_number",
+        "statement": "FiveThirtyEight's 2016 PVI weighted the most recent presidential election (2012) 75 percent and the prior (2008) 25 percent, unlike Cook's equal weights. It adjusted for home-state effects: presidential candidates historically perform a net 7 points better at home and VP candidates about 2 points.",
+        "quantities": [
+          {
+            "name": "recent election weight",
+            "value": "75",
+            "unit": "percent",
+            "context": "2016 PVI"
+          },
+          {
+            "name": "presidential home-state effect",
+            "value": "7",
+            "unit": "percentage points net",
+            "context": "historical"
+          },
+          {
+            "name": "VP home-state effect",
+            "value": "about 2",
+            "unit": "percentage points",
+            "context": "historical"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Historically, presidential candidates perform a net of 7 percentage points better in their home states.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "parameter_or_number",
+        "statement": "Three regression strategies were blended. Strategy 1, pure PVI: national margin plus PVI. Strategy 2, a regional regression of the adjusted polling average on PVI plus four region dummies, with split states such as Maryland half South and half Northeast; historically the most effective. Strategy 3, a demographic regression on PVI plus shares Black, Hispanic, Asian, non-Christian, evangelical, Mormon and college graduates plus a 12-month state economic index, with spurious-variable removal. Polls-plus blended them 30/50/20; polls-only and now-cast used 70/30 of strategies 2 and 3.",
+        "quantities": [
+          {
+            "name": "polls-plus blend (PVI/regional/demographic)",
+            "value": "30/50/20",
+            "unit": "percent",
+            "context": "2016"
+          },
+          {
+            "name": "polls-only blend (regional/demographic)",
+            "value": "70/30",
+            "unit": "percent",
+            "context": "2016"
+          }
+        ],
+        "rationale": "Hedging complex methods with simpler ones reduces overfitting.",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "The polls-plus model uses a 30/50/20 blend of strategies 1, 2 and 3.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "The state polling average is blended with the regression estimate, which gets more weight early and with less polling: 100 percent with no polls, while polls can get up to 95 percent late in an abundantly polled state. Polls-only and now-cast give the regression slightly less weight.",
+        "quantities": [
+          {
+            "name": "max poll weight late",
+            "value": "95",
+            "unit": "percent",
+            "context": "2016"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "The polling average can get as much as 95 percent of the weight late in the race in a state with abundant polling.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "parameter_or_number",
+        "statement": "The 2016 economic index averaged six normalized, equally weighted variables over the past year: nonfarm payrolls, industrial production, real personal income, PCE, CPI and the S&P 500. In the fundamentals forecast, an index 0.5 standard deviations above average implied the incumbent party winning nationally by 4 to 5 points. An elected-incumbent variable was neutral in 2016.",
+        "quantities": [
+          {
+            "name": "national margin per 0.5 SD economy",
+            "value": "4 to 5",
+            "unit": "percentage points",
+            "context": "2016 fundamentals"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "if the economic index was 0.5 standard deviations above average, it would have the incumbent party winning by 4 to 5 percentage points nationally.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "In late June 2016, polls-plus gave fundamentals 35 to 40 percent of the weight, declining to zero by Election Day. The fundamentals weight is constrained against overfitting using a calculation derived from Lauderdale and Linzer (2014).",
+        "quantities": [
+          {
+            "name": "fundamentals weight late June",
+            "value": "35-40",
+            "unit": "percent",
+            "context": "2016 polls-plus"
+          }
+        ],
+        "rationale": "Fundamentals forecasts are prone to overfitting.",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Because fundamentals forecasts are subject to overfitting, the weight assigned to the fundamentals is constrained, based on a calculation derived from a 2014 paper by Lauderdale and Linzer .)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "In 2016, elasticity scores were calculated from 2012 CCES individual-level voting records and 2008 state exit polls. Swingy states like New Hampshire have homogeneous moderate voters; Mississippi is bifurcated and inelastic; one-party-dominant states also swing less. National shifts are applied scaled by elasticity.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Elasticity scores are calculated from individual-level voting records from the Cooperative Congressional Election Study (2012) and state-by-state exit polls (2008).",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The 2016 national error magnitude grew with time until the election, the number of undecided voters and the third-party vote. National error is applied to every state about equally, subject to elasticity.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "The magnitude of the national error is based upon: The amount of time until the election (more time = more error); the number of undecided voters (more undecideds = more error); and the number of third-party voters",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "Demographic and regional error in 2016 was simulated by randomly varying the vote among groups in a file of more than 100,000 voters built from exit polls and CCES, using religion, race, region, party ID and college education. This produces correlation matrices, for example a high Wisconsin-Minnesota correlation.",
+        "quantities": [
+          {
+            "name": "voter file size",
+            "value": "more than 100,000",
+            "unit": "voters",
+            "context": "exit polls + CCES"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "The simulations are conducted from a file of more than 100,000 voters, built from the exit polls and CCES.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "State-specific error is larger when a state has fewer polls, when polls and the demographic regression disagree (e.g. Utah 2016), and when the state has a smaller population, since small states are more idiosyncratic and harder to poll and model.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "And states have more state-specific error when they have smaller populations.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "National, regional and state-specific errors are drawn from a t-distribution with 10 degrees of freedom, which turns normal-distribution odds of 50-to-1 into about 30-to-1 and 1,000-to-1 into about 180-to-1. It is used because only 11 elections from 1972 to 2012 inform the tails.",
+        "quantities": [
+          {
+            "name": "t-distribution degrees of freedom",
+            "value": "10",
+            "unit": "df",
+            "context": "2016"
+          }
+        ],
+        "rationale": "Small sample of elections; conservative tail assumptions.",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Specifically, they’re drawn from a t -distribution (with 10 degrees of freedom).",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "In 2016 the model ran at least 20,000 simulations per version per day, so changes under one percentage point may be simulation noise. Maine and Nebraska were simulated by congressional district. An Electoral College deadlock was assigned to Trump half the time, since Republicans controlled most House delegations, and to the popular-vote winner the other half.",
+        "quantities": [
+          {
+            "name": "daily simulations per version",
+            "value": "at least 20,000",
+            "unit": "simulations",
+            "context": "2016"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "If no candidate receives a majority of electoral votes, the model assigns the election to Trump half the time",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "method",
+        "statement": "The third-party (Johnson) vote is regressed on his 2012 vote, the 1980-2008 third-party vote (Perot/Anderson) and PVI. It has national and state-specific error but no demographic/regional error, since third-party candidates tend to rise or fall everywhere together. It is simulated with a combination of beta and t distributions, producing right-tailed outcomes. Ballot access is assumed where already secured, or where it existed in 2012 and the deadline has not passed.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "The model uses a combination of a beta distribution and a t -distribution to model Johnson’s vote.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "Tipping-point chance: in each simulation where the popular vote is close enough for the Electoral College to matter, states are sorted by margin and electoral votes accumulated until one candidate reaches 270; that state is the tipping point, shared in a 269-269 tie. Voter Power Index is each state's tipping-point chance divided by its share of national turnout; for example, a VPI of 3.5 means a vote there is 3.5 times as powerful as the national average.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Tipping-point chance is the probability that a state will provide the decisive vote in the Electoral College.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "design_principle",
+        "statement": "Be conservative early and aggressive late: summer poll fluctuations are often noise or short-term bounces, so the model reacts conservatively, while late fluctuations are more meaningful and the model reacts more aggressively.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight 2016 presidential",
+        "evidence_quote": "Fluctuations late in the race are more meaningful, and the model will be more aggressive.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [],
+    "references": [
+      {
+        "description": "Lauderdale and Linzer (2014) on fundamentals model overfitting",
+        "url": ""
+      },
+      {
+        "description": "Cooperative Congressional Election Study (2012) and 2008 exit polls for elasticity",
+        "url": ""
+      },
+      {
+        "description": "FiveThirtyEight 2012 methodology",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact loess span schedule by days to election.",
+      "Formula translating poll count into the share of house effect removed."
+    ]
+  }
+}

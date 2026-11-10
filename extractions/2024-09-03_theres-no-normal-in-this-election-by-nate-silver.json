@@ -1,0 +1,629 @@
+{
+  "article": {
+    "date": "2024-09-03",
+    "title": "There’s no “normal” in this election",
+    "subtitle": "Why Harris is leading in our polling averages — but not in our forecast. And why it’s hard to know where we’re headed next.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/theres-no-normal-in-this-election",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-09-03_theres-no-normal-in-this-election-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.67963,
+    "prompt_tokens": 8,
+    "completion_tokens": 17512,
+    "cache_read_tokens": 34752,
+    "cache_write_tokens": 40301,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:11:46"
+  },
+  "extraction": {
+    "summary": "Silver explains why Harris leads in the Silver Bulletin polling averages (D+3.5 nationally) yet trails in the 2024 presidential forecast (~45% vs ~55% for Trump). He attributes the gap to three things: Harris underperforming the model's expected convention bounce, Kennedy's dropout and endorsement of Trump, and weak polling in Pennsylvania, the likely pivotal state. He argues that it is hard to define a 'normal' baseline in a race with nonstop major events, and lists several candidate baselines, including the model's fundamentals prior (tied popular vote, Democrats underdogs in the Electoral College). He then describes the forecast's competing heuristics. These are a blend of pre-event and post-event polling averages after major events, a convention bounce adjustment that decays with poll field dates, reversion toward the fundamentals at about 20% weight that falls to zero by Election Day, and uncertainty that shrinks over time. If current polls hold, Harris would become a 60%+ favorite. The full article text appears to be present despite the paywall flag.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "FiveThirtyEight (Silver era, 2008-2022)",
+      "prediction markets"
+    ],
+    "findings": [
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "The Silver Bulletin distinguishes the polling average, a 'snapshot' of the current race, from the forecast of the November result. The two diverged after the 2024 DNC but are expected to come back into line by Election Day.",
+        "quantities": [],
+        "rationale": "The forecast applies event adjustments, a fundamentals prior and pre-event blending that the snapshot average does not.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the difference between our polling averages or snapshot of the current state of race and our forecast of the November result, which have begun to differ since the Democratic convention but will eventually come back into line",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "The forecast's win-probability chart shows the probability of winning the Electoral College, not a projected vote margin. A 55/45 Trump probability is a toss-up, not a 10-point landslide.",
+        "quantities": [
+          {
+            "name": "Trump Electoral College win probability",
+            "value": "about 55",
+            "unit": "percent",
+            "context": "Silver Bulletin forecast as of Sept 1, 2024 (chart shows 55.8)"
+          },
+          {
+            "name": "Harris Electoral College win probability",
+            "value": "about 45",
+            "unit": "percent",
+            "context": "Sept 1, 2024 (chart shows 44.0)"
+          }
+        ],
+        "rationale": "People misread the chart out of context.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it displays the probability that Trump will win the Electoral College — which is about 55 percent in our forecast, compared to about 45 percent for Harris.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "In the Silver Bulletin 2024 model as of early September, the chance of a landslide, defined as either candidate winning the popular vote by 10 or more points, was about 5%.",
+        "quantities": [
+          {
+            "name": "landslide probability (popular vote margin >=10 for either candidate)",
+            "value": "about 5",
+            "unit": "percent",
+            "context": "forecast as of ~Sept 1, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the chance of a landslide — either Harris or Trump winning the popular vote by 10 points or more — is only about 5 percent in our model.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver says win probabilities near 50/50 are highly sensitive to small changes. A shift from 55/45 favorite to 45/55 underdog is not a fundamental change in the race.",
+        "quantities": [],
+        "rationale": "He compares it to a basketball buzzer-beater flipping a team from underdog to favorite in a win-probability model.",
+        "model_version": "general principle",
+        "evidence_quote": "Probability calculations can be highly sensitive just to either side of the 50/50 mark.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "parameter_or_number",
+        "statement": "The 2024 model's baseline expectation for Harris's DNC convention bounce was about 2 points. Elsewhere Silver describes a typical bounce as 2 to 2.5 points.",
+        "quantities": [
+          {
+            "name": "expected convention bounce",
+            "value": "more like 2",
+            "unit": "percentage points",
+            "context": "model baseline for 2024 DNC"
+          },
+          {
+            "name": "typical convention bump",
+            "value": "2 or 2.5",
+            "unit": "percentage points",
+            "context": "2024 DNC"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model's baseline expectation was a bounce of more like 2 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "adjustment_rule",
+        "statement": "The convention bounce adjustment subtracts the expected bounce from post-convention polls. Harris's lead went from 2.3 points before the DNC to 3.5 points afterward, which the model treats as a convention-bounce-adjusted lead of 1.5 points, below her pre-convention level.",
+        "quantities": [
+          {
+            "name": "pre-DNC national lead",
+            "value": "2.3",
+            "unit": "percentage points",
+            "context": "Harris"
+          },
+          {
+            "name": "current national polling lead",
+            "value": "3.5",
+            "unit": "percentage points",
+            "context": "Harris, as of Sunday Sept 1, 2024"
+          },
+          {
+            "name": "convention-bounce adjusted lead",
+            "value": "1.5",
+            "unit": "percentage points",
+            "context": "Harris"
+          }
+        ],
+        "rationale": "A candidate who gains less than the expected bounce is treated as having effectively lost ground.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "By the model's logic, she's gone from a lead of 2.3 points to a convention-bounce adjusted lead of 1.5 points.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "adjustment_rule",
+        "statement": "The convention bounce adjustment decays over time. Polls taken at the expected peak, immediately after the DNC, are adjusted 2 to 2.5 points toward the opposing party. A poll taken 12 days after the DNC ends is adjusted about 1 point. About three weeks after, the adjustment is almost zero.",
+        "quantities": [
+          {
+            "name": "adjustment at peak (immediately after convention)",
+            "value": "2 or 2.5",
+            "unit": "percentage points",
+            "context": "toward Trump, post-DNC polls"
+          },
+          {
+            "name": "adjustment 12 days after convention end",
+            "value": "about 1",
+            "unit": "percentage points",
+            "context": "post-DNC"
+          },
+          {
+            "name": "days since end of DNC at time of writing",
+            "value": "12",
+            "unit": "days",
+            "context": ""
+          }
+        ],
+        "rationale": "The model expects convention bounces to be short-lived.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Polls conducted immediately after the DNC — at the peak of the bounce the model expects — are adjusted by 2 or 2.5 points toward Trump.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "The convention bounce adjustment is keyed to a poll's field dates, not its release date or the date it was added to the model.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the adjustment is based on when polls are conducted in the field, not when they're released or added to the model",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "design_principle",
+        "statement": "Silver Bulletin polling averages are designed to react very aggressively after big events such as conventions and debates. As a result, they can overshoot when built from relatively few post-event polls.",
+        "quantities": [
+          {
+            "name": "Harris national lead on Aug 23 model run",
+            "value": "4.3",
+            "unit": "percentage points",
+            "context": "day after acceptance speech, before the switch to the RFK-less version; possibly an overestimate from few polls"
+          }
+        ],
+        "rationale": "So the averages reflect the changed state of the race quickly. The forecast layer then hedges against that.",
+        "model_version": "2024 presidential; also 2020 538 methodology",
+        "evidence_quote": "our polling averages are designed to be very aggressive after big events like conventions, and maybe 4.3 points was an overestimate since it was drawn from relatively few polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "After major events such as debates and conventions, the forecast uses a blend of the pre-event polling average (frozen at the event date) and the current post-event average. The weight shifts daily toward the post-event average. After a week or two, depending on the event, the model uses only the post-event average. This method is carried over from the 2020 538 methodology.",
+        "quantities": [
+          {
+            "name": "blending window",
+            "value": "a week or two (depending on the event)",
+            "unit": "",
+            "context": "after debates/conventions"
+          }
+        ],
+        "rationale": "Event-driven swings are sometimes not long-lasting, and polls sometimes revert after a couple of weeks.",
+        "model_version": "538 2020 and Silver Bulletin 2024 presidential",
+        "evidence_quote": "the model relies only partly on the polling average of the race after one of these events happens.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "parameter_or_number",
+        "statement": "In early September 2024 the forecast blended (A) polling averages from before the DNC and RFK's dropout with (B) current averages with the convention bounce adjustment applied. As of Sept 1 the mix was about 2:1 in favor of B, and A would be fully discarded by the end of that week, about two weeks after the DNC ended.",
+        "quantities": [
+          {
+            "name": "blend ratio B:A",
+            "value": "about 2:1",
+            "unit": "",
+            "context": "as of Sunday Sept 1, 2024"
+          }
+        ],
+        "rationale": "B was slightly worse for Harris than A because of the bounce adjustment, so the transition was lowering her forecast.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "As of Sunday, the mix was about 2:1 in favor of B. By the end of this week, the model will fully discard A.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "assumption",
+        "statement": "The 2024 fundamentals prior is based on an approximately average economy and no true incumbent in the race. It projects a tied national popular vote, with Democrats as underdogs in the Electoral College.",
+        "quantities": [
+          {
+            "name": "fundamentals popular vote margin",
+            "value": "0 (tie)",
+            "unit": "percentage points",
+            "context": "2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "based on the economy being about average and there being no true incumbent in the race, is that \"normal\" means a tie in the popular vote but Democrats being underdogs in the Electoral College.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "The forecast reverts the polls toward the fundamentals prior. In early September 2024 the fundamentals got about 20% of the weight, declining to 0% (polls-only) by Election Day.",
+        "quantities": [
+          {
+            "name": "fundamentals weight",
+            "value": "about 20",
+            "unit": "percent",
+            "context": "as of ~Sept 1-3, 2024"
+          },
+          {
+            "name": "fundamentals weight on Election Day",
+            "value": "0",
+            "unit": "percent",
+            "context": "polls-only"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "As of now, the fundamentals get about 20 percent of the weight, but the model will revert to \"polls-only\" by Election Day.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Forecast uncertainty shrinks as Election Day approaches, so a constant small Electoral College lead translates into a rising win probability. Uncertainty never reaches zero because of the risk of systematic polling error, as in 2016 and 2020.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "as we get closer to the election, the uncertainty in the forecast decreases. Not to zero by any means: there could be another systematic polling error.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "Silver gives a model-behavior scenario: if every poll through November exactly matched the Sept 1 averages (national D+3.5, Michigan D+1.9, North Carolina R+0.3, and so on), Harris would eventually become a 60%+ favorite. She would not be a heavy favorite, because of the close race and the risk of systematic polling error.",
+        "quantities": [
+          {
+            "name": "Harris win probability under hold-steady scenario",
+            "value": "60 percent or higher",
+            "unit": "percent",
+            "context": "eventually, by Election Day"
+          }
+        ],
+        "rationale": "Bounce adjustment decay, fading fundamentals weight and shrinking uncertainty all help a steady leader.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "probably enough to take the model out of what we consider to be toss-up range, meaning she'd be a 60 percent favorite or higher.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver Bulletin treats win probabilities below 60% for the leader as the 'toss-up' range.",
+        "quantities": [
+          {
+            "name": "toss-up threshold",
+            "value": "60",
+            "unit": "percent",
+            "context": "favorite probability above which the race leaves toss-up range"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "out of what we consider to be toss-up range, meaning she'd be a 60 percent favorite or higher.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "parameter_or_number",
+        "statement": "The model team initially expected RFK Jr.'s withdrawal to cost Harris 0.5 points or less, because Kennedy drew only slightly more Trump voters than Harris voters. Silver says the effect may be larger because Kennedy also endorsed Trump. The model was switched to an 'RFK-less version' after the dropout.",
+        "quantities": [
+          {
+            "name": "expected net effect of RFK dropout on Harris margin",
+            "value": "0.5 points or less",
+            "unit": "percentage points",
+            "context": "Aug 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We initially expected this to hurt Harris by 0.5 points or less, given that RFK Jr. drew more Trump voters than Harris voters but only slightly more.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "When two events coincide, such as the DNC bounce and Kennedy's dropout, their effects on the polls are nearly impossible to disentangle.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "this factor is all but impossible to disentangle from the convention bounce or lack thereof.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "Poor polling for Harris in Pennsylvania, the most likely pivotal ('tipping-point') state, made the Electoral College forecast swing more than the popular vote forecast.",
+        "quantities": [
+          {
+            "name": "Pennsylvania polling average",
+            "value": "D+1.2",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024 table; R+0.5 change over last week"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Pennsylvania, which is disproportionately important given Pennsylvania's likelihood of being the pivotal state. As a result, the Electoral College forecast has swung more than the popular vote forecast.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "The state polling averages table shows only contests surveyed by at least three distinct pollsters or with at least five polls.",
+        "quantities": [
+          {
+            "name": "min distinct pollsters",
+            "value": "3",
+            "unit": "pollsters",
+            "context": "display threshold"
+          },
+          {
+            "name": "min polls",
+            "value": "5",
+            "unit": "polls",
+            "context": "display threshold"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling averages 2024",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "According to the chart notes, the polling averages account for each poll's quality, sample size and recency, and are adjusted based on trends in both state and national polls.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin polling averages 2024",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "parameter_or_number",
+        "statement": "The Sept 1, 2024 polling averages table gives these margins. National Harris 49.2 vs Trump 45.7 (D+3.5). Pennsylvania D+1.2. Michigan D+1.9. Georgia D+1.1. North Carolina R+0.3. Wisconsin D+3.3. Arizona R+0.5. Nevada D+0.8. Florida R+4.7. Texas R+6.3.",
+        "quantities": [
+          {
+            "name": "National",
+            "value": "D+3.5",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024"
+          },
+          {
+            "name": "PA",
+            "value": "D+1.2",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024"
+          },
+          {
+            "name": "MI",
+            "value": "D+1.9",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024"
+          },
+          {
+            "name": "GA",
+            "value": "D+1.1",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024"
+          },
+          {
+            "name": "NC",
+            "value": "R+0.3",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024"
+          },
+          {
+            "name": "WI",
+            "value": "D+3.3",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024"
+          },
+          {
+            "name": "AZ",
+            "value": "R+0.5",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024"
+          },
+          {
+            "name": "NV",
+            "value": "D+0.8",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024"
+          },
+          {
+            "name": "FL",
+            "value": "R+4.7",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024"
+          },
+          {
+            "name": "TX",
+            "value": "R+6.3",
+            "unit": "percentage points",
+            "context": "Sept 1, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "empirical_regularity",
+        "statement": "Silver notes that prediction markets had closely tracked the Silver Bulletin model through early September 2024.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "prediction markets have closely tracked the Silver Bulletin model so far.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver says reasonable people could put Harris anywhere from a 2:1 favorite to a 2:1 underdog. The model's ~45% reflects a 'mental average' of several defensible baselines.",
+        "quantities": [
+          {
+            "name": "reasonable range",
+            "value": "2:1 either way",
+            "unit": "odds",
+            "context": "early Sept 2024"
+          }
+        ],
+        "rationale": "Major events kept happening, so there is no clear 'normal' baseline.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "I wouldn't consider you inherently unreasonable if you thought Harris was as much as a 2:1 favorite or that Trump was a 2:1 favorite.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "assumption",
+        "statement": "The Silver Bulletin model does not use Democrats' recent average popular-vote edge as its baseline 'normal'. That edge averaged 3.3 points over 2016-2020 and 2.3 points since 2000.",
+        "quantities": [
+          {
+            "name": "avg Dem popular vote margin 2016-2020",
+            "value": "3.3",
+            "unit": "percentage points",
+            "context": ""
+          },
+          {
+            "name": "avg Dem popular vote margin since 2000",
+            "value": "2.3",
+            "unit": "percentage points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "although this isn't what our model does, you could calculate \"normal\" based on the fact that Democrats have had an edge in the popular vote in most recent elections.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the 2024 model, a tied national popular vote implies Democrats are underdogs in the Electoral College. This reflects a GOP Electoral College advantage, so Harris can be favored to win the popular vote while being a slight underdog for the presidency.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Harris being a favorite to win the popular vote but perhaps a slight underdog to win the White House because of the GOP advantage in the Electoral College.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "Reference points on the forecast trajectory: at the July 30 relaunch national polls were roughly tied and Harris was a slight Electoral College underdog. She peaked near 55-57% in mid-August. Before the June 28 debate Biden was about a 2:1 underdog.",
+        "quantities": [
+          {
+            "name": "Biden pre-debate odds",
+            "value": "about 2:1 underdog",
+            "unit": "odds",
+            "context": "before June 28, 2024"
+          },
+          {
+            "name": "Harris peak win probability",
+            "value": "~56-57",
+            "unit": "percent",
+            "context": "mid-August per chart"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "third-party candidate effects",
+        "insight": "RFK Jr. drew slightly more from Trump than from Harris, so his exit modestly helped Trump. His endorsement of Trump may have amplified the effect.",
+        "evidence": "Initial estimate of 0.5 points or less",
+        "forecasting_implication": "Model third-party exits by reallocating that candidate's voters according to their second choices. Consider an extra effect when the departing candidate endorses someone."
+      },
+      {
+        "topic": "convention bounces",
+        "insight": "Typical convention bounces are about 2-2.5 points and fade within roughly two to three weeks.",
+        "evidence": "Model benchmark; Harris's bounce was smaller than expected",
+        "forecasting_implication": "Discount post-convention polls, with the discount decaying by field date."
+      },
+      {
+        "topic": "candidate favorability reversion",
+        "insight": "Harris was unpopular for most of her vice presidency. If her favorability reverts to its long-term average, Trump likely wins.",
+        "evidence": "",
+        "forecasting_implication": "Recent surges in favorability after a nomination may not be durable."
+      },
+      {
+        "topic": "no steady state",
+        "insight": "The 2024 race had no slow news cycle from the June 28 debate through Kennedy's dropout, which makes any baseline 'normal' ambiguous.",
+        "evidence": "List of consecutive major events",
+        "forecasting_implication": "Hedge between multiple baselines when events overlap."
+      },
+      {
+        "topic": "Democratic popular vote edge",
+        "insight": "Democrats won the popular vote by 3.3 points on average in 2016-2020 and by 2.3 points on average since 2000.",
+        "evidence": "",
+        "forecasting_implication": "A possible alternative prior, though the Silver Bulletin model does not use it."
+      }
+    ],
+    "references": [
+      {
+        "description": "2020 FiveThirtyEight presidential methodology page (describes blending pre- and post-event polling averages)",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin model landing page",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin article on the convention bounce benchmark",
+        "url": ""
+      },
+      {
+        "description": "Earlier article estimating the RFK Jr. dropout effect at 0.5 points or less",
+        "url": ""
+      },
+      {
+        "description": "Aug. 24, 2024 Silver Bulletin Model Talk story warning that the model was running a 'little hot' on Harris",
+        "url": ""
+      },
+      {
+        "description": "Article on Pennsylvania's disproportionate importance as the tipping-point state",
+        "url": ""
+      },
+      {
+        "description": "Article on the possibility of systematic polling error",
+        "url": ""
+      },
+      {
+        "description": "Article on prediction markets tracking the Silver Bulletin model",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What is the exact functional form of the pre-/post-event blending weights, and how does the window (a week or two) vary by event type?",
+      "What is the exact decay curve of the convention bounce adjustment by days since the convention?",
+      "How is the fundamentals weight scheduled over time from ~20% in early September to 0% on Election Day?",
+      "How is the fundamentals prior computed (which economic indicators, and how incumbency is treated)?",
+      "How was the RFK-less version of the model built, and how were Kennedy voters reallocated?",
+      "How does forecast uncertainty shrink as a function of days to the election, and what is the size of the systematic polling error component?",
+      "How does the model handle debate bounces, in particular for the Sept 10 Harris-Trump debate?"
+    ]
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "article": {
+    "date": "2025-06-02",
+    "title": "SBSQ #21: Why young men don't like Democrats",
+    "subtitle": "Plus, the New York City mayor’s race — and whether win probability models are broken.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/sbsq-21-why-young-men-dont-like-democrats",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2025-06-02_sbsq-21-why-young-men-dont-like-democrats"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.606647,
+    "prompt_tokens": 4,
+    "completion_tokens": 5940,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 60939,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:26:34"
+  },
+  "extraction": {
+    "summary": "A subscriber Q&A with three parts. First, Silver argues that Democrats struggle with young men partly because of Village-coded, risk-averse, security-focused messaging, while young men are more pro-capitalism, more economically optimistic, report better mental health (which correlates with conservatism), and show more gender resentment than racial or immigration animus. Second, he assesses the 2025 NYC Democratic mayoral primary: Cuomo is the favorite, but Mamdani may be underpriced at Polymarket's 17 percent, because polling error is much higher in low-turnout primaries and ranked-choice voting adds uncertainty. Third, he discusses whether in-game sports win probability models (ESPN) are overconfident, contrasting regression and simulation approaches. He notes that most modeling mistakes produce overconfidence and that his election models use fat-tailed distributions. Model content is limited to these general uncertainty and calibration principles plus primary-polling-error remarks.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "ESPN Analytics in-game win probability models",
+      "Silver Bulletin election models (general)",
+      "prediction markets (Polymarket)",
+      "in-game sports betting markets"
+    ],
+    "findings": [
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Silver's election models use fat-tailed distributions rather than normal distributions for outcomes, so extreme outcomes are comparatively more likely than under a normal assumption.",
+        "quantities": [],
+        "rationale": "Empirically, the normal-distribution assumption may not always be valid.",
+        "model_version": "Silver Bulletin election models (general)",
+        "evidence_quote": "Empirically, this assumption may not always be valid: we actually use fat-tailed distributions in our election models, for instance.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "design_principle",
+        "statement": "It is far easier to build an overconfident model than an underconfident one. Most ways of making mistakes when building a model lead to underestimating the chance of low-likelihood but nonzero events.",
+        "quantities": [],
+        "rationale": "Silver states this from long modeling experience. Regression models implicitly assume normal tails, and models have many interacting parameters.",
+        "model_version": "general principle",
+        "evidence_quote": "most of the ways to fuck up when building a model result in overconfidence rather than underconfidence, i.e. underestimating the chance of low-likelihood but nonzero events.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Regression-based probability models implicitly assume a normal distribution rather than a fat-tailed one. This is one source of overconfidence.",
+        "quantities": [],
+        "rationale": "Extreme outcomes occur more often than normal tails imply.",
+        "model_version": "general principle",
+        "evidence_quote": "regression models implicitly assume a normal distribution rather than a \"fat-tailed\" distribution where \"extreme\" outcomes are comparatively more likely.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "design_principle",
+        "statement": "Model parameters interact: changing one changes how the rest of the system behaves. A modeler should therefore explicitly test the model in specific scenarios (e.g., what happens when a favorite falls behind early), or the model may be miscalibrated.",
+        "quantities": [],
+        "rationale": "Many moving parts make miscalibration likely without scenario testing.",
+        "model_version": "general principle",
+        "evidence_quote": "If you're not explicitly testing it for certain scenarios — what happen when a pregame favorite falls behind early? — your model could be miscalibrated.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "interpretation_guidance",
+        "statement": "Win probability models tend to get noticed only when a huge upset happens. Judging them by memorable misses is cherry-picking, and unlikely events do happen. Evaluation should rest on comprehensive calibration evidence instead.",
+        "quantities": [],
+        "rationale": "Selection bias in public evaluation.",
+        "model_version": "general principle",
+        "evidence_quote": "They pretty much only get noticed when a huge upset happens, so there's inevitably a lot of cherry-picking in how people evaluate them.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "ESPN's NBA win probability model appears to move too quickly off its priors (pregame odds) early in the game, underrating comebacks. Most 'improbable' comebacks are by teams that were favored pregame. The analogous lesson for forecasting is not to abandon priors too fast in response to early data.",
+        "quantities": [],
+        "rationale": "Assessments found ESPN overreacts to early-game events.",
+        "model_version": "ESPN Analytics (critique); general principle",
+        "evidence_quote": "It sounds like ESPN's models move too quickly off their priors early in the game, and that most of the \"improbable\" comebacks are by teams that were favored pregame.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "empirical_regularity",
+        "statement": "A Reddit College Football analysis found severe miscalibration in in-game win probability: home teams given under 1 percent chance of winning in the fourth quarter actually won about 5 percent of the time.",
+        "quantities": [
+          {
+            "name": "model-stated win probability",
+            "value": "<1",
+            "unit": "percent",
+            "context": "college football home teams in the 4th quarter"
+          },
+          {
+            "name": "actual win rate",
+            "value": "~5",
+            "unit": "percent",
+            "context": "same teams"
+          }
+        ],
+        "rationale": "",
+        "model_version": "ESPN Analytics (critique)",
+        "evidence_quote": "Home teams that are given less than a 1 percent chance of winning in the fourth quarter actually win something like 5 percent of the time.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "Silver describes two approaches to probability estimation. One is a logistic regression on current state variables (score, time left, possession, pregame odds). The other simulates the rest of the event forward many times, which is more computationally intensive and needs well-written code and fast hardware. Both can fail if they omit context-specific factors or state-dependent dynamics.",
+        "quantities": [],
+        "rationale": "Regression can omit factors that are rare on average but pertinent in particular cases. Simulation can miss dynamics such as the rubber-band effect.",
+        "model_version": "general principle (sports win probability)",
+        "evidence_quote": "Alternatively, you could have model that simulates the rest of the game forward some number of times; this is much more computationally intensive and requires well-written code and fast hardware.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "interpretation_guidance",
+        "statement": "In-game sports betting markets often keep pregame favorites as favorites after early deficits (e.g., a 9-point favorite down 13 in the first quarter). Silver treats bettors 'with skin in the game' as appropriately shrugging off early events, consistent with a rubber-band effect.",
+        "quantities": [
+          {
+            "name": "pregame spread example",
+            "value": "9",
+            "unit": "points",
+            "context": "OKC Thunder hypothetical"
+          },
+          {
+            "name": "first-quarter deficit example",
+            "value": "13",
+            "unit": "points",
+            "context": "OKC Thunder hypothetical"
+          }
+        ],
+        "rationale": "Trailing teams exert more effort and may get favorable officiating.",
+        "model_version": "general principle",
+        "evidence_quote": "bettors, with skin in the game, usually shrug off whatever happens in the first half.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Polling error is much higher in primary elections than in general elections, especially in low-turnout primaries. A 9-point deficit a few weeks out would be nearly insurmountable in a general election but not in a primary.",
+        "quantities": [
+          {
+            "name": "Mamdani deficit to Cuomo, final RCV round",
+            "value": "9",
+            "unit": "percentage points",
+            "context": "Emerson College poll, NYC Democratic mayoral primary, ~3 weeks before June 24, 2025"
+          }
+        ],
+        "rationale": "Low-turnout primaries are harder to poll.",
+        "model_version": "general principle",
+        "evidence_quote": "But polling error is much higher in primary elections, especially low-turnout primaries, and RCV adds an additional element of uncertainty.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "assumption",
+        "statement": "Ranked-choice voting adds an extra layer of uncertainty to primary forecasts. Its mechanics do not straightforwardly favor compromise candidates such as Brad Lander.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle (NYC 2025 primary)",
+        "evidence_quote": "the mechanics of RCV aren't quite so straightforward as you might think",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver judged Polymarket's 17 percent price for Mamdani (83 percent for Cuomo) as likely too low, making Mamdani a +EV bet at almost 5:1 odds, while still considering Cuomo the favorite.",
+        "quantities": [
+          {
+            "name": "Cuomo Polymarket probability",
+            "value": "83",
+            "unit": "percent",
+            "context": "NYC Democratic primary, ~June 2025"
+          },
+          {
+            "name": "Mamdani Polymarket probability",
+            "value": "17",
+            "unit": "percent",
+            "context": "same"
+          },
+          {
+            "name": "implied odds",
+            "value": "almost 5:1",
+            "unit": "",
+            "context": "Mamdani"
+          }
+        ],
+        "rationale": "Primary polling error, RCV uncertainty, low turnout, and debates still to come.",
+        "model_version": "general principle",
+        "evidence_quote": "All of this strikes me as possible — more likely than 17 percent — but it requires a lot to go right from here forward.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "assumption",
+        "statement": "Remaining debates add uncertainty to a primary forecast. In the 2025 NYC Democratic mayoral primary, both debates were still to come about three weeks out.",
+        "quantities": [
+          {
+            "name": "remaining debates",
+            "value": "2",
+            "unit": "debates",
+            "context": "NYC 2025 Democratic primary"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "The only two debates are also still left to come.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "gender gap 2024",
+        "insight": "Essentially all of Harris's decline relative to Biden came from men. The gender gap expanded, especially among young voters and Black and Latino men. Gen Z men voted majority Trump in 2024.",
+        "evidence": "Catalist Figure 29, change in Democratic support 2020-2024 (women/men, percentage points): Total -1/-5; White +0/-4; Black -1/-8; Latino -7/-12; Asian -3/-6.",
+        "forecasting_implication": "Demographic shifts in the 2024 coalition are concentrated among men, especially nonwhite and young men."
+      },
+      {
+        "topic": "gender and attitudes to capitalism",
+        "insight": "Men are much more positive toward capitalism than women. Young people are less positive toward capitalism than older people.",
+        "evidence": "Pew chart, positive impression of capitalism: men 68%, women 48%; ages 18-29 40%, 65+ 73%. Socialism: men 35%, women 38%; 18-29 44%. Census data: 61% of small businesses are majority-owned by men vs 22% by women. YouGov Musk favorability: men 48-46, women 34-58.",
+        "forecasting_implication": "Anti-corporate messaging is unlikely to reduce the gender gap."
+      },
+      {
+        "topic": "economic optimism by gender and age",
+        "insight": "Gen Z men were more optimistic about the economy than women and older cohorts in 2022.",
+        "evidence": "CES 2022 share saying the economy was staying the same or getting better: Gen Z men 29%, Gen Z women 21% (the text says 22%), older men 26%, older women 22%. This came despite Biden being president, which would ordinarily depress men's optimism.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "mental health and ideology",
+        "insight": "Higher self-reported mental health is strongly correlated with conservative views. The gender gap in self-reported mental health is much larger for Gen Z.",
+        "evidence": "CES 2022 (liberal/moderate/conservative): Excellent 20/30/51; Very good 26/35/39; Good 32/36/32; Fair 39/37/24; Poor 45/35/19. Silver says the pattern holds within subsamples. Chart readings: Gen Z men ~37% and Gen Z women ~21% report very good or excellent mental health, vs Silent generation men ~75% and women ~69%.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "young men's social media activity",
+        "insight": "Young liberal men, not conservatives, are more active posting about politics on social media.",
+        "evidence": "CES 2022: among Gen Z men who posted about politics, Democrats outnumbered Republicans 42-22. Among those who didn't post, the split was 30-19, with a majority identifying as independent, other, or not sure.",
+        "forecasting_implication": "Online political discourse is not representative of young men's partisanship."
+      },
+      {
+        "topic": "gender vs racial/immigration attitudes among young men",
+        "insight": "Gen Z men show gender resentment similar to older men but much less anti-immigrant sentiment.",
+        "evidence": "CES: share agreeing women are 'too easily offended': Gen Z men 40%, Gen Z women 20%, older men 41%, older women 32%. Share supporting a 50% cut in legal immigration: Gen Z men 30%, Gen Z women 22%, older men 49%, older women 44%.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "political news consumption",
+        "insight": "Trump fared better in 2024 among voters who consume little political news. Silver reads this as possibly winning the apolitical 'normie' vote rather than only uninformed voters.",
+        "evidence": "",
+        "forecasting_implication": "Low-engagement voters lean Trump, which bears on turnout modeling and polls of engaged respondents."
+      },
+      {
+        "topic": "risk tolerance and demographics",
+        "insight": "Men generally have higher risk tolerance than women, and younger people more than older people. Silver suggests this links to Democrats' weakness with young men.",
+        "evidence": "Silver's research for On the Edge.",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "NYC Democratic primary electorate",
+        "insight": "The NYC Democratic primary electorate is more moderate than assumed. Many registered Democrats are de facto Republicans because Republicans rarely win citywide. The electorate is majority nonwhite, and nonwhite Democrats tend to be more moderate than white Democrats.",
+        "evidence": "65% of NYC voters are registered Democrats. Emerson poll: 13% of the Democratic primary electorate voted Trump and 15% view him favorably, about 3x the share among Democrats nationwide. Bernie Sanders's best 2016 states were the whitest. Trump gained in every borough in 2020 and 2024.",
+        "forecasting_implication": "In primaries, the center-left candidate is often closer to the median voter."
+      },
+      {
+        "topic": "NYC primary turnout",
+        "insight": "Turnout in NYC Democratic mayoral primaries is low, and turnout surges can reshape outcomes. Media attention from a tightening race could raise turnout and polarize voters around an insurgent.",
+        "evidence": "Turnout ranged from 11-30% of registered Democrats in the past six mayoral primaries. Primaries moved from September to June starting in 2019.",
+        "forecasting_implication": "Low and variable turnout increases primary forecast uncertainty."
+      },
+      {
+        "topic": "RCV strategy",
+        "insight": "In ranked-choice primaries, an insurgent must avoid becoming so polarizing that other candidates' voters rank the frontrunner above him.",
+        "evidence": "Mamdani vs Cuomo, 2025.",
+        "forecasting_implication": "Final-round RCV polling depends on lower-ranked preferences, which can shift."
+      },
+      {
+        "topic": "NYT endorsement effect",
+        "insight": "A questioner claims the NYT endorsement lifted Kathryn Garcia from single digits to a close second in 2021.",
+        "evidence": "Questioner claim, not verified by Silver.",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Catalist 2024 What Happened report (Figure 29, change in Democratic support by race and gender)",
+        "url": ""
+      },
+      {
+        "description": "Cooperative Election Study 2022 data",
+        "url": ""
+      },
+      {
+        "description": "Analysis of ESPN NBA win probability overreacting early in games",
+        "url": ""
+      },
+      {
+        "description": "Reddit College Football forum analysis of ESPN win probability calibration",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver Bulletin piece on using fat-tailed distributions in election models (linked in text)",
+        "url": ""
+      },
+      {
+        "description": "On the Edge (Silver's book) for the River/Village framework",
+        "url": ""
+      },
+      {
+        "description": "Forthcoming freelance Silver Bulletin post on NYC RCV dynamics",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What specific fat-tailed distribution (e.g., t-distribution, degrees of freedom) do the Silver Bulletin election models use?",
+      "How much larger is primary polling error than general election polling error, quantitatively?",
+      "How do Silver's models handle ranked-choice voting uncertainty, if at all?"
+    ]
+  }
+}

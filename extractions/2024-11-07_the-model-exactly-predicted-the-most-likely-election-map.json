@@ -1,0 +1,588 @@
+{
+  "article": {
+    "date": "2024-11-07",
+    "title": "The model exactly predicted the most likely election map",
+    "subtitle": "The actual map was the most common one in our 80,000 simulations! Even so, it contained some revealing surprises.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/the-model-exactly-predicted-the-most",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-11-07_the-model-exactly-predicted-the-most-likely-election-map"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.80904,
+    "prompt_tokens": 8,
+    "completion_tokens": 18675,
+    "cache_read_tokens": 46223,
+    "cache_write_tokens": 53283,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:23:38"
+  },
+  "extraction": {
+    "summary": "Post-election Model Talk arguing that the 2024 result (Trump 312, Harris 226, sweeping all 7 swing states) was the single most common map in the Silver Bulletin presidential model's final 80,000 simulations, which demonstrates correlated polling error between states. Silver explains that the model's value comes from quantifying polling uncertainty and cross-state correlation, not from 'calling' states. A deterministic reading would have missed only Michigan and Wisconsin, and would also have treated Harris as the nominal favorite at 50.015%. Conditional on the actual map, the model's projected state margins missed by an average of 2.3 points. The misses were largest in deep-blue states (Trump overperformed) and in WA, OR, CO and Utah (Trump underperformed). A footnote describes the state forecast as a blend of polling averages and a uniform-swing regression estimate.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages"
+    ],
+    "findings": [
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The final 2024 Silver Bulletin presidential forecast was based on 80,000 simulations.",
+        "quantities": [
+          {
+            "name": "final simulations",
+            "value": "80,000",
+            "unit": "simulations",
+            "context": "final 2024 forecast"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "coming up in 4,660 of our final 80,000 simulations",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The published interactive charts for the 2024 Silver Bulletin presidential model (the 128 tipping-point permutations table and the electoral vote distribution chart) are labeled as based on 40,000 simulations, while the article text cites 80,000 final simulations.",
+        "quantities": [
+          {
+            "name": "simulations in published charts",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "charts updated November 5, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The 2024 Silver Bulletin presidential model simulates outcomes in all 50 states, the District of Columbia, and the congressional districts of Maine and Nebraska. Each simulation therefore yields a complete map that can be tallied, and the frequency of each exact map can be counted.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the exact map that occurred most often in our simulations, counting all 50 states, the District of Columbia and the congressional districts in Nebraska and Maine",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "empirical_regularity",
+        "statement": "The actual 2024 map was the modal map in the final 2024 Silver Bulletin presidential model: Trump swept all 7 swing states, and every other state and district went to its forecast favorite. It appeared in 4,660 of 80,000 simulations.",
+        "quantities": [
+          {
+            "name": "simulations with exact actual map",
+            "value": "4,660",
+            "unit": "simulations",
+            "context": "out of 80,000"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Tuesday’s exact map was the modal (most common) one in our final model, coming up in 4,660 of our final 80,000 simulations",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The second most common exact map in the final 2024 model was a Harris sweep of the swing states with everything else going to form, at 2,446 of 80,000 simulations.",
+        "quantities": [
+          {
+            "name": "simulations with second most common map",
+            "value": "2446",
+            "unit": "simulations",
+            "context": "Harris swing state sweep map"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The next-most-common map (2446 sims) was Harris sweeping the swing states and then everything else going to form.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "parameter_or_number",
+        "statement": "Harris won the Electoral College in 50.015% of simulations in the final 2024 forecast. Silver describes this as more random than a coin flip and within the model's margin of sampling error (Monte Carlo error).",
+        "quantities": [
+          {
+            "name": "Harris win probability",
+            "value": "50.015",
+            "unit": "percent of simulations",
+            "context": "final 2024 forecast"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "50.015 percent of simulations — that it was literally more random than a coin flip and within the model’s margin of sampling error",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver says the model's state forecasts should not be treated as deterministic calls. Read deterministically, the 2024 forecasts contradicted each other: Harris was the Electoral College favorite while Trump was favored in Pennsylvania, so one 'call' had to be wrong.",
+        "quantities": [],
+        "rationale": "Probabilistic forecasts near 50/50 cannot be scored as binary calls.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If you treated the model’s forecast in every state as a deterministic forecast — which it very much isn’t",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "empirical_regularity",
+        "statement": "Treated as deterministic calls, the final 2024 state forecasts were correct in 48 of 50 states. The misses were Michigan, where Trump led by 1.5 points, and Wisconsin, where he led by 0.9 points; the model had favored Harris narrowly in both.",
+        "quantities": [
+          {
+            "name": "correct calls",
+            "value": "48 of 50",
+            "unit": "states",
+            "context": "2024"
+          },
+          {
+            "name": "Trump lead in Michigan",
+            "value": "1.5",
+            "unit": "percentage points",
+            "context": "vote count as of Nov 7"
+          },
+          {
+            "name": "Trump lead in Wisconsin",
+            "value": "0.9",
+            "unit": "percentage points",
+            "context": "vote count as of Nov 7"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Michigan and Wisconsin are highlighted in a lighter shade of blue because they are the two we missed",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "design_principle",
+        "statement": "Silver says the model's real value-add is not identifying who leads the polling average. It is quantifying how accurate polls are in practice and how polling errors are correlated across states.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "it’s in understanding the uncertainties in the data: how accurate polls are in practice, and how these errors are correlated between the states",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "assumption",
+        "statement": "The 2024 model treats polling errors as highly correlated between states: when polls underestimate Trump in one key state, they likely underestimate him in most or all of the others.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "When polls miss low on Trump in one key state, they probably also will in most or all of the others.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Silver calls the 2024 polling miss a textbook normal-sized polling error. Final margins were quite close to the polling averages in the swing states but less close in blue states.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "this was more or less a textbook illustration of the normal-sized polling error that we frequently wrote about",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "parameter_or_number",
+        "statement": "Because of correlated error, and because Trump led in 5 of 7 swing states, a Trump sweep of all 7 swing states was the model's most common swing-state scenario (20% of simulations). A Harris sweep was second (14%; 13.9% in the table).",
+        "quantities": [
+          {
+            "name": "Trump swing state sweep",
+            "value": "20",
+            "unit": "percent of simulations",
+            "context": "final 2024"
+          },
+          {
+            "name": "Harris swing state sweep",
+            "value": "14",
+            "unit": "percent of simulations",
+            "context": "final 2024; 13.9% in table"
+          }
+        ],
+        "rationale": "Correlated errors make sweeps more likely than independent state draws would imply.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "a Trump sweep of the swing states was actually our most common scenario, occurring in 20 percent of simulations",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "Trump was more likely to sweep than Harris despite a 50/50 topline mostly because of Arizona, where Trump led by 2.4 points in the final polling average. Harris won every swing state except Arizona in about 4% of simulations.",
+        "quantities": [
+          {
+            "name": "Trump lead in Arizona final polling average",
+            "value": "2.4",
+            "unit": "percentage points",
+            "context": "final 2024"
+          },
+          {
+            "name": "Harris wins all but Arizona",
+            "value": "about 4",
+            "unit": "percent of simulations",
+            "context": "final 2024; table shows 3.8%"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "is mostly because of Arizona, which was teetering into “lean Trump” territory with a 2.4-point Trump lead in our final polling average",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "The '128 paths to victory' table lists every permutation of the 7 likeliest tipping-point states (AZ, GA, MI, NC, NV, PA, WI). For each permutation it gives the scenario probability, Harris's electoral votes, and Harris's Electoral College win probability. All other states are assigned by default to the candidate leading that state's forecast.",
+        "quantities": [
+          {
+            "name": "permutations",
+            "value": "128",
+            "unit": "scenarios",
+            "context": "2^7 swing-state outcomes"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "Selected rows of the final scenario table, which assigns non-swing states by default:\n- Harris wins all but AZ and NV: 4.4%, 302 EV, 99.9% win probability.\n- Harris wins all but AZ: 3.8%, 308 EV.\n- Harris wins only MI, PA and WI (exact Blue Wall): 3.6%, 270 EV, 82.5% win probability.\n- Harris wins only MI and WI: 3.5%, 251 EV, 0.4%.\n- Harris wins only WI: 2.9%, 236 EV.\n- Harris wins only NV: 2.9%, 232 EV.\n- Harris wins MI, NV, PA, WI: 2.8%, 276 EV, 97.9%.\n- Harris wins only MI: 2.7%, 241 EV.\n- Harris wins AZ, MI, NV, PA, WI: 2.6%, 287 EV, 99.7%.\n- Harris wins all but GA: 2.0%, 303 EV.\n- Harris wins only GA: 1.9%, 242 EV, 0.3%.\n- Harris wins MI, NV, WI: 1.8%, 257 EV, 0.8%.\n- Harris wins MI, NC, PA, WI: 1.7%, 286 EV, 99.2%.\nWin probabilities below 100% at 270 or more default EV reflect simulations in which other states flip.",
+        "quantities": [
+          {
+            "name": "exact Blue Wall scenario probability",
+            "value": "3.6",
+            "unit": "percent",
+            "context": "Harris 270 EV"
+          },
+          {
+            "name": "Harris win prob in Blue Wall scenario",
+            "value": "82.5",
+            "unit": "percent",
+            "context": "non-swing states can flip"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "Trump at exactly 312 EV (Harris 226) was by far the most common electoral vote outcome, occurring in about 6% of simulations (5,002 of 80,000). It appears as a large spike in the electoral vote distribution chart. Trump won more than 312 EV in 16% of simulations.",
+        "quantities": [
+          {
+            "name": "Trump exactly 312 EV",
+            "value": "6",
+            "unit": "percent of simulations",
+            "context": "5,002 of 80,000"
+          },
+          {
+            "name": "Trump more than 312 EV",
+            "value": "16",
+            "unit": "percent of simulations",
+            "context": "final 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Trump @ 312 was by far the most common outcome in our simulations, occurring 6 percent of the time",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the electoral vote distribution chart, Harris's tallest spike is about 6% at 226 EV. Her second large spike is about 3% at around 319 EV, matching the Harris swing state sweep.",
+        "quantities": [
+          {
+            "name": "Harris 319 EV spike",
+            "value": "~3",
+            "unit": "percent",
+            "context": "read from chart"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "parameter_or_number",
+        "statement": "Conditional on Trump winning all 7 swing states, the model gave him these chances in further Democratic-leaning places: New Mexico 22%, Minnesota 21%, New Hampshire 19%, Maine (statewide) 16%, Nebraska's 2nd District 11%, Virginia 10%. This shows strong correlation extending beyond the swing states into landslide scenarios.",
+        "quantities": [
+          {
+            "name": "P(NM | sweep)",
+            "value": "22",
+            "unit": "percent",
+            "context": "conditional on Trump sweep"
+          },
+          {
+            "name": "P(MN | sweep)",
+            "value": "21",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "P(NH | sweep)",
+            "value": "19",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "P(ME | sweep)",
+            "value": "16",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "P(NE-2 | sweep)",
+            "value": "11",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "P(VA | sweep)",
+            "value": "10",
+            "unit": "percent",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Conditional on winning all 7 swing states, for instance, Trump had a 22 percent chance of also winning New Mexico, a 21 percent chance at Minnesota",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "Maps giving Trump exactly 312 EV with a different combination of states occurred about 0.4% of the time (342 of 80,000 simulations).\n- Most common alternative: Harris wins Nevada, Trump wins New Hampshire and Maine statewide. Maine and New Hampshire are highly correlated with each other and with northern white voters in the Blue Wall, while Nevada behaves differently.\n- Next alternative (83 of 80,000 sims): Trump wins Minnesota but loses Georgia. This reflects a scenario of Blue Wall/Minnesota overperformance combined with lagging among Black voters, since Georgia has the largest Black voter share among the battleground states.",
+        "quantities": [
+          {
+            "name": "alternative 312 maps share",
+            "value": "0.4",
+            "unit": "percent of simulations",
+            "context": "5,002 minus 4,660"
+          },
+          {
+            "name": "MN-win/GA-loss map",
+            "value": "83",
+            "unit": "simulations of 80,000",
+            "context": "final 2024"
+          }
+        ],
+        "rationale": "State outcomes in the model correlate along demographic lines (northern whites, Black voters) and by geographic proximity.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Maine and New Hampshire could plausibly follow, and their results are likely to be highly correlated with one another. Whereas Nevada had been one of the bluer swing states in 2020 and marches to a different drummer.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "assumption",
+        "statement": "The model's correlation structure appears to encode demographic dimensions such as northern white voters and Black voter share. Silver explains alternative maps as demographic-specific overperformance or underperformance by Trump.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "if he’s overperforming in the Blue Wall and lagging among African-Americans, he could lose Georgia while doing so, which has the largest Black voter share among the battleground states",
+        "explicitness": "implied"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "method",
+        "statement": "Silver evaluates the model by conditioning on the actual map. Among the 4,660 simulations producing the exact actual map, the projected state margins missed actual results by an average of only 2.3 points. He notes this is less impressive than it sounds because the model is told every state's winner, but says it shows the model's internal logic is sound.",
+        "quantities": [
+          {
+            "name": "average miss of conditional margins",
+            "value": "2.3",
+            "unit": "percentage points",
+            "context": "preliminary results as of Thursday Nov 7 morning"
+          }
+        ],
+        "rationale": "Tests whether the joint structure of state outcomes is coherent.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "missing by an average of only 2.3 points, given results as reported so far",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "parameter_or_number",
+        "statement": "Conditional projected Trump margins compared with actual results (preliminary), Trump overperformance:\n- California: −25.3 projected vs −17.2 actual\n- New Jersey: −13.1 vs −5.0\n- North Dakota: +30.7 vs +36.7 (+6.0)\n- Illinois: −13.0 vs −8.4 (+4.6)\n- Hawaii: −27.6 vs −23.1 (+4.5)\n- New York: −15.9 vs −11.6 (+4.3)\n- Iowa: +9.0 vs +13.2 (+4.2)\n- Maryland: −27.1 vs −22.9 (+4.2)\n- Florida: +9.0 vs +13.1 (+4.1)\n- Texas: +11.0 vs +13.9 (+2.9)\n\nTrump underperformance:\n- Utah: +27.6 vs +20.7 (−6.9)\n- Washington: −14.8 vs −19.5 (−4.7)\n- Oregon: −8.2 vs −12.6 (−4.4)\n- Nebraska CD1: +18.2 vs +13.9 (−4.3)\n- Delaware: −11.4 vs −14.7 (−3.3)\n- Colorado: −9.6 vs −12.4 (−2.8)\n- Georgia: +4.1 vs +2.2 (−1.9)\n- Louisiana: +23.8 vs +22.0 (−1.8)\n- Maine CD2: +10.2 vs +8.5 (−1.7)\n- New Mexico: −4.1 vs −5.7 (−1.6)\n\nOther rows: Arizona +5.3 vs +5.5; Alabama +30.4 vs +30.6; DC −88.2 vs −85.7; Maine −6.1 vs −7.0.",
+        "quantities": [
+          {
+            "name": "California delta",
+            "value": "+8.1",
+            "unit": "points",
+            "context": "computed"
+          },
+          {
+            "name": "New Jersey delta",
+            "value": "+8.1",
+            "unit": "points",
+            "context": "computed"
+          },
+          {
+            "name": "Utah delta",
+            "value": "-6.9",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "Silver Bulletin 2024 state forecasts combine the state polling average with a regression estimate. The regression is based on national polls and polls of other states and tends to assume a relatively uniform swing from the previous election.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Our forecasts are based on a combination of polling averages and a regression estimate based on national polls and polls of other states that tends to assume a relatively uniform swing from the previous election.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "adjustment_rule",
+        "statement": "The weight on a state's polling average relative to the regression estimate rises with the amount of polling. In heavily polled states the polling average gets nearly all the weight. In unpolled states the model defaults to roughly the 2020 result plus a uniform national shift (toward Trump in 2024).",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "In states with lots of polls, the polling averages get nearly all the weight, whereas in states without any polls, the model basically just defaults toward 2020 plus a uniform shift toward Trump.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The uniform-swing regression component struggles in states undergoing differential migration-driven shifts, such as Florida and Texas getting redder. Many polls also failed to catch up to these shifts, so Trump overperformed there.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "those states are getting redder — and many polls weren’t able to catch up to this",
+        "explicitness": "implied"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Iowa's conditional miss (Trump +4.2 versus expectation) is attributed to the inaccurate Selzer poll. Because Iowa was sparsely polled, that single poll carried substantial weight in the state forecast.",
+        "quantities": [
+          {
+            "name": "Iowa delta",
+            "value": "+4.2",
+            "unit": "points",
+            "context": "Trump vs conditional projection"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Iowa unto itself, frankly because of the Sezler poll that was, uh, not highly accurate.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "blue-state erosion and Electoral College bias",
+        "insight": "Harris underperformed most in deep-blue states (CA, NJ, IL, HI, NY especially NYC, MD). Those were wasted votes for Democrats, so losing them, combined with Republicans gaining surplus votes in FL and TX, could greatly reduce or even reverse the Electoral College bias.",
+        "evidence": "Conditional deltas of roughly +4 to +8 for Trump in these states; Trump lost NJ by only about 5.",
+        "forecasting_implication": "Expect a smaller Republican Electoral College advantage relative to the popular vote in future cycles; update state partisan leans accordingly."
+      },
+      {
+        "topic": "migration",
+        "insight": "Conservatives leaving high-cost blue states move to Florida and Texas, making those states redder. Liberal emigres move to Washington, Oregon, Colorado and to some extent Maine, making those states bluer.",
+        "evidence": "FL +4.1, TX +2.9; WA −4.7, OR −4.4, CO −2.8 conditional deltas.",
+        "forecasting_implication": "Uniform swing from the previous election misses migration-driven trends; consider trend terms for partisan lean."
+      },
+      {
+        "topic": "Utah trend",
+        "insight": "Utah is gradually becoming more purple because of a tech workforce and Mormon coolness toward Trump. It will not be a swing state by 2028 but possibly by 2040.",
+        "evidence": "Trump −6.9 vs projection",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "North Dakota",
+        "insight": "North Dakota has been getting redder amid the fracking boom.",
+        "evidence": "+6.0 Trump overperformance",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "Hispanic voters / New Mexico",
+        "insight": "New Mexico remained solidly blue and often does not follow the trends of other heavily Hispanic states.",
+        "evidence": "Trump −1.6 vs projection",
+        "forecasting_implication": "Do not over-correlate New Mexico with other Hispanic-heavy states."
+      },
+      {
+        "topic": "Georgia tipping point",
+        "insight": "Harris's 2-point loss in Georgia, smaller than in other swing states, moves Georgia closer to the tipping point. Georgia may trend blue relative to the nation.",
+        "evidence": "Georgia −1.9 vs projection",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "racial groups as swing demographics",
+        "insight": "In 2024 Democrats mostly held Black voters, while Hispanic, Asian American and 'other' voters became true swing demographics.",
+        "evidence": "Exit poll chart: White 41D/57R, Black 85/13, Hispanic 52/46, Asian 54/39, Other 42/54.",
+        "forecasting_implication": "Demographic correlation structures should allow Hispanic and Asian vote shifts independent of Black voters."
+      },
+      {
+        "topic": "northern whites / Blue Wall correlation",
+        "insight": "Trump overperformance among northern whites links the Blue Wall states with Maine, New Hampshire and Minnesota. Nevada behaves differently from the Blue Wall states.",
+        "evidence": "",
+        "forecasting_implication": "Model correlated regional and demographic blocs."
+      },
+      {
+        "topic": "Delaware",
+        "insight": "Delaware likely showed residual sympathy for Biden.",
+        "evidence": "−3.3 delta",
+        "forecasting_implication": "Home-state effects can carry over to a party's subsequent ticket."
+      },
+      {
+        "topic": "Democratic coalition intolerance",
+        "insight": "Silver argues that Democrats' tendency to cast out people who disagree on hot-button issues (such as COVID school closures or Biden's age) hurts majority-building, while Trump welcomed all comers.",
+        "evidence": "Anecdotal reactions to the newsletter's coverage",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin 2024 state-by-state presidential forecast",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on normal-sized polling error",
+        "url": ""
+      },
+      {
+        "description": "'Literally more random than a coin flip' article on the final forecast",
+        "url": ""
+      },
+      {
+        "description": "Article on uniform swing",
+        "url": ""
+      },
+      {
+        "description": "SBSQ #14 comments section for post-election questions",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact functional form and weighting schedule between state polling averages and the regression estimate as a function of poll volume.",
+      "Structure and magnitude of the between-state correlation matrix, including which demographic dimensions are used (the header image suggests a state correlation matrix).",
+      "Why published charts cite 40,000 simulations while the text cites 80,000.",
+      "Size of the national polling error distribution used in 2024 simulations."
+    ]
+  }
+}

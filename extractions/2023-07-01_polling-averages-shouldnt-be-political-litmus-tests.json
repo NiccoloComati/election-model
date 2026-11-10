@@ -1,0 +1,297 @@
+{
+  "article": {
+    "date": "2023-07-01",
+    "title": "Polling averages shouldn't be political litmus tests",
+    "subtitle": "And they need consistent standards, not make-it-up-as-you-go",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/polling-averages-shouldnt-be-political",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2023-07-01_polling-averages-shouldnt-be-political-litmus-tests"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.526913,
+    "prompt_tokens": 8,
+    "completion_tokens": 11209,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T20:54:49"
+  },
+  "extraction": {
+    "summary": "Silver criticizes G. Elliott Morris's letter, as ABC News/FiveThirtyEight's new data director, threatening to ban Rasmussen Reports from 538's polling averages, forecasts, historical averages and pollster ratings. He makes three arguments. Pollsters should not face ideological or political litmus tests, and bias should instead be handled statistically through accuracy track records and house effects adjustments. Retroactively removing a pollster from historical data is bad practice because it corrupts the historical record and creates overconfidence in models trained on hindsight-cleaned data. Polling averages need consistent, legible rules applied to hundreds of pollsters rather than ad hoc case-by-case judgments, which take too much time and invite the modeler's own biases. The article is mostly commentary but contains several clear design principles on poll inclusion and data hygiene.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "FiveThirtyEight (Silver era, 2008-2022)",
+      "FiveThirtyEight (2024, Morris era)",
+      "FiveThirtyEight pollster ratings",
+      "Silver-owned original FiveThirtyEight models (planned use in 2024)"
+    ],
+    "findings": [
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "design_principle",
+        "statement": "Silver holds that pollsters should not be excluded from polling averages on the basis of an ideological or political litmus test, such as their relationships with partisan media outlets. Exclusion, if any, should rest on methodology or track record.",
+        "quantities": [],
+        "rationale": "Many pollsters hold strong political opinions and are friendly with operatives, and some poll for campaigns. Applying a political-relationship standard would wipe out dozens of pollsters and would likely be applied asymmetrically.",
+        "model_version": "general principle",
+        "evidence_quote": "I strongly oppose subjecting pollsters to an ideological or political litmus test. Look, there might be good reasons to exclude Rasmussen based on their methodology",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "European aggregators should likewise base inclusion on methodology and accuracy rather than a pollster's perceived ties to parties or media outlets."
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "design_principle",
+        "statement": "Silver argues that pollster partisanship should be judged empirically by testing polls against actual election results. Pollsters' track records hold them accountable for any political bias that makes their polls less accurate.",
+        "quantities": [],
+        "rationale": "Unlike most pundits, pollsters have track records that can be tested against outcomes.",
+        "model_version": "general principle",
+        "evidence_quote": "pollsters have a track record that can be tested against actual results. They can be held accountable for political bias that might render their polls less accurate.",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "Build pollster accuracy ratings from historical European election results to assess bias empirically."
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "A pollster with a strong, consistent partisan lean relative to the consensus, such as Rasmussen's Republican lean, should be handled statistically through a house effects adjustment in the polling average rather than through exclusion.",
+        "quantities": [],
+        "rationale": "Statistical adjustment corrects the lean while keeping the information in the polls.",
+        "model_version": "FiveThirtyEight (Silver era) / general principle",
+        "evidence_quote": "there are ways to adjust for that — statistical ways like a house effects adjustment, not ways that involve acting like you're the House Un-American Activities Committee.",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "Estimate house effects per party for each pollster in multiparty systems rather than on a single two-party margin."
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "empirical_regularity",
+        "statement": "Rasmussen Reports has had strongly Republican-leaning results relative to the polling consensus for many years. Even so, its overall accuracy in 538's pollster ratings is roughly average, not poor, because polls in general considerably understated Republican performance in 2014, 2016 and 2020.",
+        "quantities": [
+          {
+            "name": "elections where polls understated Republicans",
+            "value": "2014, 2016, 2020",
+            "unit": "election years",
+            "context": "Reason Rasmussen's R-leaning house effect did not hurt its accuracy"
+          }
+        ],
+        "rationale": "Silver describes this as 'two wrongs making a right': Rasmussen's bias offset the industry's Democratic bias.",
+        "model_version": "FiveThirtyEight pollster ratings",
+        "evidence_quote": "Despite that strong Republican house effect, however, they've had roughly average accuracy overall because polls have considerably understated Republican performance in several recent elections (2014, 2016, 2020).",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "A pollster's accuracy score can partly reflect industry-wide systematic error, so separate house effect from accuracy relative to the result when rating European pollsters."
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "An accuracy-only pollster rating can reward a biased pollster whose lean happens to offset a systematic industry-wide polling error in the same cycles. Rasmussen's average rating is partly a case of its Republican bias cancelling the field's Democratic bias.",
+        "quantities": [],
+        "rationale": "Two wrongs making a right.",
+        "model_version": "FiveThirtyEight pollster ratings",
+        "evidence_quote": "Rasmussen has had a Republican bias, but other polls have had a Democratic bias, so they come out of the wash looking OK? Yeah, probably.",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "Consider evaluating pollsters relative to the cycle's average polling error, not only raw error, to avoid rewarding offsetting bias."
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "The FiveThirtyEight pollster ratings page shown in the article grades a pollster using polls conducted within 21 days of an election, based on each poll's median field date. The page offers views of accuracy across all polls and of directional error (overestimating Democrats vs. Republicans).",
+        "quantities": [
+          {
+            "name": "window for polls used in pollster grades",
+            "value": "21",
+            "unit": "days before election",
+            "context": "Based on the poll's median date, FiveThirtyEight pollster ratings"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FiveThirtyEight pollster ratings (Silver era)",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart",
+        "europe_transferability": "general",
+        "europe_note": "A similar final-three-weeks window can be used to rate European pollsters against results."
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "empirical_regularity",
+        "statement": "The FiveThirtyEight chart of Rasmussen Reports' polls (directional view) shows the distribution of poll errors skewed toward overestimating Republicans. Most dots sit right of the center line, with a long right tail including a couple of large outliers, while a meaningful minority overestimated Democrats.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FiveThirtyEight pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart",
+        "europe_transferability": "general",
+        "europe_note": "Plotting each pollster's signed error distribution helps spot house effects in European data."
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "design_principle",
+        "statement": "Silver argues it is bad practice to retroactively revise already-published data, such as removing a later-banned pollster from historical polling averages and pollster ratings, based on decisions made long after publication.",
+        "quantities": [],
+        "rationale": "Retroactive revision makes the numbers less reliable as a historical record.",
+        "model_version": "general principle",
+        "evidence_quote": "It's bad practice to revise data that's already been published, based on decisions you made long after that data was published.",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "Keep historical European poll archives as they were available in real time, and do not purge pollsters retroactively."
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Training or calibrating forecasting models on historical data cleaned with hindsight leads to overconfidence. Real-time data will contain edge cases and minor errors that would have been removed in hindsight but cannot be caught in advance, so error estimates from cleaned data understate live uncertainty.",
+        "quantities": [],
+        "rationale": "Cleaned data neglects the challenges of handling new, messy data as it arrives.",
+        "model_version": "general principle",
+        "evidence_quote": "it can lead to overconfidence when using that data to train or build models. If you clean up a past data set based on information that wouldn't have been available to you at the time",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "Estimate historical polling error in European elections from the poll sets available in real time, including dubious pollsters, so uncertainty is not understated."
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "design_principle",
+        "statement": "A polling average needs a consistent, legible set of inclusion rules that can be applied to the hundreds of pollsters encountered over an election campaign. Silver includes pollsters he subjectively dislikes, politically or methodologically, for the sake of consistency.",
+        "quantities": [
+          {
+            "name": "number of pollsters encountered",
+            "value": "hundreds",
+            "unit": "pollsters",
+            "context": "Over the course of a US election campaign"
+          },
+          {
+            "name": "Silver's experience",
+            "value": "15",
+            "unit": "years",
+            "context": "Years running polling averages and models"
+          }
+        ],
+        "rationale": "Case-by-case decisions are extremely time-consuming mid-campaign. They are also highly likely to introduce the modeler's own biases, whether rooting for a political outcome or wanting the model to look smart.",
+        "model_version": "FiveThirtyEight (Silver era) / general principle",
+        "evidence_quote": "you need a consistent and legible set of rules that be applied to hundreds of pollsters you'll encounter over the course of an election campaign.",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "Pre-specify transparent inclusion and weighting rules for all European pollsters before the campaign rather than adjudicating pollsters ad hoc."
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Ad hoc, case-by-case exclusion of pollsters risks the modeler injecting bias, either toward a preferred political outcome or toward whatever will make the model look smart.",
+        "quantities": [],
+        "rationale": "Subjective judgments are not consistent across pollsters.",
+        "model_version": "general principle",
+        "evidence_quote": "highly likely to result in introducing your own biases, whether it's the political outcome you're rooting for or whatever you think will make your model look smart.",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "Document and lock inclusion rules to guard against forecaster bias."
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver criticizes the post-2023 ABC News/FiveThirtyEight approach under G. Elliott Morris. It threatened to ban Rasmussen from all aggregation and forecasting models, the polls page, historical averages and pollster ratings unless Rasmussen answered questions about its political relationships and detailed methodology. Silver calls this an ad hoc exclusion effort rather than a consistent standard.",
+        "quantities": [
+          {
+            "name": "response window given to Rasmussen",
+            "value": "a day-and-a-half",
+            "unit": "days",
+            "context": "Just before a four-day summer weekend"
+          }
+        ],
+        "rationale": "The methodological questions were nitpicks that could be asked of almost any pollster, such as Quinnipiac. They demanded more disclosure than pollsters typically provide.",
+        "model_version": "FiveThirtyEight (2024, Morris era)",
+        "evidence_quote": "I think it's clear that the letter is an ad hoc exercise to exclude Rasmussen, not an effort to develop a consistent set of standards.",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "Disclosure requirements, if used as inclusion criteria, should be applied uniformly to all pollsters."
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver views vague pollster methodology statements as normal and benign, such as weighting by 'age, race, gender, political party, and other factors'. Commercial pollsters may legitimately keep weighting algorithms proprietary, so missing detailed disclosure of randomization or weighting should not by itself justify exclusion.",
+        "quantities": [],
+        "rationale": "Such disclosure goes well beyond what pollsters typically provide.",
+        "model_version": "general principle",
+        "evidence_quote": "a commercial polling organization would be within its rights to keep some of the details of its weighting algorithms proprietary.",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "Many European pollsters disclose limited weighting detail, so transparency can be treated as a weighting factor rather than a hard exclusion."
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "interpretation_guidance",
+        "statement": "The quoted letter raises a likely-voter issue: if a pollster weights to census data first and then screens for likely voters, it may need to rebalance the LV sample. Women are less likely than men to say they will definitely vote, yet usually make up at least half of the electorate. Silver calls this a reasonable but very in-the-weeds question.",
+        "quantities": [
+          {
+            "name": "women's share of electorate",
+            "value": "at least half",
+            "unit": "share",
+            "context": "US electorate, per the Morris letter quoted"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "women are less likely than men to say they're definitely going to vote, but they usually make up at least half of the electorate anyway.",
+        "explicitness": "explicit",
+        "europe_transferability": "general",
+        "europe_note": "European turnout screens can similarly skew demographic composition, so check likely-voter samples against known turnout composition."
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "As of July 2023, Silver retained ownership of the original FiveThirtyEight models, which Disney had only licensed, and planned to use them in 2024. Disney owns the FiveThirtyEight trade name. Morris's methodological changes apply only to new ABC News averages and products.",
+        "quantities": [
+          {
+            "name": "years of FiveThirtyEight models",
+            "value": "15",
+            "unit": "years",
+            "context": "Lifetime of Silver's original models as of 2023"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Transition from 538 Silver era to Silver Bulletin",
+        "evidence_quote": "I still own the original version of the FiveThirtyEight models that you've loved and/or hated for the past 15 years, and am planning on employing them in some productive capacity in 2024.",
+        "explicitness": "explicit",
+        "europe_transferability": "us_specific",
+        "europe_note": ""
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "systematic polling error direction",
+        "insight": "US polls considerably understated Republican performance in several recent elections.",
+        "evidence": "2014, 2016, 2020 cited.",
+        "forecasting_implication": "Systematic error can recur in the same direction across cycles. Models should allow correlated, election-wide polling error, and pollster ratings should account for it."
+      },
+      {
+        "topic": "pollster partisanship",
+        "insight": "Many pollsters have strong political opinions and ties to operatives, and some poll for campaigns. Partisan ties alone do not establish inaccuracy.",
+        "evidence": "Silver's experience with the FiveThirtyEight pollster ledger.",
+        "forecasting_implication": "Measure pollster bias empirically through house effects rather than inferring it from affiliations."
+      }
+    ],
+    "references": [
+      {
+        "description": "FiveThirtyEight pollster ratings page for Rasmussen Reports (accuracy and direction charts)",
+        "url": ""
+      },
+      {
+        "description": "FiveThirtyEight methodology on house effects adjustment ('statistical ways' link)",
+        "url": ""
+      },
+      {
+        "description": "G. Elliott Morris's letter to Rasmussen Reports",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How exactly is the house effects adjustment computed in Silver's polling averages?",
+      "What specific criteria, if any, did Silver-era FiveThirtyEight use to ban pollsters (e.g., fake or fabricated polls)?",
+      "How do the pollster ratings separate house effect from accuracy relative to cycle-wide polling error?",
+      "How did Silver-era pollster ratings treat polls outside the 21-day window?"
+    ]
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "article": {
+    "date": "2023-12-07",
+    "title": "The incumbency advantage is disappearing. Maybe it's the algorithms' fault.",
+    "subtitle": "Voters constantly hear that the world is in a state of crisis. It isn't a surprise that they're kicking out incumbents.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/the-incumbency-advantage-is-disappearing",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2023-12-07_the-incumbency-advantage-is-disappearing-maybe-its-the-algorithms-fault"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.270099,
+    "prompt_tokens": 4,
+    "completion_tokens": 3825,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 24158,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:02:07"
+  },
+  "extraction": {
+    "summary": "Silver argues that the presidential incumbency advantage has shrunk sharply. Incumbent presidents averaged a +10.3 popular-vote margin in 1948-1984 but only about +0.9 across the last five (1992-2020). A linear trend through 1948-2020 dips below zero by 2020. He contends that the Congressional incumbency advantage has also declined once you control for fewer competitive seats and strategic retirements. He attributes part of the anti-incumbent mood, which he sees as global, to an algorithm-driven, competitive media environment that rewards negativity, while leaning toward fundamentals such as inflation as the explanation for poor economic sentiment. The article has no model mechanics but is relevant to how much weight a fundamentals model should give incumbency.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "Historical presidential incumbency analysis (Silver)"
+    ],
+    "findings": [
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "empirical_regularity",
+        "statement": "Popular-vote margins for the last five incumbent presidents seeking reelection fluctuate around zero: G.H.W. Bush 1992 -5.6, Clinton 1996 +8.5, G.W. Bush 2004 +2.4, Obama 2012 +3.7, Trump 2020 -4.5. The article mislabels the 2004 entry as 'Bush 41'.",
+        "quantities": [
+          {
+            "name": "G.H.W. Bush 1992 margin",
+            "value": "-5.6",
+            "unit": "percentage points",
+            "context": "incumbent popular vote margin"
+          },
+          {
+            "name": "Clinton 1996 margin",
+            "value": "+8.5",
+            "unit": "percentage points",
+            "context": "incumbent popular vote margin"
+          },
+          {
+            "name": "G.W. Bush 2004 margin",
+            "value": "+2.4",
+            "unit": "percentage points",
+            "context": "incumbent popular vote margin"
+          },
+          {
+            "name": "Obama 2012 margin",
+            "value": "+3.7",
+            "unit": "percentage points",
+            "context": "incumbent popular vote margin"
+          },
+          {
+            "name": "Trump 2020 margin",
+            "value": "-4.5",
+            "unit": "percentage points",
+            "context": "incumbent popular vote margin"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "they look pretty darn random, fluctuating haphazardly around zero",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "empirical_regularity",
+        "statement": "Incumbent presidents who ran in 1948-1984 had much larger and more variable margins, averaging +10.3: Truman +4.4, Eisenhower +15.4, Johnson +22.6, Nixon +23.2, Ford -2.1, Carter -9.7, Reagan +18.2.",
+        "quantities": [
+          {
+            "name": "average incumbent margin 1948-1984",
+            "value": "+10.3",
+            "unit": "percentage points",
+            "context": "seven incumbent reelection bids"
+          },
+          {
+            "name": "Truman",
+            "value": "+4.4",
+            "unit": "percentage points",
+            "context": "1948"
+          },
+          {
+            "name": "Eisenhower",
+            "value": "+15.4",
+            "unit": "percentage points",
+            "context": "1956"
+          },
+          {
+            "name": "Johnson",
+            "value": "+22.6",
+            "unit": "percentage points",
+            "context": "1964"
+          },
+          {
+            "name": "Nixon",
+            "value": "+23.2",
+            "unit": "percentage points",
+            "context": "1972"
+          },
+          {
+            "name": "Ford",
+            "value": "-2.1",
+            "unit": "percentage points",
+            "context": "1976"
+          },
+          {
+            "name": "Carter",
+            "value": "-9.7",
+            "unit": "percentage points",
+            "context": "1980"
+          },
+          {
+            "name": "Reagan",
+            "value": "+18.2",
+            "unit": "percentage points",
+            "context": "1984"
+          }
+        ],
+        "rationale": "Higher variance reflects lower partisanship and more swing voters in that era.",
+        "model_version": "general principle",
+        "evidence_quote": "The variance is much higher — which reflects an era of lower partisanship and therefore more swing voters— but the average is substantially positive: +10.3.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "empirical_regularity",
+        "statement": "A linear trend fitted to incumbent presidential popular-vote margins for 1948-2020 declines from about +14 in 1948 to roughly zero by about 2016 and goes negative by 2020. Read literally, being an incumbent would now be a slight disadvantage.",
+        "quantities": [
+          {
+            "name": "trend line value at 1948",
+            "value": "~14",
+            "unit": "percentage points",
+            "context": "read from chart"
+          },
+          {
+            "name": "trend line zero crossing",
+            "value": "~2014-2016",
+            "unit": "year",
+            "context": "read from chart"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "if you plot a linear trend on this data — as in the faint purple line — the incumbency advantage has dipped into negative territory by 2020",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Silver cautions that conclusions from historical presidential election data rest on small samples and depend on where the data is cut. The incumbency trend should therefore be treated as suggestive rather than definitive.",
+        "quantities": [],
+        "rationale": "Few presidential elections exist, and results are sensitive to the cutoff chosen.",
+        "model_version": "general principle",
+        "evidence_quote": "whenever we’re analyzing historical election results, we’re unavoidably doomed to jump to conclusions based on small sample sizes",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "empirical_regularity",
+        "statement": "The high raw reelection rate for Congressional incumbents overstates the incumbency advantage. Fewer seats are competitive, and incumbents who expect to lose often retire, a selection effect. A regression controlling for these factors shows the Congressional incumbency advantage has declined substantially.",
+        "quantities": [],
+        "rationale": "Raw reelection rates confound incumbency with district competitiveness and strategic retirement.",
+        "model_version": "general principle",
+        "evidence_quote": "if you look carefully — such as by running a regression analysis to control for these different factors — you’ll find that the Congressional incumbency advantage has declined quite a bit too",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "design_principle",
+        "statement": "Incumbent loss rates should be measured relative to the number of competitive races, not as raw counts. For example, 10 incumbent losses out of 60 competitive districts is a stronger anti-incumbent signal than 10 out of 120.",
+        "quantities": [
+          {
+            "name": "example incumbent losses",
+            "value": "10",
+            "unit": "incumbents",
+            "context": "footnote example"
+          },
+          {
+            "name": "competitive districts scenario A",
+            "value": "60",
+            "unit": "districts",
+            "context": "footnote example"
+          },
+          {
+            "name": "competitive districts scenario B",
+            "value": "120",
+            "unit": "districts",
+            "context": "footnote example"
+          }
+        ],
+        "rationale": "The same number of losses implies different loss rates depending on how many seats are competitive.",
+        "model_version": "general principle",
+        "evidence_quote": "If, for instance, 10 incumbents lose out of 60 competitive districts, that’s different than when 10 incumbents lose out of 120 such districts",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "assumption",
+        "statement": "Silver leans toward explaining weak consumer sentiment in 2023 through fundamentals, especially cumulative inflation under Biden, rather than media 'vibes'. This suggests economic fundamentals should include inflation, not just labor-market strength.",
+        "quantities": [],
+        "rationale": "Inflation was very high through most of Biden's term, even though it has since abated.",
+        "model_version": "general principle",
+        "evidence_quote": "I lean more toward the “this is explicable through fundamentals” side of the argument",
+        "explicitness": "implied"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "declining presidential incumbency advantage",
+        "insight": "Being an incumbent president no longer confers a large popular-vote edge. Recent incumbents' margins fluctuate around zero, compared with a +10.3 average in 1948-1984.",
+        "evidence": "Margins of the last five incumbents: -5.6, +8.5, +2.4, +3.7, -4.5. A linear trend turns negative by 2020.",
+        "forecasting_implication": "Fundamentals models should give a much smaller incumbency bonus than older regressions imply, possibly near zero, and perhaps let it vary by era."
+      },
+      {
+        "topic": "polarization reduces variance",
+        "insight": "Higher partisanship and fewer swing voters shrink the variance of presidential margins compared with mid-20th-century landslides.",
+        "evidence": "Margins in 1948-1984 ranged from -9.7 to +23.2. Recent margins are within about ±9.",
+        "forecasting_implication": "Priors on national margin dispersion should be narrower in the polarized era."
+      },
+      {
+        "topic": "global anti-incumbent mood",
+        "insight": "Incumbents across democracies of all ideologies are unpopular and losing elections, so Biden's unpopularity is not unusual. The trend is arguably stronger in English-speaking countries and for left-leaning parties.",
+        "evidence": "Trudeau's polling, UK Conservatives' polling, New Zealand's center-left losing in 2023, Australia's conservatives ousted in 2022 (citing Yglesias).",
+        "forecasting_implication": "There may be a cross-national anti-incumbent environment that weighs on incumbents beyond domestic fundamentals."
+      },
+      {
+        "topic": "congressional incumbency and retirements",
+        "insight": "Strategic retirements by incumbents expecting to lose (e.g., Manchin) and fewer competitive seats inflate Congressional reelection rates. The underlying Congressional incumbency advantage has declined.",
+        "evidence": "Regression controlling for these factors, per Silver; details not shown.",
+        "forecasting_implication": "House and Senate models should treat open seats created by retirements as signals and use a smaller incumbency coefficient."
+      },
+      {
+        "topic": "media environment and negativity",
+        "insight": "Algorithmic, competitive media and social media reward negative emotional content. That negativity motivates both clicks and voting, which hurts incumbents. Silver notes the incumbency advantage was high in the curated 'objective journalism' era from post-WWII to the early 1990s, and low in the yellow-journalism era.",
+        "evidence": "He reports the timing correlation with the incumbency chart; this is a qualitative argument.",
+        "forecasting_implication": "A structural reason to expect the incumbency penalty to persist or worsen."
+      },
+      {
+        "topic": "economic sentiment vs objective data",
+        "insight": "Voters' economic perceptions in 2023 were mediocre despite a strong labor market, plausibly because of cumulative inflation.",
+        "evidence": "",
+        "forecasting_implication": "Measures of inflation and economic sentiment may predict incumbent performance better than employment data alone."
+      }
+    ],
+    "references": [
+      {
+        "description": "Matt Yglesias post on the 'vast global tide against incumbents'",
+        "url": ""
+      },
+      {
+        "description": "Silver's theory that algorithmic optimization converts consumer surplus into corporate profits",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What specification and results did Silver use in the regression showing a declining Congressional incumbency advantage?",
+      "Does the Silver Bulletin presidential model include an incumbency term in its fundamentals, and how large is it given this trend?",
+      "How are the margins defined (two-party vs. total popular vote)?"
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "article": {
+    "date": "2026-10-27",
+    "title": "The 83 remotely competitive House races, according to FLIPR",
+    "subtitle": "If there’s a blue wave, how far could it reach?",
+    "authors": "Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/the-83-remotely-competitive-house",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-10-27_the-83-remotely-competitive-house-races-according-to-flipr"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:43:54"
+  },
+  "extraction": {
+    "summary": "Model Talk touring all 83 remotely competitive House races one week out. FLIPR Deluxe gave Democrats 95 percent for the House, projecting about 239 Democratic seats, a net gain of 24, and the battleground had expanded since August, a hallmark of a wave. It works through seat-count scenarios and notes FLIPR's rating thresholds, its heavier default to fundamentals in House races because polls are fewer and often partisan or small, and the asymmetric right tail in the seat distribution, more pronounced in Classic and Lite.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "FLIPR 2026 (Deluxe, Classic, Lite)"
+    ],
+    "findings": [
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "method",
+        "statement": "FLIPR defaults to fundamentals more in House races than in Senate races because House races have fewer reliable polls; many are partisan or small-sample, and FLIPR weights these less. In NY-17, a Harris district, Lawler trailing by only 1.1 in polls still had just a 17 percent chance.",
+        "quantities": [
+          {
+            "name": "Lawler win prob",
+            "value": "17",
+            "unit": "percent",
+            "context": "NY-17, Oct 27, 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Generally speaking, FLIPR defaults to the “fundamentals” more in the House because there are fewer reliable polls than in the Senate.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "parameter_or_number",
+        "statement": "On Oct. 27, 2026 FLIPR Deluxe gave Democrats a 95 percent chance of winning the House, with an average projection of 239 Democratic seats to 196, a net Democratic gain of 24, and a national popular vote of about D+8. Since late August the model had added one Solid D and 14 Likely D seats, and removed three Solid R and nine Likely R seats.",
+        "quantities": [
+          {
+            "name": "House D win prob",
+            "value": "95",
+            "unit": "percent",
+            "context": "Oct 27, 2026"
+          },
+          {
+            "name": "projected D seats",
+            "value": "239",
+            "unit": "seats",
+            "context": "Oct 27, 2026"
+          },
+          {
+            "name": "projected net D gain",
+            "value": "24",
+            "unit": "seats",
+            "context": "Oct 27, 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "we’re well past FLIPR’s average projection of Democrats netting 24 House seats and ending up with a total of 239 to Republicans’ 196.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "method",
+        "statement": "FLIPR's categories are algorithmic: Solid is above 95 percent for one party, Likely 75 to 95 percent, and a toss-up is any race where neither party reaches 60 percent. Only four House toss-ups remained, which shows FLIPR does not hedge into toss-ups.",
+        "quantities": [
+          {
+            "name": "Solid threshold",
+            "value": "95",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Likely range",
+            "value": "75-95",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "toss-up threshold",
+            "value": "60",
+            "unit": "percent",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Our categories are determined algorithmically — a “toss-up” is any race where neither party has a 60 percent chance of winning.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "empirical_regularity",
+        "statement": "FLIPR's House seat distribution in late October 2026 was asymmetric, with a long right tail of possible Democratic gains; the asymmetry is clearer in Classic and Lite, which bake in fewer expectations, than in Deluxe.",
+        "quantities": [],
+        "rationale": "Many Likely R seats could flip in a wave.",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "If you look carefully at FLIPR’s seat distribution chart, you might notice it’s slightly asymmetric.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "The battleground expanding late in a race, with seats moving from Likely R toward competitive, is a hallmark of a wave election.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "The battleground expanding late in the race is a hallmark of a wave election.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "method",
+        "statement": "In toss-up districts like WI-1, KY-6 and MT-1, FLIPR discounts Democratic polling leads with fundamentals; for example, WI-1's D+2.4 fundamentals offset incumbent Bryan Steil's 3-point polling lead to make a toss-up.",
+        "quantities": [
+          {
+            "name": "WI-1 fundamentals",
+            "value": "D+2.4",
+            "unit": "points",
+            "context": "Oct 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "FLIPR discounts those with the fundamentals and still gives Republicans a slight edge in all three.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "Hispanic swing back",
+        "insight": "Hispanic voters in South Texas appeared to be swinging back toward Democrats in 2026, putting Trump+18 TX-15 in play.",
+        "evidence": "Pulido +8.2 in polling average.",
+        "forecasting_implication": "Demographic group swings create correlated district-level shifts."
+      },
+      {
+        "topic": "redistricting and dummymanders",
+        "insight": "Mid-decade redistricting tilted the House map toward Republicans, but some redrawn seats could become 'dummymanders' in a large wave.",
+        "evidence": "",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [],
+    "open_questions": []
+  }
+}

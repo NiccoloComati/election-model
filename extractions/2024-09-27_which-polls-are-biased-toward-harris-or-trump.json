@@ -1,0 +1,606 @@
+{
+  "article": {
+    "date": "2024-09-27",
+    "title": "Which polls are biased toward Harris or Trump?",
+    "subtitle": "*Statistically* biased, we mean. A guide to house effects in the Silver Bulletin model.",
+    "authors": "Eli McKown-Dawson; Nate Silver",
+    "url": "https://www.natesilver.net/p/which-polls-are-biased-toward-harris",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-09-27_which-polls-are-biased-toward-harris-or-trump"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.353383,
+    "prompt_tokens": 4,
+    "completion_tokens": 7820,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 24581,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:15:30"
+  },
+  "extraction": {
+    "summary": "Explains how the Silver Bulletin 2024 presidential model and polling averages apply house effects adjustments to polls, separate from poll weighting. House effects are estimated by comparing each firm's polls to the trendline of other polls, iterating between trendline and house-effect estimation. The more highly rated nonpartisan firms anchor the process. Estimates are mean-reverted: firms with few polls are shrunk toward zero if nonpartisan, and toward a partisan-bias prior of about 3 points if they have a partisan sponsor. The article also gives current house effects by pollster, separate Harris and Trump vote-share house effects, and notes on weighting (aggressive recency, sample size, and spreading weight across a prolific firm's polls).",
+    "model_content_level": "high",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "Silver Bulletin pollster ratings",
+      "RealClearPolitics average"
+    ],
+    "findings": [
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "design_principle",
+        "statement": "Silver Bulletin polling averages are 'aggressive': they put a big premium on newer data, i.e. heavy recency weighting. Other good models use less aggressive recency weighting.",
+        "quantities": [],
+        "rationale": "Acknowledged as a legitimate design choice that others make differently.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "our polling averages are pretty aggressive — meaning we put a big premium on newer data. Other excellent models take a less aggressive approach.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "In the Silver Bulletin model, sample size is a major factor in a poll's influence (weight) score.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The sample size is also a big factor in a given poll's influence score.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "adjustment_rule",
+        "statement": "When a firm frequently polls the same race (national or the same state), as YouGov and Morning Consult do, the Silver Bulletin model spreads a total firm-level weight across that firm's surveys rather than giving each poll full weight.",
+        "quantities": [],
+        "rationale": "Otherwise the averages would quickly be dominated by the more prolific pollsters.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model essentially spreads the total weight assigned to a polling firm across those different surveys; otherwise our averages would quickly be dominated by the more prolific pollsters",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "interpretation_guidance",
+        "statement": "A poll's weight in the Silver Bulletin model combines pollster rating, recency, sample size and the firm-level weight-spreading for prolific firms. The pollster ratings alone show quality absent those other factors.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "To see our assessment of pollster quality absent those other factors, just bookmark our pollster ratings.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "empirical_regularity",
+        "statement": "Different polling averages' weighting schemes mostly end up in highly similar places, with RealClearPolitics as the exception.",
+        "quantities": [],
+        "rationale": "Complaining about weighting schemes is generally not a good use of time.",
+        "model_version": "general principle",
+        "evidence_quote": "other than RealClearPolitics, they mostly wind up in highly similar places",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "Besides weighting, the Silver Bulletin model applies a house effects adjustment to each poll, correcting for a firm's consistent lean toward Democrats or Republicans. A heavily weighted poll may still be adjusted heavily.",
+        "quantities": [],
+        "rationale": "Makes the polling averages more stable and strips out firms' statistical bias toward certain candidates.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "even if a poll that's known to lean toward Donald Trump or Kamala Harris gets a large weight in our forecast, it's often being adjusted heavily on the backend",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "assumption",
+        "statement": "House effects measure statistical bias, not political bias. The two sometimes correlate and sometimes don't; Fox News's polling department is unbiased despite its editorial slant.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "By \"bias\", we mean statistical bias. Sometimes this correlates with political bias and sometimes this doesn't",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "House effects for the 2024 Harris race use only Harris/Trump polls. No leftover Biden/Trump matchup data is used after the candidate switch.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We don't use any leftover data from the Biden/Trump matchup.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "Published house effects are mean-reverted estimates, meant to approximate a pollster's long-run house effect if it surveyed the race every day. Firms with only a handful of polls are shrunk heavily toward the mean; prolific firms such as Morning Consult get more precise, less-shrunk estimates.",
+        "quantities": [],
+        "rationale": "Few polls give imprecise estimates.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If a pollster has only conducted a handful of polls, its house effects are discounted heavily toward the mean",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "adjustment_rule",
+        "statement": "For nonpartisan polls, house effects are mean-reverted toward a prior of zero.",
+        "quantities": [
+          {
+            "name": "prior mean for nonpartisan house effect",
+            "value": "0",
+            "unit": "percentage points",
+            "context": "nonpartisan sponsors"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "For nonpartisan polls, house effects are reverted toward a mean of zero.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "adjustment_rule",
+        "statement": "Polls with partisan sponsors are treated as 'biased until proven unbiased'. Their house effect prior is a lean toward the sponsor's candidate, because presidential partisan-sponsored polls typically exaggerate their candidate's margin by about 3 points, and the model accounts for this.",
+        "quantities": [
+          {
+            "name": "typical partisan sponsor exaggeration",
+            "value": "about 3",
+            "unit": "percentage points of margin",
+            "context": "presidential polls with partisan sponsors"
+          }
+        ],
+        "rationale": "Empirical tendency of partisan-sponsored polls.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Presidential polls with partisan sponsors typically exaggerate their candidate's margin by about 3 percentage points and the model accounts for this.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "adjustment_rule",
+        "statement": "Partisan classification depends on the poll's sponsor, not the polling firm, since some firms poll for both partisan and nonpartisan sponsors. The exception is Trafalgar Group, which is always treated as inherently Republican.",
+        "quantities": [],
+        "rationale": "Trafalgar has a history of failing to disclose who it conducts polls for.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it's the sponsor of a poll that matters in this calculation, not the polling firm",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "House effects are calculated by comparing a firm's polls to the trendline of other polls of the same state, or to other national polls for national surveys.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we basically look at how a firm's polls compare to the trendline of other polls from that state (or compared to other national polls)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "House effect estimation is iterative. The model computes trendlines, estimates house effects against them, recomputes trendlines with house-effect-adjusted polls, re-estimates house effects, and so on.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we calculate the trendlines, then calculate the house effects based on the trendlines, then recalculate the trendlines with adjustments for house effects",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "In the iterative house-effect process, the more highly rated nonpartisan firms act as the center of gravity: the 'true' values against which other firms are compared. As a result, top-rated firms tend to show little net house effect.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the more highly rated, nonpartisan firms serve as essentially the center of gravity: the \"true\" values against which other firms are compared",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "interpretation_guidance",
+        "statement": "A raw poll result is shifted by the firm's house effect. An R+1 Rasmussen poll (house effect −2.6 on Harris margin) is treated roughly like a D+2 poll, while an R+1 NYT/Siena poll is treated essentially as R+1.",
+        "quantities": [
+          {
+            "name": "Rasmussen house effect",
+            "value": "-2.6",
+            "unit": "points of Harris margin",
+            "context": "Sept 27, 2024"
+          },
+          {
+            "name": "NYT/Siena house effect",
+            "value": "-0.06",
+            "unit": "points of Harris margin",
+            "context": "Sept 27, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "If we get an R +1 Rasmussen poll for example, the model thinks about it more like a D +2 poll due to Rasmussen's large house effect.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "method",
+        "statement": "The model calculates separate house effects for each candidate's vote share (Harris and Trump), not just the margin, because pollsters differ in how many undecided or third-party voters they show. The net margin house effect is roughly Harris house effect minus Trump house effect.",
+        "quantities": [],
+        "rationale": "Some pollsters show more undecided voters than others.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we technically calculate separate house effects for Harris's and Trump's vote shares because some pollsters show more undecided voters than others",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "YouGov has negative house effects for both Harris (−0.6) and Trump (−0.5), meaning more undecided or third-party voters but little net house effect. Marist has positive house effects for both candidates (table: Harris +0.5, Trump +0.2).",
+        "quantities": [
+          {
+            "name": "YouGov Harris house effect",
+            "value": "-0.6",
+            "unit": "points",
+            "context": "vote share"
+          },
+          {
+            "name": "YouGov Trump house effect",
+            "value": "-0.5",
+            "unit": "points",
+            "context": "vote share"
+          },
+          {
+            "name": "Marist Harris house effect",
+            "value": "+0.5",
+            "unit": "points",
+            "context": "vote share, table"
+          },
+          {
+            "name": "Marist Trump house effect",
+            "value": "+0.2",
+            "unit": "points",
+            "context": "vote share, table"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "YouGov actually has negative house effects for both Harris (-0.6) and Trump (-0.5)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "Mean-reverted house effects on Harris margin as of Sept 27, 2024, for pollsters with at least 5 Harris/Trump polls. Democratic-leaning: Ipsos +1.9, Outward Intelligence +1.9, PPP +1.4, Morning Consult +1.2, Big Village +1.0, Bullfinch +0.8, Change Research +0.7, UNH +0.4, Focaldata +0.4, Benenson/GS +0.3, Marist +0.3, SurveyUSA +0.3, MassINC +0.2, Fox (Beacon/Shaw) +0.1, TIPP +0.1, Suffolk +0.0. Near zero or slightly Republican-leaning: Quinnipiac −0.0, YouGov −0.0, NYT/Siena −0.1, Fabrizio/Impact −0.1, SSRS (CNN) −0.1, POS −0.1, Emerson −0.3, FAU/Mainstreet −0.3, Patriot Polling −0.3. Republican-leaning: GSG/GBAO (Navigator) −0.4, RMG −0.4, Redfield & Wilton −0.5, Cygnal −0.8, InsiderAdvantage −0.8, Harris Insights & Analytics −1.3, Capitol Weekly −1.5, Spry −2.3, Rasmussen −2.6, Trafalgar −2.7.",
+        "quantities": [
+          {
+            "name": "Ipsos",
+            "value": "+1.9",
+            "unit": "points of Harris margin",
+            "context": "Sept 27 2024"
+          },
+          {
+            "name": "Outward Intelligence",
+            "value": "+1.9",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Public Policy Polling",
+            "value": "+1.4",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Morning Consult",
+            "value": "+1.2",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Big Village",
+            "value": "+1.0",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Bullfinch",
+            "value": "+0.8",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Change Research",
+            "value": "+0.7",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "University of New Hampshire",
+            "value": "+0.4",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Focaldata",
+            "value": "+0.4",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Benenson/GS Strategy Group",
+            "value": "+0.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Marist College",
+            "value": "+0.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "SurveyUSA",
+            "value": "+0.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "MassINC",
+            "value": "+0.2",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Beacon/Shaw (Fox News)",
+            "value": "+0.1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "TIPP Insights",
+            "value": "+0.1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Suffolk",
+            "value": "+0.0",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Quinnipiac",
+            "value": "-0.0",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "YouGov",
+            "value": "-0.0",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "NYT/Siena",
+            "value": "-0.1",
+            "unit": "points",
+            "context": "text says -0.06"
+          },
+          {
+            "name": "Fabrizio Lee/Impact Research",
+            "value": "-0.1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "SSRS (CNN)",
+            "value": "-0.1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Public Opinion Strategies",
+            "value": "-0.1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Emerson",
+            "value": "-0.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "FAU/Mainstreet",
+            "value": "-0.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Patriot Polling",
+            "value": "-0.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Global Strategy Group/GBAO (Navigator)",
+            "value": "-0.4",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "RMG Research",
+            "value": "-0.4",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Redfield & Wilton",
+            "value": "-0.5",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Cygnal",
+            "value": "-0.8",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "InsiderAdvantage",
+            "value": "-0.8",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Harris Insights & Analytics",
+            "value": "-1.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Capitol Weekly",
+            "value": "-1.5",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Spry Strategies",
+            "value": "-2.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Rasmussen Reports",
+            "value": "-2.6",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Trafalgar Group",
+            "value": "-2.7",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "parameter_or_number",
+        "statement": "Separate vote-share house effects (Harris, Trump) with poll counts and pollster ratings, from the table as of Sept 27, 2024: NYT/Siena 16 polls, A+, −0.3/−0.2; Fox (Beacon/Shaw) 13, A, −0.1/−0.2; Cygnal 7, A, −0.6/+0.1; Marist 10, A, +0.5/+0.2; SurveyUSA 15, A, −0.1/−0.3; Emerson 37, A-, +0.3/+0.6; POS 5, A-, −0.1/+0.0; PPP 15, A-, +0.1/−1.3; Quinnipiac 9, A-, +0.0/+0.0; Suffolk 5, A-, −0.4/−0.4; MassINC 5, A/B, +0.2/−0.0; TIPP 9, A/B, −0.6/−0.7; Harris Insights & Analytics 10, B+, +0.2/+1.5; Trafalgar 11, B+, −1.6/+1.0; YouGov 40, B+, −0.6/−0.5; Big Village 8, B, −0.9/−1.9; InsiderAdvantage 15, B, −0.5/+0.3; Rasmussen 21, B, −1.3/+1.3; Change Research 6, B-, −0.3/−1.1; Ipsos 14, B-, −0.6/−2.5.",
+        "quantities": [
+          {
+            "name": "Rasmussen Harris/Trump house effects",
+            "value": "-1.3/+1.3",
+            "unit": "points",
+            "context": "21 polls, rating B"
+          },
+          {
+            "name": "Ipsos Harris/Trump house effects",
+            "value": "-0.6/-2.5",
+            "unit": "points",
+            "context": "14 polls, rating B-"
+          },
+          {
+            "name": "Trafalgar Harris/Trump house effects",
+            "value": "-1.6/+1.0",
+            "unit": "points",
+            "context": "11 polls, rating B+"
+          },
+          {
+            "name": "Emerson Harris/Trump house effects",
+            "value": "+0.3/+0.6",
+            "unit": "points",
+            "context": "37 polls, rating A-"
+          },
+          {
+            "name": "minimum polls for inclusion in chart",
+            "value": "5",
+            "unit": "polls",
+            "context": "Harris/Trump polls"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "empirical_regularity",
+        "statement": "Pollster rating and house effect are distinct. Firms with large partisan house effects can still be rated reasonably well, e.g. Trafalgar (B+) and Rasmussen (B). Most of the highest-rated firms have little net house effect.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "most of our most highly-rated firms have little net house effect",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "In some elections, highly rated polls and mediocre polls diverge systematically; for example, higher-quality polls were usually more favorable to Obama in 2012. In such cases, anchoring house effects to top-rated firms matters. In 2024 this divergence was not present, so an average built only from top firms would look about the same as the Silver Bulletin average.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle / 2024",
+        "evidence_quote": "Higher-quality polls were usually more favorable to Barack Obama in 2012 than lower-rated ones, for instance. But 2024 isn't one of those elections.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver criticizes 'unskewing' polls by scrutinizing odd crosstabs, such as recalled 2020 vote in narrow subgroups. He says a bad poll for one's candidate can simply reflect sampling variation.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Could a bad poll for your favorite candidate just come down to sampling variation?",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "design_principle",
+        "statement": "Seeming outlier polls are kept rather than discarded, because they can give critical clues about how the race is trending. Only consistent leans are adjusted, via house effects.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Even seeming \"outlier\" polls can provide critical clues as to how the race is trending. But if a pollster consistently leans toward Trump or Harris, we adjust",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "2024 state of polls",
+        "insight": "In late September 2024, top-rated pollsters disagreed among themselves rather than diverging as a group from lower-rated ones. NYT/Siena had some bad data for Harris, while Selzer showed Harris down only 4 in Iowa.",
+        "evidence": "Selzer Iowa poll: Harris down 4.",
+        "forecasting_implication": "Quality-only averages would not change the picture much in 2024."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin pollster ratings",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin house effects data ('Get the data' link)",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on how aggressive the polling averages are / weighting of polls",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin methodology on house effects adjustments",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact shrinkage formula for mean-reverting house effects (prior strength, dependence on number of polls).",
+      "How the roughly 3-point partisan-sponsor prior is applied: as the prior mean, and how fast it updates with data.",
+      "Number of iterations or convergence criterion in the trendline/house-effect iterative procedure.",
+      "How much weight each highly rated firm gets in anchoring the center of gravity.",
+      "Recency decay function and sample-size weighting formula for the polling averages.",
+      "Exact formula for spreading firm-level weight across a prolific pollster's surveys.",
+      "Whether house effects are pooled across states and national polls or estimated per jurisdiction."
+    ]
+  }
+}

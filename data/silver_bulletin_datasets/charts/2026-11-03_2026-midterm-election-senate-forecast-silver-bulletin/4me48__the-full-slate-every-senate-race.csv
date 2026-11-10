@@ -1,0 +1,85 @@
+cycle,branch,forecastdate,expression,state_district,candidate_last_name,candidate_party,win_probability,forecasted_vote_share,even_odd,race_rating,timestamp
+2026,Senate,11/3/26,classic,TX,Talarico,D,0.74116665,50.94349,1,Lean D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,TX,Paxton,R,0.25883332,47.599062,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,TX,Brown,I,0,1.457448,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,ME,Jackson,D,0.76818335,51.982574,0,Likely D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,ME,Collins,R,0.23181666,48.017426,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,OH,Brown,D,0.69413334,50.414462,1,Lean D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,OH,Husted,R,0.30586666,47.704519,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,KS,Hamilton,D,0.68115002,50.409002,0,Lean D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,KS,Marshall,R,0.31885001,47.637263,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,KS,Graham,I,0,1.9537349,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MI,El-Sayed,D,0.83636665,51.518508,1,Likely D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MI,Rogers,R,0.16363333,46.143171,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,IA,Turek,D,0.56913334,49.607441,0,Toss-up,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,IA,Hinson,R,0.43086666,48.690938,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,IA,Laehn,I,0,1.7016219,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MN,Flanagan,D,0.88981664,52.231254,1,Likely D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MN,Tafoya,R,0.11018334,45.428602,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,AK,Peltola,D,0.53079998,48.65818,0,Toss-up,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,AK,Sullivan,R,0.46919999,47.114067,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,AK,Sullivan Jr.,R,0,2.3541884,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,AK,Heikes,R,0,1.8735671,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NH,Pappas,D,0.93798333,53.964821,1,Likely D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NH,Sununu,R,0.06201667,44.481867,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NH,Laplante,I,0,1.5533128,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,SC,Graham,R,0.65990001,50.208602,0,Lean R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,SC,Andrews,D,0.34009999,47.864582,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NE,Ricketts,R,0.68926668,50.191607,1,Lean R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NE,Osborn,I,0.31073335,47.315332,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NC,Cooper,D,0.96421665,54.266599,0,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NC,Whatley,R,0.03578333,44.166665,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,GA,Ossoff,D,0.96456665,54.999007,1,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,GA,Collins,R,0.03543333,45.000993,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,FL,Moody,R,0.81185001,51.784874,0,Likely R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,FL,Nixon,D,0.18815,46.681455,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,FL,Gillespie,I,0,1.5336703,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,LA,Letlow,R,0.87795001,53.643345,1,Likely R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,LA,Davis,D,0.12205,46.356655,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MT,Alme,R,0.90326667,44.131671,0,Likely R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MT,Bodnar,I,0.09641667,35.715404,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MT,Bankhead,D,0.00031667,17.678702,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MS,Hyde-Smith,R,0.95833331,53.645792,1,Solid R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MS,Colom,D,0.04165,43.984528,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MS,Pinkins,I,0.00001667,2.3696802,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,IL,Stratton,D,0.99521667,57.534482,0,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,IL,Tracy,R,0.00478333,40.325112,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,IL,Harrington,I,0,2.1404059,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,VA,Warner,D,0.99586666,60.052264,1,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,VA,Mizusawa,R,0.00413333,39.947736,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NJ,Booker,D,0.99594998,58.631847,0,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NJ,Murphy,R,0.00405,37.787994,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NM,Luján,D,0.99769998,59.439075,1,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,NM,Marker,R,0.0023,40.560925,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,OR,Merkley,D,0.99881667,59.31152,0,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,OR,Smith,R,0.00118333,35.500325,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,CO,Hickenlooper,D,0.99909997,58.5622,1,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,CO,Baisley,R,0.0009,38.333335,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,SD,Rounds,R,0.98258334,57.227772,0,Solid R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,SD,Bengs,I,0.01741667,42.772228,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,DE,Coons,D,0.99933332,63.148577,1,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,DE,Katz,R,0.00066667,36.851423,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,KY,Barr,R,0.99621665,58.536656,0,Solid R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,KY,Booker,D,0.00378333,39.497309,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,KY,Campbell,I,0,1.9660348,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,AR,Cotton,R,0.99519998,57.835476,1,Solid R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,AR,Shoffner,D,0.0048,39.762442,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,AR,Wadlin,I,0,2.4020817,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,AL,Moore,R,0.99601668,59.209171,0,Solid R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,AL,Wess,D,0.00398333,40.790829,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MA,Markey,D,0.99989998,63.005716,1,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,MA,Deaton,R,0.0001,32.529194,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,ID,Risch,R,0.99726665,57.866754,0,Solid R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,ID,Achilles,I,0.00273333,37.730999,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,RI,Reed,D,0.99998331,63.99726,1,Solid D,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,RI,McKay,R,0.00001667,33.145352,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,RI,Bahry,I,0,2.8573882,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,OK,Hern,R,0.99968332,61.441251,0,Solid R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,OK,Thomas,D,0.00031667,33.834045,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,WV,Capito,R,0.99994999,65.362367,1,Solid R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,WV,Fetty Anderson,D,0.00005,31.185066,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,WV,Wilson,I,0,3.4525671,1,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,TN,Hagerty,R,0.99975002,60.015864,0,Solid R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,TN,Bradshaw,D,0.00025,36.147883,0,,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,WY,Hageman,R,1,71.680915,1,Solid R,23:25:47  2 Nov 2026
+2026,Senate,11/3/26,classic,WY,Byrd,D,0,28.319085,1,,23:25:47  2 Nov 2026

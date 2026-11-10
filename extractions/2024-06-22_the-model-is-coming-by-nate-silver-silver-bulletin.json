@@ -1,0 +1,126 @@
+{
+  "article": {
+    "date": "2024-06-22",
+    "title": "The model is coming",
+    "subtitle": "A quick update on plans for a busy political week.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/the-model-is-coming",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-06-22_the-model-is-coming-by-nate-silver-silver-bulletin"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.117947,
+    "prompt_tokens": 4,
+    "completion_tokens": 1509,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 10929,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:02:09"
+  },
+  "extraction": {
+    "summary": "A short signposting post announcing that the Silver Bulletin 2024 presidential election model is about 90 percent complete, with launch targeted for roughly Wednesday, June 26, 2024. The remaining work is mostly edge cases such as handling ranked choice voting in Maine. Polling averages will be free, while forecast probabilities will be paywalled. Updates will be about weekly at first and will speed up as the election nears. Silver claims the model is the best available and the only one with a long-term track record, and he previews a June presidential debate reaction post.",
+    "model_content_level": "low",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages"
+    ],
+    "findings": [
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin 2024 presidential model includes explicit handling of ranked choice voting in Maine. Silver describes this as one of the remaining edge cases during development.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "mostly down to edge-case stuff like handling ranked choice voting in Maine",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "method",
+        "statement": "Updates to the Silver Bulletin 2024 presidential forecast were planned for about once a week at launch, becoming more frequent as election day approaches.",
+        "quantities": [
+          {
+            "name": "initial update frequency",
+            "value": "once a week or so",
+            "unit": "updates",
+            "context": "Early phase of the 2024 forecast after the late-June launch"
+          }
+        ],
+        "rationale": "Silver describes a \"slow food\" approach and wants to keep the model from consuming all his other newsletter work.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "with updates once a week or so initially before accelerating as the election approaches",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "design_principle",
+        "statement": "For the 2024 Silver Bulletin presidential model, the polling averages are publicly available. The forecast component and its win probabilities are paywalled.",
+        "quantities": [],
+        "rationale": "Silver wants a smaller, self-selected audience, wants to avoid 'model wars' dynamics, and expects better economics.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "I deliberately want a smaller, self-selected audience and to avoid too many \"model wars\"-type dynamics",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "Silver says the 2024 Silver Bulletin presidential model is the only forecast with a long-term track record. This implies continuity with the models he built in the FiveThirtyEight era.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it's the only one that has any sort of long-term track record",
+        "explicitness": "implied"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "parameter_or_number",
+        "statement": "As of June 22, 2024, the Silver Bulletin presidential model was about 90 percent complete. Launch was targeted for Wednesday, plus or minus a day, which would be around June 26, 2024. It was built with help from elections analyst Eli McKown-Dawson.",
+        "quantities": [
+          {
+            "name": "completion",
+            "value": "90",
+            "unit": "percent",
+            "context": "Status as of June 22, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "work on the presidential election model is about 90 percent done",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "debate timing",
+        "insight": "The first 2024 presidential debate was scheduled unusually early, in late June. Silver flags this as unusual.",
+        "evidence": "",
+        "forecasting_implication": "Debate effects in 2024 arrive earlier than in the historical calendar, which may matter for any debate-bounce handling."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin presidential election model page",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on the model's long-term track record",
+        "url": ""
+      },
+      {
+        "description": "\"Isolation chamber\" debate reaction method (earlier post)",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How is Maine's ranked choice voting implemented in the simulation, for example the allocation of third-party second preferences?",
+      "Does the 2024 model treat Maine and Nebraska congressional districts separately in the simulation?",
+      "What is the exact update cadence schedule as the election approaches?"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+County	lat	lon	shift	hispanic	hisp_avg	Education	Black	Asian
+Atlantic			10	19.9	NO	31.2	13.9	7.9
+Bergen			13	22.1	YES	52.6	5.7	16.7
+Burlington			3	9.2	NO	42	16.5	5.6
+Camden			6	18.7	NO	35.3	18.9	5.9
+Cape May			3	8.1	NO	37.4	3.4	0.7
+Cumberland			10	35	YES	17.9	18.1	1.4
+Essex			10	24.7	YES	37.9	36.9	5.9
+Gloucester			4.9	7.8	NO	35.8	10.7	3.1
+Hudson			18	40.7	YES	47.9	12.2	16.5
+Hunterdon			3	8.8	NO	56.5	2.6	4.5
+Mercer			6	22.2	YES	44.9	19.2	12.1
+Middlesex			14	23	YES	45.1	10.4	25.1
+Monmouth			8	12.7	NO	50.6	6.2	5.3
+Morris			7	15.5	NO	57.2	3.3	10.7
+Ocean			7	10.6	NO	33.7	3	1.9
+Passaic			20	43.4	YES	30.3	10.6	5.5
+Salem			6	10.7	NO	24	14.2	1
+Somerset			7	17	NO	57.4	9.6	19.1
+Sussex			6	11.1	NO	40	2.3	1.9
+Union			12	34.4	YES	38.6	20.5	5.6
+Warren			5	12.1	NO	36.4	5.5	3
+						42.9	13	9.9

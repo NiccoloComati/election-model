@@ -1,0 +1,460 @@
+{
+  "article": {
+    "date": "2024-03-05",
+    "title": "The White House is betting the election on a theory of skewed polls 🚩🚩🚩🚩🚩",
+    "subtitle": "The polls may be off in either direction. But banking on an error in your favor is usually a red flag.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/the-white-house-is-betting-the-election",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-03-05_the-white-house-is-betting-the-election-on-a-theory-of-skewed-polls"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.466967,
+    "prompt_tokens": 4,
+    "completion_tokens": 6716,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 41539,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:02:22"
+  },
+  "extraction": {
+    "summary": "Silver argues that the Biden White House is engaging in 'poll unskewing' in March 2024, when Biden trails Trump nationally and by more in swing states. He reviews 2008-2022 to show that Democrats were rarely behind and that polls were mostly accurate. He notes that 2016 and 2020 polls overrated Democrats and that 2022 polls were historically accurate. The central forecasting lesson is that the direction of polling error is historically unpredictable, so banking on an error in your favor is a red flag. Two FiveThirtyEight tables cover statistical bias and weighted-average error of polls in the final 21 days of races since 1998, with pollsters weighted by one over the square root of their poll count. The article is marked as paywalled, but the full text appears to be present.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "FiveThirtyEight (Silver era, 2008-2022)",
+      "FiveThirtyEight pollster accuracy database",
+      "prediction markets"
+    ],
+    "findings": [
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "The direction of polling error has historically been impossible to predict in advance. Conventional wisdom has usually been wrong when it tried to guess which party polls would underrate, so forecasts should treat systematic polling error as symmetric around zero rather than assuming error in one party's favor.",
+        "quantities": [],
+        "rationale": "In 2012 and 2022 insiders expected Democrats to underperform their polls but they outperformed. In 2014 and 2016 the reverse happened.",
+        "model_version": "general principle",
+        "evidence_quote": "it's historically been impossible to predict the direction in which polls are wrong, and the conventional wisdom has usually been wrong when it tried to guess.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The FiveThirtyEight polling-bias and polling-error metrics use polls whose median field date falls in the final 21 days before the election. They include presidential, Senate, House and gubernatorial general elections since 1998, plus special elections and runoffs, and exclude pollsters banned by FiveThirtyEight.",
+        "quantities": [
+          {
+            "name": "poll window",
+            "value": "21",
+            "unit": "days",
+            "context": "final days before election, based on poll's median field date"
+          },
+          {
+            "name": "start year",
+            "value": "1998",
+            "unit": "",
+            "context": "first cycle in the accuracy database tables"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 pollster accuracy database (2023)",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "In the FiveThirtyEight error and bias tables, each poll is weighted by 1/sqrt(n), where n is the number of polls its pollster conducted for that type of election in that cycle. This prevents prolific pollsters from dominating the averages.",
+        "quantities": [
+          {
+            "name": "poll weight",
+            "value": "1/sqrt(n)",
+            "unit": "",
+            "context": "n = polls by that pollster for that election type in that cycle"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 pollster accuracy database",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Statistical bias in the FiveThirtyEight table is calculated only for elections in which the top two finishers were a Republican and a Democrat. It is therefore not calculated for presidential primaries.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "538 pollster accuracy database",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "adjustment_rule",
+        "statement": "For presidential primary polling-error calculations, FiveThirtyEight excludes the following polls: New Hampshire primary polls taken before the Iowa caucuses; other states' primary polls taken before the New Hampshire primary; polls where the leader or runner-up dropped out before the primary; polls where any candidate receiving at least 15% dropped out; and polls where any combination of candidates receiving at least 25% dropped out.",
+        "quantities": [
+          {
+            "name": "single dropout threshold",
+            "value": "15",
+            "unit": "percent",
+            "context": "poll excluded if a candidate at or above this share dropped out"
+          },
+          {
+            "name": "combined dropout threshold",
+            "value": "25",
+            "unit": "percent",
+            "context": "poll excluded if dropped-out candidates combined reach this share"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 pollster accuracy database",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "Weighted-average statistical bias of final-21-day polls, by cycle, for president, Senate, House and governor. Positive D values mean polls overstated Democrats. Combined values are partially truncated in the image.",
+        "quantities": [
+          {
+            "name": "1998 bias",
+            "value": "Sen R+4.5, House R+0.9, Gov R+5.7, Combined R+3",
+            "unit": "percentage points",
+            "context": "1998 cycle"
+          },
+          {
+            "name": "2000 bias",
+            "value": "Pres R+2.4, Sen R+2.8, House D+1.1, Gov R+0.2",
+            "unit": "percentage points",
+            "context": "1999-2000 cycle"
+          },
+          {
+            "name": "2002 bias",
+            "value": "Sen D+2.0, House D+1.6, Gov D+3.4",
+            "unit": "percentage points",
+            "context": "2001-02 cycle"
+          },
+          {
+            "name": "2004 bias",
+            "value": "Pres D+1.2, Sen D+0.8, House D+2.2, Gov D+2.0",
+            "unit": "percentage points",
+            "context": "2003-04 cycle"
+          },
+          {
+            "name": "2006 bias",
+            "value": "Sen R+2.1, House D+1.1, Gov D+0.4",
+            "unit": "percentage points",
+            "context": "2005-06 cycle"
+          },
+          {
+            "name": "2008 bias",
+            "value": "Pres D+0.9, Sen D+0.4, House D+1.3, Gov R+0.1",
+            "unit": "percentage points",
+            "context": "2007-08 cycle"
+          },
+          {
+            "name": "2010 bias",
+            "value": "Sen R+0.8, House D+1.3, Gov R+0.2",
+            "unit": "percentage points",
+            "context": "2009-10 cycle"
+          },
+          {
+            "name": "2012 bias",
+            "value": "Pres R+2.5, Sen R+3.2, House R+3.3, Gov R+1.6",
+            "unit": "percentage points",
+            "context": "2011-12 cycle"
+          },
+          {
+            "name": "2014 bias",
+            "value": "Sen D+2.7, House D+4.0, Gov D+2.3",
+            "unit": "percentage points",
+            "context": "2013-14 cycle"
+          },
+          {
+            "name": "2016 bias",
+            "value": "Pres D+3.3, Sen D+2.8, House D+4.1, Gov D+3.1",
+            "unit": "percentage points",
+            "context": "2015-16 cycle"
+          },
+          {
+            "name": "2018 bias",
+            "value": "Sen EVEN, House R+0.5, Gov R+1.0",
+            "unit": "percentage points",
+            "context": "2017-18 cycle"
+          },
+          {
+            "name": "2020 bias",
+            "value": "Pres D+4.1, Sen D+4.9, House D+6.1, Gov D+5.6",
+            "unit": "percentage points",
+            "context": "2019-20 cycle"
+          },
+          {
+            "name": "2022 bias",
+            "value": "Sen R+0.3, House D+0.2, Gov D+1.3",
+            "unit": "percentage points",
+            "context": "2021-22 cycle"
+          },
+          {
+            "name": "all-years bias",
+            "value": "Pres D+1.2, Sen D+0.6, House D+1.2, Gov D+0.9",
+            "unit": "percentage points",
+            "context": "1998-2022 pooled"
+          }
+        ],
+        "rationale": "Shows that bias is unpredictable from election to election.",
+        "model_version": "538 pollster accuracy database",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "Weighted-average absolute error of final-21-day polls, by cycle and election type. Presidential primary error is roughly double general-election error. 2021-22 was historically accurate.",
+        "quantities": [
+          {
+            "name": "all-years error",
+            "value": "Pres primary 9.2, Pres general 4.3, Sen 5.4, House 6.1, Gov 5.4",
+            "unit": "percentage points",
+            "context": "1998-2022 pooled"
+          },
+          {
+            "name": "2022 error",
+            "value": "Sen 4.8, House 4.0, Gov 5.1",
+            "unit": "percentage points",
+            "context": "2021-22 cycle"
+          },
+          {
+            "name": "2020 error",
+            "value": "Pres primary 10.2, Pres general 5.0, Sen 5.8, House 6.5, Gov 6.4",
+            "unit": "percentage points",
+            "context": "2019-20 cycle"
+          },
+          {
+            "name": "2016 error",
+            "value": "Pres primary 10.2, Pres general 4.9, Sen 5.0, House 5.8, Gov 5.4",
+            "unit": "percentage points",
+            "context": "2015-16 cycle"
+          },
+          {
+            "name": "2018 error",
+            "value": "Sen 4.2, House 4.9, Gov 5.2",
+            "unit": "percentage points",
+            "context": "2017-18 cycle"
+          },
+          {
+            "name": "2014 error",
+            "value": "Sen 5.3, House 6.8, Gov 4.5",
+            "unit": "percentage points",
+            "context": "2013-14 cycle"
+          },
+          {
+            "name": "2012 error",
+            "value": "Pres primary 8.9, Pres general 3.7, Sen 4.7, House 5.5, Gov 4.9",
+            "unit": "percentage points",
+            "context": "2011-12 cycle"
+          },
+          {
+            "name": "2010 error",
+            "value": "Sen 4.9, House 7.0, Gov 4.7",
+            "unit": "percentage points",
+            "context": "2009-10 cycle"
+          },
+          {
+            "name": "2008 error",
+            "value": "Pres primary 7.7, Pres general 3.5, Sen 4.7, House 5.9, Gov 4.4",
+            "unit": "percentage points",
+            "context": "2007-08 cycle"
+          },
+          {
+            "name": "2006 error",
+            "value": "Sen 5.2, House 6.5, Gov 5.1",
+            "unit": "percentage points",
+            "context": "2005-06 cycle"
+          },
+          {
+            "name": "2004 error",
+            "value": "Pres primary 7.0, Pres general 3.3, Sen 5.3, House 5.8, Gov 5.5",
+            "unit": "percentage points",
+            "context": "2003-04 cycle"
+          },
+          {
+            "name": "2002 error",
+            "value": "Sen 5.5, House 5.6, Gov 5.2",
+            "unit": "percentage points",
+            "context": "2001-02 cycle"
+          },
+          {
+            "name": "2000 error",
+            "value": "Pres primary 7.9, Pres general 4.4, Sen 6.0, House 4.3, Gov 4.9",
+            "unit": "percentage points",
+            "context": "1999-2000 cycle"
+          },
+          {
+            "name": "1998 error",
+            "value": "Sen 7.5, House 7.1, Gov 8.1",
+            "unit": "percentage points",
+            "context": "1998 cycle"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 pollster accuracy database",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "There is no clear long-term trend in polling accuracy. Polls were pretty good in 2012, 2018 and 2022, quite bad in 2016 and 2020, and in between in 2014. Silver accepts a mild prior that polling is getting worse because of declining response rates, but rejects a binary 'polls work vs. polls are broken' framing.",
+        "quantities": [],
+        "rationale": "Poor polling years also occurred before the modern era (1998, 1980, 1948).",
+        "model_version": "general principle",
+        "evidence_quote": "If you want to start with the prior that polling is getting worse a priori because of declining response rates, I don't have a big problem with that.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "Polls taken in March of an election year are historically not very reliable predictors of November results. One reason is that campaigns have time to change course and tweak strategies that are not working.",
+        "quantities": [],
+        "rationale": "Campaigns can respond to bad polling.",
+        "model_version": "general principle",
+        "evidence_quote": "one reason polls in March aren't historically all that reliable is because campaigns have the opportunity to change course and tweak a strategy that isn't working.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "approval_and_favorability_tracking",
+        "finding_type": "empirical_regularity",
+        "statement": "Candidates' relative favorability ratings predict election results extremely well; Silver calls this 'almost axiomatic'. Biden's stronger 2020 favorability versus Clinton's in 2016 explains why he won where she lost. Trump's 2024 head-to-head lead follows predictably from Biden's favorability now being markedly worse than Trump's.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "You can, in fact, predict election results extremely well by knowing each candidate's favorability ratings; in fact, this is almost axiomatic.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "interpretation_guidance",
+        "statement": "Special and off-year elections, such as the 2023 races, are low-turnout contests that may say little about a presidential general election, especially when the president is not on the ballot. The NYT poll replicated Democrats' strong performance in such contests while still showing Biden trailing Trump.",
+        "quantities": [],
+        "rationale": "Voter concerns specific to Biden, such as his age, would not show up in races where he is not on the ballot.",
+        "model_version": "general principle",
+        "evidence_quote": "it's not clear how much one should take away from these low-turnout races.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2022, polls of the House popular vote were nearly exactly right and polls were highly accurate in aggregate. Democrats were very slightly overestimated overall. Forecast models had Republicans favored in the House and the Senate as close, which the results reasonably matched. 'Red wave' predictions came from pundits and defied the polling averages.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "538 2022 midterms",
+        "evidence_quote": "it was a way better year for the polling industry than the takes industry.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "In both elections with Trump on the ballot (2016 and 2020), polls overstated the Democrat. Biden in 2020 considerably underperformed his polls but held on in tipping-point states such as Georgia and Wisconsin because his lead was large.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "that's what happened to the Democrat the only other two times that Trump was on the ballot in 2016 and 2020.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver suggests that pollsters may compensate for low phone response rates by moving online and doing more modeling and massaging of their data, even if this departs from the traditional hands-off 'gold standard' approach.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "pollsters may be able to compensate for this by doing more massaging and modeling with their data, even this means a retreat from the traditional, hands-off, \"gold standard\" approach to polling.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "interpretation_guidance",
+        "statement": "In 2020, conventional wisdom was more equivocal about Biden than the polls were, but Biden was still the favorite in prediction markets.",
+        "quantities": [],
+        "rationale": "Lingering caution after the 2016 polling miss.",
+        "model_version": "2020",
+        "evidence_quote": "Biden was the favorite in prediction markets.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "In early 2024, Biden trailed Trump by a wider margin in swing-state polling than nationally, implying an Electoral College disadvantage for Democrats. If the election were held then, Trump would be favored, with Biden within striking distance only through a systematic polling error.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential (March)",
+        "evidence_quote": "Biden generally trails Trump by a wider margin in swing state polling.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "Democrats rarely trailing",
+        "insight": "March 2024 marked the first time since 2004 that Democrats trailed in presidential polls. Obama in 2008 led except briefly after the Palin pick and the RNC, Obama in 2012 outperformed his polls, and Clinton in 2016 and Biden in 2020 led throughout.",
+        "evidence": "Historical review of 2008-2020 races.",
+        "forecasting_implication": "Campaign and media reactions to trailing polls may produce motivated 'unskewing' that forecasters should ignore."
+      },
+      {
+        "topic": "Biden approval",
+        "insight": "Biden's approval rating was 38 percent in March 2024, evidence that voters had soured on him.",
+        "evidence": "Approval average cited by Silver.",
+        "forecasting_implication": "Low incumbent approval feeds into the fundamentals of a presidential forecast."
+      },
+      {
+        "topic": "2022 midterm",
+        "insight": "2022 was one of the historically stronger midterms for the president's party. Democrats expanded their Senate margin and narrowly lost the House. Abortion probably mattered more than election denialism.",
+        "evidence": "",
+        "forecasting_implication": "The midterm penalty is not uniform; issue salience can blunt it."
+      },
+      {
+        "topic": "issue salience / January 6",
+        "insight": "Democracy-related issues poll low as most-important issues. In October 2020 Gallup polling, 30% named COVID, 14% the economy, 5% unifying the country and 2% elections. Voters compartmentalize January 6 as bad but well-litigated, and a near-catastrophe does not move most voters like an actual catastrophe.",
+        "evidence": "Gallup October 2020 figures.",
+        "forecasting_implication": "Be skeptical that campaign messaging on democracy will shift the polls substantially."
+      },
+      {
+        "topic": "candidate effects",
+        "insight": "Silver doubts other 2020 Democrats (Sanders, Harris, Warren, Buttigieg, Bloomberg, Klobuchar) would have won given Biden's narrow tipping-point margins, citing ideology, inexperience or weak retail politics.",
+        "evidence": "",
+        "forecasting_implication": "Candidate quality can matter at the margin in close elections."
+      },
+      {
+        "topic": "2020 primary",
+        "insight": "Biden led the 2020 Democratic primary polls consistently until Iowa and again after South Carolina. Media underrated him on vibes rather than polls.",
+        "evidence": "",
+        "forecasting_implication": "Trust polls over media narratives."
+      }
+    ],
+    "references": [
+      {
+        "description": "FiveThirtyEight pollster ratings and polling accuracy analysis, 2023 (source of the bias and error tables)",
+        "url": ""
+      },
+      {
+        "description": "Evan Osnos New Yorker profile of Biden, 2024",
+        "url": ""
+      },
+      {
+        "description": "Harry Enten analysis comparing Biden's 2020 and Clinton's 2016 favorability",
+        "url": ""
+      },
+      {
+        "description": "October 2020 Gallup most-important-problem poll",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How the Silver Bulletin 2024 model translates historical polling bias and error into the size and distribution of its simulated systematic error.",
+      "How favorability ratings, as opposed to head-to-head polls, enter the forecast, if at all.",
+      "How much early-cycle (March) polls are discounted relative to fundamentals in the 2024 model."
+    ]
+  }
+}

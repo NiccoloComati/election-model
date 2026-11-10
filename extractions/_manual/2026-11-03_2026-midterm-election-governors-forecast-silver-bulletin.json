@@ -1,0 +1,13 @@
+{
+  "summary": "Final FLIPR 2026 gubernatorial forecast landing page as of Nov. 3, 2026. Democrats had a 90.2 percent chance of controlling a majority of governorships, Republicans 4.0 percent and a tie 5.8 percent. A projected 231.2 million Americans would have Democratic governors versus 111.3 million Republican. The PDF shows governor polling averages with per-poll influence scores; the Kansas average was tied at 48.3 each.",
+  "model_content_level": "low",
+  "models_discussed": ["FLIPR 2026 (Deluxe, Classic, Lite)"],
+  "findings": [
+    {"component": "simulation_and_aggregation", "finding_type": "parameter_or_number", "statement": "Final FLIPR gubernatorial aggregates on Nov. 3, 2026: Democrats 90.2 percent to hold a majority of governorships, Republicans 4.0 percent, tie 5.8 percent. Projected population governed: 231.2 million under Democrats and 111.3 million under Republicans.", "quantities": [{"name": "D governorship majority prob", "value": "90.2", "unit": "percent", "context": "final"}, {"name": "tie prob", "value": "5.8", "unit": "percent", "context": "final"}, {"name": "population with D governor", "value": "231.2", "unit": "million", "context": "projected"}], "rationale": "", "model_version": "FLIPR 2026 final", "evidence_quote": "", "explicitness": "inferred_from_chart"},
+    {"component": "poll_weighting", "finding_type": "parameter_or_number", "statement": "Final Kansas governor polling average influence scores: AtlasIntel (2,038 LV, Oct 28-Nov 1) 3.25; NYT/Siena (736 LV) 2.37; YouGov (2,085 LV) 1.96; Emerson (800 LV) 1.92; Washington Post (801 LV) 1.81; Survey 160 (1,267 LV) 1.76; SSRS (838 LV, Oct 20-26) 1.02; Global Strategy Group, a Democratic partisan pollster (600 LV), 0.79; co/efficient (Sept 8-10) 0.11; YouGov (Sept 24-Oct 4) 0.10. Weights decay steeply with age once newer polls exist.", "quantities": [{"name": "AtlasIntel influence", "value": "3.25", "unit": "influence score", "context": "KS gov final"}, {"name": "September poll influence", "value": "0.10-0.11", "unit": "influence score", "context": "KS gov final"}], "rationale": "Recency weighting.", "model_version": "FLIPR 2026 final", "evidence_quote": "", "explicitness": "inferred_from_chart"},
+    {"component": "communication_and_interpretation", "finding_type": "method", "statement": "FLIPR's poll tables only display races with at least three polls from two unique polling firms, and label samples LV, RV, V or A.", "quantities": [], "rationale": "", "model_version": "FLIPR 2026", "evidence_quote": "", "explicitness": "inferred_from_chart"}
+  ],
+  "political_insights": [],
+  "references": [],
+  "open_questions": []
+}

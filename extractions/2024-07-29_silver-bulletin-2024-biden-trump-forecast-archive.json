@@ -1,0 +1,711 @@
+{
+  "article": {
+    "date": "2024-07-29",
+    "title": "Silver Bulletin 2024 Biden-Trump forecast archive",
+    "subtitle": "Our forecast when Biden was the presumptive Democratic nominee, frozen on the day he dropped out.",
+    "authors": "Nate Silver; Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/silver-bulletin-2024-biden-trump",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-07-29_silver-bulletin-2024-biden-trump-forecast-archive"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.436523,
+    "prompt_tokens": 4,
+    "completion_tokens": 8229,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 33951,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:07:25"
+  },
+  "extraction": {
+    "summary": "Archive page for the Silver Bulletin 2024 presidential forecast while Joe Biden was the presumptive Democratic nominee, frozen at the final update on July 21, 2024, the day Biden dropped out. The text describes the model as a direct descendant of the FiveThirtyEight forecast with largely the same methodology, minus the 2020 COVID-19 provisions. It describes the polling averages as adjusting for registered vs. likely voters, presence or absence of RFK Jr., and house effects, weighting more reliable polls more heavily, and using national polls to inform state polls and vice versa. The charts and tables show model outputs: 40,000 simulations, Trump 72.8% to win the Electoral College, tipping-point and Voter Power Index tables, an Electoral College bias table by popular-vote margin, Kennedy ballot-access uncertainty, and a six-indicator economic index of z-scores.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "FiveThirtyEight (Silver era, 2008-2022)"
+    ],
+    "findings": [
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "The 2024 Silver Bulletin presidential model is a direct descendant of the FiveThirtyEight election forecast Silver built. Its methodology is largely the same; the main stated change is removing the COVID-19 provisions introduced for 2020.",
+        "quantities": [],
+        "rationale": "Silver retained the intellectual property rights to the FiveThirtyEight model.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The model is the direct descendant of the f/k/a FiveThirtyEight election forecast and the methodology is largely the same, other than removing COVID-19 provisions introduced for 2020.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin polling averages adjust polls for whether they were conducted among registered voters or likely voters.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "They adjust for whether polls are conducted among registered or likely voters",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin polling averages adjust polls for whether RFK Jr. was included as an option in the poll.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "the presence or absence of RFK Jr.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin polling averages apply house-effect adjustments to individual pollsters.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "and house effects",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin polling averages weight more reliable polls more heavily. A chart caption says the averages account for each poll's quality, sample size and recency.",
+        "quantities": [],
+        "rationale": "Weighting by reliability yields a more stable average.",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "They weight more reliable polls more heavily.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin polling averages use national polls to make inferences about state polls and vice versa. A chart note says state averages are adjusted based on trends in both state and national polls.",
+        "quantities": [],
+        "rationale": "Produces a more stable average that is not thrown off by outliers, at the cost of extra computation.",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "they use national polls to make inferences about state polls and vice versa",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "design_principle",
+        "statement": "Silver's stated design goal for the polling averages is a stable average that resists outliers, and he accepts extra computational cost to get it.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "the reward is a more stable average that doesn't get psyched out by outliers",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The 2024 Silver Bulletin presidential model produces its probabilities from 40,000 simulations. Each simulation forecasts every state's vote share and tallies the electoral votes each candidate wins.",
+        "quantities": [
+          {
+            "name": "number of simulations",
+            "value": "40,000",
+            "unit": "simulations",
+            "context": "2024 presidential model, per forecast run"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "method",
+        "statement": "The 2024 model tracks a 'No majority' outcome. This covers simulations where neither candidate reaches 270 electoral votes, whether from a 269-269 tie or from a third-party candidate such as RFK Jr. winning electoral votes. It was 0.4% in the final Biden-Trump forecast.",
+        "quantities": [
+          {
+            "name": "no Electoral College majority probability",
+            "value": "0.4%",
+            "unit": "probability",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "Kennedy predicted electoral votes",
+            "value": "0.3",
+            "unit": "electoral votes",
+            "context": "July 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "vote_counting_and_election_night",
+        "finding_type": "method",
+        "statement": "The 2024 model produces 'nightmare scenarios', such as the chance of a repeat of the 2000 Florida recount. Silver says this is more likely than people might think.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "plus some nightmare scenarios like a repeat of the 2000 Florida recount. (It's more likely than you might think, alas.)",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "method",
+        "statement": "The 2024 model simulates uncertainty about RFK Jr.'s ballot access state by state. Kennedy's simulated vote share in Georgia and Arizona has a high probability mass at 0%, reflecting the chance he does not make the ballot there.",
+        "quantities": [
+          {
+            "name": "Kennedy predicted national vote share",
+            "value": "4.3%",
+            "unit": "percent",
+            "context": "July 21, 2024 forecast, versus 8.0% in the national polling average"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "empirical_regularity",
+        "statement": "The 2024 model projects a third-party candidate's final vote share well below his current polling average: Kennedy was 8.0% in the national polling average but 4.3% in the predicted popular vote. This implies the model expects third-party support to fade.",
+        "quantities": [
+          {
+            "name": "Kennedy national polling average",
+            "value": "8.0%",
+            "unit": "percent",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "Kennedy predicted vote share",
+            "value": "4.3%",
+            "unit": "percent",
+            "context": "July 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "The forecast's projected two-party race was tighter than the current polls. Trump led Biden 45.2% to 41.2% in the national polling average on July 21, but the model's predicted popular vote was Trump 47.5% to Biden 46.7%. Projected shares for the major candidates exceed their polling numbers as undecided and third-party voters are reallocated, and the margin narrows, possibly through fundamentals or reversion.",
+        "quantities": [
+          {
+            "name": "Trump national polling average",
+            "value": "45.2%",
+            "unit": "percent",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "Biden national polling average",
+            "value": "41.2%",
+            "unit": "percent",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "Trump predicted vote share",
+            "value": "47.5%",
+            "unit": "percent",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "Biden predicted vote share",
+            "value": "46.7%",
+            "unit": "percent",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "Trump popular vote win probability",
+            "value": "57.3%",
+            "unit": "probability",
+            "context": "July 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "method",
+        "statement": "The 2024 Silver Bulletin economic index combines six indicators: real disposable personal income, the consumer price index, nonfarm payrolls, industrial production, personal consumption expenditures, and the S&P 500. Each is standardized as a z-score, where 0 is an average economy and positive is better than average, and the index is the average of all six.",
+        "quantities": [
+          {
+            "name": "number of economic indicators",
+            "value": "6",
+            "unit": "indicators",
+            "context": "2024 fundamentals"
+          },
+          {
+            "name": "economic index current",
+            "value": "+0.09",
+            "unit": "z-score",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "economic index projected Nov 5",
+            "value": "+0.07",
+            "unit": "z-score",
+            "context": "July 21, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "method",
+        "statement": "The economic index uses readings of the six indicators over the two years before the election, weighting more recent data more heavily. The model also projects each indicator forward to Election Day (Nov. 5).",
+        "quantities": [
+          {
+            "name": "lookback window",
+            "value": "two years",
+            "unit": "years",
+            "context": "economic index"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "parameter_or_number",
+        "statement": "Economic indicator z-scores on July 21, 2024, shown as current then projected to Nov. 5: real disposable personal income −0.62 then −0.65; CPI +0.13 then +0.45; nonfarm payrolls +0.27 then +0.22; industrial production −0.13 then +0.02; PCE −0.17 then −0.23; S&P 500 +1.06 then +0.64.",
+        "quantities": [
+          {
+            "name": "RDPI",
+            "value": "-0.62 / -0.65",
+            "unit": "z-score",
+            "context": "current / projected"
+          },
+          {
+            "name": "CPI",
+            "value": "+0.13 / +0.45",
+            "unit": "z-score",
+            "context": "current / projected"
+          },
+          {
+            "name": "Nonfarm payrolls",
+            "value": "+0.27 / +0.22",
+            "unit": "z-score",
+            "context": "current / projected"
+          },
+          {
+            "name": "Industrial production",
+            "value": "-0.13 / +0.02",
+            "unit": "z-score",
+            "context": "current / projected"
+          },
+          {
+            "name": "PCE",
+            "value": "-0.17 / -0.23",
+            "unit": "z-score",
+            "context": "current / projected"
+          },
+          {
+            "name": "S&P 500",
+            "value": "+1.06 / +0.64",
+            "unit": "z-score",
+            "context": "current / projected"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "Each poll in the Silver Bulletin average receives a displayed 'influence' score. Example: a YouGov LV poll with n=2,241 scored 1.4, while an RMG Research LV poll with n=2,725 and a SoCal Research LV poll with n=800 each scored 0.8. Influence therefore depends on more than sample size, presumably pollster quality and recency too.",
+        "quantities": [
+          {
+            "name": "YouGov influence",
+            "value": "1.4",
+            "unit": "",
+            "context": "national poll 7/16-7/18, 2,241 LV"
+          },
+          {
+            "name": "RMG influence",
+            "value": "0.8",
+            "unit": "",
+            "context": "7/15-7/17, 2,725 LV"
+          },
+          {
+            "name": "SoCal Research influence",
+            "value": "0.8",
+            "unit": "",
+            "context": "7/17, 800 LV"
+          },
+          {
+            "name": "Emerson influence",
+            "value": "0.6",
+            "unit": "",
+            "context": "7/15-7/16, 2,000 RV"
+          },
+          {
+            "name": "Morning Consult influence",
+            "value": "0.6",
+            "unit": "",
+            "context": "7/15, 2,045 RV"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "The poll database labels each poll's population as LV (likely voters), RV (registered voters), V (voters), or A (U.S. adults).",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "parameter_or_number",
+        "statement": "The polling-average table shows only contests surveyed by at least three distinct pollsters or with at least five polls. Week change is measured against the average 7 days earlier and month change against the average 30 days earlier.",
+        "quantities": [
+          {
+            "name": "minimum distinct pollsters",
+            "value": "3",
+            "unit": "pollsters",
+            "context": "display threshold"
+          },
+          {
+            "name": "minimum polls",
+            "value": "5",
+            "unit": "polls",
+            "context": "display threshold"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential polling averages",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "method",
+        "statement": "The 2024 model defines a state's tipping-point chance as the probability it gives the Electoral College winner their 270th electoral vote. The Voter Power Index (VPI) is the relative likelihood that an individual voter in that state determines the Electoral College winner.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "parameter_or_number",
+        "statement": "In the final Biden-Trump forecast (July 21, 2024), Pennsylvania had a 40% tipping-point chance and a VPI of 9.2. Other tipping-point chances were Georgia 11% (VPI 3.4), Wisconsin 11% (5.2), Michigan 10% (2.9), North Carolina 7% (2.1), Arizona 4% (2.0), Nevada 4% (4.2), Florida 3% (0.4) and Texas 2% (0.2).",
+        "quantities": [
+          {
+            "name": "PA tipping point",
+            "value": "40%",
+            "unit": "probability",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "PA VPI",
+            "value": "9.2",
+            "unit": "",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "GA tipping point",
+            "value": "11%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "WI tipping point",
+            "value": "11%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "MI tipping point",
+            "value": "10%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "NC tipping point",
+            "value": "7%",
+            "unit": "probability",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "The conditional win probabilities show the correlation structure. If Biden wins Florida his chance of winning overall rises to 97.6%, and if he wins Texas, to 98.2%. If Trump wins Minnesota his chance rises to 98.9%, and if he wins Virginia, to 99.7%. Biden winning Pennsylvania gives him 86.8%, while Biden winning Michigan gives only 61.7%.",
+        "quantities": [
+          {
+            "name": "Biden win | wins FL",
+            "value": "97.6%",
+            "unit": "probability",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "Biden win | wins TX",
+            "value": "98.2%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Biden win | wins PA",
+            "value": "86.8%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Biden win | wins MI",
+            "value": "61.7%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Trump win | wins MN",
+            "value": "98.9%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Trump win | wins VA",
+            "value": "99.7%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Trump win | wins PA",
+            "value": "96.7%",
+            "unit": "probability",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the final Biden-Trump forecast the Electoral College favored Trump. Biden's Electoral College win probability was 11.4% when he won the popular vote by 0-1 points, 34.3% at D+1 to +2, 63.8% at D+2 to +3, 89.8% at D+3 to +4, and 98.0% at D+4 to +5. Biden's break-even was therefore roughly a 2-2.5 point popular-vote lead.",
+        "quantities": [
+          {
+            "name": "Biden win prob at D+0-1",
+            "value": "11.4%",
+            "unit": "probability",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "Biden win prob at D+1-2",
+            "value": "34.3%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Biden win prob at D+2-3",
+            "value": "63.8%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Biden win prob at D+3-4",
+            "value": "89.8%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Biden win prob at D+4-5",
+            "value": "98.0%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Biden win prob at R+0-1",
+            "value": "2.4%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Biden EV at D+2-3",
+            "value": "274.6",
+            "unit": "electoral votes",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "Final Biden-Trump forecast (July 21, 2024): Trump 72.8% and Biden 26.9% to win the Electoral College. Predicted electoral votes were Trump 298.2 and Biden 239.5. Trump's popular-vote win probability was 57.3%.",
+        "quantities": [
+          {
+            "name": "Trump EC probability",
+            "value": "72.8%",
+            "unit": "probability",
+            "context": "July 21, 2024"
+          },
+          {
+            "name": "Biden EC probability",
+            "value": "26.9%",
+            "unit": "probability",
+            "context": ""
+          },
+          {
+            "name": "Trump predicted EV",
+            "value": "298.2",
+            "unit": "electoral votes",
+            "context": ""
+          },
+          {
+            "name": "Biden predicted EV",
+            "value": "239.5",
+            "unit": "electoral votes",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "empirical_regularity",
+        "statement": "The forecast history from launch (late June) to July 21 shows Trump's win probability moving from about 65% to about 72% after the first debate, and staying roughly in the 69-74% range through the assassination attempt and VP pick. Before the debate the forecast had been stable at roughly 63-67%.",
+        "quantities": [
+          {
+            "name": "Trump win probability pre-debate",
+            "value": "~63-67%",
+            "unit": "probability",
+            "context": "June 2024"
+          },
+          {
+            "name": "Trump win probability post-debate",
+            "value": "~69-74%",
+            "unit": "probability",
+            "context": "July 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The 2024 model reports 80% intervals (10th to 90th percentiles) on the forecasted margin in each state.",
+        "quantities": [
+          {
+            "name": "interval coverage",
+            "value": "80%",
+            "unit": "percent",
+            "context": "10th-90th percentile state margins"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "assumption",
+        "statement": "The Biden-Trump version of the 2024 model assumed Biden and Trump were the nominees. When Biden dropped out the forecast was frozen, and a new Harris-Trump version was launched on July 30.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The forecast assumes that Joe Biden and Donald Trump are the Democratic and Republican candidates.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "design_principle",
+        "statement": "Silver reports probabilities to the decimal place. He stresses that candidates trailing in the polls can still win, because in a polarized climate most elections are close.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "We're not afraid of playing the percentages here — even to the decimal place.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "polarization and closeness",
+        "insight": "In America's polarized climate most presidential elections are close, and a candidate is rarely out of the running.",
+        "evidence": "",
+        "forecasting_implication": "Avoid extreme probabilities, since polling deficits are often surmountable."
+      },
+      {
+        "topic": "Electoral College bias",
+        "insight": "In mid-2024 the Electoral College tilted toward Trump: Biden needed roughly a 2-3 point national popular-vote lead to be favored.",
+        "evidence": "Biden's win probability was 63.8% at a D+2 to +3 popular-vote margin and 11.4% at D+0 to +1.",
+        "forecasting_implication": "Model state-national gaps explicitly rather than mapping the popular vote directly to win probability."
+      },
+      {
+        "topic": "third-party fade",
+        "insight": "RFK Jr.'s polling support (~8%) was projected to translate into a much smaller vote share (~4.3%), with ballot-access uncertainty in some states.",
+        "evidence": "Polling average versus predicted vote share.",
+        "forecasting_implication": "Discount third-party polling and model ballot access probabilistically."
+      },
+      {
+        "topic": "Pennsylvania centrality",
+        "insight": "Pennsylvania was by far the most likely tipping-point state in 2024.",
+        "evidence": "40% tipping-point chance and VPI 9.2.",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin 2024 model methodology changes (link 'here' / 'largely the same')",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin polling averages methodology ('little fancy'), house effects, pollster ratings, and outliers posts",
+        "url": ""
+      },
+      {
+        "description": "Harris-Trump version of the forecast launched July 30, 2024",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How are polling-average adjustments for LV/RV, RFK presence and house effects calculated, and at what magnitudes?",
+      "How is the per-poll influence score computed from pollster rating, sample size and recency?",
+      "What are the functional form and weights of the six-indicator economic index, its recency weighting over the two-year window, and its weight relative to polls?",
+      "How are third-party vote share fade and ballot-access probabilities modeled?",
+      "How is state-to-state correlation in the simulations structured?",
+      "How are the Election Day projections of economic indicators generated?",
+      "What are the details of the removed COVID-19 provisions from 2020?"
+    ]
+  }
+}

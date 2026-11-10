@@ -1,0 +1,170 @@
+{
+  "article": {
+    "date": "2026-11-02",
+    "title": "Where polls and fundamentals clash",
+    "subtitle": "Democrats’ Senate odds are boosted by higher-quality candidates. But polls and other data mostly tell a consistent story.",
+    "authors": "Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/where-polls-and-fundamentals-clash",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-11-02_where-polls-and-fundamentals-clash-by-eli-mckown-dawson"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:44:49"
+  },
+  "extraction": {
+    "summary": "Election-eve Model Talk by Eli McKown-Dawson comparing FLIPR's polls-only (Lite), polls-plus-fundamentals (Classic) and Deluxe Senate forecasts. On Nov. 2, 2026 the generic ballot was D+8.9 (LV-adjusted D+9.2). Simple fundamentals put Georgia D+6, North Carolina D+7, Michigan D+9, Maine D+17, and Alaska, Ohio, Iowa and Texas between R+0.3 and R+2. Fancy fundamentals reorder these through candidate quality, and the blend lands several races in the R+3 to D+3 range. Polls and fundamentals turn out to be fairly consistent: Lite 79 percent, Classic 78.7, with Deluxe the most bullish. The piece states FLIPR's rule that more, more recent and more reliable polling means more weight on polls.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "FLIPR 2026 (Lite, Classic, Deluxe)"
+    ],
+    "findings": [
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "method",
+        "statement": "FLIPR's rule for blending polls with fundamentals: the more polling a race has, and the more recent and reliable the surveys, the more it defaults to the polls. In sparsely polled red states it hedges heavily toward fundamentals or lands between the two.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Its rule is pretty simple: the more polling there is, and the more recent and reliable the surveys, the more it defaults to them.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "design_principle",
+        "statement": "FLIPR uses the generic ballot within 'simple fundamentals' even though it is poll-based, because it is the best measurement of the national environment, fits a partisan climate with predictable state patterns, and avoids the idiosyncrasies of state polling.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "But the generic ballot is our best measurement of the national political environment",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "parameter_or_number",
+        "statement": "On Nov. 2, 2026 FLIPR simple fundamentals: Georgia D+6, North Carolina D+7, Michigan D+9, Maine D+17; Alaska, Ohio, Iowa and Texas R+0.3 to R+2. Fancy fundamentals: Iowa D+1, Ohio D+2, Texas D+8, Maine R+7 (Collins), Alaska worse for Peltola after her scandal flag was activated. Blended Maine D+4; blended Texas, Iowa, Ohio, Alaska and Florida all R+3 to D+3.",
+        "quantities": [
+          {
+            "name": "generic ballot",
+            "value": "D+8.9",
+            "unit": "points",
+            "context": "Nov 2, 2026"
+          },
+          {
+            "name": "LV-adjusted generic ballot",
+            "value": "D+9.2",
+            "unit": "points",
+            "context": "Nov 2, 2026"
+          },
+          {
+            "name": "Maine simple fundamentals",
+            "value": "D+17",
+            "unit": "points",
+            "context": "Nov 2"
+          },
+          {
+            "name": "Maine fancy fundamentals",
+            "value": "R+7",
+            "unit": "points",
+            "context": "Nov 2"
+          },
+          {
+            "name": "Maine blended",
+            "value": "D+4",
+            "unit": "points",
+            "context": "Nov 2"
+          },
+          {
+            "name": "Texas fancy fundamentals",
+            "value": "D+8",
+            "unit": "points",
+            "context": "Nov 2"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Alaska, Ohio, Iowa, and Texas range from R +0.3 to R +2 on the simple fundamentals.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "parameter_or_number",
+        "statement": "On Nov. 2, 2026 FLIPR's Senate win probability for Democrats was 79 percent in Lite (polls only), 78.7 percent in Classic (adding fundamentals), and highest in Deluxe (adding expert ratings). Lite still gave Republicans a 10 percent chance to hold the House because it accounts for systematic and regional polling misses.",
+        "quantities": [
+          {
+            "name": "Lite Senate D prob",
+            "value": "79",
+            "unit": "percent",
+            "context": "Nov 2, 2026"
+          },
+          {
+            "name": "Classic Senate D prob",
+            "value": "78.7",
+            "unit": "percent",
+            "context": "Nov 2, 2026"
+          },
+          {
+            "name": "Lite R House hold prob",
+            "value": "10",
+            "unit": "percent",
+            "context": "Nov 2, 2026"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Democrats’ Senate win probability in our polls-only Lite model — 79 percent — only drops to 78.7 percent after the fundamentals are incorporated in our Classic model.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_effects",
+        "finding_type": "method",
+        "statement": "Fancy fundamentals' candidate-specific factors are incumbency, individual fundraising, elected experience and scandals. Ideology per se is not used, though party-loyalty scores from congressional voting are. Scandal flags can be switched on during a campaign, as Peltola's was late in 2026.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "We don’t account for candidate ideology per-se, but we do calculate party loyalty scores based on congressional voting records.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The polls-versus-fundamentals comparison includes only races with at least three polls from two unique pollsters, matching the threshold for publishing a polling average.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "Note that we’re only including races that have at least three polls from two unique pollsters in this analysis.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "In most battleground Senate races in November 2026, the Democrat's polling lead was within a normal-sized polling error of flipping, so FLIPR's base case of a 53-47 Democratic Senate could easily become 51-49 or a Republican hold.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "FLIPR 2026",
+        "evidence_quote": "It wouldn’t take much for FLIPR’s base case — a 53/47 Democratic Senate majority — to turn into 51/49 or even a Republican hold.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "candidate quality boosts",
+        "insight": "Candidate-quality overperformances are rarer than before but good or bad candidates can still move margins a few points, enough to decide Senate control in a close map.",
+        "evidence": "Fancy vs simple fundamentals gaps in Texas, Ohio, Maine.",
+        "forecasting_implication": "Keep a reduced but nonzero candidate-quality component."
+      }
+    ],
+    "references": [],
+    "open_questions": [
+      "Functional form linking poll quantity/recency/quality to the poll weight in the blend."
+    ]
+  }
+}

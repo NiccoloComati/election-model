@@ -1,0 +1,193 @@
+{
+  "article": {
+    "date": "2026-03-23",
+    "title": "SBSQ #30: Will liberals turn against sports betting?",
+    "subtitle": "So far, the sports betting backlash has a bipartisan flavor. Plus, why I don’t use prediction markets in my models. And are Democrats going to blow the…",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/sbsq-30-will-liberals-turn-against",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-03-23_sbsq-30-will-liberals-turn-against-sports-betting"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": false,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:28:32"
+  },
+  "extraction": {
+    "summary": "Subscriber Q&A with three topics. Silver explains why Silver Bulletin models do not use prediction market prices as inputs: independence, recursive feedback loops, collinearity when fitting weights, and markets being a moving target. He notes that the 'Deluxe' congressional forecast's use of expert ratings raises the same recursivity problem. He also discusses the politics of sports betting, and walks through how to read multi-candidate polls in California's top-two gubernatorial primary, including allocation of undecided voters and strategic abandonment of minor candidates.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin election models (general)",
+      "FLIPR / FiveThirtyEight Deluxe congressional forecast",
+      "prediction markets (Polymarket, Kalshi)",
+      "ELWAY NFL model",
+      "COOPER NCAA model"
+    ],
+    "findings": [
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "design_principle",
+        "statement": "Silver Bulletin election and sports models do not use prediction market prices as inputs, and Silver does not plan to add them. The models are meant to provide an independent perspective derived from a repeatable process, not one that pre-dilutes its view with consensus.",
+        "quantities": [],
+        "rationale": "Using market prices would defeat the purpose of building an independent statistical model.",
+        "model_version": "general principle",
+        "evidence_quote": "We don’t account for prediction market prices in our models, and we don’t plan to.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Feeding prediction market prices into an election model risks recursivity: if markets are influenced by the Silver Bulletin forecast, which Silver considers plausible for elections, the model and the market stop being independent and feedback loops arise that are hard to build robust statistical assumptions around.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "our forecast of the Georgia Senate race influences Polymarket, which in turn influences the Silver Bulletin model, and so forth.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The 'Deluxe' version of the congressional forecasts, which incorporates subjective race ratings from the Cook Political Report and similar groups, has historically suffered from the same recursivity problem, since raters may look to the model for guidance. As of March 2026 Silver had not decided whether to keep publishing the Deluxe version.",
+        "quantities": [],
+        "rationale": "Expert ratings may themselves be influenced by the model, then fed back in.",
+        "model_version": "FiveThirtyEight/FLIPR Deluxe congressional forecast",
+        "evidence_quote": "This has also historically been an issue with the “deluxe” version of our Congressional forecasts, which incorporate subjective race ratings from the Cook Political Report and other groups.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "When two inputs are highly correlated, such as a model's forecast and market or Vegas lines (ELWAY spreads correlate about 0.95 with Vegas), it is hard to estimate their relative predictive weight. The few cases where they diverge dominate the fitted weights, so specifications become highly sensitive to assumptions.",
+        "quantities": [
+          {
+            "name": "correlation of ELWAY spreads with Vegas lines",
+            "value": "about .95",
+            "unit": "correlation",
+            "context": "NFL model, illustrative"
+          }
+        ],
+        "rationale": "Collinearity makes weight estimation unstable.",
+        "model_version": "general principle",
+        "evidence_quote": "it’s hard to ascertain their relative predictive importance when fitting a model.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Market prices are a moving target: if a model has a genuine edge, markets eventually notice and adjust, so any weight fit on historical model-versus-market divergence is unstable.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "prediction markets or Vegas lines are a moving target.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "primaries_and_nominations",
+        "finding_type": "interpretation_guidance",
+        "statement": "In reading multi-candidate primary polls, Silver allocates undecided voters according to the state's expected partisanship and assumes some support for minor candidates of a party will migrate to that party's leaders, because voters avoid wasted votes and minor candidates often drop out and endorse. In California's March 2026 governor polling, adding the 13 percent undecided to Democrats turns a 15-point combined Democratic lead into 28 points, matching the state benchmark of D+28.8.",
+        "quantities": [
+          {
+            "name": "California benchmark",
+            "value": "D+28.8",
+            "unit": "points",
+            "context": "Silver Bulletin benchmark, March 2026"
+          },
+          {
+            "name": "combined Democratic share",
+            "value": "50.1",
+            "unit": "percent",
+            "context": "CA governor polling average"
+          },
+          {
+            "name": "combined Republican share",
+            "value": "34.9",
+            "unit": "percent",
+            "context": "CA governor polling average"
+          },
+          {
+            "name": "undecided",
+            "value": "13",
+            "unit": "percent",
+            "context": "CA governor polling average"
+          }
+        ],
+        "rationale": "Undecideds in a deep-blue state are mostly Democrats; strategic voters consolidate behind viable candidates.",
+        "model_version": "Silver analysis, 2026",
+        "evidence_quote": "I think it’s pretty safe to assume that most of that undecided vote will flow to Democrats.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "parameter_or_number",
+        "statement": "Silver Bulletin computes a current partisan benchmark for each state; California's was D+28.8 in March 2026. California typically votes Democratic by 20 to 30 points, and the benchmark sits at the high end because the national environment favored Democrats.",
+        "quantities": [
+          {
+            "name": "California benchmark",
+            "value": "D+28.8",
+            "unit": "points",
+            "context": "March 2026"
+          }
+        ],
+        "rationale": "The benchmark moves with the national environment.",
+        "model_version": "Silver Bulletin state benchmarks (2026)",
+        "evidence_quote": "Our current benchmark for California is D +28.8",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "empirical_regularity",
+        "statement": "In multi-candidate primaries, second-tier candidates tend to underperform their polls on Election Day while leaders outperform. In the 2025 NYC Democratic mayoral primary, Mamdani and Lander beat their polling averages, Cuomo roughly matched his, and Adams, Stringer and other second-tier candidates considerably underperformed.",
+        "quantities": [],
+        "rationale": "Strategic voting against wasted votes by high-information primary voters.",
+        "model_version": "empirical observation",
+        "evidence_quote": "But all of the second-tier Democrats — Adrianne Adams, Scott Stringer and so forth — considerably underperformed their polls on Election Day.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "assumption",
+        "statement": "Silver believes the Silver Bulletin/FiveThirtyEight election model is one of the few remaining election models that has survived multiple cycles with its reputation mostly intact, and that, unlike sports, elections have few independent handicappers, which makes market influence by the model plausible.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin/FiveThirtyEight",
+        "evidence_quote": "Silver Bulletin/FiveThirtyEight model is one of the few remaining ones that has survived multiple cycles with its dignity mostly intact.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "California top-two primary",
+        "insight": "Since 2012 California uses a top-two nonpartisan primary, which can produce perverse results such as two candidates of the same party advancing if the majority party's vote is split among many candidates.",
+        "evidence": "March 2026 polls had two Republicans, Hilton and Bianco, leading individually while Democrats led combined 50.1 to 34.9.",
+        "forecasting_implication": "Top-two primaries need candidate-level simulations with vote consolidation, not party-level averages."
+      },
+      {
+        "topic": "sports betting politics",
+        "insight": "Opposition to sports betting is currently bipartisan, from religious conservatives and progressive paternalists, while the public is mostly indifferent; only 29 percent of Americans find gambling morally unacceptable per Pew.",
+        "evidence": "State legalization map; California rejected sports betting initiatives in 2022 while Missouri narrowly approved one in 2024.",
+        "forecasting_implication": ""
+      }
+    ],
+    "references": [
+      {
+        "description": "McKay Coppins's Atlantic article on sports betting",
+        "url": ""
+      },
+      {
+        "description": "Pew poll on whether gambling is morally unacceptable",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "How exactly the Deluxe version weights expert race ratings, and whether it was published in 2026.",
+      "How the state benchmark used for California is computed for governor races versus the generic-ballot benchmark."
+    ]
+  }
+}

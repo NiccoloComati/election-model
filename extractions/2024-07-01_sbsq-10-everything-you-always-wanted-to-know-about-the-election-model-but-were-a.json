@@ -1,0 +1,603 @@
+{
+  "article": {
+    "date": "2024-07-01",
+    "title": "SBSQ #10: Everything you always wanted to know about the election model but were afraid to ask",
+    "subtitle": "For instance, why it so different from 538?",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/sbsq-10-everything-you-always-wanted",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-07-01_sbsq-10-everything-you-always-wanted-to-know-about-the-election-model-but-were-a"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.816103,
+    "prompt_tokens": 8,
+    "completion_tokens": 19447,
+    "cache_read_tokens": 45735,
+    "cache_write_tokens": 52248,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:06:11"
+  },
+  "extraction": {
+    "summary": "A paid subscriber Q&A from 1 July 2024 about the newly launched Silver Bulletin 2024 presidential model. Silver explains how the model would handle Biden dropping out: suspend it, wait for polls of the new nominee, then rely on the existing uncertainty index rather than add an ad hoc uncertainty parameter. He also covers how third-party candidates like RFK Jr. are modeled with a beta distribution calibrated on presidential and Senate data. The article gives two key uncertainty parameters: 'drift' has an SD of about 3-4 points on the margin and Election Day 'error' about 3 points, combining by root sum of squares to a little under 5 points nationally. It critiques the 538 (Morris-era) and Economist models, and gives views on calibration versus discrimination, prediction markets, and why there will be no 2024 congressional models.",
+    "model_content_level": "high",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "FiveThirtyEight (2024, Morris era)",
+      "Economist model",
+      "prediction markets (Polymarket)",
+      "FiveThirtyEight RAPTOR NBA ratings",
+      "FiveThirtyEight (Silver era, 2008-2022)"
+    ],
+    "findings": [
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "method",
+        "statement": "If Biden withdrew, the Silver Bulletin 2024 presidential model would be suspended for a week or two until there were several national polls and at least a smattering of state polls of the new nominee. The Democratic candidate ID would then be switched (e.g., to Kamala Harris) and the model turned back on.",
+        "quantities": [
+          {
+            "name": "suspension period",
+            "value": "a week or two",
+            "unit": "weeks",
+            "context": "pause after a candidate replacement before restarting the model"
+          },
+          {
+            "name": "Harris candidate_id",
+            "value": "16661",
+            "unit": "",
+            "context": "internal candidate ID"
+          },
+          {
+            "name": "Biden candidate_id",
+            "value": "19368",
+            "unit": "",
+            "context": "internal candidate ID"
+          }
+        ],
+        "rationale": "The model needs some polling data on the actual nominee before producing forecasts.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We'd suspend the model, wait for a week or two until there were several national polls and at least a smattering of state polls",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "The polls component of the Silver Bulletin presidential model is calibrated on presidential elections since 1968. That sample includes many cycles with sparse polling or polling that began late in the campaign, so the model should in theory handle a late candidate switch.",
+        "quantities": [
+          {
+            "name": "polls component calibration start",
+            "value": "1968",
+            "unit": "year",
+            "context": "start of the calibration sample for the polls component"
+          }
+        ],
+        "rationale": "The historical sample includes data-sparse cycles.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The \"polls\" part of the model was calibrated based on elections since 1968",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_economy",
+        "finding_type": "parameter_or_number",
+        "statement": "The fundamentals component of the Silver Bulletin presidential model is calibrated on elections going back to 1880.",
+        "quantities": [
+          {
+            "name": "fundamentals calibration start",
+            "value": "1880",
+            "unit": "year",
+            "context": "start of the fundamentals calibration sample"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The \"fundamentals\" part goes even further back — to 1880.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model infers outcomes in thinly polled states by extrapolating from states with more polling.",
+        "quantities": [],
+        "rationale": "This lets the model work when polling is sparse.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "using data from states where there's more polling to extrapolate the outcomes to states where there isn't",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "adjustment_rule",
+        "statement": "For a replacement nominee, Silver leans against using polls of Biden as a proxy for the new candidate.",
+        "quantities": [],
+        "rationale": "Not stated in detail. Silver says he wants more time to think about it.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Would we use polls featuring Biden as a proxy until there was more data for the new candidate? I'm leaning \"no\"",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "adjustment_rule",
+        "statement": "Earlier hypothetical-matchup polls of potential replacements (e.g., Harris vs. Trump) would probably not be used after a replacement.",
+        "quantities": [],
+        "rationale": "Numbers may change once candidates actually signal interest in the job. Hypothetical matchups are not apples-to-apples with real candidacies, and lesser-known alternatives poll worse.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Probably not, because the numbers might change once they actually indicated their interest in the job.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "assumption",
+        "statement": "Polls of a candidate taken earlier in the cycle are usable after a replacement if that candidate had been an active, real candidate. Silver's example: if Obama had dropped out in 2008 and been replaced by Hillary Clinton, he would have been comfortable using her earlier polls against McCain.",
+        "quantities": [],
+        "rationale": "Polls of an active candidate are not hypothetical.",
+        "model_version": "general principle",
+        "evidence_quote": "If Obama had dropped out after receiving the nomination and was replaced by HRC, I think I'd have been comfortable using her polls against McCain",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model computes an 'uncertainty index'. Inputs include the volume of polling (fewer polls means more uncertainty) and the amount of major news, measured by things like banner newspaper headlines.",
+        "quantities": [],
+        "rationale": "A candidate switch would automatically raise uncertainty through these inputs, without ad hoc parameters.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model would account for the fact that there were initially far fewer polls, and therefore more uncertainty. And the candidate switch would undoubtedly inspire days and days of banner newspaper headlines",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "model_change",
+        "statement": "Silver's model previously included an additional ad hoc uncertainty parameter for COVID (2020). He thinks a Biden replacement would not need such a parameter because the uncertainty index would handle it.",
+        "quantities": [],
+        "rationale": "The existing uncertainty index naturally captures the conditions a replacement would create.",
+        "model_version": "2020 vs 2024 presidential",
+        "evidence_quote": "We could insert some sort of additional uncertainty parameter — like we did for COVID — but I don't think we'd need to.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "method",
+        "statement": "If multiple Democrats contended after a withdrawal before the convention, the model could loop through each candidate daily to produce a separate forecast for each.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we could simply add some code to loop through the model multiple times each day to generate a forecast for each candidate",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Backtesting on historical data (e.g., 1968) is not the same as publishing in real time. A late replacement candidate might violate implicit model assumptions, so results would need sanity checks before republishing.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Backtesting a model on 1968 data isn't the same as publishing one in real time.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver criticizes the Economist model for including approval ratings in its fundamentals-based prior. He argues approval ratings are polling data and shouldn't count as fundamentals.",
+        "quantities": [],
+        "rationale": "Approval is polling data.",
+        "model_version": "Economist 2024",
+        "evidence_quote": "approval ratings are polling data and probably shouldn't be considered part of the \"fundamentals\"",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver thinks the Economist model likely errs toward overconfidence, but considers this probably fine in 2024 because the uncertainty index is low. At the time, it gave Trump 74% to win, the most confident model.",
+        "quantities": [
+          {
+            "name": "Economist Trump win probability",
+            "value": "74",
+            "unit": "percent",
+            "context": "as of July 1, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Economist 2024",
+        "evidence_quote": "I think it likely errs on the side of overconfidence. But that's probably fine for this year, when the uncertainty index is relatively low.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "design_principle",
+        "statement": "Calibration alone is insufficient: you can be perfectly calibrated by predicting every race at 50/50. Discrimination, the ability to distinguish more likely from less likely outcomes, also matters. Silver prefers models that offer a credible, independent opinion even if sometimes wrong.",
+        "quantities": [],
+        "rationale": "Forecasters have improved at avoiding overfitting, so a model with some 'bite' is acceptable.",
+        "model_version": "general principle",
+        "evidence_quote": "you can be perfectly calibrated just by predicting every race at 50/50. What statisticians call \"discrimination\" — a model's ability to distinguish relatively less likely outcomes from more likely ones — is important, too.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_incumbency_and_approval",
+        "finding_type": "critique_of_other_approach",
+        "statement": "The 2024 Morris-era 538 model showed about 50/50. Silver attributes this partly to it weighting fundamentals more heavily than other models, and perhaps to a more Biden-favorable read of the fundamentals than Silver Bulletin's, such as a larger incumbency bonus.",
+        "quantities": [
+          {
+            "name": "538 forecast",
+            "value": "50/50",
+            "unit": "",
+            "context": "as of July 1, 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "538 2024 (Morris era)",
+        "evidence_quote": "it seems to weigh the \"fundamentals\" more heavily than the other models, and perhaps also has a more optimistic take on the fundamentals than we do for Biden — perhaps it gives a larger bonus for incumbency",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "critique_of_other_approach",
+        "statement": "The 2024 538 model assumes polls could move a lot before November, giving very wide confidence intervals. Silver disagrees because polls move much less in recent elections than they once did, likely due to higher polarization, though he calls the assumption within the bounds of reasonableness.",
+        "quantities": [],
+        "rationale": "Polls have barely moved in 2024, and polarization reduces volatility.",
+        "model_version": "538 2024 vs Silver Bulletin 2024",
+        "evidence_quote": "the polls move much less in recent elections than they once did — indeed, they've barely changed this year at all — likely as a result of higher polarization",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "other",
+        "finding_type": "design_principle",
+        "statement": "Model builders face a trade-off between rigid empiricism and assumptions tailored to the present environment. Academics favor buttoned-up assumptions that assess conditions in historical context. Bettors care only about predictive value and accept fuzzy assumptions if the model makes money.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "there's a trade-off between being more rigidly empirical, and building in more assumptions that potentially make a model more suited to the present environment, but also complicate the epistemology",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "A 50/50 forecast can be mistaken for having no opinion. Modelers should clearly explain why they think others are overconfident, and should say whether they would bet against the markets on the basis of their forecast.",
+        "quantities": [],
+        "rationale": "Silver says 'people are being overconfident, and here's why' can be a valuable model-driven opinion.",
+        "model_version": "general principle",
+        "evidence_quote": "people may mistake a 50/50 forecast for not having an opinion at all.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "empirical_regularity",
+        "statement": "Markets are generally hard to beat, but presidential election markets may be an exception. They have a high ratio of 'dumb money' (people with strong political opinions) to 'smart money' (professional modelers). Silver's forecasts have a track record of being on the directionally right side of these markets.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "presidential elections are potentially an exception because there's a high ratio of \"dumb money\" to \"smart money\" in them",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "A model's edge over election markets may erode. Markets are becoming more numerous and better capitalized, institutional players are modeling political risk, and cheaply available model results (Silver Bulletin at $10/month) get incorporated into prices.",
+        "quantities": [
+          {
+            "name": "Silver Bulletin subscription price",
+            "value": "10",
+            "unit": "USD/month",
+            "context": "cost to access model results"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "A model whose results are publicly available — or relatively cheap to obtain, like the Silver Bulletin model at $10/month — is less likely to maintain an edge",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "After Biden's poor June 2024 debate, the model reacted cautiously to the few post-debate polls because they could be noise. Silver warns that bettors should adjust for this context, which the model is not fully pricing in.",
+        "quantities": [],
+        "rationale": "Context suggests the polls are not random noise, but the model treats them only as data.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model is being cautious about that because the few polls out there could just be random noise — but they probably aren't if you know the context",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "interpretation_guidance",
+        "statement": "Other things equal, it is preferable for model results to align with markets. The initial Silver Bulletin 2024 results were very close to Polymarket's, which Silver took as a good sign.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The initial Silver Bulletin results came uncannily close to what Polymarket was showing",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "method",
+        "statement": "Third-party vote shares in the Silver Bulletin presidential model are drawn from an asymmetric beta distribution. Most draws are low (RFK Jr. around 4%), with a right tail where the candidate catches fire.",
+        "quantities": [
+          {
+            "name": "RFK Jr. typical projected vote share",
+            "value": "4",
+            "unit": "percent",
+            "context": "July 2024, 'or something'"
+          }
+        ],
+        "rationale": "Captures the historical possibility of third-party surges.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Third-party outcomes are modeled with an asymmetric probability distribution called a beta distribution",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "data_source",
+        "statement": "The third-party distribution is empirically derived from the historical behavior of the third-party vote in both presidential and Senate races. Senate data is included because presidential years alone lack enough data for reliable priors.",
+        "quantities": [],
+        "rationale": "Presidential-only data is insufficient.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "there isn't enough data to form reliable priors from presidential years alone",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "parameter_or_number",
+        "statement": "In July 2024 the model gave RFK Jr. about a 5% chance of surging enough to contend in a state or two (about 4% to win any electoral vote), almost no chance to contend nationally, and no more than about 1% in any individual state. These chances will fall unless he rises in the polls soon.",
+        "quantities": [
+          {
+            "name": "chance RFK contends in a state or two",
+            "value": "about 5",
+            "unit": "percent",
+            "context": "July 2024"
+          },
+          {
+            "name": "chance RFK wins any electoral vote",
+            "value": "4",
+            "unit": "percent",
+            "context": "per reader's question, July 2024"
+          },
+          {
+            "name": "max RFK win probability in any single state",
+            "value": "about 1",
+            "unit": "percent",
+            "context": "July 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "his probability in any individual state isn't higher than about 1 percent right now — even though his chance of winning some vote somewhere is closer to 5 percent",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "method",
+        "statement": "Each simulation draws a national random draw plus a state-level random draw for each candidate, including third-party candidates. Third-party outcomes are partly correlated across states. A trailing third-party candidate wins a state only when both draws are favorable and the major-party race there is close; for example, RFK at 20% nationally could win Maine with 35%.",
+        "quantities": [
+          {
+            "name": "example national RFK share",
+            "value": "20",
+            "unit": "percent",
+            "context": "illustrative tail scenario"
+          },
+          {
+            "name": "example winning state share",
+            "value": "35",
+            "unit": "percent",
+            "context": "Maine, illustrative"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "he needs both his national random draw and his state random draw to come up perfectly for him",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin presidential model has two main uncertainty parameters. 'Drift' is how much the forecast will move between now and Election Day, based on polls and other inputs. 'Error' is how accurate the forecast, essentially the polling, will be on Election Day, when the model is mostly polls-only.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "what in the model I call \"drift\" as opposed to \"error\"",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "Election Day error is calibrated conservatively on polling data back to 1936, so the model expects a fairly large systematic polling error is possible. Against that sample, the 2020 error was relatively normal even though it was bad by recent standards.",
+        "quantities": [
+          {
+            "name": "error calibration start",
+            "value": "1936",
+            "unit": "year",
+            "context": "Election Day polling error calibration"
+          }
+        ],
+        "rationale": "A hedge against polls possibly becoming secularly less accurate as response rates decline.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model is calibrated based on polling dating all the way back to 1936, when the industry was pretty young and the polls often weren't that accurate",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "adjustment_rule",
+        "statement": "Drift is scaled by the uncertainty index. A low index (as in 2024, with very steady polling) yields smaller drift. The uncertainty index affects Election Day error only at the margin.",
+        "quantities": [],
+        "rationale": "Steady polling usually predicts continued steadiness.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "The uncertainty index also affects the model's estimate of Election Day error, but only at the margin.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "As of July 2024, drift had a one-SD value of about 3-4 points on the Trump-Biden margin and Election Day error about 3 points. They combine by root sum of squares to a little under 5 points for the national popular vote, with additional error for state-level predictions.",
+        "quantities": [
+          {
+            "name": "drift SD",
+            "value": "about 3 to 4",
+            "unit": "percentage points (margin)",
+            "context": "July 1, 2024, about 4 months out"
+          },
+          {
+            "name": "Election Day error SD",
+            "value": "about 3",
+            "unit": "percentage points (margin)",
+            "context": "2024"
+          },
+          {
+            "name": "combined national error",
+            "value": "a little under 5",
+            "unit": "percentage points (margin)",
+            "context": "root sum of squares, July 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "\"drift\" takes on a value where a one standard deviation shift is about 3 to 4 points in the margin between Trump and Biden, while Election Day \"error\" is about 3 points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "interpretation_guidance",
+        "statement": "Because drift is low relative to Election Day error in 2024, the model will become only somewhat, not dramatically, more confident as Election Day approaches.",
+        "quantities": [],
+        "rationale": "Most remaining uncertainty is Election Day error, which doesn't shrink over time.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Since \"drift\" is low this year, the model won't get that much more confident as we approach Election Day.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "interpretation_guidance",
+        "statement": "A decent portion of a trailing candidate's win probability (Biden in 2024) comes from the possibility of a systematic polling error. Such errors are symmetric and need not favor the trailing side; they did not favor Democrats in 2016 or 2020.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "these errors don't always work in your favor — they didn't for Democrats in 2016 or 2020",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "Before fully accounting for the debate, the model implied roughly a 25% chance that Biden would lead the Silver Bulletin Electoral College forecast on Election Day morning. Silver would take the under given the debate.",
+        "quantities": [
+          {
+            "name": "P(Biden ahead in EC forecast on Election Day)",
+            "value": "on the order of 25",
+            "unit": "percent",
+            "context": "as of July 1, 2024, debate not fully priced in"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the chance that Biden will be ahead in the Electoral College forecast at Silver Bulletin on Election Day morning are somewhere on the order of 25 percent",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Silver Bulletin would not run Congressional (Senate/House/governor) models in 2024. They are more complex than the presidential model, need more data and have more ways to break: roughly 100 hours up front plus a few hours a week. Models are planned for the 2026 midterms.",
+        "quantities": [
+          {
+            "name": "up-front work",
+            "value": "100",
+            "unit": "hours",
+            "context": "estimate to build Congressional models"
+          }
+        ],
+        "rationale": "Time and cognitive load constraints.",
+        "model_version": "2024 / FLIPR 2026 plans",
+        "evidence_quote": "these models are actually more complex than the presidential numbers. They require collecting more data and there are more ways they can break.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin 2024 presidential forecast launched in late June 2024 and was running more frequent updates than originally planned.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we're already running more frequent updates than we planned on originally",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "other",
+        "finding_type": "critique_of_other_approach",
+        "statement": "Silver says all current forecast models are basically reasonable, and that models with truly indefensible assumptions were weeded out after 2016.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general",
+        "evidence_quote": "The ones that made truly indefensible assumptions were weeded out after 2016.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "polling stability and polarization",
+        "insight": "Presidential polls move much less over a campaign in recent elections than historically, likely due to higher polarization; 2024 polling had barely changed.",
+        "evidence": "Observation of the 2024 cycle and recent elections.",
+        "forecasting_implication": "Use smaller drift parameters in polarized eras; steady early polling predicts continued steadiness."
+      },
+      {
+        "topic": "name recognition in hypothetical matchups",
+        "insight": "Lesser-known potential candidates poll worse in hypothetical matchups, and hypothetical polls aren't comparable to active candidacies.",
+        "evidence": "",
+        "forecasting_implication": "Discount hypothetical-matchup polls of potential replacement candidates."
+      },
+      {
+        "topic": "declining poll accuracy",
+        "insight": "Polls may be trending toward being secularly less accurate as response rates decline; the 2020 systematic error was bad by recent standards but normal historically.",
+        "evidence": "",
+        "forecasting_implication": "Calibrate polling error on long historical samples rather than recent cycles only."
+      },
+      {
+        "topic": "third-party surges",
+        "insight": "Third-party candidates usually fade, but have a right-tail chance of catching fire; winning a state requires both a national surge and a close two-party race locally.",
+        "evidence": "Historical presidential and Senate third-party data; Perot 1992 example.",
+        "forecasting_implication": "Model third-party share with skewed distributions; tail outcomes concentrate in states with weak partisanship or close races, such as Maine."
+      },
+      {
+        "topic": "debate effects",
+        "insight": "Biden's very bad June 2024 debate likely shifted polls in a real way, beyond noise.",
+        "evidence": "Early post-debate polls plus context.",
+        "forecasting_implication": "Early post-event polls may warrant a judgmental adjustment beyond the model's cautious updating."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin 2024 presidential model methodology / launch post",
+        "url": ""
+      },
+      {
+        "description": "Economist 2024 presidential model and its prior construction",
+        "url": ""
+      },
+      {
+        "description": "538 2024 presidential model (Morris era) methodology",
+        "url": ""
+      },
+      {
+        "description": "Earlier Silver/538 piece on uncertainty index being relatively low in 2024",
+        "url": ""
+      },
+      {
+        "description": "Earlier 538 model's COVID uncertainty adjustment (2020)",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on fundamentals going back to 1880",
+        "url": ""
+      },
+      {
+        "description": "Article on declining poll response rates",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "Exact inputs and functional form of the uncertainty index (beyond number of polls and newspaper headline volume) and how it scales drift.",
+      "Beta distribution parameters for third-party vote and how they are fit from presidential and Senate data.",
+      "Size and structure of state-level error beyond the national error, and the correlation structure across states for third-party candidates.",
+      "How the 1936-based error calibration is weighted versus recent elections.",
+      "How drift decays as a function of days to the election.",
+      "How fundamentals and polls are blended over time, and the specific fundamentals variables used.",
+      "Size of the 2020 COVID uncertainty parameter."
+    ]
+  }
+}

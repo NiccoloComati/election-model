@@ -1,0 +1,7 @@
+		~~~Error~~~		~~~Bias~~~			
+Type	count	current	historical	current	historical	cat_current	cat_hist
+Gubinatorial	38	6.987227196	5.4	R+6.9@@-6.91040855454273	D+0.9@@0.9	R	D
+New Jersey	22	8.96875	3.7	R+9@@-8.96875	D+0.7@@0.7	R	D
+Virginia	16	5.932034801	4.4	R+5.8@@-5.7700006053999	D+0.8@@0.8	R	D
+House	2	8.37	6	D+8.4@@8.370000000000001	D+1.3@@1.3	D	D
+Cycle	40	7.066322428	5.9	R+6.1@@-6.11368534732159	D+1.1@@1.1	R	D

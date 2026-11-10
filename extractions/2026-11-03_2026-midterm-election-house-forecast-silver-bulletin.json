@@ -1,0 +1,126 @@
+{
+  "article": {
+    "date": "2026-11-03",
+    "title": "FLIPR 2026 House forecast",
+    "subtitle": "Silver Bulletin's prediction for every House election in 2026.",
+    "authors": "Nate Silver; Eli McKown-Dawson",
+    "url": "https://www.natesilver.net/p/nate-silver-2026-midterm-election-house-model",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2026-11-03_2026-midterm-election-house-forecast-silver-bulletin"
+  },
+  "run": {
+    "model": "claude-opus-5-5 (manual, Claude Code session)",
+    "pdf_included": true,
+    "cost_usd": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "finish_reason": "manual",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-05T16:47:35"
+  },
+  "extraction": {
+    "summary": "Final FLIPR 2026 House forecast landing page as of Nov. 3, 2026: 96.4 percent Democratic control (Deluxe), average 241 D-194 R, a 26-seat gain. As with the Senate page, the substance is in embedded tables: district tipping points with Voter Power Index and elasticity, a popular-vote-to-seats translation, a full slate of district win probabilities and vote shares, and most-competitive-race margin intervals.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "FLIPR 2026 (Deluxe, Classic, Lite)"
+    ],
+    "findings": [
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "Final FLIPR Deluxe House forecast on Nov. 3, 2026: 96.4 percent chance of Democratic control, average 241 D to 194 R, a net Democratic gain of 26, from 40,000 simulations with a shaded middle 80 percent.",
+        "quantities": [
+          {
+            "name": "House D control prob",
+            "value": "96.4",
+            "unit": "percent",
+            "context": "final"
+          },
+          {
+            "name": "average D seats",
+            "value": "241",
+            "unit": "seats",
+            "context": "final"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "House district tipping-point probabilities top out around 3 percent per district (PA-8, MI-7, PA-7, NC-1, AZ-1), with Voter Power Index values around 8 to 11 and elasticities from about 0.92 (VA-2) to 1.09 (OH-7).",
+        "quantities": [
+          {
+            "name": "max district tipping-point prob",
+            "value": "3",
+            "unit": "percent",
+            "context": "final"
+          },
+          {
+            "name": "PA-8 VPI",
+            "value": "10.9",
+            "unit": "relative index",
+            "context": "final"
+          },
+          {
+            "name": "OH-7 elasticity",
+            "value": "1.09",
+            "unit": "",
+            "context": "final"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "parameter_or_number",
+        "statement": "Final FLIPR House translation table: at a D+14 to +15 national popular vote, Democrats win 100 percent with about 269 seats.",
+        "quantities": [
+          {
+            "name": "D seats at D+14-15",
+            "value": "269",
+            "unit": "seats",
+            "context": "final"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "parameter_or_number",
+        "statement": "District elasticity values are published per district, e.g. PA-8 1.01, MI-7 0.93, PA-7 1.03, NC-1 0.98, AZ-1 1.04, AZ-6 0.97, WI-3 0.96, NJ-7 0.93, OH-7 1.09, VA-2 0.92.",
+        "quantities": [
+          {
+            "name": "district elasticity range shown",
+            "value": "0.92-1.09",
+            "unit": "",
+            "context": "final"
+          }
+        ],
+        "rationale": "",
+        "model_version": "FLIPR 2026 final",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      }
+    ],
+    "political_insights": [],
+    "references": [
+      {
+        "description": "FLIPR House forecast data downloads",
+        "url": "https://www.natesilver.net/p/nate-silver-2026-midterm-election-house-model"
+      }
+    ],
+    "open_questions": []
+  }
+}

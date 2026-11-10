@@ -1,0 +1,152 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary", "model_content_level", "models_discussed", "findings", "political_insights", "references", "open_questions"],
+  "properties": {
+    "summary": {
+      "type": "string",
+      "description": "3-5 sentences: what the article argues and what it reveals about forecasting or modeling."
+    },
+    "model_content_level": {
+      "type": "string",
+      "enum": ["none", "low", "medium", "high"],
+      "description": "How much the article reveals about how election models (Silver's or others) work. none = nothing usable."
+    },
+    "models_discussed": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Models or products discussed, e.g. 'Silver Bulletin 2024 presidential model', 'FLIPR 2026 midterms model', 'Silver Bulletin polling averages', 'Silver Bulletin pollster ratings', 'FiveThirtyEight (Silver era, 2008-2022)', 'FiveThirtyEight (2024, Morris era)', 'Economist model', 'prediction markets'."
+    },
+    "findings": {
+      "type": "array",
+      "description": "Every distinct piece of information about how forecasting models are or should be built. One atomic idea per item.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["component", "finding_type", "statement", "quantities", "rationale", "model_version", "evidence_quote", "explicitness"],
+        "properties": {
+          "component": {
+            "type": "string",
+            "enum": [
+              "data_sources_and_poll_inclusion",
+              "poll_weighting",
+              "pollster_ratings",
+              "house_effects",
+              "likely_voter_and_population_adjustments",
+              "polling_average_and_trend_estimation",
+              "fundamentals_economy",
+              "fundamentals_incumbency_and_approval",
+              "fundamentals_partisan_lean_and_demographics",
+              "candidate_effects",
+              "campaign_events_and_bounces",
+              "multi_candidate_and_third_party",
+              "candidate_replacement_and_scenarios",
+              "state_and_district_correlation",
+              "uncertainty_and_polling_error",
+              "time_horizon_and_forecast_dynamics",
+              "simulation_and_aggregation",
+              "electoral_system_and_seat_translation",
+              "turnout_and_electorate_composition",
+              "redistricting_and_boundaries",
+              "primaries_and_nominations",
+              "approval_and_favorability_tracking",
+              "generic_ballot_and_national_environment",
+              "prediction_markets_and_external_benchmarks",
+              "expert_ratings_and_qualitative_inputs",
+              "model_evaluation_and_calibration",
+              "vote_counting_and_election_night",
+              "communication_and_interpretation",
+              "model_history_and_versions",
+              "other"
+            ]
+          },
+          "finding_type": {
+            "type": "string",
+            "enum": [
+              "method",
+              "parameter_or_number",
+              "data_source",
+              "assumption",
+              "adjustment_rule",
+              "empirical_regularity",
+              "model_change",
+              "limitation_or_failure_mode",
+              "design_principle",
+              "critique_of_other_approach",
+              "interpretation_guidance"
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "description": "Precise, self-contained statement understandable without the article. Name the model, the mechanism, and any numbers."
+          },
+          "quantities": {
+            "type": "array",
+            "description": "Every number attached to this finding. Empty array if none.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["name", "value", "unit", "context"],
+              "properties": {
+                "name": {"type": "string"},
+                "value": {"type": "string", "description": "As stated, e.g. '0.5', '3-4', '~80,000'."},
+                "unit": {"type": "string", "description": "e.g. 'percentage points', 'days', 'simulations'. Empty string if unitless."},
+                "context": {"type": "string", "description": "What the number applies to and when."}
+              }
+            }
+          },
+          "rationale": {
+            "type": "string",
+            "description": "Why the author does it this way or believes it, as stated or clearly implied. Empty string if none given."
+          },
+          "model_version": {
+            "type": "string",
+            "description": "Which model/version/period this applies to, e.g. '2024 presidential', 'FLIPR 2026', '538 2016-2020', 'general principle'."
+          },
+          "evidence_quote": {
+            "type": "string",
+            "description": "Short verbatim quote from the article supporting the finding, at most 40 words. Empty string if the finding comes from a chart or table."
+          },
+          "explicitness": {
+            "type": "string",
+            "enum": ["explicit", "implied", "inferred_from_chart"],
+            "description": "explicit = stated outright; implied = clearly suggested but not spelled out; inferred_from_chart = read off a figure or table."
+          }
+        }
+      }
+    },
+    "political_insights": {
+      "type": "array",
+      "description": "Substantive claims about electoral behavior, coalitions, and political dynamics that a forecaster should know, even if not about model mechanics.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["topic", "insight", "evidence", "forecasting_implication"],
+        "properties": {
+          "topic": {"type": "string", "description": "Short label, e.g. 'incumbency advantage', 'education realignment', 'midterm penalty'."},
+          "insight": {"type": "string"},
+          "evidence": {"type": "string", "description": "Data, numbers, or reasoning offered. Empty string if none."},
+          "forecasting_implication": {"type": "string", "description": "How a forecaster could use this. Empty string if unclear."}
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "description": "Methodology pages, papers, datasets, or other articles the text points to that could hold more model detail.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["description", "url"],
+        "properties": {
+          "description": {"type": "string"},
+          "url": {"type": "string", "description": "Empty string if not given."}
+        }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Model details the article alludes to but does not explain, worth chasing elsewhere."
+    }
+  }
+}

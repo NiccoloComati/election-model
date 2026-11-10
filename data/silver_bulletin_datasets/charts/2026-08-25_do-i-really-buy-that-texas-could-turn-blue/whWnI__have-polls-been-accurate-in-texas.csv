@@ -1,0 +1,24 @@
+Year	Race	Dem. Candidate	GOP Candidate	n_polls	GOP margin poll	GOP margin actual	Error
+1998	Gov	Mauro	Bush	5	47.4	37.06	-10.34
+2000	Pres.	Gore	Bush	4	28	21.32	-6.68
+2000	Sen.	Kelly	Hutchison	2	32	32.77	0.77
+2002	Gov.	Sanchez	Perry	12	12.25	17.85	5.6
+2002	Sen.	Kirk	Cornyn	15	5.06667	11.97	6.90333
+2004	Pres.	Kerry	Bush	1	22	22.86	0.86
+2006	Gov.	Bell	Perry	5	12.24	9.24	-3
+2006	Sen.	Radnofsky	Hutchison	4	28.85	25.65	-3.2
+2008	Pres.	Obama	McCain	4	11	11.77	0.77
+2008	Sen.	Noriega	Cornyn	4	10.5	11.98	1.48
+2010	Gov.	White	Perry	5	11.06	12.67	1.61
+2012	Pres.	Obama	Romney	2	17.5	15.79	-1.71
+2012	Sen.	Sadler	Cruz	2	18	15.84	-2.16
+2014	Sen.	Alameel	Cornyn	2	24	27.2	3.2
+2014	Gov.	Davis	Abbott	2	18	20.37	2.37
+2016	Pres.	Clinton	Trump	8	7.1675	9	1.8325
+2018	Gov.	Valdez	Abbott	5	17.54	13.3	-4.24
+2018	Sen.	O'Rourke	Cruz	8	5.075	2.56	-2.515
+2020	Pres.	Biden	Trump	21	1.15286	5.58	4.42714
+2020	Sen.	Hegar	Cornyn	19	5.45263	9.64	4.18737
+2022	Gov.	O'Rourke	Abbott	6	9.28333	10.9	1.61667
+2024	Pres.	Harris	Trump	7	7.65	13.7	6.05
+2024	Sen.	Allred	Cruz	8	3.1875	8.5	5.3125

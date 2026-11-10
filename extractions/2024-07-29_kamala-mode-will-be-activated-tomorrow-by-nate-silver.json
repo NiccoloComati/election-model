@@ -1,0 +1,263 @@
+{
+  "article": {
+    "date": "2024-07-29",
+    "title": "kamala_mode will be activated tomorrow",
+    "subtitle": "The model has been coconut-pilled.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/kamala_mode-will-be-activated-tomorrow",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2024-07-29_kamala-mode-will-be-activated-tomorrow-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.295642,
+    "prompt_tokens": 8,
+    "completion_tokens": 7590,
+    "cache_read_tokens": 16811,
+    "cache_write_tokens": 17556,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:07:13"
+  },
+  "extraction": {
+    "summary": "Silver announces that the Silver Bulletin 2024 presidential model, paused after Biden withdrew, will be relaunched as a Harris-Trump forecast via a 'kamala_mode' switch. He explains that he chose not to hot-swap Harris into the model right away because polls were in flux after the RNC, the Trump assassination attempt and Biden's crisis, and because her candidacy was still hypothetical. He argues that public forecasts carry a higher responsibility than private betting models, and that a subjective estimate can sometimes beat a model in situations it was not designed for. About 99.5% of the code is unchanged; the adjustments deal with sparse Harris-Trump polling before June 27 and a review of the home-state adjustment. A code screenshot shows parameters such as 40,000 simulations, an early-vote failsafe that is switched off, and options for computing polling averages.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages"
+    ],
+    "findings": [
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin 2024 presidential model handles the replacement of Biden by Harris through a flag in the code, kamala_mode=\"yes\", rather than through a new model. The pre-existing model logic is trusted as much as possible.",
+        "quantities": [],
+        "rationale": "Rely on the established model logic rather than rebuilding it.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "there are actually very few changes, as we’re trusting the pre-existing model logic as much as possible",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_history_and_versions",
+        "finding_type": "parameter_or_number",
+        "statement": "About 99.5 percent of the code in the Harris-Trump version of the Silver Bulletin presidential model is the same as in the Biden-Trump version.",
+        "quantities": [
+          {
+            "name": "share of code unchanged",
+            "value": "about 99.5",
+            "unit": "percent",
+            "context": "kamala_mode vs Biden-Trump model, July 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "But literally about 99.5 percent of the code is the same.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "adjustment_rule",
+        "statement": "kamala_mode includes adjustments to account for the scarcity of Harris-vs-Trump polling before the June 27, 2024 debate. Pollsters had tested that matchup only periodically before then. The exact adjustment is described in a separate methodology update.",
+        "quantities": [
+          {
+            "name": "debate date after which Harris-Trump polling became more common",
+            "value": "June 27",
+            "unit": "date",
+            "context": "2024"
+          }
+        ],
+        "rationale": "There wasn't much Harris-Trump polling until the debate.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "we need to make some adjustments to account for the fact that there wasn’t much Harris-Trump polling until the debate occurred on June 27",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "fundamentals_partisan_lean_and_demographics",
+        "finding_type": "model_change",
+        "statement": "During the pause after Biden withdrew, the Silver Bulletin team re-examined minor parts of the model, including the home-state adjustment for presidential and vice-presidential candidates.",
+        "quantities": [],
+        "rationale": "Downtime allowed the review; a new ticket changes the home states involved.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We also took the downtime to examine a few other minor things, like the home-state adjustment for presidential and VP candidates.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "candidate_replacement_and_scenarios",
+        "finding_type": "design_principle",
+        "statement": "Silver chose not to hot-swap Harris into the model immediately after Biden withdrew. He paused it for about eight days until enough post-withdrawal polling existed to set a reasonable baseline. His reasons were that polls were in flux after the RNC, the assassination attempt and Biden's crisis, and that Harris's candidacy was still hypothetical.",
+        "quantities": [
+          {
+            "name": "days between Biden withdrawal and model relaunch decision",
+            "value": "eight",
+            "unit": "days",
+            "context": "July 21-29, 2024"
+          }
+        ],
+        "rationale": "An immediate swap would have misinformed readers more than it informed them.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "I suppose we could have just done a hot swap and immediately replaced him with Kamala Harris",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "design_principle",
+        "statement": "Silver holds that publishing a statistical forecast publicly carries more responsibility than running a model privately or for betting. He also holds that a subjective estimate may beat a model in unforeseen circumstances the model was not designed to handle.",
+        "quantities": [],
+        "rationale": "Probabilistic forecasts can confuse people, and people can treat models as oracular even though every model relies on the researcher's assumptions.",
+        "model_version": "general principle",
+        "evidence_quote": "there are times when a subjective estimate may be better, especially in unforeseen circumstances that your model wasn’t really designed to handle",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "The period around a party convention, such as the 2024 RNC, is typically one in which polls can produce short-lived bounces. This made polls less reliable as a baseline in July 2024.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "the Republican convention, which is typically a period when polls can produce short-lived bounces",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "interpretation_guidance",
+        "statement": "Right after relaunch with Harris, the Silver Bulletin presidential model was expected to be more likely than usual to show further shifts over the following week or so. The baseline rested on limited new data.",
+        "quantities": [
+          {
+            "name": "period of elevated volatility",
+            "value": "next week or so",
+            "unit": "",
+            "context": "after July 30, 2024 relaunch"
+          }
+        ],
+        "rationale": "Only a short window of Harris polling was available.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the model is more likely than usual to show further shifts over the course of the next week or so",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "simulation_and_aggregation",
+        "finding_type": "parameter_or_number",
+        "statement": "The code screenshot shows that the Silver Bulletin 2024 presidential model runs 40,000 simulations (scalar howmanysims=40000).",
+        "quantities": [
+          {
+            "name": "howmanysims",
+            "value": "40000",
+            "unit": "simulations",
+            "context": "2024 presidential model code, July 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "method",
+        "statement": "The code screenshot shows a flag use_early_vote=\"no\". Its comment says it served as a failsafe in case early-vote turnout differed from what the turnout model predicted, and that it is being turned off for now. This implies the model contains a turnout model and an optional early-vote input.",
+        "quantities": [],
+        "rationale": "Failsafe against a turnout model mismatch; not needed in July.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The code screenshot shows a run_polling_averages option. \"today\" calculates polling averages only for the current date. \"no\" assumes the averages have already been calculated. \"yes\" or \"backfill\" calculates averages for the whole election cycle (comment truncated).",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "The code screenshot shows flags process_cces_data=\"no\" and compress_sample_size=\"yes\". This suggests the model uses CCES (Cooperative Election Study) data, preprocessed separately, and has an option that compresses poll sample sizes, presumably capping the effective weight of large samples.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "parameter_or_number",
+        "statement": "The code screenshot shows scalar create_date_cutoff=23585. This is likely a Stata date value; 23585 days after Jan 1, 1960 corresponds to around July 29, 2024.",
+        "quantities": [
+          {
+            "name": "create_date_cutoff",
+            "value": "23585",
+            "unit": "Stata date",
+            "context": "model code July 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "parameter_or_number",
+        "statement": "The Silver Bulletin presidential model is updated 6-7 times a week. Polling averages are free, while probabilities and forward-looking components are paywalled.",
+        "quantities": [
+          {
+            "name": "update frequency",
+            "value": "6-7",
+            "unit": "times per week",
+            "context": "2024 presidential model"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "We’ve been updating the model 6-7 times a week (i.e. nearly every day)",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "Electoral College disadvantage",
+        "insight": "Democrats face a persistent Electoral College disadvantage that remained a major challenge for Harris.",
+        "evidence": "",
+        "forecasting_implication": "A Democratic lead in the national popular vote overstates the party's chances of winning the Electoral College."
+      },
+      {
+        "topic": "Harris polling bump",
+        "insight": "Polls in the eight days after Biden's withdrawal showed Harris doing quite a bit better than Biden did in the immediate post-RNC, post-assassination-attempt, Biden-crisis period.",
+        "evidence": "Fair amount of polling since Biden's decision.",
+        "forecasting_implication": "Expect a level shift at a candidate swap; treat early post-swap data as volatile."
+      }
+    ],
+    "references": [
+      {
+        "description": "Archived Biden-Trump version of the Silver Bulletin model (unlocked)",
+        "url": ""
+      },
+      {
+        "description": "Forthcoming methodological update explaining kamala_mode",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on the home-state adjustment for presidential and VP candidates",
+        "url": ""
+      },
+      {
+        "description": "Article on Democrats' persistent Electoral College disadvantage",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What exact adjustment does kamala_mode make for the sparse Harris-Trump polling before June 27?",
+      "What changes, if any, were made to the home-state adjustment for presidential and VP candidates, and how large is it?",
+      "What does compress_sample_size do, and what is its functional form?",
+      "How is CCES data used in the model?",
+      "How does the turnout model work, and how does the early-vote failsafe operate?"
+    ]
+  }
+}

@@ -1,0 +1,563 @@
+{
+  "article": {
+    "date": "2024-09-11",
+    "title": "A guide to post-debate poll-watching",
+    "subtitle": "What to look for in the polls — and the model.",
+    "authors": "Nate Silver",
+    "url": "https://www.natesilver.net/p/a-guide-to-post-debate-poll-watching",
+    "paywalled": "True",
+    "relevance": "core",
+    "stem": "2024-09-11_a-guide-to-post-debate-poll-watching-by-nate-silver"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.354883,
+    "prompt_tokens": 4,
+    "completion_tokens": 7425,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 25756,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:12:49"
+  },
+  "extraction": {
+    "summary": "Written the day after the September 10, 2024 Harris-Trump debate, the article lays out five typical phases of post-event poll movement and explains how the Silver Bulletin 2024 presidential model will absorb post-debate polls. It covers several mechanisms: the forecast temporarily blends in pre-debate polling averages for about a week, the convention bounce adjustment is still deflating Harris's pre-debate, post-convention numbers, the trendline adjustment extrapolates national shifts to the states, and state polls outweigh national polls once there is enough state data. It includes a sensitivity table showing win probabilities under uniform poll shifts of up to 5 points toward either candidate. It also gives the model's Electoral College bias estimate (about 2.5 points against Democrats) and its turnout projection (150-165 million). Silver guesses Harris gains 1-1.5 points and the race ends near 50/50, consistent with Polymarket.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "Silver Bulletin pollster ratings",
+      "prediction markets",
+      "CNN debate instapoll"
+    ],
+    "findings": [
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "method",
+        "statement": "After major events such as debates, the forecast component of the Silver Bulletin 2024 presidential model hedges against short-term movement in the polling averages. For a few days it blends in some of the pre-event (pre-debate) polling averages, until it is more confident the new numbers will be sustained.",
+        "quantities": [
+          {
+            "name": "Pre-debate Harris national polling margin used as hedge example",
+            "value": "+2",
+            "unit": "percentage points",
+            "context": "Harris national lead before the September 10, 2024 debate"
+          }
+        ],
+        "rationale": "The model wants to see whether post-debate numbers reflect a blip caused by an enthusiasm-driven 'sugar high' or by unreliable polling.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "the forecast part of our model will hedge against short-term movement in the polling averages by blending in some of our pre-debate polling averages (e.g. Harris about +2 in national polls) for a few days",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "parameter_or_number",
+        "statement": "In the Silver Bulletin 2024 presidential model, the post-debate hedge with pre-debate data lasts roughly a week. After that, the forecast stops blending in pre-debate data and relies on post-debate polling as much as it can.",
+        "quantities": [
+          {
+            "name": "Duration of pre-debate hedging",
+            "value": "about a week",
+            "unit": "days",
+            "context": "after a presidential debate"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "After about a week, the forecast will stop hedging with pre-debate data and rely on post-debate polling as much as it can.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "adjustment_rule",
+        "statement": "The Silver Bulletin 2024 presidential model has a convention bounce adjustment that deflates a party's polls taken in the post-convention window. Polls fielded a few weeks after the convention are no longer affected. However, a polling average composed of older post-convention polls still carries the deflation until newer polls replace them.",
+        "quantities": [],
+        "rationale": "The model expects convention bounces to fade.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "New polls won't be affected by this — we're now a few weeks removed from the convention. But since there isn't yet any post-debate data and our averages are composed of pre-debate, post-convention data, it's still deflating Harris's numbers",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "interpretation_guidance",
+        "statement": "Because of the convention bounce adjustment, the Silver Bulletin model expected that, absent the debate, Harris's 2.0-point national lead would fall to about 1 point. That expected level was close to recent Marist, NYT/Siena and YouGov polls showing a tied race. A post-debate 3-point lead would therefore be a 2-point gain relative to the model's expectation, which is equivalent to Harris +2 in the shift table, or about a 53% win probability.",
+        "quantities": [
+          {
+            "name": "Model-expected Harris national lead absent debate",
+            "value": "about 1",
+            "unit": "percentage points",
+            "context": "September 2024, after the convention bounce wears off"
+          },
+          {
+            "name": "Current national average lead",
+            "value": "2.0",
+            "unit": "percentage points",
+            "context": "Harris, September 11, 2024, before any post-debate polls"
+          },
+          {
+            "name": "Win probability with 3-point lead",
+            "value": "53",
+            "unit": "percent",
+            "context": "Harris, equivalent to +2 in the shift table"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "in the absence of the debate, the model expected Harris to continue to lose momentum as her convention bounce wore off, and for her national polling lead to fall to about 1 point",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "interpretation_guidance",
+        "statement": "If Harris merely held steady at about +2 after the debate, her win probability in the Silver Bulletin model would still rise, because the convention bounce adjustment would wear off as new polls arrived. The rise would be smaller than if she gained ground.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Her win probability still would increase in our model in that instance because of the convention bounce adjustment wearing off, but not by as much.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "electoral_system_and_seat_translation",
+        "finding_type": "parameter_or_number",
+        "statement": "As of September 2024, the Silver Bulletin 2024 presidential model estimates an Electoral College bias of around 2.5 points against Democrats. Under this estimate, Harris needs roughly a 3-point national lead to be a slight favorite.",
+        "quantities": [
+          {
+            "name": "Electoral College bias",
+            "value": "Around 2.5",
+            "unit": "percentage points",
+            "context": "against Democrats, model estimate as of September 2024"
+          },
+          {
+            "name": "National lead needed to be a slight favorite",
+            "value": "3",
+            "unit": "percentage points",
+            "context": "Harris"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Around 2.5 points against Democrats.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "In the Silver Bulletin 2024 presidential model, state polls have more influence than national polls once the model has enough state data.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "ultimately state polls have more influence on the model than national polls once it has enough state data to go on.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "polling_average_and_trend_estimation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin trendline adjustment extrapolates movement in national polls to state estimates when fresh state polls are lacking. For example, if Harris gains 2 points nationally, the model assumes she has gained about 2 points in Pennsylvania. This suggests a uniform-swing-style trend transfer.",
+        "quantities": [
+          {
+            "name": "Example national gain transferred to state",
+            "value": "2",
+            "unit": "percentage points",
+            "context": "Pennsylvania example"
+          }
+        ],
+        "rationale": "Without fresh state data, national movement is the best available signal. Actual state data can later produce surprises.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "it will assume that if Harris has gained 2 points in national polls, she's probably gained 2 points in Pennsylvania as well.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin polling averages respond aggressively to highly rated pollsters such as NYT/Siena, which suggests that weight depends on pollster rating.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential / polling averages",
+        "evidence_quote": "They also tend to be highly-rated polls, and the polling averages will respond aggressively to them.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "In the Silver Bulletin pollster ratings, most quick overnight IVR polls have relatively low ratings and ought to be viewed with skepticism. Morning Consult and YouGov are rated as good pollsters.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings 2024",
+        "evidence_quote": "Most of these polls have relatively low ratings and ought to be looked at with some skepticism.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "likely_voter_and_population_adjustments",
+        "finding_type": "empirical_regularity",
+        "statement": "Online panel pollsters such as Morning Consult and YouGov weight heavily on past vote or party identification to counter partisan response bias in their non-probability samples. As a result, their polls typically show little movement after events, and they sometimes miss real shifts.",
+        "quantities": [],
+        "rationale": "Enthusiastic partisans respond more eagerly to surveys after good events for their side, which can bias results.",
+        "model_version": "general principle",
+        "evidence_quote": "these firms tend to weight heavily on past voting patterns or party identification to minimize problems with partisan response bias in their non-probability samples.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Phase 0 of the typical post-debate poll pattern (days 0-1, the 'fakeout phase'): most changes to the forecast reflect pre-debate polls that are only now being released. They reveal nothing about the debate's impact.",
+        "quantities": [
+          {
+            "name": "Fakeout phase",
+            "value": "0-1",
+            "unit": "days after debate",
+            "context": "post-debate phase 0"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Most changes in the model that occur today and tomorrow will reflect pre-debate polling that wasn't released until now.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Phase 1 of the typical post-debate poll pattern (days 2-3): the first fully post-debate polls come from online panels and quick-and-dirty IVR polls. Traditional telephone pollsters stay in the field for 3-4 days and then take another 1-2 days to release.",
+        "quantities": [
+          {
+            "name": "Phase 1 timing",
+            "value": "2-3",
+            "unit": "days after debate",
+            "context": "online/IVR polls"
+          },
+          {
+            "name": "Phone poll field time",
+            "value": "3-4",
+            "unit": "days",
+            "context": "traditional pollsters"
+          },
+          {
+            "name": "Phone poll finalization time",
+            "value": "a day or two",
+            "unit": "days",
+            "context": "after fieldwork ends"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "traditional telephone pollsters like to be in the field for 3-4 days, then they might want another day or two to finalize the poll and release the numbers.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Phase 2 of the typical post-debate poll pattern (days 4-7): traditional high-quality phone polls arrive, national before state. These polls can show bigger bounces because they massage the data less.",
+        "quantities": [
+          {
+            "name": "Phase 2 timing",
+            "value": "4-7",
+            "unit": "days after debate",
+            "context": ""
+          }
+        ],
+        "rationale": "Pollsters gauge the overall national effect before polling individual states.",
+        "model_version": "general principle",
+        "evidence_quote": "Usually, you'll get national polls before state polls at this stage",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Phase 3 of the typical post-debate poll pattern (days 8-13): state polls arrive, and the Silver Bulletin averages and forecast settle into a 'new normal' with less volatility.",
+        "quantities": [
+          {
+            "name": "Phase 3 timing",
+            "value": "8-13",
+            "unit": "days after debate",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "This is about when our polling averages and the forecast lock into the \"new normal\".",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Phase 4 of the typical post-debate poll pattern (14+ days): this is about the most reliable read of the debate's impact that will ever be available. Changes after this point mostly reflect later campaign developments.",
+        "quantities": [
+          {
+            "name": "Phase 4 timing",
+            "value": "14+",
+            "unit": "days after debate",
+            "context": ""
+          }
+        ],
+        "rationale": "The news cycle moves on.",
+        "model_version": "general principle",
+        "evidence_quote": "By two weeks from today — roughly September 25 — we'll have about as reliable a gauge of the impact of the debate as we're ever going to get.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Debate gains build over several days, through news coverage and through non-viewers seeing clips. For example, the debate drew 65 million viewers against a projected electorate of 150-165 million.",
+        "quantities": [
+          {
+            "name": "Debate viewers",
+            "value": "65 million",
+            "unit": "viewers",
+            "context": "September 10, 2024 debate"
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "aren't likely to be fully realized for a few days.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "turnout_and_electorate_composition",
+        "finding_type": "parameter_or_number",
+        "statement": "As of September 2024, the Silver Bulletin 2024 presidential model projects November turnout of 150-165 million voters.",
+        "quantities": [
+          {
+            "name": "Projected turnout",
+            "value": "150 million to 165 million",
+            "unit": "voters",
+            "context": "2024 general election"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "our model is projecting November turnout to be somewhere between 150 million and 165 million voters",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "method",
+        "statement": "The Silver Bulletin forecast landing page includes a sensitivity table of win probabilities under uniform shifts of every poll in the database by 1-5 points toward either candidate. The shifts are adjusted for each state's elasticity, and fundamentals such as the economy still influence these hypothetical forecasts.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "It shows what would happen if you shifted every poll in our database up by X points in favor of Harris or Trump.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "time_horizon_and_forecast_dynamics",
+        "finding_type": "parameter_or_number",
+        "statement": "The September 11, 2024 poll-shift table shows Harris win probabilities by uniform shift from current polls. Toward Harris: +5 gives 73.9%, +4 gives 67.5%, +3 gives 60.4%, +2 gives 52.9%, and +1 gives 45.5%. The current forecast is 38.1% (Trump 61.6%). Toward Trump: +1 gives 31.2%, +2 gives 25.1%, +3 gives 19.7%, +4 gives 14.9%, and +5 gives 11.1%. Each point near the center is worth about 7-8 percentage points of win probability, with the effect tapering in the tails.",
+        "quantities": [
+          {
+            "name": "Harris +5",
+            "value": "73.9",
+            "unit": "percent",
+            "context": "Harris win probability"
+          },
+          {
+            "name": "Harris +4",
+            "value": "67.5",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Harris +3",
+            "value": "60.4",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Harris +2",
+            "value": "52.9",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Harris +1",
+            "value": "45.5",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Current",
+            "value": "38.1",
+            "unit": "percent",
+            "context": "Trump 61.6%"
+          },
+          {
+            "name": "Trump +1",
+            "value": "31.2",
+            "unit": "percent",
+            "context": "Harris win probability"
+          },
+          {
+            "name": "Trump +2",
+            "value": "25.1",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Trump +3",
+            "value": "19.7",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Trump +4",
+            "value": "14.9",
+            "unit": "percent",
+            "context": ""
+          },
+          {
+            "name": "Trump +5",
+            "value": "11.1",
+            "unit": "percent",
+            "context": "Trump 88.7%"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "multi_candidate_and_third_party",
+        "finding_type": "parameter_or_number",
+        "statement": "As of September 2024, Silver Bulletin data show a combined 95.4% of voters committed to Harris or Trump, leaving few undecided voters and limiting the potential size of bounces.",
+        "quantities": [
+          {
+            "name": "Two-candidate committed share",
+            "value": "95.4",
+            "unit": "percent",
+            "context": "September 2024"
+          }
+        ],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "a combined 95.4 percent of voters are already committed to Harris or Trump.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "campaign_events_and_bounces",
+        "finding_type": "empirical_regularity",
+        "statement": "Debate bounces are getting smaller over time. Romney gained about 4 points after the first 2012 debate, and Trump gained about 2 points after the June 2024 debate against Biden.",
+        "quantities": [
+          {
+            "name": "Romney 2012 debate bounce",
+            "value": "around 4",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Trump June 2024 debate bounce",
+            "value": "maybe 2",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "These bounces are getting smaller",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "expert_ratings_and_qualitative_inputs",
+        "finding_type": "empirical_regularity",
+        "statement": "The CNN debate-watcher instapoll leans Democratic but typically translates into gains in post-debate polls for the winner. The average winning margin in the instapoll is 18 points. Harris won 63-37 (+26), compared with Trump's +34 over Biden in June 2024 and Romney's +35 in 2012.",
+        "quantities": [
+          {
+            "name": "Average instapoll margin",
+            "value": "18",
+            "unit": "points",
+            "context": "CNN instapoll"
+          },
+          {
+            "name": "Harris margin",
+            "value": "26",
+            "unit": "points",
+            "context": "September 10, 2024 debate"
+          },
+          {
+            "name": "Trump vs Biden",
+            "value": "34",
+            "unit": "points",
+            "context": "June 2024 debate"
+          },
+          {
+            "name": "Romney vs Obama",
+            "value": "35",
+            "unit": "points",
+            "context": "first 2012 debate"
+          }
+        ],
+        "rationale": "The debate-watching audience is predominantly Democratic.",
+        "model_version": "general principle",
+        "evidence_quote": "it typically does translate into gains in post-debate polls.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "prediction_markets_and_external_benchmarks",
+        "finding_type": "interpretation_guidance",
+        "statement": "Silver judged Polymarket's near-50/50 price after the debate reasonable, and it matched his own guess for the model's output once post-debate polls arrived.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Polymarket's estimate of the race being pretty damned close to 50/50 seems reasonable.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "civic engagement by party",
+        "insight": "Democrats generally have higher civic engagement, which makes debate-watcher audiences and instapolls lean Democratic.",
+        "evidence": "Since 2000, the only Republicans to win the CNN instapoll were Romney in 2012 and Trump against Biden in 2024.",
+        "forecasting_implication": "Discount instapolls for their Democratic lean."
+      },
+      {
+        "topic": "Electoral College-popular vote gap",
+        "insight": "After the 2024 DNC, swing-state polls were mediocre for Harris relative to national polls, suggesting a widening Electoral College-popular vote gap.",
+        "evidence": "Model estimate of about 2.5 points of bias against Democrats.",
+        "forecasting_implication": "Model the state-national gap explicitly rather than assuming the national margin translates directly."
+      },
+      {
+        "topic": "news cycle dynamics",
+        "insight": "Campaigns can be caught off guard when the news cycle moves on, for example Harris after the DNC.",
+        "evidence": "",
+        "forecasting_implication": ""
+      },
+      {
+        "topic": "polarization and bounces",
+        "insight": "With few undecided voters left, event-driven bounces are shrinking.",
+        "evidence": "95.4% of voters committed to Harris or Trump; debate bounces fell from about 4 points (Romney 2012) to about 2 points (Trump June 2024).",
+        "forecasting_implication": "Expect smaller event effects in polarized elections."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin polling averages",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin pollster ratings",
+        "url": ""
+      },
+      {
+        "description": "Silver Bulletin forecast landing page with poll-shift table",
+        "url": ""
+      },
+      {
+        "description": "Article on the convention bounce adjustment",
+        "url": ""
+      },
+      {
+        "description": "Article on the model's Electoral College bias estimate",
+        "url": ""
+      },
+      {
+        "description": "Methodology article on the trendline adjustment",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "What is the exact weighting and decay of the pre-debate average blended into the forecast during the roughly one-week hedge period?",
+      "What functional form and size does the convention bounce penalty take, and on what schedule does it decay?",
+      "How exactly do state 'elasticity' adjustments scale the uniform shifts in the scenario table?",
+      "At what threshold of state data do state polls come to outweigh national polls?",
+      "How is the 150-165 million turnout projection derived?"
+    ]
+  }
+}

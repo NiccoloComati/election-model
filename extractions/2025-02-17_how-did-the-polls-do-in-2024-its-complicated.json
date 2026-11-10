@@ -1,0 +1,851 @@
+{
+  "article": {
+    "date": "2025-02-17",
+    "title": "So, how did the polls do in 2024? It’s complicated",
+    "subtitle": "By one important measure, they performed better than ever. By another, they had their worst year yet.",
+    "authors": "Eli McKown-Dawson; Nate Silver",
+    "url": "https://www.natesilver.net/p/so-how-did-the-polls-do-in-2024-its",
+    "paywalled": "False",
+    "relevance": "core",
+    "stem": "2025-02-17_how-did-the-polls-do-in-2024-its-complicated"
+  },
+  "run": {
+    "model": "claude-opus-5-5",
+    "pdf_included": true,
+    "cost_usd": 0.555287,
+    "prompt_tokens": 4,
+    "completion_tokens": 11292,
+    "cache_read_tokens": 1596,
+    "cache_write_tokens": 41139,
+    "finish_reason": "stop",
+    "valid": true,
+    "validation_errors": [],
+    "timestamp": "2026-11-04T21:25:29"
+  },
+  "extraction": {
+    "summary": "Silver Bulletin's 2024 polling report card, published alongside its updated pollster ratings. In the 2023-24 cycle, average absolute polling error in the final 21 days was 4.5 points, the lowest in the database going back to 1998. Statistical bias, however, was D+2.9 points, the third straight presidential cycle in which the polls overestimated Democrats, and call accuracy was 70%, the lowest on record. The article describes the evaluation methodology: a 21-day window based on median field date, weighting each poll by 1/sqrt of its pollster's poll count, banned pollsters excluded, Advanced Plus-Minus, and half-credit for ties. It argues that herding and correlated bias make systematic error the key risk that probabilistic models must account for. It also reports historical call accuracy by poll margin and pollster-specific 2024 results, including AtlasIntel being upgraded to A+.",
+    "model_content_level": "medium",
+    "models_discussed": [
+      "Silver Bulletin pollster ratings",
+      "Silver Bulletin 2024 presidential model",
+      "Silver Bulletin polling averages",
+      "FiveThirtyEight (Silver era, 2008-2022)"
+    ],
+    "findings": [
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "method",
+        "statement": "Silver Bulletin defines polling error as the absolute difference between a poll's margin and the actual election margin between the top two candidates.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings / report card",
+        "evidence_quote": "By error, we mean the difference between a poll's margin and the actual margin of the election between the top two candidates.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "The pollster ratings database used for accuracy evaluation covers polls since 1998 conducted in the final three weeks (21 days) before general elections for president, governor, Senate and House, and before presidential primaries.",
+        "quantities": [
+          {
+            "name": "evaluation window",
+            "value": "21",
+            "unit": "days",
+            "context": "before election"
+          },
+          {
+            "name": "database start year",
+            "value": "1998",
+            "unit": "",
+            "context": "pollster ratings database"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "our database since 1998, which covers polls in the final three weeks before general elections for president, governor, and Congress — and presidential primaries",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "Whether a poll falls inside the 21-day cutoff is determined by the poll's median field date.",
+        "quantities": [
+          {
+            "name": "cutoff",
+            "value": "21",
+            "unit": "days",
+            "context": "measured from median field date"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "Polls from pollsters banned by Silver Bulletin are excluded from the accuracy and bias analyses.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "method",
+        "statement": "In aggregate accuracy statistics, each poll is weighted by 1/sqrt(N), where N is the number of polls its pollster conducted for that type of election in that cycle. This keeps prolific firms from dominating the averages.",
+        "quantities": [
+          {
+            "name": "weight",
+            "value": "1/sqrt(N)",
+            "unit": "",
+            "context": "N = polls by pollster for race type in cycle"
+          }
+        ],
+        "rationale": "To avoid giving prolific polling firms too much influence.",
+        "model_version": "Silver Bulletin pollster ratings / report card",
+        "evidence_quote": "weighted by one over the square root of the number of polls that their pollster conducted for that particular type of election in that particular cycle",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "method",
+        "statement": "Odd-numbered years are grouped with the following even-numbered year into two-year cycles (for example, 2023-2024) for evaluation.",
+        "quantities": [],
+        "rationale": "Odd years have few qualifying polls, only off-cycle gubernatorial races and special elections.",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "We group odd-numbered years (e.g., 2023) together with even-numbered ones (2024) because there aren't many qualifying polls in these",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "data_sources_and_poll_inclusion",
+        "finding_type": "data_source",
+        "statement": "Silver Bulletin applies specific inclusion rules to presidential primary polls. Because almost none of the few 2024 Democratic primary polls met these rules, the database contains no 2024 Democratic primary polls.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "basically none of them followed the various rules we apply to primary polls — there are no 2024 Democratic primary polls in our database anyway",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "The weighted-average absolute polling error across all race types since 1998 is 5.9 points. By race type it is: presidential primary 9.1, presidential general 4.2, Senate 5.4, House 6.0, governor 5.4.",
+        "quantities": [
+          {
+            "name": "all-years combined error",
+            "value": "5.9",
+            "unit": "points",
+            "context": "1998-2024"
+          },
+          {
+            "name": "pres primary",
+            "value": "9.1",
+            "unit": "points",
+            "context": "all years"
+          },
+          {
+            "name": "pres general",
+            "value": "4.2",
+            "unit": "points",
+            "context": "all years"
+          },
+          {
+            "name": "Senate",
+            "value": "5.4",
+            "unit": "points",
+            "context": "all years"
+          },
+          {
+            "name": "House",
+            "value": "6.0",
+            "unit": "points",
+            "context": "all years"
+          },
+          {
+            "name": "Governor",
+            "value": "5.4",
+            "unit": "points",
+            "context": "all years"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "In the 2023-24 cycle, average absolute polling error was 4.5 points, the lowest of any cycle since 1998. By race type it was: presidential general 3.4 (second-lowest on record), Senate 4.1 (lowest on record), House 5.2, governor 5.4, presidential primary 9.8.",
+        "quantities": [
+          {
+            "name": "combined 2023-24",
+            "value": "4.5",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "pres general 2024",
+            "value": "3.4",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Senate 2024",
+            "value": "4.1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "House 2024",
+            "value": "5.2",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Governor 2024",
+            "value": "5.4",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "pres primary 2024",
+            "value": "9.8",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "in 2023-2024, the average polling error was lower than in any cycle in our database at only 4.5 points",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "Historical average error in presidential general election polls by cycle was: 2000 4.3, 2004 3.2, 2008 3.5, 2012 3.8, 2016 4.9, 2020 5.0, 2024 3.4. Combined error across all race types by cycle was: 1998 7.7, 2000 5.5, 2002 5.4, 2004 4.8, 2006 5.7, 2008 5.5, 2010 5.8, 2012 5.3, 2014 5.4, 2016 6.8, 2018 4.8, 2020 6.3, 2022 4.8, 2024 4.5.",
+        "quantities": [
+          {
+            "name": "pres general 2016",
+            "value": "4.9",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "pres general 2020",
+            "value": "5.0",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "combined 2020",
+            "value": "6.3",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "combined 2016",
+            "value": "6.8",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "House poll error by cycle was: 1998 7.1, 2000 4.4, 2002 5.6, 2004 5.9, 2006 6.5, 2008 5.9, 2010 6.9, 2012 5.5, 2014 6.8, 2016 5.8, 2018 4.8, 2020 6.4, 2022 4.0, 2024 5.2. Senate poll error by cycle was: 7.5, 6.0, 5.4, 5.3, 5.3, 4.9, 5.1, 4.7, 5.3, 5.0, 4.2, 5.8, 4.8, 4.1.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "primaries_and_nominations",
+        "finding_type": "empirical_regularity",
+        "statement": "Presidential primary polls have by far the largest error of any race type, for two reasons. First, multicandidate fields mean voters who like several options switch late or vote tactically for candidates who seem likely to finish strongly. Second, low turnout makes it hard to predict who will vote.",
+        "quantities": [
+          {
+            "name": "primary error all years",
+            "value": "9.1",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "Multiple candidates and low turnout.",
+        "model_version": "general principle",
+        "evidence_quote": "presidential primaries usually feature multiple candidates... Second, presidential primaries feature much lower turnout than general elections.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "The 2024 cycle's low average error was partly an artifact of composition. There were few presidential primary polls, which are the highest-error type, so their absence pulled the combined average down.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "primary polls also tend to have the largest polling error... so their relative absence this cycle helped pull down the average error",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "poll_weighting",
+        "finding_type": "limitation_or_failure_mode",
+        "statement": "Pollster herding, meaning reluctance to publish outliers, can improve individual firms' measured accuracy. It reduces the benefit of averaging because the polls carry redundant information, so an average of herded polls is less informative than the number of polls suggests.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Herding may yield stronger performance for individual polling firms but reduces the benefit of averaging or aggregation since the polls are all basically telling you the same thing.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "design_principle",
+        "statement": "Because polls tend to err in the same direction, averaging does little to reduce systematic bias. Forecast models must therefore explicitly account for systematic (correlated) polling error. This is an advantage of probabilistic models over simple polling averages.",
+        "quantities": [],
+        "rationale": "Averaging doesn't help when almost all polls are off in the same direction.",
+        "model_version": "general principle / Silver Bulletin 2024 presidential model",
+        "evidence_quote": "it's more important than ever to account for the possibility of a systematic polling error. Because probabilistic election models do this, that's one advantage they have over simple polling averages",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "In the 2024 Silver Bulletin presidential model, the single most likely outcome was Trump sweeping all seven swing states, and the next-most likely was Harris sweeping all seven. This reflects strong correlation of errors between states in the simulations.",
+        "quantities": [
+          {
+            "name": "swing states",
+            "value": "7",
+            "unit": "states",
+            "context": "2024"
+          }
+        ],
+        "rationale": "Correlated polling error across states.",
+        "model_version": "2024 presidential",
+        "evidence_quote": "Trump sweeping all seven closely contested swing states was the most likely outcome in our model",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "method",
+        "statement": "Statistical bias is the signed average error, i.e. how far polls consistently underestimate one party. It is calculated only for races where the top two finishers were a Democrat and a Republican, so it is not computed for presidential primaries.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "statistical bias: the extent to which polls miss in the same direction and consistently underestimate Democrats or Republicans",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Historically, the direction of polling bias has been unpredictable from cycle to cycle. For example, polls underestimated Democrats in 2012 and Republicans in 2014 and 2016.",
+        "quantities": [
+          {
+            "name": "2012 combined bias",
+            "value": "R+2.8",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "2014 combined bias",
+            "value": "D+2.8",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Historically, the direction of bias has been unpredictable cycle-to-cycle.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Polls overestimated Democrats in three consecutive presidential elections. Combined bias was D+3.0 in 2016 (described as about 3 points), D+4.7 in 2020 and D+2.9 in 2024. Presidential-only bias was D+3.2 in 2016, D+4.1 in 2020 and D+2.9 in 2024.",
+        "quantities": [
+          {
+            "name": "2016 bias",
+            "value": "3",
+            "unit": "points D",
+            "context": "combined"
+          },
+          {
+            "name": "2020 bias",
+            "value": "D+4.7",
+            "unit": "points",
+            "context": "combined"
+          },
+          {
+            "name": "2024 bias",
+            "value": "D+2.9",
+            "unit": "points",
+            "context": "combined"
+          },
+          {
+            "name": "pres 2020",
+            "value": "D+4.1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "pres 2016",
+            "value": "D+3.2",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "In 2016, the polls had a 3-point average bias toward Democrats. In 2020, bias was D+4.7 points. And this year, it was a smaller but still substantial at D +2.9.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "state_and_district_correlation",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2024, polling bias was highly consistent across race types: D+2.9 in presidential, Senate and House polls, and D+1.8 in gubernatorial polls. This is consistent with declining ticket-splitting, which implies polling errors are correlated across offices in presidential years.",
+        "quantities": [
+          {
+            "name": "pres/Senate/House bias 2024",
+            "value": "D+2.9",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "Governor bias 2024",
+            "value": "D+1.8",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "Less ticket-splitting in presidential years.",
+        "model_version": "general principle",
+        "evidence_quote": "With less and less ticket-splitting in presidential years, that's what you'd expect.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "All-years average bias since 1998 is D+1.1 combined. By race type: president D+1.3, Senate D+0.7, House D+1.3, governor D+0.9. Midterm cycles show small bias: 2018 R+0.5 combined (Senate EVEN, House R+0.4, governor R+1.0) and 2022 D+0.8 combined (Senate R+0.3, House D+0.2, governor D+1.3).",
+        "quantities": [
+          {
+            "name": "all-years combined bias",
+            "value": "D+1.1",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "2018 combined",
+            "value": "R+0.5",
+            "unit": "points",
+            "context": ""
+          },
+          {
+            "name": "2022 combined",
+            "value": "D+0.8",
+            "unit": "points",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "parameter_or_number",
+        "statement": "Combined bias by cycle was: 1998 R+3.8, 2000 R+1.8, 2002 D+2.7, 2004 D+1.4, 2006 R+0.1, 2008 D+0.8, 2010 D+0.3, 2012 R+2.8, 2014 D+2.8, 2016 D+3.0, 2018 R+0.5, 2020 D+4.7, 2022 D+0.8, 2024 D+2.9. Presidential bias by cycle was: 2000 R+2.4, 2004 D+1.1, 2008 D+0.8, 2012 R+2.5.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "assumption",
+        "statement": "The repeated Democratic bias may be Trump-specific, because bias was much lower in 2022 and slightly Republican in 2018 when Trump was not on the ballot. If so, 2026 and 2028 polls might not show the same bias. Pollsters Silver Bulletin spoke with were mixed on this.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "It could, for example, be a Trump-specific issue.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "interpretation_guidance",
+        "statement": "Call accuracy (whether the poll leader won) is a poor measure of poll accuracy and serves only as a sanity check. A poll showing Trump +1 in a state he won by 13 is still a bad result, while a poll showing Trump +1 when Harris won by 1 would be pretty good.",
+        "quantities": [],
+        "rationale": "Magnitude of error matters, not just direction.",
+        "model_version": "general principle",
+        "evidence_quote": "we've never thought of this as a great way to assess how accurate the polls are",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "method",
+        "statement": "In call-accuracy scoring, a pollster gets half-credit if its poll shows a tie for the lead and one of the tied candidates wins.",
+        "quantities": [
+          {
+            "name": "tie credit",
+            "value": "0.5",
+            "unit": "",
+            "context": "call accuracy"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "empirical_regularity",
+        "statement": "Polls have called the correct winner 77.8% of the time since 1998 (about 78%). In 2024 the rate was 70.1%, the lowest on record. Presidential general election polls called 62.8% correctly, the worst since 1998. House polls called 65.6%, Senate 77.8%, governor 92.2% and presidential primary 97.3%.",
+        "quantities": [
+          {
+            "name": "all-years call accuracy",
+            "value": "77.8",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "2024 combined",
+            "value": "70.1",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "2024 pres general",
+            "value": "62.8",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "2024 House",
+            "value": "65.6",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "2024 Senate",
+            "value": "77.8",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "2024 Gov",
+            "value": "92.2",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "2024 pres primary",
+            "value": "97.3",
+            "unit": "%",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "Across all cycles since 1998, polls have predicted the correct winner 78 percent of the time. In 2024, call accuracy was only 70 percent",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "parameter_or_number",
+        "statement": "All-years call accuracy by race type: presidential primary 82.8%, presidential general 76.9%, Senate 80.8%, House 72.2%, governor 82.1%.",
+        "quantities": [
+          {
+            "name": "pres primary",
+            "value": "82.8",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "pres general",
+            "value": "76.9",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "Senate",
+            "value": "80.8",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "House",
+            "value": "72.2",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "Governor",
+            "value": "82.1",
+            "unit": "%",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "uncertainty_and_polling_error",
+        "finding_type": "empirical_regularity",
+        "statement": "Historical call accuracy by the poll's margin: under 3 points 56.0%, 3-6 points 69.1%, 6-10 points 85.8%, 10-15 points 93.8%, 15-20 points 96.9%, 20 or more points 99.5%. This gives an empirical mapping from poll lead to win probability.",
+        "quantities": [
+          {
+            "name": "<3",
+            "value": "56.0",
+            "unit": "%",
+            "context": "correct call"
+          },
+          {
+            "name": "3-6",
+            "value": "69.1",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "6-10",
+            "value": "85.8",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "10-15",
+            "value": "93.8",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "15-20",
+            "value": "96.9",
+            "unit": "%",
+            "context": ""
+          },
+          {
+            "name": "20+",
+            "value": "99.5",
+            "unit": "%",
+            "context": ""
+          }
+        ],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "Historically, polls showing leads of less than 3 points call only 56 percent of races correctly — not much better than a coin flip.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "communication_and_interpretation",
+        "finding_type": "interpretation_guidance",
+        "statement": "Poll leads of less than 3 points tell you very little and should be treated as toss-ups. Polls are not precise enough to resolve them.",
+        "quantities": [
+          {
+            "name": "toss-up threshold",
+            "value": "3",
+            "unit": "points",
+            "context": "poll lead"
+          }
+        ],
+        "rationale": "Polls simply aren't precise enough.",
+        "model_version": "general principle",
+        "evidence_quote": "Please don't treat leads of less than 3 points as telling you very much at all.",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "model_evaluation_and_calibration",
+        "finding_type": "interpretation_guidance",
+        "statement": "Call accuracy depends heavily on how competitive the polled races are. 2024 primary polls scored high because the race was noncompetitive, and general election polls scored low because the race was close. Pollsters increasingly concentrate on competitive states, which lowers measured call accuracy.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "it's a function of the races being polled in each case",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "Advanced Plus-Minus measures how a pollster's average error compares to other pollsters' error in the same election, with further statistical adjustments for race difficulty and sample size. Negative scores are better.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "how the pollster's average error compares to other pollsters' in the same election, with various other statistical adjustments that account for which races are harder and easier to poll",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "The pollster ratings use each pollster's data back to 1998 and weight recent years more heavily.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "our pollster ratings weight recent years more heavily",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "interpretation_guidance",
+        "statement": "A pollster's single-cycle performance should not be overweighted. The multi-cycle ratings are better for judging quality, although 2024 shifted the ratings more than most cycles do.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "You shouldn't put too much stock in a pollster's performance in a single cycle",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "model_change",
+        "statement": "After 2024, AtlasIntel was upgraded from A to A+ and became the highest-rated pollster in the database, and OnMessage moved from B/C to A. Selzer kept a B+ despite 12.8 points of average error and D+14.8 bias in 2023-24.",
+        "quantities": [
+          {
+            "name": "Selzer error",
+            "value": "12.8",
+            "unit": "points",
+            "context": "2023-24"
+          },
+          {
+            "name": "Selzer bias",
+            "value": "D+14.8",
+            "unit": "points",
+            "context": "2023-24"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings (2025 update)",
+        "evidence_quote": "AtlasIntel's rating has gone from an A to an A+ — and it is now the highest-rated pollster in our database — while OnMessage moved from a B/C to an A",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "parameter_or_number",
+        "statement": "2023-24 pollster results, for pollsters with at least 5 polls in the final 21 days (given as error / bias / APM / number of polls): OnMessage 1.2 / D+0.1 / -2.2 / 20; Patriot Polling 1.5 / D+1.5 / -1.2 / 15; AtlasIntel 1.5 / D+0.1 / -1.2 / 67; Mitchell 2.0 / D+1.2 / -1.5 / 6; Echelon 2.0 / D+0.3 / -0.9 / 8; TIPP 2.0 / D+2.0 / -1.3 / 22; Washington Post 2.0 / D+1.8 / -1.4 / 8; Beacon/Shaw 2.1 / D+2.1 / -0.9 / 6; InsiderAdvantage 2.2 / D+1.1 / -1.5 / 25; Trafalgar 2.5 / D+1.0 / -1.3 / 29; Rasmussen 2.7 / D+0.4 / -0.9 / 25; Redfield & Wilton 2.8 / D+2.4 / -0.5 / 36; Quinnipiac 2.8 / D+2.8 / -0.0 / 6; Susquehanna 2.9 / D+1.1 / -0.9 / 6; PPP 2.9 / R+2.1 / -3.7 / 6; Saint Anselm 2.9 / D+2.4 / -2.4 / 5; Monmouth 3.1 / D+1.8 / -1.3 / 8; Emerson 3.3 / D+1.9 / -1.5 / 61; J.L. Partners 3.5 / R+0.7 / -1.3 / 8; Marist 3.5 / D+3.4 / 0.7 / 13; SSRS 3.6 / D+3.6 / 0.5 / 15; OH Predictive 3.7 / D+3.7 / -1.3 / 10; NYT/Siena 3.9 / D+3.9 / 0.4 / 21; Focaldata 3.9 / D+3.9 / 0.5 / 9; Data for Progress 4.0 / D+3.2 / 0.7 / 8.",
+        "quantities": [
+          {
+            "name": "minimum polls for table",
+            "value": "5",
+            "unit": "polls",
+            "context": "2023-24 cycle"
+          }
+        ],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "",
+        "explicitness": "inferred_from_chart"
+      },
+      {
+        "component": "house_effects",
+        "finding_type": "empirical_regularity",
+        "statement": "In 2024, pollsters with Democratic-leaning house effects (such as YouGov) performed worse and those with Republican-leaning house effects performed better. Siena, SurveyUSA and YouGov had biases of about D+5.",
+        "quantities": [
+          {
+            "name": "bias",
+            "value": "about 5",
+            "unit": "points D",
+            "context": "Siena, SurveyUSA, YouGov 2024"
+          }
+        ],
+        "rationale": "Trump beat his polls again.",
+        "model_version": "general principle",
+        "evidence_quote": "firms like YouGov that had Democratic-leaning house effects performed worse, while those with R-leaning ones were better",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "design_principle",
+        "statement": "Historical track records matter, but relying on them can be overdone. No single poll should be treated as an oracular gold standard, because previously accurate firms can have bad cycles and newer firms can outperform.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "general principle",
+        "evidence_quote": "it's a bad idea to treat one poll as an oracular gold standard",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "generic_ballot_and_national_environment",
+        "finding_type": "method",
+        "statement": "Generic ballot polls, which ask about the Democrat or Republican House candidate without naming them, are counted toward House poll accuracy ratings. Selzer's district-level House polls used this format and were also counted.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "this is the same format that most generic ballot polls use... and we count those toward our accuracy ratings",
+        "explicitness": "explicit"
+      },
+      {
+        "component": "pollster_ratings",
+        "finding_type": "method",
+        "statement": "The Advanced Plus-Minus statistic accounts for poll sample size.",
+        "quantities": [],
+        "rationale": "",
+        "model_version": "Silver Bulletin pollster ratings",
+        "evidence_quote": "These polls also had small sample sizes, but our Advanced Plus-Minus stat accounts for that.",
+        "explicitness": "explicit"
+      }
+    ],
+    "political_insights": [
+      {
+        "topic": "ticket-splitting decline",
+        "insight": "With less ticket-splitting in presidential years, polling bias is nearly identical across presidential, Senate and House races.",
+        "evidence": "In 2024, bias was D+2.9 for president, Senate and House.",
+        "forecasting_implication": "Model polling errors as highly correlated across offices within a presidential year."
+      },
+      {
+        "topic": "Trump-specific polling bias",
+        "insight": "Polls underestimated Republicans when Trump was on the ballot (2016, 2020, 2024) but not in the 2018 and 2022 midterms.",
+        "evidence": "2018 bias R+0.5 and 2022 bias D+0.8 combined, versus D+3.0, D+4.7 and D+2.9 in presidential years.",
+        "forecasting_implication": "Consider whether to apply a prior on directional bias in future cycles without Trump on the ballot; the evidence is uncertain."
+      },
+      {
+        "topic": "anti-Trump public opinion",
+        "insight": "Trump's unpopularity is expected to carry electoral consequences for Republicans in 2025 special elections and the 2026 midterms.",
+        "evidence": "",
+        "forecasting_implication": "Presidential approval feeds into midterm expectations."
+      },
+      {
+        "topic": "poll allocation",
+        "insight": "Pollsters concentrate resources on competitive states and rarely poll safe states such as Alabama or Vermont.",
+        "evidence": "",
+        "forecasting_implication": "Safe states have sparse polling, so fundamentals or priors matter more there."
+      }
+    ],
+    "references": [
+      {
+        "description": "Silver Bulletin pollster ratings page with downloadable data",
+        "url": ""
+      },
+      {
+        "description": "Rules applied to primary polls (linked)",
+        "url": ""
+      },
+      {
+        "description": "Earlier article on systematic polling error (linked)",
+        "url": ""
+      },
+      {
+        "description": "Article on pollster herding (linked)",
+        "url": ""
+      },
+      {
+        "description": "Methodology for Advanced Plus-Minus statistical adjustments (linked 'various other statistical adjustments')",
+        "url": ""
+      }
+    ],
+    "open_questions": [
+      "The exact formula for Advanced Plus-Minus, including how it adjusts for race difficulty and sample size.",
+      "The recency-weighting scheme used in the pollster ratings.",
+      "The criteria for banning pollsters.",
+      "The specific inclusion rules for primary polls.",
+      "How pollster grades (A+, B+, etc.) map to the underlying scores.",
+      "How the 2024 presidential model parameterizes correlated state errors to produce the sweep outcomes."
+    ]
+  }
+}

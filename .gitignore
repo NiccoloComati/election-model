@@ -1,0 +1,35 @@
+# Secrets
+.env
+.env.*
+
+# Silver Bulletin subscription content: private research use only, never commit
+Archive - Silver Bulletin.html
+Archive - Silver Bulletin_files/
+sources/silver_bulletin/
+data/silver_bulletin_datasets/hosted/
+
+# Full text of FiveThirtyEight articles (copyrighted)
+sources/fivethirtyeight/*.txt
+sources/fivethirtyeight/raw/
+
+# Large public datasets: re-download (see sources/README.md)
+sources/fivethirtyeight/github-data/
+sources/fivethirtyeight/archive/
+sources/surveys/
+
+# Generated model outputs and caches (python -m model.president.run)
+output/
+
+# Python and notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

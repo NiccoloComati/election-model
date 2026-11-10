@@ -1,0 +1,66 @@
+95 articles to extract. Budget $48.00.
+[1/95] $0.251  total $0.25  low     12 findings  2024-04-17_announcing-2024-election-model-plans-by-nate-silver  ok
+[2/95] $0.270  total $0.52  low      7 findings  2023-12-07_the-incumbency-advantage-is-disappearing-maybe-its-the-algorithms-fault  ok
+[3/95] $0.118  total $0.64  low      5 findings  2024-06-22_the-model-is-coming-by-nate-silver-silver-bulletin  ok
+[4/95] $0.467  total $1.11  medium  16 findings  2024-03-05_the-white-house-is-betting-the-election-on-a-theory-of-skewed-polls  ok
+[5/95] $0.465  total $1.57  high    27 findings  2024-06-26_2024-presidential-election-model-methodology-update  ok
+[6/95] $0.418  total $1.99  medium  17 findings  2024-06-27_are-these-guys-trying-to-muddle-through-or-playing-to-win  ok
+[7/95] $0.343  total $2.33  medium  12 findings  2024-07-05_the-broken-leg-problem-by-nate-silver-silver-bulletin  ok
+[8/95] $1.212  total $3.54  high    51 findings  2024-06-26_the-presidential-election-isnt-a-toss-up-by-nate-silver  ok
+[9/95] $0.470  total $4.01  high    31 findings  2024-07-18_why-i-dont-buy-538s-new-election-model-by-nate-silver  ok
+[10/95] $0.816  total $4.83  high    36 findings  2024-07-01_sbsq-10-everything-you-always-wanted-to-know-about-the-election-model-but-were-a  ok
+[11/95] $0.431  total $5.26  medium  20 findings  2024-07-27_could-josh-shapiro-win-kamala-harris-the-electoral-college  ok
+[12/95] $0.296  total $5.56  medium  14 findings  2024-07-29_kamala-mode-will-be-activated-tomorrow-by-nate-silver  ok
+[13/95] $0.437  total $5.99  medium  28 findings  2024-07-29_silver-bulletin-2024-biden-trump-forecast-archive  ok
+[14/95] $0.325  total $6.32  medium  15 findings  2024-08-08_welcome-to-the-bizarre-world-of-conditional-probability  ok
+[15/95] $0.579  total $6.90  high    27 findings  2024-08-24_we-removed-rfk-jr-from-our-model-but-it-didnt-hurt-kamala  ok
+[16/95] $0.641  total $7.54  high    34 findings  2024-07-31_how-the-election-model-handles-a-candidate-swap  ok
+[17/95] $0.522  total $8.06  medium  20 findings  2024-08-26_how-big-will-the-bounce-be-by-eli-mckown-dawson  ok
+[18/95] $0.680  total $8.74  high    27 findings  2024-09-03_theres-no-normal-in-this-election-by-nate-silver  ok
+[19/95] $0.579  total $9.32  medium  21 findings  2024-09-06_the-electoral-college-bias-has-returned-with-a-vengeance  ok
+[20/95] $0.936  total $10.26  high    40 findings  2024-08-31_sbsq-12-will-the-polls-lowball-trump-again  ok
+[21/95] $0.355  total $10.61  medium  24 findings  2024-09-11_a-guide-to-post-debate-poll-watching-by-nate-silver  ok
+[22/95] $0.384  total $10.99  medium  23 findings  2024-09-07_oops-i-made-the-convention-bounce-adjustment-disappear  ok
+[23/95] $0.408  total $11.40  low     16 findings  2024-09-19_dont-let-randomness-make-a-fool-of-you-by-nate-silver  ok
+[24/95] $0.625  total $12.03  medium  24 findings  2024-09-21_a-tour-of-the-7½-key-swing-states-by-nate-silver  ok
+[25/95] $0.581  total $12.61  medium  15 findings  2024-09-18_mad-about-the-electoral-college-blame-california  ok
+[26/95] $0.274  total $12.88  medium  20 findings  2024-09-23_trust-a-pollster-more-when-it-publishes-outliers  ok
+[27/95] $0.353  total $13.24  high    24 findings  2024-09-27_which-polls-are-biased-toward-harris-or-trump  ok
+[28/95] $0.372  total $13.61  high    25 findings  2024-09-26_pigs-fly-hell-freezes-over-the-electoral-college-favors-democrats  ok
+[29/95] $0.412  total $14.02  medium  20 findings  2024-09-29_the-128-paths-to-the-white-house-by-nate-silver  ok
+[30/95] $0.358  total $14.38  low     12 findings  2024-10-01_sbsq-13-october-surprise-edition-by-nate-silver  ok
+[31/95] $0.329  total $14.71  medium  19 findings  2024-10-08_5545-is-a-really-close-race-by-nate-silver  ok
+[32/95] $0.374  total $15.08  medium  18 findings  2024-10-10_why-you-should-mostly-ignore-internal-polls  ok
+[33/95] $0.419  total $15.50  medium  16 findings  2024-10-09_when-you-should-panic-about-the-polls-by-nate-silver  ok
+[34/95] $0.425  total $15.92  medium  17 findings  2024-10-12_new-york-times-polls-are-betting-on-a-political-realignment  ok
+[35/95] $0.375  total $16.30  medium  22 findings  2024-10-16_are-republican-pollsters-flooding-the-zone  ok
+[36/95] $0.368  total $16.67  low      8 findings  2024-10-22_likability-isnt-enough-by-nate-silver-silver-bulletin  ok
+[37/95] $0.299  total $16.97  medium  20 findings  2024-10-23_why-harris-could-beat-her-polls-by-nate-silver  ok
+[38/95] $0.306  total $17.27  medium  16 findings  2024-10-24_a-mystery-in-likely-voter-polls  ok
+[39/95] $0.614  total $17.89  medium  25 findings  2024-10-17_does-trump-have-momentum-by-nate-silver  ok
+[40/95] $0.358  total $18.24  medium  15 findings  2024-10-30_the-early-vote-doesnt-reliably-predict-results  ok
+[41/95] $0.389  total $18.63  medium  21 findings  2024-11-01_theres-more-herding-in-swing-state-polls-than-at-a-sheep-farm-in-the-scottish-hi  ok
+[42/95] $0.439  total $19.07  medium  24 findings  2024-11-02_a-shocking-iowa-poll-means-somebody-is-going-to-be-wrong  ok
+[43/95] $0.303  total $19.37  medium  14 findings  2024-11-03_the-polls-are-close-but-that-doesnt-mean-the-results-will-be  ok
+[44/95] $0.534  total $19.91  medium  27 findings  2024-11-05_a-random-number-generator-determined-the-favorite-in-our-forecast  INVALID (findings/6/component: 'design_principle' is not one of ['data_sources_and_poll_i)
+[45/95] $0.809  total $20.72  medium  26 findings  2024-11-07_the-model-exactly-predicted-the-most-likely-election-map  ok
+[46/95] $0.958  total $21.68  medium  35 findings  2024-11-05_final-silver-bulletin-2024-presidential-election-forecast  ok
+[47/95] $0.473  total $22.15  low     20 findings  2025-01-16_polling-is-becoming-more-of-an-art-than-a-science  ok
+[48/95] $0.826  total $22.97  high    28 findings  2024-11-26_sbsq-15-democrats-have-a-fool-me-twice-problem  ok
+[49/95] $0.270  total $23.24  medium  20 findings  2025-02-17_silver-bulletin-pollster-ratings-2024-archive  ok
+[50/95] $0.555  total $23.80  medium  39 findings  2025-02-17_how-did-the-polls-do-in-2024-its-complicated  ok
+[51/95] $0.330  total $24.13  low     11 findings  2025-03-22_how-low-is-trumps-popularity-floor-by-nate-silver  ok
+[52/95] $0.280  total $24.41  medium  16 findings  2025-05-06_were-tracking-more-data-on-trumps-popularity  ok
+[53/95] $0.607  total $25.02  low     13 findings  2025-06-02_sbsq-21-why-young-men-dont-like-democrats  ok
+[54/95] $1.296  total $26.31  medium  25 findings  2025-08-20_real-talk-on-models-moderation-and-the-misuse-of-academic-authority  ok
+[55/95] $0.690  total $27.00  medium  16 findings  2025-09-09_is-susan-collins-toast-by-eli-mckown-dawson  ok
+[56/95] $0.583  total $27.58  high    30 findings  2026-01-14_pollster-ratings-silver-bulletin  ok
+[57/95] $0.697  total $28.28  medium  28 findings  2026-01-14_actually-sometimes-polls-underestimate-democrats  ok
+[58/95] $0.508  total $28.79  high    28 findings  2026-01-22_midterm-polls-have-good-news-great-news-and-bad-news-for-democrats-wait-what  ok
+[59/95] FAILED 2026-03-23_sbsq-30-will-liberals-turn-against-sports-betting: HTTP 402: {"error":{"message":"Credit exhausted. Add a billing method to continue or use the free model bedrock/llama-4-maverick-17b (subject to token and usage limits)","type":"billing_error","param":null,"code":"BILLING_METHOD_REQUIRED"}}
+[60/95] FAILED 2026-04-11_ai-polls-are-fake-polls-by-eli-mckown-dawson: HTTP 402: {"error":{"message":"Credit exhausted. Add a billing method to continue or use the free model bedrock/llama-4-maverick-17b (subject to token and usage limits)","type":"billing_error","param":null,"code":"BILLING_METHOD_REQUIRED"}}
+[61/95] FAILED 2026-04-21_sbsq-31-trump-is-super-unpopular-so-why-dont-democrats-have-a-bigger-lead: HTTP 402: {"error":{"message":"Credit exhausted. Add a billing method to continue or use the free model bedrock/llama-4-maverick-17b (subject to token and usage limits)","type":"billing_error","param":null,"code":"BILLING_METHOD_REQUIRED"}}
+[62/95] FAILED 2026-06-01_should-democrats-panic-about-platner-by-nate-silver: HTTP 402: {"error":{"message":"Credit exhausted. Add a billing method to continue or use the free model bedrock/llama-4-maverick-17b (subject to token and usage limits)","type":"billing_error","param":null,"code":"BILLING_METHOD_REQUIRED"}}
+[63/95] FAILED 2026-06-29_is-the-vibecession-real-or-is-the-survey-broken: HTTP 402: {"error":{"message":"Credit exhausted. Add a billing method to continue or use the free model bedrock/llama-4-maverick-17b (subject to token and usage limits)","type":"billing_error","param":null,"code":"BILLING_METHOD_REQUIRED"}}
+[64/95] FAILED 2026-08-11_everything-is-breaking-democrats-way-is-it-enough-to-win-the-senate: HTTP 402: {"error":{"message":"Credit exhausted. Add a billing method to continue or use the free model bedrock/llama-4-maverick-17b (subject to token and usage limits)","type":"billing_error","param":null,"code":"BILLING_METHOD_REQUIRED"}}
+[65/95] FAILED 2026-08-11_how-flipr-forecasts-the-midterm-elections-by-nate-silver: HTTP 402: {"error":{"message":"Credit exhausted. Add a billing method to continue or use the free model bedrock/llama-4-maverick-17b (subject to token and usage limits)","type":"billing_error","param":null,"code":"BILLING_METHOD_REQUIRED"}}
