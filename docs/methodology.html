@@ -125,17 +125,17 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule)
 
   <section>
     <h2>Anatomy of a simulated error</h2>
-    <p class="muted">Each simulation shifts every state's margin by four pieces, all drawn from t-distributions with 10 degrees of freedom.</p>
+    <p class="muted">In each simulated election, a state's result is its forecast plus a random error. That error is the sum of four pieces, so states miss together the way they do in real elections.</p>
     <div class="anatomy">
-      <div class="term t1"><b>national</b><span>Drift until Election Day plus a polling miss shared by all states</span></div>
+      <div class="term t1"><b>national</b><span>One shift applied to every state, say 2 points toward Trump. It covers both how much the race can still move and a nationwide polling miss.</span></div>
       <div class="op">+</div>
-      <div class="term t2"><b>demographic</b><span>Swings by group (race, education, religion); similar states move together</span></div>
+      <div class="term t2"><b>demographic</b><span>A random swing for each voter group, say Hispanic voters 4 points right. States shift in proportion to their share of that group.</span></div>
       <div class="op">+</div>
-      <div class="term t3"><b>regional</b><span>Swings shared within a region</span></div>
+      <div class="term t3"><b>regional</b><span>A smaller swing shared by all states in a region, such as the Midwest.</span></div>
       <div class="op">+</div>
-      <div class="term t4"><b>state</b><span>What's left; larger where polling is thin</span></div>
+      <div class="term t4"><b>state</b><span>Noise for each state alone. It is bigger where there are few polls.</span></div>
     </div>
-    <p class="muted">Drift scales with the cube root of days left and with an uncertainty index built from undecided voters, poll volatility and polarization.</p>
+    <p class="muted">The national piece shrinks as Election Day nears, in proportion to the cube root of the days left. It is also bigger when an uncertainty index is high: more undecided voters, more volatile polls, less polarization. Every piece is drawn from a t-distribution with 10 degrees of freedom, so big misses are likelier than under a normal distribution.</p>
   </section>
 
   <section>
