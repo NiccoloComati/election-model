@@ -34,7 +34,9 @@ p { margin: 0; max-width: 65ch; }
 .step { position: relative; background: var(--panel); border-radius: 6px; padding: 14px 12px 14px; display: flex; flex-direction: column; gap: 6px; }
 .step::before { counter-increment: step; content: counter(step); font-family: var(--display); font-weight: 700; font-size: 22px; color: var(--accent); line-height: 1; }
 .step h3 { margin: 0; font-size: 14.5px; font-weight: 600; line-height: 1.3; }
-.step p { font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+.step ul { margin: 0; padding-left: 15px; display: flex; flex-direction: column; gap: 5px; }
+.step li { font-size: 13px; color: var(--muted); line-height: 1.4; }
+.step li::marker { color: var(--accent); }
 @media (max-width: 680px) { .pipeline { grid-template-columns: 1fr; } }
 
 /* anatomy of a simulated error */
@@ -98,11 +100,26 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule)
     <h2>How it works</h2>
     <p class="muted">Polls, a statistical estimate of each state, and an economic prior feed 40,000 simulated elections in 50 states, DC, and the Maine and Nebraska districts.</p>
     <div class="pipeline">
-      <div class="step"><h3>Weight polls</h3><p>By sample size, pollster track record and recency.</p></div>
-      <div class="step"><h3>Adjust polls</h3><p>For each pollster's lean, likely voters and convention bounces.</p></div>
-      <div class="step"><h3>Estimate states</h3><p>Blend each state's average with a regression on demographics and region.</p></div>
-      <div class="step"><h3>Add fundamentals</h3><p>Economy and incumbency, fading to zero by Election Day.</p></div>
-      <div class="step"><h3>Simulate</h3><p>Correlated, fat-tailed errors; count electoral votes.</p></div>
+      <div class="step"><h3>Weight polls</h3><ul>
+        <li>Weight grows with sample size, with diminishing returns</li>
+        <li>Better-rated pollsters count more; firms that poll a race often are capped</li>
+        <li>Influence fades over about six weeks, more slowly where polls are scarce</li></ul></div>
+      <div class="step"><h3>Adjust polls</h3><ul>
+        <li>Remove each firm's lean versus other polls of the same race, shrunk toward zero</li>
+        <li>Shift registered-voter polls to a likely-voter basis</li>
+        <li>Discount post-convention polls by about 2 points, fading over three weeks</li></ul></div>
+      <div class="step"><h3>Estimate states</h3><ul>
+        <li>Regression: national margin plus the state's lean from the last two elections</li>
+        <li>Demographic and regional terms catch states drifting from that lean</li>
+        <li>Regression weight falls with polling: about 25% in a lightly polled state, under 2% in Pennsylvania</li></ul></div>
+      <div class="step"><h3>Add fundamentals</h3><ul>
+        <li>Six economic indicators as z-scores, using data as first published</li>
+        <li>Regression on elections since 1880: economy, incumbency, last result, damped by polarization</li>
+        <li>Weight about 25% at 100 days out, zero on Election Day</li></ul></div>
+      <div class="step"><h3>Simulate</h3><ul>
+        <li>40,000 elections with t-distributed (10 df) errors for fat tails</li>
+        <li>Demographic and regional swings make similar states miss together</li>
+        <li>Win probability is the share of simulations reaching 270 electoral votes</li></ul></div>
     </div>
   </section>
 
